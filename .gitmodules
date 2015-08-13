@@ -4,3 +4,6 @@
 [submodule "schema/collections"]
 	path = schema/collections
 	url = https://github.com/RILMMusicLit/tei_schema.git
+[submodule "schema/journals"]
+	path = schema/journals
+	url = https://github.com/RILMMusicLit/tei_schema.git
