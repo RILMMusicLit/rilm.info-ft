@@ -1,0 +1,3279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Concise Garland Encyclopedia of World Music, The</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="concise-garland">Concise Garland Encyclopedia of World Music, The</h4>
+      </div>
+    </a>
+    <div class="r201502" title="Added, 2/2015; updated 4/14/2015">
+      <ol>
+        <li>This publication should be converted from the provided XML.</li>
+        <li>Use <a href="../tei_rilm_instructions.html#american" target="_blank">American rule</a>
+          for single quotation marks.</li>
+        <li>The tags &lt;xref ref-type="page"/> should be converted to the TEI element &lt;pb> with
+          @n containing the page number: <blockquote>&lt;xref ref-type="page"
+            id="page_2"/><br /><br /> &lt;pb n="2"/></blockquote></li>
+        <li>The list of Contributing Authors beginning on page xx should be set as a series of
+          lists, one &lt;list> corresponding to each &lt;sec> that has a &lt;title> (Africa, etc.)
+          Each item may be tagged with &lt;rilmPerson>, and &lt;affiliation> containing
+          &lt;persName>, &lt;orgName> and &lt;placeName>. Do not tag &lt;forename> and &lt;surname>
+          because East-Asian names are given in different order. <blockquote>&lt;p>Laura
+            Arntson&lt;break/>Public Health Institute,&lt;break/>USAID Nigeria&lt;break/>Abuja,
+            Nigeria&lt;/p><br /> &lt;p>Fremont E. Besmer&lt;break/>City College of the City
+            University of New York&lt;break/>New York, New York,
+            U.S.A.&lt;/p></blockquote><blockquote>&lt;item><br />&lt;rilmPerson>&lt;persName>Laura
+            Arntson&lt;/persName> &lt;affiliation>&lt;orgName type="uni">Public Health Institute,
+            USAID Nigeria&lt;/orgName> &lt;placeName>Abuja,
+            Nigeria&lt;/placeName>&lt;/affiliation>&lt;/rilmPerson><br /> &lt;/item>
+            <br />&lt;item><br /> &lt;rilmPerson>&lt;persName>Fremont E. Besmer&lt;/persName>
+            &lt;affiliation>&lt;orgName type="uni">City College of the City University of New
+            York&lt;/orgName>&lt;placeName>New York, New York,
+            U.S.A.&lt;/placeName>&lt;/affiliation>&lt;/rilmPerson><br />
+            &lt;/item><br /></blockquote></li>
+        <li> The List of Reviewers beginning on page xxv should be treated the same.</li>
+        <li>The <a href="#cgw-articles">table at the bottom of this page</a> will be your guide to
+          dividing this publication into separate files. The source XML is inconsistent in the way
+          certain types of items are tagged and nested, so you will need to refer to the list. <ul>
+            <li>Some articles are identifiable by a &lt;book-part> element that has an @id attribute
+              beginning "chapter". Others begin with a &lt;sec> element. The table gives the chapter
+              number and/or range of section numbers to include in each article. </li>
+            <li>Where the title in the list below and the contents of &lt;title> in the source
+              differ, please use the title in the list below.</li>
+            <li>All articles are &lt;text type="topic"> and will have @head and @body. Not every
+              article will include an @ography.</li>
+          </ul> The TEI samples for this publication show conversions from each style of source
+          markup. </li>
+        <li>Sections within an article--&lt;sec> elements in the source xml beginning with a
+          &lt;title>--EXCEPT THOSE LISTED IN THE TABLE BELOW as starting an article--should begin a
+          new &lt;div type="section"> with a &lt;head> element. <blockquote>&lt;sec id="S627">
+            &lt;title>Origins of &lt;italic>Conjunto&lt;/italic> Music&lt;/title> &lt;p>The
+            beginnings of &lt;italic>conjunto&lt;/italic> music can be
+            traced...</blockquote><blockquote>&lt;div type="section"> &lt;head>Origins of &lt;hi
+            rend="italic">Conjunto&lt;/hi> Music&lt;/head> &lt;p>The beginnings of &lt;hi
+            rend="italic">conjunto&lt;/hi> music can be traced...&lt;/p>&lt;/div> </blockquote></li>
+        <li>&lt;boxed-text> elements in the source should be converted to a &lt;div type="textBox">.
+          If the &lt;boxed-text> tag is followed by a &lt;caption>&lt;title>, tag the contents of
+          &lt;title> as &lt;head>.</li>
+        <li>Quotations from song lyrics enclosed in a &lt;verse-group> and &lt;verse-line> elements
+          should be placed within the preceding &lt;p> element (if present; otherwise in its own),
+          in &lt;lg> tags, with each line in its own &lt;l> tag: <blockquote>&lt;verse-group>
+            <br />&lt;verse-line>That which is Nyama,&lt;/verse-line><br /> &lt;verse-line>All
+            things are hidden under Nyama,&lt;/verse-line><br /> &lt;verse-line>Nyama is not hidden
+            under anything.&lt;/verse-line><br /> &lt;/verse-group></blockquote><blockquote> &lt;lg>
+            <br />&lt;l>That which is Nyama,&lt;/l> <br />&lt;l>All things are hidden under
+            Nyama,&lt;/l> <br />&lt;l>Nyama is not hidden under anything.&lt;/l><br />&lt;/lg>
+          </blockquote></li>
+        <li>Author names come at the end of the body text in a &lt;sig-block> element. Inside the
+          nested &lt;sig> element, there is an introductory phrase, such as
+            <blockquote>&lt;sig-block><br /> &lt;sig><br /> &lt;italic>—Adapted from an article by
+            Laura Arntson&lt;/italic><br /> &lt;/sig><br /> &lt;/sig-block></blockquote> Place these
+          in a &lt;byline> inside a &lt;div type="authors">. Do not distinguish &lt;forename> and
+          &lt;surname>, because East Asian names are given in a different order. Omit the
+          &lt;italic> tags: <blockquote> &lt;div type="authors">&lt;byline>—Adapted from an article
+            by &lt;docAuthor>&lt;persName>Laura
+            Arntson&lt;/persName>&lt;/docAuthor>&lt;/byline>&lt;/div></blockquote></li>
+        <li>The &lt;sc> tag is used in two contexts in this publication: for B.C.E. and C.E.
+          indications and for "see" references to other articles in the publication. <ul>
+            <li>See-references are in-line within the article texts and begin with a bracket: "[See
+              ". These occur without any markup other than that for small capital letters (&lt;sc>)
+              within &lt;p> elements in the source XML. Set these references as a &lt;ref> element
+              targeting the approriate article. <blockquote>&lt;p>One type of music became popular
+                all over southern Africa: the &lt;italic>makwaya&lt;/italic>, from the English word
+                &lt;italic>choir&lt;/italic>. It involved singing, complex marching routines, and
+                special costumes. Adaptations of jazz in responsorial form, accompanied by drumming
+                and dancing, have become popular with young people. [See B&lt;sc>LACK&lt;/sc>
+                P&lt;sc>OPULAR&lt;/sc> M&lt;sc>USIC IN&lt;/sc> S&lt;sc>OUTH&lt;/sc>
+                A&lt;sc>FRICA&lt;/sc>.]&lt;/p></blockquote><blockquote> &lt;p>One type of music
+                became popular all over southern Africa: the &lt;hi rend="italic">makwaya&lt;/hi>,
+                from the English word &lt;hi rend="italic">choir&lt;/hi>. It involved singing,
+                complex marching routines, and special costumes. Adaptations of jazz in responsorial
+                form, accompanied by drumming and dancing, have become popular with young people.
+                [See &lt;ref target="cgw000??>Black Popular Music in South
+                Africa&lt;/ref>.]&lt;/p></blockquote><i>NB: One such reference points to two
+                articles.</i></li>
+            <li>Convert the contents of all &lt;sc> elements to lower-case letters, and then remove
+              the &lt;sc> tags. Then, change the text "b.c.e." and "c.e." to upper-case "B.C.E." and
+              "C.E." </li>
+          </ul></li>
+        <li>Bibliographies in the source XML are tagged inconsistently. Sometimes they are a
+          &lt;sec> element with &lt;title>Bibliography&lt;/title>, and sometimes they are a
+          &lt;ref-list> element inside a &lt;back> element. Treat these equally as &lt;div
+          type="ography"> and tag the items according to the <a href="/ft/tei_rilm_instructions.html#tfbibl"
+            >table for Taylor &amp; Francis bibliographies</a> on the main instruction page. </li>
+      </ol>
+      <p>Please refer also to the provided xml samples.</p>
+      <p>
+        <br />
+        <a id="cgw-articles">
+          <b>Table of articles</b> and their ranges in the source</a>
+      </p>
+      <table>
+        <tr>
+          <td>
+            <p>
+              <b>sec id </b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b>title</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b>author</b>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1</p>
+          </td>
+          <td>
+            <p>Foreword: Beyond the Borders of World Music</p>
+          </td>
+          <td>
+            <p>Philip V. Bohlman</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2-S3</p>
+          </td>
+          <td>
+            <p>Preface </p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S4</p>
+          </td>
+          <td>
+            <p>Editorial Board</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S5-S10</p>
+          </td>
+          <td>
+            <p>Contributing Authors volume 1</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S11-S16</p>
+          </td>
+          <td>
+            <p>Reviewers volume 1</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S17</p>
+          </td>
+          <td>
+            <p>Audio Examples volume I</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter1</p>
+          </td>
+          <td>
+            <p>Africa</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S18-S24</p>
+          </td>
+          <td>
+            <p>Profile of Africa </p>
+          </td>
+          <td>
+            <p>Ruth M. Stone</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S25-S34</p>
+          </td>
+          <td>
+            <p>African Music in a Constellation of the Arts </p>
+          </td>
+          <td>
+            <p>Ruth M. Stone</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter1a</p>
+          </td>
+          <td>
+            <p>West Africa</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S35-S51</p>
+          </td>
+          <td>
+            <p>West Africa: An Introduction</p>
+          </td>
+          <td>
+            <p>Jacqueline Cogdell DjeDje; Fremont E. Besmer</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S52-S63</p>
+          </td>
+          <td>
+            <p>Yorùbá Popular Music </p>
+          </td>
+          <td>
+            <p>Christopher A. Waterman</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S64-S71, bibliography</p>
+          </td>
+          <td>
+            <p>Praise Singing in Northern Sierra Leone </p>
+          </td>
+          <td>
+            <p>Laura Arntson</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter1b</p>
+          </td>
+          <td>
+            <p>North Africa</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S72-S84</p>
+          </td>
+          <td>
+            <p>North Africa: An Introduction</p>
+          </td>
+          <td>
+            <p>Caroline Card Wendt</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S85-S97</p>
+          </td>
+          <td>
+            <p>Tuareg Music </p>
+          </td>
+          <td>
+            <p>Caroline Card Wendt</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter1c</p>
+          </td>
+          <td>
+            <p>East Africa</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S98-S108</p>
+          </td>
+          <td>
+            <p>Music and Poetry in Somalia </p>
+          </td>
+          <td>
+            <p>John William Johnson</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S109-S126</p>
+          </td>
+          <td>
+            <p>Music in Kenya </p>
+          </td>
+          <td>
+            <p>Paul N. Kavyu; Jean Ngoya Kidula</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter1d</p>
+          </td>
+          <td>
+            <p>Central Africa </p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S127-S136</p>
+          </td>
+          <td>
+            <p>Central Africa: An Introduction</p>
+          </td>
+          <td>
+            <p>Gerhard Kubik</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S137-S138</p>
+          </td>
+          <td>
+            <p>Popular Music in the Congos</p>
+          </td>
+          <td>
+            <p>Angela Impey</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter1e</p>
+          </td>
+          <td>
+            <p>Southern Africa</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S139-S158</p>
+          </td>
+          <td>
+            <p>Indigenous Music of Southern Africa </p>
+          </td>
+          <td>
+            <p>John E. Kaemmer</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S159-S168</p>
+          </td>
+          <td>
+            <p>Music of the Shona of Zimbabwe</p>
+          </td>
+          <td>
+            <p>John E. Kaemmer</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S169-S176</p>
+          </td>
+          <td>
+            <p>Black Popular Music in South Africa </p>
+          </td>
+          <td>
+            <p>David B. Coplan</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S177-S189</p>
+          </td>
+          <td>
+            <p>Music of Madagascar: An Overview </p>
+          </td>
+          <td>
+            <p>Ron Emoff</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter2</p>
+          </td>
+          <td>
+            <p>South America, Mexico, Central America, and the Caribbean</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S190-S202</p>
+          </td>
+          <td>
+            <p>A Profile of the Lands, Peoples, and Musics of South America, Mexico, Central
+              America, and the Caribbean</p>
+          </td>
+          <td>
+            <p>Dale A. Olsen; Anthony Seeger</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter2a</p>
+          </td>
+          <td>
+            <p>Music of Native South Americans: Q'eros and Warao </p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S203-S210</p>
+          </td>
+          <td>
+            <p>Q'eros </p>
+          </td>
+          <td>
+            <p>John Cohen; Holly Wissler</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S211-S225</p>
+          </td>
+          <td>
+            <p>Warao </p>
+          </td>
+          <td>
+            <p>Dale A. Olsen</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter2b</p>
+          </td>
+          <td>
+            <p>South America</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S226-S229</p>
+          </td>
+          <td>
+            <p>Argentina: Tango </p>
+          </td>
+          <td>
+            <p>Ercilia Moreno Cha</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S230-S246</p>
+          </td>
+          <td>
+            <p>Brazil: Central and Southern Areas </p>
+          </td>
+          <td>
+            <p>Suzel Ana Reily</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S247-S261</p>
+          </td>
+          <td>
+            <p>Brazil: Northeast Area </p>
+          </td>
+          <td>
+            <p>Larry Crook</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S262-S274</p>
+          </td>
+          <td>
+            <p>Afro-Brazilian Traditions</p>
+          </td>
+          <td>
+            <p>Gerard Béhague</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S275-S287</p>
+          </td>
+          <td>
+            <p>Afro-Colombian Popular Music </p>
+          </td>
+          <td>
+            <p>Michael Birenbaum Quintero</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S288-S300</p>
+          </td>
+          <td>
+            <p>Peru </p>
+          </td>
+          <td>
+            <p>Raul R. Romero; William David Tompkins</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S301-S317</p>
+          </td>
+          <td>
+            <p>Venezuela</p>
+          </td>
+          <td>
+            <p>Max H. Brandt</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter2c</p>
+          </td>
+          <td>
+            <p>Mexico: One Country, Many Musics</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S318-S323</p>
+          </td>
+          <td>
+            <p>Mexica (Aztec or Nahua People) </p>
+          </td>
+          <td>
+            <p>Arturo Chamorro</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S324-S344</p>
+          </td>
+          <td>
+            <p>Mexico </p>
+          </td>
+          <td>
+            <p>Daniel E. Sheehy</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter2d</p>
+          </td>
+          <td>
+            <p>Central America</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S345-S354</p>
+          </td>
+          <td>
+            <p>Maya </p>
+          </td>
+          <td>
+            <p>Linda O'Brien-Rothe</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S355-S362</p>
+          </td>
+          <td>
+            <p>Garifuna Music in Belize</p>
+          </td>
+          <td>
+            <p>Oliver Greene</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S363-S365</p>
+          </td>
+          <td>
+            <p>The Marimbas of Guatemala</p>
+          </td>
+          <td>
+            <p>Linda O'Brien-Rothe</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S366-S380</p>
+          </td>
+          <td>
+            <p>Panama </p>
+          </td>
+          <td>
+            <p>Ronald R. Smith; Dale A. Olsen</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter2e</p>
+          </td>
+          <td>
+            <p>The Caribbean</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S381-S393</p>
+          </td>
+          <td>
+            <p>The Bahamas </p>
+          </td>
+          <td>
+            <p>Vivian Nina Michelle Wood</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S394-S410</p>
+          </td>
+          <td>
+            <p>Cuba </p>
+          </td>
+          <td>
+            <p>Olavo Alén Rodriguez</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S411-S429</p>
+          </td>
+          <td>
+            <p>The Dominican Republic </p>
+          </td>
+          <td>
+            <p>Martha Ellen Davis</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S430-S442</p>
+          </td>
+          <td>
+            <p>Jamaican Traditional Music </p>
+          </td>
+          <td>
+            <p>Daniel Tannehill Neely; Olive Lewin; Gage Averill</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S443-S451</p>
+          </td>
+          <td>
+            <p>Martinique</p>
+          </td>
+          <td>
+            <p>Monique Desroches</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S452-S456</p>
+          </td>
+          <td>
+            <p>Popular Music in Trinidad and Tobago </p>
+          </td>
+          <td>
+            <p>Lorna McDaniel; Gage Averill; Helen Myers</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter3</p>
+          </td>
+          <td>
+            <p>The United States and Canada</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S457-S465</p>
+          </td>
+          <td>
+            <p>The United States and Canada as a Unified Musical Culture </p>
+          </td>
+          <td>
+            <p>Ellen Koskoff</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter3a</p>
+          </td>
+          <td>
+            <p>Music of American Indians and First Peoples in the United States and Canada</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S466-S472</p>
+          </td>
+          <td>
+            <p>Overview [Music of American Indians and First Peoples]</p>
+          </td>
+          <td>
+            <p>Charlotte Heth</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S473-S487</p>
+          </td>
+          <td>
+            <p>Musical Instruments [American Indians and First Peoples]</p>
+          </td>
+          <td>
+            <p>J. Richard Haefer</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S488-S499</p>
+          </td>
+          <td>
+            <p>Musicmaking in Arctic Canada and Alaska </p>
+          </td>
+          <td>
+            <p>Nicole Beaudry</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S500-S506</p>
+          </td>
+          <td>
+            <p>Metis </p>
+          </td>
+          <td>
+            <p>Anne Lederman</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S507-S514</p>
+          </td>
+          <td>
+            <p>The Great Basin </p>
+          </td>
+          <td>
+            <p>Brenda M. Romero; Judith A. Gray</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S515-S529</p>
+          </td>
+          <td>
+            <p>The Plains </p>
+          </td>
+          <td>
+            <p>Erik D. Gooding</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter3b</p>
+          </td>
+          <td>
+            <p>The United States</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S530</p>
+          </td>
+          <td>
+            <p>African-American Musics</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S531-S539</p>
+          </td>
+          <td>
+            <p>Religious Music </p>
+          </td>
+          <td>
+            <p>Mellonee V. Burnim</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S540-S552</p>
+          </td>
+          <td>
+            <p>Blues</p>
+          </td>
+          <td>
+            <p>David Evans</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S553-S565</p>
+          </td>
+          <td>
+            <p>Jazz: From Birth to the 1970s</p>
+          </td>
+          <td>
+            <p>Ingrid Monson</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S566-S570</p>
+          </td>
+          <td>
+            <p>Hip-Hop and Rap: From Birth to the 1980s</p>
+          </td>
+          <td>
+            <p>Dawn M. Norfleet</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter3c</p>
+          </td>
+          <td>
+            <p>European-American Musics</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S572-S574</p>
+          </td>
+          <td>
+            <p>Overview [European-American Musics]</p>
+          </td>
+          <td>
+            <p>Carl Rahkonen</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S575-S579</p>
+          </td>
+          <td>
+            <p>English and Scottish Music </p>
+          </td>
+          <td>
+            <p>Chris Goertzen</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S580-S584</p>
+          </td>
+          <td>
+            <p>Traditional Irish Dance Music and Song </p>
+          </td>
+          <td>
+            <p>Rebecca S. Miller </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S585-S595</p>
+          </td>
+          <td>
+            <p>Country and Western</p>
+          </td>
+          <td>
+            <p>Charles K. Wolfe; Neil V. Rosenberg</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S596-S602</p>
+          </td>
+          <td>
+            <p>French-American Music in Louisiana </p>
+          </td>
+          <td>
+            <p>Carl Rahkonen</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S603-S608</p>
+          </td>
+          <td>
+            <p>The Polish Polka </p>
+          </td>
+          <td>
+            <p>Mark Levy</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S609-S612</p>
+          </td>
+          <td>
+            <p>Early Jewish Pop Music </p>
+          </td>
+          <td>
+            <p>Mark Slobin</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S613-S619</p>
+          </td>
+          <td>
+            <p>The Birth of Rock: A Musical Interaction</p>
+          </td>
+          <td>
+            <p>Rob Bowman</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter3d</p>
+          </td>
+          <td>
+            <p>Latin Musics</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S620-S625</p>
+          </td>
+          <td>
+            <p>Overview [Latin Musics]</p>
+          </td>
+          <td>
+            <p>Daniel E. Sheehy; Steven Loza; Steven Cornelius</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S626-S632</p>
+          </td>
+          <td>
+            <p>Tejano Music: <i>Conjunto </i></p>
+          </td>
+          <td>
+            <p>Jose R. Reyna</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter3e</p>
+          </td>
+          <td>
+            <p>Asian-American Musics</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S633-S640</p>
+          </td>
+          <td>
+            <p>Overview [Asian-American Musics]</p>
+          </td>
+          <td>
+            <p>Terry E. Miller</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S641-S644</p>
+          </td>
+          <td>
+            <p>The Tyagaraja Festival in Cleveland, Ohio </p>
+          </td>
+          <td>
+            <p>Claire Martin</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter3f</p>
+          </td>
+          <td>
+            <p>Canada</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S645-S649</p>
+          </td>
+          <td>
+            <p>Anglo Music in Atlantic Canada </p>
+          </td>
+          <td>
+            <p>Anne Lederman</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S650-S657</p>
+          </td>
+          <td>
+            <p>French Folk and Pop in Quebec </p>
+          </td>
+          <td>
+            <p>Gordon E. Smith; Val Morrison</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S658-S663</p>
+          </td>
+          <td>
+            <p>The Development of Classical Music in Ontario </p>
+          </td>
+          <td>
+            <p>Elaine Keillor; Robin Elliott</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S664-S667</p>
+          </td>
+          <td>
+            <p>Caribbean and Latin American Music</p>
+          </td>
+          <td>
+            <p>Annemarie Gallaugher; Robert Witmer</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S668-S673</p>
+          </td>
+          <td>
+            <p>Intercultural Traditions on the Canadian Prairies </p>
+          </td>
+          <td>
+            <p>Beverley Diamond</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S674-S680</p>
+          </td>
+          <td>
+            <p>British Columbia: An Overview</p>
+          </td>
+          <td>
+            <p>Beverley Diamond</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S681-S682</p>
+          </td>
+          <td>
+            <p>The Canadian Broadcasting Corporation</p>
+          </td>
+          <td>
+            <p>Jody Berland</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter4</p>
+          </td>
+          <td>
+            <p>Europe</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S683-S695</p>
+          </td>
+          <td>
+            <p>The Music of Europe: Unity and Diversity </p>
+          </td>
+          <td>
+            <p>Timothy Rice</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S696-S704</p>
+          </td>
+          <td>
+            <p>A Guide to Pronunciation</p>
+          </td>
+          <td>
+            <p>Brian Patrick Fox</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S705-S711</p>
+          </td>
+          <td>
+            <p>Song Genres </p>
+          </td>
+          <td>
+            <p>James Porter</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter4a</p>
+          </td>
+          <td>
+            <p>Music Cultures of Europe</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter4b</p>
+          </td>
+          <td>
+            <p>Transnational Ethnic Groups</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S712-S718</p>
+          </td>
+          <td>
+            <p>Romani (Gypsy) Music </p>
+          </td>
+          <td>
+            <p>Carol Silverman</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S719-S723</p>
+          </td>
+          <td>
+            <p>Basque Music </p>
+          </td>
+          <td>
+            <p>Denis Laborde</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter4c</p>
+          </td>
+          <td>
+            <p>United Kingdom and Ireland</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S724-S728</p>
+          </td>
+          <td>
+            <p>England </p>
+          </td>
+          <td>
+            <p>Vic Gammon</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S729-S740</p>
+          </td>
+          <td>
+            <p>British Rock and Pop, 1950s to 1970s</p>
+          </td>
+          <td>
+            <p>Gordon R. Thompson</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S741-S748</p>
+          </td>
+          <td>
+            <p>Scotland</p>
+          </td>
+          <td>
+            <p>James Porter</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S749-S757</p>
+          </td>
+          <td>
+            <p>Ireland </p>
+          </td>
+          <td>
+            <p>Hugh Shields; Paulette Gershen</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter4d</p>
+          </td>
+          <td>
+            <p>Northern Europe</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S758-S765</p>
+          </td>
+          <td>
+            <p>Iceland </p>
+          </td>
+          <td>
+            <p>Pandora Hopkins</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S766-S777</p>
+          </td>
+          <td>
+            <p>Norway </p>
+          </td>
+          <td>
+            <p>Pandora Hopkins</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S778-S783</p>
+          </td>
+          <td>
+            <p>Sweden</p>
+          </td>
+          <td>
+            <p>Jan Ling; Erik Kjellberg; Owe Ronström</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S784-S796</p>
+          </td>
+          <td>
+            <p>Denmark </p>
+          </td>
+          <td>
+            <p>Svend Nielsen</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S797-S801</p>
+          </td>
+          <td>
+            <p>Finland</p>
+          </td>
+          <td>
+            <p>Timo Leisiö</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter4e</p>
+          </td>
+          <td>
+            <p>Western Europe</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S802-S814</p>
+          </td>
+          <td>
+            <p>Low Countries </p>
+          </td>
+          <td>
+            <p>Wim Bosmans</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S815-S821</p>
+          </td>
+          <td>
+            <p>France </p>
+          </td>
+          <td>
+            <p>Hugh Shields</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S822-S829</p>
+          </td>
+          <td>
+            <p>Portugal </p>
+          </td>
+          <td>
+            <p>Salwa El-Shawan Castelo-Branco</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S830-S839</p>
+          </td>
+          <td>
+            <p>Spain </p>
+          </td>
+          <td>
+            <p>Elizabeth Miles; Loren Chuse</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S840-S852</p>
+          </td>
+          <td>
+            <p>Italy </p>
+          </td>
+          <td>
+            <p>Marcello Sorce Keller</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter4f</p>
+          </td>
+          <td>
+            <p>Central Europe</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S853-S861</p>
+          </td>
+          <td>
+            <p>Germany </p>
+          </td>
+          <td>
+            <p>Wilhelm Schepping</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S862-S866</p>
+          </td>
+          <td>
+            <p>Austria </p>
+          </td>
+          <td>
+            <p>Chris Goertzen; Edward Larkey</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S867-S880</p>
+          </td>
+          <td>
+            <p>Switzerland </p>
+          </td>
+          <td>
+            <p>Johanna Hoffman; Silvia Delorenzi-Schenkel</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S881-S889</p>
+          </td>
+          <td>
+            <p>Poland </p>
+          </td>
+          <td>
+            <p>Ewa Dahlig </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S890-S899</p>
+          </td>
+          <td>
+            <p>Czech Republic and Slovakia </p>
+          </td>
+          <td>
+            <p>Magda Ferl Želinská; Edward J. P. O'Connor</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S900-S906</p>
+          </td>
+          <td>
+            <p>Hungary </p>
+          </td>
+          <td>
+            <p>Judit Frigyesi; James Porter</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter4g</p>
+          </td>
+          <td>
+            <p>Eastern Europe</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S907-S919</p>
+          </td>
+          <td>
+            <p>Russia</p>
+          </td>
+          <td>
+            <p>Izaly Zemtsovsky</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S920-S928</p>
+          </td>
+          <td>
+            <p>Ukraine </p>
+          </td>
+          <td>
+            <p>William Noll</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter4h</p>
+          </td>
+          <td>
+            <p>The Balkans</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S929-S948</p>
+          </td>
+          <td>
+            <p>Romania </p>
+          </td>
+          <td>
+            <p>Valeriu Apan</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S949-S957</p>
+          </td>
+          <td>
+            <p>Bulgaria </p>
+          </td>
+          <td>
+            <p>Timothy Rice</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S958-S965</p>
+          </td>
+          <td>
+            <p>Greece </p>
+          </td>
+          <td>
+            <p>Jane K. Cowan</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter5</p>
+          </td>
+          <td>
+            <p>Oceania</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S966-S971</p>
+          </td>
+          <td>
+            <p>Profile of Oceania </p>
+          </td>
+          <td>
+            <p>Adrienne L. Kaeppler</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter5a</p>
+          </td>
+          <td>
+            <p>New Guinea</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S972-S984</p>
+          </td>
+          <td>
+            <p>The Music and Dance of New Guinea</p>
+          </td>
+          <td>
+            <p>Adrienne L. Kaeppler; Don Nile</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S985-S992</p>
+          </td>
+          <td>
+            <p>Papuan Region of Papua New Guinea </p>
+          </td>
+          <td>
+            <p>Don Niles; Virginia Whitney</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S993-S1019</p>
+          </td>
+          <td>
+            <p>Highland Region of Papua New Guinea </p>
+          </td>
+          <td>
+            <p>Don Niles; Andrew J. Strathern; Vida Chenoweth; Paul W Brennan; Jacqueline
+              Pugh-Kitingan</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1020-S1026</p>
+          </td>
+          <td>
+            <p>Mamose Region of Papua New Guinea </p>
+          </td>
+          <td>
+            <p>Don Niles; Richard Scaglion; Alice Pomponio</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1027-S1038</p>
+          </td>
+          <td>
+            <p>Papua Province of Indonesia </p>
+          </td>
+          <td>
+            <p>Vida Chenoweth; Kathleen Van Arsdale; Artur Simon</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter5b</p>
+          </td>
+          <td>
+            <p>Australia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1039-S1072</p>
+          </td>
+          <td>
+            <p>The Traditional Music and Dance of Australia</p>
+          </td>
+          <td>
+            <p>Stephen A. Wild; Allan Marett; JoAnne Page; Grace Koch; Linda Barwick; Catherine J.
+              Ellis; Tamsin Donaldson; Margaret Gummow; Robin Ryan; Herbert Patten</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter5c</p>
+          </td>
+          <td>
+            <p>Melanesia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1073</p>
+          </td>
+          <td>
+            <p>The Music and Dance of Melanesia </p>
+          </td>
+          <td>
+            <p>Adrienne L. Kaeppler</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1074-S1090</p>
+          </td>
+          <td>
+            <p>Island Region of Papua New Guinea </p>
+          </td>
+          <td>
+            <p>Don Niles; Gerald Florian Messner; Michael Gunn</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1091-S1105</p>
+          </td>
+          <td>
+            <p>Solomon Islands </p>
+          </td>
+          <td>
+            <p>Adrienne L. Kaeppler; Don Niles; Vida Chenoweth; Jacob Wainwright Love; Hugo Zemp</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1106-S1115</p>
+          </td>
+          <td>
+            <p>New Caledonia</p>
+          </td>
+          <td>
+            <p>Jean-Michel Beaudet; Raymond Ammann</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1116-S1117</p>
+          </td>
+          <td>
+            <p>The Upright Log Instruments of Vanuatu</p>
+          </td>
+          <td>
+            <p>Adrienne L. Kaeppler; Peter Russell Crowe</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter5d</p>
+          </td>
+          <td>
+            <p>Micronesia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1118-S1138</p>
+          </td>
+          <td>
+            <p>The Music and Dance of Micronesia </p>
+          </td>
+          <td>
+            <p>Barbara B. Smith; Eve C. Pinsker; Deirdre Marshall; Mary E. Lawson Burke </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter5e</p>
+          </td>
+          <td>
+            <p>Polynesia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1139-S1145</p>
+          </td>
+          <td>
+            <p>The Music and Dance of Polynesia </p>
+          </td>
+          <td>
+            <p>Adrienne L. Kaeppler; Jacob Wainwright Love; Lamont Lindstrom </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1146-S1172</p>
+          </td>
+          <td>
+            <p>West Polynesia </p>
+          </td>
+          <td>
+            <p>Adrienne L. Kaeppler; David Goldsworthy; Jacob Wainwright Love </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1173-S1200</p>
+          </td>
+          <td>
+            <p>East Polynesia </p>
+          </td>
+          <td>
+            <p>Adrienne L. Kaeppler; Jane Freeman Moulin; Amy Ku'uleialoha Stillman; Takiora Ingram;
+              Jon Tikivanotau M. Jonassen; Allan Thomas; Te Ahukaramū Charles Royal; Jennifer
+              Shennan </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>back/glossary</p>
+          </td>
+          <td>
+            <p>Glossary</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter6</p>
+          </td>
+          <td>
+            <p>The Middle East</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1201-S1205</p>
+          </td>
+          <td>
+            <p>Hearing the Music of the Middle East </p>
+          </td>
+          <td>
+            <p>Stephen Blum</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1206-S1217</p>
+          </td>
+          <td>
+            <p>Guide to Transliteration and Pronunciation</p>
+          </td>
+          <td>
+            <p>compiled by Dwight Reynolds</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1218-S1219</p>
+          </td>
+          <td>
+            <p>Theorizing about Musical Sound </p>
+          </td>
+          <td>
+            <p>Virginia Danielson; Alexander J. Fisher</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1220-S1242</p>
+          </td>
+          <td>
+            <p>Musical Instruments in the Arab World</p>
+          </td>
+          <td>
+            <p>Scheherazade Qassim Hassan</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter6a</p>
+          </td>
+          <td>
+            <p>North Africa: The Maghrib</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1243-S1257</p>
+          </td>
+          <td>
+            <p>North Africa: Overview</p>
+          </td>
+          <td>
+            <p>L. JaFran Jones</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1258-S1270</p>
+          </td>
+          <td>
+            <p>Andalusian <i>Nūba </i>in Morocco </p>
+          </td>
+          <td>
+            <p>Habib Hassan Touma</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1271-S1276</p>
+          </td>
+          <td>
+            <p>
+              <i>Malḥūn: </i>Colloquial Song in Morocco </p>
+          </td>
+          <td>
+            <p>Philip D. Schuyler</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1277-S1287</p>
+          </td>
+          <td>
+            <p>Urban Folk and Popular Music in Algeria </p>
+          </td>
+          <td>
+            <p>Jürgen Elsner; Bezza Mazouzi</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter6b</p>
+          </td>
+          <td>
+            <p>The Eastern Arab World: The Mashriq </p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1288-S1300</p>
+          </td>
+          <td>
+            <p>Overview of Music in the Mashriq </p>
+          </td>
+          <td>
+            <p>A.J Racy </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1301-S1307</p>
+          </td>
+          <td>
+            <p>Islamic Hymnody in Egypt</p>
+          </td>
+          <td>
+            <p>Al-Inshād al- Dīnī Michael Frishkopf</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1308-S1317</p>
+          </td>
+          <td>
+            <p>Musical Life in Aleppo, Syria </p>
+          </td>
+          <td>
+            <p>Christian Poch</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter6c</p>
+          </td>
+          <td>
+            <p>The Arabian Peninsula</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1318-S1333</p>
+          </td>
+          <td>
+            <p>The Arabian Peninsula: An Overview</p>
+          </td>
+          <td>
+            <p>Jean Lambert</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1334-S1343</p>
+          </td>
+          <td>
+            <p>Women's Music of the Arabian Peninsula </p>
+          </td>
+          <td>
+            <p>Kay Hardy Campbell</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter6d</p>
+          </td>
+          <td>
+            <p>Armenia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1344-S1353, bibliography</p>
+          </td>
+          <td>
+            <p>Music of Armenia </p>
+          </td>
+          <td>
+            <p>Manuk Manukyan</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter6e</p>
+          </td>
+          <td>
+            <p>Kurdistan</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1354-S1365, bibliography</p>
+          </td>
+          <td>
+            <p>Kurdistan </p>
+          </td>
+          <td>
+            <p>Dieter Christensen</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter6f</p>
+          </td>
+          <td>
+            <p>Turkey</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1366-S1382</p>
+          </td>
+          <td>
+            <p>Turkey: An Overview</p>
+          </td>
+          <td>
+            <p>Ursula Reinhard; Irene Markoff; Yıldıray Erdener; Karl Signell</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1383-S1387</p>
+          </td>
+          <td>
+            <p>The Mevlevi Dervishes </p>
+          </td>
+          <td>
+            <p>Walter Feldman</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter6g</p>
+          </td>
+          <td>
+            <p>Iran</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1388-S1404</p>
+          </td>
+          <td>
+            <p>The Classical Music of Iran: An Introduction</p>
+          </td>
+          <td>
+            <p>Margaret Caton; Stephen Blum</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter6h</p>
+          </td>
+          <td>
+            <p>Central Asia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1405-S1413</p>
+          </td>
+          <td>
+            <p>Central Asia: An Overview</p>
+          </td>
+          <td>
+            <p>Theodore Levin</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1414-S1421</p>
+          </td>
+          <td>
+            <p>The Classical Music of Uzbeks and Tajiks </p>
+          </td>
+          <td>
+            <p>Theodore Levin; Razia Sultanova</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1422-S1432</p>
+          </td>
+          <td>
+            <p>The Music of Turkmenistan</p>
+          </td>
+          <td>
+            <p>Sławomira Żerańska-Kominek</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter6i</p>
+          </td>
+          <td>
+            <p>Israel</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1433-S1439</p>
+          </td>
+          <td>
+            <p>Israel: An Overview </p>
+          </td>
+          <td>
+            <p>Edwin Seroussi; Gila Flam</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter7</p>
+          </td>
+          <td>
+            <p>South Asia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1440-S1446</p>
+          </td>
+          <td>
+            <p>Profile of South Asia and its Music </p>
+          </td>
+          <td>
+            <p>Alison Arnold</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1447-S1449</p>
+          </td>
+          <td>
+            <p>Transliteration and Orthography</p>
+          </td>
+          <td>
+            <p>Alison Arnold</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter7a</p>
+          </td>
+          <td>
+            <p>The Classical Traditions</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1450-S1457</p>
+          </td>
+          <td>
+            <p>Hindustani <i>Raga: </i>An Introduction</p>
+          </td>
+          <td>
+            <p>George Ruckert; Richard Widdess</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1458-S1463</p>
+          </td>
+          <td>
+            <p>Hindustani <i>Tala: </i>An Introduction</p>
+          </td>
+          <td>
+            <p>James R Kippen</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1464-S1475</p>
+          </td>
+          <td>
+            <p>Hindustani Instruments</p>
+          </td>
+          <td>
+            <p>Allyn Miner </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1476-S1504</p>
+          </td>
+          <td>
+            <p>Hindustani Vocal Music</p>
+          </td>
+          <td>
+            <p>Bonnie C. Wade </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1505-S1516</p>
+          </td>
+          <td>
+            <p>Hindustani Instrumental Music </p>
+          </td>
+          <td>
+            <p>Stephen Slawek </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1517-S1528</p>
+          </td>
+          <td>
+            <p>Karnatak <i>Raga</i></p>
+          </td>
+          <td>
+            <p>Gayathri Rajapur Kassebaum </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1529-S1532</p>
+          </td>
+          <td>
+            <p>Karnatak <i>Tala </i></p>
+          </td>
+          <td>
+            <p>David Paul Nelson</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1533-S1548</p>
+          </td>
+          <td>
+            <p>Karnatak Instruments</p>
+          </td>
+          <td>
+            <p>David B. Reck</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1549-S1566</p>
+          </td>
+          <td>
+            <p>Karnatak Vocal and Instrumental Music</p>
+          </td>
+          <td>
+            <p>Amy Catlin</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter7b</p>
+          </td>
+          <td>
+            <p>Film Music in India</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1567-S1574</p>
+          </td>
+          <td>
+            <p>Film Music: North India </p>
+          </td>
+          <td>
+            <p>Alison Arnold</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1575-S1580</p>
+          </td>
+          <td>
+            <p>Film Music: South India </p>
+          </td>
+          <td>
+            <p>Paul D. Greene</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter7c</p>
+          </td>
+          <td>
+            <p>India</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1581-S1598</p>
+          </td>
+          <td>
+            <p>Gujurat </p>
+          </td>
+          <td>
+            <p>Gordon R. Thompson</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1599-S1619</p>
+          </td>
+          <td>
+            <p>Uttar Pradesh </p>
+          </td>
+          <td>
+            <p>Edward 0. Henry; Scott L. Marcus</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1620-S1641</p>
+          </td>
+          <td>
+            <p>Karnataka</p>
+          </td>
+          <td>
+            <p>Gayathri Rajapur Kassebaum; Peter J. Claus</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter7d</p>
+          </td>
+          <td>
+            <p>Pakistan</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1642-S1645</p>
+          </td>
+          <td>
+            <p>Music in Pakistan: An Introduction</p>
+          </td>
+          <td>
+            <p>Regula Burckhardt Qureshi; Hiromi Lorraine Sakata</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1646-S1656</p>
+          </td>
+          <td>
+            <p>Punjab </p>
+          </td>
+          <td>
+            <p>Adam Nayyar</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter7e</p>
+          </td>
+          <td>
+            <p>Afghanistan</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1657-S1669</p>
+          </td>
+          <td>
+            <p>Music in Afghanistan: An Overview</p>
+          </td>
+          <td>
+            <p>John Baily; Veronica Doubleday</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter7f</p>
+          </td>
+          <td>
+            <p>Sri Lanka</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1670-S1684</p>
+          </td>
+          <td>
+            <p>Sri Lanka </p>
+          </td>
+          <td>
+            <p>Anne Sheeran</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter8</p>
+          </td>
+          <td>
+            <p>East Asia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1685-S1692</p>
+          </td>
+          <td>
+            <p>A Profile of East Asian Musics and Cultures </p>
+          </td>
+          <td>
+            <p>J Lawrence Witzleben</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter8a, S1693</p>
+          </td>
+          <td>
+            <p>China</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1694-S1698</p>
+          </td>
+          <td>
+            <p>China: A Musical Profile</p>
+          </td>
+          <td>
+            <p>J Lawrence Witzleben</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1699-S1705</p>
+          </td>
+          <td>
+            <p>Chinese Music Theory </p>
+          </td>
+          <td>
+            <p>Chen Yingshi</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter8b</p>
+          </td>
+          <td>
+            <p>Musical Genres</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1706-S1712</p>
+          </td>
+          <td>
+            <p>Folk Song </p>
+          </td>
+          <td>
+            <p>Qiao Jianzhong</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1713-S1716</p>
+          </td>
+          <td>
+            <p>The <i>Bayin </i>Instrument Classification System</p>
+          </td>
+          <td>
+            <p>Dale Wilson</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1717-S1722</p>
+          </td>
+          <td>
+            <p>Instruments: <i>Qin</i></p>
+          </td>
+          <td>
+            <p>Bell Yung</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1723-S1730</p>
+          </td>
+          <td>
+            <p>Instruments: <i>Pipa</i></p>
+          </td>
+          <td>
+            <p>John Myers</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1731-S1734</p>
+          </td>
+          <td>
+            <p>Instruments: <i>Zheng </i></p>
+          </td>
+          <td>
+            <p>J Lawrence Witzleben</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1735-S1739</p>
+          </td>
+          <td>
+            <p>Instruments: <i>Erhu</i></p>
+          </td>
+          <td>
+            <p>Terence M. Liu </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1740-S1746</p>
+          </td>
+          <td>
+            <p>Ensembles: Northern Chinese </p>
+          </td>
+          <td>
+            <p>Stephen Jones </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1747-S1750</p>
+          </td>
+          <td>
+            <p>Ensembles: <i>Chuida </i>Music </p>
+          </td>
+          <td>
+            <p>Li Minxiong</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1751-S1756</p>
+          </td>
+          <td>
+            <p>Ensembles: <i>Jiangnan Sizhu </i></p>
+          </td>
+          <td>
+            <p>J Lawrence Witzleben</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1757-S1761</p>
+          </td>
+          <td>
+            <p>Ensembles: The Modern Chinese Orchestra </p>
+          </td>
+          <td>
+            <p>Tsui Ying-fai</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1762-S1770</p>
+          </td>
+          <td>
+            <p>Instrumental Music: Structures and Performance Practices </p>
+          </td>
+          <td>
+            <p>Alan R. Thrasher</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1771-S1778</p>
+          </td>
+          <td>
+            <p>Narrative Song: An Overview</p>
+          </td>
+          <td>
+            <p>Francesca Rebollo Sborgi; Tsao Penyeh</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1779-S1785</p>
+          </td>
+          <td>
+            <p>Chinese Opera: An Overview</p>
+          </td>
+          <td>
+            <p>Bell Yung; Rutan Chao Pian; Isabel K. F Wong</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1786-S1788</p>
+          </td>
+          <td>
+            <p>Confucian Ceremonial Music</p>
+          </td>
+          <td>
+            <p>JosephS. C. Lam</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1789-S1792</p>
+          </td>
+          <td>
+            <p>Religious Music in China: An Overview</p>
+          </td>
+          <td>
+            <p>Tsao Penyeh; Li Wei</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1793-S1797</p>
+          </td>
+          <td>
+            <p>The Naxi </p>
+          </td>
+          <td>
+            <p>Helen Rees</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter8c, S1798</p>
+          </td>
+          <td>
+            <p>Japan</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1799-S1806</p>
+          </td>
+          <td>
+            <p>Musical Profile of Japan </p>
+          </td>
+          <td>
+            <p>Tokumaru Yosihiko; Tukitani Tuneko</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1807-S1812</p>
+          </td>
+          <td>
+            <p>Folk Music </p>
+          </td>
+          <td>
+            <p>Gerald Groemer </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1813-S1815</p>
+          </td>
+          <td>
+            <p>Shinto Music </p>
+          </td>
+          <td>
+            <p>Tanigaito Kasuko </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1816-S1824</p>
+          </td>
+          <td>
+            <p>Buddhist Music </p>
+          </td>
+          <td>
+            <p>Sawada Atsuko</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1825-S1835</p>
+          </td>
+          <td>
+            <p>
+              <i>Gagaku</i>
+            </p>
+          </td>
+          <td>
+            <p>Terauchi Naoko</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1836-S1837</p>
+          </td>
+          <td>
+            <p>Theatrical Genres: An Overview</p>
+          </td>
+          <td>
+            <p>Okuyama Keiko; Heinz-Deiter Reese</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1838-S1848</p>
+          </td>
+          <td>
+            <p>Theatrical Genres: <i>Nô </i>and <i>Kyôgen</i></p>
+          </td>
+          <td>
+            <p>Takakuwa Izumi</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1849-S1851</p>
+          </td>
+          <td>
+            <p>Theatrical Genres: <i>Kabuki </i></p>
+          </td>
+          <td>
+            <p>Motegi Kiyoko</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1852-S1856</p>
+          </td>
+          <td>
+            <p>Theatrical Genres: <i>Bunraku</i></p>
+          </td>
+          <td>
+            <p>Motegi Kiyoko </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1857-S1860</p>
+          </td>
+          <td>
+            <p>Theatrical Genres: <i>Gidayû busi</i></p>
+          </td>
+          <td>
+            <p>Yamada Tieko </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1861-S1864</p>
+          </td>
+          <td>
+            <p>Chamber Music Traditions </p>
+          </td>
+          <td>
+            <p>Ônuki Tasiko</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1865-S1867</p>
+          </td>
+          <td>
+            <p>
+              <i>Ziuta: </i>Chamber Music for <i>Syamisen</i></p>
+          </td>
+          <td>
+            <p>Nogawa Mihoko</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1868-S1874</p>
+          </td>
+          <td>
+            <p>
+              <i>Sôkyoku: </i>Chamber Music for <i>Koto </i></p>
+          </td>
+          <td>
+            <p>Ônuki Tasiko </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1875-S1879, bibliography</p>
+          </td>
+          <td>
+            <p>Chamber Music for <i>Sankyoku </i>Ensembles</p>
+          </td>
+          <td>
+            <p>Nogawa Mihoko; Simura Satosi; Tokumaru Yosihiko</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter8d</p>
+          </td>
+          <td>
+            <p>Korea </p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1880-S1882</p>
+          </td>
+          <td>
+            <p>Musical Profile of Korea </p>
+          </td>
+          <td>
+            <p>Andrew P. Killick</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1883-S1888</p>
+          </td>
+          <td>
+            <p>Musical Instruments [Korea]</p>
+          </td>
+          <td>
+            <p>Andrew P. Killick; Hwang Byung-ki</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1889</p>
+          </td>
+          <td>
+            <p>Traditional Genres</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1890-S1892</p>
+          </td>
+          <td>
+            <p>Confucian Ritual Music in Korea: <i>Aak </i></p>
+          </td>
+          <td>
+            <p>Robert C. Provine</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1893-S1898</p>
+          </td>
+          <td>
+            <p>Court Music and <i>Chŏngak</i></p>
+          </td>
+          <td>
+            <p>Robert C. Provine </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1899-S1906</p>
+          </td>
+          <td>
+            <p>Korean Religious Music: Buddhist </p>
+          </td>
+          <td>
+            <p>Lee Byong Won </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1907-S1911</p>
+          </td>
+          <td>
+            <p>Korean Religious Music: Shamanic </p>
+          </td>
+          <td>
+            <p>Lee Bohyung </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1912-S1917</p>
+          </td>
+          <td>
+            <p>Folk Song </p>
+          </td>
+          <td>
+            <p>Robert C. Provine</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1918-S1931</p>
+          </td>
+          <td>
+            <p>
+              <i>P'ansori </i>
+            </p>
+          </td>
+          <td>
+            <p>Hae-Kyung Um</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1932-S1933</p>
+          </td>
+          <td>
+            <p>
+              <i>Sanjo </i>
+            </p>
+          </td>
+          <td>
+            <p>Hwang Byung-ki</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1934-S1945</p>
+          </td>
+          <td>
+            <p>
+              <i>Kagok, Sijo, </i>and <i>Kasa </i></p>
+          </td>
+          <td>
+            <p>Hae-Kyung Um</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1946-S1950</p>
+          </td>
+          <td>
+            <p>
+              <i>Nongak (P'ungmul Nori) </i>
+            </p>
+          </td>
+          <td>
+            <p>Keith Howard</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter8e</p>
+          </td>
+          <td>
+            <p>Inner Asia: Mongolia and Tuva </p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1951-S1964</p>
+          </td>
+          <td>
+            <p>Mongol Music </p>
+          </td>
+          <td>
+            <p>Carole Pegg </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1965-S1974</p>
+          </td>
+          <td>
+            <p>Music in Tuva </p>
+          </td>
+          <td>
+            <p>Theodore Levin</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter9</p>
+          </td>
+          <td>
+            <p>Southeast Asia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1975-S1983</p>
+          </td>
+          <td>
+            <p>Southeast Asian Musics: An Overview </p>
+          </td>
+          <td>
+            <p>Terry E. Miller; Sean Williams</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1984-S1995</p>
+          </td>
+          <td>
+            <p>Guide to Pronunciation</p>
+          </td>
+          <td>
+            <p>Thomas John Hudak</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S1996-S2013</p>
+          </td>
+          <td>
+            <p>Waves of Cultural Influence </p>
+          </td>
+          <td>
+            <p>Terry E. Miller; Sean Williams</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter9a</p>
+          </td>
+          <td>
+            <p>Mainland Southeast Asia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2014-S2025</p>
+          </td>
+          <td>
+            <p>Cambodia</p>
+          </td>
+          <td>
+            <p>Sam-Ang Sam </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2026-S2039</p>
+          </td>
+          <td>
+            <p>Thailand </p>
+          </td>
+          <td>
+            <p>Terry E. Miller </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2040-S2047</p>
+          </td>
+          <td>
+            <p>Laos </p>
+          </td>
+          <td>
+            <p>Terry E. Miller </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2048-S2057</p>
+          </td>
+          <td>
+            <p>Burma </p>
+          </td>
+          <td>
+            <p>Ward Keeler</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2058-S2065</p>
+          </td>
+          <td>
+            <p>Peninsular Malaysia</p>
+          </td>
+          <td>
+            <p>James Chopyak; Patricia Matusky</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2066-S2080</p>
+          </td>
+          <td>
+            <p>Vietnam </p>
+          </td>
+          <td>
+            <p>Phong T. Nguyễn</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2081-S2087</p>
+          </td>
+          <td>
+            <p>Minority Musics of Vietnam </p>
+          </td>
+          <td>
+            <p>Phong T. Nguyễn</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>chapter9b</p>
+          </td>
+          <td>
+            <p>Island Southeast Asia</p>
+          </td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2088-S2096</p>
+          </td>
+          <td>
+            <p>Sumatra </p>
+          </td>
+          <td>
+            <p>Margaret J. Kartomi</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2097-S2128</p>
+          </td>
+          <td>
+            <p>Java</p>
+          </td>
+          <td>
+            <p>Sean Williams; R. Anderson Sutton</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2129-S2141</p>
+          </td>
+          <td>
+            <p>Bali </p>
+          </td>
+          <td>
+            <p>David Harnish</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>S2142-S2167</p>
+          </td>
+          <td>
+            <p>Philippines </p>
+          </td>
+          <td>
+            <p>Corazon Canave-Dioquino; Ramon P. Santos; Jose Maceda</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

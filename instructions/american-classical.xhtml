@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>RILM TEI Instructions - Dictionary of American Classical Composers</title>
+    </head>
+    <body>
+        <div class="r201501" title="Added 01/2015">
+            <a id="dacc"></a> <h4>Dictionary of American Classical Composers (dac)</h4> <ol>
+                <li>This publication should be converted from XML.</li>
+                <li>All articles are &lt;text type="person"></li>
+                <li>Titles in prose text: All italicized phrases <i>that begin with a capital letter</i>
+                    followed by parentheses should be tagged together as &lt;bibl>, the italized portion tagged as
+                    &lt;title type="work"> and dates in the parentheses tagged in the following manner (all other
+                    italicized phrases should be tagged &lt;hi rend="italic">): <blockquote>Source: &lt;italic>A
+                        Woodland Serenade&lt;/italic> for wind quintet (1955)</blockquote> <blockquote>TEI-XML:
+                            &lt;bibl>&lt;title type="work">A Woodland Serenade&lt;/title> for &lt;instrumentation>wind
+                            quintet&lt;/instrumentation> (&lt;date>1955&lt;/date>)&lt;/bibl></blockquote>
+                    <blockquote>Source: &lt;italic>Celebration at Vanderburgh&lt;/italic> (1987)</blockquote>
+                    <blockquote>TEI-XML: &lt;bibl>&lt;title type="work">Celebration at Vanderburgh&lt;/title>
+                        (&lt;date>1987&lt;/date>)&lt;/bibl></blockquote><blockquote>Source: &lt;italic>Die Weisse
+                            Rose&lt;/italic>, a cantata for boys&amp;#x0027; chorus, choir, narrators, baritone, and
+                            orchestra (1974&amp;#x2013;75)</blockquote><blockquote>TEI-XML: &lt;bibl>&lt;title
+                                type="work">Die Weisse Rose&lt;/title>, a cantata for &lt;instrumentation>boys' chorus, choir,
+                                narrators, baritone, and orchestra&lt;/instrumentation>
+                                (&lt;date>1974–75&lt;/date>)&lt;/bibl></blockquote> Within those &lt;bibl> elements, if the
+                    only contents of parentheses is a four-digit date (or range) starting with "17", "18", "19",
+                    or "20", tag it as &lt;date>. If the italicized title is followed by the keyword "for" tag the
+                    phrases following that keyword as &lt;instrumentation>. The contents of that tag will be in
+                    one the following three patterns:<blockquote>thing</blockquote><blockquote>thing and new
+                        thing</blockquote><blockquote>thing, new thing, and newer thing</blockquote></li>
+                <li>Images should be contained in &lt;figure&gt; elements. Within those, captions (in Roman
+                    text) should be tagged in &lt;p&gt; elements, and acknowledgements (in italics, starting with
+                    "Courtesy" or similar) should be tagged in &lt;byline&gt; elements. </li>
+                <li>Apostrophes in the source XML file are all represented in the source file as U+0027;. Please
+                    convert these to U+2019. *Please note that right single-quotes are already encoded as
+                    U+2019—you should convert these to &lt;q rend="single"&gt; before you convert the apostrophes
+                    so it can all be done automatically.</li>
+                <li>Appendix (pages 513-516): For each entry in the section marked "Legacy: American Composers
+                    and their Students", find the corresponding article in the body of this publication, and move
+                    the appendix entry there. For example, the first entry "MILTON BABBITT" will be moved to the
+                    end of the article "BABBITT, MILTON (BYRON) on page 21-22. It will go in a &lt;div type="ref">
+                    according to the following example:<blockquote>&lt;div type="ref"
+                        xml:id="d1"><br />&lt;listPerson>&lt;rilmPerson xml:id="r2" corresp="#r1"> Milton
+                        Babbitt&lt;/rilmPerson><br />&lt;rilmPerson xml:id="r3" ref="dac08827">(student of Roger
+                        Sessions)&lt;/rilmPerson><br />&lt;rilmPerson xml:id="r4" ref="dac00063">Students: David
+                        EPSTEIN,&lt;/rilmPerson> &lt;rilmPerson xml:id="r5" ref="">Peter LIEBERSON,&lt;/rilmPerson>
+                        &lt;rilmPerson xml:id="r6" ref="">Donald MARTINO,&lt;/rilmPerson> &lt;rilmPerson xml:id="r7"
+                        ref="">Tobias PICKER,&lt;/rilmPerson> &lt;rilmPerson xml:id="r8" ref="">Frederic
+                        RZEWSKI,&lt;/rilmPerson> &lt;rilmPerson xml:id="r9" ref="">David
+                        WARD-STEINMAN&lt;/rilmPerson>&lt;relation name="student" active="#r1"
+                        passive="#r2"/>&lt;relation name="teacher" active="#r2" passive="#r4 #r5 #r6 #r7 #8 #9"/>
+                        &lt;/listPerson> &lt;/div></blockquote>Each &lt;rilmPerson> except the first one will include
+                    an @ref to the corresponding article in this publication.</li>
+                <li>Bibliography: For each entry with a boldface heading in the section marked "Bibliography"
+                    (pages 517-534), find the corresponding article in the body of this publication, and move the
+                    bibliography section there, to a &lt;div type="ography">. Convert the content according to the
+                    table <a href="../tei_rilm_instructions.html#tfbibl" target="_blank">above</a>. For instance, move the citations under "William ALBRIGHT"
+                    on page 517 to the end of the article "Albright, William" on pages 6-7. The section will look
+                    like this: <blockquote>&lt;div type="ography"><br />&lt;head>William
+                        ALBRIGHT&lt;/head><br />&lt;list>&lt;item>&lt;bibl>&lt;author>&lt;surname>Reed&lt;/surname>,
+                        &lt;forename>D.&lt;/forename>&lt;/author> &lt;title type="article">The Organ Music of William
+                        Albright&lt;/title>. &lt;title>PhD diss., University of Rochester&lt;/title>, &lt;pubPlace>New
+                        York&lt;/pubPlace>, &lt;date>1976&lt;/date>.&lt;/bibl>&lt;/item>
+                        &lt;item>&lt;bibl>&lt;surname>Salisbury&lt;/surname>, &lt;forename>W.&lt;/forename> &lt;title
+                        type="article">Introduction to the Organ Music of William Albright&lt;/title>
+                        &lt;title>Diapason&lt;/title> &lt;biblScope unit="vol">63&lt;/biblScope>, no. &lt;biblScope
+                        unit="issue">4&lt;/biblScope> (&lt;date>1972&lt;/date>).&lt;/bibl> &lt;/item> &lt;/list>
+                        &lt;/div></blockquote></li>
+                <li>Index (pages 535–548): Please use instructions <a href="../tei_rilm_instructions.html#indexes" target="_blank">above</a>.</li>
+                <li>Use the <a href="../tei_rilm_instructions.html#american">American Rule</a>.</li>
+            </ol>
+        </div>
+    </body>
+</html>

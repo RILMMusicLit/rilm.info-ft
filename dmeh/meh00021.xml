@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Caja</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Sociedad General de Autores y Editores</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<publisher>Instituto Complutense de Ciencias Musicales</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+				<title>Diccionario de la música española e hispanoamericana</title>
+						<editor>
+							<forename/>
+							<surname/>
+						</editor>
+						<imprint>
+							<publisher>Sociedad General de Autores y Editores</publisher>
+							<pubPlace>[Madrid]</pubPlace>
+							<date>1999</date>
+						</imprint>
+						<biblScope unit="vol">4</biblScope>
+						<biblScope unit="col" from="885">885</biblScope>
+						<biblScope unit="col" to="890">890</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<normalization>
+					<p>Some abbrevations have been replaced by unabbrevated terms.</p>
+				</normalization>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="14.1" notAfter="2014-03-04">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="es">Spanish</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-03-04" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="meh00021" type="instrument" xml:lang="es">
+		<body>
+			<div type="heading" xml:id="d1">
+				<head>Caja.</head>
+				<p xml:id="p1">Instrumento musical. Designación para un membranófono o idiófono de percusión.</p>
+			</div>
+			<div type="contents" xml:id="d2">
+				<list>
+					<item n="I"><ref target="#d3">Argentina</ref>.</item>
+					<item n="II"><ref target="#d4">Bolivia</ref>.</item>
+					<item n="III"><ref target="#d11">Chile</ref>.</item>
+					<item n="IV"><ref target="#d13">Colombia</ref>.</item>
+					<item n="V"><ref target="#d14">Costa Rica</ref>.</item>
+					<item n="VI"><ref target="#d15">Cuba</ref>.</item>
+					<item n="VII"><ref target="#d16">México</ref>.</item>
+					<item n="VIII"><ref target="#d18">Nicaragua</ref>.</item>
+					<item n="IX"><ref target="#d19">Panamá</ref>.</item>
+					<item n="X"><ref target="#d20">Perú</ref>.</item>
+					<item n="XI"><ref target="#d21">República Dominicana</ref>.</item>
+					<item n="XII"><ref target="#d22">Venezuela</ref>.</item>
+				</list>
+			</div>
+			<div type="section" n="I" xml:id="d3">
+				<head n="I">ARGENTINA.</head>
+				<p xml:id="p2">Tiene un tamaño de entre 40 y 50 cm de diámetro y 12 a 15 de altura, con dos parches delgados, de cabra, oveja o panza de vacuno (en algunos ejemplares, cada parche es de diferente animal). El cuerpo o caja de resonancia se construye a veces en una sola pieza excavada en madera de ceibo, sauce o chañar. Más frecuentemente se utiliza una tabla del mismo material, mojada para darle forma, y pegada, clavada o atada con alambre o tiento. Más recientemente se ha optado por utilizar un envase comercial de lata. En la mitad del cuerpo posee un pequeño oído circular o cuadrangular. Un dobladillo cosido con hilo en el borde de cada parche, esconde sendas varillas o arquillos de mimbre, caña o madera, de sección pequeña circular o chata. A éstos, una vez sujetos los parches al cuerpo, se fijan las ataduras de tiento o hilo que las unen en zigzag, para ajustar la tensión; a esto se agregan presillas o un cinturón periférico que las enlaza. Rozando uno de los parches, una chirlera de cerdas, a veces con pequeñas astillas de madera, aumenta la vibración. Un asa, sujeta a las ataduras y también de tiento, permite sostenerla en alto con la mano izquierda mientras la derecha percute uno de los parches con el extremo acolchado con cuero o lana de un palillo (huajtana) de unos 20 cm de longitud. Cuando se utilizan dos percutores, el segundo, un simple palillo de madera, se acciona con la misma mano que sostiene el instrumento. Si bien existen constructores especializados, lo habitual es que cada ejecutante realice su propia caja. Posee amplia difusión en las provincias del noroeste argentino, donde también se le da el nombre de tambor. Hombres y mujeres la tañen, agrupados en rueda, para acompañar al canto de coplas en celebraciones profanas y religiosas. Pero sólo los hombres la tocan con una mano mientras que con la otra sostienen un aerófono –flauta o erkencho– que tocan simultáneamente. En la misma región, el nombre de caja designa también otros membranófonos, de construcción similar pero de cuerpo más alto, que se utilizan durante las marchas que acompañan procesiones en honor de los santos patronos de diferentes localidades.</p>
+			</div>
+			<div type="section" n="II" xml:id="d4">
+				<head n="II">BOLIVIA.</head>
+			<div type="section" n="1" xml:id="d5">
+				<head>Caja tarijeña.</head>
+				<p xml:id="p3">Pequeña caja de unos 30 cm de diametro y unos 8 cm de altura. El cuerpo de forma tubular es hecho de fina madera laminada. No posee aros de tensión, por lo que los parches son amarrados directamente en forma de W. Éstos son hechos de la vejiga de la vaca. En la membrana posterior, que no se percute, lleva por lo general una pita donde se hallan ensartadas espinas y que cuando el <pb n="886"/>instrumento es ejecutado produce un trémolo. Se toca con una sola mano; con la otra el músico toca el erke o la camacheña. La baqueta con que se percute tiene unos 10 cm y está hecha de madera con una pequeña almohadilla en su extremo superior.</p>
+				<figure xml:id="f1">
+					<html:img src="images/meh00021-f1.png"/>
+				<p xml:id="p4"><hi rend="italic">Caja y caña tarijeña, departamento de Tarija, Bolivia</hi></p>
+				</figure>
+			</div>
+			<div type="section" n="2" xml:id="d6">
+				<head n="2">Caja chicheña.</head>
+				<p xml:id="p5">Instrumento membranófono de tamaño pequeño, parecido a la caja tarijeña, de unos 11 cm de diámetro y un cuerpo de aproximadamente 8 cm de profundidad. La técnica de construcción varía según el lugar donde se ubique el instrumento. El aro de la caja sonora se realiza con madera de la región, existiendo datos de que esta madera es denominada yacu k’ullu (madera de agua en quechua), posiblemente por ser preferido el sauce. El tubo de la caja se realiza con madera laminada cuyo tratamiento consiste en arquearla humedeciéndola o hirviéndola. El marco de la caja se cubre por ambos lados con parches de cuero que pueden ser de cabra, oveja o cordero; previamente estas membranas se dejan pudrir para quitarles la lana o sobarlas. Es recomendable, sin embargo, el uso del cuero de cabra recién nacida para tener un buen sonido. Los parches son cosidos a mano, con tientos fabricados del mismo cuero, sobre los aros que los muerden. Para su tensión, se usan presillas hechas también de cuero, que se atan al aro donde se hallan sujetos los parches. En la superficie de la membrana posterior, los campesinos acostumbran estirar por el centro un delgado tiento llamado chirlera, en cuya extensión se atan palitos o clavos de plumas, crines o pezuñas, con la finalidad de enriquecer su redoble. En uno de los bordes del tubo de la caja se tiene un ojalillo de cuero para introducir el dedo y sostenerla. El percutor o baqueta se realiza de madera liviana; su extremidad se cubre con una almohadilla de cuero suavizado. Para su ejecución es sostenido con una mano (introduciendo el dedo medio en el ojal) manejando el percutor con los otros dedos. Es utilizado sólo por mujeres. La caja es considerada complemento y acompañamiento de la quena y del canto. Acompaña también zapateos y rondas que tienen modalidades muy variadas en cada región. Su uso debe relacionarse con el calendario empleado por las quenas y se la ubica en las regiones del sureste de Potosí (provincia de Linares), Nor Chichas, aunque también se halla en Tinquipaya (provincia de Chayanta).</p>
+			</div>
+			<div type="section" n="3" xml:id="d7">
+				<head n="3">Caja-bombo.</head>
+				<p xml:id="p6">Instrumento cuyo diámetro tiene aproximadamente 50 cm y una profundidad del tubo de 15 cm. Las membranas son generalmente de cuero de llama o de capón (cabro macho), aunque eventualmente suelen fabricarse de cuero de venado; otras veces las hacen de cuero de zorro o perro; sin embargo, éstos no son aconsejables por el hecho de que el campesino cree que por esta razón se dan las peleas entre grupos en las fiestas. Para el tubo, se usa madera resistente, laminada uniformemente. Los aros que sujetan las membranas son varillas duras de forma cilíndrica alargada; suelen emplearse los de sauce, membrillo y rosal. En algunas localidades la tensión de las membranas se logra mediante amarre directo, con ligaduras en forma de Y. La baqueta, llamada wajt’ana en quechua, tiene unos 42 cm y lleva una pequeña almohadilla que cubre uno de los bordes. La caja-bombo es generalmente utilizada para el acompañamiento de instrumentos aerófonos. Es complemento de los malechos, rollanos y sarupalkas; en estos casos, la caja-bombo es mediana, con sonido agudo por su carácter carnavalesco y festivo. A veces, los campesinos lo tocan con dos wajt’anas. Para el acompañamiento de los ayarachi, las cajas-bombos son más grandes y de sonido más grave y fúnebre, como el carácter de la danza; se golpean con una sola baqueta, llevando en la otra mano los instrumentos aerófonos.</p>
+				<figure xml:id="f2">
+					<html:img src="images/meh00021-f2.png"/>
+				<p xml:id="p7"><hi rend="italic">Caja-bombo, Bolivia</hi></p>
+				</figure>
+			</div>
+			<div type="section" n="4" xml:id="d8">
+				<head n="4">Caja de sikura.</head>
+				<p xml:id="p8">Tiene cuerpo tubular hecho de madera (aunque también se encuentran de otros materiales), con dos membranas o parches de cuero de llama o de cabra sin curtir. Éstas son abrazadas por uno o dos aros de madera que muerden las dos bocas del tubo. La tensión se logra con correas (simples o torcidas) de cuero, atadas en forma de V o Y. Tiene un diámetro de unos 50 a 60 cm y es percutida por un mazo recubierto en un extremo por una especie de almohadilla adornada con coloridos hilos de lana. Se porta colgada del hombro izquierdo y es percutida con la mano derecha, mientras con la otra el mismo músico sostiene la sikura.</p>
+			</div>
+			<div type="section" n="5" xml:id="d9">
+				<head n="5">Caja chiriguana.</head>
+				<p xml:id="p9">Membranófono que destaca por tener el cuerpo central más bien largo, con una profundidad mayor que la boca, que se halla cubierta por dos parches. El cuerpo se construye de madera timboy. Tiene doble aro de tensión. En un segundo parche que no se percute, lleva una charlera llamada jevisa. Según la ocasión se <q>templa</q> de distinta manera. Así, al final de la fiesta del arete y en señal de tristeza, las cajas son destempladas en muchos lugares. Es exclusivo de la fiesta y del tiempo del arete. Es parte de un conjunto instrumental compuesto además por el temimbï ñemboï. En el Izozog, es conocido como angua raï.</p>
+			<div type="ref" xml:id="d10">
+				<p xml:id="p10"><ref target="NA">Aymara. I. Bolivia</ref>; <ref target="NA">Bolivia. IV. Música indígena andina de Bolivia</ref>; <ref target="NA">Jantarka</ref>.</p>
+				<figure xml:id="f3">
+					<html:img src="images/meh00021-f3.png"/>
+				<p xml:id="p11"><hi rend="italic">Caja chiriguana (Foto: Ar. W. Sánchez)</hi></p>
+				</figure>
+			</div>
+			</div>
+			<div type="section" n="III" xml:id="d11">
+				<head n="III">CHILE.</head>
+				<p xml:id="p12">Denominación de un membranófono de marco, con dos parches de cuero, por lo general de ovino o de caprino, de golpe directo, percutido habitualmente con una baqueta de cabeza de lana envuelta por una pequeña <pb n="887"/>pieza de género. Por lo común mide de 30 a 40 cm de diámetro y de 8 a 14 cm de profundidad entre los discos de sus parches, los cuales se sujetan con costuras de alambre, cuero o hilo, a dos anillos de madera que se ajustan en el marco cilíndrico, también de madera, amarrándose ambos entre sí con una delgada cuerda de cuero o de lana, que recorre circularmente todo el marco de arriba abajo en zigzag, cuerda que permite dar mayor o menor tensión a los parches para afinar el instrumento, al cual se agrega una manija lateral con el fin de suspenderlo y sujetarlo para su ejecución. Hay cuatro clases de técnica para tocar la caja: la primera consiste en colgarla del dedo pulgar de una mano y con ese mismo dedo, más el índice y el del medio de esa mano, dar los movimientos a una baqueta que la percute. La segunda se consigue sujetándola de la manija con una mano y usando la otra para golpearla con un palillo. La tercera, menos frecuente que las anteriores, lleva a suspenderla de la manija con una mano y golpearla con dos percutores, uno en cada mano, utilizando el de la mano que la suspende de la misma manera que la indicada respecto a la primera técnica. La cuarta, aún escasa, se practica asiéndola de la manija con una mano y percutiéndola directamente con la otra, es decir, sin baqueta. En cualquiera de estos casos las cajas se hallan en posición vertical, esto es, paralelas al cuerpo del ejecutante, no perpendiculares a él, como sucede con el tambor militar. También, en contadas ocasiones, puede colgarse de un hombro del músico mediante un cordón de lana o una correa, pero sin cambiar de posición. La caja se toca en la I y en la II Región, principalmente para la celebración del Carnaval andino, por lo que en esa fiesta recibe también el nombre de caja challera, del quechua ch’allay: rociar con agua a las personas, una de las diversiones carnavalescas, sin que sea posible desconocer su semejanza de forma con el tambor de los bailes chinos, que se encuentra también en esas regiones así como en la III, IV y V y que cumple otra función. La antigua nomenclatura de algunas partes de la caja, su amplia difusión y vigoroso uso en la cultura andina, toda ella con elementos musicales y objetivos sociales comunes, hace pensar en su procedencia prehispánica aborigen, pero la terminología aymara y quechua pueden ser posteriores a la llegada de los españoles, y su existencia provenir o tener influjos del tambor europeo. No obstante estas presuntas razones en favor de su origen extra-americano, su repertorio, en gran medida, es propio de la civilización incaica, argumento parcial que tampoco es concluyente en la historia de los instrumentos musicales.</p>
+			<div type="ref" xml:id="d12">
+				<p xml:id="p13"><ref target="NA">Atacameño</ref>; <ref target="NA">Aymara. II. Chile</ref>.</p>
+			</div>
+			</div>
+			<div type="section" n="IV" xml:id="d13">
+				<head n="IV">Colombia.</head>
+				<p xml:id="p14">Instrumento utilizado con esta denominación en el género vallenato. El origen es atribuido a las costumbres de los negros africanos que fueron traídos al continente americano en la época de la conquista, y cuyos instrumentos musicales básicos eran tambores construidos con troncos huecos y pieles de animales secas templadas sobre uno de los huecos del tronco, utilizando como mecanismos de tracción cuñas de madera. Sus dimensiones son de unos 30 cm de diámetro en el hueco donde se coloca la membrana, unos 40 cm de alto y unos 10 a 15 cm en el orificio inferior, conservando una forma cónica. Según Ciro Quiroz Otero, se utilizó el buche del caimán como membrana, después de ser extraído del reptil y sometido a un proceso de ensanchamiento con estacas a la vez que se secaba con ceniza y se exponía a la luz solar para evitar la putrefacción. Con el tiempo, añade, <q>el buche de caimán fue reemplazado porque cedía y perdía afinación al humedecerse; y cuando los reptiles empezaron a extinguirse, se usó piel de marimonda negra (un animal del grupo de los primates)</q>. Dicen los cajeros que la piel más sonora es la de marimonda, pero el cuero debe ser crudo, sin curtir. Al escasear ésta, fue sustituida por cueros de venado, chivo, oveja o carnero, y más tarde por el plástico de las placas radiográficas, a la vez que las cuñas de madera han sido sustituidas por aros y soportes metálicos. Su evolución obedece a la estética, pero se ha perdido la sonoridad de los tonos graves característicos de las cajas antiguas.</p>
+				<p xml:id="p15">En cuanto a su función, las cajas no sólo han tenido importancia con relación al ritmo sino que también han servido para orientar a las personas extraviadas en las solitarias y extensas sabanas del valle del Magdalena. Igualmente, con toques rápidos se anunciaban las catástrofes; golpes de cajas en sectores urbanos eran preludio de noticias o medio colectivo de alarma, y se utilizaban para difundir informaciones del gobierno, acompañando los bandos que eran leídos en las esquinas de los pueblos. La vieja costumbre de trasladar de un lugar a otro los techos de las casas de bahareque, construidos de palma amarga, era guiada por característicos y retumbantes golpes de caja. Por mucho tiempo fue utilizada también para amedrentar a los tigres que rodeaban las regiones montañosas. Se dice que la percusión infunde pánico a los felinos; por ello, los pobladores rurales guardaban este instrumento sin ser músicos, lo que posiblemente estimuló el aprendizaje de los ritmos. Asimismo, la caja fue control laboral de trabajadores en cuadrillas; se tocaba para indicar el comienzo o el fin de la faena. Sus fabricantes inician el aprendizaje del oficio construyéndolas del tronco de la palma que llaman <q>sara</q>, al que le extraen la médula hasta formar un cilindro, pero se le atribuye poca sonoridad. El cajero Agustín Cudris, acompañante de los acordeoneros Durán Díaz, dice que las cajas son más sonoras cuando el madero es más compacto y las cuñas son más fibrosas. En la práctica se debe a que la madera no fibrosa tolera mejor la talla. El madero, horadado y labrado sin membrana, se llama <q>vaso</q> y para su elaboración debe utilizar un árbol viejo –cuanto más viejo más sonoro–, siendo los más usuales el campano, el cedro, el caracolí, el dividivi, el carreto y el balso. Un buen vaso simboliza a un buen cajero y sus cuñas deben ser hechas de palo fibroso, como mucurutu, cañahuate o mataratón. Estas preferencias determinan la sonoridad que requiere una buena caja y su explicación real la constituye el hecho de que estos tambores son templados a golpes de piedra sobre la base superior de sus cuñas, que por su naturaleza fibrosa no se astillan. La caja de cuñas es muy sonora y cumple la función percusiva rítmica dentro de la sonoridad vallenata.</p>
+				<p xml:id="p16">A comienzos de la segunda mitad del s. XX aparecieron las cajas armadas y templadas con tornillos, cuando los conjuntos de acordeón incorporaron la guaracha en sus repertorios y necesitaron que la caja tuviera el temple de un timbal, con una tensión que las cuñas no podían dar. La innovación ocurrió en Barranquilla con los hermanos Román y con Aníbal Velásquez. Estos conjuntos utilizaron también la concertina monotónica (acordeón piano) a la que denominaban acordeón, instrumento que traía cambios de tono incorporados y permitía una mayor riqueza melódica. Fueron ellos quienes añadieron el contrabajo y la tumbadora cubana, alterando la estructura organológica tradicional.</p>
+				<p xml:id="p17">Primitivamente se utilizaron dos clases de caja: a) Una de doble parche, con membrana por ambos lados, predominante en la región de Valledupar y Riohacha; al parecer de ancestro indígena, similar a la tambora dominicana y en proceso de extinción. Emirto de Lima, con referencia al membranófono <pb n="888"/>de origen guajiro, escribe: <q>En otros lugares los indígenas acostumbraban secar partecitas del mismo cuero para aplicarlas atravesadas y pegarlas al parche inferior del tambor en diversas direcciones</q>. A este añadido lo llaman en su lenguaje <q>ponerle ronca a la caja</q> y anota que los tambores encontrados en Villanueva carecen ya de esta característica nativa. b) Otra de un solo parche con un lado descubierto, de estirpe negra y de uso en la región del río o <q>bajera</q>; quedan en El Paso, Chiriguaná, Chimichagua, Saloa, El Banco, es decir, lo que formó el País de Pocabuy. A un trozo de madera a medio secar se le abre un hueco longitudinal previo, porque de lo contrario, es la creencia, la caja perderá sonoridad. A mayor solidez de la madera, más sonoras son las cajas, según la regla de oro de los cajeros. A su alrededor van las cuñas ensanchadas con bejucos o tiras de piel de res que se unen en sus extremos a un aro principal. El temple del cuero o parche lo van dando los golpes de piedra sobre las cuñas, hasta conseguir el tono deseado. Las cuñas deben ser de madera diferente al vaso; sin este presupuesto la caja será ronca, sin timbre.</p>
+				<p xml:id="p18">El toque de caja tiene sus formas especiales. <q>El golpe rodao</q> consiste en ir ahogando la vibración hasta producir un débil suspenso, o bien en desplazar los dedos pulgares sobre la superficie del cuero, produciendo un ronquido en la membrana. El golpe <q>adominicanao</q>, propio del ritmo de merengue, sucede cuando la demarcación sonora de tiempo termina en una serie de golpecillos, repetidos y fuertes, que se dan en el centro del parche. Los <q>tres golpes</q>, propios del buen cajero, son como un juego percusivo, armonioso, definido en un solo instante y que recoge repentinamente de nuevo el ritmo. Estos golpes rápidos, hechos en medio del recorrido rítmico, influyen psicológicamente en el <q>acordionero</q>, volviéndolo más emotivo y expresivamente melódico. Cuando los cajeros quieren enseñar a otro cierto golpe remedan con la boca los tonos difíciles de repetir en la caja por parte del novato. Imitan la vibración con sus labios y sorprende ver cómo, de inmediato, los aprendices la repiten con las manos. Los cajeros son dueños de sus cajas; cuando rivalizan entre sí, pierden o ganan el prestigio rompiendo el mismo dueño la membrana con un estilizado palmetazo que da al parche. Algunos cajeros afirman que las cajas hablan, que un buen tocador extrae tonos bucales humanos a su tambor. Para ello requiere una buena caja, con forma y medidas compensadas, que debe ser cónica, esto es, que su diámetro sea mayor donde va colocado el parche y más angosto en su extremo contrario. Las cajas no pueden ser construidas de paredes paralelas porque resultarían atonales, arrítmicas. La forma obedece a una explicación de la técnica musical, a una consecuencia de la ley física de la propagación de las ondas sonoras: si la caja es de paredes paralelas, las ondas se propagan en línea recta; en la cónica sus ondas regresan por el fenómeno de la reflexión y la membrana se convierte en moderadora de sonidos, generando varios tipos de tono que aumentan por la frecuencia y la habilidad del cajero al modular la percusión a palmetazos.</p>
+				<p xml:id="p19">Son muchas las anécdotas que existen sobre cajeros y se narran las hazañas con gran fantasía. Se cuenta que Juan Ubach, de origen guajiro, podía tocar dos cajas al mismo tiempo y los <q>bajeros</q> le temían porque podía desarmar y armar sus tambores mientras tocaba. O que el <q>Mocho</q> Ruiz, sin el antebrazo derecho, y que tocaba la caja utilizando no la mano sino el codo del brazo bueno, lo hacía con tanta sonoridad que los cajeros que tocaban con sus manos huían humillados. Según información directa de Enrique Campos –último de los negros tamboreros que quedan en la región del Ariguaní, residente en El Paso–, sus tambores de madera de campano se aflojan cuando no se les da la gana de sonar; dice conocerlos como las palmas de sus manos y que sólo son sonoros cuando los acompaña la garganta de la tamborera cantadora Antonia Silva.</p>
+				<p xml:id="p20">Entre los indígenas de la comunidad inga (departamento del Putumayo), la caja es un pequeño tambor de doble parche de unos 20 cm de diámetro, igual altura y que se toca golpeándolo con un pequeño palo. Se fabrica con una sección de tronco vaciada al fuego y se cubre por ambos lados con pedazos de piel de venado, templados por la presión de dos aros de la palma de chonta superpuestos, sujetos unos con otros mediante cuerdas de moriche pasadas de un aro al otro formando triángulos y que rematan en dos vueltas alrededor del cilindro en su parte media. Allí mismo se desprende una cuerda que sirve para sujetarlo a la cintura o al hombro del músico. El pequeño tamaño de la caja permite manejarla cómodamente mientras se baila.</p>
+			</div>
+			<div type="section" n="V" xml:id="d14">
+				<head n="V">Costa Rica.</head>
+				<p xml:id="p21">Tambor entre los guaymíes y borucas. Caja de resonancia de madera de marimba.</p>
+				<figure xml:id="f4">
+					<html:img src="images/meh00021-f4.png"/>
+				<p xml:id="p22"><hi rend="italic">Ejecutante guaymí de tambor (caja), Costa Rica (Foto: J. L. Acevedo)</hi></p>
+				</figure>
+			</div>
+			<div type="section" n="VI" xml:id="d15">
+				<head n="VI">CUBA.</head>
+				<p xml:id="p23">Término muy difundido para designar en los conjuntos instrumentales de idiófonos y membranófonos al instrumento de registro grave.</p>
+			</div>
+			<div type="section" n="VII" xml:id="d16">
+				<head n="VII">MÉXICO.</head>
+				<p xml:id="p24">Término utilizado en algunas partes de México para designar a diversos bimembranófonos, tambores entre los que existen de <q>caja</q> cilíndrica, abarrilada o cuadrangular.</p>
+				<p xml:id="p25"><hi rend="italic">Caja o cajita de diablos</hi>. Idiófono de entrechoque conformado por una pequeña caja rectangular de madera que se ejecuta abriéndola y cerrándola de golpe consecutivamente (de aproximadamente 20 cm de largo). Existen dos variantes morfológicas de este instrumento a partir de ser o no construidas especialmente para su uso musical. Las fabricadas ex profeso suelen tener iguales sus dos partes de entrechoque, en algunos casos con correas de cuero en su tapa exterior para su mejor sujeción y ejecución; las adaptadas, es decir, las cajas que son construidas con otras finalidades (alhajeros, por ejemplo), están conformadas por tapa y caja propiamente dicha. Este idiófono recibe el apelativo <q>de diablos</q> por la danza que acompaña, y pese a ser utilizado por diversos grupos culturales (hispanomestizos, afromestizos e indígenas) no existe otro término con que se identifique y que sea relevante. Aunque pareciera no existir en la actualidad el uso de un tipo específico de madera para su <pb n="889"/>manufactura, prepondera entre las cajas fabricadas ex profeso el uso de la parota <hi rend="italic">(Enterolobium cyclocarpum)</hi>, madera que por otro lado es muy empleada en el litoral del Pacífico mexicano en la fabricación de instrumentos musicales como arpas, tarimas y tambores. Con respecto a las cajas adaptadas, se usan varios tipos de madera, entre las que es muy apreciada el linaloe <hi rend="italic">(Bursea aloexylon)</hi> por el agradable aroma que despide; estas cajas junto con otras artesanías son decoradas con un fino maque multicolor. Los golpeteos consecutivos de este instrumento, junto al ludimiento y golpes de la charrasca, hacen de base rítmica a otros instrumentos; sus variaciones dependen del repertorio y estilos subregionales. La ejecución suele asignársele a un personaje importante de la danza como <q>la muerte</q>, debido al hecho de que tales personajes son representados por personas que conocen a fondo la música, y por las connotaciones ancestrales que subyacen con respecto al simbolismo del instrumento musical empleado en danzas rituales. La morfología y forma de ejecución de este idiófono, así como las características generales de la danza que acompaña, tienen parecido con otros casos de países latinoamericanos en donde ha habido importantes asentamientos de negros llevados de África; esto, junto al hecho de que en México el instrumento se ejecuta en la región de la montaña (en la sierra Madre Occidental, en los estados de Guerrero y Oaxaca), entre cuyos pobladores predomina la fisonomía afromestiza por causas semejantes a las de los otros países latinoamericanos, hace suponer que la caja de diablos es de origen africano, resultado de un proceso de adopción y adaptación regional.</p>
+			<div type="ref" xml:id="d17">
+				<p xml:id="p26"><ref target="NA">México. VI. Organología</ref></p>
+				<figure xml:id="f5">
+					<html:img src="images/meh00021-f5.png"/>
+				<p xml:id="p27"><hi rend="italic">Caja, estado de Guerrero, México (Foto: Ar. J. G. Contreras)</hi></p>
+				</figure>
+			</div>
+			</div>
+			<div type="section" n="VIII" xml:id="d18">
+				<head n="VIII">NICARAGUA.</head>
+				<p xml:id="p28">Instrumento de percusión muy difundido en el litoral atlántico de Nicaragua que, como su nombre indica, es una caja de madera de moderadas dimensiones utilizada para acompañar la música afrocaribeña. El ejecutante se sienta encima de ella, inclinándola ligeramente hacia atrás. Igual que si se tratara de tumbadoras, se percute con las palmas de las manos para sacarle el sonido.</p>
+			</div>
+			<div type="section" n="IX" xml:id="d19">
+				<head n="IX">Panamá.</head>
+				<p xml:id="p29">Membranófono de golpe directo, de marco con asa y de dos membranas. Consta de un cilindro de madera con dos membranas de cuero de venado sujetas por aros, los cuales se tensan mediante sogas que presionan a los aros entre sí. Se ejecuta colgada del cuello o atada a la cintura, a semejanza del tambor militar. Se percute con dos baquetas, golpeando el cuero y el aro. Esta caja es la base rítmica del conjunto de tambores que acompañan el tamborito en Antón, distrito de la provincia de Cocle. Junto a esta caja de influencia europea, existe la africana, que no lleva aros; ésta es una de las contradicciones o casos de hibridación que se dan en Antón, que es de población y cultura eminentemente afro. Otros ejemplos de este fenómeno son las cajas de la provincia del Darién, la isla de San Miguel y la ciudad de La Chorrera, entre otros.</p>
+			</div>
+			<div type="section" n="X" xml:id="d20">
+				<head n="X">Perú.</head>
+				<p xml:id="p30">Nombre genérico que se aplica en la región andina y costera de Perú a una variedad de tambores tubulares, cilíndricos y de dos cueros independientes, de distintos tamaños y formas. El material que se utiliza para su confección varía según el lugar. En varias regiones un lado de la caja es considerado masculino y el otro femenino, según sea el cuero del animal que haya sido utilizado como membrana. La caja puede ser interpretada sola o en dúo con algún instrumento de viento, como la flauta o la chirimía. En este último caso la caja y el instrumento de viento pueden ser tocados cada uno por un ejecutante distinto o bien pueden ser interpretados simultáneamente por un mismo ejecutante. La caja también puede ser tocada dentro de un grupo instrumental mayor.</p>
+			</div>
+			<div type="section" n="XI" xml:id="d21">
+				<head n="XI">República Dominicana.</head>
+				<p xml:id="p31">Instrumento membranófono de dos cueros de golpe directo. En los tiempos coloniales se expandió por toda América como sustituto del tambor de los ejércitos españoles y marcó las pautas del avance de éstos en todo el continente. Nunca se fabricó en el país. Cuando había luto real, aflojaban los cueros en lo que se llamaba <q>destemplar</q> y así tocaban los clarines roncos y las cajas destempladas; también de esta misma manera se despedía a los funcionarios que no habían obrado correctamente. De ahí la frase <q>despedir con cajas destempladas</q>. En los ejércitos dominicanos la caja fue sustituida por el redoblante, que era más pequeño.</p>
+				<figure xml:id="f6">
+					<html:img src="images/meh00021-f6.png"/>
+				<p xml:id="p32"><hi rend="italic">Caja, República Dominicana</hi></p>
+				</figure>
+			</div>
+			<div type="section" n="XII" xml:id="d22">
+				<head n="XII">VENEZUELA.</head>
+				<p xml:id="p33">Tambor de marco cuadrado de dos parches claveteados. Se fabrica con listones de madera y para los parches se utiliza generalmente cuero de chivo. Se ejecuta habitualmente con dos baquetas de madera, una que se percute sobre el parche y otra sobre el marco, creando así dos planos tímbricos que definen las fórmulas rítmicas que en ella se tocan. La caja es un instrumento típico de la región nororiental de Venezuela y se utiliza como base rítmica en los conjuntos que interpretan joropos.</p>
+				<p xml:id="p34">Es también un tambor típico de fabricación artesanal o industrial que se toca para acompañar el baile de los diablos danzantes de Corpus Christi en las poblaciones de San Francisco de Yare, estado de Miranda, y Chuao, estado de Aragua, región central de Venezuela. Los diablos danzantes de <pb n="890"/>Naiguatá, en el litoral del Distrito Federal, utilizan una variante que, a pesar de recibir la misma denominación y uso del antes citado, difiere de él en el hecho de tener un solo parche claveteado a una pequeña barrica de unos 35 cm de alto por 25 cm de diámetro. Se percute con dos macetas.</p>
+				<figure xml:id="f7">
+					<html:img src="images/meh00021-f7.png"/>
+				<p xml:id="p35"><hi rend="italic">Tocador de caja, Venezuela</hi></p>
+				</figure>
+			</div>
+			</div>
+			<div type="ography" xml:id="d23">
+				<head>BIBLIOGRAFÍA:</head>
+			<div type="section" n="I" xml:id="d24">
+				<list n="I">
+					<item><bibl xml:id="b1"><title>IAC</title></bibl></item><item><bibl xml:id="b2"><title>IMEFA</title></bibl></item><item><bibl xml:id="b3"><author>R. Cortázar</author>: <title>El carnaval en el folklore calchaquí</title>, Buenos Aires, Sudamérica, <date>1949</date></bibl>.</item>
+				</list>
+			</div>
+			<div type="section" n="III" xml:id="d25">
+				<list n="III">
+					<item><bibl xml:id="b4"><title>IAC</title></bibl></item><item><bibl xml:id="b5"><author>R. Lenz</author>: <title>Diccionario etimológico de las voces chilenas derivadas de lenguas indígenas americanas</title>, Santiago, Imprenta Cervantes, <date>1904-1910</date></bibl>.</item>
+				</list>
+			</div>
+			<div type="section" n="IV" xml:id="d26">
+				<list n="IV">
+					<item><bibl xml:id="b6"><author>E. de Lima</author>: <title>Folklore colombiano</title>, Barranquilla, Litografía Barranquilla, <date>1942</date></bibl></item><item><bibl xml:id="b7"><author>C. Quiroz Otero</author>: <title>Vallenato, hombre y canto</title>, Bogotá, Ícaro Ed., <date>1983</date></bibl>.</item>
+				</list>
+			</div>
+			<div type="section" n="VIII" xml:id="d27">
+				<list n="VIII">
+					<item><bibl xml:id="b8"><title>Instrumentos musicales de América Latina y el Caribe</title>, Caracas, CCPyT, <date>1988</date></bibl>.</item>
+				</list>
+			</div>
+			<div type="section" n="X" xml:id="d28">
+				<list n="X">
+					<item><bibl xml:id="b9"><title>MI</title></bibl>.</item>
+				</list>
+			</div>
+			<div type="section" n="XI" xml:id="d29">
+				<list n="XI">
+					<item><bibl xml:id="b10"><author>F. Lizardo</author>: <title>Instrumentos musicales indígenas dominicanos</title>, Santo Domingo, Alfa y Omega, <date>1976</date></bibl></item><item><bibl xml:id="b11">—: <title>Instrumentos musicales folklóricos dominicanos</title>, I, Unesco, <date>1988</date></bibl>.</item>
+				</list>
+			</div>
+			</div>
+			<div type="authors" xml:id="d30">
+				<docAuthor n="I">YOLANDA M. VELO</docAuthor>
+				<docAuthor n="II">WALTER SÁNCHEZ/CRISTÓBAL CORZO CRUZ</docAuthor>
+				<docAuthor n="III">MANUEL DANNEMANN</docAuthor>
+				<docAuthor n="IV">IGNACIO CASTRO CONTRERAS</docAuthor>
+				<docAuthor n="V">JORGE LUIS ACEVEDO</docAuthor>
+				<docAuthor n="VI">Victoria Eli Rodrígez</docAuthor>
+				<docAuthor n="VII">JUAN GUILLERMO CONTRERAS</docAuthor>
+				<docAuthor n="VIII">CECILIA RUIZ DE RÍOS</docAuthor>
+				<docAuthor n="IX">LESLIE R. GEORGE</docAuthor>
+				<docAuthor n="X">RAÚL R. ROMERO</docAuthor>
+				<docAuthor n="XI">FRADIQUE LIZARDO</docAuthor>
+				<docAuthor n="XII">CARLOS GARCÍA CARBo</docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

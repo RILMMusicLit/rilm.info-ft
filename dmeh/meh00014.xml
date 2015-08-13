@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Boiarski, Andrés</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Sociedad General de Autores y Editores</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<publisher>Instituto Complutense de Ciencias Musicales</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+				<title>Diccionario de la música española e hispanoamericana</title>
+						<editor>
+							<forename/>
+							<surname/>
+						</editor>
+						<imprint>
+							<publisher>Sociedad General de Autores y Editores</publisher>
+							<pubPlace>[Madrid]</pubPlace>
+							<date>1999</date>
+						</imprint>
+						<biblScope unit="vol">4</biblScope>
+						<biblScope unit="col" from="549">549</biblScope>
+						<biblScope unit="col" to="550">550</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<normalization>
+					<p>Some abbrevations have been replaced by unabbrevated terms.</p>
+				</normalization>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="14.1" notAfter="2014-03-04">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="es">Spanish</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-03-04" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="meh00014" type="person" xml:lang="es">
+		<body>
+			<div type="one-section" xml:id="d1">
+				<p xml:id="p1"><rilmPerson xml:id="r1"><persName><surname>Boiarski</surname>, <forename>Andrés</forename>.</persName> <birth><placeName>Buenos Aires</placeName>, <date when="1957-10-09" when-custom="1957">9-X-1957</date></birth>. <occupation>Saxofonista</occupation>, <occupation>director</occupation> y <occupation>compositor</occupation>.</rilmPerson> Comenzó a actuar profesionalmente como saxofonista de jazz en diversos grupos, hasta que en 1978 participó en la orquesta de Jorge López Ruiz. Perfeccionó sus estudios en el Royal College of Music de Londres, <pb n="550"/>donde se graduó en 1981. Registró entonces su primer álbum. Regresó a Argentina, donde continuó liderando sus propios conjuntos de jazz y grabó dos nuevos discos: <hi rend="italic">Ballotage</hi>, CBS, 1982, y <hi rend="italic">Nueva generación</hi>, CBS, 1984. Integró además los grupos de jazz de Jorge Navarro en 1982 y Carlos Franzetti en 1984. A partir de ese año alternó su actividad entre Buenos Aires y Nueva York, donde tocó con Paquito d’Ribera y Mike Wolff. En 1985 realizó una gira con el trío de Jorge Navarro por América Latina. Integró luego un cuarteto con R. López Furst, A. Cevasco y L. Cerávolo, con quienes registró el álbum <hi rend="italic">Coincidencia</hi>, Microfón, 1987. En 1988 se incorporó a la orquesta de Lionel Hampton. Como intérprete, su estilo derivó de John Coltrane y Dexter Gordon. En sus conjuntos se adscribe a un estilo estándar de jazz moderno, a veces con inclinaciones al jazz-rock y con el agregado de algunos matices latinos.</p>
+				<figure xml:id="f1">
+					<html:img src="images/meh00014-f1.png"/>
+				<p xml:id="p2"><hi rend="italic">Andrés Boiarski (N. Chediak</hi>. Diccionario de jazz latino, <hi rend="italic">Madrid, 1998)</hi></p>
+				</figure>
+			</div>
+			<div type="works" xml:id="d2">
+				<head>OBRAS:</head>
+				<list>
+					<item><bibl xml:id="b1"><title>Amaneciendo contigo</title></bibl></item><item><bibl xml:id="b2"><title>Combustión espontánea</title></bibl></item><item><bibl xml:id="b3"><title>Despidiéndome de ti</title></bibl></item><item><bibl xml:id="b4"><title>Fiesta latina</title></bibl></item><item><bibl xml:id="b5"><title>Funkaleufu</title></bibl></item><item><bibl xml:id="b6"><title>Nueva generación</title></bibl></item><item><bibl xml:id="b7"><title>Selva asfaltada</title></bibl></item><item><bibl xml:id="b8"><title>Solo, otra vez</title></bibl>.</item>
+				</list>
+			</div>
+			<div type="authors" xml:id="d3">
+				<docAuthor><persName><forename>OMAR</forename> <forename>GARCÍA</forename> <surname>BRUNELLI</surname></persName>/<persName><forename>LAUREANO</forename> <surname>FERNÁNDEZ</surname></persName></docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

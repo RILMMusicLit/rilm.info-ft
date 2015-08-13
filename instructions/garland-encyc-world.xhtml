@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Garland Encyclopedia of World Music, The</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="garland">Garland Encyclopedia of World Music, The</h4>
+      </div>
+    </a>
+    <div class="r201504" title="Added, 4/2015; updated 4/22/2015">
+      <ol>
+        <li><b>General observations</b>.
+        <ul><li>This publication should be converted from the provided PDF files.</li>
+        <li>Each line in the table of contents of each volume should correspond with a TEI XML file.</li>
+        <li>Double [“ ”] quotation marks are used for quotes, but single ones [‘ ’] are used for
+              translations of non-English terms:<br />[...<i>musique Zaïroise moderne</i> ‘modern
+              Zairean music’...]<br /> Use &lt;q> for double quotes, &lt;q rend="single"> for the
+              latter type.</li>
+            <li>Parts of this publication were produced prior to the common adoption of Unicode.
+              Diacritic markings may appear as separate characters in the PDF texts ("tu¨rku¨", for
+              example). These should be replaced with Unicode characters ("türkü").</li></ul></li>
+        <li><b>Front matter</b> items are indicated in the table of contents before the text "Part
+          1".</li>
+        <li><b>Lists of topics</b> at the beginnings of articles, in bold sans-serif type, duplicate
+          section headings in the article, and <i>may be omitted</i>. (See example files.)</li>
+        <li><b>Sections</b> within an article are at three levels. <ul><li>Higher-level sections are
+          indicated by all-capital, bold, sans-serif headings with a large outdent. </li><li>Mid-level
+          sections are indicated by headings in normal-case, bold, sans-serif type aligned with the
+          left margin. </li><li>Lowest-level sections are indicated by headings in normal-case, bold,
+          sans-serif <i>slanted</i> type.</li></ul> Lower-level sections should be nested within higher ones
+          [from vol. 1, p. 8]: <blockquote>&lt;div type="section">&lt;heading>CONCEPTS OF
+            PERFORMANCE&lt;/heading> <br />&lt;p>Some generalizations can be drawn about performance
+            in Africa, emphasizing the perspectives of the performers and their ideas about creating
+            that performance. However, we must bear in mind that great variation exists, even about
+            fundamental ideas.&lt;/p> <br /> &lt;div
+            type="section">&lt;heading>Performers&lt;/heading> <br /> &lt;p>To some extent, most
+            people in African communities are expected to perform music and dance at a basic
+            level...&lt;/p><br /> &lt;/div><br />&lt;/div></blockquote></li>
+        <li><b>Pull quotes</b> in large roman type at the tops of pages (vol. 1, p.8, p.10, for
+          example) should be tagged as a &lt;div type="textBox"> containing a &lt;p>. Position them
+            <i>before</i> the &lt;div> within which they appear on the page. </li>
+        <li>For <b>glossaries</b> of terms that appear at the heads of pages (vol. 1, p.14, for
+          example), create a &lt;list> element <i>before</i> the &lt;p> within with they appear on
+          the page. Tag the bold terms or names as &lt;term> or &lt;persName>, with
+          @rend="bold".</li>
+        <li>References to <b>sound recording</b> tracks (A small CD icon  with "TRACK x"; see vol.
+          1, p. 366, for example) can be represented by a &lt;ref> element with @target
+          "trackx.mp3".</li>
+        <li><b>Bibliographies</b> are printed at the end of most articles. <ul><li>The first author names are given in surname-forename order; any subsequent authors are given in
+              forename-surname order: <br />[Ssalongo, Christopher Kizza, and Peter Cooke,
+                ]<blockquote>&lt;author>&lt;surname>Ssalongo&lt;/surname>,
+                &lt;forename>Christopher&lt;/forename> &lt;forename>Kizza&lt;/forename>&lt;/author>,
+                and &lt;author>&lt;forename>Peter&lt;/forename>
+                &lt;surname>Cooke&lt;/surname>&lt;/author>,</blockquote></li>
+            <li>The &lt;date> element will always follow immediately after the author or
+              authors.</li>
+            <li>Set quoted titles in &lt;title type="article"> and italic titles in &lt;title>
+              without attribute.</li></ul></li>
+      </ol>
+      <p>Please refer also to the provided xml samples.</p>
+    </div>
+  </body>
+</html>

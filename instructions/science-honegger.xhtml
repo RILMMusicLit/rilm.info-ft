@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Science de la musique (Honegger)</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="SHO">Science de la musique (Honegger)</h4>
+      </div>
+    </a>
+    <div class="r201506" title="Added, 6/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print</li>
+            <li>Articles will have &lt;div type="body"> and &lt;div type="ography>. </li>
+            <li>Bibliographies often have multiple sections.</li>
+            <li>French-style double-angle quotation marks ( « » ) are used.</li>
+            <li>All entries are &lt;text type="topic"></li>
+            <li>In body text, italic type is used to indicate <i>titles</i>, so tag with &lt;title>
+              rather than &lt;hi>.</li>
+            <li>In body text, emphasis is indicated by l e t t e r s p a c i n g.</li>
+            <li>Letter spacing is also used for subsection heads.</li>
+            <li>In bibliographies, titles are in Roman type. </li>
+          </ul></li>
+        <li><b>Front matter</b>:<ul>
+            <li><u>Vol. 1:</u> title page; copyright page; "Liste des collaborateurs" (tag as
+              &lt;list>); "Préface"; and "Liste des abréviations" (tag as a &lt;table> with two columns).<ul>
+                <li><i>Note: the </i>Préface<i> is set entirely in Italic type, except for titles,
+                    which are in </i>ROMAN<i> type!</i></li>
+              </ul></li>
+            <li><u>Vol. 2</u>: only title page; copyright page; and "Liste des abréviations"</li>
+          </ul></li>
+        <li><b>Entry heads / titles</b> are in Bold, all caps (no normal case). Tag as &lt;term>.
+          Most are followed by parentheses. In the parentheses may be: <ol>
+            <li>The language of the term in the head;</li>
+            <li>Translations of the term into other languages;</li>
+            <li>Etymology</li>
+            <li>Brief gloss</li>
+          </ol> Where possible, tag the translations and their languages. Abbreviations and the
+          value for @xml:lang: <br /> all. = de <br />angl. = en <br />ital. = it <br />esp. = es <ul>
+            <li>If there is only one word in the parentheses, capture it in the @xml:lang of the
+              term itself:<br /> [<b>ONE-STEP</b> (angl.), ...]<blockquote>&lt;term
+                xml:lang="en">ONE-STEP&lt;/term></blockquote></li>
+            <li>Translations are given as "lang., translation; lang., translation". Capture each
+              translated term and its language in a &lt;term> element with @corresp pointing to the
+              main term.<br /> [<b>PRÉPARATION</b> (angl., preparation; all., Vorbereitung; ital.,
+              preparazione; esp., preparaciôn), ...] <blockquote>&lt;p>&lt;term xml:lang="fr"
+                xml:id="t1">PRÉPARATION&lt;term> (angl., &lt;term xml:lang="en" xml:id="t2"
+                corresp="#t1">preparation&lt;/term>; all., &lt;term xml:lang="de" xml:id="t3"
+                corresp="#t1">Vorbereitung&lt;/term>; ital., &lt;term xml:lang="it" xml:id="t4"
+                corresp="#t1">preparazione&lt;/term>; esp., &lt;term xml:lang="es" xml:id="t5"
+                corresp="#t1">preparación&lt;/term>), ... </blockquote></li>
+            <li>If there is an equal sign ( = ) within the parentheses, it indicates an etymology.
+              In this case, do not try to parse the contents of the parentheses.</li>
+          </ul></li>
+        <li><b>Bibliographies</b> are headed "Bibliographie". <ul>
+            <li>Individual items are separated by semicolons in the print. Parts of the bibl are
+              separated by commas.</li>
+            <li>Bold face type marks sections; the bold text should be used for the &lt;head>
+              element of each section.</li>
+            <li>Author names in print are typest in small caps, first initial-surname. </li>
+            <li>Titles are in normal case, Roman (not italic!). </li>
+            <li>Article titles are followed by ", <i>in</i>". Periodical titles are followed by vol,
+              date.</li>
+            <li>Omit the dash after head text, the semicolons between items, and the final
+              period.</li>
+          </ul>[ Bibliographie - F. G. R<small>ENDALL</small>, F.W. G., 1858-1945, in Galpin Soc.
+          Journal I, 1948 ; S. G<small>ODMAN</small>, F.W. G., Music Maker, <i>in</i> Monthly
+          Musical Record LXXXIV, mars-avril 1954; du meme, Fr.W. G., <i>in</i> Galpin Soc. Journal
+          XII, 1959.]<blockquote>&lt;div
+            type="ography">&lt;head>Bibliographie&lt;/head><br />&lt;list><br />&lt;item>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>F.&lt;/abbr>&lt;/forename>
+            &lt;forename>&lt;abbr>G.&lt;/abbr>&lt;/forename>
+            &lt;surname>Rendall&lt;/surname>&lt;/author>, &lt;title>F.W. G., 1858-1945&lt;/title>,
+            in &lt;title type="periodical">Galpin Soc. Journal&lt;/title> &lt;biblScope
+            unit="vol">I&lt;/biblScope>, &lt;date>1948&lt;/date>&lt;/bibl> &lt;/item>
+            <br />&lt;item>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>S.&lt;/abbr>&lt;/forename>
+            &lt;surname>Godman&lt;/surname>&lt;/author>, &lt;title>F.W. G., Music Maker&lt;/title>,
+            in &lt;title type="periodical">Monthly Musical Record&lt;/title> &lt;biblScope
+            unit="vol">LXXXIV&lt;/biblScope>, &lt;date>mars-avril 1954&lt;/date>&lt;/bibl>
+            &lt;/item> <br />&lt;item>&lt;bibl>&lt;author>du meme&lt;/author>, &lt;title>Fr.W.
+            G&lt;/title>., in &lt;title type="periodical">Galpin Soc. Journal&lt;/title>
+            &lt;biblScope unit="vol">XII&lt;/biblScope>,
+            &lt;date>1959&lt;/date>&lt;/bibl>&lt;/item><br />&lt;/list><br />&lt;/div></blockquote></li>
+        <li>Some entries have <b>only bibliography</b>. These have a line break after the head, and
+          "Bibliographie" starting the next line: <br />
+          <br />[<b>Cologne</b> (Köln)<br />
+          <br />Bibliographie (ouvr. éd. à Cologne) — <b>1. Vie musicale et ouvr. généraux:</b> F.C.
+          Eisen, Der Kolner Mànnergesangverein... Unter Fr. Weber, 3 vol.. C. 1852-89;
+            ...]<blockquote>&lt;div type="body">&lt;p>&lt;term xml:id="t1">Cologne&lt;/term>
+            (&lt;term xml:id="t2" corresp="#t1">Köln&lt;/term>)&lt;/p>&lt;/div>
+            </blockquote><blockquote>&lt;div type="ography">&lt;head>Bibliographie (ouvr. éd. à
+            Cologne)&lt;/head> <br />&lt;div type="section" n="1">&lt;head>Vie musicale et ouvr.
+            généraux:&lt;/head> &lt;list><br />&lt;item>&lt;bibl>&lt;author>F.C. Eisen&lt;/author>,
+            &lt;title>Der Kolner Mànnergesangverein... Unter Fr. Weber&lt;/title>, 3 vol.. C.
+            &lt;date
+            precision="low">1852-89&lt;/date>&lt;/bibl>&lt;/item>...&lt;/list><br />&lt;/div>...&lt;/div></blockquote></li>
+        <li><b>See references</b> are in the form [<b>TERM</b> (lang.), voir T<small>ARGET</small>.]
+            <br />[<b>PRALLTRILLER</b> (all.), voir M<small>ORDANT</small>.]<br />There can be more
+          than one target. [<b>PRAECENTOR</b> (lat.), voir C<small>ANTOR</small> et
+            P<small>RÉCHANTRE</small>.]</li>
+        <li><b>"See-also" references</b> are in the form [<b>TERM</b> (lang.) cf également l’art.
+            T<small>ARGET</small>.] Make a file for the term, and also as a &lt;keyword> in the
+          target article.</li>
+          <li><b>Cross references</b> are indicated by a right-pointing arrow ( → ) preceding the target term.</li>
+        <li><b>Back matter</b> comprises tables of illustrations at the back of each volume. Set
+          each as a &lt;table> with three columns.</li>
+        <li><b>References to illustrations</b> printed on inserts that are not within the article
+          are made in two steps.<ul>
+            <li>A round bullet ( • ) appears next to the first line of the entry, in the page
+              margin.</li>
+            <li>A footnote on the same page, in black sans-serif type, writes "Voir hors-texte entre
+              pages N-N." (see inserts between pages N - N).</li>
+          </ul> For now, please treat these as footnotes following the first &lt;term> element of
+          the entry. From vol.1 page 9: <blockquote>&lt;p xml:id="p1">&lt;term xml:lang="fr"
+            xml:id="t1">Accordéon&lt;/term>&lt;note place="foot" n="•">Voir hors-texte entre pages
+            48 - 49.&lt;/note> (angl., &lt;term xml:lang="en" xml:id="t2"
+            corresp="#t1">accordion&lt;/term>; all., &lt;term xml:lang="de" xml:id="t3"
+            corresp="#t1">Ziehharmonika&lt;/term>; ital., &lt;term xml:lang="it" xml:id="t4"
+            corresp="#t1">fisarmonica&lt;/term>; esp., &lt;term xml:lang="es" xml:id="t5"
+            corresp="#t1">acordeón&lt;/term>), instr. a vent...&lt;/p></blockquote></li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

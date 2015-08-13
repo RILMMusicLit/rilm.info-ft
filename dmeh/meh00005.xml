@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Baqueta</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Sociedad General de Autores y Editores</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<publisher>Instituto Complutense de Ciencias Musicales</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+				<title>Diccionario de la música española e hispanoamericana</title>
+						<editor>
+							<forename/>
+							<surname/>
+						</editor>
+						<imprint>
+							<publisher>Sociedad General de Autores y Editores</publisher>
+							<pubPlace>[Madrid]</pubPlace>
+							<date>1999</date>
+						</imprint>
+						<biblScope unit="vol">4</biblScope>
+						<biblScope unit="col" from="182">182</biblScope>
+						<biblScope unit="col" to="182">182</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<normalization>
+					<p>Some abbrevations have been replaced by unabbrevated terms.</p>
+				</normalization>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="14.1" notAfter="2014-03-04">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="es">Spanish</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-03-04" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="meh00005" type="topic" xml:lang="es">
+		<body>
+			<div type="one-section" xml:id="d1">
+				<head>Baqueta.</head>
+				<p xml:id="p1">Palillo con que se tocan el tambor, el tamboril y otros instrumentos membranófonos. También se utiliza para tocar la marimba. Está construido de madera de eucalipto u otras del lugar, y lleva en un extremo una bola de goma para golpear el parche. Se utiliza en la mayor parte de los países hispanoamericanos.</p>
+			</div>
+			<div type="authors" xml:id="d2">
+				<docAuthor><persName><forename>CARLOS</forename> <forename>COBA</forename> <surname>ANDRADE</surname></persName></docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

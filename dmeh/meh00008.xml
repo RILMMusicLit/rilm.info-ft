@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<?xml-model href="../../../schematron/dmeh_sample.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Barrientos, María</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Sociedad General de Autores y Editores</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<publisher>Instituto Complutense de Ciencias Musicales</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+				<title>Diccionario de la música española e hispanoamericana</title>
+						<editor>
+							<forename/>
+							<surname/>
+						</editor>
+						<imprint>
+							<publisher>Sociedad General de Autores y Editores</publisher>
+							<pubPlace>[Madrid]</pubPlace>
+							<date>1999</date>
+						</imprint>
+						<biblScope unit="vol">4</biblScope>
+						<biblScope unit="col" from="262">262</biblScope>
+						<biblScope unit="col" to="263">263</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<normalization>
+					<p>Some abbrevations have been replaced by unabbrevated terms.</p>
+				</normalization>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="14.1" notAfter="2014-03-04">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="es">Spanish</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-03-04" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="meh00008" type="person" xml:lang="es">
+		<body>
+			<div type="one-section" xml:id="d1">
+				<p xml:id="p1"><rilmPerson xml:id="r1"><persName><surname>Barrientos</surname>, <forename>María</forename>.</persName> <birth><placeName>Barcelona</placeName>, <date when="1883-03-16" when-custom="1883">16-III-1883</date></birth>; <death><placeName>San Juan de Luz (Francia)</placeName>, <date when="1946-08-08" when-custom="1946">8-VIII-1946</date></death>. <occupation>Soprano lírica</occupation>.</rilmPerson> Una de las grandes voces de la historia musical española.</p>
+				<p xml:id="p2">Realizó estudios de piano con Pellicer en la Escuela Municipal de Música, y de canto con Francisco Bonet, maestro ya acreditado y del que había salido otra alumna relevante, Josefina Huguet. Su formación musical fue lo suficientemente profunda como para poder escribir alguna composición que se ha perdido. En 1898 actuó en el Teatro Lírico de Barcelona con <hi rend="italic">La sonámbula</hi> de Bellini, que interpretó el mismo año en el Teatro Novedades. También se presentó en el Liceo con fragmentos de <hi rend="italic">Lucia de Lammermoor</hi> (1-I-1899), pero su debut oficial tuvo lugar a finales de 1900 con <hi rend="italic">La sonámbula</hi>, quedando de manifiesto desde el comienzo que se trataba de una voz excepcional.</p>
+				<p xml:id="p3">Después se trasladó a Milán por consejo de Leopoldo Mugnon, figura de la dirección operística; debutó en el Teatro Lírico con <hi rend="italic">La sonámbula</hi> y realizó posteriormente una gira artística por Génova y Roma, iniciando en esa nación su carrera de triunfos. De regreso a su país, hizo su primera presentación en el Teatro Real de Madrid en 1901, también con <hi rend="italic">La sonámbula</hi>, y consiguió su primer triunfo en España. Durante los dos años siguientes, y coincidiendo con las temporadas del empresario Arana, no faltó en el Real, volviendo a él en la temporada de 1906-07 con <hi rend="italic">Amleto</hi>. En la temporada 1902-03 interpretó en el Liceo <hi rend="italic">Rigoletto</hi>, <hi rend="italic">Lucia y La Traviata</hi> (Gilda, Lucía y Violetta eran sus tres personajes favoritos). Mientras, se había presentado en el Covent Garden con <hi rend="italic">El barbero de Sevilla</hi> y en La Scala de Milán con <hi rend="italic">Dinorah</hi> de Meyerbeer. En 1907 contrajo matrimonio con el norteamericano Jorge Keen y se retiró temporalmente de la escena.</p>
+				<p xml:id="p4">A su vuelta a los escenarios inició su primer viaje por Hispanoamérica cantando en México y La Habana. Se presentó en el Teatro Colón de Buenos Aires, en plenas facultades, en 1911 con <hi rend="italic">Lucia de Lammermoor</hi>, obra que volvió a interpretar en 1913 en la inauguración del Teatro de los Campos Elíseos de París. Ese mismo año había interpretado en el Liceo de Barcelona <hi rend="italic">Lucia</hi>, <hi rend="italic">La sonámbula</hi> y el papel de Ofelia del <hi rend="italic">Hamlet</hi> de Thomas. En 1914 colaboró con el Orfeó Català en Londres interpretando <hi rend="italic">Tonadillas</hi> de Granados, dedicadas a ella. En 1915 interpretó de nuevo en el Liceo <hi rend="italic">Lakmé</hi> de Delibes. En 1916 debutó en el Metropolitan Opera House, teatro que monopolizó en gran parte sus actuaciones, con <hi rend="italic">Lucia</hi>, y a esta ópera siguieron <hi rend="italic">Rigoletto</hi>, con Caruso, repetida con Hipólito Lázaro en 1918, <hi rend="italic">El barbero</hi> con Tito Schipa, <hi rend="italic">Marta</hi> de Flotow y <hi rend="italic">Le Cocq d’or</hi> de Rimski-Korsakov. En 1921 cantó en el Tetro Colón de Buenos Aires <hi rend="italic">El barbero</hi>, <hi rend="italic">Lucia</hi>, <hi rend="italic">Rigoletto</hi> y <hi rend="italic">Don Pasquale</hi>. En 1922 estableció el premio que lleva su nombre y dio un ciclo de música antigua con Wanda Landovska, al que siguió en 1923 el estreno en París de <hi rend="italic">Veinte cantos populares españoles</hi> de Joaquín Nin. Entre 1928 y 1938, medio retirada, colaboró con Falla en una serie de grabaciones realizadas en París y se estableció en Buenos Aires, realizando una importante labor docente en el Teatro Colón.</p>
+				<figure xml:id="f1">
+					<html:img src="images/meh00008-f1.png"/>
+				<p xml:id="p5"><hi rend="italic">María Barrientos (Ar. E. Casares)</hi></p>
+				</figure>
+				<p xml:id="p6">De 1904 a 1917 llenó los teatros europeos y americanos y desde 1916 hasta 1920 fue la gran luminaria del Metropolitan. Durante casi treinta años había cantado el repertorio completo de soprano ligera. Perdida gran parte de su fortuna, terminó sus días en el sur de Francia.</p>
+				<p xml:id="p7">Tras escuchar una de sus primeras actuaciones en Barcelona, el crítico Solsona señalaba ya las características de su voz: <q>Posee un registro completo de soprano lírica; una voz cristalina de inmaculada pureza, respiración amplísima y poderosa, graves vibrantes y potentes, y sobreagudos incomparables por <pb n="263"/>su limpieza y bello timbre, que le permiten ejecutar los trinos, gorjeos y picados más difíciles, además de una vocalización y fraseo clarísimos y de una gran intuición musical y escénica</q>; y Catón, en la <hi rend="italic">Revista Música</hi>, con ocasión de uno de sus conciertos en el Palau de la Música en 1915 añadía: <q>Nos sorprende el poderoso dominio de su garganta y sus consecuencias, agilidad, nitidez, extensión, etc. y su talento en utilizarlo. María Barrientos es ante todo una soprano ligera, ese género musical hoy en desuso, y como es artista inteligente, también en la música desprovista de gorgeos, trinos, picados y demás pasamanería vocal, maravilla deleitando</q>.</p>
+				<p xml:id="p8">Estas dos descripciones pueden definir los ámbitos de interpretación de esta soprano ligera, una mujer que demostró desde el comienzo una asombrosa técnica de canto que llamaba la atención sobre todo por sus vocalizaciones. En la línea de voz de Adelina Patti y Luisa Tetrazzini, y de las españolas Josefina Huguet, Elvira Hidalgo, Mercedes Capsir, su capacidad virtuosística nunca se imponía a una voz maleable, dúctil, con capacidad para realizar todo tipo de arabescos, matices, contrastes y cromatismos, es decir, de convertir el virtuosismo en forma expresiva. Se ha señalado siempre que una de las diferencias entre la Barrientos y otras divas de sus características era que jamás caía en el exhibicionismo, sino que interpretaba antes que nada. Su voz de soprano ligera estuvo muy de moda hasta la década de 1930. La extensión de su voz, no muy potente, respondía a las cualidades de una soprano ligera, es decir, una riqueza en los agudos que le permitía hacer música en ese registro, sobre todo en las notas extremas, pudiendo jugar en estas zonas comprometidas con el volumen, el color, la capacidad de mantener notas, apianarlas; es decir, su gracia residía en la coloratura y en sus agudos perfectos y bien timbrados. Otra característica suya fue la capacidad de usar el volumen ajustado al momento y a la región, así como el equilibrio entre los diversos registros. Virtuosismo y musicalidad aparecen en esta soprano naturalmente unidos.</p>
+				<figure xml:id="f2">
+					<html:img src="images/meh00008-f2.png"/>
+				<p xml:id="p9"><hi rend="italic">María Barrientos, 1921 (Foto: Ar. M. Alonso)</hi></p>
+				</figure>
+				<p xml:id="p10">La discografía de María Barrientos está realizada en discos de 78 revoluciones. Grabó para dos casas: Fonotipia hasta 1914 y Columbia desde 1915 hasta 1932. Sus discos se realizaron por los procedimientos <q>acustic</q> y <q>electric</q>.</p>
+			</div>
+			<div type="ography" xml:id="d3">
+				<head>Discografía:</head>
+				<list>
+					<item><bibl xml:id="b1"><title>La sonnambula</title>: <title rend="quoted">Comme per me sereno</title> (Fonotipia, 39009)</bibl></item><item><bibl xml:id="b2"><title>La sonnambula</title>: <title rend="quoted">Sovra il sen</title> (Fonotipia, 39010)</bibl></item><item><bibl xml:id="b3"><title>La sonnambula</title>: <title rend="quoted">Ah non giunge</title> (Fonotipia, 39011)</bibl></item><item><bibl xml:id="b4"><title>Lakmé</title>: <title rend="quoted">Dov’è l’Indiana Bruna</title> (Fonotipia, 39013)</bibl></item><item><bibl xml:id="b5"><title>Canzone di Solveig</title>: <title rend="quoted">Qual verno sparire</title> (Fonotipia, 39461)</bibl></item><item><bibl xml:id="b6"><title>Mignon</title>: <title rend="quoted">Polacca di Filina: Io son Titania</title> (Fonotipia, 39461)</bibl></item><item><bibl xml:id="b7"><title>Dinorah</title>: <title rend="quoted">Ombra leggera</title>, 1905 (Fonotipia, 39503)</bibl></item><item><bibl xml:id="b8"><title>Dinorah</title>: <title rend="quoted">Ombra leggera</title>, <date>1905</date> (Fonotipia, 39504)</bibl></item><item><bibl xml:id="b9"><title>Fra Diavolo</title>: <title rend="quoted">Or son sola</title>, <date>1906</date> (Fonotipia, 39538)</bibl></item><item><bibl xml:id="b10"><title>Fra Diavolo</title>: <title rend="quoted">Già per la danza</title>, <date>1906</date> (Fonotipia, 39539)</bibl></item><item><bibl xml:id="b11"><title>Rinaldo</title>: <title rend="quoted">Lascia ch’io pianga</title>, <date>1906</date> (Fonotipia)</bibl></item><item><bibl xml:id="b12"><title>El cabo primero</title>: <title rend="quoted">Yo quiero a un hombre</title> (Fonotipia)</bibl></item><item><bibl xml:id="b13"><title>Il barbiere di Siviglia</title>: <title rend="quoted">Io sono docile</title> (Fonotipia)</bibl></item><item><bibl xml:id="b14"><title>Il barbiere di Siviglia</title>: <title rend="quoted">Una voce poco fa</title> (Fonotipia)</bibl></item><item><bibl xml:id="b15"><title>Rigoletto</title>: <title rend="quoted">Caro nome</title> (Fonotipia)</bibl></item><item><bibl xml:id="b16"><title>Rigoletto</title>: <title rend="quoted">Tutte le feste al tempio</title> (Fonotipia)</bibl></item><item><bibl xml:id="b17"><title>Lucia di Lammermoor</title>: <title rend="quoted">Rond’o i Cadenza</title> (Columbia, 48627)</bibl></item><item><bibl xml:id="b18"><title>Lucia di Lammermoor</title>: <title rend="quoted">Regnava nel silenzio</title> (Columbia, 48629)</bibl></item><item><bibl xml:id="b19"><title>Le Coq d’or</title>: <title rend="quoted">Himno al sol</title> (Columbia, 48641)</bibl></item><item><bibl xml:id="b20"><title>Marta</title>: <title rend="quoted">Qui sola vergin rosa</title> (Columbia, 48642)</bibl></item><item><bibl xml:id="b21"><title>Rigoletto</title>: <title rend="quoted">Caro nome</title> (Columbia, 48649)</bibl></item><item><bibl xml:id="b22"><title>Mireille</title> (Columbia, 48650)</bibl></item><item><bibl xml:id="b23"><title>Le nozze di Figaro</title>: <title rend="quoted">Deh vieni non tardar</title> (Columbia, 48651)</bibl></item><item><bibl xml:id="b24"><title>I Puritani</title>: <title rend="quoted">Qui la voce sua soave</title> (Columbia, 49370)</bibl></item><item><bibl xml:id="b25"><title>I Puritani</title>: <title rend="quoted">Vien diletto in ciel la luna</title> (Columbia, 49371)</bibl></item><item><bibl xml:id="b26"><title>La sonnambula</title>: <title rend="quoted">Ah non credea mirarti</title> (Columbia, 49762)</bibl></item><item><bibl xml:id="b27"><title>Siete canciones españolas</title>: <title rend="quoted">El paño moruno</title>, <title rend="quoted">Seguidilla murciana</title>, <title rend="quoted">Asturiana</title>, <date>1926</date> (Columbia, D11701)</bibl></item><item><bibl xml:id="b28"><title>El amor brujo</title>: <title rend="quoted">Canción del fuego fatuo</title>, <date>1930</date> (Columbia)</bibl></item><item><bibl xml:id="b29"><title>Siete canciones españolas</title>: <title rend="quoted">Jota</title>, <title rend="quoted">Nana</title>, <title rend="quoted">Canción</title>, <title rend="quoted">Polo</title>, <date>1930</date> (Columbia, D11702)</bibl></item><item><bibl xml:id="b30"><title>Soneto a Córdoba</title>, <date>1930</date> (Columbia)</bibl></item><item><bibl xml:id="b31"><title>La Traviata</title>: <title rend="quoted">Parigi, o cara</title> (Columbia); <title>Rigoletto</title>: <title rend="quoted">E il sol dell’anima</title> (Columbia)</bibl></item><item><bibl xml:id="b32"><title>Rigoletto</title>: <title rend="quoted">Tutte le feste-Piangi fanciulla</title> (Columbia)</bibl>.</item>
+				</list>
+			</div>
+			<div type="ography" xml:id="d4">
+				<head>BIBLIOGRAFÍA:</head>
+				<list>
+					<item><bibl xml:id="b33"><title>DMI</title></bibl></item><item><bibl xml:id="b34"><author>J. Subirá</author>: <title>Historia y anecdotario del Teatro Real</title>, Madrid, Plus Ultra, <date>1949</date></bibl></item><item><bibl xml:id="b35"><author>F. Bravo Morata</author>: <title>El sainete madrileño y la España del sainete</title>, Madrid, Ed. Fenicia, <date>1973</date></bibl></item><item><bibl xml:id="b36"><author>J. M. Colomer Pujol</author>: <title>María Barrientos</title>, Barcelona, Gent Nostra, <date>1984</date></bibl></item><item><bibl xml:id="b37"><author>A. París</author>: <title>Diccionario de intérpretes y de la interpretación musical en el siglo XX</title>, Madrid, Turner, <date>1985</date></bibl></item><item><bibl xml:id="b38"><author>J. Montero Alonso</author>: <title>Madrid y su <q>Belle Epoque</q> (1913-1930)</title>, Madrid, Edimaster, <date>1994</date></bibl></item><item><bibl xml:id="b39"><author>J. Martín de Sagarmínaga</author>: <title>Diccionario de cantantes líricos españoles</title>, Madrid, Acento Ed., <date>1997</date></bibl>.</item>
+				</list>
+			
+			</div>
+			<div type="authors" xml:id="d6">
+				<docAuthor><persName><forename>EMILIO</forename> <forename>CASARES</forename> <surname>RODICIO</surname></persName></docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

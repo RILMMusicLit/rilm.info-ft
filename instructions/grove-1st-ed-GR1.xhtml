@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>A Dictionary of Music and Musicians (1879-)</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="grove-GR1">A Dictionary of Music and Musicians, 1st edition (1895 U.S.
+          printing)</h4>
+      </div>
+    </a>
+    <div class="r201503" title="Added, 3/2015">
+      <ol>
+        <li><b>General comments</b>:<ul>
+            <li>This publication should be converted from scanned print.</li>
+            <li>Entry authors are given as initials in square brackets, right justified, in the last
+              line of each entry.</li>
+            <li>Footnotes should be handled as described in the <a
+                href="ft/tei_rilm_instructions.html#footnotes">general instructions</a>. Some are
+              extensive and may include graphical elements.</li>
+            <li>Long articles are divided into sections indicated by Roman or Arabic numerals and a
+              period; by a horizontal rule; or by a blank line. Begin a new &lt;div type="section">
+              where this occurs. (Refer to the file gr1-example-2.xml.)</li>
+            <li>Some articles (for example, MENDELSSOHN) include lengthy quotations distinguished
+              only by smaller type. These should be tagged as &lt;cit rend="block">.</li>
+            <li>English-style single quotation marks (‘ and ’) are used throughout. This means that
+              the same character is used for right quote and for apostrophe, and they have to be distinguished:<ul>
+                <li>[...and ‘Oberon, or The Elf-King’s Oath, a Romantic and Fairy Opera,’ for Weber
+                  (Covent Garden, April 12, 1826).]</li>
+              </ul><blockquote>&lt;p>...and &lt;q>Oberon, or The Elf-King’s Oath, a Romantic and
+                Fairy Opera,&lt;/q> for Weber (Covent Garden, April 12, 1826).&lt;/p></blockquote>
+            </li>
+          </ul></li>
+        <li><b>Front matter</b> includes the <b>title page</b>, <b>Preface</b>, and <b>List of
+            Contributors</b>. <ul>
+            <li>Set the <b>List of Contributors</b> as a &lt;table> with two columns. Each item is a
+              &lt;rilmPerson> with a &lt;persName> in forename-surname order. <ul>
+                <li>Prefixes include "Sir", "Mrs.", "M.", "Herr", "Dr.", "Rev.", "Miss", "Colonel".
+                  Set these in &lt;roleName> elements.</li>
+                <li>Suffixes include "Esq.", "F.S.A", "F.S.S.", "F.R.S.", "LL.D.", "Mus. Doc.",
+                  "M.D". Set these in &lt;roleName> elements.</li>
+                <li>Anything in the first column following the surname(s) or suffix(es) (if present)
+                  can be included in the &lt;rilmPerson> element.</li>
+              </ul><blockquote>&lt;table
+                cols="2"><br />&lt;row>&lt;cell>&lt;rilmPerson>&lt;persName>&lt;roleName>REV.&lt;/roleName>
+                &lt;roleName>SIR&lt;/roleName> &lt;forename>FREDERICK&lt;/forename>
+                &lt;forename>&lt;abbr>A.&lt;/abbr>&lt;/forename> &lt;forename>GORE&lt;/forename>
+                &lt;surname>OUSELEY&lt;/surname>, &lt;roleName>BART.&lt;/roleName>,
+                &lt;roleName>Mus. Doc.&lt;/roleName>&lt;/persName>, Professor of Music in the
+                University of Oxford&lt;/rilmPerson>&lt;/cell>&lt;cell>F. A. G.
+                O.&lt;/cell>&lt;/row><br />&lt;/table></blockquote></li>
+          </ul></li>
+        <li>There are three <b>types of entries</b> in this publication: <ul>
+            <li><b>Person</b> entries</li>
+            <li><b>Topic</b> entries</li>
+            <li><b>Family</b> entries</li>
+            <li><b>See</b> references</li>
+          </ul></li>
+        <li><b>Person entries</b> begin with the personal name given in <i>surname, forename</i>
+          order. They are typeset with surnames in all caps, a comma, and forenames in small caps.
+          The text of the article continues on the same line in Roman type following a comma or
+          period: <br /><br /> [TAPPERT, W<small>ILHELM</small>, German critic and writer on music,
+          born Feb. 19, 1830, at Ober- Thomaswaldau in Silesia; ...]<br /><br /> In TEI, each entry
+          will begin with a &lt;div type="body">—there is no separate &lt;div type="heading">. Start
+          the first &lt;p> of the body and tag from the beginning up to the first period or
+          semicolon as a &lt;rilmPerson>. Birth and death informations may appear in the first
+          sentence of the body and are indicated as follows: <ul>
+            <li>Birth dates are preceded by "born"; and the place is preceded by "at" or "in".</li>
+            <li>Death dates are be preceded by "died".</li>
+          </ul>Occupations are also often given in the first sentence. If a word in <a
+            href="#occupations">this list of occupations</a> is found between the beginning of the
+          entry and the first period or semicolon, please tag it &lt;occupation>.
+            <br /><blockquote>&lt;div
+            type="body">&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>TAPPERT&lt;/surname>,
+            &lt;forename>WILHELM&lt;/forename>&lt;/persName>, German
+            &lt;occupation>critic&lt;/occupation> and &lt;occupation>writer on
+            music&lt;/occupation>, &lt;birth>born &lt;date when="1830-02-19" when-custom="1830">Feb.
+            19, 1830&lt;/date> at &lt;placeName>Ober- Thomaswaldau&lt;/placeName> in
+            &lt;placeName>Silesia&lt;/placeName>&lt;/birth>&lt;/rilmPerson>;
+            ...&lt;/p>&lt;/div></blockquote><ul>
+            <li>Prefixes, such as "Dr.", "Rev.", etc., precede the forenames and are set in normal
+              Roman type; academic degrees follow the forenames: <br /><br /> [TORRANCE, Rev.
+                G<small>EORGE</small> W<small>ILLIAM</small>, M.A., Mus.D.,] <br />Set all these in
+              &lt;roleName> elements: <blockquote>&lt;persName>&lt;surname>TORRANCE&lt;/surname>,
+                &lt;roleName>Rev.&lt;/roleName> &lt;forename>GEORGE&lt;/forename>
+                &lt;forename>WILLIAM&lt;/forename>, &lt;roleName>M.A.&lt;/roleName>,
+                &lt;roleName>Mus.D.&lt;/roleName>&lt;/persName>, </blockquote></li>
+            <li>Alternative names are given irregularly, often interspersed with prose:<ul>
+                <li>[SYMPSON (or SIMPSON, as he sometime spelled his name),
+                    C<small>HRISTOPHER</small>, was an eminent performer on, and teacher of the
+                  viol, in the 17th century. ...]</li>
+                <li>[TALLYS (as he himself wrote his name), TALYS, or TALLIS (as it is usually
+                  spelled), T<small>HOMAS</small>, the father of English cathedral music, is
+                  supposed to have been born in the second decade of the 16th century. ...]</li>
+              </ul> Therefore, each surname (indicated by all-caps) and forename (indicated by small
+              caps) must be tagged in its <i>own</i> &lt;persName> element:
+                <blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>SYMPSON&lt;/surname>&lt;/persName>
+                (or &lt;persName>&lt;surname>SIMPSON&lt;/surname>&lt;/persName>, as he sometime
+                spelled his name),
+                &lt;persName>&lt;forename>CHRISTOPHER&lt;/forename>&lt;/persName>, was an eminent
+                &lt;occupation>performer&lt;/occupation> on, and
+                &lt;occupation>teacher&lt;/occupation> of the viol, in the 17th
+                century.&lt;/rilmPerson>...&lt;/p></blockquote><blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>TALLYS&lt;/surname>&lt;/persName>
+                (as he himself wrote his name),
+                &lt;persName>&lt;surname>TALYS&lt;/surname>&lt;/persName>, or
+                &lt;persName>&lt;surname>TALLIS&lt;/surname>&lt;/persName> (as it is usually
+                spelled), &lt;persName>&lt;forename>THOMAS&lt;/forename>&lt;/persName>, the father
+                of English cathedral music, is supposed to have been born in the second decade of
+                the 16th century&lt;/rilmPerson>. ...&lt;/p> </blockquote></li>
+          </ul></li>
+        <li><b>In topic entries</b>, the article title is given in All-capital type—there are no
+          small caps. As with names, start with a &lt;div type="body"> and &lt;p>. Use the word or
+          words in all capitals <i>preceding the first punctuation</i> as the &lt;title> in the TEI
+          header. <ul>
+            <li>Begin with a &lt;div type="body">—as with name entries, there is no separate &lt;div
+              type="heading">. Start the first &lt;p> of the body and tag from the beginning of the
+              &lt;p>up to the first period or semicolon as a &lt;seg function="topic">.Tag the
+              word(s) in all caps as &lt;term>.</li>
+            <li>Words or phrases in parentheses immediately following the word in all-caps can be
+              tagged &lt;gloss>. Words inside the parentheses in italic type can be tagged &lt;term
+              rend="italic">.</li>
+          </ul> [SHAWM or SHALM (Ger. <i>Schalmey</i> or <i>Chalmei</i>; Fr. <i>Chalumeau</i>).]
+            <blockquote>&lt;div type="body">&lt;p>&lt;seg function="topic">&lt;term>SHAWM&lt;/term>
+            or &lt;term>SHALM&lt;/term> &lt;gloss>(Ger. &lt;term rend="italic">Schalmey&lt;/term> or
+            &lt;term rend="italic">Chalmei&lt;/term>; Fr. &lt;term
+            rend="italic">Chalumeau&lt;/term>)&lt;/gloss>.&lt;/seg>&lt;/p>
+          &lt;/div></blockquote></li>
+        <li><b>Family entries</b> begin with the family surname in all caps (no small caps), and
+          include the word "family" before the first semicolon or period. </li>
+        <li><b>See references</b> are in square brackets in the form [See T<small>ITLE</small>.]
+            <i>including the square brackets!</i><br />MAJORANO. [See C<small>AFFARELLI</small>.] <ul>
+            <li>Treat stand-alone see references according to the <a
+                href="ft/tei_rilm_instructions.html#see-refs">general rules for see
+              references</a>.</li>
+            <li>References within articles are presented the same way. <a
+                href="ft/tei_rilm_instructions.html#cross-refs">Tag as &lt;ref> elements</a>.</li>
+          </ul></li>
+        <li><b>Lists of works and ographies</b> may appear in the middle or ends of articles. They
+          are distinguished by smaller type and a division into two columns per text column (that
+          it, four columns on a page width).<ol>
+            <li>If there is no title at the top of the list, tag it as a &lt;div type="works">
+              containing &lt;item> and &lt;bibl> elements. The formatting is often too irregular to
+              determine titles, etc., reliably, so do not divide &lt;bibl> elements in a works list
+              in this publication.</li>
+            <li>Some lists are divided into sections that have heads in all caps. Begin a new
+              &lt;div type="section"> where this occurs, without closing the &lt;div type="works">.
+              In other words, nest the sections within the works. See gr1-example2.xml which
+              demonstrates this. </li>
+          </ol></li>
+        <li>For the <b>index volume</b> (vol. 5), the TEI header must be different to reflect a
+          different title and author: <blockquote>&lt;author><br />
+            &lt;roleName>Mrs.&lt;/roleName><br /> &lt;forename>Edmond&lt;/forename> <br />
+            &lt;forename>&lt;abbr>R.&lt;/abbr>&lt;/forename><br />
+            &lt;surname>Wodehouse&lt;/surname> <br /> &lt;/author> <br /> &lt;title>A Dictionary of
+            Music and Musicians (A.D. 1450–1889): Index to the Four Volumes and Catalogue of
+            Articles Contributed by Each Writer&lt;/title><br /> &lt;idno type="doi"/> &lt;idno
+            type="isbn"/><br /> &lt;imprint> <br /> &lt;publisher>Theodore Presser&lt;/publisher>
+            <br /> &lt;pubPlace><br /> &lt;address>&lt;street>1708 Chestnut Street&lt;/street>
+            &lt;settlement>Philadelphia,&lt;/settlement> &lt;region>PA&lt;/region><br />
+            &lt;postCode/>&lt;/address> <br /> &lt;/pubPlace> <br /> &lt;date>18??&lt;/date><br />
+            &lt;/imprint> </blockquote><ul>
+            <li>Create a file for the <b>Preface</b> and for each letter of the Index (<b>A</b>.,
+                <b>B</b>., etc.). Make the contents of each letter a &lt;list>, with a new &lt;item>
+              beginning with each hung indentation. <blockquote>&lt;list><br />&lt;item>A, i. 1a;
+                Alphabet, i. 57a.&lt;/item><br />&lt;item>AALST, J.A. van; Hist. of Mus., iv.
+                674b.&lt;/item><br />&lt;item>AARON, P., i. 1a; Catelani (A.), i. 323b; Hexachord,
+                i. 735a; Isaac, ii. 23a;...[etc.]&lt;/item><br />&lt;item>ABACO, E. F. dall',
+                i.1a.&lt;/item><br />..<br />..<br />..<br />&lt;/list></blockquote></li>
+            <li>Set the <b>Catalogue of the Articles..</b> at the end of volume 5 as a single list,
+              beginning each item with the hung indentation.
+                <blockquote>&lt;list><br />&lt;item>ANDREWS, Addison F. [A. F. A.]—Walter, W.
+                H.&lt;/item><br />&lt;item>ARMBRUSTER, Carl[C.A.]—Mottl;
+                Seidl.&lt;/item><br />&lt;item>BAPTIE, David [D. B.]—Smith, R. A.;
+                Spofforth.&lt;/item><br />..<br />..<br />..<br />&lt;/list></blockquote></li>
+          </ul></li>
+
+
+
+
+
+
+
+      </ol>
+      <p>Please refer also to sample files.</p>
+      <p><a id="occupations"></a>List of Grove occupations:</p>
+      <ul>
+        <li>antiquary</li>
+        <li>author</li>
+        <li>band-master</li>
+        <li>bass</li>
+        <li>bassoonist</li>
+        <li>capellmeister</li>
+        <li>composer</li>
+        <li>contralto</li>
+        <li>contralti</li>
+        <li>critic</li>
+        <li>director</li>
+        <li>ecclesiastic</li>
+        <li>engraver</li>
+        <li>flutist</li>
+        <li>inventor</li>
+        <li>manager</li>
+        <li>musician</li>
+        <li>organ builder</li>
+        <li>organ-builder</li>
+        <li>organist</li>
+        <li>performer</li>
+        <li>pianist</li>
+        <li>piano-forte player</li>
+        <li>pianoforte player</li>
+        <li>priest</li>
+        <li>printer</li>
+        <li>professor</li>
+        <li>publisher</li>
+        <li>singer</li>
+        <li>teacher</li>
+        <li>tenor</li>
+        <li>type-founder</li>
+        <li>violin-player</li>
+        <li>violin-maker</li>
+        <li>violinist</li>
+        <li>vocalist</li>
+        <li>writer</li>
+      </ul>
+    </div>
+  </body>
+</html>

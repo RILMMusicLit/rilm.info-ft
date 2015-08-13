@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://rilm.info/ft/tei_collection.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/collections/tei_rilm.xsd">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>GALUPPI, Baldassare</title>
+                <respStmt>
+                    <resp>Encoded by</resp>
+                    <orgName><abbr>KEY, RILM</abbr></orgName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher/>
+                <pubPlace/>
+                <distributor>Répertoire International de Littérature Musicale</distributor>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor><forename>Marc</forename>
+                            <surname>Honegger</surname>
+                        </editor>
+                        <title>Dictionnaire de la musique<lb/>Les hommes et leurs œuvres</title>
+                        <idno type="doi"/>
+                        <idno type="isbn">2-04-019973-X</idno>
+                        <imprint>
+                            <publisher>Bordas</publisher>
+                            <pubPlace>
+                                <address><settlement>Paris</settlement></address>
+                            </pubPlace>
+                            <date>1993</date>
+                        </imprint>
+                        <biblScope unit="vol" n="1"/>
+                        <biblScope unit="pp" n="14"/>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <hyphenation eol="some">
+                    <p>End-of-line hyphenation silently removed where appropriate</p>
+                </hyphenation>
+            </editorialDecl>
+            <appInfo>
+                <application ident="oXygenXMLEditor" version="16.0" notAfter="2014-10-24">
+                    <label>oXygen XML Editor</label>
+                    <ptr target="#p1"/>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text type="person" xml:lang="en" xml:id="brs-example-1">
+        <body>
+            <div type="body" xml:id="d1">
+                <p xml:id="p1"><rilmPerson xml:id="r1"><persName><surname>FRYE</surname>,
+                                <forename>Walter</forename></persName>, <death><date when="1475"
+                                precision="low" when-custom="1475">1474 ou 1475</date></death>,
+                            <occupation>comp.</occupation>
+                        <nationality>anglais</nationality></rilmPerson></p>
+                <p xml:id="p2">GALUPPI, Baldassare, dit <q>il Buranello</q>, *ile de Burano (Venise) 18.10.1706, t Venise 3.1.1785, comp. italien.
+                    Fils d'un barbier violoniste qui lui apprit un peu de musique, il s'essaya à l’opéra a seize ans avec La fede nell' inconstanza. Donnée a Chioggia et à Vicence, l'œuvre eut un insuccès si total qu'elle attira l'attention de B. Marcello ; celui-ci fit étudier G. sérieuse­ ment avec A. Lotti. A partir de 1726, G. enseigna le clavecin au théâtre de la Pergola à Florence. Des 1728 on le trouve à Venise ou il compose en collaboration avec G. B. Pescetti. C'est dans cette ville qu'il vécut presque constamment, en dehors d'un séjour à Londres (1740-42) et à St- Pétersbourg (1756-68), ou il fut le maitre de D. Bortnianski, et de voyages en Italie et à Vienne pour la représentation de ses œuvres. II fut maestro di coro à l'œuvre de l'Ospitale de' Mendicanti (1740), vice-maitre de chapelle de St-Marc (1748) et directeur musical de l'Ospitale degli Incura­ bili (1762). II collabora longtemps avec C. Goldoni qui lui fournit des textes, surtout pour des œuvres comiques (p. ex. Il filosofo di Campagna, 1754; La cameriera spiritosa, 1766). A Londres, G. Composa Penelope, Scipione in Cartagine, Enrico, Sirbace, à St-Pétersbourg, Ifigenia in Tauride. De retour à Venise, ou la République lui avait conserve son poste à St-Marc, il écrivit en 1773 sa dernière oeuvre, La serva per amore.
+                </p>
+            </div>
+            <div type="works" xml:id="d2">
+                <head>Œuvres</head>
+                <list>
+                    <item><bibl xml:id="b1">I. Mus. lnstr. : 85 sonates pour clv.; un trio pour fl., htb. et basse ; 7 Concerti a quattro pour 2 vl., alto et vic. ; des concertos pour clv. (2), pour fl. (3). - 2. Mus. vocate : des messes, motets, Te Deum et autres compositions relig. ; 27 oratorios ; 7 cantates. - 3. Mus.théâtre. : plus de I 00 œuvres (les dates indiquées sont les dates de représ.), parmi lesquelles Ergilda, Ciro riconosciuto et Gustavo Vasa, Venise 1736, 1737 et 1740; Didone abbandonata, Modène 1714; Berenice, Venise 1741 ; L'Olimpiade, Milan 1747; Demetrio, Vienne 1748; représ. à Vérone, R conte Caramel/a, 1749, R mondo della luna, 1750, R mondo alia rover.sa ossia Le donne che comondano, 1750, lpermestra, 1751; représ. à Venise, Lflrcadia in Brenta, La calamitd de' cuori, 1753; I bagni dflbano, 1753 (en collab. avec Bertoni), R filosofo di campagna, 1754, La diavo/essa, 1755, L'amante di tutte, 1760, Litre amanti ridicol1761, R marchese vil/ano, 1762, La partenza e il ritomo dei marina1764; I{igenia in Tauride, St-Petersbourg 1768 ; représ. à Venise, R vil/ano ge/oso, 1769, L'inimico delle donne, 1771, Motezuma 1772, La serva per amore, 1773.</bibl></item>
+                </list>
+            </div>
+            <div type="body" xml:id="d3">
+                <p xml:id="p3">C'est de l'alliance avec la comédie de Goldoni que nait l'intérêt le plus réel du théâtre musical de G. L'intention comique lui dicte un style vocal incisif et plein de finesse psychologique, qui le distingue de l'ample ligne vocale de son maitre A. Lotti et de l'ecole napolitaine. G. donne aux <q>concertati</q> une plus grande importance ; ils ne sont plus limites au finale, mais insérés dans l'action. Dans ses œuvres pour clavecin, G. annonce le style classique.</p>
+            </div>
+            <div type="works" xml:id="d4">
+                <head>Reeditions</head>
+                <list>
+                    <item><bibl xml:id="b4">Des Sonates pour clv., ed. par G. BENVENl111, Bologne, Bongiovanni, 1920; ed. par G. i'ICCIOil, Milan, Suvini Zerboni, 1951 ; Milan, Ricordi, 1959 ; ed. par FR. i'IvA, in Collana di musiche veneziane, vol. 6, Milan, Ricordi, 1963; in Bib!. musica Bononiensis, n• 56/1·2, Bologne, Forni, 1969; in B. SoMMA, Musiche vocali e strumentali... sec. XVII-XIX, vol. 37, Rome, DeSantis, 1971; des Concerti a 4, n•• 14, in Diletto mus., n•• 94-95 et 519-520, Vienne, Doblinger; nI, 3-7, in Collana di musiche, vol. 4-9, Florence, Olschki, 1972-74; Concerto pour clv.en fa maj., in Antica musica strumentale ita!., Milan, Ricordi, 1968 ; n• 3, in B. SoMMA, Musiche vocali e strumentali... sec. XVII-XIX, vol. 42, Rome, De Santis, 1972 ; Symphonies et Ouvertures, ed. par G. i'ICCIOU et R. LUPI, Milan, Carish, 1962 ; Rapida cerva, fuge, pour sop., cordes et b.c., in Die Kantate, vol. 12, Cologne, Bieler ; Dixit Dominus pour chreur et cordes, in Harmoniae musarum, vol. 8-9, Macomb (Ill.), R. Dean Pub!.,
+                        1977 ; Messe en ut maj., ed. par H. BAUBRLI!, Leipzig, Br. &amp; H. 1927, 2/ Wiesbaden, Br. &amp; H., 1962 ; R {ilosofo di campagna, ed. par V. MORTARI, Milan, Carish, 1933 ; ed. par E. WOI.F·F'BRRARI, Milan, Ricordi ; L'Olim· piade et La diavo/essa, in H.M. BROWN, Ita!. opera, 1640-1770, vol. 41 et
+                        44, New York, Garland, 1978.
+                    </bibl></item>
+                </list>
+            </div>
+            <div type="ography" xml:id="d5">
+                <head>Bibliographie</head>
+                <list>
+                    <item><bibl xml:id="b5">A. WOTOUENNE, B. G., étude bibliogr. sur ses œuvres dramatiques, in RMI VI, 1899 ; tire à part, Bruxelles 1902 ; L ToRCHI,
+                        La musica istrumentale in Italia nei secoli XVI, xvn et xvm in RMI VIII,
+                        1901 ; FR. A. i'IovANo, B. G., Note bio-bibliografiche, in RMI XIII-XV,
+                        1906-08 ; F. TORREPRANCA, Per un catalogo tematico delle Sonate per cembalo di B. G., in RMI XVI, 1909 ; CH. VAN DEN BoRRBN, Contribution au catal. tbematique des sonates de G., in RMI XXX. 1923 ; E. BwM, Brave G., in Stepchildren of Music, Londres 1923 ; F. R.wiE, G. als Instrumentalkomponist (diss. Munich 1926); G. G. BERNARD « D Mondo alia roversa », dramma bernesco di B. G., in Musica d'Oggi XVI,
+                        1934; W. Bolll!RT, Die Buffo Opern B. G.s (diss. Berlin 1935) ; A. DBuA CORTE, Profilo critico di B. G., in Quaderni dell' Accad. Chigiana XVIII, Sienne 1948 ; B. G. detto il Buranello, note e documenti raccolti, Sienne 1948 ; RA MOOSER, Annales de Ia mus. et des musiciens en Russie au XVIII" s. II, Genève 1951 ; A. L CHIUMINATI'O, Liturgical Works of B. G. (diss. Northwestern Univ., Ill., 1959); W.S. NEWMAN, The sonata in tbe classic era, Chapel Hill 1963, 2/New York, Norton, 1972 ; D.E. Puu..MANN, A catal. of tbe keyboard sonatas of B. G. (diss. Amer. Univ. Washington 1972) ; FR. i'IvA, Contributi alia conoscenza della figura e dell'opera di B. G., in Rass. di studi musicali I, 1974 ; D.HEAinz, Hasse, G. and Metastasio, in Venezia e il melodramma nel Settecento, Venezia 1975 ; du meme, The Creation of tbe Buffo Finale in Ita!. Opera, in Proc. R. Mus. Assoc. CIV, 1977-78.
+                    </bibl></item>
+                </list>
+            </div>
+        </body>
+    </text>
+</TEI>

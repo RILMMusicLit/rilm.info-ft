@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Algemene Muziek Encyclopedie (1979-)</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="grove-GR1">Algemene Muziek Encyclopedie</h4>
+      </div>
+    </a>
+    <div class="r201503" title="Added, 3/2015">
+      <p><i><a href="#amendments">(amended 5/28/2015)</a></i></p>
+      <ol>
+        <li>This encyclopedia was published over a period of 5 years between 1979 and 1984. Each
+          volume will have a different ISBN in the TEI headers. The &lt;author> element in the TEI
+          header will differ for volume 1: <ul>
+            <li>Volume 1 is by J. Robijns and J. M. Mostaert</li>
+            <li>Volumes 2 through 9 are by J. Robijns and Miep Zijlstra</li>
+          </ul></li>
+        <li>Front Matter will include the title page, copyright page, and "Ten geleide".</li>
+        <li>English-style single quotation marks (‘ and ’) are used throughout. This means that
+          the same character is used for right quote and for apostrophe, and they have to be distinguished:<ul>
+            <li>[...‘Grove’s Dictionary of Music and Musicians’...]
+                <blockquote>&lt;p>...&lt;q>Grove’s Dictionary of Music and
+                Musicians&lt;/q>...&lt;/p></blockquote></li></ul></li>
+        <li>Entries may contain the following six &lt;div> @type values: <ul>
+            <li>heading (<b>bold</b> type, on its own line in the original)</li>
+            <li>subheading (line following in parentheses, but no text out of the parentheses)</li>
+            <li>body</li>
+            <li>ography (optional)</li>
+            <li>works (optional)</li>
+          </ul></li>
+        <li><b>Person articles</b> give the name in a heading in surname, forename(s) order, where
+          the surname is set in Bold, all-caps, and the forenames in Bold, normal case. <ul>
+            <li>Alternate names appear in the heading in parentheses.</li>
+            <li>The subheading starts a new line with an open parenthesis mark, and contains places
+              and dates. Birth information is marked with °, death information with †. Known birth
+              or death dates are given in d.m.yyyy format. Sometimes only a year or century ("eeuw")
+              is given. Others merit only a question mark: <ul>
+                <li>[<b>AARBURG, Ursula</b><br />(° Lübeck 13.1.1924 - † Bremen 15.4.1967)]</li>
+                <li>[<b>ABONDANTE, Giulio</b>
+                  <br />(16de eeuw)]</li>
+                <li>[<b>ABRAMS, Harriet</b><br /> (° 1760 - † ?)</li>
+              </ul>Set the contents of the parenthesis in a &lt;rilmPerson> element pointing to the
+              heading, and tag the information presented. Omit the ° and †
+                characters.<blockquote>&lt;div type="heading" xml:id="d1"> <br />
+                &lt;p>&lt;rilmPerson xml:id="r1">&lt;persName>&lt;surname>AARBURG&lt;/surname>,
+                &lt;forename>Ursula&lt;/forename>&lt;/persName>&lt;/rilmPerson>&lt;/p><br />
+                &lt;/div><br /> &lt;div type="subheading" xml:id="d2"><br /> &lt;p>&lt;rilmPerson
+                xml:id="r2" corresp="#r1">(&lt;birth>&lt;placeName>Lübeck&lt;/placeName> &lt;date
+                when="1924-01-13" when-custom="1924" >13.1.1924&lt;/date>&lt;/birth> -
+                &lt;death>&lt;placeName>Bremen&lt;/placeName> &lt;date when="1967-04-15"
+                when-custom="1967" >15.4.1967&lt;/date>&lt;/death>)&lt;/rilmPerson>&lt;/p>
+                <br />&lt;/div></blockquote>
+            </li>
+            <li>The first sentence of the body begins with the person's nationality, a
+              space-hyphen-space, and the person's occupation(s). Set up to the first period or
+              semicolon of the first &lt;p> in &lt;div type="body"> in another &lt;rilmPerson>
+              element with a @corresp pointing to the &lt;rilmPerson> element in the &lt;div
+              type="heading">. Note that there may be more than one nationality given.<ul>
+                <li><b>AALTONEN, Erik Verner</b> (Erkki)<br /> (° Hämeenlinna, Tavastikus
+                  17.8.1910)<br /> Fin - Componist en dirigent, studeerde viool en compositieleer
+                  aan de Sibelius­Academie en voltooide zijn studie met bet examen voor
+                  orkestdirectie in 1947. Hij werkte als violist in verschillende orkesten en boekte
+                  groot succes met de <i>Hiroshima Symfonie</i> in 1949. </li>
+              </ul><blockquote>&lt;div type="heading" xml:id="d1"> <br /> &lt;p>&lt;rilmPerson
+                xml:id="r1">&lt;persName>&lt;surname>AALTONEN&lt;/surname>,
+                &lt;forename>Erik&lt;/forename> &lt;forename>Verner&lt;/forename> (&lt;forename
+                type="alt" >Erkki&lt;/forename>)&lt;/persName>&lt;/rilmPerson>&lt;/p><br />
+                &lt;/div><br /> &lt;div type="subheading" xml:id="d2"><br /> &lt;p>&lt;rilmPerson
+                xml:id="r2" corresp="#r1">(&lt;birth>&lt;placeName>Hämeenlinna&lt;/placeName>,
+                &lt;placeName>Tavastikus&lt;/placeName> &lt;date when="1910-08-17"
+                when-custom="1910" >17.8.1910&lt;/date>&lt;/birth>)&lt;/rilmPerson>&lt;/p>
+                <br />&lt;/div><br /> &lt;div type="body" xml:id="d3"> <br />&lt;p>&lt;rilmPerson
+                xml:id="r3" corresp="#r1">&lt;nationality>Fin&lt;/nationality> -
+                &lt;occupation>Componist&lt;/occupation> en &lt;occupation>dirigent&lt;/occupation>,
+                studeerde viool en compositieleer aan de Sibelius­ Academie en voltooide zijn studie
+                met bet examen voor orkestdirectie in 1947&lt;/rilmPerson>. Hij werkte als violist
+                in verschillende orkesten en boekte groot succes met de &lt;hi
+                rend="italic">Hiroshima Symfonie&lt;/hi> in 1949.&lt;/p> &lt;/div></blockquote>A
+              list of occupations in Dutch is <a href="#occupations">below</a>.</li>
+            <li>All <b>italicized</b> type within the body text, worklists, or ographies of a
+              &lt;text type="person"> article indicates a <b>title</b>, and should be tagged
+              &lt;title>. However, figure captions are generally set in italic type, so do not tag
+              them as such.</li>
+            <li><b>Worklists</b>
+              <ul>
+                <li>Worklists in this publication have headings in all caps, not bold, reading
+                  "WERKEN", "VOORNAAMSTE WERKEN", "COMPOSITIES", "GESCHRIFTEN", or "PUBLIKATIES";
+                  all are &lt;div type="works">. <i>Note: headings </i>"INSTRUMENTALE WERKEN"
+                    <i>and</i> "VOCALE WERKEN" <i>do not indicate worklists. </i></li>
+                <li> Worklists are usually divided with Roman headings at the beginning of a line
+                  followed by a colon: "Piano:", "Kamermuziek:", "Orgel:" "Orkestwerken:". Begin a new &lt;div
+                  type="section"> at these points. Individual items are denoted by either a comma or
+                  semicolon following a closing parentheses. Remember to omit the comma or semicolon
+                  in the tagged text. Tag any italic text as &lt;title>:<br /><br /> [VOORNAAMSTE WERKEN<br />
+                  <b>Piano</b><br /> Sonate in C, op. 1 (1853); Sonate in fis, op. 2 (1853); Sonate
+                  in f, op. 5 (1854); ... ]<blockquote>&lt;div type="works">&lt;head>VOORNAAMSTE
+                    WERKEN&lt;head><br /> &lt;div type="section">&lt;head>Piano&lt;/head><br />
+                    &lt;list>&lt;item>&lt;bibl>Sonate in C, op. 1
+                    (&lt;date>1853&lt;/date>)&lt;/bibl>&lt;/item> <br /> &lt;item>&lt;bibl>Sonate in
+                    fis, op. 2 (&lt;date>1853&lt;/date>)&lt;/bibl>&lt;/item> <br />
+                    &lt;item>&lt;bibl>Sonate in f, op. 5
+                    (&lt;date>1854&lt;/date>)&lt;/bibl>&lt;/item>
+                    ...&lt;/list><br />&lt;/div><br />&lt;/div></blockquote> See the file
+                  alg-example-1.xml for further examples.</li>
+                <li><i>Note: </i>Some worklists have extensive commentary in prose, which may make
+                  it difficult or impossible to parse out individual items. These should still be
+                  set in a &lt;div type="works"> if one of the headings above (WERKEN, etc.) is
+                  encountered. Anything that can't be arranged into a list may be enclosed in &lt;p>
+                  tags, but italic text can still be tagged &lt;title>. See the file
+                  alg-example-2.xml.</li>
+                <li><i>Note 2: </i>A few long articles contain a worklist in the middle of the
+                  article, followed by additional prose. An example is the "Mozart" article (vol. 7,
+                  pp. 16-20 are the worklist; bibliography begins on p. 24). </li>
+              </ul></li>
+            <li><b>Bibliographies</b> are headed BIBLIOGRAPHIE and are &lt;div type="ography">. They
+              are in paragraph form with items separated by semicolons. Individual entries give
+              author in surname, first initial form; the title in italic type; and one or more years.<ul>
+                <li>Marix, J., <i>Les musiciens de la cour de Bourgogne au XVe siecle</i>, 1937;
+                  Id., <i>Histoire de la musique et des musiciens de la cour de Bourgogne sous le
+                    regne de Philippe le Bon</i>, 1939; Borren, Ch. van den, <i>Etudes sur le XVe
+                    siecle musical</i>, 1941;... </li>
+              </ul><blockquote>&lt;list>&lt;item>&lt;bibl>&lt;author>&lt;surname>Marix&lt;/surname>,
+                &lt;forename>&lt;abbr>J.&lt;/abbr>&lt;/forename>, &lt;title>Les musiciens de la cour
+                de Bourgogne au XVe siecle&lt;/title>, &lt;date>1937&lt;/date>&lt;/bibl>;&lt;/item>
+                &lt;item>&lt;bibl>&lt;author>Id.&lt;/author>, &lt;title>Histoire de la musique et
+                des musiciens de la cour de Bourgogne sous le regne de Philippe le Bon&lt;/title>,
+                &lt;date>1939&lt;/date>&lt;/bibl>;&lt;/item>
+                &lt;item>&lt;author>&lt;surname>Borren&lt;/surname>,
+                &lt;forename>&lt;abbr>Ch.&lt;/abbr>&lt;/forename> &lt;nameLink>van
+                den&lt;/nameLink>, &lt;title>Etudes sur le XVe siecle musical&lt;/title>,
+                &lt;date>1941&lt;/date>&lt;/bibl>;&lt;/item> ...&lt;/list></blockquote></li>
+          </ul>
+        </li>
+        <li><b>Topic</b> articles have headings in Bold, all caps (no normal case). Set the heading
+          in &lt;div type="heading">, &lt;p>, and &lt;term> tags.<ul>
+            <li>Many topic articles begin the body with parenthesis. These may contain the language
+              of the term in the heading and or translations of the term in the form (Lang.: term;
+              Lang.: term), where a colon follows the abbreviated form of the language, and a
+              semicolon separates one translation from the next. <ul>
+                <li><b>BORING</b>
+                  <br />(Fr.: perce)</li>
+                <li><b>MOL</b><br /> (Du.: Be of B; Eng: flat; Fr.: bémol; It.: bemolle)</li>
+              </ul> Tag the term between the colon and semicolon as &lt;term> with an @xml:lang
+              attribute corresponding to the abbreviation given: <ul>
+                <li>Du. = de</li>
+                <li>Fr. = fr</li>
+                <li>It. = it</li>
+                <li>En. = en</li>
+              </ul>
+              <blockquote>&lt;div type="heading">&lt;p>&lt;term
+                xml:id="t1">MOL&lt;/term>&lt;/p>&lt;/div><br /> &lt;div
+                type="subheading">&lt;p>(Du.: &lt;term xml:id="t2" xml:lang="de" corresp="#t1">Be of
+                B&lt;/term>; Eng: &lt;term xml:id="t3" xml:lang="en" corresp="#t1">flat&lt;/term>;
+                Fr.: &lt;term xml:id="t4" xml:lang="fr" corresp="#t1">bémol&lt;/term>; It.: &lt;term
+                xml:id="t5" xml:lang="it"
+                corresp="#t1">bemolle&lt;/term>)&lt;/p>&lt;/div></blockquote></li>
+            <li>Italic type within &lt;text type="topic"> article should not be tagged &lt;title>,
+              but should be tagged &lt;hi rend="italic"></li>
+          </ul></li>
+        <li><b>See references,</b> both stand-alone and within body texts, are indicated by a
+          right-arrow (→)<ul>
+            <li>Treat stand-alone see references according to the <a
+                href="ft/tei_rilm_instructions.html#see-refs">general rules for see
+              references</a>.</li>
+            <li>References within articles are presented the same way. <a
+                href="ft/tei_rilm_instructions.html#cross-refs">Tag as &lt;ref> elements</a>.</li>
+            <li>Omit the arrows.</li>
+          </ul></li>
+        <li>Volume 10 contains a list of contributors (Medewerkers...). Tag as &lt;text
+          type="matter"> and set as a &lt;list>. Each &lt;item> contains a &lt;rilmPerson> with a
+          personal name, occupation, and place; and often an organization name. <ul>
+            <li>The personal name lies on its own line. Any lower-case letters immediately after the
+              comma are role names. Lower-case words at the end are Link names.</li>
+            <li>Occupation is given at the beginning of the next line in all lower-case characters.
+              If there is more than one occupation, they are separated by comma.</li>
+            <li>The organization name, if present, follows without any punctuation, but with
+              upper-case initials.</li>
+            <li>There is a semicolon before the place name.</li>
+          </ul> Examples:<ul>
+            <li>Abeele, lic. G. van den <br /> oud-muziekpedagoog;
+                Lederberg-Gent<blockquote>&lt;item>&lt;rilmPerson>&lt;persName>&lt;surname>Abeele&lt;/surname>,
+                &lt;roleName>lic.&lt;/roleName> &lt;forename>&lt;abbr>G.&lt;/abbr>&lt;/forename>
+                &lt;nameLink>van den&lt;/nameLink>&lt;/persName>
+                &lt;occupation>oud-muziekpedagoog&lt;/occupation>;
+                &lt;placeName>Lederberg-Gent&lt;/placeName>&lt;/rilmPerson>&lt;/item></blockquote></li>
+            <li>Ackere, J. van<br />musicoloog, hoogleraar Universitaire Faculteiten St.-Ignatius
+              Anterwerpen;
+                Brussel<blockquote>&lt;item>&lt;rilmPerson>&lt;persName>&lt;surname>Ackere&lt;/surname>,
+                &lt;forename>&lt;abbr>J.&lt;/abbr>&lt;/forename> &lt;nameLink>van&lt;/nameLink>
+                &lt;occupation>musicoloog&lt;/occupation>, &lt;occupation>hoogleraar&lt;/occupation>
+                &lt;orgName>Universitaire Faculteiten St.-Ignatius Anterwerpen&lt;/orgName>;
+                &lt;placeName>Brussel&lt;/placeName>&lt;/rilmPerson>&lt;/item></blockquote></li>
+            <li>Albert, K.<br /> componist, oud-adjunct-directeur muziekdienst B.R.T.;
+                Antwerpen<blockquote>&lt;item>&lt;rilmPerson>&lt;persName>&lt;surname>Albert&lt;/surname>,
+                &lt;forename>&lt;abbr>K.&lt;/abbr>&lt;/forename>&lt;/persName>
+                &lt;occupation>componist&lt;/occupation>, &lt;occupation>oud-adjunct-directeur
+                muziekdienst&lt;/occupation> &lt;orgName>B.R.T.&lt;/orgName>;
+                &lt;placeName>Antwerpen&lt;/placeName>&lt;/rilmPerson>&lt;/item></blockquote></li>
+          </ul></li>
+        <li><a id="amendments"></a><i>(new 5/28/15)</i> The <b>Afkortingen</b> (abbreviations) section may be set as one
+          file, &lt;text type="matter"> with six sections. <ul>
+            <li>Section 1 (.. <i>van het notenschrift</i>) can be set as paragraphs (&lt;p>
+              elements).</li>
+            <li>Section 2 (.. <i>van muziektermen</i>) should be set as a &lt;table> with two
+              columns.</li>
+            <li>Section 3 (.. van instrumentnamen) includes a long introductory paragraph (&lt;p>),
+              followed by a &lt;table> with two columns, with one row for each abbreviation in the
+              left column. Note that each row in the left column begins with a capital letter. Thus,
+              "Ob – heck" constitutes one row.</li>
+            <li>Section 4 (.. van muziektijdschriften ..) includes an introductory paragraph and a
+              two-column table. Tag italic text as &lt;title>.</li>
+            <li>Sections 5 AND 6 are bibliographies. Unfortunately, the abbreviations are not in
+              their own columns here, so set these as &lt;list> elements containing &lt;item> /
+              &lt;bibl>. Set italic text as &lt;title>. Don't tag other elements within
+              &lt;bibl>.</li>
+          </ul></li>
+<li><i>(new 5/28/15)</i> The <b>Termen</b> section should be set as one file, &lt;text
+          type="matter"> with an introductory &lt;p> and a &lt;table> with five columns. Make one
+          row for each term in the left-most column. Don't make a new row for hanging indented
+          terms: "Acc. =" is the beginning of one row, "Accarezzevole" is the next, "Accel. =" is
+          the following. Do not mark the italic text as &lt;hi> or as &lt;title>.</li>
+        <li><i>(new 5/28/15)</i> The <b>Nederlands-Italien</b> section should be set in one file, as
+          a &lt;table> with two columns; italic type in the left column, Roman in the right. Make a
+          row for each term in the left column. Each begins with a capital letter, thus "Aan de rand
+          van het membraan" is one term. Do not mark up the italic text as &lt;hi> or as
+          &lt;title>.</li>
+        <li><i>(new 5/28/15)</i> The <b>Muziekinstrumenten</b> section should be set as one file,
+          &lt;text type="matter">, as a &lt;table> with five columns. Make one row for each term in
+          the left-most column. Don't make a new row for hanging indented terms. Do not mark the
+          italic text as &lt;hi> or as &lt;title>.</li>
+        <li><i>(new 5/28/15)</i> The <b>Correcties en aanvullingen</b> (corrections and additions)
+          section should be set as one file, &lt;text type="matter"> with an introductory &lt;p>
+          followed by a &lt;list>. Make an &lt;item> for each entry beginning with bold-face type.
+          Where possible, make a &lt;ref> for each entry, pointing to the file with that title. </li>
+
+
+
+
+
+      </ol>
+      <p>Please refer also to sample files.</p>
+      <p><a id="occupations"></a>List of ALG occupations:</p>
+      <ul>
+        <li>alt-zanger</li>
+        <li>bariton</li>
+        <li>bass</li>
+        <li>choreograaf</li>
+        <li>criticus</li>
+        <li>danser</li>
+        <li>dichter</li>
+        <li>dirigent</li>
+        <li>ensemble-leider</li>
+        <li>fluitist</li>
+        <li>gambavirtuoos</li>
+        <li>historicus</li>
+        <li>hoboïst</li>
+        <li>kamermusicus</li>
+        <li>kerkmusicus</li>
+        <li>klavecimbelbouwer</li>
+        <li>klavecinist</li>
+        <li>leraar</li>
+        <li>liutspeler</li>
+        <li>musicograaf</li>
+        <li>musicologe</li>
+        <li>musicoloog</li>
+        <li>muziekcriticus</li>
+        <li>muziekpedagoog</li>
+        <li>muziekwetenschapper</li>
+        <li>muzikant</li>
+        <li>organist</li>
+        <li>orgelbouwer</li>
+        <li>pedagoog</li>
+        <li>pianist</li>
+        <li>producer</li>
+        <li>sopraan</li>
+        <li>sopraanzangeres</li>
+        <li>tenor</li>
+        <li>theoreticus</li>
+        <li>uitgever</li>
+        <li>violist</li>
+        <li>violvirtuoos</li>
+        <li>zanger</li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>DMEH</title>
+    </head>
+    <body>
+        <h4>Diccionario de la Música Española e Hispanoamericana (meh)</h4>
+        <p>We are converting only a sample of this publication, which we will present in a project
+            proposal to its editors and other stakeholders. Because these documents will be
+            presented without a finished content delivery platform, we will put an unusual stress on
+            their appearance with a dedicated stylesheet, which can be found at
+            http://www.rilm.info/ft/css/tei_dmeh.css. In addition to your usual quality control
+            processes, please view each XML document with this stylesheet and compare it to the PDF.
+            Any differences should be reported to RILM.</p>
+        <p>This publication is to be converted from QuarkXpress files.</p>
+        <ol>
+            <li>&lt;teiHeader>:<ul>
+                    <li>The &lt;title> element within &lt;titleStmt> should contain the boldface
+                        text at the start of each article.</li>
+                    <li>
+                        <p class="r201401" title="Added 01/2014">Create a &lt;change&gt; element for
+                            each article created with an @when attribute and @status="created".</p>
+                    </li>
+                </ul></li>
+            <li>See references: See references appear in very short entries with the keyword "veáse"
+                in italics. Information in these entries will be copied to their target entry, as
+                instructed <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs"
+                >here</a>, but with two changes: <ul>
+                <li>In addition to adding a &lt;term> entry to the target article, create an file
+                    for the entry itself.</li>
+                <li>In the &lt;term> element, the boldface headword will be followed by a Roman
+                        description, which will appear in a &lt;gloss> element:<blockquote><img
+                                src="images/vease-dmeh.png" alt="A see-reference from DMEH"
+                             /><br /><br />&lt;textClass><br />&lt;keywords><br />&lt;term>Bandullo&lt;gloss>Venezuela.
+                            Membranófono de
+                            frotación&lt;/gloss>&lt;/term><br />&lt;/keywords><br />&lt;/textClass></blockquote>See
+                        references ("<i>Véase</i>") in longer articles do not need to be added to
+                        target entries as &lt;term> elements. </li>
+                    <li>In all cases that "véase" appears in italics, it should be stripped out and
+                        the references should be set in &lt;div type="ref"> as follows. The
+                        smallcaps formatting of the references should <i>not</i> be
+                                retained.<blockquote><img src="images/vease-dmeh2.png"
+                                alt="vease-dmeh2.png" /><br /><br />la pierna izquierda casi se
+                            arrastra transportándolo.&lt;/p> &lt;div type="ref">&lt;p>&lt;ref
+                            target="mehEXAMPLE3">Caja&lt;/ref>; &lt;ref
+                            target="mehEXAMPLE4">Tambor&lt;/ref>; &lt;ref
+                            target="mehEXAMPLE5">Tambora&lt;/ref>.&lt;/p>&lt;/div></blockquote></li>
+                </ul> </li>
+            <li>Text types: Please use text types listed in <a href="../tables/dmeh_sample_types.xhtml">this chart</a> for each article.</li>
+            <li>&lt;div> elements should receive one of the following @type values: "heading",
+                "section", "one-section", "person", "works", "ography", or "authors".</li>
+            <li>Here are three basic structures for &lt;div>'s:<ol>
+                    <li>Family articles (&lt;text type="family">):<blockquote>&lt;div
+                            type="heading">&lt;/div><br />&lt;div
+                            type="person">&lt;/div>*<br />&lt;div
+                            type="person">&lt;/div><br />(&lt;div
+                            type="person">&lt;/div>...)<br />&lt;div
+                            type="authors">&lt;/div></blockquote></li>
+                <li>Articles without a table of contents (excluding family
+                            articles):<blockquote>&lt;div type="one-section">&lt;/div><br />(&lt;div
+                            type="works">&lt;/div>)<br />(&lt;div
+                            type="ography">&lt;/div>)<br />&lt;div
+                            type="authors">&lt;/div></blockquote></li>
+                <li>Articles with a table of contents:<blockquote>&lt;div
+                            type="heading">&lt;/div><br />&lt;div
+                            type="contents">&lt;/div><br />&lt;div
+                            type="section">&lt;/div><br />&lt;div
+                            type="section">&lt;/div><br />(&lt;div
+                            type="section">&lt;/div>...)<br />&lt;div
+                            type="authors">&lt;/div></blockquote></li>
+                </ol>
+             *&lt;div type="person"> section will contain all of the section that non-family
+                articles contain. Thus the structure of Barbieri (the only family article in the
+                current selection) will be as follows:<blockquote>&lt;div
+                    type="heading">&lt;head>&lt;/head>&lt;p>&lt;/p>&lt;/div><br />&lt;div
+                    type="person" n="1">&lt;div type="one-section">&lt;p
+                    n="1">&lt;rilmPerson>&lt;/rilmPerson>&lt;/p>&lt;/div>&lt;/div><br />&lt;div
+                    type="person" n="2"><br />&lt;div type="heading">&lt;p
+                    n="2">&lt;rilmPerson>&lt;/rilmPerson>&lt;/p>&lt;/div><br />&lt;div
+                    type="contents">&lt;list>&lt;/list>&lt;/div><br />&lt;div type="section"
+                    n="I">&lt;p n="I">&lt;/p>...&lt;/div><br />&lt;div type="section" n="II">&lt;p
+                    n="II">&lt;/p>...&lt;/div><br />&lt;div type="section" n="III">&lt;p
+                    n="III">&lt;/p>...&lt;/div><br />&lt;div type="section" n="IV">&lt;p
+                    n="IV">&lt;/p>...&lt;/div><br />&lt;div type="section" n="V">&lt;p
+                    n="V">&lt;/p>...&lt;/div><br />&lt;div type="section" n="VI">&lt;p
+                    n="VI">&lt;/p>...&lt;/div><br />&lt;div
+                    type="works">&lt;/div><br />&lt;div type="works">&lt;/div><br />&lt;div
+                    type="ography">&lt;/div><br />&lt;/div><br />&lt;div
+                    type="authors">&lt;/div></blockquote></li>
+            <li>For &lt;text type="person"> articles, the @heading div will contain a
+                &lt;rilmPerson> element; for all other articles that require one, the @heading div
+                will contain &lt;head> for the boldface headword and &lt;p> for the rest of the
+                text.</li>
+            <li>Body text:<ul>
+                    <li>Outside of an initial &lt;rilmPerson> for &lt;text type="person"> or &lt;div
+                        type="person">, the body text should only contain formatting tags such as
+                        &lt;hi>, &lt;q>, &lt;p>, and &lt;list>/&lt;item>.</li>
+                </ul></li>
+            <li>Figures:<ul>
+            <li>Figures in DMEH are not numbered. All figures, including those containing musical notation, should be set in a &lt;figure> element. The element will have an @xml:id, but not an @n attribute.</li>
+                <li>Captions will be set in &lt;p>.</li>
+                <li>Rename images with the same convention used for MGG. The first image in meh00001 would be meh00001-f1.</li>
+            </ul></li>
+            <li>Works lists and bibliographies:<ul>
+                    <li>Sections with the following headings should be &lt;div type="works">: OBRAS,
+                        ESCRITOS MUSICALES, OBRAS DIDÁCTICAS.</li>
+                <li>Sections with the following headings should be &lt;div type="ography">:
+                        BIBLIOGRAFÍA, DISCOGRAFÍA. </li>
+                    <li>&lt;div type="ography"> sections are presented in the source as in-line
+                        lists with each item separated by a semicolon. That semicolon and any other
+                        space between items should be deleted, so that there are no spaces between
+                        the final letter of one item and the first letter of the next. Each list
+                        should be presented on one line of code. </li>
+                    <li>The &lt;bibl> within each item should only contain &lt;author>, &lt;editor>,
+                        &lt;title>, &lt;title rend="quoted">, and &lt;date> (and if necessary
+                        &lt;hi>).</li>
+                    <li>Authors' names should only be tagged at the start of a &lt;bibl>. Otherwise
+                        leave names untagged.</li>
+                    <li>&lt;editor> should only be used for names that directly follow "ed." in
+                        lower case.</li>
+                    <li>Neither &lt;author> or &lt;editor> should have descendent tags. Do not use
+                        &lt;forename>, &lt;surname>, etc. within &lt;author> or &lt;editor>.</li>
+                    <li>&lt;title> should be used for all italicized titles in works lists and
+                        ographies.</li>
+                    <li>&lt;title rend="quoted"> should be used for all titles set in quotes in
+                        works lists and ographies.</li>
+                    <li>&lt;date> should be used for four-digit years within &lt;bibl> (but not
+                        within titles).  </li>
+                </ul></li>
+        </ol>
+    </body>
+</html>

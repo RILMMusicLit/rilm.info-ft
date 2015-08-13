@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Hollywood Songsters: Singers Who Act and Actors Who Sing</title>
+    </head>
+    <body>
+        <a>
+            <div>
+                <h4 id="gospel">Encyclopedia of American Gospel Music (eag)</h4>
+            </div>
+        </a>
+        <div class="r201501" title="Added, 1/2015">
+            <ol>
+                <li><b>General comments</b>:<ul>
+                        <li>This publication should be converted from the provided XML.</li>
+                        <li>Except for the front matter, each &lt;book-part> element in the source
+                            will correspond to one TEI file.</li>
+                        <li>All entries are &lt;text type="person">, and have &lt;div
+                            type="heading">, &lt;div type="subheading">, and usually several &lt;div
+                            type="ography">.</li>
+                        <li>Remove all &lt;sc> tags.</li>
+                        <li>All &lt;xref ref-type="page"> elements should be converted to the TEI
+                            element &lt;pb>: <blockquote>&lt;xref ref-type="page" id="page_443"
+                                /><br /><br /> &lt;pb n="443"/></blockquote></li>
+                        <li>Convert all &lt;italic> tags to &lt;hi rend="italic">.</li>
+                        <li>Ignore all &lt;alt-title> elements and their contents.</li>
+                        <li>Ignore all &lt;sec-meta> elements and their contents.</li>
+                        <li>Use <a href="../tei_rilm_instructions.html#american" target="_blank"
+                                >American rule</a> for single quotation marks.</li>
+                    </ul></li>
+                <li><b>Front matter</b> will include the title page, copyright page, dedication,
+                        <i>Authors' Note</i>, <i>Keys to Abbreviation</i>, and
+                        <i>Acknowledgments</i>. <ul>
+                        <li>The title page will correspond with the source elements
+                            &lt;book-title-group> and &lt;contrib-group>.</li>
+                        <li>The copyright page will correspond with the source &lt;publisher>,
+                            &lt;isbn>, &lt;pub-date>, &lt;permissions>, and &lt;imprint-meta>
+                            elements.</li>
+                        <li>The dedication page content will correspond with the &lt;notes
+                            notes-type="dedication"> of the source.</li>
+                        <li>The Authors' Note is tagged &lt;sec sec-type="fm-chapter"
+                            id="Authors-Note"> in the source. Use &lt;title> as &lt;head> and set
+                            the &lt;sig-block> as a &lt;docAuthor>.</li>
+                    </ul></li>
+                <li><b>Article</b> titles give the name in forename-surname order. <ul>
+                        <li>For the &lt;div type="heading">, tag the name as &lt;rilmPerson> and
+                            &lt;persName>. The part of the name after the last space can be tagged
+                            &lt;surname> and the others preceding it as &lt;forename>. <i>The names
+                                </i>"Cher"<i> and </i>"Sammy Davis Jr."<i> are the only
+                                exceptions.</i>
+                            <blockquote>&lt;div type="heading">&lt;rilmPerson
+                                xml:id="r1">&lt;persName>&lt;forename>June&lt;/forename>
+                                &lt;surname>Allyson&lt;/surname>&lt;/persName>&lt;/rilmPerson>&lt;/div>
+                            </blockquote></li>
+                        <li>The &lt;p> element immediately following the article title should be
+                            tagged &lt;div type="subheading"> containing a &lt;rilmPerson> with an
+                            @corresp attribute pointing to the xml:id of the &lt;rilmPerson> element
+                            above it. Tag the birth and death dates, and omit the parentheses and
+                            "b." and "d." If another name version is given, it should be set in a
+                            &lt;persName> element. <blockquote> &lt;p>(b. Ella Geisman, South Bronx,
+                                New York, October 7, 1917)&lt;/p></blockquote><blockquote>&lt;div
+                                type="subheading"><br />&lt;rilmPerson xml:id="r2" corresp="#r1">
+                                &lt;persName>&lt;forename>Ella&lt;/forename>
+                                &lt;forename>Jennings&lt;/forename>
+                                &lt;surname>Geisman&lt;/surname>&lt;/persName>
+                                <br />&lt;birth>&lt;placeName>South Bronx, New
+                                York&lt;/placeName>&lt;date when="1917-10-07"
+                                when-custom="1917">October 7, 1917&lt;/date>,
+                                &lt;/birth>&lt;/rilmPerson><br />&lt;/div></blockquote></li></ul></li>
+<li> There may be any number of &lt;div type="<b>ography</b>"> elements. They will correspond with
+                    &lt;sec> elements in the source. <ul><li>Keep source &lt;list> elements as &lt;list> but remove the attributes. </li>
+                        <li>&lt;list-item> elements will become TEI &lt;item>&lt;bibl> elements. </li>
+                        <li>Information can be tagged with &lt;title>, &lt;publisher> and &lt;date>
+                            or &lt;idno
+                                type="label">.<blockquote>&lt;item>&lt;bibl>&lt;title>International
+                                Showtime&lt;/title> (&lt;publisher>NBC&lt;/publisher>,
+                                &lt;date>1961—65&lt;/date>)&lt;/bibl>&lt;/item></blockquote><blockquote>&lt;item>&lt;bibl>&lt;title>The
+                                Bickersons Rematch&lt;/title> (&lt;publisher>Col&lt;/publisher>
+                                &lt;idno type="label"G-30523&lt;/idno>) w. Frances
+                                Langford&lt;/bibl>&lt;/item></blockquote></li></ul></li>
+
+
+            </ol>
+            <p>Please refer also to the provided xml samples.</p>
+        </div>
+    </body>
+</html>

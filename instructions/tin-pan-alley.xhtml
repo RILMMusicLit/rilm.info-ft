@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Tin Pan Alley</title>
+    </head>
+    <body>
+        <a>
+            <div>
+                <h4 id="tpa">Tin Pan Alley: An Encyclopedia of the Golden Age of American Song</h4>
+            </div>
+        </a>
+        <div class="r201506" title="Added, 6/2015">
+            <ol>
+                <li><b>General comments</b>:<ul>
+                        <li>This publication should be converted from the provided XML, artwork, and
+                            PDF.</li>
+                        <li>Except for the front matter, each &lt;sec> element in the source will
+                            correspond to one TEI file.</li>
+                        <li>All &lt;xref ref-type="page"> elements should be converted to the TEI
+                            element &lt;pb>: <blockquote>&lt;xref ref-type="page" id="page_453"
+                                /><br /><br /> &lt;pb n="453"/></blockquote></li>
+                        <li>Convert all &lt;italic> tags to &lt;title>.</li>
+                        <li>Ignore all &lt;alt-title> elements and their contents.</li>
+                        <li>American-type double-quotation marks are used. <ul>
+                                <li>Convert &amp;#x201C; and &amp;#x201D; to &lt;q> and &lt;/q>
+                                    tags; </li>
+                                <li>Use <a href="../tei_rilm_instructions.html#american"
+                                        target="_blank">American rule</a> for single quotation
+                                    marks.</li>
+                            </ul></li>
+                        <li>Besides quotation marks, convert all &amp;# codes to UTF-8 characters.
+                            No &amp;# encodings should remain in the TEI files.</li>
+                    </ul></li>
+                <li><b>Front matter</b> will include the title page, copyright page, dedication,
+                    frontispiece, and <i>Introduction</i>. <ul>
+                        <li>The title page will correspond with the source elements
+                            &lt;book-title-group> and &lt;contrib-group>.</li>
+                        <li>The copyright page will correspond with the source &lt;publisher>,
+                            &lt;isbn>, &lt;pub-date>, &lt;permissions>, and &lt;imprint-meta>
+                            elements.</li>
+                        <li>The dedication page content will correspond with the &lt;notes
+                            notes-type="dedication"> of the source.</li>
+                        <li>The frontispiece corresponds with &lt;sec id="S1"> of the source.</li>
+                        <li>The Introduction is tagged &lt;sec id="S2" sec-type="fm-chapter"> in the
+                            source. Use the first &lt;title> as the &lt;div type="heading"> and
+                            subsequent &lt;title> elements as &lt;head> for a new &lt;div
+                            type="section">.</li>
+                    </ul></li>
+                <li><b>Entries</b>
+                    <ul>
+                        <li>All entries will be &lt;text type="person"> except those in the list
+                            following: <table>
+                                <tr>
+                                    <td>Amateur Composers</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Andrews Sisters</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Animal Dances</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>ASCAP</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Ballroom Dances of the...</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Big Three</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Blues</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>BMI</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Boswell Sisters</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Brill Building</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Broadway Show and Revue Songs</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Cakewalk</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Cartoon Characters</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Vernon and Irene Castle</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Chappell and Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Charleston</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Charts</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Classical Music Appropriated</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Cole and Johnson Brothers</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Chappell and Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Comden and Green</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Composing a Pop Song</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Coon-Sanders Nighthawks</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Coon Songs</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Cut-In</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Demonstrator</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>De Sylva, Brown, and Henderson</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Disney Cartoon Songs</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Double Song</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Ethnic Songs</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Famous Music</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Film Music</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Fox-Trot</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Gaiety Building</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Gotham-Attucks Music Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>T. B. Harms Company/Harms, Inc.</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Hits</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Hit Songs</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Howley, Haviland and Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Jazz in the Tin Pan Alley Era</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Jitterbug</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Jobbers</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>King Oliver's Creole Jazz Band</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Latin-American Dances</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Lead Sheet</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Leeds Music Corp</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Melrose Brothers Music Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Mills Music, Inc</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Original Dixieland Jazz Band (ODJB)</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Original Memphis Five</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Pace and Handy Music Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Plugging</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Politics</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Product Songs</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Pseudonyms</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Publishing a Popular Song</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Radio</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Rag Song</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Ragtime</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Record Industry</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Jerome H. Remick and Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>The Richmond Organization (TRO)</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Robbins Music Corporation</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Santly-Joy, Inc</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Shapiro, Bernstein and Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Sheet Music</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Shimmy</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Ted Snyder Company/Waterson, Berlin and Snyder</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Song Folios</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Song Form</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Southern Music Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>John Stark and Son</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Television Musicals</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Triangle Music Publishing Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Van and Schenck</td>
+                                    <td>group</td>
+                                </tr>
+                                <tr>
+                                    <td>Jerry Vogel Music Company</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>War Songs</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>Warner/Chappell Music, Inc</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Weber and Fields Music Hall</td>
+                                    <td>topic</td>
+                                </tr>
+                                <tr>
+                                    <td>M. Witmark and Sons</td>
+                                    <td>institution</td>
+                                </tr>
+                                <tr>
+                                    <td>Ziegfeld Follies</td>
+                                    <td>topic</td>
+                                </tr>
+                            </table></li>
+                        <li>All entries will have &lt;div type="heading">, &lt;div type="body">. A
+                            few entries will have &lt;div type="works">.</li>
+                        <li>The content of the first &lt;title> element in the source will become
+                            the content of the &lt;div type="heading">. For the &lt;div
+                            type="heading">, tag the name as &lt;rilmPerson> and &lt;persName>; or
+                            &lt;term> ;or &lt;orgName>. The part of the personal name after the last
+                            space can be tagged &lt;surname> and the others preceding it as
+                                &lt;forename>:<blockquote>&lt;div type="heading">&lt;rilmPerson
+                                xml:id="r1">&lt;persName>&lt;forename>Franck&lt;/forename>
+                                &lt;forename>&lt;abbr>E.&lt;/abbr>&lt;/forename>
+                                &lt;surname>Churchill&lt;/surname>&lt;/persName>&lt;/rilmPerson>&lt;/div>
+                            </blockquote></li>
+                        <li>The &lt;p> element immediately following the article title is the start
+                            of the &lt;div type="body">. For person entries, tag the first sentence
+                            as a &lt;rilmPerson> element with an @corresp attribute pointing to the
+                            xml:id of the &lt;rilmPerson> element above it. It begins with
+                            occupation(s), and continues with birth and death infomation in
+                            parentheses. Omit the parentheses and "b." and "d."<blockquote>
+                                &lt;p>Composer (b. New York City, January 27, 1885; d. New York
+                                City, November 11, 1945). ...
+                                &lt;/p></blockquote><blockquote>&lt;div
+                                type="body"><br />&lt;p>&lt;rilmPerson xml:id="r2" corresp="#r1">
+                                &lt;occupation>Composer&lt;/occupation> &lt;birth>&lt;placeName>New
+                                York City&lt;/placeName>&lt;date when="1885-01-27"
+                                when-custom="1885">January 27, 1885&lt;/date>&lt;/birth>; &lt;death>
+                                &lt;placeName>New York City&lt;/placeName>&lt;date when="1945-11-11"
+                                when-custom="1945">November 11,
+                                1945&lt;/date>&lt;/death>&lt;/rilmPerson>. ...
+                                &lt;/p><br />&lt;/div></blockquote></li>
+                    </ul></li>
+                <li>
+                    <b>Cross-references</b> are indicated only by &lt;sc> tags in the source XML.
+                    Set the contents of &lt;sc> <i>and the preceding letter</i> in a &lt;ref>
+                    element, targeting the approriate article. Convert the contents of the &lt;sc>
+                    elements to lower case and omit the &lt;sc> tags.<blockquote>...the
+                        G&lt;sc>EORGE&lt;/sc> M. C&lt;sc>OHAN&lt;/sc>
+                        musicals...</blockquote><blockquote>...the &lt;ref target="#tpa0000?">George
+                        M. Cohan&lt;/ref> musicals...</blockquote></li>
+                <li><b>Back matter</b> includes a <b>Bibliography</b> and two <b>Indexes</b>. <ul>
+                        <li>Convert the Bibliography according to the Taylor and Francis
+                            crosswalk.</li>
+                        <li>Treat the Indexes as usual back-of-book indexes.</li>
+                    </ul></li>
+            </ol>
+            <p>Please refer also to the provided xml samples.</p>
+        </div>
+    </body>
+</html>

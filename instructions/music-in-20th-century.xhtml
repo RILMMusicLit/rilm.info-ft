@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Encyclopedia of Music in the 20th Century</title>
+    </head>
+    <body>
+        <a>
+            <div>
+                <h4 id="twentienth-century">Encyclopedia of Music in the 20th Century</h4>
+            </div>
+        </a>
+        <div class="r201506" title="Added, 6/2015">
+            <p><a href="#new6-30">rev'd 6/30</a></p>
+            <ol>
+                <li><b>General comments</b>:<ul>
+                        <li>This publication should be converted from the provided XML and PDF.</li>
+                        <li>American-style quotation marks are used throughout and are encoded as
+                            &amp;#x201C; and &amp;#x201D; in the source. Use "American rule" for
+                            single quotation marks.</li>
+                        <li>Convert all other "&amp;#" codes to Unicode characters. No "&amp;#"
+                            codes should remain in the TEI files. </li>
+                        <li>All &lt;xref ref-type="page"> elements should be converted to the TEI
+                            element &lt;pb>: <blockquote>&lt;xref ref-type="page" id="page_443"
+                                /><br /><br /> &lt;pb n="443"/></blockquote></li>
+                        <li>Convert all &lt;italic> tags to &lt;title>.</li>
+                        <li>Ignore all &lt;alt-title> elements and their contents.</li>
+                        <li>Except for the front matter, each &lt;book-part> element in the source
+                            will correspond to one TEI file; </li>
+                        <li>Each &lt;sec> element in the source will correspond to a &lt;div> in
+                            TEI, but they might be nested differently.</li>
+                        <li>See the <a href="#emt-articles">table below</a> for the value of @type
+                            in &lt;text> for the listed entries. All other entries (not on the list)
+                            will be &lt;text type="person">. All will have &lt;div type="heading">,
+                            &lt;div type="body">, &lt;div type="authors">, and &lt;div
+                            type="ography">.</li>
+                        <li>Many articles will have a &lt;div type="ref"> between the "authors" and
+                            "ography".</li>
+                    </ul></li>
+                <li><b>Front matter</b> will include the title page, copyright page, and
+                        <i>Introduction</i>. <ul>
+                        <li>The title page will correspond with the source elements
+                            &lt;book-title-group> and &lt;contrib-group>.</li>
+                        <li>The copyright page will correspond with the source &lt;publisher>,
+                            &lt;isbn>, &lt;pub-date>, &lt;permissions>, and &lt;imprint-meta>
+                            elements.</li>
+                        <li>The Introduction is tagged as &lt;book-part book-part-type="chapter"
+                            id="chapter1">.</li>
+                    </ul></li>
+                <li><b>Entries</b> correspond with &lt;book-part> elements with
+                    @book-part-type="chapter". <ul>
+                        <li>For the &lt;div type="heading">, use the contents of the source
+                            &lt;title>. </li>
+                        <li>In person entries, tag the name as &lt;rilmPerson> and &lt;persName> as
+                            usual. The part of the name after the last space can be tagged
+                            &lt;surname> and the others preceding it as
+                                &lt;forename>.<blockquote>&lt;title>Hans Werner
+                                Henze&lt;/title></blockquote><blockquote>&lt;div
+                                type="heading">&lt;p>&lt;rilmPerson
+                                xml:id="r1">&lt;persName>&lt;forename>Hans&lt;/forename>
+                                &lt;forename>Werner&lt;/forename>
+                                &lt;surname>Henze&lt;/surname>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div>
+                            </blockquote></li>
+                        <li>Entries begin with a Drop Cap in print, which is tagged &lt;bold> in the
+                            source XML. Omit the &lt;bold> tags around the first letter of the first
+                            &lt;p>.</li>
+                    </ul></li>
+                <li><b>In-line Cross-references</b> are indicated only by &lt;sc> tags in the source
+                    XML. Set these references as a &lt;ref> element, targeting the approriate
+                    article. Convert the contents of the &lt;sc> tags to lower case and omit the
+                    &lt;sc> tags.<blockquote>&lt;p>Henze wrote his first symphony in 1947, the piece
+                        showing the influence of the neoclassicists Paul H&lt;sc>INDEMITH&lt;/sc>
+                        and Igor S&lt;sc>TRAVINSKY&lt;/sc>.
+                        ..&lt;/p></blockquote><blockquote>&lt;p>Henze wrote his first symphony in
+                        1947, the piece showing the influence of the neoclassicists Paul &lt;ref
+                        target="#emt0000?">Hindemith&lt;/ref> and Igor &lt;ref
+                        target="#emt0000?">Stravinsky&lt;/ref>. ..&lt;/p></blockquote></li>
+                <li> The <b>author name</b> is given in a &lt;sig-block> element in the source XML.
+                    Convert to a &lt;div type="authors">.</li>
+                <li><b>See-also references</b> in the source follow the author name. They are tagged
+                    in a &lt;p> element that begins with <blockquote>&lt;p>S&lt;sc>EE ALSO&lt;/sc>:
+                    </blockquote>Each reference is in &lt;xref> tags in the source. Convert these to
+                    &lt;ref> tags in TEI</li>
+                <li>Most entries will have two &lt;sec> elements with &lt;title> values "<b>Further
+                        Reading</b>" and "<b>Suggested Listening</b>". Convert these to &lt;div
+                    type="ography"> elements. Convert these according to the <a
+                        href="http://rilm.info/ft/tei_rilm_instructions.html#tfbibl">Taylor &amp;
+                        Francis</a> crosswalk.<ul>
+                        <li>Convert source &lt;ref-list> elements to &lt;list>. </li>
+                        <li>Convert &lt;ref> elements to TEI &lt;item> and remove the attributes.
+                        </li>
+                    </ul><br/><a id="new6-30">Added 6/30:</a></li>
+                
+                <li>Mark up the entries in the <b>Biographical Digest</b> just as the
+                    entries from the encyclopedia. Person entries contain at least birth dates in
+                    parentheses following the name. Small caps denote cross references; convert the
+                    contents of &lt;sc> to lower case.<ul>
+                        <li>&lt;bio id="bio53"> &lt;p>&lt;bold>B&lt;sc>AND&lt;/sc>, The
+                            &lt;italic>Rock band&lt;/italic>&lt;/bold> Formed in Woodstock, New
+                            York, in 1967, the Band became one of the seminal groups of America in
+                            the 1970s. Using traditional FOLK tunes and new material, they created a
+                            unique sound. They recorded and played extensively with Bob
+                            D&lt;sc>YLAN&lt;/sc>. Their final concert in 1976 was recorded and
+                            filmed by Martin Scorsese and released as &lt;italic>The Last
+                            Waltz&lt;/italic>.&lt;/p> &lt;/bio><blockquote>&lt;div
+                                type="body">&lt;p>&lt;orgName>Band, The&lt;/orgName> &lt;term>Rock
+                                band&lt;/term> Formed in Woodstock, New York, in 1967, the Band
+                                became one of the seminal groups of America in the 1970s. Using
+                                traditional &lt;ref target="#emt0000?">FOLK&lt;/ref> tunes and new
+                                material, they created a unique sound. They recorded and played
+                                extensively with Bob &lt;ref target="#emt0000?">Dylan&lt;/ref>.
+                                Their final concert in 1976 was recorded and filmed by Martin
+                                Scorsese and released as &lt;title>The Last Waltz&lt;/title>.&lt;/p>
+                                &lt;/div> </blockquote></li>
+                        <li>&lt;bio id="bio699"> &lt;p>&lt;bold>O&lt;sc>ISTRAKH&lt;/sc>, Igor
+                            (1931&amp;#x2013;) &lt;italic>Violinist&lt;/italic>&lt;/bold> Born in
+                            Russia, Oistrakh studied with his father, David, at the Moscow
+                            Conservatory where from 1958 he also taught. A player with a phenomenal
+                            technique, his rather detached interpretations were best heard in works
+                            such as the B&lt;sc>ART&amp;#x00D3;K&lt;/sc> concertos, Violin Concerto
+                            No.2 in particular.&lt;/p> &lt;/bio><blockquote>&lt;div type="body">
+                                &lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Oistrakh&lt;/surname>,
+                                &lt;forename>Igor&lt;/forename>&lt;/persName> (&lt;birth>&lt;date
+                                when="1931" when-custom="1931">1931&lt;/date>&lt;/birth>–)
+                                &lt;occupation>Violinist&lt;/occupation>&lt;/rilmPerson> Born in
+                                Russia, Oistrakh studied with his father, David, at the Moscow
+                                Conservatory where from 1958 he also taught. A player with a
+                                phenomenal technique, his rather detached interpretations were best
+                                heard in works such as the &lt;ref
+                                target="#emt0000?">Bartók&lt;/ref> concertos, Violin Concerto No.2
+                                in particular.&lt;/p> &lt;/div> </blockquote></li>
+                    </ul></li>
+                <li>The <b>Glossary</b> section entries have references (indicated by small caps) both to articles in the
+                    encyclopedia section and to other glossary entries
+.<ul><li>&lt;def-item> &lt;term id="gid-054"> &lt;bold>L&lt;sc>IBRETTO&lt;/sc>&lt;/bold> &lt;/term>
+                            &lt;def> &lt;p>&amp;#x2014; the text written for an &lt;sc>OPERA&lt;/sc>
+                            or &lt;sc>MUSICAL&lt;/sc>.&lt;/p> &lt;/def>
+                                &lt;/def-item><blockquote>&lt;div
+                                type="body">&lt;p>&lt;term>Libretto&lt;/term> &#x2014; the text
+                                written for an &lt;ref target="#emt0000?">opera&lt;/ref> or &lt;ref
+                                target="#emt0000?">musical&lt;/ref>.&lt;/p> &lt;/div>
+                            </blockquote></li></ul></li>
+
+
+            </ol>
+            <p>Please refer also to the provided xml samples.</p>
+            <p><a id="emt-articles"></a><u>List of non-"Person" encyclopedia articles</u>:</p>
+            <table>
+                <tr>
+                    <td>Abba</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Africa</td>
+                    <td>Geo</td>
+                </tr>
+                <tr>
+                    <td>Aleatory Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Amplification</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Andean Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Andrews Sisters, The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Arrangers</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Authentic Performance</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Ballet and Modern Dance Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Beach Boys,The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Beaties,The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Bebop</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Bellamy Brothers,The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Bhangra Beat</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Big Band Jazz</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Blues</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Bock &amp; Harnick</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Boogie-woogie</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Brazil</td>
+                    <td>Geo</td>
+                </tr>
+                <tr>
+                    <td>British Beat Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Britpop</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Cabaret Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Cajun</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Caribbean, The</td>
+                    <td>Geo</td>
+                </tr>
+                <tr>
+                    <td>Carter Family, The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Chamber Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Charts,The</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Children's Songs</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Colombian Cumbia</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Cool Jazz</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Cream</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Cuba</td>
+                    <td>Geo</td>
+                </tr>
+                <tr>
+                    <td>Dance Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Darmstadt School,The</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Dire Straits</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Disco</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Doo-wop</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Eagles,The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Electronic Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>European Jazz</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Eurythmics,</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Everly Brothers,The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Expressionism in Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Festivals and Events</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Film Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Film Musicals</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Flamenco</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Folk Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Folk Rock</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Four Seasons,The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Free Jazz</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Funk</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Genesis</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Gospel</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Grunge</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Gypsy Music</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Hard Bop</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Heavy Metal</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Highlife</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Hillbilly Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Impressionism in Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Indian Film Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Indie Bands</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Ink Spots, The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Irakere</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Jazz</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Jazz Rock</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Jungle</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Kinks, The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Late Romanticisn</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Latin America</td>
+                    <td>Geo</td>
+                </tr>
+                <tr>
+                    <td>Latin Jazz</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Led Zeppelin</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Leiber &amp; Stoller</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Los Van Van</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Mexico</td>
+                    <td>geo</td>
+                </tr>
+                <tr>
+                    <td>Middle East,The</td>
+                    <td>Geo</td>
+                </tr>
+                <tr>
+                    <td>Mighty Clouds of Joy</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Minimalism</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Modal Jazz</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Modern Jazz Quartet</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Motown</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Musicals</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Nashville Sound/New Country</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>New Orleans Jazz/Dixieland</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>New Wave</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Nirvana</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Oasis</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Opera</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Operetta</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Orchestral Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Philadelphia Sound</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Pop Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Popular Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Producers</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Progressive Rock</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Punk Rock</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Queen</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Radio</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Ragga</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Rap</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Record Companies</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Record Production</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Recording Studios</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Reggae</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>REM.</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Rock Festivals</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Rock Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Rock'n'roll</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Rolling Stones,The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Salsa</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Santana</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Serialism</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Sex Pistols,The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Singer-songwriters</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Six, Les</td>
+                    <td>topic</td>
+                </tr>
+                <tr>
+                    <td>Soul</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>South African Jazz</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>South Asia</td>
+                    <td>Geo</td>
+                </tr>
+                <tr>
+                    <td>South East Asia</td>
+                    <td>Geo</td>
+                </tr>
+                <tr>
+                    <td>Surf Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Swing</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Take 6</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Tango</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Terry, Sonny &amp; Brownie McGhee</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Tin Pan Alley</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>U2</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Velvet Underground,The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Venezuela</td>
+                    <td>Geo</td>
+                </tr>
+                <tr>
+                    <td>Vocal and Choral Music</td>
+                    <td>Topic</td>
+                </tr>
+                <tr>
+                    <td>Weavers,The</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Who,The</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Group</td>
+                </tr>
+                <tr>
+                    <td>Zouk</td>
+                    <td>Topic</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

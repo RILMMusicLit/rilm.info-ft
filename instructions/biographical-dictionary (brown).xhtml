@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Biographical Dictionary of Musicians</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="biographical-brown">Biographical Dictionary of Musicians</h4>
+      </div>
+    </a>
+    <div class="r201506" title="Added 6/2015">
+      <ol>
+        <li>This publication should be converted from scanned print.</li>
+        <li><b>General comments:</b><ul>
+            <li>All entries are &lt;text type="person"></li>
+            <li>Entries may contain any or all of the following sections, always in this order: <ul>
+                <li>Name</li>
+                <li>Biographical facts and figures in chronological order</li>
+                <li>worklist</li>
+                <li>essay</li>
+                <li>bibliography</li>
+              </ul>All four should be sibling &lt;div> elements.</li>
+            <li>Worklists and bibliographies may be divided into sections, marked by words in italic
+              type.</li>
+            <li>Double quotes ( “  ” ) indicate titles throughout.</li>
+              
+          </ul></li>
+        <li><b>Front matter</b> will include the original title page (the one that carries the date
+          1886); Preface; and list of Abbreviations.</li>
+        <li><b>Entries</b> are headed with the name form "<b>SURNAME (Forename Forename
+            NameLink).</b>" For the &lt;title> element in the TEI header, omit the parentheses and
+          add a comma after the surname (SURNAME, Forename NameLink). For the &lt;body>, keep the
+          parentheses as in the original. See the example files.<ul>
+            <li>Wrap the entire contents of the first paragraph in &lt;rilmPerson> tags.</li>
+            <li>The name is followed immediately by nationality and occupation.</li>
+            <li>Birth and death information are indicated by "B." and "D." The death information
+              comes at the end of the paragraph. </li>
+          </ul></li>
+        <li><b>Worklists</b> are headed with the work "W<small>ORKS</small>." Omit the m-dash.  
+        <ul><li>Items in the worklist are inline (no line breaks between), and are delimited by period <i>or</i>
+              by semicolon.</li>
+            <li>Worklists may be divided into sections, according to category. These sections have
+              inline heads in italic type, such as <i>Operas:</i> or <i>Songs:</i></li></ul></li>
+        <li><b>See references</b> are in the form [<b>ZOTTI (Carlo).</b> See C<small>ROAL</small>
+          (George).] Handle according to the general instructions.</li>
+        <li><b>Back matter</b> includes Appendix of Additions and Corrections; and a Bibliographical
+          Subject-Index. Set both as lists. Make a new &lt;div> for each section in the bibliography
+          with a Bold heading.</li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

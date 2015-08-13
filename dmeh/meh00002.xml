@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Bahía Sonora</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Sociedad General de Autores y Editores</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<publisher>Instituto Complutense de Ciencias Musicales</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+						<title>Diccionario de la música española e hispanoamericana</title>
+						<editor>
+							<forename/>
+							<surname/>
+						</editor>
+						<imprint>
+							<publisher>Sociedad General de Autores y Editores</publisher>
+							<pubPlace>[Madrid]</pubPlace>
+							<date>1999</date>
+						</imprint>
+						<biblScope unit="vol">4</biblScope>
+						<biblScope unit="col" from="53">53</biblScope>
+						<biblScope unit="col" to="53">53</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<normalization>
+					<p>Some abbrevations have been replaced by unabbrevated terms.</p>
+				</normalization>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="14.1" notAfter="2014-03-04">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="es">Spanish</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-03-04" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="meh00002" type="group" xml:lang="es">
+		<body>
+			<div type="one-section" xml:id="d1">
+				<head>Bahía Sonora.</head>
+				<p xml:id="p1">Colombia. Grupo de música y danzas de las islas del archipiélago de San Andrés, en el mar Caribe. Es, tanto en música como en danza, el conjunto representativo del folclore de esta zona geográfica. Como grupo musical fue fundado hacia 1948 por Eusebio Martínez, quien tocaba la mandolina y reunió a otros músicos con instrumentos de la isla como la quijada o carraca, en este caso de caballo, y el <q>tinajo</q>, llamado así porque la base de su construcción es una tina redonda de latón puesta boca abajo. El grupo se conformó finalmente de la siguiente forma: Eusebio Martínez en la mandolina, José Williams en la guitarra, Lingberg Grinard en la quijada, Eduard Pomare en el tinajo y Roberto Baker, cantante principal e intérprete de las maracas. Interpretan, además de la música venida de otras islas del Caribe como boleros y sones cubanos, los aires propios del archipiélago, como el pasillo, el vals, la mazurka y el calipso. El canto se hace en el idioma nativo denominado patuá, que es básicamente un inglés acomodado a la dicción caribeña, aunque los habitantes hablan también el español. Hacia 1965 se empezaron a dar los primeros pasos para conformar un grupo de danzas de carácter folclórico que diera continuidad a los bailes que se estaban extinguiendo. Fue entonces cuando Alriana Steffens, anciano conocedor de los pasos y coreografías, empezó a entrenar parejas de jóvenes. La fundación de la Casa de la Cultura de San Andrés a finales de la década de 1960 dio un gran impulso tanto al grupo musical como al de danzas. Para 1972 la firma Polímeros de Colombia invitó a la Casa de la Cultura de San Andrés a un encuentro de tipo folclórico organizado por dicha firma. Fue entonces cuando Cecilia Francis, fundadora de la casa, organizó junto con Berdie May el grupo de danzas y, acompañados por los músicos, asistieron al encuentro, en el que fueron declarados fuera de concurso. Entre los bailarines se contaba a Leante Corpus, Eligio Corpus, Antonio Duffis, M. Corpus, Emerson Williams, Estela Pomare y otros. Desde entonces se denomina Bahía Sonora a la agrupación tanto de danza como de música. Los músicos y los bailarines han ido dando paso a las nuevas generaciones, pero funcionando como escuela transmisora de los conocimientos que permiten conservar, difundir y desarrollar los valores culturales del archipiélago, intrínsecos en el grupo. La canción más conocida en el interior del país se llama <hi rend="italic">Beautiful San Andrés</hi>, compuesta por Cecilia Francis en 1972 con ritmo de calipso. El grupo musical grabó en 1980 un disco con sus temas más conocidos, patrocinado por el gobierno de la isla. Las raíces culturales de ésta proceden de una mezcla europea y africana producto de los continuos procesos de conquista y colonización que sufrió el continente a partir del s. XV. En las Antillas, los habitantes aborígenes fueron prácticamente exterminados y reemplazados por esclavos negros africanos en la época de la conquista española. Luego vino la piratería y el colonizaje inglés durante los ss. XVIII y XIX. De ahí el schotis y el cuadril ejecutados por las danzas Bahía Sonora, bailes típicamente ingleses derivados de la contradanza, <hi rend="italic">country dance</hi>, baile rural en el cual las cuadrillas de hombres y mujeres se enfrentan, se aproximan unas veces y otras se entrecruzan. Con un esquema similar se explica la presencia del vals de origen alemán y la mazurka. Los elementos africanos están presentes tanto en la coreografía como en la musicalidad del grupo. Sin embargo, la mayor fuerza en el aspecto musical del archipiélago la constituyen los ritmos de raíz afrocaribeña como el calipso y el reggae, que han logrado trascendencia a nivel mundial.</p>
+			</div>
+			<div type="authors" xml:id="d14">
+				<docAuthor><persName><forename>IGNACIO</forename> <forename>CASTRO</forename> <surname>CONTRERAS</surname></persName></docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

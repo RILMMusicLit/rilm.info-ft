@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<?xml-stylesheet type="text/css" href="http://rilm.info/ft/tei.css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+    <link href="tei.css" rel="stylesheet" type="text/css" />
+<title>RILM Scanning and Conversion Instructions</title>
+</head>
+<body>
+        <h2>RILM Encoding Instructions and Samples</h2>
+        <h4>File Formats</h4>
+        <h5>Full Text</h5>
+        <p>Material that requires scanning should be be converted into uncompressed TIFF files.
+            Please use the following document for guidelines: <a target="_blank"
+                href="ImagingStandardsforDigitization.pdf"
+            >ImagingStandardsforDigitization.pdf</a></p>
+        <em>For journals:</em>
+        <p>TIFF files will be converted in TEI-XML and PDF format.</p>
+        <p class="r201403" title="changed 03/2014">PDFs should conform to PDF 1.6 with searchable
+            text and tagged page content. A full specification will be provided at a later date.</p><br />
+        <em>For encyclopedias<!--(<b>New as of 11/07/13</b>)-->:</em>
+        <p>TIFF files will be converted into TEI-XML format; roughly 65% of the encyclopedia pages
+            will also require conversion into METS/ALTO plus jpeg images generated at 300 ppi. A
+            full specification will be provided at a later date.</p>
+        <p>* Depending on the cost estimates, we may elect to have journals converted <em>only</em>
+            into PDF, and to have selected encyclopedias converted only into METS-ALTO.</p>
+        <h5>Headers and References</h5>
+        <p>Headers and references will be recorded in TEI files. Samples and instructions will be provided.</p><br />
+        <h4>TEI-XML documentation</h4>
+        <a href="tei_rilm_instructions.html">TEI-RILM encoding instructions for Encyclopedias and MGG</a><br />
+    <a href="">TEI-RILM encoding instructions for Journals headers and references</a><br/>
+    <a href="schema/mgg/tei_rilm_doc.html">TEI-RILM schema documentation (MGG)</a><br />
+    <a href="schema/collections/tei_rilm_doc.html">TEI-RILM schema documentation (Encyclopedias)</a><br />
+    <a href="schema/journals/tei_rilm_doc.html">TEI-RILM schema documentation (Journals)</a><br />
+    <a href="schema/working/tei_rilm_doc.html">TEI-RILM schema documentation (working)</a><br />
+        <!-- <h4>Examples we have converted</h4>
+        <h5>Full Text</h5>
+        <p><em>These are representative samples of the material we that would need to be converted
+                (and scanned). We only need examples in TEI. You are not required to provide samples
+                for METS, PDF, or ALTO files.</em></p>
+        <p><a href="Mello_Chico_kdg.xml">Mello_Chico_kdg.xml</a><br />(original: <a
+                href="Mello_Chico_neu.xml">Mello_Chico_neu.xml</a>)</p>
+        <p><a href="jazz_singer.xml">jazz_singer.xml</a><br />(original: <a href="jazz_singer.pdf"
+                >jazz_singer.pdf</a>)</p>
+        <p><a href="dupre_french_encyclopedia.xml">dupre_french_encyclopedia.xml</a><br />(orignal:
+                <a href="dupre_french_encyclopedia.pdf">dupre_french_encyclopedia</a>)</p>
+        <p><a href="stieger_excerpt.xml">stieger_excerpt.xml</a><br />(original: <a
+                href="stieger-240.pdf">stieger-240.pdf</a>)</p>
+        <h5>Metadata</h5>
+        <p><a href="dupre_french_encyclopedia_mets.xml">dupre_french_encyclopedia_mets.xml</a>
+            corresponds to dupre_french_encyclopedia.xml above.</p>
+        <br />-->
+        <h4 class="r201401">Schema for MGG</h4>
+    <a href="schema/mgg/tei_rilm.xsd">Schema in XSD format</a>     <br />
+    <a href="schema/mgg/tei_rilm_odd.xml">TEI ODD (Roma) customization file</a><br />
+    <h4 class="r201505">Schema for Encyclopedias</h4>
+    <a href="schema/collections/tei_rilm.xsd">Schema in XSD format</a><br/>
+    <a href="schema/collections/tei_rilm_odd.xml">TEI ODD customization file</a>
+    <h4 class="r201505">Schema for Journals headers and references</h4>
+    <a href="schema/journals/tei_rilm.xsd">Schema in XSD format</a><br/>
+    <a href="schema/journals/tei_rilm_odd.xml">TEI ODD customization</a>
+    <h4 class="r201411">Working copy of the schema</h4>
+    <a href="schema/working/tei_rilm.xsd">Schema in XSD format</a><br />
+    <a href="schema/working/tei_rilm_odd.xml">TEI ODD (Roma) customization file</a><br/>
+    <!-- <h4>Samples to be converted</h4>
+        <p>Samples are posted at <a
+                href="https://drive.google.com/folderview?id=0B3fFveK8s9NnXzVWMVdQTGxVQTg&amp;usp=sharing"
+                >this site</a>.</p>
+        <p>The <em>Dictionnaire de la musique</em> and <em>Jazzforschung/Jazz research</em> are to
+            be converted from TIFF images (these are a proxy for hard copies&#8212;we don't expect
+            to deliver any material in TIFF format).</p>
+        <p><em>Komponisten der Gegenwart</em> is to be converted from an existing XML format to our
+            TEI format. The provided file includes one whole volume of the encyclopedia. Please
+            convert one or two articles as samples.</p>
+        <p>For <em>Musik in Geschichte und Gegenwart</em>, we have provided an Adobe FrameMaker MIF
+            file that contains many articles; please choose another article to convert. (<b>New as
+                of 11/11/13</b>: We have also provided a PDF file with the same content as the MIF
+            file. Please convert an article from either the MIF or the PDF file.)</p>
+        <p>The file for Stieger's <em>Opernlexikon</em> is a PDF, but assume that this would need to
+            be scanned from a hard copy.</p>
+        <p>On <a
+                href="https://drive.google.com/folderview?id=0B3fFveK8s9NnX0lIM2dieVRxdDg&amp;usp=sharing"
+                >another site</a>, we have provided an excerpt from Riemann's <em>Musiklexikon</em>,
+            10th ed. as an example of a Gothic-type publication. Because we have not provided
+            instructions for it yet, we do not require this sample to be converted.</p>
+        <br />
+        <p>Here is a chart of page-count estimates:</p>
+        <table border="1">
+            <tr>
+                <th>Language</th>
+                <th>Total pages</th>
+                <th>Pages to be scanned</th>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>873,057</td>
+                <td>87,306</td>
+            </tr>
+            <tr>
+                <td>Non-English Roman</td>
+                <td>242,923</td>
+                <td>145,754</td>
+            </tr>
+            <tr>
+                <td>Gothic</td>
+                <td>26,900</td>
+                <td>21,520</td>
+            </tr>
+            <tr>
+                <td>Greek</td>
+                <td>572</td>
+                <td>572</td>
+            </tr>
+            <tr>
+                <td><b>Totals</b></td>
+                <td><b>1,143,452</b></td>
+                <td><b>255,152</b></td>
+            </tr>
+        </table>-->
+    </body>
+</html>

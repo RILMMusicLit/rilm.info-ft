@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>March Music Notes</title>
+  </head>
+  <body>
+    <a>
+      <div><h4 id="ban">March Music Notes</h4></div>
+    </a>
+    <div class="r201507" title="Added 7/2015">
+      <ol>
+        <li>This title is to be converted from scanned hard copy.</li>
+        <li><b>Front matter</b> includes a title page; copyright page; dedication; Content Outline;
+          Introduction; and list of Abbreviations.<ul>
+            <li>Mark up the Abbreviations list as a two-column table.</li>
+          </ul></li>
+        <li><b>Back matter</b> includes several <b>Appendices</b> and other sections: <ol type="A">
+            <li>Lists of <b>Contributors</b>. <ul>
+                <li>Set the individuals' list as a two-column &lt;table>; Place the names (before
+                  the "--") in the left column and tag as &lt;rilmPerson>; tag the content of the
+                  right column (after the "--") as &lt;placeName>.</li>
+                <li>Make a new &lt;div> at each geographic heading.</li>
+              </ul></li>
+            <li><b>March Popularity</b>. Make a series of &lt;lists></li>
+            <li><b>Key to Publishers</b>. Set as a &lt;list> and mark the parts as
+                follows:<br />[<b>AB Allentown Band</b>
+              <br />P.O. Box 1142 <br />Allentown, PA 18105
+                U.S.A.]<blockquote>&lt;item>&lt;abbr>AB&lt;/abbr> &lt;orgName>Allentown Band&lt;/orgName>, &lt;address>&lt;street>P.O. Box 1142&lt;/street>
+                &lt;placeName>&lt;settlement>Allentown&lt;/settlement>,
+                &lt;region>PA&lt;/region>&lt;/placeName> &lt;postCode>18105&lt;/postCode>&lt;/address>&lt;/item></blockquote></li>
+            <li><b>Key to Record Companies</b>. Tag the same as Key to Publishers.</li>
+            <li>
+              <b>Selected Bibliography</b>. Note that first author's names are [surname, forename]
+              and subsequent ones are [forename surname].<ul><li>For the <b>Periodicals</b> section, tag only the &lt;title> (underlined in print).</li>
+                <li>For the <b>Unpublished Materials</b> section, tag &lt;author> and
+                  &lt;title></li>
+                <li>Set the <b>Other</b> section as a simple &lt;list> with &lt;item> children. Do
+                  not tag &lt;bibl>.</li></ul></li>
+            <li>Arranger Index, Band Index and General Index. Insert &lt;keywords> into the
+              individual TEI entry files as per the general instructions.</li>
+            <li><b>Title Index</b>. Do not create a TEI file. The content will be found in the
+              individual entries.</li>
+            <li><b>Vita</b>. Tag as a series of &lt;p> elements.</li>
+          </ol></li>
+        <li><b>Entries</b> include a heading, subheading, body and works list.<ul>
+            <li>Use @rend="noMarker" for the &lt;birth> and &lt;death> elements and do not omit any
+              text.</li>
+            <li>Tag bold face type in the body text as &lt;title></li>
+            <li>Tag the work lists as &lt;div type="works"> and use &lt;list> and &lt;item> as usual.<ul>
+                <li>Include only the underlined title and what is in parentheses in the
+                  &lt;bibl>.</li>
+                <li>Tag what follows "Pub=" as &lt;publisher>&lt;abbr>; tag the year or years as
+                  &lt;date>.</li>
+                <li>Tag what follows "Rec=" as &lt;idno type="label">.</li>
+                <li>Tag what follows the recording number as &lt;orgName type="performing"></li>
+                <li>Enclose the descriptive paragraph in a &lt;note> element. If there is an author
+                  name or names in parentheses at the end of the note, tag each as
+                  &lt;persName>.</li>
+              </ul></li>
+          </ul></li>
+      </ol><p>Please refer to the sample files.</p>
+    </div>
+  </body>
+</html>

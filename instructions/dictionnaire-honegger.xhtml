@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Dictionnaire de la musique (Honegger)</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="BAA">Dictionnaire de la musique (Honegger)</h4>
+      </div>
+    </a>
+    <div class="r201506" title="Added, 6/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print</li>
+            <li>Articles will have &lt;div type="heading">, &lt;div type="body">, and one to three
+              &lt;div type="ography>. </li>
+            <li>French-style double-angle quotation marks ( « » ) are used.</li>
+            <li>In body text and worklists, italic type is used to indicate <i>titles</i>, so tag
+              with &lt;title> rather than &lt;hi>.</li>
+            <li>In bibliographies, titles are in Roman type. </li>
+          </ul></li>
+        <li><b>Front matter</b>:<ul>
+            <li><u>Vol. 1:</u> title page; copyright page; "Liste des collaborateurs" (tag as
+              &lt;list>); "Liste des abréviations" (tag as a &lt;table> with two columns);
+              "Préface"; "Bibliographie générale"; "Remarques" (set as body text, use bold in the
+              left column as heads).</li>
+            <li><u>Vol. 2</u>: only title page; copyright page; and "Liste des abréviations"</li>
+          </ul></li>
+        <li>Initial paragraphs for entries on <b>single persons</b> are formatted this way:
+            [<b>SURNAME, Forename</b> (alt names), * place date, † place date, occupation(s)
+          nationality.] Often, occupation and nationality are abbreviated. Dates are in DD.MM.YYYY
+          format. Omit the asterisk and dagger as usual.<ul>
+            <li>[<b>ABBIATI, Franco,</b> *Verdello (Bergame) 14.9.1898, † Bergame 22.1.1981,
+              critique musical italien.]<blockquote>&lt;div type="heading">
+                <br />&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>ABBIATI&lt;/surname>,
+                &lt;forename>Franco&lt;/forename>&lt;/persName>, &lt;birth>&lt;placeName>Verdello
+                (Bergame)&lt;/placeName> &lt;date when="1898-09-14"
+                when-custom="1898">14.9.1898&lt;/date>&lt;/birth>,
+                &lt;death>&lt;placeName>Bergame&lt;/placeName> &lt;date when="1981-01-22"
+                when-custom="1981">22.1.1981&lt;/date>&lt;/death>, &lt;occupation>critique
+                musical&lt;/occupation>
+                &lt;nationality>italien&lt;/nationality>&lt;/rilmPerson>&lt;/p>&lt;/div></blockquote>
+            </li>
+            <li>Birth information might be indicated by "né" but is rare (this is the only instance
+              I've seen so far): [<b>ABELL, John,</b> né dans l’Aberdeenshire 1653 (et non à
+              Londres), † Cambridge apr. 1916, comp., chanteur et luthiste
+                écossais.]<blockquote>&lt;div type="heading">
+                <br />&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>ABELL,
+                &lt;forename>John&lt;/forename>&lt;/persName>, &lt;birth>né dans
+                &lt;placeName>l’Aberdeenshire&lt;/placeName> &lt;date when="1653"
+                when-custom="1653">1653&lt;/date> (et non à Londres)&lt;/birth>,
+                &lt;death>&lt;placeName>Cambridge&lt;/placeName> &lt;date when="1916-04"
+                when-custom="1916">apr. 1916&lt;/date>, &lt;occupation>comp.&lt;/occupation>,
+                &lt;occupation>chanteur&lt;/occupation> et &lt;occupation>luthiste&lt;/occupation>
+                &lt;nationality>écossais&lt;/nationality>.</blockquote><i>Note: </i>"all."<i> is a
+                nationality.</i></li>
+          </ul>
+        </li>
+        <li><b>Family</b> entries will not have an asterisk or dagger or "né" in the first sentence.
+          Individual persons' forenames are in bold type in print, normal case, and numbered.
+          Enclose each personal name in a &lt;rilmPerson> element.</li>
+        <li><b>Worklists</b> are headed "Rééditions" or "Œvres"; items separated by semicolons. Put
+          italics in &lt;title>, not &lt;hi>. <ul><li>Many worklists come in the middle of the body. In such case, end the &lt;div type="body">, start
+              and close the &lt;div type="works">, then open another &lt;div type="body">.</li></ul></li>
+        <li><b>Bibliographies</b> are headed "Bibliographie". <ul>
+            <li>Individual items are separated by semicolons in the print. Parts of the bibl are
+              separated by commas.</li>
+            <li>Bold face type marks sections; the bold text should be used for the &lt;head>
+              element of each section.</li>
+            <li>Author names in print are typest in small caps, first initial-surname. </li>
+            <li>Titles are in normal case, Roman (not italic!). </li>
+            <li>Article titles are followed by ", <i>in</i>". Periodical titles are followed by vol,
+              date.</li>
+            <li>Omit the dash after head text, the semicolons between items, and the final
+              period.</li>
+          </ul>[ Bibliographie - F. G. R<small>ENDALL</small>, F.W. G., 1858-1945, in Galpin Soc.
+          Journal I, 1948 ; S. G<small>ODMAN</small>, F.W. G., Music Maker, <i>in</i> Monthly
+          Musical Record LXXXIV, mars-avril 1954; du meme, Fr.W. G., <i>in</i> Galpin Soc. Journal
+          XII, 1959.]<blockquote>&lt;div
+            type="ography">&lt;head>Bibliographie&lt;/head><br />&lt;list><br />&lt;item>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>F.&lt;/abbr>&lt;/forename>
+            &lt;forename>&lt;abbr>G.&lt;/abbr>&lt;/forename>
+            &lt;surname>Rendall&lt;/surname>&lt;/author>, &lt;title>F.W. G., 1858-1945&lt;/title>,
+            in &lt;title type="periodical">Galpin Soc. Journal&lt;/title> &lt;biblScope
+            unit="vol">I&lt;/biblScope>, &lt;date>1948&lt;/date>&lt;/bibl> &lt;/item>
+            <br />&lt;item>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>S.&lt;/abbr>&lt;/forename>
+            &lt;surname>Godman&lt;/surname>&lt;/author>, &lt;title>F.W. G., Music Maker&lt;/title>,
+            in &lt;title type="periodical">Monthly Musical Record&lt;/title> &lt;biblScope
+            unit="vol">LXXXIV&lt;/biblScope>, &lt;date>mars-avril 1954&lt;/date>&lt;/bibl>
+            &lt;/item> <br />&lt;item>&lt;bibl>&lt;author>du meme&lt;/author>, &lt;title>Fr.W.
+            G&lt;/title>., in &lt;title type="periodical">Galpin Soc. Journal&lt;/title>
+            &lt;biblScope unit="vol">XII&lt;/biblScope>,
+            &lt;date>1959&lt;/date>&lt;/bibl>&lt;/item><br/>&lt;/list><br/>&lt;/div></blockquote></li>
+        <li><b>See references</b> are in the form [<b>SURNAME</b>, voir T<small>ARGET</small>.]"</li>
+        <li><b>Back matter</b> comprises tables of illustrations at the back of each volume. Set
+          each as a &lt;table> with three columns.</li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

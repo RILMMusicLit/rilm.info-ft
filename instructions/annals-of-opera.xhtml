@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Annals of Opera</title>
+  </head>
+  <body>
+    <a>
+      <div>Annals of Opera</div>
+    </a>
+    <div class="r201506" title="Added, 6/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print.</li>
+            <li>Each article is dedicated to a single musical work. </li>
+            <li>Articles are arranged chronologically by year. </li>
+            <li>Each article lists performances of the work in paragraph form or list form, or
+              both.</li>
+          </ul></li>
+        <li><b>Front matter</b> includes a title page; copyright page; dedication page; Preface;
+          Abbreviations; Introduction; and epithet.<ul>
+            <li> Set the Abbreviations list and Principal Theatres list as two-column tables.</li>
+          </ul></li>
+        <li><b>Entries</b> are arranged in chronological order by year. The following information is
+          given in the <i>first three lines</i> of type: <ol>
+            <li>Composer surname in small caps, colon, <i>work title</i> in Italic type</li>
+            <li>Date of premiere in italic type, period, city (and venue) of the premiere</li>
+            <li>Text author name, period, structure of the work</li>
+          </ol>Various informations follow, depending on the entry. Treat the first line as a
+          &lt;div type="heading">. Tag the lines as<ol>
+            <li>&lt;rilmPerson> and &lt;title></li>
+            <li>&lt;rilmPerformance type="ur"></li>
+            <li>another &lt;rilmPerson></li>
+          </ol></li>
+        <li><b>Performances</b> may appear in a list or in a paragraph. The example files show both
+          styles of presentation. For items in a list, tag as a &lt;list> with each &lt;item>
+          containing a &lt;rilmPerformance>. </li>
+        <li>The <b>Back Matter</b> comprises four indexes: (1) Operas (meaning "titles"); 2.
+          Composers; 3. Librettists; 4. General. <ul>
+            <li>Tag the Index of Operas as a &lt;list></li>
+            <li>For the indexes of Composers and Librettists, add the composer and librettist into
+              the TEI header of the appropriate entry as shown in the example files. Add an @corresp
+              attribute to link the name with the form in the &lt;div type="heading">.</li>
+            <li>Treat the General index as per the general instructions.</li>
+          </ul></li>
+      </ol>
+    </div>
+  </body>
+</html>

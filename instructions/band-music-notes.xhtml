@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Band Music Notes</title>
+  </head>
+  <body>
+    <a>
+      <div><h4 id="ban">Band Music Notes</h4></div>
+    </a>
+    <div class="r201507" title="Added 7/2015">
+      <ol>
+        <li><b>Front matter</b> includes a title page; copyright page; Foreword; and lists of Abbreviations.<ul>
+            <li>The "Sample Abbreviations" explains the layout of each item in the works list of
+              each entry.</li>
+          </ul></li>
+        <li><b>Back matter</b> includes five <b>Appendices</b>: <ol>
+            <li>Lists of <b>Contributors</b>. <ul>
+                <li>Set the individuals' list as a two-column &lt;table>; Tag the names in the left
+                  column as &lt;rilmPerson>; tag the content of the right column as &lt;placeName>
+                  if there is a comma and no parentheses, and as &lt;orgName> if there is no comma
+                  OR there are parentheses.</li>
+                <li>Tag the Organizations list as a &lt;list>.</li>
+              </ul></li>
+            <li><b>Key to Publishers</b>. Set as a &lt;list> and mark the parts as
+                follows:<br />[<b>ACA American Composers Alliance,</b> 170 W. 74th St., New York,
+                NY]<blockquote>&lt;item>&lt;abbr>ACA&lt;/abbr> &lt;orgName>American Composers
+                Alliance&lt;/orgName>, &lt;address>&lt;street>170 W. 74th St.,&lt;/street>
+                &lt;placeName>&lt;settlement>New York&lt;/settlement>,
+                &lt;region>NY&lt;/region>&lt;/placeName>&lt;/address>&lt;/item></blockquote></li>
+            <li><b>Key to Record Companies</b>. Tag the same as Key to Publishers.</li>
+            <li><b>List of Titles</b>. Do not create a TEI file. The content will be found in the
+              individual entries.</li>
+            <li><b>Vita</b>. Tag as a series of &lt;p> elements.</li>
+          </ol></li>
+        <li><b>Entries</b> include a heading, subheading, body and works list.<ul>
+            <li>Use @rend="noMarker" for the &lt;birth> and &lt;death> elements and do not omit any
+              text.</li>
+            <li>The work lists are the main part of each entry. Mark up as a &lt;div type="works">
+              and use &lt;list> and &lt;item> as usual.<ul>
+                <li>Include only the italic title and what is in parentheses in the &lt;bibl>.</li>
+                <li>Tag what follows "Pub=" as &lt;publisher>&lt;abbr>; tag the year or years as
+                  &lt;date>.</li>
+                <li>Tag what follows "Rec=" as &lt;idno type="label">.</li>
+                <li>Tag what follows the recording number as &lt;orgName type="performing"></li>
+                <li>Enclose the following paragraph in a &lt;note> element. If there is an author
+                  name in parentheses at the end of the note, tag as &lt;persName>, and
+                  &lt;affiliation>.</li>
+              </ul></li>
+          </ul></li>
+      </ol><p>Please refer to the sample files.</p>
+    </div>
+  </body>
+</html>

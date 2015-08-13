@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Biographical Dictionary of Afro-American and African Musicians</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="BAA">Biographical Dictionary of Afro-American and African Musicians</h4>
+      </div>
+    </a>
+    <div class="r201505" title="Added, 5/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print</li>
+            <li>Articles will have &lt;div type="body">, and one or two &lt;div type="ography>. </li>
+            <li>American-style double quotation marks are used.</li>
+            <li>Italic type is used to indicate <i>titles</i>, so tag with &lt;title> rather than
+              &lt;hi>.</li>
+          </ul></li>
+        <li><b>Front matter</b> includes the Title page, copyright page, Contents, Preface, Guide to
+          Use, and List of Abbreviations.<ul>
+            <li>Set the List of Abbreviations as a &lt;table>.</li>
+          </ul></li>
+        <li><b>Person </b> give the personal name given in <i>surname, forename</i> order, in all
+          bold, all-capitals and ending with a period. Next, the person's occupation(s) is (are)
+          given followed by birth and death date information, as available, in parentheses. Tag up
+          to the first period of the first &lt;p> as a &lt;rilmPerson> element.<ul>
+            <li>[<b>ADDERLEY, NATHANIEL (“NAT”).</b> Jazz cornetist/Trumpeter (b. 25 November 1931
+              in Tampa, Florida).]</li>
+          </ul><blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>ADDERLEY&lt;/surname>,
+            &lt;forename>NATHANIEL&lt;/forename> (“&lt;forename
+            type="alt">NAT&lt;/forename>”)&lt;/persName>. &lt;occupation>Jazz
+            cornetist/Trumpeter&lt;/occupation>, (&lt;birth>&lt;date when="1931-11-25"
+            when-custom="1931">25 November 1931/date> in &lt;placeName>Tampa,
+            Florida&lt;/placeName>)&lt;/rilmPerson>. ...&lt;/p></blockquote></li>
+        <li><b>Bibliographies</b> are headed by the abbreviation "BIBL".  <ul>
+            <li>Individual items in the bibliographies are delimited by periods: [BIBL: Charles
+              Battle, <i>Negroes on the Island of Rhode Island</i> (Newport, Rhode Island, 1932).
+              Howard Brooks, <i>The Negro in Newport</i> (Newport, 1946).]<blockquote>&lt;div
+                type="ography"><br />&lt;head>BIBL:&lt;/head>
+                <br />&lt;list><br />&lt;item>&lt;bibl>&lt;author>&lt;forename>Charles&lt;/forename>
+                &lt;surname>Battle&lt;/surname>&lt;/author>, &lt;title>Negroes on the Island of
+                Rhode Island&lt;/title> (&lt;pubPlace>Newport, Rhode Island&lt;/pubPlace>,
+                &lt;date>1932&lt;/date>).&lt;/bibl>&lt;/item>
+                <br /><br />&lt;item>&lt;bibl>&lt;author>&lt;forename>Howard&lt;/forename>
+                &lt;surname>Brooks&lt;/surname>&lt;/author>, &lt;title>The Negro in
+                Newport&lt;/title> (&lt;pubPlace>Newport&lt;/pubPlace>,
+                &lt;date>1946&lt;/date>).&lt;/bibl>&lt;/item><br />&lt;/list><br />&lt;/div></blockquote></li>
+            <li>Items that are abbreviated are keyed to the list of abbreviations at the back of the
+              book. I have created a text file "BAA-bibl-replace.txt", placed in Google Docs, that
+              lists the abbreviations and their full versions. Please <i>replace</i> the
+              abbreviations in the bibliographies with a &lt;bibl> element containing the full version from the list: <br /> [BIBL: BPIM 4 (July
+              1976). SouRBM.]<blockquote>&lt;div type="ography"><br />&lt;head>BIBL:&lt;/head>
+                <br />&lt;list><br />&lt;item>&lt;bibl>&lt;title type="periodical">The Black
+                Perspective in Music&lt;/title> &lt;biblScope unit="issue">4&lt;/biblScope>
+                (&lt;date>July 1976&lt;/date>)&lt;/bibl>&lt;/item>
+                <br />&lt;item>&lt;bibl>&lt;editor>&lt;forename>Eileen&lt;/forename>
+                &lt;surname>Southern&lt;/surname>&lt;/editor>, ed., &lt;title>Readings in Black
+                American Music&lt;/title> (&lt;pubPlace>New York&lt;/pubPlace>: &lt;publisher>W. W.
+                Norton&lt;/publisher>,
+                &lt;date>1971&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;/list><br />&lt;/div></blockquote></li>
+          </ul></li>
+        <li><b>Discographies</b> are headed "DISC" in print. They should be treated in the same way
+          as bibliographies, that is, abbreviations should be expanded. The same table of
+          abbreviations applies.</li>
+        <li><b>Cross references</b> within articles are marked by asterisks. The text before the
+          asterisk is the title of the target entry.</li>
+        <li><b>See references</b> are in the form [<b>NAME</b>, optional other text. See
+          <b>NAME</b>]"</li>
+        <li><b>Back matter</b> includes several Appendices in the form of lists, a general
+          Bibliography, and an Index. Set all as &lt;list>s except the index, which should be
+          treated like other back-of-book indexes.</li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

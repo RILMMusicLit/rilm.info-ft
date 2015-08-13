@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Historical Dictionary of the Music and Musicians of Finland</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="FIN">Historical Dictionary of the Music and Musicians of Finland</h4>
+      </div>
+    </a>
+    <div class="r201505" title="Added, 5/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print</li>
+            <li>Entries will have &lt;div type="body"> and one &lt;div type="ography>. </li>
+            <li>American-style double quotation marks are used.</li>
+            <li>Italic type is used to indicate <i>titles</i>, so tag with &lt;title> rather than
+              &lt;hi>.</li>
+          </ul></li>
+        <li><b>Front matter</b> includes the Title page, copyright page, <i>Contents</i>,
+            <i>Acknowledgements</i>, <i>Introduction</i>, <i>Key to Finnish Pronunciation</i>, and
+            <i>Key to Music Festivals</i>.</li>
+        <li><b>Person </b> entries give <ol>
+            <li>the personal name given in <b>surname, forename</b> order, in all bold,
+              all-capitals</li>
+            <li>the person's birth and death date and place information, as available, in
+              parentheses</li>
+            <li>occupation</li>
+          </ol>Tag up to and including the occupation in a &lt;rilmPerson> element (use the <a
+            href="#occupations">list of occupations here</a> to match):<br /> [<b>ACKTE, AINO</b>
+          (Apr. 23, 1876, Helsinki-Aug. 8, 1944, Nummela), a soprano, one of the most celebrated
+          opera stars of her time, a pioneer of the Finnish opera, and voice teacher, daughter of
+          opera singers Emmy and Lorenz Achte, sister of alto opera singer Irma Achte Tervani. ...]
+            <blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>ACKTE&lt;/surname>,
+            &lt;forename>AINO&lt;/forename>&lt;/persName> (&lt;birth>&lt;date when="1876-04-23"
+            when-custom="1876">Apr. 23, 1876&lt;/date>,
+            &lt;placeName>Helsinki&lt;/placeName>&lt;/birth>–&lt;death>&lt;date when="1944-08-08"
+            when-custrom="1944">Aug. 8, 1944&lt;/date>,
+            &lt;placeName>Nummela&lt;/placeName>&lt;/death>), a
+            &lt;occupation>soprano&lt;/occupation>&lt;/rilmPerson>, one of the most celebrated opera
+            stars of her time, a pioneer of the Finnish opera, and voice teacher, daughter of opera
+            singers Emmy and Lorenz Achte, sister of alto opera singer Irma Achte Tervani.
+            ...&lt;/p></blockquote></li>
+        <li>Topic Articles have headings in bold, all-caps, with no internal comma: [<b>JOENSUU SONG
+            FESTIVAL</b>]. <ul>
+            <li>Some topic headings have translations of a term in parentheses. [<b>JOIKU</b>
+                (<b>JOIK</b> in English, <b>JUOIGO</b> in German), ..] In such cases, tag each of
+              the bold, all-cap words as &lt;term>: <blockquote>&lt;p>&lt;term>JOIKU&lt;/term>
+                (&lt;term>JOIK&lt;/term> in English, &lt;term>JUOIGO&lt;/term> in German),
+                ...&lt;/p></blockquote></li>
+            <li>Terms or institution names in Finish are followed by an English translation in
+              non-bold, normal case, in parentheses: <br />[<b>AKATEEMINEN LAULU</b> (Academic
+              Song)] <br />[<b>AKATEEMINEN MUSIIKKISEURA</b> (Academic Music Society)]<br />These
+              may be institution names, titles, or events, so do not tag them as &lt;term>.</li>
+          </ul></li>
+        
+        <li><b>Bibliographies</b> are headed in print with the word "Bibliography" in italics. Each
+          item is separated with a line break and hanging indent. <ul>
+            <li>The first author name is in surname-forename order. If there are additional authors,
+              they are in forename-surname order.</li>
+            <li>Titles are in italic type; Article titles are in quotation marks.</li>
+            <li>Translations of Finnish titles are given in square brackets.</li>
+          </ul>[ Heiniö, Mikko, Pekka Jalkanen, Seija Lappalainen, and Erkki Salmenhaara. “Sarmanto,
+          Heikki.” In <i>Suomalaisia säveltäjiä</i> [Finnish Composers]. Helsinki: Otava,
+          1994.<br /> Salminen, Anja. “Swept by Leino's Poems and Sarmanto's Music (Aina Swan
+          Cutler).” <i>Suomen silta</i> [Suomi Bridge] (6/1995): 27–28.<br /> Suvanto, Antti.
+            <i>Heikki Sarmanto</i>. Helsinki: Finnish Music Information Centre,
+            1989.]<blockquote>&lt;item>&lt;bibl>&lt;author>&lt;surname>Heiniö&lt;/surname>,
+            &lt;forename>Mikko&lt;/forename>&lt;/author>,
+            &lt;author>&lt;forename>Pekka&lt;/forename>
+            &lt;surname>Jalkanen&lt;/surname>&lt;/author>,
+            &lt;author>&lt;forename>Seija&lt;/forename>
+            &lt;surname>Lappalainen&lt;/surname>&lt;/author>, and
+            &lt;author>&lt;forename>Erkki&lt;/forename>
+            &lt;surname>Salmenhaara&lt;/surname>&lt;/author>. &lt;title type="article">Sarmanto,
+            Heikki.&lt;/title> In &lt;title>Suomalaisia säveltäjiä&lt;/title> [&lt;title
+            type="translated">Finnish Composers&lt;/title>]. &lt;pubPlace>Helsinki&lt;/pubPlace>:
+            &lt;publisher>Otava&lt;/publisher>, &lt;date>1994&lt;/date>.
+            <br />&lt;author>&lt;surname>Salminen&lt;/surname>,
+            &lt;forename>Anja&lt;/forename>&lt;/author>. &lt;title type="article">Swept by Leino's
+            Poems and Sarmanto's Music (Aina Swan Cutler).” &lt;title type="periodical">Suomen
+            silta&lt;/title> [&lt;title type="translated">Suomi Bridge&lt;/title>] (&lt;biblScope
+            unit="issue">6&lt;/biblScope>/&lt;date>1995&lt;/date>): &lt;biblScope
+            unit="pp">27–28&lt;/biblScope>. <br />&lt;author>&lt;surname>Suvanto&lt;/surname>,
+            &lt;forename>Antti&lt;/forename>&lt;/author>. &lt;title>Heikki Sarmanto&lt;/title>.
+            &lt;pubPlace>Helsinki&lt;/pubPlace>: &lt;publisher>Finnish Music Information
+            Centre&lt;/publisher>, &lt;date>1989&lt;/date>.</blockquote></li>
+        <li><b>Cross references</b> within articles are always in parentheses, and the target term
+          is in all-capitals. [ (see TURKU MUSICAL SOCIETY) ] More than one reference may occur
+          within one set of parentheses: [ (see DOMINICAN MONASTERIES, SAINT OLAF’S MONASTERY )]  If
+          the targets are persons, there will be a semicolon delimiting them: [ (see LITHANDER,
+          CARL; LITHANDER, FREDRIK) ].</li>
+        <li><b>Back matter</b> includes<ul>
+            <li> Appendices: A. <i>Where is Finland?</i>  B. <i>Chronology of Finnish History.</i>
+              C. <i>Chronology of Finnish Music History</i>. Set the chronologies as
+              &lt;list>s.</li>
+            <li><i>Selected Bibliography</i>.</li>
+            <li><i>Index</i>. Handle according to the general guidelines.</li>
+            <li><i>About the Authors</i></li>
+          </ul></li>
+      </ol>
+      <p><b>Please refer to example files</b>.</p>
+      <p><a id="occupations"></a>List of occupations in English:</p>
+      <ul>
+        <li>accompanist</li>
+        <li>antiquary</li>
+        <li>author</li>
+        <li>band-master</li>
+        <li>baritone</li>
+        <li>bass</li>
+        <li>bass-baritone</li>
+        <li>bassoonist</li>
+        <li>bishop</li>
+        <li>capellmeister</li>
+        <li>cellist</li>
+        <li>clarinetist</li>
+        <li>collector</li>
+        <li>composer</li>
+        <li>contralto</li>
+        <li>contralti</li>
+        <li>critic</li>
+        <li>director</li>
+        <li>ecclesiastic</li>
+        <li>educator</li>
+        <li>engraver</li>
+        <li>flutist</li>
+        <li>harpist</li>
+        <li>inventor</li>
+        <li>journalist</li>
+        <li>kantele player</li>
+        <li>manager</li>
+        <li>mezzo-soprano</li>
+        <li>musician</li>
+        <li>organ builder</li>
+        <li>organ-builder</li>
+        <li>organist</li>
+        <li>pastor</li>
+        <li>performer</li>
+        <li>pianist</li>
+        <li>piano-forte player</li>
+        <li>pianoforte player</li>
+        <li>priest</li>
+        <li>printer</li>
+        <li>professor</li>
+        <li>publisher</li>
+        <li>singer</li>
+        <li>teacher</li>
+        <li>tenor</li>
+        <li>type-founder</li>
+        <li>violin-player</li>
+        <li>violin-maker</li>
+        <li>violinist</li>
+        <li>vocalist</li>
+        <li>voice teacher</li>
+        <li>writer</li>
+      </ul><p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

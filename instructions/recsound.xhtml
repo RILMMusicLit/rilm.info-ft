@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Encyclopedia of Recorded Sound</title>
+    </head>
+    <body>
+        <div class="r201501" title="Added, 01/2015"> <a id="recsound"></a><h4>Encyclopedia of Recorded Sound
+            (ers)</h4> <ol>
+                <li>This publication should be converted from XML.</li>
+                <li>All articles have at least two sections: &lt;div type="heading"> and &lt;div type="body">.
+                    Some will have a third &lt;div type="ref"> (see below).</li>
+                <li>The titles of articles appear in two places: (1) above the article itself, and (2) in the
+                    Index followed by page references tagged &lt;bold>. The following markers can appear in either
+                    place. If the title of an article ends with dates in parentheses, it should have &lt;text
+                    type="person">; If the title of an article ends with the word "LABEL" in parentheses, it
+                    should have &lt;text type="institution">; If the title of an article ends with "CO.", "LTD.",
+                    "CORP." (possible before a parenthetical word), it should have &lt;text type="institution">;
+                    If the title of an article ends with the word "BAND" or "music group" in parentheses, it
+                    should have &lt;text type="group">; All others should have &lt;text type="generic">.</li>
+                <li>See references: see <a href="../tei_rilm_instructions.html#see-refs" target="_blank">above</a></li>
+                <li>See also references: <ul>
+                    <li>within entries: Paragraphs in boldface that begin "See also" should be set as a &lt;list>
+                        within a &lt;div type="ref">. Each &lt;item> points to another article in this publication,
+                        and is separated by a semi-colon, and each &lt;item> will have a &lt;ref> element with
+                        @target pointing to the appropriate article. It will look like
+                        this:<blockquote>&lt;item>&lt;ref target="ers00035">Cassette
+                            Deck&lt;/ref>&lt;/item></blockquote></li>
+                    <li>in the index: no special treatment</li>
+                </ul> </li>
+                <li>Apostrophes: all of the apostrophes in the XML are U+0027, which doesn't match the PDF
+                    image. Leave them as they are in the provided XML. Replace only double quotation marks with
+                    XML elements--do not replace any single quotes with XML elements.</li>
+                <li>Italics and quotes: there is one patterns to look for (the title can be in quotes or italics):<ul>
+                    <li>“[Title]” ([Label] (#)[Number]; [year]; ...)<blockquote>Source: “Satan” (Ffrr/London
+                        #850990; 1997; #3 U.K.; recorded live in New York)</blockquote><blockquote>TEI-XML:
+                            &lt;bibl>&lt;title type="work-short">Satan&lt;/title>
+                            (&lt;publisher>Ffrr/London&lt;/publisher> #&lt;idno type="label">850990&lt;/idno>;
+                            &lt;date>1997&lt;/date>; #3 U.K.; recorded live in New
+                            York)&lt;/bibl></blockquote><blockquote>Source: &lt;italic>Orbital II&lt;/italic>
+                                (Ffrr/London #351026; 1993; #28 U.K.)</blockquote><blockquote>TEI-XML:
+                                    &lt;bibl>&lt;title>Orbital II&lt;/title>
+                                    (&lt;publisher>Ffrr&lt;/publisher>&lt;publisher>London&lt;/publisher> #&lt;idno
+                                    type="label">351026&lt;/idno>; &lt;date>1993&lt;/date>; #28
+                                    U.K.)&lt;/bibl></blockquote></li>
+                </ul></li>
+                <li>Bibliography and references: Create one file for the Bibliography and Key to Citations (page
+                    2381-2419) with &lt;text type="matter"> and one &lt;div type="body">. The bibliography will be
+                    a list. Here is a crosswalk for marking up that list: <table class="table" id="tfbibl"
+                        title="Added, 01/2015" border="1">
+                        <thead>
+                            <tr>
+                                <th>Source XML</th>
+                                <th>TEI XML</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>&lt;mixed-citation></td>
+                                <td>&lt;bibl></td>
+                            </tr>
+                            <tr>
+                                <td>@publication-type="journal"</td>
+                                <td>&lt;title type="article"></td>
+                            </tr>
+                            <tr>
+                                <td>@publication-type="book"</td>
+                                <td>&lt;title type="monograph"></td>
+                            </tr>
+                            <tr>
+                                <td> <p>&lt;string-name></p> </td>
+                                <td>&lt;author> or &lt;editor> [if preceded by "edited by"]</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;surname></td>
+                                <td>&lt;surname></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;given-names></td>
+                                <td>&lt;forename></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;source></td>
+                                <td>&lt;title></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;publisher-loc></td>
+                                <td>&lt;pubPlace></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;publisher-name></td>
+                                <td>&lt;publisher></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;year></td>
+                                <td>&lt;date></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;article-title></td>
+                                <td>&lt;title type="article"> [quotation marks should be deleted]</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;volume></td>
+                                <td>&lt;biblScope unit="vol"></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;issue></td>
+                                <td>&lt;biblScope unit="issue"></td>
+                            </tr>
+                            <tr>
+                                <td>(&lt;day>+)&lt;month>+&lt;year></td>
+                                <td>&lt;date></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;season>+&lt;year></td>
+                                <td>&lt;date></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;prefix></td>
+                                <td>&lt;genName></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;suffix></td>
+                                <td>&lt;genName></td>
+                            </tr>
+                            <tr>
+                                <td>&lt;fpage></td>
+                                <td>&lt;biblScope unit="pp" from=""> [omit @from if includes "p."]</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;lpage></td>
+                                <td>&lt;biblScope unit="pp" to=""></td>
+                            </tr>
+                            <tr>
+                                <td>[]</td>
+                                <td>content within square brackets should be untagged in TEI-XML</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;chapter-title></td>
+                                <td>&lt;bibl>&lt;title type="article"></td>
+                            </tr>
+                        </tbody>
+                    </table> Each time a reference is made in an article, usually in square brackets ("[Richards
+                    1948]") link it to its entry in this list: <blockquote>Bori died in New York [&lt;ref
+                        target="ers00872#b628">Richards 1948&lt;/ref>; &lt;ref target="ers00872#b631">Richards
+                        1973&lt;/ref>.]</blockquote></li>
+                <li>List of Sound Recording Periodicals (pages 2013-2046): Mark this list up as a &lt;list>
+                    within the &lt;div type="body">. Each item will then have a &lt;bibl> within an &lt;item>. All
+                    italicized text in this list should be marked as &lt;title type="periodical">. The following
+                    elements will be used in this list: &lt;title type="periodical">, &lt;date from="" to="">,
+                    &lt;pubPlace>, &lt;measure type="frequency">, &lt;bibl>, and &lt;relatedItem> as in the
+                    following example:<blockquote> &lt;item>&lt;bibl>&lt;title type="periodical">Studio Sound and
+                        Broadcast Engineering.&lt;/title> &lt;date from="1992"
+                        to="1995">1992&amp;#x2013;1995&lt;/date>. &lt;pubPlace>London, England&lt;/pubPlace>.
+                        &lt;measure type="frequency">Monthly&lt;/measure>. Superseded by
+                        &lt;relatedItem>&lt;bibl>&lt;title>Studio
+                        Sound.&lt;/title>&lt;/bibl>&lt;/relatedItem>&lt;/bibl></blockquote> Entries such as #14 that
+                    have a title followed by "see" should link to the title following "see":<blockquote>&lt;item
+                        n="14">&lt;bibl xml:id="b14">&lt;title>Edison Amberola Monthly&lt;/title>. See &lt;ref
+                        target="#b15">Edison Phonograph Monthly&lt;/ref>.&lt;/bibl>&lt;/item></blockquote> Titles
+                    following certain keywords will be tagged within &lt;relatedItem>&lt;bibl>. Those keywords
+                    are: <table class="table r201501" title="Added, 01/2015" border="1">
+                        <tbody>
+                            <tr>
+                                <td>Absorbed</td>
+                                <td>Absorbed by</td>
+                                <td>Continued by</td>
+                                <td>Continues as</td>
+                                <td>Former title</td>
+                                <td>Formerly:</td>
+                                <td>Incorporates</td>
+                                <td>Later title:</td>
+                            </tr>
+                            <tr>
+                                <td>Later titles:</td>
+                                <td>Merged into</td>
+                                <td>Merged with</td>
+                                <td>Superseded by</td>
+                                <td>Supersedes</td>
+                                <td>Title varies:</td>
+                                <td>Variant title(s):</td>
+                            </tr>
+                        </tbody>
+                    </table> </li>
+            </ol> </div> 
+    </body>
+</html>

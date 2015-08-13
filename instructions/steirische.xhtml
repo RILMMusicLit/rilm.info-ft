@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Steirisches Musiklexikon</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4>Steirisches Musiklexikon</h4>
+      </div>
+    </a>
+    <div class="r201507" title="Added, 7/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication will be converted from scanned print. </li>
+            <li>Double-angle quotation marks are used in the print (»word«).</li>
+            <li>There are entries on Persons, and entries on Geographic entities such as cities and
+              towns. The geographical entries have no body text, but only bibliographies. (more
+              below)</li>
+          </ul></li>
+        <li><b>Front matter</b> includes the Title page, copyright page, <i>Statt eines
+            Geleitwortes</i>, <i>Einleitung</i> (intro), <i>Abgekürzt zitierte Literatur</i>
+          (bibliographic abbreviations) and <i>Abkürzungen</i>.<ul>
+            <li>Tag the bibliographic abbreviations as a &lt;list>; put the abbreviation in an
+              &lt;abbr> element. Note that names are in forename-surname order; Titles are in Roman
+              type; publication place and date are given with no comma between.
+                <blockquote>&lt;list>&lt;item>&lt;bibl>&lt;abbr>MGG/2&lt;/abbr> &lt;title>Die Musik
+                in Geschichte und Gegenwart&lt;/title>, &lt;edition>2., neubearbeitete
+                Auflage&lt;/edition>, hg. von &lt;editor>Ludwig Finscher&lt;/editor>, Sachteil, 10
+                Bande, &lt;pubPlace>Kassel&lt;/pubPlace> u. a. &lt;date>1994-1999&lt;/date>;
+                Personenteil, 17 Bande, &lt;pubPlace>Kassel&lt;/pubPlace> u. a.
+                &lt;date>1999-2007&lt;/date> (&lt;note>ohne Nachtragsband, der noch nicht erfasst
+                werden konnte&lt;/note>).&lt;/bibl>&lt;/item>
+                <br />&lt;item>&lt;bibl>&lt;abbr>NGROVE 2001&lt;/abbr> &lt;title>The New Grove
+                Dictionary of Music and Musicians&lt;/title>, &lt;edition>2nd Edition&lt;/edition>,
+                29 Bande, ed. by &lt;editor>Stanley Sadie&lt;/editor>,
+                &lt;placeName>London&lt;/placeName>-&lt;placeName>New York&lt;/placeName>
+                &lt;date>2001&lt;/date>. - &lt;note>Altere Auflagen werden jeweils mit dem
+                Erscheinungsjahr vermerkt&lt;/note>.&lt;/bibl>&lt;/item>&lt;/list></blockquote></li>
+          </ul></li>
+        <li><b>Person</b> entries. <ul>
+            <li>Heading gives personal name given in <b>surname forename</b> order, in all bold,
+                <i>with no comma!</i> Assume that the text before the first space is the
+              surname.</li>
+            <li>The body text begins with birth and death date and place information, as available,
+              marked with * and +. Tag the birth and death information in a &lt;rilmPerson> element
+              and link to the name via @corresp.</li>
+            <li>Lists of works and or writings by and about the person. Each such list with a head
+              in all capitals should go in its own &lt;div>. <ul>
+                <li>Use &lt;div type="works"> for lists headed SCHRIFTEN or WERKE;</li>
+                <li>Use &lt;div type="ography"> for lists headed LITERATURE;</li>
+                <li>Some Bibliographies are abbreviated and keyed to the list at the beginning of
+                  the book. Tag these as &lt;bibl> and &lt;abbr>. </li>
+              </ul></li>
+          </ul></li>
+        <li><b>Geographic Articles</b> have headings in bold, immediately followed by a LITERATURE
+          head. These will have only &lt;div type="heading"> and &lt;div type="ography">. </li>
+        <li><b>See references</b> are in the form [<b>Surname Forename</b>, s. Forename
+          Surname].</li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

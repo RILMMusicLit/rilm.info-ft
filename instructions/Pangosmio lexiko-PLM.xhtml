@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Pankosmio Lexiko tis mousikis (1999)</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="PLM">Pangosmio Lexiko tes mousikes (World Dictionary of Music)</h4>
+      </div>
+    </a>
+    <div class="r201504" title="Added, 4/2015">
+      <ol>
+        <li><b>General comments</b>:<ul>
+            <li>This publication should be converted from scanned print.</li>
+            <li>Double-angle quotation marks (« and ») are used throughout. All should be converted
+              to &lt;q> tags.</li>
+            <li>There are only Person and Topic articles in this publication.</li>
+            <li>Each article has only &lt;div type="body">. There are no headings, and no worklists or "ographies".</li>
+          </ul></li>
+        <li><b>Front matter</b> includes the <b>copyright page</b>, the <b>title page</b>, <b>list of honorary board
+            members</b> (ΤΙΜΗΤΙΚΗ), <b>dedication page</b>, <b>prologue</b> (ΑΝΤΙ ΠΡΟΛΟΓΟΥ), and
+            <b>notes to readers</b> (ΔΙΕΥΚΡΙΝΙΣΕΙΣ). <ul>
+            <li>Set the honorary board members as a &lt;list>. After the heading, each line in
+              all capitals is a personal name in forename-surname order. Text in italics is the
+              person's position and institution. Each &lt;item> should contain &lt;persName> and
+              &lt;occupation> elements.<ul>
+                <li>ΔΗΜΗΤΡΗΣ ΑΒΡΑΜΟΠΟΥΛΟΣ <br/>
+Δήμαρχος Αθηναίων</li>
+              </ul><blockquote>&lt;item>&lt;persName>&lt;forename>ΔΗΜΗΤΡΗΣ&lt;/forename> &lt;surname>ΑΒΡΑΜΟΠΟΥΛΟΣ&lt;/surname> &lt;occupation>Δήμαρχος Αθηναίων&lt;/occupation>&lt;/item></blockquote></li>
+          </ul></li>
+
+        <li><b>Person entries</b> can be distinguished by a comma in the bold type followed by a
+          capital letter, AND non-bold parentheses, immediately after the bold face type at the
+          beginning, that contain at least one four-digit year. Person entries begin as follows: <ul>
+            <li>Personal name in bold type given in <i>surname, forename</i> order. </li>
+            <li>Non-Greek names are given in Latin letters in <i>forename-surname</i> order. Greek
+              names do not have this.</li>
+            <li>Places and dates (as available) in non-bold type in parentheses</li>
+            <li>The person's nationality is the first word after the closing parenthesis</li>
+            <li>The person's occupation is the next word.</li>
+          </ul> Enclose up to the first period in &lt;rilmPerson> tags: <ul>
+            <li><b>Αποστόλου, Γιαννης</b> (Αθηνα, 1860/1866 - Ναπολη, 1905). 'Ελληνας τενορος,
+              βασικό στέλεχος...</li>
+          </ul><blockquote>&lt;div
+            type="body">&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Αποστόλου&lt;/surname>,
+            &lt;forename>Γιαννης&lt;/forename>&lt;/persName>
+            (&lt;birth>&lt;placeName>Αθηνα&lt;/placeName>, &lt;date when = "1860" date-custom="1860"
+            precision="low">1860/1866&lt;/date>&lt;/birth> -
+            &lt;death>&lt;placeName>Ναπολη&lt;/placeName>, &lt;date when="1905"
+            when-custom="1905">1905&lt;/date>&lt;/death>). &lt;nationality>'Ελληνας&lt;/nationality>
+            &lt;occupation>τενορος&lt;/occupation>, βασικό
+            στέλεχος...&lt;/rilmPerson>...&lt;/p>&lt;/div></blockquote></li>
+        <li><b>In topic entries</b>, there will be either no parentheses at the beginning of the non-bold
+          type or parentheses <i>without a date</i>. <ul>
+            <li>Begin with a &lt;div type="body">—Start the first &lt;p> of the body and tag the
+              word(s) in bold face type as&lt;term>.</li>
+          </ul></li>
+        <li><b>Cross references</b> within articles are are marked by asterisks (*) following the referring term.  <a
+                href="ft/tei_rilm_instructions.html#cross-refs">Tag as &lt;ref> elements</a> and target the appropriate article file. Omit the asterisk character from the tagged text.</li>
+        <li>Stand-alone <b>see references</b> are indicated by the word "Βλέπε" ("see") and are in this form:<br /><br />
+          <b>Αγγλικό κόρνο.</b> Βλέπε Όμποε.</li>
+                <li>There are two <b>back-matter</b> pages. 
+                <ul><li>Set the <b>list of portraits</b> (ΠΙΝΑΚΑΣ ΠΟΡΤΡΑΙΤΩΝ) as a &lt;list>.</li>
+                <li>Set the <b>imprint page</b> (ΤΟ ΒΙΒΛΙΟ) As a simple &lt;p>.</li></ul></li>
+        </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

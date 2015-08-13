@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Komponisten der Gegenwart</title>
+    </head>
+    <body>
+        <a>
+            <div>
+                <h4 id="gospel">Komponisten der Gegenwart (kdg)</h4>
+            </div>
+        </a>
+        <div class="r201504" title="Added, 4/2015">
+            <ol>
+                <li>General points:<ul>
+                <li>This publication should be converted from the provided XML.</li>
+                        <li>All articles are &lt;text type="person"></li>
+                <li>Each article is already in a separate file.</li>
+                <li>Unescape all &amp;---; character entities (&amp;ouml; &amp;szlig; &amp;uuml;
+                            etc.). </li>
+                        <li><br />Convert &amp;raquo; and &amp;laquo; to &lt;q> and &lt;/q> tags,
+                            respectively.</li>
+                        <li>In the TEI header, get the value for &lt;imprint> &lt;date> <i>for each
+                                article</i> from the source &lt;BIOTEXT> @ONLINEDATUM first four
+                                digits.<blockquote>&lt;BIOTEXT ONLINEDATUM="19990601"
+                                PRINTDATUM="19990601"></blockquote><blockquote>&lt;date>1999&lt;/date></blockquote></li>
+                <li>Convert &lt;HEAD> elements in the source to &lt;pb> elements; get the value of
+                            @n from the source @SEITE. Ignore the other
+                                attributes.<blockquote>&lt;HEAD VERFASSER="Zofia Helman" SEITE="02"
+                                NLG="11"/></blockquote><blockquote>&lt;pb n="02"/></blockquote></li></ul></li>
+                <li><i>After the TEI header, each resulting TEI file will have &lt;div
+                        type="heading">, &lt;div type="subheading">, &lt;div type="authors">,
+                        &lt;div type="body">.....</i></li>
+                <li>Get the TEI header &lt;title> and the contents of the "heading" from the source
+                    &lt;AUTOR> @VORNAME and @NACHNAME values. Put them in a &lt;rilmPerson> element
+                    in the heading:<blockquote>&lt;AUTOR ID="0001" VORNAME="Joseph"
+                        NACHNAME="Achron" STAAT="RUS" GEBURT="18860501"
+                        TOD="19430429"/></blockquote><blockquote>&lt;titleStmt>&lt;title>Joseph
+                        Achron&lt;/title>...&lt;/titleStmt><br /> ...<br />&lt;div
+                        type="heading">&lt;p>&lt;rilmPerson
+                        xml:id="r1">&lt;persName>&lt;forename>Joseph&lt;/forename>
+                        &lt;surname>Achron&lt;/surname>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div></blockquote>
+                </li>
+<li>The "subheading" will contain a &lt;rilmPerson> with &lt;nationality>, &lt;birth> and &lt;death>
+                    elements. Values of these elements also come from the source &lt;AUTOR> element,
+                    but processed as follows: <ul>
+                        <li>Change the case of the nationality from all caps to normal case ("RUS"
+                            to "Rus")</li>
+                        <li>Insert a comma and space between the &lt;nationality> and &lt;birth>
+                            elements</li>
+                        <li>Parse the eight-digit @GEBURT and @TOD values into yyyy-mm-dd format for
+                            the @when value ("18860501" to "1886-05-01")</li>
+                        <li>Reformat the date to dd. Month yyyy, substituting the month according to
+                            this table: <table>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Januar</td>
+                                        <td></td>
+                                        <td>07</td>
+                                        <td>Juli</td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Februar</td>
+                                        <td></td>
+                                        <td>08</td>
+                                        <td>August</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>März</td>
+                                        <td></td>
+                                        <td>09</td>
+                                        <td>September</td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>April</td>
+                                        <td></td>
+                                        <td>10</td>
+                                        <td>Oktober</td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Mai</td>
+                                        <td></td>
+                                        <td>11</td>
+                                        <td>November</td>
+                                    </tr>
+                                    <tr>
+                                        <td>06</td>
+                                        <td>Juni</td>
+                                        <td></td>
+                                        <td>12</td>
+                                        <td>Dezember</td>
+                                    </tr>
+                                </tbody>
+                            </table></li>
+                    </ul><blockquote>&lt;div type="subheading">&lt;p>&lt;rilmPerson xml:id="r2"
+                        corresp="#r1">&lt;nationality>Rus&lt;/nationality>, &lt;birth>&lt;date
+                        when="1886-05-01" when-custom="1886">01. Mai 1886&lt;/date>&lt;/birth>
+                        &lt;death>&lt;date when="1943-04-29" when-custom="1943">29. April
+                        1943&lt;/date>&lt;/death>&lt;/rilmPerson>&lt;/p>&lt;/div></blockquote></li>
+                <li>For the &lt;div type="authors">, obtain the author name from the @NAME attribute
+                    of the &lt;VERFASSER> element in the source XML:<blockquote>&lt;VERFASSER
+                        NAME="Joachim Noller"/></blockquote><blockquote>&lt;div
+                        type="authors">&lt;docAuthor>Joachim
+                        Noller&lt;/docAuthor>&lt;/div></blockquote></li>
+                <li>The &lt;div type="body"> will correspond with the source elements &lt;BIOTEXT>
+                    and &lt;WERKTEXT>.<ul>
+                        <li>Change &lt;P> elements to &lt;p>. The @EINZUG attribute may be
+                            ignored.</li>
+                        <li>Change &lt;I> elements to &lt;title>.</li>
+                        <li>&lt;INDEX> elements should be changed to &lt;index> and reformatted
+                            according to the value of @TYP. <ul>
+                                <li>if @TYP="Name", use &lt;rilmPerson> and &lt;persName> elements
+                                    inside &lt;term>:<blockquote>...&lt;INDEX EINTRAG="Baaren, Kees
+                                        van" TYP="Name">Kees van
+                                        Baaren&lt;/INDEX>...</blockquote><blockquote>...&lt;index>&lt;term>&lt;rilmPerson>&lt;persName>&lt;surname>Baaren&lt;/surname>,
+                                        &lt;forename>Kees&lt;/forename>
+                                        &lt;nameLink>van&lt;/nameLink>&lt;/perName>&lt;/rilmPerson>&lt;/term>&lt;/index>Kees
+                                        van Baaren...</blockquote></li>
+                                <li>if @TYP="Musikgruppe", use &lt;orgName> inside
+                                        &lt;term>:<blockquote>...&lt;INDEX EINTRAG="Boston Symphony
+                                        Orchestra" TYP="Musikgruppe">Boston Symphony
+                                        Orchestra&lt;/INDEX>...</blockquote><blockquote>...&lt;index>&lt;term>&lt;orgName>Boston
+                                        Symphony Orchestra&lt;/orgName>&lt;/term>&lt;/index>Boston
+                                        Symphony Orchestra...</blockquote></li>
+                            </ul>In either case, leave the content of the source &lt;INDEX> element
+                            outside of the TEI &lt;index> element.</li>
+                    </ul></li>
+                <li>The source's &lt;WERKVERZEICHNIS> element will be the TEI &lt;div type="works"><ul>
+                        <li>The &lt;ABK> element of the source is a list of abbreviations. Make this
+                            a &lt;div type="section"> within the &lt;div type="works"> with a
+                            &lt;head> containing "Abk". Change &lt;LISTE> to &lt;list> and &lt;LI>
+                            to &lt;item>. Omit the &lt;ITEM.NUM> and &lt;ITEM.TEXT> contents with a
+                            colon and omit the tags.<blockquote>&lt;ITEM>
+                                &lt;ITEM.NUM>Ascolta&lt;/ITEM.NUM> &lt;ITEM.TEXT>Ascolta Music
+                                Publishing, Houten (NL)&lt;/ITEM.TEXT>
+                                &lt;/ITEM></blockquote><blockquote>&lt;item>Ascolta: Ascolta Music
+                                Publishing, Houten (NL)&lt;/item></blockquote></li>
+                    <li>At each &lt;H1>, &lt;H2>, ...&lt;Hx> etc. element, begin a new &lt;div
+                            type="section"> and use the content of the &lt;Hx> as a &lt;head> at the
+                            beginning of the &lt;div>.</li>
+                    <li>Replace &lt;UA> tags with &lt;rilmPerformance type="ur"> and &lt;JAHR> tags
+                            with &lt;date> tags. Tag the place name between the "UA" and &lt;JAHR>
+                            tag as &lt;placeName>. </li>
+                </ul></li>
+                <li>The &lt;DISKOGRAFIE>, &lt;VIDEOGRAFIE>, and &lt;BIBLIOGRAFIE> elements will
+                    become &lt;div type="ography"></li>
+                <li>In the Bibliography, a commented &lt;INDEX> entry in the worklist containing
+                    "Verfasser", use its content as the new &lt;author> element, and omit the text
+                    (but not the date) between the end of the comment and the following
+                        colon:<blockquote>...&lt;!-- &lt;INDEX EINTRAG="Everett, Yayoi Uno"
+                        TYP="Verfasser"> -->Everett 2004:
+                        ...</blockquote><blockquote>&lt;author>&lt;surname>Everett&lt;/surname>,
+                        &lt;forename>Yayoi&lt;/forename> &lt;forename>Uno&lt;/forename>&lt;/author>
+                        2004:</blockquote></li>
+            </ol>
+            <p>Please refer also to the TEI example files.</p>
+        </div>
+    </body>
+</html>

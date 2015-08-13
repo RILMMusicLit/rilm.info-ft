@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+    <teiHeader xml:lang="en ">
+        <fileDesc>
+            <titleStmt>
+                <title>Chamorro, Emilio</title>
+                <respStmt>
+                    <resp>Encoded by</resp>
+                    <orgName>Aptara, Inc.</orgName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Sociedad General de Autores y Editores</publisher>
+                <pubPlace>Madrid</pubPlace>
+                <publisher>Instituto Complutense de Ciencias Musicales</publisher>
+                <pubPlace>Madrid</pubPlace>
+                <distributor>Répertoire International de Littérature Musicale</distributor>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title>Diccionario de la música española e hispanoamericana</title>  
+                        <editor>
+                            <forename></forename>
+                            <surname></surname>
+                        </editor>
+                        <imprint>
+                            <publisher>Sociedad General de Autores y Editores</publisher>
+                            <pubPlace>[Madrid]</pubPlace>
+                            <date>1999</date>
+                        </imprint>
+                        <biblScope unit="vol">4</biblScope>
+                        <biblScope unit="pp">537</biblScope>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <normalization>
+                    <p>Some abbrevations have been replaced by unabbrevated terms.</p>
+                </normalization>
+                <quotation marks="none">
+                    <p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+                </quotation>
+                <hyphenation eol="some">
+                    <p>End-of-line hyphenation silently removed where appropriate</p>
+                </hyphenation>
+            </editorialDecl>
+            <appInfo>
+                <application ident="oXygenXMLEditor" version="14.1" notAfter="2014-02-26">
+                    <label>oXygen XML Editor</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="es">Spanish</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change when="2015-02-21" status="created"/>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:id="mehEXAMPLE1" type="person" xml:lang="es">
+        <body>
+<div type="one-section"><p><rilmPerson><persName><surname>Chamorro</surname>, <forename>Emilio</forename>.</persName> <birth><placeName>Nueve de Julio (Argentina)</placeName>, <date when="1904-07-09">9-VII-
+1904</date></birth>; <death><placeName>Rosario</placeName>, <date when="1971-09-11">11-XI-1971</date></death>. <occupation>Compositor</occupation>, <occupation>guitarrista</occupation> y
+<occupation>director</occupation>.</rilmPerson> Dedicado a la música popular del litoral mesopotámico,
+desde los quince años actuó como violinista y guitarrista en su provincia natal, Corrientes. Alrededor de
+1922 se estableció en Buenos Aires, cuando la música de la región de Corrientes era allí casi desconocida. En 1927 Pedro Otatti, agrupación que incluía en su repertorio la polka correntina, más tarde denominada chamamé. En
+1929 realizó con Los Regazos de La Pampa una extensa gira por las provincias de Río Negro y La Pampa. Durante
+dos temporadas, 1929 y 1930, participó formando trío con Medina y Policastro Benítez en la obra Yarará, de
+Horacio Perfumo, en el Teatro Comedia de Buenos Aires. La obra incluía una escena de baile de polka correntina
+ejecutada con acordeón y dos guitarras. Posteriormente fundó su agrupación más difundida, Los Paisanitos (Los
+Hijos de Corrientes), por la que desfilaron los mejores intérpretes de la música del litoral. Grabó alrededor de cincuenta LP para RCA, Odeón y Magenta.</p></div>
+            <div type="works">
+                <head>OBRAS (Selección)</head>
+                <list><head>Chamamés:</head> <item><bibl><title>Arribeño</title></bibl></item><item><bibl><title>Chipá mbocá (Torta frita)</title></bibl></item><item><bibl><title>El campiriño</title></bibl></item><item><bibl><title>El carau</title></bibl></item><item><bibl><title>Fierro punta</title></bibl></item><item><bibl><title>La cigarrera</title></bibl></item><item><bibl><title>Lamento correntino</title></bibl></item><item><bibl><title>María Pacurí</title></bibl></item><item><bibl><title>Ombú vuelta</title></bibl></item><item><bibl><title>Ramonita</title></bibl></item><item><bibl><title>San José</title></bibl></item><item><bibl><title>Taragüí rapé (Camino de Corrientes)</title></bibl>.</item></list></div>
+            <div type="authors">
+                <docAuthor>RICARDO VISCONTI</docAuthor>
+            </div>
+        </body>
+    </text>
+</TEI>

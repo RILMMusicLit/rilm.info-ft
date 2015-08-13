@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Conductors and Composers of Popular Orchestral Music</title>
+    </head>
+    <body>
+        <a>
+            <div>
+                <h4 id="gospel">Conductors and Composers of Popular Orchestral Music</h4>
+            </div>
+        </a>
+        <div class="r201505" title="Added, 5/2015">
+            <ol>
+                <li><b>General comments</b>:<ul>
+                        <li>This publication should be converted from the provided XML and PDF.</li>
+                        <li>English-style single quotation marks (‘ and ’) are used throughout and
+                            are encoded as &amp;#x2018; and &amp;#x2019; respectively in the source.
+                            The latter code is used for both right quote and for apostrophe, but
+                            they have to be distinguished in TEI: <blockquote>master&amp;#x2019;s
+                                degree ... &amp;#x2018;Jazz Pizzicato&amp;#x2019;,
+                                </blockquote><blockquote>master’s degree ... &lt;q>Jazz
+                                Pizzicato&lt;/q>, </blockquote>Convert all other "&amp;#" codes to
+                            Unicode characters. No "&amp;#" codes should remain in the TEI files. </li>
+                        <li>All entries will be &lt;text type="person"> except the following: 
+                            <table><tr>
+                                <td>Boston Pops Orchestra</td><td>group</td></tr>
+                                <tr><td>Chappell Mood Music Library</td><td>institution</td></tr>
+                                <tr><td>Hollywood Bowl Orchestra</td><td>group</td></tr>
+                                <tr><td>Knightsbridge Strings</td><td>group</td></tr>
+                                <tr><td>Living Strings</td><td>group</td></tr>
+                                <tr><td>Longines Symphonette</td><td>group</td></tr>
+                                <tr><td>Moods Orchestral</td><td>group</td></tr>
+                                <tr><td>101 Strings</td><td>group</td></tr>
+                                <tr><td>Reader's Digest</td><td>institution</td></tr>
+                            </table> All will have &lt;div type="heading"> and &lt;div type="body">.
+                            Most have &lt;div type="ography">.</li>
+                    <li>Cross-references are indicated by &lt;sc> tags in the source XML. Set these
+                            references as a &lt;ref> element, targeting the approriate article. Omit
+                            the &lt;sc> tags.<blockquote>He also played an important role in the
+                                careers of band leaders such as Ted Heath, &lt;sc>STANLEY
+                                BLACK&lt;/sc>, George Shearing, Sidney Lipton, &lt;sc>GEORGE
+                                MELACHRINO&lt;/sc> and arrangers Lew Stone and Sid
+                                Phillips.</blockquote><blockquote>He also played an important role
+                                in the careers of band leaders such as Ted Heath, &lt;ref
+                                target="#ccp000xx">STANLEY BLACK&lt;/ref>, George Shearing, Sidney
+                                Lipton, &lt;ref target="#ccp000xx">GEORGE MELACHRINO&lt;/ref> and
+                                arrangers Lew Stone and Sid Phillips.</blockquote></li>
+                        <li>All &lt;xref ref-type="page"> elements should be converted to the TEI
+                            element &lt;pb>: <blockquote>&lt;xref ref-type="page" id="page_443"
+                                /><br /><br /> &lt;pb n="443"/></blockquote></li>
+                        <li>Convert all &lt;italic> tags to &lt;hi rend="italic">.</li>
+                        <li>Ignore all &lt;alt-title> elements and their contents.</li>
+                    </ul></li>
+                <li><b>Front matter</b> will include the title page, copyright page, dedication,
+                        <i>Authors' Note</i>, <i>Keys to Abbreviation</i>, and
+                        <i>Acknowledgments</i>. <ul>
+                        <li>The title page will correspond with the source elements
+                            &lt;book-title-group> and &lt;contrib-group>.</li>
+                        <li>The copyright page will correspond with the source &lt;publisher>,
+                            &lt;isbn>, &lt;pub-date>, &lt;permissions>, and &lt;imprint-meta>
+                            elements.</li>
+                        <li>The dedication page content will correspond with the &lt;notes
+                            notes-type="dedication"> of the source.</li>
+                        <li>The Authors' Note is tagged &lt;sec sec-type="fm-chapter"
+                            id="Authors-Note"> in the source. Use &lt;title> as &lt;head> and set
+                            the &lt;sig-block> as a &lt;docAuthor>.</li>
+                    </ul></li>
+                <li><b>Article</b> titles give the name in surname, forename order. <ul>
+                        <li>For the &lt;div type="heading">, tag the name as &lt;rilmPerson> and
+                            &lt;persName>. The part of the name after the last space can be tagged
+                            &lt;surname> and the others preceding it as &lt;forename>.
+                                <blockquote>&lt;div type="heading">&lt;rilmPerson
+                                xml:id="r1">&lt;persName>&lt;forename>June&lt;/forename>
+                                &lt;surname>Allyson&lt;/surname>&lt;/persName>&lt;/rilmPerson>&lt;/div>
+                            </blockquote></li>
+                    </ul></li>
+<li> There may be any number of &lt;div type="<b>ography</b>"> elements. They will correspond with
+                    &lt;sec> elements in the source. <ul><li>Keep source &lt;list> elements as &lt;list> but remove the attributes. </li>
+                        <li>&lt;list-item> elements will become TEI &lt;item>&lt;bibl> elements. </li>
+                        <li>Information can be tagged with &lt;title>, &lt;publisher>, and &lt;idno
+                                type="label">.<blockquote>&lt;item>&lt;bibl>&lt;title>International
+                                Showtime&lt;/title> (&lt;publisher>NBC&lt;/publisher>,
+                                &lt;date>1961—65&lt;/date>)&lt;/bibl>&lt;/item></blockquote><blockquote>&lt;item>&lt;bibl>&lt;title>The
+                                Bickersons Rematch&lt;/title> (&lt;publisher>Col&lt;/publisher>
+                                &lt;idno type="label">G-30523&lt;/idno>) w. Frances
+                                Langford&lt;/bibl>&lt;/item></blockquote></li></ul></li>
+
+
+            </ol>
+            <p>Please refer also to the provided xml samples.</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>A Dictionary of the Avant-Gardes</title>
+    </head>
+    <body>
+        <a>
+            <div>
+                <h4 id="avant-gardes">A Dictionary of the Avant-Gardes</h4>
+            </div>
+        </a>
+        <div class="r201505" title="Added, 5/2015">
+            <ol>
+                <li><b>General comments</b>:<ul>
+                        <li>This publication should be converted from the provided XML.</li>
+
+                        <li>Except for the front matter, each &lt;sec disp-level="B"> element in the
+                            source will correspond to one TEI file.</li>
+                        <li>Values for @type in &lt;text> element as follows: <ul>
+                                <li>Entry titles that contain a comma and lower-case text are
+                                    @type="person".</li>
+                                <li>For entry titles that are in all-caps, refer to the <a
+                                        href="#entrytypes">table below</a>.</li>
+                                <li>If the title neither has lower-case text nor is in the table,
+                                    then @type="topic".</li>
+  </ul></li>                              <li>All &lt;xref ref-type="page"> elements should be converted to
+                                    the TEI element &lt;pb>: <blockquote>&lt;xref ref-type="page"
+                                        id="page_443" /><br /><br /> &lt;pb
+                                    n="443"/></blockquote></li>
+                                <li>Convert all &amp;-encoded characters to Unicode.</li>
+                            
+<li>Convert all &lt;italic> tags to &lt;hi rend="italic">.</li>
+                        <li>Ignore all &lt;book-part-meta> elements and their contents.</li>
+                        <li>Use <a href="../tei_rilm_instructions.html#american" target="_blank"
+                                >American rule</a> for single quotation marks.</li>
+                        
+
+                        
+                    </ul></li>
+                <li><b>Front matter</b> will include the title page, copyright page, <i>Preface</i>,
+                    and <i>Introduction</i>. <ul>
+                        <li>The title page will correspond with the source elements
+                            &lt;book-title-group> and &lt;contrib-group>.</li>
+                        <li>The copyright page will correspond with the source &lt;publisher>,
+                            &lt;isbn>, &lt;pub-date>, &lt;permissions>, and &lt;imprint-meta>
+                            elements.</li>
+                        <li>The <i>Preface</i> begins with a &lt;fig> and &lt;disp-quote> element.
+                            Here <i>and in the Introduction</i>, tag the content of the source
+                            &lt;disp-quote> with &lt;cit rend="block"> and &lt;quote> tags. <i>The
+                                element </i>&lt;disp-quote><i> will be handled differently in the
+                                individual entries.</i></li>
+                        <li>Re-tag the &lt;sig-block> contents as &lt;byline>.</li>
+                        <li>The last &lt;p> of the <i>Introduction</i> beginning with the text
+                            "Sources" is a bibliography. Tag as a &lt;div type="ography">. Items are
+                            separated by semicolons. Tag as a &lt;list>. Convert &lt;italic> tags to
+                            &lt;title> and mark up as many other elements as
+                                possible:<blockquote>[&lt;p>&lt;bold>Sources&lt;/bold>: Kirby,
+                                Michael. &lt;italic>The Art of Time&lt;/italic>. New York: Dutton,
+                                1969; Kostelanetz, Richard, ed. &lt;italic>Esthetics
+                                Contemporary&lt;/italic>. 2d ed. Buffalo, NY: Prometheus, 1989;
+                                Krantz, Stewart. &lt;italic>Science and Technology in the
+                                Arts&lt;/italic>. New York: Van Nostrand Reinhold,
+                                1974;...&lt;/p>]</blockquote><blockquote>&lt;div type="ography">
+                                <br />&lt;head>Sources:&lt;/head>
+                                <br />&lt;list><br />&lt;item>&lt;bibl>&lt;author>&lt;surname>Kirby&lt;/surname>,
+                                &lt;forename>Michael&lt;/forename>&lt;/author>. &lt;title>The Art of
+                                Time&lt;/title>. &lt;pubPlace>New York&lt;/pubPlace>:
+                                &lt;publisher>Dutton&lt;/publisher>,
+                                &lt;date>1969&lt;/date>&lt;/bibl>&lt;/item>
+                                <br />&lt;item>&lt;bibl>&lt;editor>&lt;surname>Kostelanetz&lt;/surname>,
+                                &lt;forename>Richard&lt;/forename>&lt;/editor>, ed.
+                                &lt;title>Esthetics Contemporary&lt;/title>. &lt;edition>2d
+                                ed.&lt;/edition> &lt;pubPlace>Buffalo, NY&lt;/pubPlace>:
+                                &lt;publisher>Prometheus&lt;/publisher>,
+                                &lt;date>1989&lt;/date>&lt;/bibl>&lt;/item>
+                                <br />&lt;item>&lt;bibl>&lt;author>&lt;surname>Krantz&lt;/surname>,
+                                &lt;forename>Stewart&lt;/forename>&lt;/author>. &lt;title>Science
+                                and Technology in the Arts&lt;/title>. &lt;pubPlace>New
+                                York&lt;/pubPlace>: &lt;publisher>Van Nostrand
+                                Reinhold&lt;/publisher>,
+                                &lt;date>1974&lt;/date>&lt;/bibl>&lt;/item><br />&lt;/list>&lt;/div></blockquote></li>
+                    </ul></li>
+                <li>The titles of <b>person</b> entries give the name in surname-forename order. <ul>
+                        <li>For the &lt;div type="heading">, tag the name as &lt;rilmPerson> and
+                            &lt;persName>. The part of the name in all-capitals is the &lt;surname>
+                            and the others are &lt;forename>.</li>
+                        <li>If the &lt;p> element immediately following the article title begins
+                            with an open parenthesis, it should be tagged &lt;div type="subheading">
+                            containing a &lt;rilmPerson> with an @corresp attribute pointing to the
+                            xml:id of the &lt;rilmPerson> element above it. Tag the birth and death
+                            dates. <blockquote>[&lt;title>ACCONCI, Vito&lt;/title> &lt;p>(25 January
+                                1939).&lt;/p>]</blockquote><blockquote>&lt;div
+                                type="heading">&lt;p>&lt;rilmPerson
+                                xml:id="r1">&lt;persName>&lt;surname>ACCONCI&lt;/surname>,
+                                &lt;forename>Vito&lt;/forename>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div><br />&lt;div
+                                type="subheading">&lt;p><br />&lt;rilmPerson xml:id="r2"
+                                corresp="#r1"> (&lt;birth>&lt;date when="1939-01-25"
+                                when-custom="1939">25 January
+                                1939&lt;/date>&lt;/birth>)&lt;/rilmPerson>&lt;/p><br />&lt;/div></blockquote></li>
+                    </ul></li><li><b>Cross-references</b> in-line within the article texts in the source XML have no markup other
+                    than that for small capital letters (&lt;sc&gt;). Set these references as a
+                    &lt;ref&gt; element targeting the approriate article. Then convert the letters
+                    inside the &lt;sc> tags to lower case letters.<blockquote>[...a fascination with
+                        numbers reminiscent of R&lt;sc>AYMOND&lt;/sc> Q&lt;sc>UENEAU&lt;/sc>,
+                        though...] </blockquote><blockquote>...a fascination with numbers
+                        reminiscent of &lt;ref target="#dag00000>Raymond Queneau&lt;/ref>,
+                        though...</blockquote></li>
+                <li> Most article have a <b>worklist</b> at the end. They are enclosed within
+                    &lt;disp-quote> elements in the source XML. Tag the contents of &lt;disp-quote>
+                    as &lt;div type="works"> and tag each &lt;p> within the &lt;disp-quote> as a
+                    separate &lt;div type="section">.<ul>
+                        <li>Use the contents of the &lt;bold> elements as &lt;head> in the TEI.</li>
+                        <li>Items are separated only by a semicolon in the source. </li>
+                        <li>Convert &lt;italic> tags to &lt;title> and mark up as many other
+                            elements as possible:<blockquote>[&lt;disp-quote>
+                                &lt;p>&lt;bold>Novels:&lt;/bold> &lt;italic>The Childlike Life of
+                                the Black Tarantula: Some Lives of Murderesses&lt;/italic>. New
+                                York: Vanishing Rotating Triangle, 1975; &lt;italic>Great
+                                Expectations&lt;/italic>. San Francisco: Re/Search, 1982;
+                                &lt;italic>Blood and Guts in High School&lt;/italic>. New York:
+                                Grove, 1984; &lt;italic>Don Quixote: Which Was a Dream&lt;/italic>.
+                                New York: Grove, 1986; &lt;italic>Empire of the
+                                Senseless&lt;/italic>. New York: Grove, 1988; &lt;italic>Portrait of
+                                an Eye: Three Novels&lt;/italic>. New York: Pantheon, 1992;
+                                &lt;italic>My Mother: Demonology&lt;/italic>. New York: Pantheon,
+                                1993.&lt;/p> &lt;p> &lt;bold>Website:&lt;/bold> &lt;uri
+                                xlink:href="http://acker.thehub.com.au/"
+                                >http://acker.thehub.com.au/&lt;/uri> &lt;/p>
+                                &lt;/disp-quote>]</blockquote><blockquote>&lt;div type="works">
+                                <br />&lt;div type="section"> &lt;head>Novels:&lt;/head>
+                                <br />&lt;list> &lt;item>&lt;bibl>&lt;title>The Childlike Life of
+                                the Black Tarantula: Some Lives of Murderesses&lt;/title>.
+                                &lt;pubPlace>New York&lt;/pubPlace>: &lt;publisher>Vanishing
+                                Rotating Triangle&lt;/publisher>,
+                                &lt;date>1975&lt;/date>&lt;/bibl>&lt;/item>
+                                <br />&lt;item>&lt;bibl>&lt;title>Great Expectations&lt;/title>.
+                                &lt;pubPlace>San Francisco&lt;/pubPlace>:
+                                &lt;publisher>Re/Search&lt;/publisher>, &lt;date>
+                                1982&lt;/date>&lt;/bibl>&lt;/item>
+                                <br />&lt;item>&lt;bibl>&lt;title>Blood and Guts in High
+                                School&lt;/title>. &lt;pubPlace>New York&lt;/pubPlace>:
+                                &lt;publisher> Grove&lt;/publisher>,
+                                &lt;date>1984&lt;/date>&lt;/bibl>&lt;/item>
+                                <br />&lt;item>&lt;bibl>&lt;title>Don Quixote: Which Was a
+                                Dream&lt;/title>. &lt;pubPlace>New York&lt;/pubPlace>:
+                                &lt;publisher>Grove&lt;/publisher>,
+                                &lt;date>1986&lt;/date>&lt;/bibl>&lt;/item>
+                                <br />&lt;item>&lt;bibl>&lt;title>Empire of the
+                                Senseless&lt;/title>. &lt;pubPlace>New York&lt;/pubPlace>:
+                                &lt;publisher>Grove&lt;/publisher>,
+                                &lt;date>1988&lt;/date>&lt;/bibl>&lt;/item>
+                                <br />&lt;item>&lt;bibl>&lt;title>Portrait of an Eye: Three
+                                Novels&lt;/title>. &lt;pubPlace>New York&lt;/pubPlace>:
+                                &lt;publisher>Pantheon&lt;/publisher>,
+                                &lt;date>1992&lt;/date>&lt;/bibl>&lt;/item>
+                                <br />&lt;item>&lt;bibl>&lt;title>My Mother: Demonology&lt;/title>.
+                                &lt;pubPlace>New York&lt;/pubPlace>:
+                                &lt;publisher>Pantheon&lt;/publisher>,
+                                &lt;date>1993&lt;/date>&lt;/bibl>&lt;/item> <br />&lt;/list>
+                                &lt;/div> <br />&lt;div type="section"> &lt;head>Website:&lt;/head>
+                                <br />&lt;list> &lt;item>&lt;bibl>&lt;ref
+                                target="http://acker.thehub.com.au/"
+                                >http://acker.thehub.com.au/&lt;/ref>&lt;/bibl>&lt;/item> &lt;/list>
+                                &lt;/div> &lt;/div></blockquote>
+                        </li>
+                    </ul></li>
+<li><b>See references</b> are indicated in the source XML only by the word "See" in the first &lt;p>
+                    after the &lt;title>. The target entry's title is tagged as
+                        &lt;bold>:<blockquote>[&lt;sec disp-level="B" id="C01_sb466">
+                        &lt;title>JAKOBSON, Roman&lt;/title> &lt;p>See &lt;bold>FORMALISM
+                        (RUSSIAN)&lt;/bold>.&lt;/p> &lt;/sec>]</blockquote></li>
+
+            </ol>
+            <p>Please refer also to the provided xml samples.</p>
+            <p><b><a id="entrytypes"></a>Table of values for &lt;text> @type:</b></p>
+            <table>
+                <tr>
+                    <td>United States</td>
+                    <td>geo</td>
+                </tr>
+                <tr>
+                    <td>Arditti Quartet</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>El Teatro Campesino</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Guerilla Girls</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Judson Dance Theater</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Kronos Quartet</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>La Gran Scena Opera Co.</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Medicine Show Theatre Ensemble</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Mother Mallard's Portable Masterpiece Company</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Sonic Youth</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Surveillance Camera Players</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>The Bread and Puppet Theater</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>The Open Theater</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>The San Francisco Mime Troupe</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>United States of America</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>USCO</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>Velvet Underground</td>
+                    <td>group</td>
+                </tr>
+                <tr>
+                    <td>American Academy of Arts and Letters (1904) National Institute of Arts and
+                        Letters (1898–1993)</td>
+                    <td>institution</td>
+                </tr>
+                <tr>
+                    <td>Canada Council</td>
+                    <td>institution</td>
+                </tr>
+                <tr>
+                    <td>CBGBs</td>
+                    <td>institution</td>
+                </tr>
+                <tr>
+                    <td>Daad Berliner Kunstlerprogramm</td>
+                    <td>institution</td>
+                </tr>
+                <tr>
+                    <td>Disneyland (1955)/Disney World (c.1971)</td>
+                    <td>institution</td>
+                </tr>
+                <tr>
+                    <td>Guggenheim Foundation</td>
+                    <td>institution</td>
+                </tr>
+                <tr>
+                    <td>Small Press</td>
+                    <td>institution</td>
+                </tr>
+                <tr>
+                    <td>Something Else Press</td>
+                    <td>institution</td>
+                </tr>
+                <tr>
+                    <td>The National Endowment for the Arts</td>
+                    <td>institution</td>
+                </tr>
+                <tr>
+                    <td>Warner Brothers Cartoons</td>
+                    <td>institution</td>
+                </tr>
+                <tr>
+                    <td>De Stijl (periodical)</td>
+                    <td>work</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Riemann 11</title>
+    </head>
+    <body>
+        <div class="r201412" title="Added 12/2014"><a id="riemann11"></a>
+            <h4>Hugo Riemanns Musik Lexikon - Elfte Auflage (1929) (rmn)</h4>
+            <ol>
+                <li>Entries in Riemann have only one section each: &lt;div type="body"&gt;.</li>
+                <li>There are two types of articles: &lt;text type="person"&gt; and &lt;text
+                    type="topic"&gt;. Both types begin with a word in boldface followed by a comma.
+                    Articles about persons can be distinguished by: <ol>
+                        <li> a forename following that comma, followed by another comma; sometimes
+                            preceded a parenthetical statement, followed by a comma:
+                                <blockquote>&lt;p&gt;&lt;rilmPerson&gt;&lt;persName&gt;&lt;surname&gt;Rogowski&lt;/surname&gt;,
+                                &lt;forename&gt;Michael&lt;/forename&gt;&lt;forename&gt;Ludwig&lt;/forename&gt;&lt;/persName&gt;,</blockquote>
+                            <blockquote>&lt;p&gt;&lt;rilmPerson&gt;&lt;persName&gt;&lt;surname&gt;de
+                                Romain&lt;/surname&gt; (spr. -ǟng&amp;#x0361;),
+                                &lt;forename&gt;Louis&lt;/forename&gt;,</blockquote>
+                        </li>
+                        <li>frequently, birth and/or death information, signalled by "*" and/or "†"
+                            in the first paragraph.</li>
+                    </ol>
+                </li>
+                <li>For articles about a person, tag the entire first sentence of the article with
+                    &lt;rilmPerson&gt;. Within that, the name in bold, together with comma that
+                    follows it and the name that follows the comma, should be tagged
+                    &lt;persName&gt; (and &lt;surname&gt; and &lt;forename&gt; within that). If "*"
+                    or "†" appear, replace them, together with the following items that follow with
+                    &lt;birth&gt; or &lt;death&gt;: date, and a place preceded by either the word
+                    "zu" or the word "in", and add @when and @when-custom attributes to those dates.
+                        <blockquote>* 5. Aug. 1623 zu Arezzo, † 14. Okt. 1669 in
+                        Florenz;</blockquote>
+                    <blockquote>&lt;birth&gt;&lt;date when="1623-08-05" when-custom="1623"&gt;5.
+                        Aug. 1623&lt;/date&gt; zu &lt;place&gt;Arezzo&lt;/place&gt;&lt;/birth&gt;,
+                        &lt;death&gt;&lt;date when="1669-10-14" when-custom="1669"&gt;14. Okt.
+                        1669&lt;/date&gt; in &lt;place&gt;Florenz&lt;/place&gt;&lt;/death&gt;;
+                    </blockquote> The place will always be what appears between "zu" or "in" and the
+                    next comma, semi-colon, or period.<blockquote>
+                        <p>&lt;/date&gt; zu
+                            &lt;placeName&gt;München&lt;/placeName&gt;&lt;/rilmPerson&gt;,</p>
+                    </blockquote>
+                </li>
+                <li>Articles that have neither a birth marker (*) nor a death marker (†) are topic
+                    articles. </li>
+                <li>Words that follow the keyword "spr." within parentheses are pronunciations and
+                    use special characters outside the usual german alphabet. I'll give the
+                    combining variants of the symbols here. <ul>
+                        <li>a macron (U+0304)</li>
+                        <li>a breve (U+0306)</li>
+                        <li>an apostrophe (U+02BC)</li>
+                        <li>an acute accent (U+0301)</li>
+                        <li>a diaeresis and an acute accent together</li>
+                        <li>a diaeresis and a macron together</li>
+                        <li>a diaeresis and a breve together</li>
+                        <li>an inverted breve over two or more letters (see #6 below)</li>
+                        <li>a light diagonal strikethrough through one or more letters (see #6
+                            below)</li>
+                    </ul>
+                </li>
+                <li>For the inverted breve in pronunciations, there are two methods for representing
+                    this character. First, for six combinations that will be declared in the header,
+                    use a &lt;g&gt; tag in the following way (from page 2102): <blockquote>Maillard
+                        (spr. m&lt;g ref="#aij-tie"&gt;aij&lt;/g&gt;ăr)</blockquote> For other
+                    combinations, use &lt;hi rend="tie"&gt;: <blockquote></blockquote>
+                </li>
+                <li>Create one XML file for all the advertisements together (everything after page
+                    2105). It should have the title "[Anzeigen]" and the only the following code
+                    after the end of &lt;teiHeader&gt;:<blockquote>
+                        <p>&lt;text type="matter"
+                            xml:id="rmnSAMPLE2"&gt;<br />&lt;body&gt;<br />&lt;div
+                            type="body"/&gt;<br />&lt;/body&gt;<br />&lt;/text&gt;</p>
+                    </blockquote>This will serve as a placeholder for the advertisements.</li>
+            </ol>
+        </div>
+    </body>
+</html>

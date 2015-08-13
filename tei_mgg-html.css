@@ -1,0 +1,1282 @@
+/* =============================================================
+    CSS2 specification for TEI in oXygen.
+ derived from stylesheet by
+    Author: Adrian Edwards (adrian_edwards@yahoo.com)
+    Date:   2000-04-19
+ edited by Sebastian Rahtz (sebastian.rahtz@oucs.ox.ac.uk)
+            2001-05-06
+ 2003-08-29 start of new parent div resets child auto-count. kl
+ 2003-11-06 list attr list-style-type was none, now disc. kl
+ 2007-06  reworking for TEI P5 and oxygen
+
+$LastChangedDate$, $LastChangedRevision$, $LastChangedBy$
+============================================================= */
+/* Use Times New Roman for default font test */
+
+div{
+	display: inline;
+	margin: 0px;
+}
+
+div.rilm-nodename-div, div.rilm-nodename-p{
+	clear:both;
+	display:block;
+	margin: 10px 0 10px 0;
+	
+}
+
+@font-face {
+  font-family: 'Bravura Text';
+  src: url('http://rilm.info/ft/BravuraText.woff') format('woff') /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+    font-family: FreeSerif;
+    src: url('http://rilm.info/ft/FreeSerif.woff') format('woff')
+}
+
+* {
+    line-height: 1.5em;
+}
+
+.rilm-TEI {
+}
+.rilm-abbr {
+  display: inline;
+}
+.rilm-add {
+  display: inline;
+  color: green;
+  background-color: inherit;
+  text-decoration: underline;
+}
+.rilm-address {
+  display: block;
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+.rilm-addrLine {
+  display: block;
+  white-space: nowrap;
+}
+.rilm-anchor {
+  display: none;
+}
+.rilm-argument {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-att {
+  display: inline;
+  font-family: roman, 'times new roman', times, serif;
+  color: blue;
+  background-color: inherit;
+}
+.rilm-att:before {
+  content: "@";
+}
+.rilm-author {
+  display: inline;
+  font-variant: small-caps;
+}
+    
+.rilm-back {
+  display: block;
+  border: thin black solid;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+}
+.rilm-bibl {
+  display: inline;
+}
+    
+.rilm-biblFull {
+  display: inline;
+}
+ 
+
+.rilm-biblScope {
+  display: inline;
+}
+ 
+.rilm-birth:before {
+content: "*";
+}    
+.rilm-imprint   .rilm-biblScope {
+  display: block;
+}
+    
+.rilm-body {
+  margin-top: 5px;
+  margin-left: 10px;
+  display: block;
+  font-family: 'times new roman', 'Bravura Text', serif;
+  /*font-family: roman, 'times new roman', times, serif; */
+
+}
+.rilm-byline {
+  display: block;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+.rilm-category {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-catRef {
+  display: none;
+}
+.rilm-cell {
+  display: table-cell;
+  border: 1px solid #EEEFEE;
+  padding: 3px;
+  color: inherit;
+  background-color:inherit;
+}
+.rilm-cell.rilm-role_label {
+   color: inherit;
+   background-color: #BBBBBB;
+}
+.rilm-change {
+  display: block;
+  margin-bottom: 1em;
+  margin-left: 2em;
+}
+.rilm-cit {
+  display: inline;
+}
+    
+.rilm-classCode {
+  display: block;
+}
+.rilm-elementSpec,  .rilm-macroSpec,  .rilm-classSpec {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-closer {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-code {
+  display: inline;
+  font-family: monospace;
+}
+.rilm-corr {
+  display: inline;
+  color: green;
+  background-color: inherit;
+}
+.rilm-creation {
+  display: block;
+}
+.rilm-date {
+  display: inline;
+}
+    
+.rilm-change   .rilm-date,  .rilm-publicationStmt   .rilm-date {
+  display: block;
+  font-weight: bold;
+}
+.rilm-dateline {
+  display: inline;
+}
+.rilm-death:before {
+content: "†";
+}
+.rilm-del {
+  display: inline;
+  color: red;
+  background-color: inherit;
+  text-decoration: line-through;
+}
+.rilm-rilmPerson.rilm-n>.rilm-persName>.rilm-forename {
+    font-weight:bold;
+    font-style:normal;
+}
+
+.rilm-div.rilm-type_person .rilm-p.rilm-n>.rilm-rilmPerson>.rilm-persName>.rilm-forename {
+    font-weight:bold;
+    font-style:normal;
+}
+ .rilm-persName.rilm-type_alt>.rilm-forename {
+    font-style: italic !important;
+    font-weight: normal !important;
+}
+
+.rilm-p {
+    text-indent: 2em;
+}
+
+.rilm-p.rilm-rend_block {
+    margin-left:2em;
+    text-indent:0;
+}
+
+.rilm-div.rilm-type_family  .rilm-div.rilm-type_bio   .rilm-forename:first-of-type {
+font-weight: bold;
+}
+.rilm-div.rilm-type_ography,  .rilm-div.rilm-type_works{
+    text-indent: 2em;
+      font-size: .92em;
+}
+
+.rilm-head {
+    display: block;
+    margin-bottom: .25em;
+    font-weight: bold;
+
+}
+
+
+.rilm-div.rilm-type_ography > .rilm-head {
+     text-transform: uppercase;
+    font-weight: bold;
+    text-indent: inherit;
+    display:block;
+        padding-top:1em;
+        font-size:.92em;
+}
+.rilm-div.rilm-type_works > .rilm-head {
+    font-weight: bold;
+    display: block;
+    text-indent: 2em;
+     text-transform: uppercase;
+      padding-top:1em;
+        font-size:.92em;
+}
+
+.rilm-div.rilm-type_section > .rilm-head {
+    display: block;
+    /*font-weight: 600;
+    text-indent: 2em;*/
+}
+
+.rilm-div.rilm-type_section > .rilm-head > .rilm-div {
+    display: block;
+    font-style: italic;
+    text-indent: 2em;
+    padding-top: 1em;
+}
+
+/*div.rilm-type_section {
+    text-indent: 2em;*/
+
+
+.rilm-head.rilm-n::before {
+    content: attr(data-rilm-n) ". " !important;
+    font-style: normal !important;
+}
+
+.rilm-head   .rilm-note {
+    text-transform: none;
+    font-size:medium;
+    font-weight: normal;
+    display:inline;
+}
+
+
+.rilm-divGen {
+  display: none;
+}
+.rilm-docAuthor {
+  display: block;
+  margin-bottom: 0.5em;
+  margin-left: 2em;
+    text-transform: uppercase;
+
+}
+    
+.rilm-byline  .rilm-docAuthor {
+  display: inline;
+  
+}
+    
+    
+.rilm-edition {
+  display: block;
+  margin-bottom: 0.5em;
+}
+    
+.rilm-bibl  .rilm-edition {
+  display: inline;
+}
+    
+.rilm-editionStmt {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-editor {
+  display: block;
+  margin-bottom: 0.5em;
+}
+    
+.rilm-bibl  .rilm-editor {
+  display: inline;
+}
+
+.rilm-bibl  .rilm-editor.rilm-subtype_primary {
+      font-variant: small-caps;
+}
+
+    
+.rilm-eg {
+  font-family: monospace;
+  padding-top: 3mm;
+  padding-left: 4pt;
+  padding-bottom: 2pt;
+  display: block;
+  margin-top: 12pt;
+  margin-bottom: 12pt;
+  white-space: pre;
+  color: inherit;
+  background-color: #FFCC99;
+}
+    
+.rilm-emph {
+  display: inline;
+  font-style: italic;
+}
+.rilm-epigraph {
+  display: block;
+  margin-bottom: 1em;
+  text-align: center;
+}
+    
+.rilm-extent {
+  display: block;
+  margin-bottom: 1em;
+}
+    
+.rilm-bibl  .rilm-extent {
+  display: inline;
+}
+ 
+.rilm-graphic {
+color: gray;
+background-color: inherit;
+content: none !important;
+clear: both;
+display: block;
+border: 1px solid #000;
+margin: 5px 5px 5px 0;
+padding: 10px;
+/*-moz-transform:scale(0.5);
+    -webkit-transform:scale(0.5);
+    transform:scale(0.5);*/
+}
+
+.rilm-p > img {
+height: 1em;
+width: auto;
+display: inline;
+border: none;
+margin: 0 0 0 0;
+padding: 0 0 0 .5em;
+color: inherit;
+}
+
+.rilm-figure, .rilm-notatedMusic, .rilm-tableFigure {
+  display: block;
+  /*max-width:70%;*/
+  margin-bottom: 1em;
+  font-size: 1.4em;
+  zoom: 65%;
+}
+
+
+.rilm-foreign {
+  display: inline;
+  font-style: italic;
+}
+.rilm-formula {
+  display: inline;
+  font-style: italic;
+}
+.rilm-front {
+  display: block;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+}
+.rilm-funder {
+  display: block;
+  margin-bottom: 0.5em;
+}
+/*.rilm-gap {
+  display: none;
+}*/
+    
+.rilm-gap:after {
+  content: "[…]";
+  color: red;
+  font-weight: bold;
+}
+.rilm-gi,tag {
+  display: inline;
+  font-family: sans-serif;
+  color: blue;
+  background-color: inherit;
+}
+    
+.rilm-tag:before,gi:before {
+  content: "<";
+}
+    
+.rilm-tag:after,gi:after {
+  content: "";
+}
+    
+.rilm-gloss {
+  display: inline;
+}
+.rilm-group {
+  display: block;
+  margin-bottom: 1em;
+}
+
+    
+
+
+.rilm-ident {
+  display: inline;
+  font-family: monospace;
+}
+.rilm-idno {
+  display: block;
+  margin-bottom: 1em;
+}
+    
+.rilm-bibl  .rilm-idno {
+  display: inline;
+}
+        
+.rilm-imprint {
+  display: inline;
+}
+.rilm-index {
+  display: none;
+}
+.rilm-interp {
+  display: none;
+}
+.rilm-interpGrp {
+  display: none;
+}
+
+
+/*rilm-list  .rilm-item {
+  display: inline;
+  display: list-item;
+  
+}*/
+    
+.rilm-item {
+  display: list-item;
+  
+}
+
+.rilm-p .rilm-item {
+    display:block
+}
+.rilm-item.rilm-n:before {
+   content: attr(data-rilm-n) ". " !important;
+  list-style: none;
+} /* should there be space after the content?
+     And should default marker be suppressed
+     when there is an @n attribute? --DRS */
+ 
+   .rilm-type_contents   .rilm-list .rilm-item{
+    display:block;
+}
+ 
+.rilm-div.rilm-type_works   .rilm-list .rilm-item + .rilm-item:before,   .rilm-div.rilm-type_ography   .rilm-list .rilm-item + .rilm-item:before{
+     content: " \25A0  \0020 ";
+ }
+
+ 
+.rilm-change  .rilm-item {
+  display: block;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+.rilm-keywords {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-kw {
+  display: inline;
+  font-style: italic;
+}
+.rilm-l {
+  display: block;
+  white-space: nowrap;
+}
+/*label {
+  display: inline;
+  font-weight: bold;
+}
+Label {
+	display: inline;
+	font-weight : bold;
+	color : #2F4F4F;
+           background-color: inherit;
+}*/
+    
+
+.rilm-langUsage {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-lb {
+  display: block;
+}
+.rilm-lg {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-type_section .rilm-list .rilm-item, .rilm-type_bio .rilm-list .rilm-item, .rilm-type_criticism .rilm-list .rilm-item {
+    display: block;
+}
+.rilm-type_ography .rilm-list .rilm-item, .rilm-type_works .rilm-list .rilm-item {
+    display: inline;
+}
+.rilm-type_ography .rilm-type_section .rilm-list .rilm-item, .rilm-type_works .rilm-type_section .rilm-list .rilm-item {
+    display: inline;
+}
+
+.rilm-type_ography .rilm-list, .rilm-type_works .rilm-list {
+  display: block;
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-bottom: 1em;
+  margin-top: .5em;
+}
+.rilm-div.rilm-type_contents {
+ display: block;
+ 
+}
+.rilm-div.rilm-type_contents   .rilm-head {
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: bold;
+}
+    
+.rilm-list.rilm-rend_runon {
+  display: inline;
+}
+    
+.rilm-list.rilm-type_bulleted {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.rilm-list.rilm-type_unordered {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.rilm-list.rilm-type_ordered {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+    
+.rilm-list.rilm-type_numbered {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+.rilm-list.rilm-type_none {
+  list-style-type: none;
+}
+    
+.rilm-listBibl {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-mentioned {
+  display: inline;
+  font-style: italic;
+}
+.rilm-milestone {
+  display: none;
+}
+.rilm-name {
+  display: inline;
+}
+.rilm-docAuthor   .rilm-name {
+  display: inline;
+  text-transform: uppercase;
+  font-size: smaller;
+}
+.rilm-bibl   .rilm-author {
+  display: inline;
+  font-variant: small-caps;
+  
+}
+.rilm-note {
+  display: inherit;
+}
+    
+.rilm-note.rilm-n:before {
+  content: attr(data-rilm-n) ". " !important;
+  vertical-align: super;
+}
+    
+.rilm-note.rilm-place_left {
+  float: left;
+}
+    
+.rilm-note.rilm-place_right {
+  float: right;
+}
+.rilm-quote > .rilm-note {
+    font-style: normal;   
+}
+.rilm-rend_italic > .rilm-note {
+      font-style: normal;
+}
+.rilm-rend_quoted-italic > .rilm-note {
+    font-style: normal;
+}
+
+.rilm-note.rilm-place_inline,  .rilm-note.rilm-place_unspecified {
+  display: inline;
+}
+.rilm-notesStmt {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-num {
+  display: inline;
+}
+.rilm-opener {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-orig {
+  display: inline;
+}
+.rilm-p {
+  display: block;
+  /*margin-bottom: 0.5em;*/
+  
+}
+  .rilm-p.rilm-n::before {
+    content: attr(data-rilm-n) ". " !important;
+    font-style: normal !important;
+    font-weight: bold;
+    }
+.rilm-pb {
+  display: none;
+}
+    
+.rilm-pb:after {
+  content: attr(n);
+  font-weight: bold;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-align: center;
+}
+    
+.rilm-principal {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-ptr {
+    color: navy;
+    text-decoration: underline;
+    background-color: inherit;
+}
+.rilm-ptr:before{
+    background-color: inherit;
+    color: red;
+       content:"[" attr(target) "]";
+}
+
+.rilm-publicationStmt {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-publisher {
+  display: inline;
+}
+    
+.rilm-imprint   .rilm-publisher,  .rilm-publicationStmt   .rilm-publisher {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-pubPlace {
+  display: inline;
+}
+    
+.rilm-imprint   .rilm-pubPlace,  .rilm-publicationStmt   .rilm-pubPlace {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-q {
+  display: inline;
+  quotes:  '»\200A' '\200A«' '›\200A' '\200A‹';
+  margin-top: 0em;
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-bottom: 0em;
+}
+.rilm-q.rilm-rend_single {
+    quotes:  '›\200A' '\200A‹';
+}
+.rilm-quote > .rilm-q {
+    quotes: '›\200A' '\200A‹';
+}
+
+.rilm-q > .rilm-quote {
+    quotes: '›\200A' '\200A‹';
+}
+   
+    
+.rilm-q:before {
+  content: open-quote;
+font-style: normal;
+}
+    
+.rilm-q:after {
+  content: close-quote;
+font-style: normal;
+}
+
+.rilm-q.rilm-rend_left-double {
+    quotes: '»\200A' ''; 
+}
+.rilm-q.rilm-rend_right-double {
+    quotes: '\200A«' '';
+}
+.rilm-q.rilm-rend_left-double::before {
+  content: open-quote;
+  font-style: normal;  
+}
+.rilm-q.rilm-rend_right-double::after {
+  content: close-quote;
+  font-style: normal;    
+}
+ .rilm-quote {
+     display:inline;
+     font-style: italic;
+     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+ }
+ 
+ .rilm-quote:before {
+     content: open-quote;
+font-style: normal;
+ }
+ .rilm-quote:after {
+     content: close-quote;
+font-style: normal;
+ }
+ 
+.rilm-ref {
+  display: inline;
+  color: blue;
+  background-color: inherit;
+}
+.rilm-ref[data-rilm-target*="mgg"]:before {
+    content: "→ ";
+}
+
+.rilm-reg {
+  display: inline;
+  font-style: italic;
+}
+.rilm-rendition {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-resp {
+  display: inline;
+}
+.rilm-respStmt {
+  display: block;
+}
+    
+.rilm-bibl  .rilm-respStmt {
+  display: inline;
+}
+    
+/*Added 2015-06-27:*/
+.rilm-rilmPerson.rilm-n:before {
+    content: attr(data-rilm-n) ". " !important;
+    font-weight:bold;
+}
+.rilm-row {
+  display: table-row;
+}
+.rilm-row.rilm-role_label {
+   color: inherit;
+   background-color: #BBBBBB;
+}
+
+.rilm-rs {
+  display: inline;
+}
+.rilm-s {
+  display: inline;
+}
+.rilm-salute {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-samplingDecl {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-seg {
+  display: inline;
+}
+.rilm-seriesStmt {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-sic {
+  display: inline;
+  color: red;
+  background-color: inherit;
+}
+    
+.rilm-sic:after {
+  content: " .rilm-sic";
+}
+.rilm-signed {
+  display: block;
+  text-align: right;
+}
+.rilm-soCalled {
+  display: inline;
+  quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+}
+    
+.rilm-soCalled:before {
+  content: open-quote;
+font-style: normal;
+}
+    
+.rilm-soCalled:after {
+  content: close-quote;
+font-style: normal;
+}
+    
+.rilm-sp {
+  display: block;
+  margin-bottom: 0.5em;
+  margin-left: 2em;
+}
+.rilm-speaker {
+  display: inline;
+  font-weight: bold;
+}
+.rilm-sponsor {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-stage {
+  display: inline;
+  font-style: italic;
+}
+.rilm-rilmPerson.rilm-n>.rilm-persName>.rilm-surname {
+    font-weight:bold;
+    font-style:normal;
+}
+
+.rilm-div.rilm-type_person .rilm-p.rilm-n>.rilm-rilmPerson>.rilm-persName>.rilm-surname {
+    font-weight:bold;
+    font-style:normal;
+}
+ .rilm-persName.rilm-type_alt>.rilm-surname {
+    font-style: italic !important;
+    font-weight: normal !important;
+}
+
+.rilm-table {
+  text-align: center;
+  display: table;
+  margin: 1em
+}
+.rilm-table   .rilm-head{
+    display:table-caption;
+    font-style: italic;
+    margin-bottom: 6pt;
+}
+
+.rilm-tagUsage {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-taxonomy {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-term {
+  font-family: sans-serif;
+  color: blue;
+  background-color: inherit;
+  display: inline;
+}
+.rilm-textClass {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-time {
+  display: inline;
+}
+.rilm-title {
+  display: inline;
+  font-style:italic;
+}
+.rilm-title.rilm-type_generic {
+    font-style: normal;
+}
+
+.rilm-title.rilm-type_translated {
+    font-style:normal;
+}
+
+.rilm-title.rilm-subtype_secondary {
+    font-style:normal;
+}
+ 
+.rilm-titlePage {
+  display: block;
+  border: thin black solid;
+  margin-bottom: 2em;
+  text-align: center;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+.rilm-titlePart {
+  display: block;
+}
+.rilm-titleStmt {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.rilm-trailer {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-unclear {
+  display: inline;
+  color: silver;
+  background-color: inherit;
+  font-style: italic;
+}
+/* header-related material */
+.rilm-teiHeader {
+  display: block;
+  font-family: sans-serif;
+  color: silver;
+  background-color: rgb(251, 242, 234);
+  border: solid black 1pt;
+  margin-bottom: 2em;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+ teiHeader biblStruct title:before  {
+     content: 'Title: ';
+ }
+  teiHeader biblStruct editor:before  {
+     content: 'Editor: ';
+ }
+  teiHeader biblStruct publisher:before  {
+     content: 'Publisher: ';
+ }
+  teiHeader biblStruct pubPlace:before  {
+     content: 'Place of publication: ';
+ }
+  teiHeader biblStruct date:before  {
+     content: 'Year of publication: ';
+ }
+  teiHeader biblStruct biblScope.rilm-type_vol:before  {
+     content: 'Volume: ';
+ }
+   teiHeader biblStruct biblScope.rilm-type_col:before  {
+     content: 'Columns: ';
+ }
+    teiHeader biblStruct biblScope.rilm-type_part:before  {
+     content: 'Series: ';
+ }
+ 
+.rilm-titleStmt   .rilm-author {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-teiHeader  .rilm-biblScope {
+    display: block;
+    margin-bottom: .3em;
+}
+.rilm-teiHeader   .rilm-title {
+ border: solid silver .5em;
+    margin-bottom: 1em;
+    padding: .5em;
+    }
+
+.rilm-authority {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-availability {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-fileDesc {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-sourceDesc {
+  display: block;
+  border: thin silver solid;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+.rilm-revisionDesc {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-catDesc {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-encodingDesc {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-profileDesc {
+  display: block;
+  margin-bottom: 1em;
+}
+.rilm-projectDesc {
+  display: block;
+  margin-bottom: 1em;
+}
+        
+.rilm-docDate {
+  display: block;
+  margin-bottom: 0.5em;
+}
+    
+.rilm-docImprint  .rilm-docDate {
+  display: inline;
+}
+    
+.rilm-docEdition {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-docImprint {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.rilm-docTitle {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+
+/* OUCS additions */
+Button {
+	  font-family: monospace;
+	  color: red;
+	  font-weight: bold;
+	  background-color: rgb(75%,75%,75%)
+	  }
+Value {
+	  font-family: monospace;
+	  color: rgb(255, 102, 0);
+	  background-color: inherit;
+	  }
+Code {
+	  font-family: monospace;
+	  color: red;
+	  background-color: inherit;
+	  }
+Field {
+	   font-family: monospace;
+	   color: red;
+	   background-color: inherit;
+	   }
+Filespec {
+	      font-family: monospace;
+	      color: red;
+	      background-color: inherit;
+	      }
+Input {
+	   font-family: monospace;
+	   color: green;
+	   background-color: inherit;
+	   }
+Key {
+	 font-family: monospace;
+         text-decoration: underline;
+	 color: green;
+	 background-color: inherit;
+	 }
+Link {
+	  font-family: monospace;
+	  color: green;
+	  background-color: inherit;
+	  text-decoration: underline;
+	  }
+Menu {
+	  font-family: monospace;
+	  color: red;
+	  background-color: inherit;
+	  }
+Output {
+	    font-family: monospace;
+	    color: red;
+	    background-color: inherit;
+	    }
+Icon {
+	color: inherit;
+	background-color : #B0E0E6;
+	font-weight : bold;
+}
+Screen {
+  font-family: monospace;
+  padding-top: 3mm;
+  padding-left: 4pt;
+  padding-bottom: 2pt;
+  display: block;
+  margin-top: 12pt;
+  margin-bottom: 12pt;
+  white-space: pre;
+  color: inherit;
+  background-color: #FFCC99;
+   }
+.rilm-div.rilm-type_heading  .rilm-persName   .rilm-surname,  .rilm-div.rilm-type_heading  .rilm-persName.rilm-type_preferred   .rilm-surname {
+    font-weight: bold;
+}
+.rilm-div.rilm-type_heading  .rilm-persName.rilm-type_preferred {
+    font-style:normal;
+}
+.rilm-div.rilm-type_heading  .rilm-orgName,  .rilm-div.rilm-type_heading  .rilm-orgName.rilm-type_preferred {
+    font-weight:bold;
+}
+
+.rilm-orgName.rilm-type_performing {
+    font-style: italic;
+}
+.rilm-orgName.rilm-type_trans {
+    font-style: normal;
+}
+
+.rilm-orgName.rilm-type_uni {
+font-style: normal
+}
+
+.rilm-div.rilm-type_heading  .rilm-p  .rilm-persName.rilm-type_alt   .rilm-surname,  .rilm-div.rilm-type_heading  .rilm-p  .rilm-persName.rilm-type_alt   .rilm-forename {
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+.rilm-text.rilm-type_family   .rilm-list   .rilm-head {
+    font-variant: small-caps;
+}
+.rilm-list   .rilm-head {
+    font-variant: small-caps;
+}
+
+.rilm-figure .rilm-head, .rilm-figure .rilm-p, .rilm-notatedMusic .rilm-head, .rilm-notatedMusic .rilm-p, .rilm-tableFigure .rilm-head, .rilm-tableFigure .rilm-p {
+   display: inline !important;
+}
+.rilm-docAuthor {
+    text-transform:uppercase;
+    font-size: .85em;
+    font-weight: bold;
+}
+
+.rilm-figure, .rilm-notatedMusic, .rilm-tableFigure{
+    margin: 2em 0em 2em 2em;
+    font-style: italic;
+    
+}
+.rilm-teiHeader {
+    display:none
+}
+.rilm-pitch {
+   font-style: italic;
+}
+.rilm-musNote {
+    font-style: italic;
+}
+.rilm-titleStmt   .rilm-title {
+    display:block   
+}
+.rilm-titleStmt   .rilm-title:before {
+  content: "Title: ";
+  }
+*.rilm-rend_bold {
+  display: inline;
+  font-weight: bold;
+}
+*.rilm-rend_italic {
+  display: inline;
+  font-style: italic;
+}
+ *.rilm-rend_roman {
+  display:inline;
+  font-style: normal;
+  font-variant: inherit !important;
+  text-transform: inherit !important;
+ }
+*.rilm-rend_underline {
+  display: inline;
+  text-decoration:underline;
+}
+*.rilm-rend_uppercase {
+  display: inline;
+  text-transform: uppercase;
+}
+*.rilm-rend_smallcaps {
+  display: inline;
+  font-variant: small-caps;
+  font-style: inherit;
+}
+*.rilm-rend_sup {
+  display: inline;
+  vertical-align: super;
+  font-size: 60%;
+}
+*.rilm-rend_sub {
+  display: inline;
+  vertical-align: sub;
+  font-size: 60%;
+}
+*.rilm-rend_quoted-italic {
+    display: inline;
+    font-style:italic;
+    
+     quotes: "»\200A" "\200A«"  "›\200A" "\200A‹";
+ }
+ 
+*.rilm-rend_quoted-italic:before {
+     content: open-quote;
+font-style: normal;
+ }
+*.rilm-rend_quoted-italic:after {
+     content: close-quote;
+font-style: normal;
+ }
+

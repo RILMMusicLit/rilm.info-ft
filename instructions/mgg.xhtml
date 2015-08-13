@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>MGG</title>
+    </head>
+    <body>
+        <h4><a id="mgg">Die
+    Musik in der Geschichte und Gegenwart (mgg)</a></h4> <p>This publication is to be converted from
+    XHTML (.html) files to our TEI-XML format. </p> <ol>
+    <li> <p class="r201401" title="Added 04/2014">ID and filename generation. The ID of each article
+      will begin with the lowercase letters "mgg" followed by an auto-generated five-digit number.
+      The filename for that XML file will consist of that ID followed by the .xml file extension. </p> </li>
+    <li> <p class="r201401" title="Added 01/2014"><a id="mgg_teiHeader"></a>teiHeader:</p> <ul>
+          <li>
+            <p class="r201401" title="Added 01/2014">Create a &lt;change&gt; element for each
+              article created with an @when attribute and @status="created".</p>
+          </li>
+          <li>
+            <p class="r201402" title="Added 02/2014">The &lt;title&gt; element within
+              &lt;titleStmt&gt; should be the contents of &lt;div type="heading&gt; <i>without</i>
+              any alternate spellings or names. Thus, while the heading of an article in the
+              Personenteil might read "<b>Gerbič</b>, <i>Gerbić</i>, <i>Gerbec</i>, Fran,
+                <i>Franjo</i>", The titleStmt/title contents would just be "Gerbič, Fran".</p>
+          </li>
+        </ul> </li>
+    <li> <p class="r201401" title="Added 02/2014">Each &lt;text&gt; element (one per article) should have a
+          @type attribute with one of the following values: "person", "family", "corporate",
+          "topic". It should also have @xml:id with the article ID as value, and
+          <span class="r201502" title="Changed, 02/2015">@xml:lang="de-DE-1901"</span>.</p> <p
+      class="r201410" title="Added 10/2014">Articles in the Personenteil that are about neither a
+      person nor a family should be &lt;text type="corporate"&gt;. These articles do not begin with
+      birth information (the * character). For these articles,text in the &lt;div type="heading"&gt;
+      should be an &lt;orgName&gt;, not a &lt;persName&gt;. </p> </li>
+    <li> <p class="r201401" title="Edited 04/2011">&lt;div&gt; elements should receive one of the following
+          @type values: "heading", "contents", <s>(when within &lt;front&gt;);</s> "section",
+          "one-section", "bio", "criticism", "works", "ography", or "authors" (when within
+          &lt;body&gt;). In person articles in the Personenteil, one works section will always
+          appear after the biographical section, and it will usually the heading "Werke". (Any list
+          that appears before the second prose section should be type="works".) All other lists
+          (which appear after a second prose section) will have various headings, but will all
+          receive the @type value "ography". <span class="r201406" title="Edited, 06/2014">While
+          there is generally only one "works" section (often divided into sub-sections), there can
+          be many "ography" sections. The section between these two sets of lists does not have a
+          heading.</span> It should have @type="criticism". If there are named sections within any
+          of the top-level sections (bio, works, criticism, ography), they will receive an
+          @type="section" attribute. All lists in the Sachteil should have the @type value
+          "ography". If a Sachteil article is divided into sections, each should have a &lt;div
+          type="section"&gt;. If there is only one section, it should have &lt;div
+          type="one-section"&gt;. The same is true for articles in the Personenteil that are not
+          about persons.</p> </li>
+    <li> <p class="r201401" title="Editied 05/2014" id="fam">Family entries: there are many entries for
+      families which contain sub-entries for family members. The &lt;text&gt; should have
+      @type=”family”. Also, in these cases, a &lt;div&gt; should appear around the each family
+      member’s section. These articles begin with a list of the family members. This list should be
+      contained in a &lt;p&gt;, and should appear within a div type="contents". The word “Familie”
+      should appear in a &lt;head&gt; element in this div.</p> <blockquote> <p><i>Example</i></p> <p
+      class="r201405" title="Added, 05/2014">&lt;div type="heading" xml:id="d1"&gt;</p> <p
+      class="r201405" title="Added, 05/2014">&lt;p xml:id="p1"&gt;Spohr&lt;/p&gt;</p> <p
+      class="r201405" title="Added, 05/2014">&lt;div type="contents" xml:id="d2"&gt;
+      &lt;head&gt;Familie:&lt;/head&gt;&lt;p xml:id="p2"&gt;Louis (1), sein Bruder Ferdinand, seine
+      erste Frau Dorette...&lt;/p&gt;&lt;/div&gt;</p> <p class="r201405" title="Added, 05/2014"
+      >&lt;/div&gt;</p> </blockquote> <p title="Added 07/2014" class="r201407">Within family
+      articles each &lt;div type="person"&gt; begins with forenames folowed by biographical
+      information. All of this should be tagged with &lt;rilmPerson&gt;. All of the names here are
+      forenames.</p>
+        <p class="r201502" title="Added, 02/2015">&lt;div type="person" sections can contain all div
+          types that &lt;text type="person"> can contain. If a a works list an ography, or a
+          criticism section appear before the next family member, those sections should always be
+          placed <i>inside</i> the &lt;div type="person">. The following are two examples of
+          structures for this type of section:</p>
+        <blockquote class="r201502" title="Added, 02/2015">&lt;div type="person"><br />&lt;div type="bio">&lt;/div><br />&lt;div
+          type="works">&lt;/div><br />&lt;div type="criticism">&lt;/div><br />&lt;div
+          type="ography">&lt;/div><br />&lt;/div></blockquote>
+      <blockquote class="r201502" title="Added, 02/2015">&lt;div type="person><br />&lt;div type="bio">&lt;/div><br />&lt;div
+          type="ography>&lt;/div><br />&lt;/div></blockquote> </li>
+    <li> <p class="r201405" title="Edited 05/2014" id="docAuthors">Author’s Names: Name of article authors are to be
+      tagged in &lt;persName&gt; elements within a &lt;docAuthor&gt; element. Parts of the name
+      should be tagged with &lt;forename&gt;, &lt;surname&gt;, &lt;nameLink&gt;, &lt;genName&gt;,
+      &lt;roleName&gt;, and &lt;addName&gt;. This &lt;docAuthor&gt; element goes in a &lt;div&gt;
+      with @type="authors". If there are multiple authors for an article, enclose each
+      &lt;persName&gt; elements within a separate &lt;docAuthor&gt;. Be certain that the
+      &lt;docAuthor&gt; for the article is contained within the &lt;div&gt; for the article, but not
+      within any child &lt;div&gt;. If the authorship of an article is broken down into sections,
+      the &lt;div&gt; for each section should contain a &lt;docAuthor&gt; element, in addition to
+      the one for the whole article. </p> <p class="r201401" title="Added 01/2014">Here is how to determine authorship for individual
+          secitons: a name at the end of one section indicates authorship of all preceding sections
+          that do not include an author’s name. For instance, if an article contains five sections
+          and Peter Swanson wrote sections 1,2, and 3, and Jane Weiss wrote sections 4 and 5, the
+          name “Peter Swanson” would appear only after section 3, and the name “Jane Weiss” would
+          appear only after section 5.</p> </li>
+    <li> <p class="r201401" title="Added 01/2014"><a id="mgg_quotation_marks"></a>Quotation marks:
+      MGG uses guillemets (» and «; › and ‹ ) rather than English-style quotation marks (“ and ”; ‘
+      and ’). All guillemets (but not apostrophes) should be replaced with TEI elements. When a more
+      meaningful element cannot be determined, these characters can always be redered with the
+      &lt;q&gt; element (with @rend="single" for single guillemets). However, use &lt;quote&gt; or
+      &lt;title&gt; when they can be applied with confidence. Here are some guidelines for those
+      elements:</p> <ul>
+      <li> <p class="r201401" title="Added 01/2014">&lt;title&gt; should be used in bibliographies,
+        works lists, and the like for items phrases in italics--both in guillemets and without
+        guillemets. Most items in these lists will have a &lt;title&gt; element. </p> </li>
+      <li> <p class="r201401" title="Added 01/2014">&lt;quote&gt; <span title="Added 02/2014">should
+        <i>only</i></span> be applied to quotations within the text that both are italicized and
+        have a reference to a source. In MGG, these references are in parentheses, but they do not
+        always appear directly after the quote. &lt;quote&gt; elements will appear either (a) along
+        with a &lt;ref&gt; element within a &lt;cit&gt; element, or (b) on their own with an @source
+        attribute.</p> </li>
+      <li> <p class="r201410" title="Added 10/2014">Some quotations must be tagged with
+        &lt;quote&gt; within &lt;cit&gt; because it can be used as a block-level element that
+        contains paragraphs, lists, or tables.</p> </li>
+      </ul> </li>
+    <li> <p class="r201401" title="Added 01/2014">Personenteil article headings: Most headings in the
+          Personenteil consist of a list of names separated by commas. The preferred surname is in
+          boldface, Roman type; the preferred forename is is non-bold Roman type. The alternate
+          names are in italics. When there are no alternate names, that is, there are only two names
+          and one comma, that name can go into one &lt;persName&gt; element. If there are any
+          variants, each name should go in a separate &lt;persName&gt; element (in that case, each
+          &lt;persName&gt; will contain either a surname or a forename, but not both). All variants
+          before the preferred forename should be assumed to be surnames and should have @type="alt"
+          attributes. All variants after the preferred forename should be assumend to be forenames
+          and should also have @type="alt" attributes. </p> <p class="r201402"
+      title="Added 02/2014">Some Personenteil headings also include abbreviations indicating
+      nicknames, sobriequets, legal names etc. These include "gen." and "eigentl."</p> </li>
+    <li> <p class="r201401" title="Added 01/2014">Birth, death, and occupation data. This data appears at
+          the start of the (prose) biographical section of each Personenteil entry. The paragraph
+          (&lt;p&gt;) that contains this data should begin with a &lt;rilmPerson&gt; element. Within
+          this element, elements such as &lt;birth&gt;, &lt;death&gt;, &lt;baptism&gt;, and
+          &lt;burial&gt; should be inserted when appropriate. MGG uses a asterisk (*) to signify
+          birth information and a dagger (†) for death information. The abbrevation for baptized is
+          “get.” <del>These markers should each be placed in an &lt;abbr&gt; element.</del> The word
+          for buried is “begraben”--no tagging is necessary for this word. <span class="r201406"
+          title="Edited             06/2014">A date goes in the &lt;date&gt; element with two
+          attributes: @when attribute for the date in <a
+          href="http://rilm.info/ft/tei_rilm_doc.html#TEI.att.datable.w3c">WC3 format</a>; and an
+          @when-custom attribute for a four-digit year. All dates within &lt;rilmPerson&gt; should
+          have both attributes.</span> When a date is preceded by the word “um”, an additional
+          attribute should be added: @precision="low". A list of occupations common in MGG can be
+          found <a href="mgg-roles.html">here</a>. Occupations found on that list can be tagged
+          &lt;occupation&gt;</p> <div class="r201410" title="Added 10/2014"> <p> When there is a range
+      such as "1505-1514", please use the middle year in for both attributes and add
+      @precision="low":</p> <blockquote> <p>&lt;birth&gt;&lt;date when="1510" when-custom="1510"
+      precision="low"&gt;1505-1514&lt;/date&gt;&lt;/birth&gt; </p> </blockquote> <p>For a date such
+      as "26./27. Sept. 1614" choose the earlier date and add @precision="low".</p> <p>After the
+      first sentence of an article, the &lt;rilmPerson&gt; element should always include a name
+      (this is likely to require input from the Editorial Department). For example:</p>
+      <blockquote>Sein jüngerer Bruder &lt;rilmPerson&gt;Charles (&lt;birth&gt;&lt;date when="1511"
+        when-custom="1511"&gt;1511&lt;/date&gt;&lt;/birth&gt;&lt;/rilmPerson&gt;) </blockquote><p class="r201502" title="Added, 02/2015">When a &lt;birth> or &lt;death> element is added, the "*" and "†" should always be deleted.</p> </div> </li>
+    <li>
+        <p class="r201401" title="Added 01/2014"><a id="mgg-notes"></a>Notes and pitches. Note names
+          and pitch names should be marked with &lt;musNote&gt; and &lt;pitch&gt;, respectively.
+          Note names in German are <i>Ces C Cis Des D Dis Es E F Fis Ges G Gis As A Ais B H</i>. In
+          MGG they are always rendered in italcs. Pitch names are those note names followed by a
+          subscript or superscript number. So <i>f<sup>2</sup></i> would be rendered as
+          &lt;pitch&gt;f2&lt;/pitch&gt;</p>
+      </li>
+      <li>
+        <p class="r201502" title="Added 02/2015">Arrows before cross-references: The arrow and the
+          following space that precede cross-references should be deleted.</p>
+      </li>
+    <li> <h5 class="r201401" title="Added 01/2014">Bibliographic and works lists</h5> <ol type="i">
+      <li> <p class="r201401" title="Added 01/2014">Superscript numbers indicate edition numbers
+        (except for those that follow "RISM" and a year). These can go in &lt;edition&gt;
+        elements.</p> </li>
+      <li> <p class="r201406" title="Added 06/2014">The exception to this is superscripts that
+        follow "RISM" and a year. These should be tagged with &lt;hi rend="sup"&gt;</p> </li>
+      <li> <p class="r201401" title="Added 01/2014">Anything is a &lt;title&gt; tag is by default
+        italic. Titles that have other styling should have an @rend attribute to indicate whether
+        the title was roman, quoted, or quoted-italic.</p> </li>
+      <li> <p class="r201401" title="Added 01/2014">"hrsg. von" ("edited by") indicates that the
+        following person is an editor and should go in an &lt;editor&gt; element.</p> </li>
+      <li> <p class="r201410" title="Added 10/2014">If the name of an editor is rendered in
+        smallcaps, please use the following tag: &lt;editor subtype="primary"&gt; </p> </li>
+      <li> <p class="r201406" title="Added 06/2014">When an author or editor is an organization, use
+        the &lt;orgName&gt; tag within &lt;author&gt; or &lt;editor&gt;. If it is unclear, do not
+        tag anything within the &lt;author&gt; or &lt;editor&gt; tag.</p> </li>
+      <li> <p class="r201401" title="Added 01/2014">Cross-references: Cross references are indiated
+        with an arrow in the XHTML files. Make a link to the appropriate article ID.</p> </li>
+      <li> <p class="r201406" title="Added 06/2014">If there are two titles and two dates of
+        publication, there should probably be a secondary &lt;bibl&gt; within the primary
+        &lt;bibl&gt; </p> </li>
+      <li> <p class="r201407" title="Added, 07/2014">In Roman titles that follow "in:", any time a
+        number follows the title, that number should be tagged with &lt;biblScope&gt;. The big
+        exception to this is four-digit years, which should be tagged as part of the title. This
+        only applies to Roman titles that follow "in:". Numbers followed by periods should not be
+        tagged with &lt;biblScope&gt;</p> </li>
+      <li> <p class="r201407" title="Added, 07/2014">Do not use &lt;instrumentation&gt; for MGG.</p> </li>
+      <li> <p class="r201407" title="Added, 07/2014">Do not tag dates (or places) &#xa0;within
+        titles. If a date appears within a title, leave it untagged.</p> </li>
+      <li> <p class="r201410" title="Added, 10/2014">Only tag dates within &lt;bibl&gt; when they
+        are in the form dddd (where d is a digit). </p> </li>
+      <li> <p class="r201407" title="Added, 07/2014">For list sections with headings other than
+        those in the following list, use only the tags &lt;item&gt;, &lt;bibl&gt;, and &lt;hi&gt;:
+        "Werke", "literatur", "ausgaben", "schriften", "vertonungen",
+        "editionen",&#xa0;"textausgaben",&#xa0; "briefausgaben".</p> </li>
+      <li> <p class="r201407" title="Added 07/2014">Do not use the &lt;pubPlace&gt; tag in works
+        lists &lt;div type="works"&gt;.</p> </li>
+      <li> <p class="r201410" title="Added 10/2014">Unless the heading (or sub-heading) is
+        "Schriften", &lt;div type="works"&gt; lists should only receive the tags &lt;title&gt;
+        (without attributes), &lt;date&gt;, and (if applicable) &lt;editor&gt;. </p> </li>
+      <li> <p class="r201407" title="Added, 07/2014" id="discographies">In sections with the heading "diskographie":
+        (1) Do not tag anything except for titles and names. Anything else that is italic should be
+        &lt;hi rend="italic"&gt;; (2) In these sections, words within parentheses are not titles.
+        Please tag them simply with &lt;hi rend="italic"&gt;; (3) Years within parentheses in these
+        sections should simply be tagged &lt;date&gt; (not date type="comp")</p> </li>
+      <li> <p class="r201407" title="Added, 07/2014">Many "works" or "ography" sections begin with
+        some prose text, either in parentheses or not. Text that appears after the heading, indented
+        on a new line, should be tagged with &lt;p&gt;. Text that appears after heading, either on
+        the same line or on a new line but <i>not</i> indented, should be tagged in
+        &lt;note&gt;.</p> </li>
+      <li class="r201411" title="Added, 11/2014" id="titleRoman"> &lt;title rend="roman"&gt; only in the following
+            cases: <ul>
+              <li>after "in:" (must include the colon) <blockquote>&lt;bibl
+                  xml:id="b8"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;J.&lt;/abbr&gt;&lt;/forename&gt;
+                  &lt;surname&gt;Hodin&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Bedrich Smetana
+                  i Göteborg&lt;/title&gt;, in: &lt;title rend="roman"&gt;Ord och Bild&lt;/title&gt;
+                  &lt;date&gt;1941&lt;/date&gt;, &lt;biblScope
+                  unit="pp"&gt;537-547&lt;/biblScope&gt;&lt;/bibl&gt; </blockquote>
+              </li>
+              <li>after "in: " plus the name of an editor or author (see NB below)</li>
+              <li>within parentheses that are roughly the same length as and _directly_ follow an
+                italicized title (these are translations). <blockquote>&lt;bibl
+                  xml:id="b17"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;A.&lt;/abbr&gt;&lt;/forename&gt;
+                  &lt;surname&gt;Nordström&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Det hände
+                  sig i Göteborg&lt;/title&gt; (Es geschah in Göteborg),
+                  &lt;pubPlace&gt;Göteborg&lt;/pubPlace&gt;
+                  &lt;date&gt;1980&lt;/date&gt;&lt;/bibl&gt; </blockquote>
+              </li>
+              <li>around "dass." <blockquote>&lt;bibl
+                  xml:id="b49"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;A.&lt;/abbr&gt;&lt;/forename&gt;
+                  &lt;surname&gt;Zobel&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Die
+                  Kirchenbibliothek der Peterskirche zu Görlitz&lt;/title&gt;, in: &lt;title
+                  rend="roman"&gt;dass.&lt;/title&gt;, &lt;biblScope unit="vol"&gt;Bd.
+                  117&lt;/biblScope&gt;, &lt;date&gt;1941&lt;/date&gt;&lt;/bibl&gt; </blockquote>
+              </li>
+            </ul>
+            <p>N.B.: when "in:" is followed by a name (with "hrsg.") and then a comma, it should be
+              tagged &lt;editor&gt; (if followed by "Hrsg.") or (and this is very rare) &lt;author
+              rend="roman"&gt;. That will be followed either by &lt;title rend="roman"&gt; or
+              &lt;date&gt;.</p>
+            <blockquote>&lt;bibl xml:id="b23"&gt;&lt;author&gt;Ders.&lt;/author&gt;,
+              &lt;title&gt;Jenaer Liederhs&lt;/title&gt;., in:
+              &lt;editor&gt;&lt;forename&gt;&lt;abbr&gt;K.&lt;/abbr&gt;&lt;/forename&gt;
+              &lt;surname&gt;Ruh&lt;/surname&gt;&lt;/editor&gt; &lt;editor&gt;u.a.&lt;/editor&gt;
+              (Hrsg.), &lt;title rend="roman"&gt;Die dt. Literatur des MA.
+              Verfasserlexikon&lt;/title&gt;, &lt;biblScope unit="vol"&gt;Bd. 4&lt;/biblScope&gt;,
+              &lt;pubPlace&gt;Bln./N.Y.&lt;/pubPlace&gt; &lt;edition
+              rend="sup"&gt;2&lt;/edition&gt;&lt;date&gt;1983&lt;/date&gt;, &lt;biblScope
+              unit="col"&gt;Sp. 512-516&lt;/biblScope&gt;&lt;/bibl&gt; </blockquote>
+            <blockquote>&lt;bibl
+              xml:id="b7"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;Chr.&lt;/abbr&gt;&lt;/forename&gt;
+              &lt;forename&gt;&lt;abbr&gt;G.&lt;/abbr&gt;&lt;/forename&gt;
+              &lt;surname&gt;Körner&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Über
+              Charakterdarstellung in der Musik&lt;/title&gt; (&lt;date
+              type="comp"&gt;1795&lt;/date&gt;), in: &lt;author
+              rend="roman"&gt;&lt;forename&gt;&lt;abbr&gt;W.&lt;/abbr&gt;&lt;/forename&gt;
+              &lt;surname&gt;Seifert&lt;/surname&gt;&lt;/author&gt;, &lt;title
+              rend="roman"&gt;Christian Gottfried Körner. Ein Musikästhetiker der dt.
+              Klassik&lt;/title&gt;, &lt;pubPlace&gt;Rgsbg.&lt;/pubPlace&gt;
+              &lt;date&gt;1960&lt;/date&gt;, &lt;biblScope
+              unit="pp"&gt;147–158&lt;/biblScope&gt;&lt;/bibl&gt; </blockquote>
+            <blockquote>&lt;bibl
+              xml:id="b21"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;P.&lt;/abbr&gt;&lt;/forename&gt;
+              &lt;surname&gt;Boulez&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Nahsicht und
+              Fernsicht&lt;/title&gt;, in: &lt;author rend="roman"&gt;ders.&lt;/author&gt;,
+              &lt;title&gt;Werkstatt-Texte&lt;/title&gt;,
+              &lt;pubPlace&gt;Bln.&lt;/pubPlace&gt;/&lt;pubPlace&gt;Ffm.&lt;/pubPlace&gt;/&lt;pubPlace&gt;Wien&lt;/pubPlace&gt;
+              &lt;date&gt;1972&lt;/date&gt;, &lt;biblScope
+              unit="pp"&gt;58–75&lt;/biblScope&gt;&lt;/bibl&gt; </blockquote>
+          </li>
+      <li class="r201411" title="Added, 11/2014"> <p class="r201411" title="Added, 11/2014">
+        &lt;meeting&gt; should start with "Kgr. Ber." (or "Kgr.Ber.") but continue until next comma.
+        This will often include a year and a place abbreviation, but those should not be tagged as
+        such. </p> <blockquote>&lt;bibl xml:id="b18"&gt;&lt;title&gt;Kolloquium: KM. im
+        Spannungsfeld zwischen Kunst und Gottesdienst&lt;/title&gt;, in: &lt;meeting&gt;Kgr.Ber. GfM
+        Bayreuth 1981&lt;/meeting&gt;, &lt;pubPlace&gt;Kassel&lt;/pubPlace&gt;
+        &lt;date&gt;1984&lt;/date&gt;, &lt;biblScope
+        unit="pp"&gt;233-277&lt;/biblScope&gt;&lt;/bibl&gt; </blockquote> </li>
+      <li class="r201411" title="Added, 11/2014"> Periods in &lt;bibl&gt; elements usually do not
+        separate elements. They are usually serving as one of three things: <ul>
+        <li> part of an abbreviation </li>
+        <li> part of an ordinal number ("8." in German = "8th" in English). </li>
+        <li> the division between a parts of a title: &lt;title rend="roman"&gt;Christian Gottfried
+          Körner. Ein Musikästhetiker der dt. Klassik&lt;/title&gt; </li>
+        </ul> This means that they the only case where they would appear at the end of a title is as
+        part of an abbreviation: <blockquote>&lt;bibl
+        xml:id="b8"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;A.&lt;/abbr&gt;&lt;/forename&gt;
+        &lt;surname&gt;Schubiger&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Die Sängerschule St.
+        Gallens vom 8. bis zum 12. Jh.&lt;/title&gt;,
+        &lt;pubPlace&gt;Einsiedeln&lt;/pubPlace&gt;/&lt;pubPlace&gt;N.Y.&lt;/pubPlace&gt;
+        &lt;date&gt;1858&lt;/date&gt;&lt;/bibl&gt; </blockquote> </li>
+      <li class="r201411" title="Added, 11/2014"> In general, restrict the use of &lt;pubPlace&gt;
+        and &lt;date&gt; to places matching the one of the following two patterns: <ul>
+        <li> &lt;pubPlace&gt; &lt;date&gt; (or &lt;pubPlace&gt; &lt;date&gt;, &lt;biblScope
+          unit="pp"&gt;) <blockquote>&lt;bibl
+          xml:id="b6"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;J.&lt;/abbr&gt;&lt;/forename&gt;
+          &lt;surname&gt;Noppius&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Aacher
+          chronick&lt;/title&gt;, &lt;pubPlace&gt;K.&lt;/pubPlace&gt;
+          &lt;date&gt;1632&lt;/date&gt;&lt;/bibl&gt; </blockquote> <blockquote>&lt;bibl
+          xml:id="b15"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;W.&lt;/abbr&gt;&lt;/forename&gt;
+          &lt;surname&gt;Serauky&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Die Affekten-Metrik
+          des Isaac Vossius in ihrem Einfluß auf Joh. Kuhnau und Joh. Seb. Bach&lt;/title&gt;, in:
+          &lt;title rend="roman"&gt;Fs. M. Schneider&lt;/title&gt;,
+          &lt;pubPlace&gt;Lpz.&lt;/pubPlace&gt; &lt;date&gt;1955&lt;/date&gt;, &lt;biblScope
+          unit="pp"&gt;105–113&lt;/biblScope&gt;&lt;/bibl&gt; </blockquote> </li>
+        <li> in: &lt;title rend="roman"&gt; &lt;date&gt; <blockquote>&lt;bibl
+          xml:id="b30"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;W.&lt;/abbr&gt;&lt;/forename&gt;
+          &lt;surname&gt;Blankenburg&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Überlieferung und
+          Textgesch. von Martin Luthers &lt;q&gt;Encomion musices&lt;/q&gt;&lt;/title&gt;, in:
+          &lt;title rend="roman"&gt;Luther-Jb.&lt;/title&gt; &lt;date&gt;1972&lt;/date&gt;,
+          &lt;biblScope unit="pp"&gt;80–104&lt;/biblScope&gt;&lt;/bibl&gt; </blockquote> </li>
+        </ul> </li>
+      <li class="r201411" title="Added, 11/2014"> <p class="r201411" title="Added, 11/2014"> If a
+        &lt;date&gt; follows directly after &lt;title rend="roman"&gt; without any punctuation in
+        between, tag it as &lt;date&gt; if it is the only date in &#xa0;the &lt;bibl&gt;, as in this
+        example: </p> <blockquote>&lt;bibl
+        xml:id="b51"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;H.&lt;/abbr&gt;&lt;/forename&gt;
+        &lt;surname&gt;Kretzschmar&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Allgemeines und
+        Besonderes zur Affektenlehre&lt;/title&gt;, in: &lt;title rend="roman"&gt;JbP&lt;/title&gt;
+        &lt;date&gt;1911&lt;/date&gt;/&lt;biblScope unit="vol"&gt;12&lt;/biblScope&gt;&lt;/bibl&gt;
+        </blockquote> <p> Otherwise the dates should be included in &lt;title rend="roman"&gt;. In
+        the following example, there is already a date at the end of the citation, so the date is
+        included in the &lt;title rend="roman"&gt;: </p> <blockquote>&lt;bibl
+        xml:id="b16"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;H.&lt;/abbr&gt;&lt;/forename&gt;
+        &lt;surname&gt;Edlén&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Musik i
+        Göteborg&lt;/title&gt;, in: &lt;title rend="roman"&gt;Svenska musikperspektiv. Minnesskrift
+        vid Kungliga Musikaliska Akademiens 200-årsjubileum 1971&lt;/title&gt;,
+        &lt;pubPlace&gt;Stockholm&lt;/pubPlace&gt; &lt;date&gt;1971&lt;/date&gt;&lt;/bibl&gt;
+        </blockquote> <p> A further example: </p> <blockquote>&lt;bibl
+        xml:id="b18"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;A.&lt;/abbr&gt;&lt;/forename&gt;
+        &lt;surname&gt;Fritz&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Die Entwicklung der
+        Aachener Stadtmusik vom städt. Harmoniekorps zum städt. Orch. (1721-1852) und ihre Beziehung
+        zur Münstermusik&lt;/title&gt;, in: &lt;title rend="roman"&gt;Zs. des Aachener
+        Geschichtsver.&lt;/title&gt; &lt;biblScope unit="vol"&gt;49&lt;/biblScope&gt;,
+        &lt;date&gt;1926&lt;/date&gt;, &lt;biblScope
+        unit="pp"&gt;121–189&lt;/biblScope&gt;&lt;/bibl&gt; </blockquote> </li>
+      <li class="r201411" title="Added, 11/2014"> <p class="r201411" title="Added, 11/2014"
+        >&lt;pubPlace&gt;: Abbreviations in pubPlace must all be followed by periods. (The period
+        must be inside of the &lt;pubPlace&gt; element. </p> <p class="r201411"
+        title="Added, 11/2014">The following are the <em>only</em> abbreviations that should appear
+        in &lt;pubPlace&gt;: </p> <table class="table" title="Added, 11/2014" border="1">
+        <tbody>
+          <tr>
+            <td>Adm.</td>
+            <td>Agb.</td>
+            <td>Atpn.</td>
+            <td>Bln.</td>
+            <td>Brs.</td>
+            <td>Dst.</td>
+            <td>Ffm.</td>
+            <td>Flz.</td>
+            <td>Fr.i.Br.</td>
+            <td>Gtg.</td>
+            <td>Hbg.</td>
+            <td>Hdbg.</td>
+            <td>Hdh.</td>
+            <td>Hlsk.</td>
+          </tr>
+          <tr>
+            <td>K.</td>
+            <td>Kphn.</td>
+            <td>L.</td>
+            <td>Lgr.</td>
+            <td>Lpz.</td>
+            <td>M.</td>
+            <td>Mld.</td>
+            <td>Mn.</td>
+            <td>Mz.</td>
+            <td>Nbg.</td>
+            <td>Oxd.</td>
+            <td>P.</td>
+            <td>Rgsbg.</td>
+            <td>Stg.</td>
+          </tr>
+          <tr>
+            <td>Strbg.</td>
+            <td>Tbg.</td>
+            <td>Vdg.</td>
+            <td>Wbdn.</td>
+            <td>Wfbl.</td>
+            <td>Wzbg.</td>
+            <td>Z.</td>
+          </tr>
+        </tbody>
+        </table> <br /> <table class="table" title="Added, 11/2014" border="1">
+        <tbody>
+          <tr>
+            <td>Ala.</td>
+            <td>Alas.</td>
+            <td>Ariz.</td>
+            <td>Ark.</td>
+            <td>Cal.</td>
+            <td>Col.</td>
+            <td>Conn.</td>
+            <td>D.C</td>
+            <td>Del.</td>
+            <td>Fla.</td>
+            <td>Ga.</td>
+            <td>Hi.</td>
+            <td>Ia.</td>
+            <td>Id.</td>
+          </tr>
+          <tr>
+            <td>Il.</td>
+            <td>Ind.</td>
+            <td>Kalifornien</td>
+            <td>Kan.</td>
+            <td>Kans.</td>
+            <td>Ky.</td>
+            <td>La.</td>
+            <td>Mass.</td>
+            <td>Md.</td>
+            <td>Me.</td>
+            <td>Mich.</td>
+            <td>Minn.</td>
+            <td>Miss.</td>
+            <td>Mo.</td>
+          </tr>
+          <tr>
+            <td>Mont.</td>
+            <td>N.C.</td>
+            <td>N.D.</td>
+            <td>Nebr.</td>
+            <td>Nev.</td>
+            <td>N.H.</td>
+            <td>N.J.</td>
+            <td>N.Mex.</td>
+            <td>N.Y.</td>
+            <td>O.</td>
+            <td>Okla.</td>
+            <td>Oreg.</td>
+            <td>Pa.</td>
+            <td>R.I.</td>
+          </tr>
+          <tr>
+            <td>S.C.</td>
+            <td>S.D.</td>
+            <td>Tenn.</td>
+            <td>Tex.</td>
+            <td>Ut.</td>
+            <td>Vg.</td>
+            <td>Vt.</td>
+            <td>Wash.</td>
+            <td>Wis.</td>
+            <td>W.Vg.</td>
+            <td>Wy.</td>
+          </tr>
+        </tbody>
+        </table> </li>
+      <li class="r201411" title="Added, 11/2014"> <p class="r201411" title="Added, 11/2014"> There
+        are two cases where &lt;pubPlace&gt; contains multiple items separated by a slash: </p> <ol
+        type="a">
+        <li>A U.S. city followed by the state name. The abbreviation or name for the state will
+          always come from the following list and the city and state will both go in the same
+          &lt;pubPlace&gt; element <br /> <br /> <table class="table" title="Added, 11/2014"
+          border="1">
+          <tbody>
+            <tr>
+              <td>Ala.</td>
+              <td>Alas.</td>
+              <td>Ariz.</td>
+              <td>Ark.</td>
+              <td>Cal.</td>
+              <td>Col.</td>
+              <td>Conn.</td>
+              <td>D.C</td>
+              <td>Del.</td>
+              <td>Fla.</td>
+              <td>Ga.</td>
+              <td>Hi.</td>
+              <td>Ia.</td>
+              <td>Id.</td>
+            </tr>
+            <tr>
+              <td>Il.</td>
+              <td>Ind.</td>
+              <td>Kalifornien</td>
+              <td>Kan.</td>
+              <td>Kans.</td>
+              <td>Ky.</td>
+              <td>La.</td>
+              <td>Mass.</td>
+              <td>Md.</td>
+              <td>Me.</td>
+              <td>Mich.</td>
+              <td>Minn.</td>
+              <td>Miss.</td>
+              <td>Mo.</td>
+            </tr>
+            <tr>
+              <td>Mont.</td>
+              <td>N.C.</td>
+              <td>N.D.</td>
+              <td>Nebr.</td>
+              <td>Nev.</td>
+              <td>N.H.</td>
+              <td>N.J.</td>
+              <td>N.Mex.</td>
+              <td>N.Y.</td>
+              <td>O.</td>
+              <td>Okla.</td>
+              <td>Oreg.</td>
+              <td>Pa.</td>
+              <td>R.I.</td>
+            </tr>
+            <tr>
+              <td>S.C.</td>
+              <td>S.D.</td>
+              <td>Tenn.</td>
+              <td>Tex.</td>
+              <td>Ut.</td>
+              <td>Vg.</td>
+              <td>Vt.</td>
+              <td>Wash.</td>
+              <td>Wis.</td>
+              <td>W.Vg.</td>
+              <td>Wy.</td>
+            </tr>
+          </tbody>
+          </table> <blockquote>&lt;bibl
+          xml:id="b164"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;R.&lt;/abbr&gt;&lt;/forename&gt;
+          &lt;surname&gt;Erickson&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;The Structure of
+          Music: a Listener’s Guide. A Study in Terms of Melody and Counterpoint&lt;/title&gt;,
+          &lt;pubPlace&gt;Westport/Conn.&lt;/pubPlace&gt; &lt;date&gt;1977&lt;/date&gt;&lt;/bibl&gt;
+          </blockquote> </li>
+        <li>In all other cases, items on either side of the slash should be tagged individually:
+          <blockquote>&lt;bibl
+          xml:id="b357"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;W.&lt;/abbr&gt;&lt;/forename&gt;
+          &lt;surname&gt;Gerstenberg&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Generalbaßlehre
+          und Kompositionstechnik in Niedts Musikalischer Handleitung&lt;/title&gt;, in:
+          &lt;meeting&gt;Kgr.Ber. Bamberg 1953&lt;/date&gt;&lt;/meeting&gt;,
+          &lt;pubPlace&gt;Kassel&lt;/pubPlace&gt;/&lt;pubPlace&gt;Basel&lt;/pubPlace&gt;
+          &lt;date&gt;1954&lt;/date&gt;, &lt;biblScope
+          unit="pp"&gt;152-155&lt;/biblScope&gt;&lt;/bibl&gt; </blockquote> <blockquote>&lt;bibl
+          xml:id="b1"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;W.&lt;/abbr&gt;&lt;/forename&gt;
+          &lt;surname&gt;Senn&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Aus dem Kulturleben einer
+          süddt. Kleinstadt. Musik, Schule und Theater der Stadt Hall in Tirol in der Zeit vom 15.
+          bis 19. Jh.&lt;/title&gt;,
+          &lt;pubPlace&gt;Innsbruck&lt;/pubPlace&gt;/&lt;pubPlace&gt;Wien&lt;/pubPlace&gt;/&lt;pubPlace&gt;Mn.&lt;/pubPlace&gt;
+          &lt;date&gt;1938&lt;/date&gt;&lt;/bibl&gt; </blockquote> </li>
+        </ol> </li>
+      <li class="r201411" title="Added, 11/2014"> <p class="r201411" title="Added, 11/2014"><a id="fs"/>The
+        abbreviation "Fs.", "Gs." (and the word "Gedenkschrift") &#xa0;are never abbreviations for a
+        name, they are part of a &lt;title rend="roman&gt;. Note that there is usually a name that
+        follows it, but the whole thing should either be tagged &lt;title rend="roman"&gt;Fs. H.
+        Besseler&lt;/title&gt; (or &lt;title rend="roman"&gt;Capella antiqua München. Fs. zum
+        25jährigen Bestehen&lt;/title&gt; ), or left untagged. </p> </li>
+      <li class="r201411" title="Added, 11/2014"> <p class="r201411" title="Added, 11/2014">A new
+        instruction: any editor's name that appears in small-caps should be tagged &lt;editor
+        subtype="primary"&gt;. </p> <blockquote>&lt;bibl xml:id="b113"&gt;&lt;editor
+        subtype="primary"&gt;&lt;forename&gt;&lt;abbr&gt;F.&lt;/abbr&gt;&lt;/forename&gt;
+        &lt;surname&gt;Nicolodi&lt;/surname&gt;&lt;/editor&gt; (Hrsg.), &lt;title&gt;L.
+        Dallapiccola, Parole e musica&lt;/title&gt;, &lt;pubPlace&gt;ebd.&lt;/pubPlace&gt;
+        &lt;date&gt;1980&lt;/date&gt;&lt;/bibl&gt; </blockquote> </li>
+      <li class="r201411" title="Added, 11/2014"> <p class="r201411" title="Added, 11/2014"><a id="parensplusequals"></a> Another change: when you have "(=", I previously had you
+            creating a new &lt;bibl&gt; as a child of the other &lt;bibl&gt;, and using &lt;title
+            rend="roman"> within that. Instead, please <span class="r201502"
+            title="Changed, 02/2015">subsitute &lt;series> for &lt;bibl> (this means that &lt;title
+            rend="roman"> should still be tagged, and any &lt;biblScope> or &lt;date> tag within the
+            parentheses should be a child of &lt;series></span>: </p> <p class="r201411" title="Added, 11/2014">Old
+        method:</p> <blockquote>&lt;bibl
+        xml:id="b24"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;P.&lt;/abbr&gt;&lt;/forename&gt;
+        &lt;forename&gt;&lt;abbr&gt;M.&lt;/abbr&gt;&lt;/forename&gt;
+        &lt;surname&gt;Ranum&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Y atil une rhétorique des
+        airs de danse française&lt;/title&gt;, in: &lt;title rend="roman"&gt;Die Sprache der Zeichen
+        und Bilder. Rhetorik und nonverbale Kommunikation in der frühen Neuzeit&lt;/title&gt;, hrsg.
+        von &lt;editor&gt;&lt;forename&gt;&lt;abbr&gt;V.&lt;/abbr&gt;&lt;/forename&gt;
+        &lt;surname&gt;Kapp&lt;/surname&gt;&lt;/editor&gt;, &lt;pubPlace&gt;Marburg&lt;/pubPlace&gt;
+        &lt;date&gt;1990&lt;/date&gt;, &lt;biblScope unit="pp"&gt;238–254&lt;/biblScope&gt; (=
+        &lt;bibl xml:id="b25"&gt;&lt;title rend="roman"&gt;Ars Rhetorica&lt;/title&gt; &lt;biblScope
+        unit="vol"&gt;1&lt;/biblScope&gt;&lt;/bibl&gt;)&lt;/bibl&gt; </blockquote> <p
+        class="r201411" title="Added, 11/2014">New method:</p> <blockquote> &lt;bibl
+            xml:id="b24"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;P.&lt;/abbr&gt;&lt;/forename&gt;
+            &lt;forename&gt;&lt;abbr&gt;M.&lt;/abbr&gt;&lt;/forename&gt;
+            &lt;surname&gt;Ranum&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Y atil une rhétorique
+            des airs de danse française&lt;/title&gt;, in: &lt;title rend="roman"&gt;Die Sprache der
+            Zeichen und Bilder. Rhetorik und nonverbale Kommunikation in der frühen
+            Neuzeit&lt;/title&gt;, hrsg. von
+            &lt;editor&gt;&lt;forename&gt;&lt;abbr&gt;V.&lt;/abbr&gt;&lt;/forename&gt;
+            &lt;surname&gt;Kapp&lt;/surname&gt;&lt;/editor&gt;,
+            &lt;pubPlace&gt;Marburg&lt;/pubPlace&gt; &lt;date&gt;1990&lt;/date&gt;, &lt;biblScope
+            unit="pp"&gt;238–254&lt;/biblScope&gt; (= <span class="r201502" title="Changed, 02/2015">&lt;series&gt;&lt;title
+            subtype="secondary">Ars Rhetorica&lt;/title> &lt;biblScope
+            unit="vol"&gt;1&lt;/biblScope&gt;&lt;/series&gt;</span>)&lt;/bibl&gt; </blockquote> </li>
+      <li class="r201411" title="Added, 11/2014"> <p class="r201411" title="Added, 11/2014"> In
+        general, things that don't conform to any of these patterns should not be tagged. In the
+        following example, the words "Vorwort zu" do not fit into any of the patterns, so they
+        should not be tagged. </p> <blockquote>&lt;author&gt;M. Seiffert&lt;/author&gt;, Vorwort zu
+        &lt;title&gt;J. Ph. Krieger (1649-1725). 21 ausgewählte Kirchenkompos.&lt;/title&gt;,
+        &lt;pubPlace&gt;ebd.&lt;/pubPlace&gt; &lt;date&gt;1916&lt;/date&gt; (=
+        &lt;series&gt;DDT&lt;series&gt; &lt;biblScope unit="vol"&gt;53/54&lt;/biblScope&gt;)
+        </blockquote> <p class="r201411" title="Added, 11/2014"> Also, if you are at all uncertain,
+        just leave tagging out. The following is thus acceptable: </p> <blockquote> &lt;bibl
+        xml:id="b18"&gt;&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;K.&lt;/abbr&gt;&lt;/forename&gt;
+        &lt;surname&gt;Bradley&lt;/surname&gt;&lt;/author&gt;, &lt;title&gt;Gum Leaf Music in
+        Australia&lt;/title&gt;, Referat beim Kongreß der ICTM, Canberra, 5.-11. Jan.
+        1995&lt;/bibl&gt; </blockquote> <p class="r201411" title="Added, 11/2014"> The only
+        essential tags are those that relate to rendering (italics, superscript, subscript,
+        smallcaps) </p> </li>
+      <li>  <p class="r201406" title="Added 06/2014">When there are titles in the form&#xa0;Die
+        Rose&#xa0;(»<i>Es lockt schöne Wärme</i>«), the second "title" is not really a title: please
+        mark it up as follows: &lt;title&gt;Die Rose&lt;/title&gt; (&lt;incipit&gt;Es lockt schöne
+        Wärme&lt;/incipit&gt;</p>  </li>
+      <li> <p class="r201406" title="Added 06/2014">In works lists, when "in:" is followed by
+        "RISM" or "an abbreviation that includes a dash, such as "US-NYp" or "E-Barcelona", do not
+        tag these parts.</p>  </li>
+      <li>  <p class="r201401" title="Added 01/2014">"Ders." is the equivalent of the English
+        "ibid." and can be replaced by the name of the previous author in the list.</p>  </li>
+      <li> <del> <p class="r201407" title="Added, 07/2014">&lt;incipit&gt; should only be used in
+        works lists &lt;div type="works"&gt;, and never within a &lt;title&gt; element</p> </del> </li>
+      <li> <del> <p class="r201406" title="Edited 07/2014">A date in parentheses should be tagged
+        with &lt;date type="comp"&gt; (Do not use @type with &lt;date&gt; for MGG)</p> </del> </li>
+      
+      
+      
+      <li> <del> <p class="r201401" title="Added 01/2014">Opus numbers: any number directly after
+        the abbreviation "op." should, along with the abbreviation, go in an &lt;opus&gt;
+        element.</p> </del> </li>
+      <li> <del> <p class="r201406" title="Added 06/2014">The following should be tagged with
+        &lt;musKey&gt;</p></del> </li>
+      </ol> <del> <table class="r201406" title="Added 06/2014">
+      <tbody>
+        <tr>
+          <td>As-Dur</td>
+          <td>as-Moll</td>
+        </tr>
+        <tr>
+          <td>A-Dur</td>
+          <td>a-Moll</td>
+        </tr>
+        <tr>
+          <td>Ais-Dur</td>
+          <td>ais-Moll</td>
+        </tr>
+        <tr>
+          <td>B-Dur</td>
+          <td>b-Moll</td>
+        </tr>
+        <tr>
+          <td>H-Dur</td>
+          <td>h-Moll</td>
+        </tr>
+        <tr>
+          <td>Ces-Dur</td>
+          <td>ces-Moll</td>
+        </tr>
+        <tr>
+          <td>C-Dur</td>
+          <td>c-Moll</td>
+        </tr>
+        <tr>
+          <td>Cis-Dur</td>
+          <td>cis-Moll</td>
+        </tr>
+        <tr>
+          <td>Des-Dur</td>
+          <td>des-Moll</td>
+        </tr>
+        <tr>
+          <td>D-Dur</td>
+          <td>d-Moll</td>
+        </tr>
+        <tr>
+          <td>Dis-Dur</td>
+          <td>dis-Moll</td>
+        </tr>
+        <tr>
+          <td>Es-Dur</td>
+          <td>es-Moll</td>
+        </tr>
+        <tr>
+          <td>E-Dur</td>
+          <td>e-Moll</td>
+        </tr>
+        <tr>
+          <td>F-Dur</td>
+          <td>f-Moll</td>
+        </tr>
+        <tr>
+          <td>Fis-Dur</td>
+          <td>fis-Moll</td>
+        </tr>
+        <tr>
+          <td>Ges-Dur</td>
+          <td>ges-Moll</td>
+        </tr>
+        <tr>
+          <td>G-Dur</td>
+          <td>ges-Moll</td>
+        </tr>
+        <tr>
+          <td>Gis-Dur</td>
+          <td>gis-Moll</td>
+        </tr>
+      </tbody>
+      </table> </del> <p>[There are other ways keys are rendered, but they are too easily confused
+      with other abbreviations, so we'll leave them untagged.]</p> <ul>
+      <li class="r201406" title="Added, 06/2014"> <p class="r201406" title="Added 06/2014">Some
+        works lists are in the form of tables. Here is a guide to the columns that appear in those
+        tables:</p> <p>Opus: &lt;opus&gt;</p> <p>Title: &lt;title&gt;</p> <p>Werk: &lt;title&gt;</p>
+        <p>Textdichter: &lt;author role="librettist"&gt;</p> <p>Komponiert: &lt;date
+        type="comp"&gt;</p> <p>Entstehung: &lt;date type="comp"&gt;</p> <p>Enstehungsjahr: &lt;date
+        type="comp"&gt;</p> <p>Enstehungszeit: &lt;date type="comp"&gt;</p> <p>Daten: (for Ives)
+        &lt;date type="comp"&gt;</p> <p>Erstdruck: &lt;pubPlace&gt;&lt;date&gt;</p>
+        <p>Erscheingungsjahr: &lt;date&gt;</p> <p>Textanfang: &lt;incipit&gt;</p> <p>Besetzung: look
+        for "für": "für &lt;instrumentation&gt;"</p> <p>Komponist: &lt;author&gt;</p> <p>Widmung:
+        &lt;dedication&gt;</p> <p>Mensur: &lt;timeSig&gt;</p> <p>Gattung: &lt;genre&gt;</p> <p>Akte
+        &lt;biblScope unit="acts"&gt;</p> <p>Uraufführung: &lt;rilmPerformance type="ur"&gt;</p>
+        <p>UA: &lt;rilmPerformance type="ur"&gt;</p> <p>Erstaufführung: &lt;rilmPerformance
+        type="first"&gt;</p> <p>EA: &lt;rilmPerformance type="first"&gt;</p> </li>
+      <li> <a id="mgg-bibl-keywords"></a> <p class="r201406" title="Added 06/2014">Keywords. Here is
+        a chart of keywords and abbreviations for the "ography" sections, along with the tags that
+        they indicate.</p> </li>
+      </ul> </li>
+    </ol> <table class="table" border="1">
+    <thead>
+      <tr>
+        <th title="Field #1" scope="col">Keyword/Abbreviation</th>
+        <th title="Field #2" scope="col">tag</th>
+        <th title="Field #3" scope="col">example</th>
+        <th title="Field #4" scope="col">example</th>
+        <th title="Field #5" scope="col">example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Art.</td>
+        <td>&lt;title&gt;</td>
+        <td>Art. &lt;title&gt;Musikalität&lt;/title&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Aufl.</td>
+        <td>&lt;edition&gt;</td>
+        <td>&lt;edition&gt;2. Aufl.&lt;/edition</td>
+        <td>&lt;edition&gt;2. korr. Aufl.&lt;/edition&gt;</td>
+        <td>&lt;edition&gt;3., überarbeitete Aufl.&lt;/edition&gt; </td>
+      </tr>
+      <tr>
+        <td>Ausg. </td>
+        <td>&lt;edition&gt;</td>
+        <td>&lt;edition&gt;2. Ausg.&lt;/edition&gt; </td>
+        <td>Ausg. &lt;pubPlace&gt;Rostock&lt;/pubPlace&gt; &lt;date&gt;1981&lt;/date&gt;</td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Bd.</td>
+        <td>&lt;biblScope unit=”vol”&gt;</td>
+        <td>&lt;biblScope unit=”vol”&gt;Bd.?5&lt;/biblScope&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Bde.</td>
+        <td>&lt;biblScope unit=”vol”&gt;</td>
+        <td>&lt;biblScope unit=”vol”&gt;2 Bde.&lt;/biblScope&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Bearb. von </td>
+        <td>&lt;editor&gt;</td>
+        <td>Bearb. von &lt;editor&gt;&lt;forename&gt;Eike&lt;/forename&gt;
+          &lt;nameLink&gt;von&lt;/nameLink&gt;
+          &lt;surname&gt;Savigny&lt;/surname&gt;&lt;/editor&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>ca.</td>
+        <td>&lt;date&gt;</td>
+        <td>&lt;date&gt;ca. 1935&lt;/date&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>dass.</td>
+        <td>&lt;title rend="roman"&gt;</td>
+        <td>in: &lt;title rend="roman"&gt;dass.&lt;/title&gt;, &lt;biblScope
+          unit="pp"&gt;233–256&lt;/biblScope&gt; </td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Ders.</td>
+        <td>&lt;author&gt;</td>
+        <td>engl. in &lt;author&gt;Ders.&lt;/author&gt;, &lt;title rend="roman"&gt;Handel, Haydn,
+          and the Viennese Classical Style&lt;/title&gt;,</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>dies.</td>
+        <td>&lt;author&gt;</td>
+        <td>in: &lt;author&gt;dies.&lt;/author&gt;, &lt;title rend="roman"&gt;Memories and
+          Commentaries&lt;/title&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Dies.</td>
+        <td>&lt;author&gt;</td>
+        <td>&lt;author&gt;Dies.&lt;/author&gt;, &lt;title&gt;The Petipa Family in Europe and
+          America&lt;/title&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Diss.</td>
+        <td>&lt;orgName type="uni"&gt;</td>
+        <td>Diss. &lt;orgName type="uni"&gt;Bln.&lt;/orgName&gt; &lt;date&gt;1939&lt;/date&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Diss. mschr.</td>
+        <td>&lt;orgName type="uni"&gt;</td>
+        <td>Diss. mschr. &lt;orgName type="uni"&gt;Michigan&lt;/orgName&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Dr.i.Vorb. </td>
+        <td>&lt;date&gt;</td>
+        <td>&lt;date&gt;Dr.i.Vorb.&lt;/date&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+        <tr>
+          <td><span title="Added, 05/2015" class="r201505">ed. von</span></td>
+          <td><span title="Added, 05/2015" class="r201505">&lt;editor></span></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td>ebd.</td>
+        <td>&lt;pubPlace&gt;</td>
+        <td>&lt;pubPlace&gt;ebd.&lt;/pubPlace&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+        <tr>
+          <td><span class="r201505" title="Added, 05/2015">erw. von</span></td>
+          <td><span class="r201505" title="Added, 05/2015">&lt;editor role="expander"></span></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td>Fs. </td>
+        <td>&lt;title&gt;</td>
+        <td>in: &lt;title rend="roman"&gt;Fs. Max Schneider&lt;/title&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Gedenkschrift</td>
+        <td>&lt;title&gt;</td>
+        <td>in: &lt;title rend="roman"&gt;Gattungen der Musik, Gedenkschrift L.
+          Schrade&lt;/title&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>gen.</td>
+        <td>&lt;addName&gt;</td>
+        <td>gen. &lt;addName&gt;Eisenwerth&lt;/addName&gt;</td>
+        <td> gen. &lt;addName&gt;Baccicia&lt;/addName&gt;,
+          &lt;addName&gt;Bachiche&lt;/addName&gt;</td>
+        <td> <br /> </td>
+      </tr>
+        <tr>
+          <td><span title="Added, 05/2015" class="r201505">ges. von</span></td>
+          <td><span title="Added, 05/2015" class="r201505">&lt;editor role="compiler"></span></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td>Gs.</td>
+        <td>&lt;title&gt;</td>
+        <td>in: &lt;title rend="roman"&gt;Gs. W. Vetter&lt;/title&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>H. </td>
+        <td>&lt;biblScope unit=”issue”&gt;</td>
+        <td>&lt;biblScope unit=”issue”&gt;H. 4&lt;/biblScope&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>HabSchr.</td>
+        <td>&lt;pubPlace&gt;</td>
+        <td>HabSchr. &lt;pubPlace&gt;Fr.i.Br.&lt;/pubPlace&gt; &lt;date&gt;1955&lt;/date&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Hrsg.</td>
+        <td>&lt;editor&gt;</td>
+        <td>in:
+          &lt;editor&gt;&lt;forename&gt;&lt;abbr&gt;E.&lt;/abbr&gt;&lt;/forename&gt;?&lt;surname&gt;Etkind&lt;/surname&gt;&lt;/editor&gt;
+          &lt;editor&gt;u.?a.&lt;/editor&gt; (Hrsg.)</td>
+        <td>Hrsg. &lt;editor&gt;&lt;orgName&gt;Université de
+          Paris-Sorbonne&lt;/orgName&gt;&lt;/editor&gt;</td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>in Vorb. </td>
+        <td>&lt;date&gt;</td>
+        <td>&lt;date&gt;in Vorb.&lt;/date&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>in:</td>
+        <td>&lt;title&gt;</td>
+        <td>in:&lt;title rend="roman"&gt;Jb. Tanzforschung&lt;/title&gt; &lt;biblScope
+          unit="vol"&gt;2&lt;/biblScope&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Jg. </td>
+        <td>&lt;biblScope unit=”vol”&gt;</td>
+        <td>&lt;biblScope unit="vol"&gt;1. und 2. Jg.&lt;/biblScope&gt;</td>
+        <td>&lt;biblScope unit="vol"&gt;Jg. 1ff.&lt;/biblScope&gt;</td>
+        <td>&lt;biblScope unit="vol"&gt;Jg. 28&lt;/biblScope&gt;/&lt;biblScope
+          unit="issue"&gt;2&lt;/biblScope&gt;</td>
+      </tr>
+      <tr>
+        <td>Kgr.Ber. (or Kgr. Ber.)</td>
+        <td>&lt;meeting&gt;</td>
+        <td>in: &lt;meeting&gt;Kgr.Ber. IMS 11&lt;/meeting&gt;,
+          &lt;pubPlace&gt;Kopenhagen&lt;/pubPlace &lt;date&gt;1972&lt;/date&gt;</td>
+        <td>in: &lt;title rend="roman"&gt;IMS Study Group &lt;q&gt;Cantus
+          Planus&lt;/q&gt;&lt;/title&gt;,&lt;meeting&gt;Kgr.Ber. Budapest
+          &lt;date&gt;1990&lt;/date&gt;&lt;/meeting&gt;, &lt;biblScope
+          unit="pp"&gt;79-91&lt;/biblScope&gt;</td>
+        <td>in: &lt;meeting&gt;Kgr.Ber. GfM, Lpz. &lt;date&gt;1966&lt;/date&gt;&lt;/meeting&gt;,
+          &lt;pubPlace&gt;Kassel&lt;/pubPlace&gt;/&lt;pubPlace&gt;Lpz.&lt;pubPlace&gt;
+          &lt;date&gt;1970&lt;/date&gt;, &lt;biblScope unit="pp"&gt;175-181&lt;/biblScope&gt;</td>
+      </tr>
+      <tr>
+        <td>Lfg.</td>
+        <td>&lt;biblScope unit=”vol”&gt;</td>
+        <td>&lt;biblScope unit="vol"&gt;23. Lfg.&lt;/biblScope&gt;</td>
+        <td>&lt;biblScope unit="vol"&gt;Lfg. 1 (Advent und Weihnachten)&lt;/biblScope&gt;</td>
+        <td>&lt;biblScope unit="vol"&gt;9. und 10. Lfg.&lt;/biblScope&gt;</td>
+      </tr>
+      <tr>
+        <td>NA</td>
+        <td>&lt;edition&gt;</td>
+        <td>&lt;bibl&gt;&lt;edition&gt;NA&lt;/edition&gt; &lt;pubPlace&gt;Kassel&lt;/pubPlace&gt;
+          &lt;date&gt;1748&lt;/date&gt;&lt;/bibl&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Nachdr.</td>
+        <td>&lt;edition&gt;</td>
+        <td>&lt;bibl&gt;&lt;edition&gt;Nachdr.&lt;/edition&gt;
+          &lt;date&gt;1972&lt;/date&gt;&lt;/bibl&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Neudr.</td>
+        <td>&lt;edition&gt;</td>
+        <td>&lt;bibl&gt;&lt;edition&gt;Neudr.&lt;/edition&gt; &lt;pubPlace&gt;Adm.&lt;/pubPlace&gt;
+          &lt;date&gt;1966&lt;/date&gt;&lt;/bibl&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Nr.</td>
+        <td>&lt;biblScope unit=”issue”&gt;</td>
+        <td>in: &lt;title rend="roman"&gt;Tanzdrama&lt;/title&gt; &lt;/biblScope unit="issue"&gt;Nr.
+          41&lt;/biblScope&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>o.J.</td>
+        <td>&lt;date&gt;</td>
+        <td>&lt;date&gt;o.J.&lt;/date&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>o.O.</td>
+        <td>&lt;pubPlace&gt;</td>
+        <td>&lt;pubPlace&gt;o.O.&lt;/pubPlace&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>o.O.u.J.</td>
+        <td>&lt;pubPlace&gt;&lt;date&gt;</td>
+        <td>&lt;pubPlace&gt;o.O.&lt;/pubPlace&gt;&lt;date&gt;u.J.&lt;/date&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>R.</td>
+        <td>&lt;biblScope unit="series"&gt;</td>
+        <td>&lt;biblScope unit="series"&gt;R. 1&lt;/biblScope&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Red. (or red. von)</td>
+        <td>&lt;editor&gt;</td>
+        <td>Red. &lt;editor&gt;&lt;forename&gt;&lt;abbr&gt;S.&lt;/abbr&gt;&lt;/forename&gt;
+          &lt;surname&gt;Hammer&lt;/surname&gt;&lt;/editor&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Repr.</td>
+        <td>&lt;edition&gt;</td>
+        <td>&lt;pubPlace&gt;L.&lt;/pubPlace&gt; &lt;date&gt;1704&lt;/date&gt;,
+          &lt;bibl&gt;&lt;edition rend="sup"&gt;4&lt;/edition&gt;
+          &lt;date&gt;1730&lt;/date&gt;&lt;/bibl&gt;,
+          &lt;bibl&gt;&lt;edition&gt;Repr.&lt;/edition&gt; &lt;pubPlace&gt;N.?Y.&lt;/pubPlace&gt;
+          &lt;date&gt;1952&lt;/date&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>rev. Ausg. </td>
+        <td>&lt;edition&gt;</td>
+        <td>&lt;bibl&gt;&lt;edtion&gt;rev. Ausg.&lt;/edition&gt;
+          &lt;date&gt;1990&lt;date&gt;&lt;/bibl&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+        <tr>
+          <td><span class="r201505" title="Added, 05/2015">rev. von</span></td>
+          <td><span class="r201505" title="Added, 05/2015">&lt;editor role="reviser"></span></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tr>
+        <td>s.l.</td>
+        <td>&lt;pubPlace&gt;</td>
+        <td>&lt;pubPlace&gt;s.l.&lt;/pubPlace&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>s.n.</td>
+        <td>&lt;author&gt;</td>
+        <td>&lt;author&gt;s.n.&lt;/author&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Sp.</td>
+        <td>&lt;biblScope unit="col"&gt;</td>
+        <td>&lt;biblScope unit="col"&gt;Sp. 1382–1385&lt;/biblScope&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Tl.</td>
+        <td>&lt;biblScope unit="part"&gt;</td>
+        <td>&lt;biblScope unit="part"&gt;1. Tl.&lt;/biblScope&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>Tle.</td>
+        <td>&lt;biblScope unit="part"&gt;</td>
+        <td>&lt;biblScope unit="part"&gt;4 Tle.&lt;/biblScope&gt;</td>
+        <td> <br /> </td>
+        <td> <br /> </td>
+      </tr>
+      <tr>
+        <td>u.a.</td>
+        <td>&lt;pubPlace&gt;, &lt;author&gt;, &lt;editor&gt;</td>
+        <td>&lt;pubPlace&gt;Kassel&lt;/pubPlace&gt; &lt;pubPlace&gt;u.a.&lt;/pubPlace&gt;
+          &lt;date&gt;1966&lt;/date&gt;</td>
+        <td>&lt;author&gt;&lt;forename&gt;&lt;abbr&gt;S.&lt;/abbr&gt;&lt;/forename&gt;?&lt;surname&gt;Ferreti&lt;/surname&gt;&lt;/author
+          &lt;author&gt;u.a.&lt;/author&gt;</td>
+        <td>hrsg. von &lt;editor&gt;&lt;forename&gt;&lt;abbr&gt;H.&lt;/abbr&gt;&lt;/forename&gt;
+          &lt;surname&gt;Danuser&lt;/surname&gt;&lt;/editor&gt;
+          &lt;editor&gt;u.a.&lt;/editor&gt;</td>
+      </tr>
+        <tr>
+          <td><span class="r201505" title="Added, 05/2015">übs. von</span></td>
+          <td><span title="Added, 05/2015" class="r201505">&lt;editor role="translator"></span></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+    </tbody>
+    </table>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Biographie Universelle des Musiciens</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="BRS">Biographie Universelle des Musiciens</h4>
+      </div>
+    </a>
+    <div class="r201505" title="Added, 5/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print/PDF</li>
+            <li>There are eight volumes and two supplementary volumes. The volumes have various
+              publication dates <i>that do not ascend in order of the volumes:</i><ol>
+                <li>1868</li>
+                <li>1875</li>
+                <li>1874</li>
+                <li>1874</li>
+                <li>1875</li>
+                <li>1875</li>
+                <li>1867</li>
+                <li>1870</li>
+              </ol><ol>
+                <li>Supl. 1878</li>
+                <li>Supl. 1881</li>
+              </ol></li>
+            <li>The TEI header &lt;title> and &lt;author> contents will be different for the two
+              Supplement volumes. Please refer to bum-example2 file.</li>
+          <li>All entries are &lt;text type="person">.</li>
+            <li>Entries will NOT have &lt;div type="heading">, &lt;div type="subheading">, OR
+              &lt;div type="ography>. </li>
+            <li>Italic type is used to indicate <i>titles</i> only, so tag with &lt;title> rather than
+              &lt;hi>.</li>
+            <li>Double-angle quotation marks (« ») are used. See below for special treatment of block
+              quotes.</li>
+            <li>There are brief uses of non-Latin text, including Greek and Arabic.</li>
+          </ul></li>
+        <li><b>Front matter</b> will include a title page and <b>Préface</b> for volume 1, and a
+          title page and preface for Supplement volume 1. There is no need to encode front matter
+          files for volumes 2-8 or Supplement volume 2.</li>
+        <li><b>Personal names</b> in the titles of entries are given in <i>surname-forename</i>
+          order. The surname is in bold type, all capitals; forename(s) is (are) in small caps in
+          parentheses. <ul>
+            <li>Convert the small caps to normal case.</li>
+            <li>Omit parentheses ( ) from the &lt;title> element in the TEI header, and add a comma
+              following the surname, but KEEP the parentheses in the &lt;div type="body"> and do not
+              add a comma.</li>
+          </ul></li>
+        <li><b>Block quotes</b> are indicated in the print by a left double-angle quotation at the
+          beginning of each line of the quotation:<ul>
+            <li>[...inspirait a tous les etrangers autant d'etonne-<br /> ment que d'interet. « Dans
+              mes voyages, dit<br /> « Burney (<i>The present state of music</i>) j'avis
+              souvent<br /> « etonnnes des libraires du continent avec la...<br /> « encore de
+              toutes les parties du monde. » ]</li>
+          </ul>Tag these as &lt;cit rend="block">.<blockquote>&lt;p>...inspirait a tous les
+            etrangers autant d'etonnement que d'interet.&lt;/p> <br />&lt;cit
+            rend="block">&lt;quote>Dans mes voyages, dit Burney (&lt;title>The present state of
+            music&lt;/title>) j'avis souvent etonnnes des libraires du continent avec la... encore
+            de toutes les parties du monde.&lt;/quote>&lt;/cit>]</blockquote></li>
+        <li><b>See references</b> are in the form [<b>SURNAME</b> (F<small>ORENAME</small>).
+            <i>Voyez</i>
+          <b>TARGET.</b>]. <ul>
+            <li>Sometimes "<i>Voyez</i>" is abbreviated "<i>Voy</i>."</li>
+            <li>Where there is more than one target, they are separated by "ou" or "et"
+                [...<i>Voyez</i>
+              <b>SAMMARTINI</b>, ou <b>SAN MARTINI</b>.]</li>
+          </ul></li>
+        <li><b>Cross references</b> within articles are set in parentheses and contain "Voy" or
+          "Voyez" in italic type. If the parentheses contain "ce nom", the target article is the
+          word <i>preceding</i> the parentheses. [... Anais (<i>Voy</i>. ce nom)]; target article is
+          "Anais".</li>
+        <li>Entries in the two <b>Supplement</b> volumes may have <b>author initials</b> at the end,
+          in all caps, right aligned. Tag as &lt;byline>.</li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

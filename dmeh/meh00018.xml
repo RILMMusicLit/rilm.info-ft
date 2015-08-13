@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Bongó</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Sociedad General de Autores y Editores</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<publisher>Instituto Complutense de Ciencias Musicales</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+				<title>Diccionario de la música española e hispanoamericana</title>
+						<editor>
+							<forename/>
+							<surname/>
+						</editor>
+						<imprint>
+							<publisher>Sociedad General de Autores y Editores</publisher>
+							<pubPlace>[Madrid]</pubPlace>
+							<date>1999</date>
+						</imprint>
+						<biblScope unit="vol">4</biblScope>
+						<biblScope unit="col" from="615">615</biblScope>
+						<biblScope unit="col" to="616">616</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<normalization>
+					<p>Some abbrevations have been replaced by unabbrevated terms.</p>
+				</normalization>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="14.1" notAfter="2014-03-04">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="es">Spanish</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-03-04" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="meh00018" type="instrument" xml:lang="es">
+		<body>
+			<div type="heading" xml:id="d1">
+				<head>Bongó.</head>
+				<p xml:id="p1">Membranófono utilizado en diversos lugares de Hispanoamérica.</p>
+			</div>
+			<div type="contents" xml:id="d2">
+				<list>
+					<item n="I"><ref target="#d3">Costa Rica</ref>.</item>
+					<item n="II"><ref target="#d4">Cuba</ref>.</item>
+					<item n="III"><ref target="#d6">Nicaragua</ref>.</item>
+				</list>
+			</div>
+			<div type="section" n="I" xml:id="d3">
+				<head n="I">COSTA RICA.</head>
+				<p xml:id="p2">Instrumento indispensable en las baterías de los conjuntos musicales populares así como en las baterías afrolimonenses.</p>
+			</div>
+			<div type="section" n="II" xml:id="d4">
+				<head n="II">CUBA.</head>
+				<p xml:id="p3">Membranófono de golpe directo, compuesto por la unidad de dos tambores de tamaños diferentes que poseen sendos parches con disímiles alturas de tono. Las cajas de resonancia son abiertas en el extremo opuesto al parche, pueden tener forma tubular cónica o cilíndrica, y se encuentran unidas una con otra por el costado. Este instrumento presenta en Cuba varios sistemas de tensión de los parches: por apretamiento de aro y llaves tensoras; mediante el empleo de puntillas clavadas que fijan el parche al borde superior de la caja de resonancia; parche atado por sogas o correas y empleo de cuñas parietales que se colocan entre la superficie de la caja y los amarres; parche ceñido por un aro de alambre tensado hacia abajo por cuatro llaves o gazas del mismo material, que penetran hacia el interior del instrumento por obturaciones equidistantes de la caja de resonancia y llegan hasta el extremo abierto inferior, donde se coloca un palo transversal al que se fijan los alambres.</p>
+				<p xml:id="p4">Los términos bongó o bongoes son los que designan de forma más generalizada este instrumento, pero también es reconocido por los vocablos bocusitos, pailas o pailitas, y timbales o timbalitos. Por otro lado, cada membranófono que integra esta unidad es denominado de acuerdo con su tamaño como hembra o macho, para el mayor y el menor, respectivamente. En la construcción del instrumento se emplean maderas semiduras o duras y fibrosas para la caja de resonancia, que puede ser confeccionada enteriza a partir del procedimiento de tronco ahuecado, o mediante la unión de duelas. Para el parche se emplea generalmente cuero de res o chivo, apelambrado. El proceso de afinación varía de acuerdo con el sistema de tensión empleado y se corresponde respectivamente con los descritos: apretamiento de las llaves de tensión; por calentamiento del parche mediante fuego; humedecimiento con agua de las sogas y golpes perpendiculares en cada una de las cuñas con martillo; torcido de alambres por torniquete interior con movimientos giratorios de un palo transversal. La relación de altura de tono entre uno y otro parche depende del tocador que los afina, de acuerdo con una concepción auditiva dada por su experiencia individual y el contexto cultural, pero observa siempre la altura más aguda para el parche pequeño y la más grave para el mayor. Para su ejecución, el bongó se coloca generalmente entre las rodillas del ejecutante sentado, con el tambor más pequeño a la derecha y el mayor a la izquierda. En algunas casos el instrumento se coloca sobre un trípode o atril a la altura de la cintura del ejecutante. Se percute mediante la combinación de golpes de las yemas de todas las falanges de <pb n="616"/>los dedos índice, medio y anular en diferentes posiciones, y a veces se emplea la palma de la mano, lo que da como resultado distintos tipos de toques que determinan variedad de alturas y timbres. El bongó participa en el conjunto instrumental de son, en la interpretación del son, el bolero, la guaracha y la parranda campesina, además de en los coros de clave espirituanos. En estos conjuntos instrumentales presenta diversidad en su función musical, de acuerdo con el género musical de que se trate: en primer lugar, por su ambivalencia como instrumento de acompañamiento rítmico en el bolero y la guaracha y por el papel improvisatorio que cumple en la sección expansiva o montuno del son; y en segundo lugar, porque actúa como guía metrorrítmica del conjunto instrumental, en coordinación con la clave, en la parranda campesina. El agrupamiento de relaciones temporales característico de la interpretación de este instrumento y conocido comúnmente como <q>martillo</q>, es el más generalizado para la ejecución del son, el bolero y la guaracha, cuando el bongó cumple una función musical eminentemente de acompañamiento rítmico.</p>
+				<figure xml:id="f1">
+					<html:img src="images/meh00018-f1.png"/>
+				<p xml:id="p5"><hi rend="italic">Bongó y ejecución de bongó, Cuba (Ar. CIDMUC)</hi></p>
+				</figure>
+				<figure xml:id="f2">
+					<html:img src="images/meh00018-f2.png"/>
+				<p xml:id="p6"><hi rend="italic">Bongó. Cuba</hi></p>
+				</figure>
+				<p xml:id="p7">El bongó tiene sus antecedentes musicales y organológicos en las culturas de casi todas las etnias africanas que participaron en el poblamiento de Cuba, que por lo general emplean dos membranófonos abiertos acoplados en juegos. Su origen está en las áreas rurales de la zona oriental del país a finales del s. XIX y fue extendiéndose hacia las provincias occidentales en la primera década del s. XX, cuando comenzó a ser asimilado por sextetos y septetos de son. Su uso se hace generalizado en las áreas urbanas en la década de 1930. Desde sus inicios, este instrumento estuvo vinculado a los ambientes más populares de la población y su evolución y desarrollo están relacionados con la diversidad morfológico-constructiva en cuanto a la forma de unión de sus cajas de resonancia y el empleo de variados sistemas de tensión. En la actualidad coexisten distintos tipos de este instrumento que denotan procesos evolutivos paralelos o antecedentes y consecuentes. El bongó en todas sus variantes es uno de los instrumentos más ampliamente empleados a lo largo de todo el país en la práctica musical popular tradicional.</p>
+			<div type="ref" xml:id="d5">
+				<p xml:id="p8"><ref target="NA">Bocú</ref>; <ref target="NA">Paila</ref>; <ref target="NA">Timbal</ref>.</p>
+			</div>
+			</div>
+			<div type="section" n="III" xml:id="d6">
+				<head n="III">NICARAGUA.</head>
+				<p xml:id="p9">Tambor indígena de unos 60 cm de largo por 45 cm de diámetro. Su cuerpo es de madera y sus dos bocas están forradas con pieles de venado. Para su ejecución se lleva colgado al hombro y se toca con dos bolillos (baquetas). Es muy usado en Monimbo, barrio indígena de Managua.</p>
+			</div>
+			<div type="ography" xml:id="d7">
+				<head>BIBLIOGRAFÍA:</head>
+				<list>
+					<item><bibl xml:id="b1"><title>CU:HCIM</title></bibl></item><item><bibl xml:id="b2"><title>AIMC</title></bibl></item><item><bibl xml:id="b3"><title>IMA</title></bibl>.</item>
+				</list>
+			</div>
+			<div type="authors" xml:id="d8">
+				<docAuthor n="I">JORGE LUIS ACEVEDO</docAuthor>
+				<docAuthor n="II">ANA V. CASANOVA OLIVA</docAuthor>
+				<docAuthor n="III">CECILIA RUIZ DE RÍOS</docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

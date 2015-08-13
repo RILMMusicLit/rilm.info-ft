@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Handwörterbuch der musikalischen Terminologie (2012)</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="handworterbuch-hwt">Handwörterbuch der musikalischen Terminologie (2012)</h4>
+      </div>
+    </a>
+    <div class="r201505" title="Added, 5/2015">
+      <ol>
+        <li>This publication should be converted from provided PDF files.</li>
+        <li><b>General comments:</b><ul>
+            <li>Page numbering begins anew from "1" in each article.</li>
+            <li>German-style low-high quotation marks are used, both double („ ‟) and single (‚ ‛)
+              Replace all with &lt;q> tags; use @rend="single" for the single quotes. Keep
+              apostrophes (’) as Unicode characters.</li>
+            <li>Emphatic text includes text in small caps and "sperren", or loose letter
+              spacing.</li>
+            <li>Italic type is never used for emphasis. It is used either for <ol>
+                <li>Titles, or </li>
+                <li>Cross references, which are indicated by right-pointing arrows preceding the
+                  italic text.</li>
+              </ol></li>
+          </ul></li>
+        <li>All entries are &lt;text type="topic">.</li>
+        <li>All entries have a &lt;div type="heading">, &lt;div type="body">, and &lt;div
+          type="ography">, which should all be at the same structural level. <ul>
+            <li>Each &lt;div type="body"> will have several &lt;div type="section"> elements nested
+              in it.</li>
+            <li>Make sure that sections are properly nested: Roman numerals, then Arabic numerals,
+              then letters:<blockquote>I. Highest level.<br /> (1) Second level.<br /> (a) Lowest
+                level.</blockquote></li>
+          </ul></li>
+        <li>Entries begin with an introductory paragraph or two, then have a summary of the article
+          that mirrors the structure of the article's sections and their numbering, but without line
+          breaks. If you can identify this, tag as a &lt;div type="summary">.</li>
+        <li>Bibliographies are marked by the head "Lit.:". <ul>
+            <li>Items in the bibliography are usually separated by semicolons. Omit the semicolons
+              after separating into separate &lt;item>&lt;bibl> elements.</li>
+            <li>Author names are given in small caps.</li>
+            <li>Titles, regardless of whether article, book, etc., are in Roman type. Article and
+              collection articles have a comma between.</li>
+            <li>If the item is a monograph, or part of a monograph, publication place and date
+              follow the last comma and precede the semicolon</li>
+          </ul><br /><br />[Lit.: H. H<small>UCKE</small>, L’evoluzione del concetto di „musica
+          sacra“ nel quadro del rinovamento litúrgico, in: Rinovamento litúrgico e musica sacra,
+          Commento alla Istruzione „Musicam Sacram“ (Bibliotheca „Ephemerides Liturgicae“, Sectio
+          pastoralis IV), Rom 1967, 244-48; <small>DERS.</small>, Die Anfänge des Cäcilienvereins,
+          Musik u. Altar XXII, 1970, 159-78.] <blockquote>&lt;div
+            type="ography">&lt;head>Lit.:&lt;/head>
+            <br />&lt;list><br/>&lt;item>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>H.&lt;/abbr>&lt;/forename>
+            &lt;surname>Hucke&lt;/surname>&lt;/author>, &lt;title type="article">L’evoluzione del
+            concetto di &lt;q>musica sacra&lt;/q> nel quadro del rinovamento litúrgico&lt;/title>,
+            in: &lt;title>Rinovamento litúrgico e musica sacra, Commento alla Istruzione
+            &lt;q>Musicam Sacram&lt;/q>&lt;/title> (&lt;title type="periodical">Bibliotheca
+            &lt;q>Ephemerides Liturgicae&lt;/q>&lt;/title>, &lt;biblScope unit="vol">Sectio
+            pastoralis IV&lt;/biblScope>), &lt;pubPlace>Rom&lt;/pubPlace> &lt;date>1967&lt;/date>,
+            &lt;biblScope unit="pp">244-48&lt;/biblScope>&lt;/bibl>;&lt;/item>
+              <br />&lt;item>&lt;bibl>&lt;author><small>DERS.</small>&lt;/author>, &lt;title
+            type="article">Die Anfänge des Cäcilienvereins&lt;/title>, &lt;title
+            type="periodical">Musik u. Altar&lt;/title> &lt;biblScope
+            unit="vol">XXII&lt;/biblScope>, &lt;date>1970&lt;/date>, &lt;biblScope
+            unit="pp">15-78&lt;/biblScope>&lt;/bibl>.&lt;/item><br/>&lt;/list><br/>&lt;/div></blockquote></li>
+        <li>The entry author comes after the bibliography, along with a place name and date. Put all
+          in a &lt;byline> inside a &lt;div type="authors">.</li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

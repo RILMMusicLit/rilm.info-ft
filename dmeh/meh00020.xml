@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Bullerengue</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Sociedad General de Autores y Editores</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<publisher>Instituto Complutense de Ciencias Musicales</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+				<title>Diccionario de la música española e hispanoamericana</title>
+						<editor>
+							<forename/>
+							<surname/>
+						</editor>
+						<imprint>
+							<publisher>Sociedad General de Autores y Editores</publisher>
+							<pubPlace>[Madrid]</pubPlace>
+							<date>1999</date>
+						</imprint>
+						<biblScope unit="vol">4</biblScope>
+						<biblScope unit="col" from="784">784</biblScope>
+						<biblScope unit="col" to="784">784</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<normalization>
+					<p>Some abbrevations have been replaced by unabbrevated terms.</p>
+				</normalization>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="14.1" notAfter="2014-03-04">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="es">Spanish</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-03-04" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="meh00020" type="genre" xml:lang="es">
+		<body>
+			<div type="heading" xml:id="d1">
+				<head>Bullerengue.</head>
+				<p xml:id="p1">Colombia y Panamá. Danza criolla originaria de los descendientes de esclavos africanos asentados en el litoral atlántico de estos dos países.</p>
+			</div>
+			<div type="contents" xml:id="d2">
+				<list>
+					<item n="I"><ref target="#d3">Colombia</ref>.</item>
+					<item n="II"><ref target="#d5">Panamá.</ref>.</item>
+				</list>
+			</div>
+			<div type="section" n="I" xml:id="d3">
+				<head n="I">COLOMBIA.</head>
+				<p xml:id="p2">Música y danza características de las agrupaciones conocidas como tamboras, muy difundidas en la parte interior del litoral atlántico del país, especialmente en la región conocida como la Depresión Momposina y la zona de Arboletes en el golfo de Urabá, limítrofe con Panamá, y que forma parte, de manera tangencial, del complejo musical de la cumbia. Históricamente, los documentos se refieren de manera confusa a su origen y asentamiento. Existente en comunidades campesinas de origen africano y entre mestizos, por sus características no es posible aproximarlo a las músicas aborígenes de esas regiones, pero sí a las expresiones que utilizaron los esclavos africanos que fueron mano de obra en las haciendas agrícolas y ganaderas.</p>
+				<p xml:id="p3">Su marcado aspecto rítmico se presta para la danza, aunque se utiliza como medio para improvisar coplas. Instrumentalmente se utilizan dos tambores de un parche (llamador y bajo), que se percuten con las manos, una tambora de dos parches, que se percute con un mazo forrado con tela gruesa y una baqueta que golpea sobre el cuerpo del instrumento, varios pares de tablitas que tocan las mujeres que hacen el coro, palmas, güiro y maracas. El canto es comúnmente interpretado por mujeres y se hace a modo responsorial, de forma que cada verso que hace la solista es respondido por un estribillo del coro de mujeres. El grupo de cantantes hace semicírculo en torno de los ejecutantes de la percusión, y los bailarines, por parejas, danzan alrededor de los músicos. Los grupos que interpretan este género son conocidos generalmente como tamboras, pero en la ciudad el género ha sido integrado en grupos de música y baile de proyección folclórica, y en orquestas de salón o de música popular. En la línea tradicional sobresalen las tamboras de Alto de Loba, Brazo de Loba, Arboletes y El Paso. Entre las orquestas de salón destacan Los Corraleros de Majagual. De los grupos de proyección, el Son Palenke, el de Antún Castro y el de la Reina del Bullerengue, Irene Martínez.</p>
+			<div type="ref" xml:id="d4">
+				<p xml:id="p4"><ref target="NA">Tambora</ref>.</p>
+			</div>
+			</div>
+			<div type="section" n="II" xml:id="d5">
+				<head n="II">PANAMÁ.</head>
+				<p xml:id="p5">Es un baile que ejecutan los habitantes negros de la provincia del Darién en el sureste de Panamá, colindante con el océano Pacífico y la república de Colombia. Junto con el tamborito, la cumbia, el punto, la mejorana y el atravieso, es una de las danzas más importantes del país. Con su acento binario bien marcado en la caja grande (golpes de baqueta sobre la caja de resonancia) y el otro tiempo sobre el cuero, marca la pauta para los bailadores que lo realizan deslizando cada pie sucesivamente en coordinación con cada tiempo del compás 2/4. Al igual que el tamborito panameño, emplea una voz solista que alterna la melodía con un coro.</p>
+				<p xml:id="p6">Según los descriptores del baile (Manuel Zárate y Dora Pérez de Zárate, 1962), es un baile intensamente sexual que está muy emparentado con los negros congos de la provincia de Colón, al norte de Panamá. Los instrumentos que se ejecutan en el bullerengue son dos tambores, una caja y maracas. El baile se realiza por una pareja sola que demuestra su destreza, habilidad, acrobacia y procacidad. Ella baila con los pies y las piernas muy juntas frente al hombre y él a la vez trata de tomarla pero no lo consigue. En el momento culminante del baile, ella realiza un movimiento de caderas y vientre que se llama bozar, y él trata de tomarla pero tampoco lo consigue. Por último, él se quita su sombrero y lo coloca en el centro, ella baila frente a su sombrero en el suelo y él, danzando, se inclina poco a poco hasta lograr cogerlo con sus dientes, lanzándolo al aire para que caiga sobre su cabeza. Si lo logra, hay gritos y aplausos y suenan más fuerte los tambores.</p>
+			</div>
+			<div type="ography" xml:id="d6">
+				<head>BIBLIOGRAFÍA:</head>
+			<div type="section" n="I" xml:id="d7">
+				<list n="I">
+					<item><bibl xml:id="b1"><title>HMC</title></bibl></item><item><bibl xml:id="b2"><author>J. Portaccio Fontalvo</author>: <title>Colombia y su música</title>, vol. 1, Santafé de Bogotá, Logos, <date>1995</date></bibl></item><item><bibl xml:id="b3"><title>Historia de la música en Colombia a través de nuestro bolero</title>, Santafé de Bogotá, Norma, <date>1997</date></bibl>.</item>
+				</list>
+			</div>
+			<div type="section" n="II" xml:id="d8">
+				<list n="II">
+					<item><bibl xml:id="b4"><author>M. Zárate (col. D. P. de Zárate)</author>: <title>Tambor y socavón</title>, Panamá, Imp. Nacional, <date>1962</date></bibl>.</item>
+				</list>
+			</div>
+			</div>
+			<div type="authors" xml:id="d9">
+				<docAuthor n="I">BENJAMÍN YÉPEZ</docAuthor>
+				<docAuthor n="II">RONNY VELÁZQUEZ</docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

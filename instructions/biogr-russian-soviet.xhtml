@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Biographical Dictionary of Russian/Soviet Composers</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="BRS">Biographical Dictionary of Russian/Soviet Composers</h4>
+      </div>
+    </a>
+    <div class="r201505" title="Added, 5/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print</li>
+          <li>All entries are &lt;text type="person">.</li>
+            <li>Omit portions of the personal name in square brackets [ ] or parentheses ( ) from
+              the &lt;title> element in the TEI header.</li>
+            <li>Entries will have &lt;div type="body">, and one or two &lt;div type="ography>. </li>
+            <li>American-style double quotation marks are used.</li>
+            <li>Italic type is used to indicate <i>titles</i>, so tag with &lt;title> rather than
+              &lt;hi>.</li>
+          </ul></li>
+        <li><b>Front matter</b> includes the Title page, copyright page, Contents, list of
+          Abbreviations, Preface, and Acknowledgements.<ul><li>Set the tables in Abbreviations as &lt;table> elements each in their own &lt;div type="section">.</li></ul></li>
+        <li><b>Personal names</b> in the titles of entries are given in <i>surname-forename</i>
+          order, in bold type, followed by birth and death date information, as available, in
+          parentheses, and a period. <ul>
+            <li>Tag up to the first period as a &lt;rilmPerson> element. Birth and death information
+              are separated by a semicolon: [<b>Aksakov, Sergey Sergeyevich</b> (1–6–1891, Samara;
+              9–4–1968).]<blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Aksakov&lt;/surname>,
+              &lt;forename>Sergey&lt;/forename> &lt;forename>Sergeyevich&lt;/forename>&lt;/persName>
+              (&lt;birth>&lt;date when="1931-11-25" when-custom="1931">25 November 1931/date> in
+              &lt;placeName>Tampa, Florida&lt;/placeName>)&lt;/rilmPerson>. ...&lt;/p></blockquote></li>
+            <li>Pronunciations of name parts are given in square brackets. Tag these as &lt;seg
+              type="pron">.</li>
+            <li>Alternative names are given in parentheses. Where this occurs, enclose each name
+              part in its <i>own</i> &lt;persName> element: [<b>Mansuryan [M<i>uh</i>nsuryán],
+                Tigran Yegnayevich
+                (Yegiayi)</b>]<blockquote>&lt;rilmPerson>&lt;persName>&lt;surname>Mansuryan&lt;/surname>
+                &lt;seg type="pron">[M&lt;hi rend="italic">uh&lt;/hi>nsuryán]&lt;/seg>,
+                &lt;forename>Tigran&lt;/forename>
+                &lt;forename>Yegnayevich&lt;/forename>&lt;/persName>
+                (&lt;persName>&lt;forename>Yegiayi&lt;/forename>&lt;/persName>) ...
+                &lt;/rilmPerson></blockquote></li>
+          </ul></li>
+        <li><b>Worklists</b> are headed by the letter "W" in italic type, followed by a colon.
+        <ul><li>Items are delimited by semicolons or by closing parenthesis followed by a comma. At the least,
+              parse separate items by the semicolons: <br /> [<i>W:</i> Requiem Igavene tuli (1967);
+              orch: Vars. for Str (1956), 5 sym. (1960, 1964, 1966, 1967, 1970), Estonian Rhaps.
+              (1974); Pf Concertino (1958); Fant. and Fugue (org, D2082); voc. cycles; cho. mus.
+              (D1432), incl. Song about Saarema, Homo studiosus, Vivat, crescat, Per aspera ad
+              astra, Sic transit gloria; cinema works.]<blockquote>&lt;div
+                type="works">&lt;head>W:&lt;/head><br />&lt;list><br />&lt;item>&lt;bibl>Requiem
+                Igavene tuli (1967)&lt;/bibl>;&lt;/item> <br />&lt;item>&lt;bibl>orch: Vars. for Str
+                (1956)&lt;/bibl>,&lt;/item> <br />&lt;item>&lt;bibl>5 sym. (1960, 1964, 1966, 1967,
+                1970)&lt;/bibl>,&lt;/item> <br />&lt;item>&lt;bibl>Estonian Rhaps.
+                (1974)&lt;/bibl>;&lt;/item> <br />&lt;item>&lt;bibl>Pf Concertino
+                (1958)&lt;/bibl>;&lt;/item> <br />&lt;item>&lt;bibl>Fant. and Fugue (org,
+                D2082)&lt;/bibl>;&lt;/item> <br />&lt;item>&lt;bibl>voc. cycles&lt;/bibl>;&lt;/item>
+                <br/>&lt;item>&lt;bibl>cho. mus. (D1432)&lt;/bibl>, incl.&lt;/item>
+                <br />&lt;item>&lt;bibl>Song about Saarema&lt;/bibl>,&lt;/item>
+                <br />&lt;item>&lt;bibl>Homo studiosus&lt;/bibl>,&lt;/item>
+                <br />&lt;item>&lt;bibl>Vivat, crescat&lt;/bibl>,&lt;/item>
+                <br />&lt;item>&lt;bibl>Per aspera ad astra&lt;/bibl>,&lt;/item>
+                <br />&lt;item>&lt;bibl>Sic transit gloria&lt;/bibl>;&lt;/item>
+                <br />&lt;item>&lt;bibl>cinema
+                works&lt;/bibl>&lt;/item><br />&lt;/list>&lt;/div></blockquote></li></ul></li>
+        <li><b>Bibliographies</b> are headed by the letter "B" in italic type, followed by a colon. <ul>
+            <li>Individual items in the bibliographies are delimited by commas, and are abbreviated
+              or represented by numbers that are keyed to the lists at the back of the book. I have
+              created a text file "BRS-bibl-replace.txt", placed in Google Docs, that lists the
+              abbreviations and numbers and their full versions. Please <i>replace</i> the
+              abbreviations and numbers in the bibliographies with a &lt;bibl> element containing
+              the full version from the list: <br /> [<i>B:</i> B7, OCLC, SE.]<blockquote>&lt;div
+                type="ography"><br />&lt;head>B:&lt;/head>
+                <br />&lt;list><br />&lt;item>&lt;bibl>&lt;editor>&lt;forename>&lt;abbr>N.&lt;/abbr>&lt;/forename>
+                &lt;surname>Slonimsky&lt;/surname>&lt;/editor>, ed., &lt;title>Baker's Biographical
+                Dictionary of Music&lt;/title>, &lt;edition>7th ed.&lt;/edition> (&lt;pubPlace>New
+                York&lt;/pubPlace>, &lt;date>1984&lt;/date>)&lt;/bibl>&lt;/item>
+                <br />&lt;item>&lt;bibl>&lt;orgName>Online Computer Library Center&lt;/orgName>
+                [Computer
+                terminal]&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;editor>&lt;forename>&lt;abbr>Yu.&lt;/abbr>&lt;/forename>
+                &lt;surname>Keldysh&lt;/surname>&lt;/editor>, ed., &lt;title>Muzykal'naya
+                entsiklopediya&lt;/title> [&lt;title type="translated">Soviet Encyclopedia of
+                Music&lt;/title>]. (&lt;pubPlace>Moscow&lt;/pubPlace>,
+                &lt;date>1973&lt;/date>)&lt;/bibl>&lt;/item>&lt;/list><br />&lt;/div></blockquote></li>
+        <li>A few bibliographies include citations that are spelled out: <br />[<i>B:</i> B7, NG,
+              OCLC, SE; T. Livanova, ed.: <i>M. Ivanov-Boretsky</i> (M., 1972).]<blockquote>&lt;div
+                type="ography">&lt;head>B:&lt;/head>
+                <br />&lt;list>&lt;item>&lt;bibl>&lt;editor>&lt;forename>&lt;abbr>N.&lt;/abbr>&lt;/forename>
+                &lt;surname>Slonimsky&lt;/surname>&lt;/editor>, ed.: &lt;title>Baker's Biographical
+                Dictionary of Music&lt;/title>, &lt;edition>7th ed.&lt;/edition> (&lt;pubPlace>New
+                York&lt;/pubPlace>,
+                &lt;date>1984&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;editor>&lt;forename>&lt;abbr>S.&lt;/abbr>&lt;/forename>
+                &lt;surname>Sadie&lt;/surname>&lt;/editor>, ed.: &lt;title>New Grove Dictionary of
+                Music and Musicians&lt;/title>, &lt;edition>6th ed.&lt;/edition>, 20 vols.
+                (&lt;pubPlace>London&lt;/pubPlace>, &lt;date>1980&lt;/date>)&lt;/bibl>&lt;/item>
+                <br />&lt;item>&lt;orgName>Online Computer Library Center&lt;/orgName> [Computer
+                terminal]&lt;/item>
+                <br />&lt;item>&lt;bibl>&lt;editor>&lt;forename>&lt;abbr>Yu.&lt;/abbr>&lt;/forename>
+                &lt;surname>Keldysh&lt;/surname>&lt;/editor>, ed.: &lt;title>Muzykal'naya
+                entsiklopediya&lt;/title> [&lt;title type="translated">Soviet Encyclopedia of
+                Music&lt;/title>] (&lt;pubPlace>Moscow&lt;/pubPlace>, &lt;date>1973&lt;/date>)
+                &lt;/bibl>&lt;/item>
+                <br />&lt;item>&lt;bibl>&lt;editor>&lt;forename>&lt;abbr>T.&lt;/abbr>&lt;/forename>
+                &lt;surname>Livanova&lt;/surname>&lt;/editor>, ed.: &lt;title>M.
+                Ivanov-Boretsky&lt;/title> (&lt;pubPlace>M.&lt;/pubPlace>,
+                &lt;date>1972&lt;/date>)&lt;/bibl>&lt;/item>&lt;/list>&lt;/div></blockquote></li>  
+        </ul></li>
+        <li>Some articles have <b>author names</b> in all capitals as the last line, right
+          justified.</li>
+        <li><b>Cross references</b> within articles are marked by asterisks. The text before the
+          asterisk is the title of the target entry.</li>
+        <li><b>See references</b> are in the form [<b>Name.</b> See Name] . Only the surname of the
+          target entry is given.</li>
+        <li><b>Back matter</b> includes several Appendices. <ul>
+            <li><b>Appendix I</b> is a list of Composer names and works. Set as a &lt;list> and tag
+              each entry up to the semicolon OR colon as a &lt;rilmPerson>, including &lt;persName>,
+              &lt;birth> and &lt;death> elements:</li>
+          </ul><br />[Abaza, Aleksey (1916-); LC.<br />Abaza, Vladimir (1861–1918): A Misty Morning
+            (<i>M</i>).<br />Abdullayev, R.: Prel and Toccata
+            (<i>D1388</i>).]<blockquote>&lt;item>&lt;rilmPerson>&lt;persName>&lt;surname>Abaza&lt;/surname>,
+            &lt;forename>Aleksey&lt;/forename>&lt;/persName> (&lt;birth>&lt;date when="1916"
+            when-custom="1916">1916&lt;/date>&lt;/birth>-)&lt;/rilmPerson>;
+            LC.&lt;/item><br />&lt;item>&lt;rilmPerson>&lt;persName>&lt;surname>Abaza&lt;/surname>,
+            &lt;forename>Vladimir&lt;/forename>&lt;/persName> (&lt;birth>&lt;date when="1861"
+            when-custom="1861">1861&lt;/date>&lt;/birth>–&lt;death>&lt;date when="1918"
+            when-custom="1918">1918&lt;/date>&lt;/death>)&lt;/rilmPerson>: A Misty Morning (&lt;hi
+            rend="italic">M&lt;/hi>).&lt;/item><br />&lt;item>&lt;rilmPerson>&lt;persName>&lt;surname>Abdullayev&lt;/surname>,
+            &lt;forename>&lt;abbr>R.&lt;/abbr>&lt;/forename>&lt;/persName>&lt;/rilmPerson>: Prel.
+            and Toccata (&lt;hi rend="italic">D1388&lt;/hi>).&lt;/item> </blockquote><ul>
+            <li>Set <b>Appendix II</b>, a discography, as a &lt;list> with &lt;item> and &lt;bibl>
+              children. </li>
+            <li>Treat the <b>Index</b> as per the general instructions.</li>
+            <li>For the <b>Editors and Contributors</b> section, tag the <b>Editors</b> part as a
+              &lt;div type="section"> with a &lt;head> and two &lt;p> elements; tag the
+                <b>Contributors</b> part as a &lt;div type="section"> with an introductory &lt;p>
+              and a &lt;list>.</li>
+          </ul></li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

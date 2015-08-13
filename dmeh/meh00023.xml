@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+    <teiHeader xml:lang="en ">
+        <fileDesc>
+            <titleStmt>
+                <title>Bombo</title>
+                <respStmt>
+                    <resp>Encoded by</resp>
+                    <orgName>Aptara, Inc.</orgName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Sociedad General de Autores y Editores</publisher>
+                <pubPlace>Madrid</pubPlace>
+                <publisher>Instituto Complutense de Ciencias Musicales</publisher>
+                <pubPlace>Madrid</pubPlace>
+                <distributor>Répertoire International de Littérature Musicale</distributor>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <title>Diccionario de la música española e hispanoamericana</title>
+                        <editor> <forename/> <surname/> </editor>
+                        <imprint>
+                            <publisher>Sociedad General de Autores y Editores</publisher>
+                            <pubPlace>[Madrid]</pubPlace>
+                            <date>1999</date>
+                        </imprint>
+                        <biblScope unit="vol">4</biblScope>
+                        <biblScope unit="pp">537</biblScope>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <normalization>
+                    <p>Some abbrevations have been replaced by unabbrevated terms.</p>
+                </normalization>
+                <quotation marks="none">
+                    <p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt;
+                        elements are used. Single quotes are indicated with an @type attribute on
+                        those elements.</p>
+                </quotation>
+                <hyphenation eol="some">
+                    <p>End-of-line hyphenation silently removed where appropriate</p>
+                </hyphenation>
+            </editorialDecl>
+            <appInfo>
+                <application ident="oXygenXMLEditor" version="14.1" notAfter="2014-02-26">
+                    <label>oXygen XML Editor</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="es">Spanish</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change when="2015-02-21" status="created"/>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:id="mehEXAMPLE2" type="instrument" xml:lang="es">
+        <body>
+            <div type="heading" xml:id="d1">
+                <head>Bombo.</head>
+<p>Membranófono de percusión de diferentes formas y tamaños que existe en todos los países de la comunidad hispanoamericana. Su terminología, uso y función depende del contexto cultural en que se manifieste.</p>
+            </div>
+            <div type="contents" xml:id="d2">
+                <list>
+                    <item n="I"><ref target="#d4">Argentina</ref>.</item>
+                    <item n="2"><ref target="#d5">Bolivia</ref>.</item>
+                    <item n="III"><ref target="#d6">Chile</ref>.</item>
+                    <item n="IV"><ref target="#d7">Costa Rica</ref>.</item>
+                    <item n="V"><ref target="#d8">Cuba</ref>.</item>
+                    <item n="VI"><ref target="#d9">Républica Dominicana</ref>.</item>
+                    <item n="VII"><ref target="#d10">Uruguay</ref></item>
+                </list>
+            </div>
+                <div type="section" n="I" xml:id="d3">
+        <head n="I">ARGENTINA.</head> <p>Tambor rústico criollo que se construye artesanalmente utilizando para su cuerpo una sección de tronco de madera blanda (ceibo, sauce, <q>caspi-zapalle</q>, <q>lecherón</q>, entre otros). Lleva dos parches de cuero crudo (de oveja, cabra, vizcacha o <q>corzuela</q>) que se fijan cosiéndolos a sendos aros de mimbre. Sobre estos aros se apoyan los arcos, generalmente realizados en ramas de tala, que van unidos entre sí mediante un único tiento (tira delgada) de cuero vacuno que recorre el cuerpo del instrumento en zigzag. Con presillas que abrazan de dos en dos los tramos de esta corredera se regula la tensión de los parches. El bombo presenta dos variedades que se distinguen por sus dimensiones. Aquel cuyo diámetro del parche es mayor, igual o levemente menor que la altura del instrumento es utilizado en el noroeste en procesiones religiosas, <q>adoraciones</q> y <q>misachicos</q>, a veces como único acompañante, aunque también se incluye en las bandas de sikuris y de anatas. Puede carecer de aros y en ese caso podría tratarse de una supervivencia prehispánica íntimamente emparentada con la caja. Se percute con un solo mazo sobre un parche, o bien con dos, uno en cada parche, para lo cual el ejecutante marcha llevando el instrumento colgado horizontalmente del cuello y apoyado sobre el vientre o el pecho. La variedad tubular, en cambio, ha sido más utilizada por las orquestas criollas de música para bailar (gatos, chacareras, zambas, cuecas), en el centro y norte del país, utilizándose dos baquetas sobre un parche y su correspondiente aro. A partir de fines de la década de 1950 su uso comenzó a generalizarse entre los conjuntos folclóricos, cuyo auge inició el grupo Los Chalchaleros, llegando a constituir un bombo y tres guitarras la asociación instrumental de rigor para la mayoría de los artistas y aficionados al género, quienes popularizaron además las equívocas denominaciones <q>bombo indio</q> y posteriormente <q>bombo legüero</q>. En este contexto su uso profesional ha decaído debido al creciente auge de los membranófonos de procedencia industrial.</p>
+                </div>
+                <div type="section" n="II" xml:id="d4">
+ <head n="II">BOLIVIA.</head> <p>Membranófono de cuerpo de madera, de forma tubular. Lleva dos membranas de cuero de cabra curtido con su pelambre. Las membranas o parches son tensadas mediante correas de cuero sujetas a los dos aros. Los amarres tienen forma de Y o N. Se percute en una sola membrana y en los bordes de madera de los aros con dos baquetas cubiertas en uno de sus extremos por una almohadilla. Es usado por conjuntos musicales urbanos, que combinan aerófonos andinos (quenas, sikus, zampoñas) e instrumentos criollos y mestizos, como la guitarra y el charango.</p>
+                </div>
+                <div type="section" n="III" xml:id="d5">
+<head n="III">CHILE.</head> <p>En la tradición folclórica este membranófono de golpe directo, percutido con una baqueta, tiene un tamaño que varía desde 110 cm hasta 50 cm de diámetro, con una altura de caja de resonancia entre 20 cm como máximo y 8 cm como mínimo. La caja es de bronce, de otro metal o de madera y sus dos parches, habitualmente, de cuero de burro, cabro o cordero, que en la I y II región del país, en el llamado Norte Grande, suelen ser de cuero de llama, sujetos por correas, sogas, alambres u otras ataduras metálicas. A la baqueta de madera, cuyo extremo que golpea está envuelto por un trozo de tela gruesa forrado o no con un cuero flexible y delgado, se acostumbra en la I, II y III Región a ponerle una especie de cabeza de corcho o de plástico, adaptación de un flotador de red de pesca marítima, con el fin de lograr una sonoridad más poderosa, principalmente en los ceremoniales de romería.</p>
+<p>Es usado en homenajes a santos patrones por grupos de danzantes cuyos miembros aún conservan la lengua y otras formas culturales y sociales de sus etnias de origen indígena prehispánico, como sucede con los sicura aymara de Cariquima. Desde esa misma región hasta la V es instrumento obligado de bailes ceremoniales de romerías, como los que concurren a la festividad de la Virgen de La Tirana, en la localidad del mismo nombre, en la I Región; en la de Ayquina, en la II; en la de San Fernando de Copiapó, en la III; en la gran fiesta de la Virgen de Andacollo, en la IV, y en numerosos lugares de la V Región, con la denominación genérica de <q>bailes de chinos</q>. También existe en la IX y X y en muchas islas de Chiloé, acompañando cantos religiosos católicos, como los dedicados a los ángeles, niños por lo general de no más de cinco años. Menos frecuente en la música profano-festiva, no por eso deja de ser importante en ella y hasta indispensable y muy peculiar en los toques instrumentales de las cuecas nortinas y de los huaynos en las dos primeras regiones de Chile; también es muy requerida su percusión en la práctica de las cuecas de la zona de Chiloé. No obstante su evidente procedencia hispánica, muestra en la cultura folclórica chilena notables propiedades regionales y locales en la variedad de su tamaño, en los materiales con que se construye, en su condición acústica, en sus técnicas de ejecución y en sus elementos decorativos y emblemáticos en cuanto a signos y colores elegidos por los grupos que lo han incorporado a sus tradiciones musicales.</p>
+                </div>
+                <div type="section" n="IV" xml:id="d6">
+<head n="IV">COSTA RICA.</head> <p>En la música tradicional guanacasteca interpretada por las agrupaciones cimarronas y filarmonías, la función rítmica del bombo es de vital importancia. En un conjunto de marimba el encargado de llevar la armonía lo hace con el mismo esquema rítmico del bombo. En la música afrocaribeña también tiene una función esencial, especialmente en las comparsas, donde es guía de toda variación rítmica, marcando los tiempos fuertes y en algunas ocasiones improvisando. </p>
+                </div>
+                <div type="section" n="V" xml:id="d7">
+                    <head n="V">CUBA.</head>
+<p>Membranófono de percusión directa generalmente de caja tubular cilíndrica y poca altura, con dos parches ajustados y tensados mediante aros y llaves metálicas. Existen otras variantes tipológicas: caja tubular cilíndrica o ligeramente cónica con dos parches ajustados con aro y sogas tensoras; caja tubular hexaédrica o cónica con un solo parche ajustado y tensado mediante el uso de clavos. El término español bombo es el más extendido para identificar estos instrumentos, principalmente en la parte centro occidental del país, mientras que hacia la zona oriental se llama tambora, palabra castellana que se aplica a diversos membranófonos de tipología semejante a la descrita. Individualmente la terminología empleada es muy diversa: galleta, repicador, requinto y quinto para los de registro más agudo; llamador, redoblante y contrarredoblante para los de sonido medio; los más graves se denominan pilón, pilonera, fondo, conga, bajo y contrapilón. La construcción de su caja puede ser a partir de un tronco ahuecado, por duelas de cedro y también con planchas finas de madera o metal; el parche suele ser de res, chivo o material sintético. Se ejecuta golpeando un parche con un palo, mazo o baqueta mientras en el otro parche se amortigua el golpe con la mano; para ello el instrumento se cuelga al cuello u hombro izquierdo del tocador y se coloca con la línea eje de su caja horizontal un tanto ladeada. Otros, sobre todo los más pequeños, se percuten con dos varillas y se colocan frente al tocador con el eje vertical. En la música popular tradicional cubana los bombos forman parte de conjuntos de tahona, tumba francesa, bembé y gagá, pero su participación es decisiva en las congas y comparsas, principalmente en la región oriental del país, donde se hallan seis, ocho o más tamboras copartícipes con bocúes, tumbadoras y varios idiófonos metálicos. En dichos conjuntos, y generalmente en los bombos o tamboras de registro agudo, se concentran los valores rítmicos más virtuosos, de carácter improvisado, mientras que en los otros se ejecutan ritmos de valor referencial o que funcionan como guía metrorrítmica interna. La polirritmia resultante del toque de las tamboras constituye el comportamiento básico de este evento musical.</p>
+<p>La variante de bombo o tambora más generalizada en Cuba deriva de los instrumentos propios de las bandas militares que proliferaron en la isla desde el s. XVIII, las cuales, además de acompañar los cuerpos militares, participaban en fiestas de carácter popular, como era el día de Reyes o las fiestas de máscaras. Estos instrumentos se popularizaron rápidamente, se extendieron por toda la isla y, como resultado de un proceso de transculturación, adoptaron elementos organológicos de diferente antecedente cultural, de ahí la diversidad tipológica que puede apreciarse en la actualidad. </p>
+                </div>
+                <div type="section" n="VI" xml:id="d8">
+                    <head n="VI">REPÚBLICA DOMINICANA.</head>
+<p>Membranófono de dos parches. Es de fabricación local, se hace con planchuela de cobre y el tipo denominado <q>macorisano</q>, una vez terminado, mide 51 cm de ancho. Los parches se montan con ganchos metálicos que sirven para apretarlo. Se golpea con un mazo acolchado generalmente con guata y cubierto con esparadrapo. Se usa en las localidades de San Pedro de Macorís y La Romana, dos importantes enclaves cocolos del país. El bombo de La Romana es mucho más pequeño que el macorisano. Este instrumento se engancha a una correa especial de cuero, se lleva colgando delante del tocador en posición vertical y se golpea con la mano derecha en el centro del parche. Junto con otros instrumentos forma parte de los que acompañan la variada música de baile cocola y también la música cantada como el <q>guavaberry</q> o <q>aguinaldo</q>. Este tipo de música denominado cocola se interpreta desde el 25 de diciembre hasta el día de Reyes, aunque con el tiempo se ha ido ampliando su uso a otras fiestas. Se usa también para celebrar las fiestas de la Independencia y la Restauración, así como las respectivas fiestas patronales.</p>
+                </div>
+                <div type="section" n="VII" xml:id="d9">
+                    <head n="VII">URUGUAY.</head>
+<p>Membranófono de un parche y caja cónica. En el conjunto de cuatro tamboriles de diferente tamaño y afinación, el mayor se denomina bombo. Los dos extremos, el más pequeño, <q>chico</q> (soprano) y el mayor, bombo, son los puntos de apoyo de los dos intermedios: repique y piano, que son los improvisadores de los toques característicos. Según investigaciones de Lauro Ayestarán, en el s. XIX se ejecutaron los tamboriles con las manos, sin el percutor de madera de la mano derecha. Se construyen de madera, con duelas de barricas de yerbamate o aceitunas. Las duelas se ajustan utilizando flejes de hierro que las sujetan en cinco lugares. Lleva parche en un extremo, el superior y más ancho, y es abierto en el otro. Su tamaño es de 78 cm de altura y 27 cm de diámetro. El ejecutante está de pie, sujeta el instrumento con una correa de cuero al hombro izquierdo. Si lo toca caminando, la pierna izquierda casi se arrastra transportándolo.</p> <div type="ref"><p><ref target="mehEXAMPLE3">Caja</ref>; <ref target="mehEXAMPLE4">Tambor</ref>; <ref target="mehEXAMPLE5">Tambora</ref>.</p></div>
+                </div>
+                
+                    
+                
+            
+            <div type="ography" xml:id="d10">
+                <head>BIBLIOGRAFÍA:</head>
+                <div type="section" n="I" xml:id="d11">
+                    <list n="I">
+                        <item><bibl xml:id="b1"><title>IMEFA</title></bibl></item><item><bibl xml:id="b2"><title>IMA</title></bibl></item><item><bibl xml:id="b3"><title>CU:HCIM</title></bibl></item><item><bibl xml:id="b4"><author>R. Pérez Bugallo</author>: <title>Folklore musical de Salta</title>, Buenos Aires, Fecic,
+                            <date>1988</date></bibl>.</item>
+                    </list>
+                </div>
+                <div type="section" n="V" xml:id="d12">
+                    <list n="V">
+                        <item><bibl xml:id="b5"><title>CU:HCIM</title></bibl></item><item><bibl xml:id="b6"><title>AIMC</title></bibl></item><item><bibl xml:id="b7"><title>IMA</title></bibl>.</item>
+                    </list>
+                </div>
+                <div type="section" n="VI" xml:id="d13">
+                    <list n="VI">
+                        <item><bibl xml:id="b8"><author>F. Lizardo</author>: <title>Instrumentos musicales indígenas dominicanos</title>, Santo
+                            Domingo, Alfa y Omega, <date>1976</date></bibl></item><item><bibl xml:id="b9"><author>—</author>: <title>Instrumentos musicales folklóricos dominicanos</title>, I, Unesco,
+                            <date>1988</date>.</bibl></item>
+                    </list>
+                </div>
+                <div type="section" n="VII" xml:id="d14">
+                    <list n="VII">
+                        <item><bibl xml:id="b10"><title>AMU</title></bibl>.</item>
+                    </list>
+                </div>
+            </div>
+            <div type="authors" xml:id="d15">
+                <docAuthor n="I">RUBÉN PÉREZ BUGALLO</docAuthor>
+                <docAuthor n="II">WALTER SÁNCHEZ</docAuthor>
+                <docAuthor n="III">MANUEL DANNEMANN</docAuthor>
+                <docAuthor n="IV">JORGE LUIS ACEVEDO</docAuthor>
+                <docAuthor n="V">ZOBEYDA RAMOS VENEREO</docAuthor>
+                <docAuthor n="VI">FRADIQUE LIZARDO</docAuthor>
+                <docAuthor n="VII">NILDA AGUSTONI</docAuthor>
+            </div>
+        </body>
+    </text>
+</TEI>

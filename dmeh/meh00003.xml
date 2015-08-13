@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Bambuco</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Sociedad General de Autores y Editores</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<publisher>Instituto Complutense de Ciencias Musicales</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+				<title>Diccionario de la música española e hispanoamericana</title>
+						<editor>
+							<forename/>
+							<surname/>
+						</editor>
+						<imprint>
+							<publisher>Sociedad General de Autores y Editores</publisher>
+							<pubPlace>[Madrid]</pubPlace>
+							<date>1999</date>
+						</imprint>
+						<biblScope unit="vol">4</biblScope>
+						<biblScope unit="col" from="129">129</biblScope>
+						<biblScope unit="col" to="131">131</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<normalization>
+					<p>Some abbrevations have been replaced by unabbrevated terms.</p>
+				</normalization>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="14.1" notAfter="2014-03-04">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="es">Spanish</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-03-04" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="meh00003" type="genre" xml:lang="es">
+		<body>
+			<div type="heading" xml:id="d1">
+				<head>Bambuco.</head>
+				<p xml:id="p1">Género músico-danzario con presencia en algunos países de Hispanoamérica.</p>
+			</div>
+			<div type="contents" xml:id="d2">
+				<list>
+					<item n="I"><ref target="#d3">Colombia</ref>.</item>
+					<item n="II"><ref target="#d8">México</ref>.</item>
+					<item n="III"><ref target="#d9">Venezuela</ref>.</item>
+				</list>
+			</div>
+			<div type="section" n="I" xml:id="d3">
+				<head n="I">COLOMBIA.</head>
+				<p xml:id="p2">De orígenes confusos, se considera como el hecho musical que identifica la nacionalidad colombiana, si bien sus manifestaciones musicales son muy diversas. Para el pueblo que habita la cordillera de los Andes, que cruza el país en sus tres vertientes, el bambuco es sinónimo de música íntima y alegre; para los estudiosos es un problema no resuelto, ya que no hay acuerdo sobre sus características. Santos Cifuentes, en <hi rend="italic">La música en Colombia</hi>, dice: <q>No es fácil dar una idea exacta del ritmo del bambuco, el cual, al trasladarlo al papel, pierde mucho de su colorido local, por la circunstancia de que la melodía, que generalmente queda bien escrita en un compás binario o binario compuesto, aunque con algunas irregularidades, va acompañada con una armonía que asume un ritmo de división ternaria, siendo la unión de los ritmos una verdadera dificultad, ya de escritura, ya de interpretación, para quien no lo haya oído</q>. El padre Andrés Rosa sostiene: <q>La tonada popular (refiriéndose al bambuco) tiene un sabor mixto de melancólica nostalgia y frenesí acentuado ... Es netamente polirrítmica...</q> Y continúa: <q>El bambuco entremezcla el ritmo ternario con el binario: la signatura de 3/4 con la de 2/4 en tresillos. Así la expresión del compás no sería propiamente 3/4 sino más exactamente 3/4, igual a 6/8. Y esto por dos motivos: ritmo característico del bambuco es el sincopado que se encuentra en los dos últimos tiempos del compás. Éste, en tal figuración (negra, corchea-negra-corchea), presenta el aspecto de un compás de 6/8 marcado en dos tiempos. Esto referente a la melodía. Si se considera el acompañamiento se ve que su ritmo es claramente binario</q>. En términos de la descripción, los dos músicos se encuentran en puntos divergentes, y sin tener aún en cuenta que Andrés Pardo Tovar, en <hi rend="italic">La cultura popular en Colombia</hi>, dice: <q>El auténtico bambuco colombiano no solamente es polirrítmico en cuanto a su melodía: también lo es por lo que dice su <pb n="130"/>acompañamiento</q>. Ahora bien, sigue además el problema en otro sentido: los analistas hablan de una modalidad de bambuco, más específicamente la de tipo instrumental de cuerda manifiesta en los Andes; quedan las demás expresiones regionales, las cuales han sido más objeto de calificativos que de herramientas de análisis técnico. Un estudio exhaustivo sobre el tema se encuentra en Harry C. Davidson. Dentro de las variantes del bambuco existen:</p>
+				<figure xml:id="f1">
+					<html:img src="images/meh00003-f1.png"/>
+				<p xml:id="p3"><hi rend="italic">Trajes típicos del bambuco de los campesinos de Cundinamarca (L. Jaramillo de Olarte, M. Trujillo Jaramillo:</hi> Trece danzas tradicionales de Colombia, sus trajes y su música, <hi rend="italic">Bogotá, 1991)</hi></p>
+				</figure>
+			<div type="section" n="1" xml:id="d4">
+				<head n="1">Bambuco de plaza o bambuco en plaza.</head>
+				<p xml:id="p4">Género bailable e instrumental. Es una de tantas formas del bambuco colombiano erigido como tal en el s. XIX. El bambuco de plaza es característico de los negros que habitan la región correspondiente al sur del departamento del Valle y al norte del departamento del Cauca. Su denominación como bambuco de plaza, según la informante de la región, Cilena Arroyave, corresponde a los bailes que se hacían los domingos en la plaza de Puerto Tejada (pueblo del sur del Valle del Cauca) a comienzos del s. XX, en donde también tocaba la banda del pueblo. Actualmente lo bailan los conjuntos folclóricos como reminiscencia de una tradición. Se ejecuta con interludios instrumentales que acompañan la danza, los cuales se suspenden para recitar una copla picaresca, diferente cada vez. El instrumental acompañante lo componen: clarinete europeo, bombo indígena (tambor de doble parche) y cununo macho afrocolombiano (tambor cónico de un parche).</p>
+			</div>
+			<div type="section" n="2" xml:id="d5">
+				<head n="2">Bambuco vallecaucano.</head>
+				<p xml:id="p5">Género bailable e instrumental. Obedece a la difusión de este género desde Santa Fe de Bogotá en el s. XIX como canción, danza y pieza instrumental. Fue y continúa siendo el aire nacional. Se denomina vallecaucano al bambuco existente en el sur del departamento del Valle y al que se ejecuta en el departamento del Cauca, predominando en éste los antecedentes indígenas de los guambiano y páez existentes en la región, antecedentes que se reconocen tanto en el instrumental acompañante como en los giros melódicos. Estos grupos aún lo bailan en sus festividades. En el área urbana ha perdido vigencia como género bailable, pero se toca en fiestas patrias, en Navidad y celebraciones en general. Su instrumental acompañante consta de caja indígena (tambor de doble parche), carrasca indígena (idiófono de frotación), flautas traversas indígenas, triángulo europeo y mate indígena (idiófono de sacudimiento). Su compás es 6/8.</p>
+			</div>
+			<div type="section" n="3" xml:id="d6">
+				<head n="3">Bambuco viejo.</head>
+				<p xml:id="p6">Género bailable. Obedece su nombre a la difusión e importancia que tuvo el bambuco como aire nacional durante el s. XIX en Colombia. Se conoce desde comienzos del s. XX en el puerto de Guapí (departamento del Cauca) y es producto de la síntesis cultural llamada música afrocolombiana presente en la costa pacífica colombiana. Se baila en casamientos, cumpleaños y fiestas de Alumbrado de la Virgen, el 8 de diciembre. Es anterior al currulao y según informantes de la región es el mismo currulao pero en su versión más antigua. Esta danza la interpretan preferiblemente los ancianos, siendo más lenta, más pausada y sin los brincos que el hombre realiza en el currulao. Su contenido refleja una comunicación de regocijo entre los bailarines –hombres y mujeres–, que nunca se agarran sino que se comunican a través de persecuciones y desplazamientos en cuadro con un carácter de suave oleaje, como imitando el del mar. El vestuario de la mujer consiste en falda y blusa blancas a la usanza colonial: falda larga y <pb n="131"/>anchísima, blusa con escote bandeja y un bolero alrededor; el del hombre, en pantalón blanco hasta un poco más abajo de la rodilla y blusa blanca. El instrumental acompañante es el llamado conjunto de marimba: marimba de chonta (xilófono cuyas placas se hacen con la madera de la palma de chonta), cununos macho y hembra (tambores cónicos membranófonos), bombos macho y hembra (tambores bimembranófonos), guasá (idiófono de sacudimiento en forma tubular) y cantaoras.</p>
+				<figure xml:id="f2">
+					<html:img src="images/meh00003-f2.png"/>
+				<p xml:id="p7"><hi rend="italic">El Bambuco (I. Holton:</hi> La Nueva Granada: veinte meses en los Andes, ibíd)</p>
+				</figure>
+			</div>
+			<div type="section" n="4" xml:id="d7">
+				<head n="4">Bambuco andino.</head>
+				<p xml:id="p8">Es la forma más reconocida en el país como género tradicional. Ha sido el género que los nacionalistas definen como la música de Colombia, a pesar de que en realidad cada region del país tiene sus propias expresiones. Se interpreta básicamente con instrumentos de cuerda: bandola, tiples y guitarras, y eventualmente con algunos instrumentos de percusión como tambora, idiófonos, maracas y flauta. Se reconocen como subgéneros de éste: el bambuco fiestero, que se interpreta en los departamentos de Boyacá, Cundinamarca, Huila, Tolima y Valle del Cauca; el paisa, en la zona cafetera que corresponde a los departamentos de Antioquia, Caldas, Quindio, Risaralda y norte del Valle del Cauca, y el sureño, en los departamentos de Cauca y Nariño.</p>
+			</div>
+			</div>
+			<div type="section" n="II" xml:id="d8">
+				<head n="II">MÉXICO.</head>
+				<p xml:id="p9">Género musical que tuvo su auge en México en las décadas de 1920 y 1930. Figuró de manera especialmente prominente en el repertorio de la canción yucateca y entre las composiciones de Guti Cárdenas y de otros de su generación; sin embargo, por las evidencias de la tradición oral, se conoció desde unas décadas antes, a fines del Porfiriato. Es de evidente derivación circuncaribe y tiene una notable influencia del bambuco andino (paisa) colombiano.</p>
+			</div>
+			<div type="section" n="III" xml:id="d9">
+				<head n="III">VENEZUELA.</head>
+				<p xml:id="p10">Este nombre designa un tipo de canción popular derivada, en su ritmo, principalmente de la criolla cubana. También la contradanza, en su estructura binaria, influyó en los cantos –posteriormente en los bailes– que a comienzos del s. XIX fueron el solaz de la burguesía naciente de Colombia y Venezuela. Aligerando el movimiento de los bambucos cantados en Venezuela, que utilizaban ritmo y compás de habanera, se llegó a escribirlos en 6/8 modificando a la vez la estructura. Este cambio acaeció ya entrado el s. XX. El escenario geográfico de todas estas manifestaciones en Venezuela fue principalmente la parte occidental del país, pero en el estado de Lara se cultivó también el bambuco instrumental o cantado, y se sigue cultivando. En esta parte de la nación el bambuco conserva el movimiento lento y el acompañamiento del tipo habanera (2/4), y no se baila.</p>
+			</div>
+			<div type="ography" xml:id="d10">
+				<head>BIBLIOGRAFÍA:</head>
+			<div type="section" n="I" xml:id="d11">
+				<list n="I">
+					<item><bibl xml:id="b1"><author>H. C. Davidson</author>: <title>Diccionario folklórico de Colombia</title>, Bogotá, Banco de la República, <date>1970</date></bibl>.</item>
+				</list>
+			</div>
+			</div>
+			<div type="authors" xml:id="d12">
+				<docAuthor n="I">1; 4. BENJAMÍN YÉPEZ/I. 2; 3. ROCÍO CÁRDENAS</docAuthor>
+				<docAuthor n="II">Thomas Stanford</docAuthor>
+				<docAuthor n="III">LUIS FELIPE RAMÓN Y RIVERA</docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

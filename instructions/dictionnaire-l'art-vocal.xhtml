@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Dictionnaire des œuvres de l'art vocal</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="DOV">Dictionnaire des œuvres de l'art vocal (Honegger)</h4>
+      </div>
+    </a>
+    <div class="r201506" title="Added, 6/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print</li>
+            <li>Articles will have &lt;div type="body"> and &lt;div type="ography>. </li>
+            <li>Bibliographies will have up to three sections.</li>
+            <li>French-style double-angle quotation marks ( « » ) are used.</li>
+            <li>All entries are &lt;text type="work"></li>
+            <li>In body text, italic type is used to indicate <i>titles</i>, so tag with &lt;title>
+              rather than &lt;hi>.</li>
+            <li>In bibliographies, titles are in Roman type. </li>
+          </ul></li>
+        <li><b>Front matter</b>:<ul>
+            <li><u>Vol. 1:</u> title page; copyright page; "Liste des collaborateurs" (tag as
+              &lt;list>); "Introduction"; "Avant-propos"; and "Liste des abréviations" (tag as a
+              &lt;table> with two columns).<ul>
+                <li><i>Note: the </i>Introduction<i> is set entirely in Italic type, except for
+                    titles, which are in </i>ROMAN<i> type!</i></li>
+              </ul></li>
+            <li><u>Vol. 2</u>: title page; copyright page; "Liste des collaborateurs"; "Note au
+              lecteur"; and "Liste des abréviations"</li>
+            <li><u>Vol. 3</u>: title page; copyright page <i>only</i>. We do not need to encode the
+              remaining front matter as it is identical with that in vol. 2.</li>
+          </ul></li>
+        <li><b>Entry heads / titles</b> are in Bold, small caps. Convert to normal case. Tag as
+          &lt;title>. </li>
+        <li>The <i>genre</i> of the work follows directly or shortly after the title. Tag as
+          &lt;term type="genre">. See <a href="#dov-genres">the list below</a> for identification.</li>
+        <li><b>References to notation examples</b> that are not printed within the article are made
+          via white capital letters in a black box. Insert the &lt;figure> element following the
+          &lt;p> within which it is referenced.</li>
+        <li><b>Bibliographies</b> are headed "Bibliographie". <ul>
+            <li>Individual items are separated by semicolons in the print. Parts of the bibl are
+              separated by commas.</li>
+            <li>Author names in print are typest in small caps, first initial-surname. </li>
+            <li>Titles are in normal case, Roman (not italic!). </li>
+            <li>Article titles are followed by ", <i>in</i>". Periodical titles are followed by vol,
+              date.</li>
+            <li>Omit the dash after head text, the semicolons between items, and the final
+              period.</li>
+          </ul></li>
+        <li><b>See references</b> are in the form [<b>T<small>ITLE</small></b>, de <b>Named
+            Composer,</b> voir T<small>ARGET</small>.]:<br />[<b>SECOND LIVRE DES MESLANGES,</b> de
+            <b>Claude Le Jeune,</b> voir L<small>IVRE DE</small> M<small>ÉLANGES</small>.]<br />If
+          there is more than one target, each target is set in quotes: <br />[<b>(IL) SECONDO LIBRO
+            DE MADRIGALI A CINQUE VOCI,</b> de <b>Claudio Monteverdi</b>, voir les articles  «
+            E<small>CCO MORMORAR L'ONDE</small> » et « N<small>ONSI LEVAV' ANCOR L'ALBA
+            NOVELLA</small> ».]</li>
+        <li><b>Cross references</b> are indicated by a right-pointing arrow ( → ) preceding the
+          target term.</li>
+        <li><b>Back matter</b> for Vols. 1 and 2 comprises tables of illustrations at the back of
+          each volume. Set each as a &lt;table> with two columns.</li>
+        <li><b>Back matter</b> for Vol. 3 is extensive:
+        <ul><li><b>Glossaire</b> (glossary): Treat each as a separate entry with one &lt;div type="body">; treat
+                <i>see references</i> as usual.</li>
+            <li><b>Index des compositeurs</b> (index of composers): Each name has a list of entries
+              following. Add the name to <i>each</i> of the listed entries in a &lt;keywords>
+              element in the &lt;profileDesc> of the entry's TEI header. Parse as
+                &lt;rilmPerson>:<blockquote>&lt;textClass> &lt;keywords> &lt;term> &lt;rilmPerson>
+                &lt;persName>&lt;surname>Sauguet&lt;/surname>,
+                &lt;forename>Henri&lt;/forename>&lt;/persName> (&lt;birth>&lt;date when="1901"
+                when-custom="1901">1901&lt;/date>&lt;/birth>-&lt;death>&lt;date when="1989"
+                when-custom="1989">1989&lt;/date>&lt;/death>) &lt;/rilmPerson> &lt;/term>
+                &lt;/keywords> &lt;/textClass></blockquote></li>
+            <li><b>Chronologie des compositeurs</b>: Tag as a &lt;list>; parse names as
+              &lt;rilmPerson>. Do not tag &lt;surname> or &lt;forename> for names without a
+                comma:<blockquote>&lt;item>&lt;rilmPerson>&lt;persName>Théodulphe&lt;/persName>
+                (&lt;death>&lt;date when="0821"
+                when-custom="0821">821&lt;/date>&lt;/death>)&lt;/rilmPerson>&lt;/item></blockquote><blockquote>&lt;item>&lt;rilmPerson>&lt;persName>&lt;surname>Vitry&lt;/surname>,
+                &lt;forename>Philippe&lt;/forename> &lt;nameLink>de&lt;/nameLink>&lt;/persName>
+                (&lt;birth>&lt;date when="1291"
+                when-custom="1291">1291&lt;/date>&lt;/birth>-&lt;death>&lt;date when="1361"
+                when-custom="1361">1361&lt;/date>&lt;/death>)&lt;/rilmPerson>&lt;/item></blockquote></li>
+            <li><b>Index des poètes, librettistes et écrivains</b>: Treat exactly like the <b>Index
+                des compositeurs.</b></li>
+            <li><b>Table des illustrations</b>: set as a &lt;table> with two columns.</li></ul></li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+      <p><a id="dov-genres">List of genres for DOV</a></p>
+      <ul>
+        <li>air</li>
+        <li>anthologie </li>
+        <li>ballade </li>
+        <li>ballet</li>
+        <li>bergerie</li>
+        <li>Bühnenweihfestspiel </li>
+        <li>cantate </li>
+        <li>chanson </li>
+        <li>chant </li>
+        <li>comédie </li>
+        <li>communion </li>
+        <li>conte</li>
+        <li>cycle</li>
+        <li>drame</li>
+        <li>dramma</li>
+        <li>fantaisie </li>
+        <li>farce </li>
+        <li>histoire</li>
+        <li>hymne </li>
+        <li>légende </li>
+        <li>lied</li>
+        <li>madrigal </li>
+        <li>mélodie </li>
+        <li>mélodrame</li>
+        <li>motet</li>
+        <li>opéra </li>
+        <li>opéra-ballet </li>
+        <li>opéra-byline</li>
+        <li>opéra-comique </li>
+        <li>opéra-oratorio</li>
+        <li>opera seria</li>
+        <li>opera buffa</li>
+        <li>opérette </li>
+        <li>oratorio</li>
+        <li>Passion </li>
+        <li>pièce</li>
+        <li>poème</li>
+        <li>récit </li>
+        <li>recueil</li>
+        <li>roman</li>
+        <li>romance</li>
+        <li>rondeau </li>
+        <li>symphonie dramatique</li>
+        <li>tragédie</li>
+        <li>tragische Oper</li>
+        <li>virelai </li>
+      </ul>
+    </div>
+  </body>
+</html>

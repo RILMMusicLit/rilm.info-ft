@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>International Encyclopedia of Women Composers</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="IEW">International Encyclopedia of Women Composers</h4>
+      </div>
+    </a>
+    <div class="r201506" title="Added, 6/2016">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This title should be converted from scanned print.</li>
+            <li>Entries include a heading, a short biography, and a works list in sections. <i>Much
+                more information</i> is given in Appendices and other Back matter, including
+              Bibliography, Discographies, photographs, and alternate names.. <i>We would like to
+                pull this information together into the TEI file for each main entry..</i>  Specifics are given below.</li>
+          </ul></li>
+        <li><b>Front matter</b> for Vol. 1 comprises a frontispiece; title page; copyright page;
+          dedication page; Foreword; Preface - 2nd Edition; Preface - 1st Edition; Acknowledgments;
+          Notable facts...; Quotations; Statistics; Guide to Use; and Abbreviations.<ul>
+            <li>Tag the Abbreviations list as a &lt;table> with two columns</li>
+            <li>Note: regard the "Addendum" section as part of the main body of the
+              encylopedia.</li>
+          </ul></li>
+        <li><b>Entry headings</b> give the personal name in <i>surname, forename</i> order; The
+          surname is set in bold, all capitals; the forename is set in bold, normal case. <ul>
+            <li>Tag name forms in parentheses in separate &lt;persName> elements, but the same
+                &lt;rilmPerson>.<br />[<b>HOWE, Mary Alberta Bruce (Mary Carlisle Howe) (Mrs. Walter
+                Bruce)</b>]<blockquote>&lt;div
+                type="heading">&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>HOWE&lt;/surname>,
+                &lt;forename>Mary&lt;/forename> &lt;forename>Alberta&lt;/forename>
+                &lt;forename>Bruce&lt;/forename>&lt;/persName> (&lt;persName>Mary Carlisle
+                Howe&lt;/persName>) (&lt;persName>Mrs. Walter
+                Bruce&lt;/persName>)&lt;/rilmPerson>&lt;/p>&lt;/div></blockquote></li>
+            <li>The biographical paragraph that consitutes the &lt;div type="body"> begins one of
+              two ways:<ol>
+                <li>If a specific birth date is available, the paragraph begins "Nationality
+                  occupation(s). b. Birthplace, birthdate." </li>
+                <li>If NO specific birth date is available, it begins "Century Nationality
+                  occupation(s)."</li>
+              </ol>[<b>KATS-CHERNIN, Elena</b>
+              <br />Australian pianist, teacher and composer. b. Tashkent, USSR, November 4,
+                1957.]<blockquote>&lt;div type="heading">&lt;p>&lt;rilmPerson
+                xml:id="r1">&lt;persName>&lt;surname>KATS-CHERNIN&lt;/surname>,
+                &lt;forename>Elena&lt;/forename>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div><br />&lt;div
+                type="body">&lt;p>&lt;rilmPerson xml:id="r2"
+                corresp="#r1">&lt;nationality>Australian&lt;/nationality>
+                &lt;occupation>pianist&lt;/occupation>, &lt;occupation>teacher&lt;/occupation> and
+                &lt;occupation>composer&lt;/occupation>. &lt;birth>b. &lt;placeName>Tashkent,
+                USSR&lt;/placeName>, &lt;date when="1957-11-04" when-custom="1957">November 4,
+                1957&lt;/date>&lt;/birth>&lt;/rilmPerson>....&lt;/p>&lt;/div></blockquote>[<b>KATTS,
+                Letty</b>
+              <br />20th-century Australian composer.]<blockquote>&lt;div
+                type="heading">&lt;p>&lt;rilmPerson
+                xml:id="r1">&lt;persName>&lt;surname>KATTS&lt;/surname>,
+                &lt;forename>Letty&lt;/forename>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div>
+                <br />&lt;div type="body">&lt;p>&lt;rilmPerson xml:id="r2"
+                corresp="#r1">20th-century &lt;nationality>Australian&lt;/nationality>
+                &lt;occupation>composer&lt;/occupation>&lt;/rilmPerson>&lt;/p>&lt;/div>.</blockquote></li>
+          </ul></li>
+        <li><b>Discographies</b>: Entries whose body paragraph has "DISCOGRAPHY" in the last line
+          are represented in a "Recordings" list in vol. 2, beginning on p. 1069. Entries in the
+          Recordings list are sorted by name and have the same headings as the main encyclopedia
+          entries, but with dates added in parentheses. Recordings under each name are listed by
+          work title in all caps.<ul>
+            <li>Mark up the recordings entries in vol. 2 according to this pattern: <br />[TITLE
+              <br />Performer(s) (voice <i>or</i> instrument) <b>LABEL IDNO</b>]. <br /><i>Note: not
+                all entries contain all kinds of data.</i></li>
+            <li>Insert the entries in a &lt;div type="ography"> in the main encylopedia entry. </li>
+          </ul>Refer also to the example files.</li>
+        <li><b>Figures</b>: Entries whose body paragraph has "PHOTOGRAPH" in the last line have a
+          related figure (portrait) in the section of Vol. 2 beginning p. 817 (PDF page 217). The
+          photo captions in print are the same as the headings of the main encylopedia entries.<ul>
+            <li>Insert a &lt;figure> element between &lt;div> elements in the XML file that
+              references the photograph. See the example files.</li>
+          </ul></li>
+        <li><b>Worklists</b> are headed by the word "<b>Compositions</b>" in bold. Sections of the
+          worklist are headed in all-caps, non-bold: "ORCHESTRA" for example. Dates OR Publisher may
+          be given in parentheses at the end of the item.<ul>
+            <li><b>Compositions</b>
+              <br /> PIANO <br /> Polka mazur, op. 2 (Prague: R. Veil) Sen mladi, op. 7 <br /><br />
+              Other small dance pieces <br /><br /> ZITHER <br /><br /> Czech songs, op. 8 (R. Veil)
+              Other pieces <br /><br /> VOCAL <br /><br /> Songs (Stary) <blockquote>&lt;div
+                type="works"><br />&lt;head>Compositions&lt;/head><br /> &lt;div
+                type="section"><br /> &lt;head>PIANO&lt;/head> <br />
+                &lt;list>&lt;item>&lt;bibl>&lt;title>Polka mazur&lt;/title>, op. 2
+                (&lt;pubPlace>Prague&lt;/pubPlace>: &lt;publisher>R.
+                Veil&lt;/publisher>)&lt;/bibl>&lt;/item> <br /> &lt;item>&lt;bibl>&lt;title>Sen
+                mladi&lt;/title>, op. 7&lt;/bibl>&lt;/item><br /> &lt;item>&lt;bibl>Other small
+                dance pieces&lt;/bibl>&lt;/item>&lt;/list>&lt;/div><br />&lt;div type="section">
+                <br />&lt;head>ZITHER&lt;/head> <br /> &lt;list>&lt;item>&lt;bibl>&lt;title>Czech
+                songs&lt;/title>, op. 8 (R. Veil)&lt;/bibl>&lt;/item><br /> &lt;item>&lt;bibl>Other
+                pieces&lt;/bibl>&lt;/item>&lt;/list>&lt;/div> <br />&lt;div type="section">
+                <br />&lt;head>VOCAL&lt;/head> <br /> &lt;list>&lt;item>&lt;bibl>Songs
+                (Stary)&lt;/bibl>&lt;/item>&lt;/list><br />&lt;/div>&lt;/div></blockquote></li>
+          </ul></li>
+        <li><b>Bibliographies</b> are headed "Ref." in non-bold type, and consist of numerals keyed
+          to the bibliography at the back of vol. 2 (beginning page 783). <ul>
+            <li>Please <i>replace</i> the numbers in the entries with a &lt;bibl> element containing
+              the full marked-up bibliographic item from vol. 2, pages 783- 793. </li>
+            <li>The items follow this pattern: [Surname, Forename. <i>Title</i>. Pubplace:
+              Publisher, date.]. Mark names followed by ", ed." as &lt;editor>. <i>Note: some
+                entries lack place, publisher, or date.</i></li>
+          </ul>: <br /> [Ref. 171, 234]<blockquote>&lt;div
+            type="ography"><br />&lt;head>Ref.&lt;/head>
+            <br />&lt;list><br />&lt;item>&lt;bibl>&lt;author>&lt;surname>Farmer&lt;/surname>,
+            &lt;forename>&lt;abbr>H.G.&lt;/abbr>&lt;/forename>&lt;/author> &lt;title>A History of
+            Arabian Music to the XIIIth Century&lt;/title>. &lt;pubPlace>London&lt;/pubPlace>:
+            &lt;publisher>Luzac&lt;/publisher>,
+            &lt;date>1973&lt;/date>.&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;author>&lt;surname>Hammer-Purgstall&lt;/surname>&lt;/author>.
+            &lt;title>Literaturgeschichte der Araber&lt;/title>. &lt;pubPlace>Vienna&lt;/pubPlace>:
+            &lt;publisher>Staatsdruckerei&lt;/publisher>,
+            &lt;date>1850&lt;/date>.&lt;/bibl>&lt;/item><br />&lt;/list><br />&lt;/div></blockquote></li>
+        <li><b>See references</b> are in the form [<b>SURNAME, Forename. See SURNAME2,
+          Forename2</b>]"</li>
+        <li><b>Back matter</b> is very extensive, but not all of it needs to be marked up. <ul>
+            <li> BIBLIOGRAPHY: <ul>
+                <li>Numerical References: <i>Do not mark up; to be included with individual entry
+                    files.</i></li>
+                <li>Alphabetical by Author: <i>Do not mark up; sorted copy of preceding</i></li>
+                <li>Alphabetical by Title: <i>Do not mark up; sorted copy of preceding.</i></li>
+                <li>For Further Reading: <b>DO</b> mark up as a bibliography</li>
+              </ul></li>
+            <li>PHOTOGRAPHS: <i>included with individual entry files</i>
+            </li>
+            <li>APPENDICES:. <ul>
+                <li>1. <u>Information Wanted</u>: Tag as introductory &lt;p> followed by a &lt;list>
+                  for each "century" given. Tag the contents of each &lt;item> as a &lt;rilmPerson>,
+                  &lt;persName>, etc.</li>
+                <li>2. <u>Music Key Signatures in 25 Languages</u>: Tag as two &lt;table>s with 14
+                  columns each.</li>
+                <li>3. <u>Comparative distribution of Composers by Century</u>: Scan and tag as
+                  &lt;figure>s</li>
+                <li>4. <u>Composers by Country</u>...: Make a &lt;div type="section"> for each
+                  country and a &lt;list> for each century.</li>
+                <li>5. <u>List of Pseudonyms</u>: Treat as an index; specifically, insert the text
+                  from the "Pseudonym" column in a &lt;keywords> element in the TEI header of the
+                  entry for the name in the "Composer" column.</li>
+                <li>6. <u>Operas and Operettas by Women Composers</u>: <i>Do not mark up; included
+                    in main entries worklists.</i></li>
+                <li>7. <u>Composers Influenced by Shakespeare</u>: <i>Do not mark up.</i> Add
+                  "Shakespeare" in &lt;keywords> of the TEI header of the main entry for each name
+                  in bold type.</li>
+                <li>8. <u>Composers by Instrument and Music Form</u>: Make a &lt;div type="section">
+                  for each item in all caps, and a &lt;list> for each century.</li>
+                <li>9. <u>Composers by Calling, Occupation and Profession</u>: Make a &lt;div
+                  type="section"> for each item in all caps, and a &lt;list> for each century.</li>
+                <li>10. <u>Composers by the Instruments they Play</u>: Make a &lt;div
+                  type="section"> for each item in all caps, and a &lt;list> for each century.</li>
+                <li>11. <u>International Council of Women and Affiliates</u>: Tag prose as &lt;p>,
+                  remainder as a &lt;list> with an &lt;item> for each country/addess.</li>
+                <li>12. <u>International Music Societies and Information Centers</u>: Tag prose as
+                  &lt;p>; make a &lt;list> for each country (in all capitals), and an &lt;item> for
+                  each address. </li>
+                <li>13. <u>International Performing and Music Rights Societies</u>: Same as Appendix
+                  12. </li>
+                <li>14. <u>National Federation of Music Clubs</u>: Tag prose as &lt;p>; make a
+                  &lt;list> for each State (in all capitals), and an &lt;item> for each
+                  address.</li>
+              </ul></li>
+            <li>DISCOGRAPHY: . <ul>
+                <li><u>Preface</u>: Mark up as prose.</li>
+                <li><u>Recordings</u>: <i>Do not mark up; to be included with main entry
+                  files.</i></li>
+                <li><u>Record Companies</u>: Tag as a &lt;table> with three columns.</li>
+              </ul></li>
+          </ul></li>
+
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

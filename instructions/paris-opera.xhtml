@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>The Paris Opéra</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="PAR">The Paris Opéra</h4>
+      </div>
+    </a>
+    <div class="r201506" title="Added, 6/2016">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This title should be converted from scanned print.</li>
+            <li>The two volumes cover different time periods, so each has entries A-Z.</li>
+            <li>The two volumes have different subtitles and different copyright dates. See the
+              example files for the distinction.</li>
+            <li>As with IEW, the bibliographies in each entry use abbreviations keyed to a list at
+              the beginning of the volume.</li>
+          </ul></li>
+        <li><b>Front matter</b> for volume 1 includes a title page, copyright page, dedication page,
+          Preface, a very long Introduction, and a Abbreviations list.<ul>
+            <li>Do not create a file for the Abbreviations. The contents will be incorporated into
+              the individual entry files.</li>
+          </ul></li>
+        <li>
+          <b>Front matter</b> for volume 2 includes a title page, copyright page, Preface, and
+          Abbreviation list. <ul>
+            <li>Again, do not create a file for the Abbreviations.</li>
+          </ul></li>
+        <li><b>Entries</b>: include Works, Persons, Institutions, and Topics<ul>
+            <li>A heading in bold italic type = &lt;text type="work">: <br />[<i><b>Le
+                Carnaval</b></i> is a comedy...]</li>
+            <li>A heading in Bold Roman type containing a comma and followed by parentheses with
+              "b." and "d." = &lt;text type= "person">: <br />[<b>Charpentier, Marc</b> (b. 1634; d.
+              24 February 1704, Paris), composer, left...]</li>
+            <li>Tag any entry heading that is <b>not</b> in italic type and has <b>no</b>
+              parentheses following the bold heading as &lt;text type="topic">.</li>
+            <li><b>Occupation</b>(s) are given immediately after the closing parenthesis. Tag up to
+              and including the occupation as a &lt;rilmPerson>
+                <blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Charpentier&lt;/surname>,
+                &lt;forename>Marc&lt;/forename>&lt;/persName> (&lt;birth>b. &lt;date when="1634"
+                when-custom="1634">1634&lt;/date>&lt;/birth>; &lt;death>d. &lt;date
+                when="1704-02-24" when-custom="1704">24 February 1704&lt;/date>,
+                &lt;placeName>Paris&lt;/placeName>&lt;/death>),
+                &lt;occupation>composer&lt;/occupation>&lt;/rilmPerson>,
+              left...&lt;/p></blockquote></li>
+          </ul></li>
+        <li><b>Bibliographies</b> are headed "BIBLIOGRAPHY:" in small caps, and consist of
+          abbreviations keyed to the list at the beginning of each volume, as well as written-out
+          items. Most are followed by a page number or numbers. <ul>
+            <li>Please <i>replace</i> the abbreviations in the entries with a &lt;bibl> element
+              containing the full marked-up bibliographic item from the list of abbreviations. </li>
+            <li>The items in the Abbreviations list follow this pattern: [Forename Surname,
+                <i>Title</i>, edition/editor (Pubplace: Publisher, date), vols.] Mark names preceded
+              by "ed." as &lt;editor>. <i>Note: some items may lack author, edition information, or
+                volume numbers.</i></li>
+          </ul>: <br /> [BIBLIOGRAPHY: Lajarte I, 65; RGO V, 233-90.]<blockquote>&lt;div
+            type="ography"><br />&lt;head>BIBLIOGRAPHY:&lt;/head>
+            <br />&lt;list><br />&lt;item>&lt;bibl>&lt;author>&lt;forename>Theodore&lt;/forename>
+            &lt;nameLink>de&lt;/nameLink> &lt;surname>Lajarte&lt;/surname>&lt;/author>,
+            &lt;title>Bibliotheque musicale du theatre de l'Opera&lt;/title>, 2 vols.
+            (&lt;pubPlace>Paris&lt;/pubPlace>: &lt;publisher>Librairie des
+            bibliophiles&lt;/publisher>, &lt;date>1878&lt;/date>; reprinted in &lt;publisher>Georg
+            Olms Verlag&lt;/publisher>, &lt;pubPlace>Hildesheim&lt;/pubPlace>,
+            &lt;date>1969&lt;/date>), &lt;biblScope unit="vol">I&lt;/biblScope>, &lt;biblScope
+            unit="pp">65&lt;/biblScope>&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>Recueil
+            général des opéras&lt;/title>, 3 vols. (&lt;edition>reprint ed&lt;/edition>.,
+            &lt;pubPlace>Geneve&lt;/pubPlace>: &lt;publisher>Slatkine Reprints&lt;/publisher>,
+            &lt;date>1971&lt;/date>), &lt;biblScope unit="vol" >V&lt;/biblScope>, &lt;biblScope
+            unit="pp">233-90&lt;/biblScope>&lt;/bibl>&lt;/item>
+            <br />&lt;/list><br />&lt;/div></blockquote></li>
+        <li><b>Back matter for volume 1</b> includes 5 Appendices, Index, and About the Author.<ul>
+            <li>APPENDICES:. <ul>
+                <li>1. <u>The Repertory</u>: Tag as introductory &lt;p> followed by a &lt;list> of
+                  abbreviations and a &lt;list> of repertory. Tag the italic text as &lt;title>.
+                  Open new &lt;div>s for sections with headings such as "Lyric" and
+                  "Choreographic".</li>
+                <li>2. <u>Female Singers</u>: Tag as introductory &lt;p> followed by a &lt;list>.
+                  Tag each &lt;item> as a &lt;rilmPerson>. Use the last name before the year as
+                  &lt;surname>. If there is only one name given, tag only &lt;persName>. Tag "Mme"
+                  as &lt;roleName>; tag "aînée" and "cadette" as &lt;genName>.</li>
+                <li>3. <u>Male Singers</u>: Tag as introductory &lt;p> followed by a &lt;list>. Tag
+                  each &lt;item> as a &lt;rilmPerson>. Use the last name before the year as
+                  &lt;surname>. If there is only one name given, tag only &lt;persName>. Tag "aîné",
+                  "cadet", "fils", and "père" as &lt;genName>.</li>
+                <li>4. <u>Female Dancers</u>: as no. 2</li>
+                <li>5. <u>Male Dancers</u>: as no. 3</li>
+              </ul></li>
+            <li>INDEX: items in italics refer to entry titles, so they may be omitted. Process items
+              in roman type per the general instructions for index terms.</li>
+          </ul></li>
+        <li><b>Back matter for volume 2</b> includes an Appendix, Index, and About the Author.<ul>
+            <li>APPENDIX: <u>The Repertory</u>: tag as for vol. 1. </li>
+            <li>INDEX: items in italics refer to entry titles, so they may be omitted. Process items
+              in roman type per the general instructions for index terms.</li>
+          </ul></li>
+
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+        <link href="tei.css" rel="stylesheet" type="text/css" ></link>
+        <title>RILM PDF Guidelines</title>
+    </head>
+    <body>
+        <h3>Guidelines for RILM Journals Collection PDFs</h3>
+        <ol>
+            <li><h5>PDF Version</h5>PDFs should be saved as PDF version 1.6. PDFs we receive in PDF
+                version 1.7 (and above) should be converted to version 1.6. </li>
+            <li><h5>Tagged PDF</h5>PDFs should be tagged. <ul>
+                    <li>for &lt;figure&gt; use @alt or @actualText attribute when possible </li>
+                    <li>use &lt;table&gt; element only for actual tables, not for layout </li>
+                    <li>tables should have headers </li>
+                    <li>Heading elements should be properly nested (&lt;h2&gt; within &lt;h1&gt;--do
+                        not skip levels) </li>
+                    <li>Heading elements should not have descendents </li>
+                    <li>The list element type &lt;L> requires a @ListNumbering attribute which
+                        designates the numbering system used in the list, e.g. <i>Disc</i> for a
+                        simple bullet without numbers, <i>Decimal</i>, or <i>UpperRoman</i>.</li>
+                </ul></li>
+            <li><h5>Copyright Page</h5>A copyright page should appear at the end of each document. </li>
+            <li><h5>Unlocked for Editing</h5>PDFs must be unlocked to allow for editing.</li>
+            <li><h5>Searchable Text</h5>Except for exceptions explicitly authorized by RILM, PDFs
+                must have an embedded searchable text layer.</li>
+            <li><h5>Deskewing</h5>Scanned documents should not be skewed more that one degree.</li>
+            <li><h5>File Size</h5>PDF files cannot be larger than 1GB.  For files over 300KB per
+                page, file size should be reduced if it can be done without compromising text or
+                image quality. For files over 600KB per page, file size should be reduced if it can
+                be done without a significant loss of image or text quality.</li>
+            <li><h5>Embedded Fonts</h5>Fonts should be embedded when possible and not
+                encrypted.</li>
+            <li><h5>Color Profiles</h5>PDFs should have an ICC profile.</li>
+            <li><h5>PDF Metadata</h5>The following metadata fields are desired:<ul>
+                    <li>xmp:CreatorTool [=creator (DocInfo)] </li>
+                    <li>xmp:CreateDate </li>
+                    <li>xmp:MetadataDate </li>
+                    <li>xmp:ModifyDate [=ModDate (DocInfo)] </li>
+                    <li>dc:title [=Title (DocInfo)] </li>
+                    <li>dc:format </li>
+                    <li>pdf:PDFVersion </li>
+                    <li>pdf:Producer [=Producer (DocInfo)] </li>
+                </ul></li>
+        </ol>
+    </body>
+</html>

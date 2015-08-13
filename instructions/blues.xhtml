@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Encyclopedia of the Blues</title>
+    </head>
+    <body>
+        <a> <div> <h4 id="blues">Encyclopedia of the Blues (etb)</h4> </div> </a> <div
+            class="r201412" title="Added, 12/2014"> <ol>
+                <li>This publication should be converted from the provided XML.</li>
+                <li>From page xxxi to page li, there is a "Thematic list of entries". This will be your guide to
+                    the value of @type in the text elemnent:<table class="table">
+                        <thead>
+                            <tr>
+                                <th>Type of entry</th>
+                                <th>&lt;text> @type value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Biographical</td>
+                                <td>person</td>
+                            </tr>
+                            <tr>
+                                <td>Cultural</td>
+                                <td>topic</td>
+                            </tr>
+                            <tr>
+                                <td>Geographical</td>
+                                <td>geo</td>
+                            </tr>
+                            <tr>
+                                <td>Historiography</td>
+                                <td>topic</td>
+                            </tr>
+                            <tr>
+                                <td>Instruments</td>
+                                <td>instrument</td>
+                            </tr>
+                            <tr>
+                                <td>Music Business</td>
+                                <td>topic*</td>
+                            </tr>
+                            <tr>
+                                <td>"American Folk Blues Festival (AFBF)"</td>
+                                <td>institution</td>
+                            </tr>
+                            <tr>
+                                <td>"TOBA"</td>
+                                <td>institution</td>
+                            </tr>
+                            <tr>
+                                <td>Musical Styles</td>
+                                <td>genre</td>
+                            </tr>
+                            <tr>
+                                <td>Musical Techniques</td>
+                                <td>topic</td>
+                            </tr>
+                            <tr>
+                                <td>Record labels</td>
+                                <td>institution</td>
+                            </tr>
+                            <tr>
+                                <td>Related Art Forms</td>
+                                <td>topic</td>
+                            </tr>
+                            <tr>
+                                <td>Song titles</td>
+                                <td>work</td>
+                            </tr>
+                        </tbody>
+                    </table></li>
+                <li>All articles have the following sections: @heading, @body, and @ography. Many articles will
+                    have additional @ography sections, and some will have a new section type: &lt;div
+                    type="ref"></li>
+                <li>Inside the &lt;div type="heading"> should be a &lt;rilmPerson> for person articles, and a
+                    &lt;p> for all others. Do not record the formatting of the contents of the heading.
+                    &lt;rilmPerson>, the names before the comma should each be in a &lt;surname>, and names after
+                    the comma should each be in &lt;forename>. Anything in quotes should be in &lt;addName >. The
+                    first example below comes from the source XML. The second is the converted TEI
+                    XML.<blockquote>&lt;title>Dean, Joe &amp;#x201C;Joe Dean From Bowling
+                        Green&amp;#x201D;&lt;/title></blockquote><blockquote>&lt;rilmPerson
+                            xml:id="r1">&lt;persName>&lt;surname>Dean&lt;/surname>, &lt;forename>Joe&lt;/forename>
+                            &lt;addName>Joe Dean From Bowling&lt;/addName>&lt;persName></blockquote></li>
+                <li>As seen above, please use @xml:id on all rilmPerson elements from now on.</li>
+                <li>For "person" articles, the birth and death information should be included in this rilmPerson
+                    element:<blockquote>&lt;title>Dean, Joe &amp;#x201C;Joe Dean From Bowling
+                        Green&amp;#x201D;&lt;/title><br />&lt;p>b. 1908; St. Louis, MO&lt;/p><br />&lt;p>d. 24 June
+                        1981; St. Louis, MO&lt;/p></blockquote><blockquote>&lt;rilmPerson
+                            xml:id="r1">&lt;persName>&lt;surname>Dean&lt;/surname>, &lt;forename>Joe&lt;/forename>
+                            &lt;addName>Joe Dean From Bowling&lt;/addName>&lt;persName>&lt;birth>&lt;date when="1908"
+                            when-custom="1908"> 1908&lt;/date>; &lt;placeName>St. Louis,
+                            MO&lt;/placeName>&lt;/birth>&lt;death>&lt;date when="1981-07-24" when-custom="1981">24 June
+                            1981&lt;/date>&lt;placeName>St. Louis,
+                            MO&lt;/placeName>&lt;/death>&lt;/rilmPerson></blockquote></li>
+                <li>For many person articles, the first paragraph (after the birth and/or death dates) starts
+                    with the occupation or a list of occupations. In these cases, tag this passage with another
+                    &lt;rilmPerson> element with @corresp pointing to the xml:id of the &lt;rilmPerson> element
+                    above it. Tag only those occupations found on the list posted at <a
+                        href="http://rilm.info/ft/english-roles.html" target="_blank">rilm.info/ft/english-roles.html</a>.
+                    <blockquote>&lt;div type="head" xml:id="d1">&lt;rilmPerson
+                        xml:id="r1">&lt;persName>&lt;surname>Green&lt;/surname>,
+                        &lt;forename>Grant&lt;/forename>&lt;/persName> &lt;birth>&lt;date when="1935-06-06"
+                        when-custom="1935">6 June 1935&lt;/date>; &lt;placeName>St. Louis,
+                        MO&lt;/placeName>&lt;/birth>&lt;death>&lt;date when="1979-01-31" when-custom="1979">31 January
+                        1979&lt;/date>; &lt;placeName>New York City,
+                        NY&lt;/placeName>&lt;/death>&lt;/rilmPerson>&lt;/div> &lt;div type="body" xml:id="d1">
+                        &lt;p>&lt;rilmPerson xml:id="r2"
+                        corresp="#r1">&lt;occupation>Guitarist&lt;/occupation>&lt;/rilmPerson>. Early
+                        influences</blockquote> If there are multiple occupations separated by "and" or a comma, they
+                    should be tagged separately: <blockquote>Cajun &lt;occupation&gt;vocalist&lt;/occupation&gt;
+                        and &lt;occupation&gt;accordionist&lt;/occupation </blockquote> </li>
+                <li>Some bibliographies, discographies and "selected recordings" lists are inline, where items
+                    are separated by semi-colons; some have each item on its own line. In the TEI-XML, you do not
+                    need to differentiate between these. All will simply be &lt;list> with &lt;item> children. </li>
+                <li>See also's: Paragraphs in boldface that begin "See also" should be set as a &lt;list> within
+                    a &lt;div type="ref">. Each &lt;item> points to another article in this publication, and is
+                    separated by a semi-colon, and each &lt;item> will have a &lt;ref> element with @target
+                    pointing to the appropriate article. It will look like this:<blockquote>&lt;item>&lt;ref
+                        target="etb00048">Chenier, Morris &lt;q>Big&lt;/q>&lt;/ref>&lt;/item></blockquote> </li>
+                <li> Please replace the following abbreviations in "ography" sections (<a
+                    href="abbr/etb-abbreviations.xml" target="_blank">Abbreviations in XML</a>): <table border="1">
+                        <tbody>
+                            <tr>
+                                <th>Abbreviation</th>
+                                <th>Replacement</th>
+                            </tr>
+                            <tr>
+                                <td>AMG</td>
+                                <td>&lt;bibl>&lt;title>All Music Guide to the Blues&lt;/title>. &lt;edition>3rd
+                                    edition&lt;/edition>, edited by &lt;editor
+                                    key="76515">&lt;forename>Vladimir&lt;/forename>
+                                    &lt;surname>Bogdanov&lt;/surname>&lt;/editor>, &lt;editor
+                                    key="76519">&lt;forename>Chris&lt;/forename>
+                                    &lt;surname>Woodstra&lt;/surname>&lt;/editor>, and &lt;editor
+                                    key="76521">&lt;forename>Stephen&lt;/forename> &lt;forename>Thomas&lt;/forename>
+                                    &lt;surname>Erlewine&lt;/surname>&lt;/editor> (&lt;pubPlace>San Francisco&lt;/pubPlace>:
+                                    &lt;publisher>Backbeat Books&lt;/publisher>, &lt;date>2003&lt;/date>).&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>DGR</td>
+                                <td>&lt;bibl>&lt;author key="76522">&lt;surname>Dixon&lt;/surname>,
+                                    &lt;forename>Robert&lt;/forename>
+                                    &lt;forename>M.&lt;/forename>&lt;forename>W.&lt;/forename>&lt;/author>, &lt;author
+                                    key="76523">&lt;forename>John&lt;/forename>
+                                    &lt;surname>Godrich&lt;/surname>&lt;/author>, and &lt;author
+                                    key="76524">&lt;forename>Howard&lt;/forename> &lt;forename>W.&lt;/forename>
+                                    &lt;surname>Rye&lt;/surname>&lt;/author>. &lt;title>Blues &amp;amp; Gospel Records,
+                                    1890–1943&lt;/title>. &lt;edition>4th edition&lt;/edition>.
+                                    &lt;pubPlace>Oxford&lt;/pubPlace>: &lt;publisher>Clarendon Press&lt;/publisher>,
+                                    &lt;date>1997&lt;/date>.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>Gospel Records 1943–1969</td>
+                                <td>&lt;bibl>&lt;author key="76525">&lt;surname>Hayes&lt;/surname>,
+                                    &lt;forename>Cedric&lt;/forename>&lt;/author> and &lt;author
+                                    key="76526">&lt;forename>Robert&lt;/forename>
+                                    &lt;surname>Laughton&lt;/surname>&lt;/author>, &lt;title>Gospel Records
+                                    1943–1969&lt;/title>. &lt;biblScope unit="vol">2 volumes&lt;/biblScope>.
+                                    &lt;pubPlace>London&lt;/pubPlace>: &lt;publisher>Record Information
+                                    Services&lt;/publisher>, &lt;date>1993&lt;/date>.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>Harris</td>
+                                <td>&lt;bibl>&lt;author key="76527">&lt;surname>Harris&lt;/surname>,
+                                    &lt;forename>Sheldon&lt;/forename>&lt;/author>. &lt;title>Blues Who’s Who&lt;/title>.
+                                    &lt;pubPlace>New Rochelle, NY&lt;/pubPlace>: &lt;publisher>Arlington
+                                    House&lt;/publisher>, &lt;date>1979&lt;/date>. Five editions.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>Herzhaft</td>
+                                <td> &lt;bibl>&lt;author key="62681">&lt;surname>Herzhaft&lt;/surname>,
+                                    &lt;forename>Gérard&lt;/forename>&lt;/author>, &lt;title>Encyclopedia of the
+                                    Blues&lt;/title>. &lt;pubPlace>Fayetteville AR&lt;/pubPlace>: &lt;publisher>University
+                                    of Arkansas Press&lt;/publisher>, &lt;date>1992&lt;/date>; an
+                                    &lt;bibl>&lt;textLang>English&lt;/textLang> language edition of his
+                                    &lt;title>Encyclopédie du Blues&lt;/title> (&lt;pubPlace>Lyon&lt;/pubPlace>:
+                                    &lt;publisher>Federop&lt;/publisher>, &lt;date>1979&lt;/date>;
+                                    &lt;pubPlace>Paris&lt;/pubPlace>: &lt;publisher>Seghers&lt;/publisher>,
+                                    &lt;date>1990&lt;/date>)&lt;/bibl>&lt;/bibl>. &lt;bibl>An enlarged
+                                    &lt;textLang>French&lt;/textLang> edition, &lt;title>La Grande Encyclopédie du
+                                    Blues&lt;/title>, was published by &lt;publisher>Editions Fayard&lt;/publisher> in
+                                    &lt;date>1997&lt;/date>.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>Larkin</td>
+                                <td>&lt;bibl>&lt;author key="37590">&lt;surname>Larkin&lt;/surname>,
+                                    &lt;forename>Colin&lt;/forename>&lt;/author>. &lt;title>The Encyclopedia of Popular
+                                    Music&lt;/title>. &lt;edition>3rd edition&lt;/edition>,
+                                    &lt;pubPlace>London&lt;/pubPlace>; &lt;pubPlace>New York&lt;/pubPlace>:
+                                    &lt;publisher>Muze&lt;/publisher>, &lt;date>1998&lt;/date>), &lt;biblScope unit="vol">8
+                                    volumes&lt;/biblScope>.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>Lord</td>
+                                <td>&lt;bibl>&lt;author key="76528">&lt;surname>Lord&lt;/surname>,
+                                    &lt;forename>Tom&lt;/forename>&lt;/author>, &lt;title>The Jazz Discography&lt;/title>.
+                                    &lt;biblScope unit="vol">26 volumes&lt;/biblScope>. &lt;pubPlace>Vancouver,
+                                    BC&lt;/pubPlace>; &lt;pubPlace>Redwood, NY&lt;/pubPlace>: &lt;publisher>Lord Music
+                                    Reference&lt;/publisher>/&lt;publisher>Cadence Jazz Books&lt;/publisher>,
+                                    &lt;date>1992–2002&lt;/date>.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>LSFP</td>
+                                <td>&lt;bibl>&lt;editor role="compiler" key="76538">&lt;surname>Leadbitter&lt;/surname>,
+                                    &lt;forename>Mike&lt;/forename>&lt;/editor>, &lt;editor role="complier" key="76539"
+                                    >&lt;forename>Neil&lt;/forename> &lt;surname>Slaven&lt;/surname>&lt;/editor>, &lt;editor
+                                    role="compiler" key="40119" >&lt;forename>Les&lt;/forename>
+                                    &lt;surname>Fancourt&lt;/surname>&lt;/editor>, and &lt;editor role="compiler"
+                                    key="76540" >&lt;forename>Paul&lt;/forename>
+                                    &lt;surname>Pelletier&lt;/surname>&lt;/editor>, compilers. &lt;title>Blues Records
+                                    1943–1970&lt;/title>. &lt;biblScope unit="vol">2 volumes&lt;/biblScope>.
+                                    &lt;bibl>&lt;title>A Selective Discography: vol. 1: A-K&lt;/title>
+                                    (&lt;pubPlace>London&lt;/pubPlace>: &lt;publisher>Record Information
+                                    Services&lt;/publisher>, &lt;date>1987&lt;/date>)&lt;/bibl>;
+                                    &lt;bibl>&lt;title>&lt;q>The Bible of the Blues&lt;/q>: vol. 2&lt;/title>: L-Z
+                                    (&lt;publisher>Record Information Services&lt;/publisher>,
+                                    &lt;date>1994&lt;/date>)&lt;/bibl>.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>McGrath</td>
+                                <td>&lt;bibl>&lt;author key="76541">&lt;surname>McGrath&lt;/surname>,
+                                    &lt;forename>Bob&lt;/forename>&lt;/author>. &lt;title>The R&amp;amp;B Indies&lt;/title>.
+                                    &lt;biblScope unit="vol">2 volumes&lt;/biblScope>. &lt;pubPlace>West Vancouver,
+                                    BC&lt;/pubPlace>: &lt;publisher>Eyeball&lt;/publisher>,
+                                    &lt;date>2000&lt;/date>.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>New Grove Jazz</td>
+                                <td>&lt;bibl>&lt;editor key="76542">&lt;surname>Kernfeld&lt;/surname>,
+                                    &lt;forename>Barry&lt;/forename>&lt;/editor>, editor. &lt;title>The New Grove Dictionary
+                                    of Jazz&lt;/title>. &lt;edition>Second edition&lt;/edition>, &lt;biblScope
+                                    unit="vol">two volumes&lt;/biblScope>, &lt;pubPlace>London&lt;/pubPlace>:
+                                    &lt;publisher>Macmillan&lt;/publisher>; &lt;pubPlace>New York&lt;/pubPlace>:
+                                    &lt;publisher>Grove’s Dictionaries&lt;/publisher>,
+                                    &lt;date>2002&lt;/date>.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>Santelli</td>
+                                <td>&lt;bibl>&lt;author key="46789">&lt;surname>Santelli&lt;/surname>,
+                                    &lt;forename>Robert&lt;/forename>&lt;/author>. &lt;title>The Big Book of Blues: A
+                                    Biographical Encyclopedia&lt;/title>. &lt;pubPlace>New York&lt;/pubPlace>:
+                                    &lt;publisher>Penguin&lt;/publisher>, 1993.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>Southern</td>
+                                <td>&lt;bibl>&lt;author key="16887">&lt;surname>Southern&lt;/surname>,
+                                    &lt;forename>Eileen&lt;/forename>&lt;/author>. &lt;title>Biographical Dictionary of
+                                    Afro-American and African Musicians&lt;/title>. &lt;pubPlace>Westport, CT&lt;/pubPlace>:
+                                    &lt;publisher>Greenwood&lt;/publisher>, &lt;date>1982&lt;/date>.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>Sutton</td>
+                                <td>&lt;bibl>&lt;author key="76544">&lt;surname>Sutton&lt;/surname>,
+                                    &lt;forename>Allan&lt;/forename>&lt;/author>. &lt;title>American Record Labels and
+                                    Companies, An Encyclopedia&lt;/title>. &lt;pubPlace>Denver, CO&lt;/pubPlace>:
+                                    &lt;publisher>Mainspring Press&lt;/publisher>, &lt;date>2000&lt;/date>.&lt;/bibl></td>
+                            </tr>
+                            <tr>
+                                <td>Whitburn</td>
+                                <td>&lt;bibl>&lt;author key="">&lt;surname>Whitburn&lt;/surname>,
+                                    &lt;forename>Joel&lt;/forename>&lt;/author>. &lt;title>Billboard Top R&amp;amp;B Singles
+                                    1942–1999&lt;/title>. &lt;pubPlace>Menomonee Falls, WI&lt;/pubPlace>:
+                                    &lt;publisher>Record Research, Inc.&lt;/publisher>,
+                                    &lt;date>2000&lt;/date>.&lt;/bibl></td>
+                            </tr>
+                        </tbody>
+                    </table> </li>
+                <li> Use <a href="../tei_rilm_instructions.html#american" target="_blank">American rule</a> for single quotation marks.</li>
+            </ol> </div>
+    </body>
+</html>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://rilm.info/ft/tei_collection.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text type="matter">
+      <body>
+         <list>
+            <item>
+               <abbr>AMG</abbr>
+               <bibl><title>All Music Guide to the Blues</title>. <edition>3rd edition</edition>,
+                  edited by <editor key="76515"><forename>Vladimir</forename>
+                     <surname>Bogdanov</surname></editor>, <editor key="76519"><forename>Chris</forename>
+                        <surname>Woodstra</surname></editor>, and <editor key="76521"><forename>Stephen</forename>
+                     <forename>Thomas</forename>
+                     <surname>Erlewine</surname></editor> (<pubPlace>San Francisco</pubPlace>:
+                     <publisher>Backbeat Books</publisher>, <date>2003</date>)</bibl>
+            </item>
+            <item>
+               <abbr>DGR</abbr>
+               <bibl><author key="76522"><surname>Dixon</surname>, <forename>Robert</forename>
+                     <forename>M.</forename><forename>W.</forename></author>,
+                  <author key="76523"><forename>John</forename>
+                     <surname>Godrich</surname></author>, and <author key="76524"><forename>Howard</forename>
+                     <forename>W.</forename>
+                     <surname>Rye</surname></author>. <title>Blues &amp; Gospel Records,
+                     1890–1943</title>. <edition>4th edition</edition>. <pubPlace>Oxford</pubPlace>:
+                     <publisher>Clarendon Press</publisher>, <date>1997</date>.</bibl>
+            </item>
+            <item>
+               <abbr>Gospel Records 1943–1969</abbr>
+               <bibl><author key="76525">
+                  <surname>Hayes</surname>, <forename>Cedric</forename></author> and <author key="76526"><forename>Robert</forename>
+                     <surname>Laughton</surname></author>. <title>Gospel Records 1943–1969</title>.
+                     <biblScope unit="vol">2 volumes</biblScope>. <pubPlace>London</pubPlace>:
+                     <publisher>Record Information Services</publisher>, <date>1993</date>.</bibl>
+            </item>
+            <item>
+               <abbr>Harris</abbr>
+               <bibl><author key="76527">
+                  <surname>Harris</surname>, <forename>Sheldon</forename></author>. <title>Blues Who’s Who</title>.
+                     <pubPlace>New Rochelle, NY</pubPlace>: <publisher>Arlington House</publisher>,
+                     <date>1979</date>. Five editions.</bibl>
+            </item>
+            <item>
+               <abbr>Herzhaft</abbr>
+               <bibl><author key="62681">
+                  <surname>Herzhaft</surname>, <forename>Gérard</forename></author>. <title>Encyclopedia of the Blues</title>.
+                     <pubPlace>Fayetteville AR</pubPlace>: <publisher>University of Arkansas
+                     Press</publisher>, <date>1992</date>; an <bibl><textLang>English</textLang>
+                     language edition of his <title>Encyclopédie du Blues</title>
+                        (<pubPlace>Lyon</pubPlace>: <publisher>Federop</publisher>,
+                        <date>1979</date>; <pubPlace>Paris</pubPlace>:
+                        <publisher>Seghers</publisher>, <date>1990</date>)</bibl></bibl>. <bibl>An
+                  enlarged <textLang>French</textLang> edition, <title>La Grande Encyclopédie du
+                     Blues</title>, was published by <publisher>Editions Fayard</publisher> in
+                     <date>1997</date>.</bibl>
+            </item>
+            <item>
+               <abbr>Larkin</abbr>
+               <bibl><author key="37590">
+                  <surname>Larkin</surname>, <forename>Colin</forename></author>. <title>The Encyclopedia of Popular
+                     Music</title>. <edition>3rd edition</edition>. <pubPlace>London</pubPlace>;
+                     <pubPlace>New York</pubPlace>: <publisher>Muze</publisher>, <date>1998</date>.,
+                     <biblScope unit="vol">8 volumes</biblScope>.</bibl>
+            </item>
+            <item>
+               <abbr>Lord</abbr>
+               <bibl><author key="76528">
+                  <surname>Lord</surname>, <forename>Tom</forename></author>. <title>The Jazz Discography</title>.
+                     <biblScope unit="vol">26 volumes</biblScope>. <pubPlace>Vancouver,
+                     BC</pubPlace>; <pubPlace>Redwood, NY</pubPlace>: <publisher>Lord Music
+                     Reference</publisher>/<publisher>Cadence Jazz Books</publisher>,
+                     <date>1992–2002</date>.</bibl>
+            </item>
+            <item>
+               <abbr>LSFP</abbr>
+               <bibl><editor role="compiler" key="76538">
+                  <surname>Leadbitter</surname>, <forename>Mike</forename></editor>, <editor role="complier" key="76539"
+                        ><forename>Neil</forename>
+                     <surname>Slaven</surname></editor>, <editor role="compiler" key="40119"
+                        ><forename>Les</forename>
+                        <surname>Fancourt</surname></editor>, and <editor role="compiler" key="76540"
+                        ><forename>Paul</forename>
+                     <surname>Pelletier</surname></editor>, compilers. <title>Blues Records
+                     1943–1970</title>. <biblScope unit="vol">2 volumes</biblScope>. <bibl><title>A
+                        Selective Discography: vol. 1: A-K</title> (<pubPlace>London</pubPlace>:
+                        <publisher>Record Information Services</publisher>,
+                     <date>1987</date>)</bibl>; <bibl><title><q>The Bible of the Blues</q>: vol.
+                        2</title>: L-Z (<publisher>Record Information Services</publisher>,
+                        <date>1994</date>)</bibl>.</bibl>
+            </item>
+            <item>
+               <abbr>McGrath</abbr>
+               <bibl><author key="76541">
+                  <surname>McGrath</surname>, <forename>Bob</forename></author>. <title>The R&amp;B Indies</title>.
+                     <biblScope unit="vol">2 volumes</biblScope>. <pubPlace>West Vancouver,
+                     BC</pubPlace>: <publisher>Eyeball</publisher>, <date>2000</date>.</bibl>
+            </item>
+            <item>
+               <abbr>New Grove Jazz</abbr>
+               <bibl><editor key="76542">
+                  <surname>Kernfeld</surname>, <forename>Barry</forename></editor>, editor. <title>The New Grove Dictionary
+                     of Jazz</title>. <edition>Second edition</edition>, <biblScope unit="vol">two
+                     volumes</biblScope>, <pubPlace>London</pubPlace>:
+                     <publisher>Macmillan</publisher>; <pubPlace>New York</pubPlace>:
+                     <publisher>Grove’s Dictionaries</publisher>, <date>2002</date>.</bibl>
+            </item>
+            <item>
+               <abbr>Santelli</abbr>
+               <bibl><author key="46789">
+                  <surname>Santelli</surname>, <forename>Robert</forename></author>. <title>The Big Book of Blues: A
+                     Biographical Encyclopedia</title>. <pubPlace>New York</pubPlace>:
+                     <publisher>Penguin</publisher>, 1993.</bibl>
+            </item>
+            <item>
+               <abbr>Southern</abbr>
+               <bibl><author key="16887">
+                  <surname>Southern</surname>, <forename>Eileen</forename></author>. <title>Biographical Dictionary of
+                     Afro-American and African Musicians</title>. <pubPlace>Westport, CT</pubPlace>:
+                     <publisher>Greenwood</publisher>, <date>1982</date>.</bibl>
+            </item>
+            <item>
+               <abbr>Sutton</abbr>
+               <bibl><author key="76544"><surname>Sutton</surname>, <forename>Allan</forename></author>.
+                     <title>American Record Labels and Companies, An Encyclopedia</title>.
+                     <pubPlace>Denver, CO</pubPlace>: <publisher>Mainspring Press</publisher>,
+                     <date>2000</date>.</bibl>
+            </item>
+            <item>
+               <abbr>Whitburn</abbr>
+               <bibl><author key=""><surname>Whitburn</surname>, <forename>Joel</forename></author>.
+                     <title>Billboard Top R&amp;B Singles 1942–1999</title>. <pubPlace>Menomonee
+                     Falls, WI</pubPlace>: <publisher>Record Research, Inc.</publisher>,
+                     <date>2000</date>.</bibl>
+            </item></list>
+      </body>
+  </text>
+</TEI>

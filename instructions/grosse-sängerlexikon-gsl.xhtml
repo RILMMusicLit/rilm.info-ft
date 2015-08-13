@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Großes Sängerlexikon, 4th ed. (</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="GSL">Großes Sängerlexikon, 4th ed. (2003)</h4>
+      </div>
+    </a>
+    <div class="r201503" title="Added, 3/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from the provided rich PDF.</li>
+            <li>This publication has only "person" articles.</li>
+            <li>Articles have only &lt;div type="body"> and possibly up to 2 &lt;div
+              type="ography">.</li>
+            <li>German-style quotation marks (double angle: « and ») are used throughout to indicate
+                <i>titles</i>. OMIT the quotation marks and tag these &lt;title rend="quoted">.</li>
+            <li>Italic type is used to indicate <i>personal names</i> unless used in conjunction
+              with quotation marks (« and »).</li>
+          </ul></li>
+        <li><b>Front matter</b> includes the Title page, copyright page, contents, "Vorwort"
+          (Foreword), "Die Autoren" (Authors), and "Abkürzungen von Schallplatten-Marken"
+          (Abbreviations of Record Labels). <ul>
+            <li>Set the Abkürzungen list as a &lt;table>.</li>
+          </ul></li>
+        <li><b>Entries</b> give the personal name given in <i>surname, forename</i> order. The
+          surname is set in in bold followed by a comma, with surnames in normal-case bold. Next,
+          the occupation(s) is (are) given, followed by another comma. Finally birth and date
+          information is given. Omit the * and † characters. Tag up to the first period or semicolon
+          in a &lt;rilmPerson> element.<ul>
+            <li><b>Pavloska</b>, Irene, Mezzosopran/Sopran, * 1890 in Kanada als Tochter polnischer
+              Eltern, † 12. 2. 1962 Chicago.</li>
+          </ul><blockquote>&lt;div type="body"><br />
+            &lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Pavloska&lt;/surname>,
+            &lt;forename>Irene&lt;/forename>&lt;/persName>,
+            &lt;occupation>Mezzosopran/Sopran&lt;/occupation>, &lt;birth>&lt;date when="1890"
+            when-custom="1890">1890&lt;/date> in &lt;placeName>Kanada&lt;/placeName> als Tochter
+            polnischer Eltern&lt;/birth>, &lt;death>&lt;date when="1962-12-02"
+            when-custom="1962">12. 2. 1962&lt;/date>
+            &lt;placeName>Chicago&lt;/placeName>&lt;/death>&lt;/rilmPerson>.<br />
+            ...&lt;/p>&lt;/div></blockquote> If a period or semicolon is encountered before a * or †
+          character, it means that birth and death information is not given: <ul>
+            <li><b>Payer</b>, Christian, Tenor; er war Mitglied der Kaiserlichen Hofkapelle
+              Wien.</li>
+          </ul><blockquote>&lt;div
+            type="body">&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Payer&lt;/surname>,
+            &lt;forename>Christian&lt;/forename>,
+            &lt;occupation>Tenor&lt;/occupation>&lt;/persName>&lt;/rilmPerson>; er war Mitglied der
+            Kaiserlichen Hofkapelle Wien. ...&lt;/p>&lt;/div></blockquote></li>
+        <li><b>Bibliographies</b>, if present are indicated by the word "<b>Lit</b>" followed by a
+          colon. <ul>
+            <li>Author, if given, comes first in forename-surname order, followed by a colon. [E.
+              Solmière:]. </li>
+            <li>Books titles are in angle quotes and are followed by (place, date) in parentheses:
+              [E. Solmière: «Rose Caron» (Paris,
+                1896).]<blockquote>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>E.&lt;/abbr>&lt;/forename>
+                &lt;surname>Solmière&lt;/surname>&lt;/author>: &lt;title rend="quoted">Rose
+                Caron&lt;/title> (&lt;pubPlace>Paris&lt;/pubPlace>,
+                &lt;date>1896&lt;/date>).&lt;/bibl></blockquote></li>
+            <li>Article titles are not quoted, and are followed by the source in parentheses, source
+              title in quotes: [R. Celletti &amp; R. Vegeto: Lina Cavalieri (in «Le grandi Voci»,
+              Rom
+                1964).<blockquote>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>R.&lt;/abbr>&lt;/forename>
+                &lt;surname>Celletti&lt;/surname>&lt;/author> &amp;
+                &lt;author>&lt;forename>&lt;abbr>R.&lt;/abbr>&lt;/forename>
+                &lt;surname>Vegeto&lt;/surname>&lt;/author>: &lt;title type="article">Lina
+                Cavalieri&lt;/title> (in &lt;title rend="quoted">Le grandi Voci&lt;/title>,
+                &lt;pubPlace>Rom&lt;/pubPlace> &lt;date>1964&lt;/date>).&lt;/bibl></blockquote></li>
+            <li>Dissertations titles are not quoted, and have "Dissertation" in the parenthesis with
+              school and date: [P. Lewy Gidwitz: Vocal Profiles of Four Mozart Sopranos
+              (Dissertation, University of California, Berkeley,
+                1991).]<blockquote>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>P.&lt;/abbr>&lt;/forename>
+                &lt;surname>Lewy&lt;/surname> &lt;surname>Gidwitz&lt;/surname>&lt;/author>:
+                &lt;title rend="roman">Vocal Profiles of Four Mozart Sopranos&lt;/title>
+                (Dissertation, &lt;orgName type="uni">University of California&lt;/orgName>,
+                &lt;pubPlace>Berkeley&lt;/pubPlace>,
+                &lt;date>1991&lt;/date>).&lt;/bibl></blockquote></li>
+            <li>NOTE: if the entry does not include a colon, the author is not identified: [Susan
+              Chilcott (in «Opera», 2002)].<blockquote>&lt;bibl>&lt;title rend="roman">Susan
+                Chilcott&lt;/title> (in &lt;title rend="quoted">Opera&lt;/title>,
+                &lt;date>2002&lt;/date>)</blockquote></li>
+          </ul></li>
+        <li>The beginning of a <b>discography</b>, if present, is signaled by the word
+            "<b>Schallplatten</b>" followed by a colon.<ul>
+            <li>Each item generally give the record label name first (publisher), followed by
+              additional information in parentheses. Years are sometimes given.</li>
+            <li>Titles are always in double-angle quotation marks. Again, omit the quotation
+              marks.<br /><br />[Schallplatten: Philips (Andrej in «Khovantchina»), Decca («Fürst
+              Igor» von Borodin; Dimitrij im «Boris Godunow», auch als Video).]<blockquote>&lt;div
+                type="ography">&lt;head>Schallplatten:&lt;/head>
+                <br />&lt;list><br />&lt;item>&lt;bibl>&lt;publisher>Philips&lt;/publisher> (Andrej
+                in &lt;title rend="quoted">Khovantchina&lt;/title>),&lt;/bibl>&lt;/item>
+                <br />&lt;item>&lt;bibl>&lt;publisher>Decca&lt;/publisher> (&lt;title
+                rend="quoted">Fürst Igor&lt;/title> von Borodin; Dimitrij im &lt;title
+                rend="quoted">Boris Godunow&lt;/title>, auch als
+                Video)&lt;/bibl>&lt;/item><br />&lt;/list>&lt;/div>.</blockquote></li>
+            <li>Some "Schallplatten" sections contain only prose, and there will be no way to parse
+              individual items. Tag whatever can be confidently identified:
+              <br /><br />[Schallplatten: Von ihrer technisch hervorragend geführten Koloraturstimme
+              existieren Edison-Zylinder sowie Victor-Platten (1907-08), darunter als bekannteste
+              Aufnahme das «Rigoletto»-Quartett mit Enrico Caruso, Louise Homer und Antonio
+                Scotti.]<blockquote>&lt;div type="ography">&lt;head>Schallplatten:&lt;/head>
+                <br />&lt;list><br />&lt;item>&lt;bibl>Von ihrer technisch hervorragend geführten
+                Koloraturstimme existieren Edison-Zylinder sowie Victor-Platten
+                (&lt;date>1907-08&lt;/date>), darunter als bekannteste Aufnahme das &lt;title
+                rend="quoted">Rigoletto&lt;/title>-Quartett mit Enrico Caruso, Louise Homer und
+                Antonio Scotti.&lt;/bibl>&lt;/item><br />&lt;/list>&lt;/div>.</blockquote></li>
+          </ul>
+        </li>
+        <li>See references are always in the form "<b>Surname</b>, Forename, s. unter
+            <i>Surname2</i>, Forename2."</li>
+        <li><b>Back matter</b> is lengthy. <ul>
+            <li>OPERN UND OPERETTEN UND DEREN URAUFFÜHRUNGEN: set the "OPERN" and "OPERETTA"
+              sections in separate files. The items are formatted as: Title in italic type, "von",
+              author, date, place, "mit", and performers separated by slashes: <br />
+              <br /> [<i>Les Abencérages</i> ou <i>L’Étendard de Grenade</i> von Luigi Cherubini, 6.
+              4. 1813 Grand Opéra Paris (in Anwesenheit von Kaiser Napoleon I.) mit
+              Alexandrine-Caroline Branchu / Louis Nourrit / Henri-Étienne Dérivis /Jacques-Émile
+              Lavigne /Joséphine Armand / Alexandre /Jean-Honoré Bertin.]
+                <blockquote>&lt;item>&lt;bibl>&lt;title>Les Abencérages ou L’Étendard de
+                Grenade&lt;/title> von &lt;author>Luigi Cherubini&lt;/author>, &lt;rilmPerformance
+                type="ur">&lt;date when="1813-06-04" when-custom="1813">6. 4. 1813&lt;/date> Grand
+                Opéra Paris (in Anwesenheit von Kaiser Napoleon I.) mit
+                &lt;rilmPerson>&lt;persName>Alexandrine-Caroline
+                Branchu&lt;/persName>&lt;/rilmPerson> / &lt;rilmPerson>&lt;persName>Louis
+                Nourrit&lt;/persName>&lt;/rilmPerson> / &lt;rilmPerson>&lt;persName>Henri-Étienne
+                Dérivis&lt;/persName>&lt;/rilmPerson> /&lt;rilmPerson>&lt;persName>Jacques-Émile
+                Lavigne&lt;/persName>&lt;/rilmPerson> /&lt;rilmPerson>&lt;persName>Joséphine
+                Armand&lt;/persName>&lt;/rilmPerson> /
+                &lt;rilmPerson>&lt;persName>Alexandre&lt;/persName>&lt;/rilmPerson>
+                /&lt;rilmPerson>&lt;persName>Jean-Honoré
+                Bertin&lt;/persName>&lt;/rilmPerson>.&lt;/rilmPerformance>&lt;/bibl></blockquote></li>
+            <li>Tag the introductory paragraphs of the BIBLIOGRAPHIE section as &lt;div
+              type="body">, and the remainder as &lt;div type="ography">. Begin a new &lt;div> with
+              each of the two heads: "A )Werke aus den «Biographischen Archiven» des Saur-Verlags",
+              and "Weitere Quellen:".<ul>
+                <li>If an item begins with an author, it is in surname, forename order followed by a
+                  colon [Alcari, Cesare:]</li>
+                <li>If there is no colon in the entry either (1) there is no author, or (2) there
+                  are editors, after "Hrsg. v." [.... Hrsg. v. Richard Brutigam...] in
+                  forename-surname order.</li>
+                <li>Parentheses contain Place and Date, and sometime edition or volume number(s) as
+                  [(Tomes 1-27, Bruxelles 1866-1938)] or [(2nd edition London 1991)]. Tag the place
+                  and date. Place will always immediate precede the date.</li>
+              </ul>
+            </li>
+          </ul></li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

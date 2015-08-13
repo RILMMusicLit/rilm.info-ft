@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Biographisch - Bibliographisches Quellen-Lexikon</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="eitner-bql">Biographisch - Bibliographisches <br />Quellen-Lexikon</h4>
+      </div>
+    </a>
+    <div class="r201503" title="Added, 3/2015">
+      <ol>
+        <li><b>General comments</b>:<ul>
+            <li>TEI for this publication should be produced from provided text PDFs and scanned
+              print. The PDFs contain corrected text from OCR. The text will differ from the print
+              in a few details: <ol>
+                <li>German-style quotation marks in the print are changed to American-style double
+                  quotes in the PDFs.</li>
+                <li>Long "s" characters (ſ - hex 017F) in the print are replaced with modern
+                  lower-case "s".</li>
+                <li>Some bold face in the print is rendered as Roman in the PDFs.</li>
+              </ol> However, column breaks and page breaks match the print throughout.</li>
+            <li>Please insert &lt;pb> elements to indicate page breaks in the original.</li>
+            <li>BQL was printed in ten volumes over a period of five years, and different volumes
+              will have different values of &lt;date> in the &lt;imprint> element:<table>
+                <tbody>
+                  <tr>
+                    <td>vols. 1–3</td>
+                    <td>1900</td>
+                  </tr>
+                  <tr>
+                    <td>vols. 4–5</td>
+                    <td>1901</td>
+                  </tr>
+                  <tr>
+                    <td>vols. 6–7</td>
+                    <td>1902</td>
+                  </tr>
+                  <tr>
+                    <td>vols. 8–9</td>
+                    <td>1903</td>
+                  </tr>
+                  <tr>
+                    <td>vol. 10</td>
+                    <td>1904</td>
+                  </tr>
+                </tbody>
+              </table></li>
+          </ul></li>
+        <li><b>Front matter</b> includes the <b>title page</b>, <b>Subscribentenliste</b>,
+            <b>Vorwort</b>, <b>Verzeichnis der angezogenen neueren Quellenwerke</b>, <b>Verzeichnis
+            der Bibliotheks-Abkürzungen</b>, <b>Wortabkürzungen mit Ausschluss der allgemein
+            gebräuchlichen</b>, and <b>Vorbemerkung</b>. <ul>
+            <li>Set the <b>Subscribentenliste</b> as a &lt;list>. There is no systematic way to
+              distinguish persons from institutions, so simply set each as an &lt;item>. The last
+              word in each item before a parenthesis (if there is one) is a place name:
+                <blockquote>&lt;list>&lt;item>Paulus Museum in &lt;placeName>Worms&lt;/placeName>
+                (Prof. Dr. Weckerling) 1 &lt;/item><br />&lt;item>Kirchenchor St. Marien,
+                &lt;placeName>Zwickau&lt;/placeName> (Reinh. Vollhardt) 1
+                &lt;/item><br />&lt;item>Dr. Wilh. Bäumker, Pfarrer,
+                &lt;placeName>Rurich&lt;/placeName> 1&lt;/item>&lt;/list></blockquote></li>
+            <li>The <b>Verzeichnis der angezogenen neueren Quellenwerke</b> is a bibliography. Make
+              this a &lt;text type="matter"> with &lt;div type="body"> for the introductory
+              paragraph ("Diejenigen Titel...") and &lt;div type="ography"> for the list. <ol>
+                <li>Set the first word of each item in &lt;author>&lt;surname> tags; the phrase
+                  between the first period OR ending parenthesis and second period as &lt;title
+                  rend="roman">; and the four-digit number in &lt;date>.
+                    <blockquote>&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;surname>Pougin&lt;/surname>&lt;/persName>.
+                    &lt;title rend="roman">Supplement zu Fetis Biographie universelle&lt;/title> 2.
+                    Ausg. 2 Bde. Paris &lt;date>1878&lt;/date>. &lt;date>1880&lt;/date>.&lt;/bibl>&lt;/item><br />
+                    <br />&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;surname>Prost&lt;/surname>
+                    (B.)&lt;/persName>&lt;/author> &lt;title rend="roman">Liste des artistes
+                    mentionnes dans les etats de la maison du roi et des maisons des Princes, du 13.
+                    siecle ä Tan 1500&lt;/title>. In Archives historiques. Paris T. 1.
+                    &lt;date>1889&lt;/date>. S. 431 ff.&lt;/bibl>&lt;/item><br />
+                    <br />&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;surname>Prüfer&lt;/surname>
+                    (A.) &lt;/persName>&lt;/author> &lt;title rend="roman">Untersuchungen über den
+                    außerkirchlichen Kunstgesang in den evangelichen Schulen des 16. Jhs. Lpz. 1890
+                    Fock. Mit Musikbeilagen.&lt;/bibl>&lt;/item></blockquote></li>
+                <li> For the entries "A. d. B.", "Biographien", "Denkmäler", "Jahrbuch", "Lpz.
+                  Ztg.", "Magazin", "N. Z. f. M.", "Niederrheinische", "Publikation", "Tijdschrift",
+                  and "Viertelj.", omit the &lt;author>&lt;persName>&lt;surname> and &lt;title>
+                  tagging. <blockquote>&lt;item>&lt;bibl>Publikation älterer praktischer und
+                    theoretischer Musikwerke vorzugsweise des 15. u. 16. Jhs. Herausgeg. von der
+                    Gesellschaft f. Musikforschung. 1. Jahrg. &lt;date>1873&lt;/date> bis 27. Jahrg.
+                    &lt;date>1899&lt;/date>. Lpz. Br. &amp; H.&lt;/bibl>&lt;/item>
+                  </blockquote></li>
+              </ol></li>
+            <li>Set the <b>Verzeichnis der Bibliotheks-Abkürzungen</b> and the
+                <b>Wortabkürzungen</b> as simple &lt;list> elements.</li>
+          </ul></li>
+        <li>Three kinds of entries will be found:<ul>
+            <li>See-references</li>
+            <li>Person entries with article text</li>
+            <li>Entries without article text, either Person or Topic</li>
+          </ul></li>
+        <li><b>See references</b> in this publication should be treated as described in the <a
+            href="ft/tei_rilm_instructions.html#see-refs">general instruction</a> page. They are
+          indicated in one of six ways in the source: <ul>
+            <li>with the word "ist" (is): [<b>A. A.</b> ist Alexander <b>Agricola</b>] Note that the
+              target entry will be alphabetized by the bold name, i.e. "Agricola, Alexander".</li>
+            <li>with the word "gleich" (equals): [<b>A. B.</b> gleich Anton <b>Brumel</b>]</li>
+            <li>With the word "siehe" (see): [<b>Cociolini</b>, siehe <b>Conciolini</b>.]</li>
+            <li>With the abbreviation "s.": [<b>Colbanus</b>, Simon, s. <b>Kolbanus</b>.]</li>
+            <li>With an equal sign: [<b>F. D.</b> = Fréderic <i>Desessart.</i>] Note that the target
+              entry will be alphabetized by the italicized name; "Desessart, Frederic"</li>
+            <li>With the word "mutmasslich" (perhaps, possibly)</li>
+          </ul> Where there is more than one target given with "und" or "u.", place a &lt;keyword>
+          element in each of the target articles:<br /> [<b>Fockerod,</b> siehe <b>Fokkerodt</b> u.
+            <b>Vockerodt.</b>]</li>
+        <li><b>Each entry</b> will have &lt;div type="body"> and one or both of &lt;div
+          type="ography"> and &lt;div type="works">. There will be no &lt;div type="heading">.</li>
+        <li><b>Person entries</b> begin with the personal name given in <i>surname, forename</i>
+          order, typeset in Bold. The text of the article, if there is any, continues on the same
+          line in Roman type following a comma or period:<br /> [<b>Holan, Wenzeslaus Karl,</b> geb.
+          gegen 1645 zu Rowno in Böhmen, war Organist an der Peter-Paul- Kirche in Prag.] <br/>Start the
+          first &lt;p> of the body and tag from the beginning up to the first period or semicolon as
+          a &lt;rilmPerson>. <ul>
+            <li>Birth and death informations may appear in the first sentence of the body and are
+              indicated as follows: <ul>
+                <li>Birth dates are preceded by "geboren" or "geb." ; and the place is preceded by
+                  "zu" or "in".</li>
+                <li>Death dates are be preceded by "gest." or by a dagger (†) or by "starb" or by
+                  "st.".</li></ul>Because the original text is inconsistent in the way it identifies birth and death
+              dates, please tag them as &lt;birth rend="noMarker"> and &lt;death rend="noMarker">
+              and <i>do not omit any characters</i>, including dagger characters.</li>
+                <li>Occupations are also often given in the first sentence. If a word in <a
+                href="#occupations">this list of occupations</a> is found between the beginning of
+              the entry and the first period or semicolon, please tag it
+                &lt;occupation>.<blockquote>&lt;div
+                type="body">&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Holan&lt;/surname>,
+                &lt;forename>Wenzeslaus&lt;/forename> &lt;forename>Karl&lt;/forename>&lt;/persName>,
+                &lt;birth rend="noMarker">geb. gegen &lt;date when="1645"
+                when-custom="1645">1645&lt;/date> zu &lt;placeName>Rowno&lt;/placeName> in
+                &lt;placeName>Böhmen&lt;/placeName>&lt;/birth>, war
+                &lt;occupation>Organist&lt;/occupation> an der Peter-Paul- Kirche in
+                Prag.&lt;/rilmPerson>&lt;/p>&lt;/div></blockquote></li>
+            <li>When names include variant forms in in parentheses, variants before the comma should
+              be assumed to be surnames and variants after the comma should be assumed to be
+              forenames. Each variant surname and/or forename should be tagged in its <i>own</i>
+              &lt;persName> element. Words in the parentheses not beginning with a capital letter
+              should not be tagged. <br /><br />[<b>Hoioul</b> (Hoyoul, Hoyul), <b>Johann
+                Ludwig,</b>] <blockquote>&lt;persName>&lt;surname>Hoioul&lt;/surname>&lt;/persName>
+                (&lt;persName>&lt;surname>Hoyoul&lt;/surname>&lt;/persName>,
+                &lt;persName>&lt;surname>Hoyul&lt;/surname>&lt;/persName>),
+                &lt;persName>&lt;forename>Cornelis&lt;/forename>&lt;/persName>,</blockquote>[<b>Heekel,
+                Wolf</b> (Wolfgang),] <blockquote>&lt;persName>&lt;surname>Heekel&lt;/surname>,
+                &lt;forename>Wolf&lt;/forename>&lt;/persName>
+                (&lt;persName>&lt;forename>Wolfgang&lt;/forename>&lt;/persName>),</blockquote></li>
+            <li>Titles ("Dr.", "Rev.", "Fra.", "Don", "D.", "Pat.", "Pater", "Abbé", "l'Abbé") are
+              set in non-bold type between surname and forename <i>with no parentheses</i> and
+              should be enclosed in &lt;roleName> elements.<br /><br /> [<b>Riddell,</b> Captain
+                <b>Robert</b>] <blockquote>&lt;persName>&lt;surname>Riddell&lt;/surname>,
+                &lt;roleName>Captain&lt;/roleName>
+                &lt;forename>Robert&lt;/forename>&lt;/persName></blockquote>
+            </li>
+            <li>Where only the first letter (or letters) of the forename is known, the name is given
+              with the letter(s) and elipsis (three periods): [<b>Arnulfus, G . . . </b>,] In such
+              cases, include the elipsis within the &lt;forename> tags:
+                <blockquote>&lt;persName>&lt;surname>Arnulfus&lt;/surname>, &lt;forename>G. . .
+                &lt;/forename>&lt;/persName>,</blockquote></li>
+            <li>Where only the surname is known, an elipsis is used in place of the forename:
+                [<b>Arthon,</b> . . .]. Again, tag the elipsis as
+                &lt;forename>:<blockquote>&lt;persName>&lt;surname>Arthon&lt;/surname>,
+                &lt;forename>. . .&lt;/forename>&lt;/persName></blockquote></li>
+          </ul></li>
+        <li><b>Lists following articles:</b>
+          <ul>
+            <li>If there is no head at the top of the list following the body of an article, tag it
+              as a &lt;div type="ography"> containing &lt;item> and &lt;bibl> elements. The
+              formatting is often too irregular to determine titles, etc., reliably, so do not
+              divide the &lt;bibl> elements.</li>
+            <li>Some lists have heads in italic type.<ol>
+                <li>If the list has an italic head containing "<i>Bibliographie</i>" or
+                    "<i>Biographie</i>", mark up the list following it as a &lt;div type="ography">
+                  with the title in a &lt;head> element. Many entries in this type of list begin
+                  with the author's name followed by a colon (:):<br /><br />[Beyle, Henry: Vies de
+                  H., de Mozart . . . Paris 1854 Lévy frères. 12º. 341 S. [Bologna.]<br /><br />Tag
+                  the author's name where there is a colon, and tag the date:
+                    <blockquote>&lt;item>&lt;bibl>&lt;author>&lt;surname>Beyle&lt;/surname>,
+                    &lt;forename>Henry&lt;/forename>&lt;/author>: Vies de H., de Mozart . . . Paris
+                    &lt;date>1854&lt;/date> Lévy frères. 12º. 341 S.
+                    [Bologna.&lt;/bibl>&lt;/item></blockquote></li>
+                <li>Lists with a <i>centered</i> italic head containing "<i>Komposition</i>",
+                    "<i>werke</i>", "<i>musik</i>", or "<i>instrumental</i>" should be tagged
+                  &lt;div type="works">. Tag each indented entry with &lt;item> and &lt;bibl>. Where
+                  such a head begins with a number, it marks a "section" within a longer "works"
+                  list. (Please see the file bql-sample-3.xml)</li>
+              </ol></li>
+          </ul></li>
+        <li>Entries <b>without article text</b>:<ul>
+            <li>Some entries have a punctuation after the head, then a line break. The smaller-type
+              "ography" begins immediately:<br /><br /> [<b>Kolbe, . . .</b><br /> die B. B. besitzt
+              einen französischen<br /> Druck von „4 Fughe‟ ohne Titelbl. in<br /> fol., dessen
+              Druckprivileg von König Louis<br /> am 11. Mai 1730 ausgefertigt ist.]
+                <blockquote>&lt;div type="body">&lt;p>&lt;rilmPerson><br />
+                &lt;persName>&lt;surname>Kolbe&lt;/surname>, &lt;forename>. .
+                .&lt;/forename>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div></blockquote><blockquote>&lt;div
+                type="ography"><br />&lt;list>&lt;item>&lt;bibl>die B. B. besitzt einen
+                französischen Druck von <q>4 Fughe</q> ohne Titelbl. in fol., dessen Druckprivileg
+                von König Louis am 11. Mai 1730 ausgefertigt
+                ist.&lt;/bibl>&lt;/item>&lt;/list>&lt;/div></blockquote></li>
+            <li>Entries that have <i>no comma</i> before the first line break are &lt;text
+              type="topic">. Tag the text in Bold face type as &lt;seg function="topic> and
+              &lt;term>. <br /><br /> [<b>Fondamento</b><br /> par l'accompagnamento. Ms. [Musikfr.
+                Wien.]<blockquote>&lt;div type="body">&lt;p>&lt;seg
+                type="topic">&lt;term>Fondamento&lt;/term>&lt;/seg>&lt;/p>&lt;/div></blockquote><blockquote>&lt;div
+                type="ography">&lt;list>&lt;item>&lt;bibl>par l'accompagnamento. Ms. [Musikfr.
+                Wien.&lt;/bibl>&lt;/item>&lt;/list>&lt;/div></blockquote> [<b>Eastcheap.</b>
+              <br /> Practical discourses of singing in the worship of God, preached at Eastcheap by
+              several Ministers. London 1708, 8°. [Glasgow, br. Mus. <blockquote>&lt;div
+                type="body">&lt;p>&lt;seg
+                type="topic">&lt;term>Eastcheap&lt;/term>&lt;/seg>.&lt;/p>&lt;/div></blockquote><blockquote>&lt;div
+                type="ography">&lt;list>&lt;item>&lt;bibl>Practical discourses of singing in the
+                worship of God, preached at Eastcheap by several Ministers. London 1708, 8°.
+                [Glasgow, br. Mus.&lt;/bibl>&lt;/item>&lt;/list>&lt;/div></blockquote></li>
+          </ul></li>
+        <li>A handful of entries imply family relationships and are typeset with a dash at the
+          beginning of the entries after the first:<br /><br /> [<b>Berkenhof, Franz Norbert,</b>
+          aus Leyden, ist am 12. Nov. 1759 an der Universität zu Leyden als Musicus eingeschrieben
+          (Bouwst. 3, 8). <br /> — <i>Hermann Gabriel,</i> aus Leyden, ebendort am 28. Mai 1768 als
+          Musicus eingeschrieben (ib, 3, 9). <br /> — <i>Theodor Albert,</i> aus Leyden, ebendort am
+          7. März 1767 u. 24. Okt. 1789 als Musicus eingezeichnet. Er war geb. um 1746, gest. um
+          1814 u. Violist u. Stadt-Musikmeister zu Leyden (Bouwst. 3, 9 u. 11).]<br /><br /> Treat
+          each as a separate entry and replicate the family name ("Berkenhof, Hermann Gabriel" and
+          "Berkenhof, Theodor Albert") where it has been replaced with a dash. </li>
+
+        <li><b>Verbesserungen und Nachträge</b> sections at the ends of volumes should be set as
+          &lt;list>.</li>
+
+
+
+
+      </ol>
+      <p>Please refer also to sample files.</p>
+      <p><a id="occupations">Occupations</a>: Most can be made feminine by adding -in to the
+        end.</p>
+      <ul>
+        <li>Administrator</li>
+        <li>Akustiker</li>
+        <li>Architekt</li>
+        <li>Arrangeur</li>
+        <li>Arzt</li>
+        <li>Autor</li>
+        <li>Bandleader</li>
+        <li>Bibliothekar</li>
+        <li>Bratschist</li>
+        <li>Buchhändler</li>
+        <li>Bühnenbildner</li>
+        <li>Cembalist</li>
+        <li>Choreograf</li>
+        <li>Chorleiter</li>
+        <li>Darsteller</li>
+        <li>Dichter</li>
+        <li>Dirigent</li>
+        <li>Dramatiker</li>
+        <li>Drucker</li>
+        <li>Editor</li>
+        <li>Erfinder</li>
+        <li>Ethnologe</li>
+        <li>Fagottist</li>
+        <li>Flötist</li>
+        <li>Funktionär</li>
+        <li>Gambist</li>
+        <li>Geigenbauer</li>
+        <li>Geiger</li>
+        <li>Geistlicher</li>
+        <li>Gelehrter</li>
+        <li>Gesangslehrer</li>
+        <li>Gitarrist</li>
+        <li>Graveur</li>
+        <li>Harfenist</li>
+        <li>Herausgeber</li>
+        <li>Historiker</li>
+        <li>Holzblasinstrumentenbauer</li>
+        <li>Hornist</li>
+        <li>Humanist</li>
+        <li>Impresario</li>
+        <li>Instrumentalist</li>
+        <li>Instrumentenbauer</li>
+        <li>Jazz-Pianist</li>
+        <li>Journalist</li>
+        <li>Kapellmeister</li>
+        <li>Kirchenmusiker</li>
+        <li>Klarinettist</li>
+        <li>Klavierbauer</li>
+        <li>Komponist</li>
+        <li>Kontrabassist</li>
+        <li>Kritiker</li>
+        <li>Lautenist</li>
+        <li>Lehrer</li>
+        <li>Librettist</li>
+        <li>Literat</li>
+        <li>Lyriker</li>
+        <li>Maler</li>
+        <li>Mathematiker</li>
+        <li>Mezzosopranistin</li>
+        <li>Musik- Drucker</li>
+        <li>Musik -Editor</li>
+        <li>Musiker</li>
+        <li>Musikerfamilie</li>
+        <li>Musikethnologe</li>
+        <li>Musikfunkionär</li>
+        <li>Musikhistoriker</li>
+        <li>Musikkritiker</li>
+        <li>Musiklehrer</li>
+        <li>Musikproduzent</li>
+        <li>Musikschriftsteller</li>
+        <li>Musiktheoretiker</li>
+        <li>Musikverlag</li>
+        <li>Musikverlagen</li>
+        <li>Musikwissenschaftler</li>
+        <li>Oboist</li>
+        <li>Organist</li>
+        <li>Orgelbauer</li>
+        <li>Pädagoge</li>
+        <li>Philosoph</li>
+        <li>Pianist</li>
+        <li>Priester</li>
+        <li>Produzent</li>
+        <li>Psychologe</li>
+        <li>Publizist</li>
+        <li>Regisseur</li>
+        <li>Rock-Gruppe</li>
+        <li>Romancier</li>
+        <li>Sänger</li>
+        <li>Schauspieler</li>
+        <li>Schauspielerin</li>
+        <li>Schirmherr</li>
+        <li>Schriftsteller</li>
+        <li>Songwriter</li>
+        <li>Tänzer</li>
+        <li>Theologe</li>
+        <li>Theoretiker</li>
+        <li>Trompeter</li>
+        <li>Troubadour</li>
+        <li>Übersetzer</li>
+        <li>Verleger</li>
+        <li>Violoncellist</li>
+        <li>Volkskundler</li>
+        <li>Volksliedsammler</li>
+        <li>Volkssänger</li>
+      </ul>
+    </div>
+  </body>
+</html>

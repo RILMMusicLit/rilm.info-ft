@@ -1,0 +1,2050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Encyclopedia of American Gospel Music</title>
+    </head>
+    <body>
+        <a>
+            <div>
+                <h4 id="gospel">Encyclopedia of American Gospel Music (eag)</h4>
+            </div>
+        </a>
+        <div class="r201501" title="Added, 1/2015">
+            <ol>
+                <li>This publication should be converted from the provided XML.</li>
+                <li>Convert the contents of all &lt;sc&gt; elements to lower-case letters, and then remove the &lt;sc> tags.</li>
+                <li>Use <a href="../tei_rilm_instructions.html#american" target="_blank">American
+                        rule</a> for single quotation marks.</li>
+                <li>The tags &lt;xref ref-type="page"/&gt; should be converted to the TEI element
+                    &lt;pb&gt; with @n containing the page number: <blockquote>&lt;xref
+                        ref-type="page" id="page_2"/&gt;<br /><br /> &lt;pb
+                    n="2"/&gt;</blockquote></li>
+                <li>The List of Contributors beginning on page ix should be set as a &lt;list&gt;.
+                    Each item may be tagged with &lt;rilmPerson>, &lt;persName>, and &lt;orgName> or
+                    &lt;placeName> as follows: <blockquote>&lt;bio&gt;<br />
+                        &lt;p&gt;&lt;bold&gt;Melvin L. Butler&lt;/bold&gt; Dartmouth
+                        College&lt;/p&gt;<br /> &lt;/bio&gt;<br /> &lt;bio&gt;<br />
+                        &lt;p&gt;&lt;bold&gt;Richard Carlin&lt;/bold&gt; New York, New
+                        York&lt;/p&gt;<br /> &lt;/bio&gt;<br /><br /> &lt;item&gt;<br />
+                        &lt;rilmPerson&gt;&lt;persName&gt;&lt;forename&gt;Melvin&lt;/forename&gt;
+                        &lt;forename&gt;&lt;abbr&gt;L.&lt;/abbr&gt;&lt;/forename&gt;
+                        &lt;surname>Butler&lt;/surname> &lt;orgName type="uni"&gt;Dartmouth
+                        College&lt;/orgName&gt;&lt;/persName&gt;&lt;/rilmPerson&gt;<br />
+                        &lt;/item&gt;<br />&lt;item&gt;<br />
+                        &lt;rilmPerson&gt;&lt;persName&gt;&lt;forename&gt;Richard&lt;/forename&gt;
+                        &lt;surname>Carlin&lt;/surname> &lt;placeName&gt;New York, New
+                        York&lt;/placeName&gt;&lt;/persName&gt;&lt;/rilmPerson&gt;<br />
+                        &lt;/item&gt;</blockquote> Use the part of the name after the last space
+                    character as the &lt;surname&gt;. <i>Exception: for names ending ", Jr." or
+                        "III", use</i> &lt;genName&gt; <i>for the part after the last space, and</i>
+                    &lt;surname&gt; <i>for the part preceding, as follows:</i>
+                    <blockquote>&lt;rilmPerson&gt;&lt;persName&gt;&lt;forename&gt;Emmett
+                        &lt;/forename&gt;
+                        &lt;forename&gt;&lt;abbr&gt;G.&lt;/abbr&gt;&lt;/forename&gt;
+                        &lt;surname&gt;Price&lt;/surname&gt;
+                        &lt;genName&gt;III&lt;/genName&gt;</blockquote></li>
+                <li>The List of Entries beginning on page xi can be set as a single &lt;list&gt;
+                    within a &lt;div type="ref"&gt;: <blockquote>&lt;list-item&gt;<br />
+                        &lt;p&gt;Abernathy, Lee Roy&lt;/p&gt;<br /> &lt;/list-item&gt;<br /><br />
+                        &lt;item&gt;Abernathy, Lee Roy L.&lt;/item&gt;</blockquote>
+                </li>
+                <li>The <a href="#text-types">table at the bottom of this page</a> will be your
+                    guide to the value of @type in the &lt;text&gt; elements.</li>
+                <li>All articles have the following sections: @head, @body, and at least one
+                    @ography. Many articles will have additional @ography sections, and some will
+                    have a &lt;div type="ref"&gt; preceding the @ography sections <br />
+                    <br /> a) Inside the &lt;div type="heading"&gt; should be a &lt;rilmPerson&gt;
+                    for @type="person" articles, and a &lt;p&gt; for all others. Names before the
+                    comma should be placed in a &lt;surname&gt;, and names after the comma should each go
+                    in a &lt;forename&gt; element. <br /><br /><i>Exceptions: the word "Reverend" should be
+                        enclosed in a</i> &lt;roleName&gt; <i>element; Anything in quotation marks
+                        should be put in</i> &lt;q&gt; <i>tags within an</i> &lt;addName&gt;
+                        <i>element; "Jr." or "III" should be put in a</i> &lt;genName&gt;
+                        <i>element.</i>
+                    <blockquote>&lt;title&gt;Moore, Reverend Arnold Dwight
+                        &#x201C;Gatemouth&#x201D;&lt;/title&gt; <br />
+                        <br />&lt;div type="heading">&lt;rilmPerson
+                        xml:id="r1"&gt;&lt;persName&gt;&lt;surname&gt;Moore&lt;/surname&gt;,
+                        &lt;roleName&gt;Reverend&lt;/roleName&gt;
+                        &lt;forename&gt;Arnold&lt;/forename&gt;
+                        &lt;forename&gt;Dwight&lt;/forename&gt;
+                        &lt;addName&gt;&lt;q&gt;Gatemouth&lt;/q&gt;&lt;/addName&gt;&lt;/persName&gt;&lt;/rilmPerson&gt;&lt;/div></blockquote>
+                    <br /> b) &lt;text type="person"&gt; articles include birth and death dates and
+                    places in parentheses in the &lt;p&gt; element immediately following the article
+                    title. Sometimes another version of the person's name is included. All of these
+                    should be included in a &lt;rilmPerson&gt; element inside a &lt;div
+                    type="subheading"&gt; with an @corresp attribute pointing to the xml:id of the
+                    &lt;rilmPerson&gt; element above it. Tag the birth and death dates, and omit the parentheses and "b." and "d." 
+                    The different name version should be set in
+                    a &lt;persName&gt; element. <blockquote> &lt;title&gt;Ford, Tennessee
+                        Ernie&lt;/title&gt; &lt;p&gt;Ernest Jennings Ford (b. February 19, 1919,
+                        Ford-town, TN; d. October 17, 1991, Reston, VA)&lt;/p&gt; <br /><br />
+                        <br /> &lt;div type="heading"&gt;<br />&lt;rilmPerson
+                        xml:id="r1"&gt;<br />&lt;persName&gt;&lt;surname&gt;Ford&lt;/surname&gt;,
+                        &lt;forename&gt;Tennessee&lt;/forename&gt;
+                        &lt;forename&gt;Ernie&lt;/forename&gt;&lt;/persName&gt;&lt;/rilmPerson>&lt;/div><br /><br />
+                        &lt;div type="subheading"&gt;<br />&lt;rilmPerson xml:id="r2"
+                        corresp="#r1"&gt; &lt;persName&gt;&lt;forename&gt;Ernest&lt;/forename&gt;
+                        &lt;forename&gt;Jennings&lt;/forename&gt;
+                        &lt;surname&gt;Ford&lt;/surname&gt;&lt;/persName&gt;
+                        <br />&lt;birth&gt;&lt;date when="1919-02-19" when-custom="1919"&gt;February
+                        19, 1919&lt;/date&gt;, &lt;placeName&gt;Fordtown,
+                        TN&lt;/placeName&gt;&lt;/birth&gt;; &lt;death&gt;&lt;date when="1991-10-17"
+                        when-custom="1991"&gt;October 17, 1991&lt;/date&gt;,
+                        &lt;placeName&gt;Reston,
+                        VA&lt;/placeName&gt;&lt;/death&gt;&lt;/rilmPerson&gt;<br />&lt;/div&gt;</blockquote>
+                    c) Many &lt;text type="group"&gt; articles give a &lt;list&gt; of the group
+                    members within the first &lt;p&gt; following the &lt;title&gt; element. Put the
+                    &lt;list&gt; inside a &lt;div type="subheading"&gt; and tag each name as a
+                    &lt;rilmPerson&gt;: <blockquote>&lt;title&gt;Brown&#x2019;s Ferry
+                        Four&lt;/title&gt; &lt;p&gt;&lt;list list-type="simple"&gt;
+                        <br />&lt;list-item&gt; &lt;p&gt;Alton Delmore (b. December 25, 1908; d.
+                        June 9, 1969)&lt;/p&gt; &lt;/list-item&gt; <br />&lt;list-item&gt;
+                        &lt;p&gt;Rabon Delmore (b. December 3, 1916; d. December 4, 1952)&lt;/p&gt;
+                        &lt;/list-item&gt; <br />&lt;list-item&gt; &lt;p&gt;Merle Travis (b.
+                        November 29, 1917; d. October 20, 1983)&lt;/p&gt; &lt;/list-item&gt;
+                        <br />&lt;list-item&gt; &lt;p&gt;Louis Marshall &#x201C;Grandpa&#x201D;
+                        Jones (b. October 20, 1913; d. February 19, 1998)&lt;/p&gt;
+                        &lt;/list-item&gt; &lt;/list&gt;&lt;/p&gt;</blockquote><br />
+                    <blockquote>&lt;div type="heading"> &lt;p>Brown’s Ferry Four&lt;/p>
+                        &lt;/div><br /> &lt;div type="subheading"> &lt;list>
+                        <br />&lt;item>&lt;rilmPerson
+                        xml:id="p3">&lt;persName>&lt;forename>Alton&lt;/forename>
+                        &lt;surname>Delmore&lt;/surname>&lt;/persName> &lt;birth>&lt;date
+                        when="1908-12-25" when-custom="1908">December 25, 1908&lt;/date>&lt;/birth>;
+                        &lt;death>&lt;date when="1969-06-09" when-custom="1969">June 9,
+                        1969&lt;/date>&lt;/death>&lt;/rilmPerson>&lt;/item>
+                        <br />&lt;item>&lt;rilmPerson
+                        xml:id="p4">&lt;persName>&lt;forename>Rabon&lt;/forename>
+                        &lt;surname>Delmore&lt;/surname>&lt;/persName> &lt;birth>&lt;date
+                        when="1916-12-03" when-custom="1916">December 3, 1916&lt;/date>&lt;/birth>;
+                        &lt;death>&lt;date when="1952-12-04" when-custom="1952">December 4,
+                        1952&lt;/date>&lt;/death>&lt;/rilmPerson>&lt;/item>
+                        <br />&lt;item>&lt;rilmPerson
+                        xml:id="p5">&lt;persName>&lt;forename>Merle&lt;/forename>
+                        &lt;surname>Travis&lt;/surname>&lt;/persName> &lt;birth>&lt;date
+                        when="1917-11-29" when-custom="1917">November 29, 1917&lt;/date>&lt;/birth>;
+                        &lt;death>&lt;date when="1983-10-20" when-custom="1983">October 20,
+                        1983&lt;/date>&lt;/death>&lt;/rilmPerson>&lt;/item>
+                        <br />&lt;item>&lt;rilmPerson
+                        xml:id="p6">&lt;persName>&lt;forename>Louis&lt;/forename>
+                        &lt;forename>Marshall&lt;/forename>
+                        &lt;addName>&lt;q>Grandpa&lt;/q>&lt;/addName>
+                        &lt;surname>Jones&lt;/surname>&lt;/persName> &lt;birth>&lt;date
+                        when="1913-10-20" when-custom="1913">October 20, 1913&lt;/date>&lt;/birth>;
+                        &lt;death>&lt;date when="1998-02-19" when-custom="1998">February 19,
+                        1998&lt;/date>&lt;/death>&lt;/rilmPerson>&lt;/item>&lt;/list>&lt;/div></blockquote></li>
+                <li>Sections within an article--&lt;sec> elements in the source xml beginning with a
+                    &lt;title>--should begin a new &lt;div&gt; each with a &lt;head&gt; element.
+                        <blockquote>&lt;sec id="S51"> &lt;title>Origins&lt;/title> &lt;p>The origins
+                        of barbershop harmony...&lt;/p>&lt;/sec></blockquote>
+                    <blockquote>&lt;div type="section"> &lt;head>Origins&lt;/head> &lt;p>The origins
+                        of barbershop harmony...&lt;/p>&lt;/div></blockquote></li>
+                <li>Many articles include quotations from song lyrics enclosed in a
+                    &lt;verse-group&gt; and &lt;verse-line&gt; elements. These should be placed
+                    within the preceding &lt;p&gt; element (if present, otherwise in its own), in
+                    &lt;lg&gt; tags, with each line in its own &lt;l&gt; tag:
+                        <blockquote>&lt;verse-group&gt; <br />&lt;verse-line&gt;Sweet Adeline (sweet
+                        Adeline)&lt;/verse-line&gt; <br />&lt;verse-line&gt;My Adeline (my
+                        Adeline)&lt;/verse-line&gt; <br />&lt;verse-line&gt;At night, dear heart (at
+                        night, dear heart)&lt;/verse-line&gt; <br />&lt;verse-line&gt;For you I pine
+                        (for you I pine)&lt;/verse-line&gt; <br />&lt;/verse-group&gt; <br /><br />
+                        &lt;lg&gt; <br />&lt;l&gt;Sweet Adeline (sweet Adeline)&lt;/l&gt;
+                        <br />&lt;l&gt;My Adeline (my Adeline)&lt;/l&gt; <br />&lt;l&gt;At night,
+                        dear heart (at night, dear heart)&lt;/l&gt; <br />&lt;l&gt;For you I pine
+                        (for you I pine)&lt;/l&gt; <br />&lt;/lg&gt; </blockquote>
+                </li>
+                <li>Author names come at the end of the body text in a &lt;disp-quote&gt; element,
+                    in forename-surname order. Place in a &lt;div type="authors"&gt; using the part
+                    after the last space character as the surname; <i>IF the name ends with ", Jr."
+                        or "III", then set the last part in a</i> &lt;genName&gt; <i>element</i>:
+                        <blockquote>&lt;disp-quote&gt;&lt;attrib&gt;CHARLES K.
+                        WOLFE&lt;/attrib&gt;&lt;/disp-quote&gt;<br /><br /> &lt;div
+                        type="authors"&gt;&lt;docAuthor&gt;&lt;persName&gt;&lt;forename&gt;CHARLES&lt;/forename&gt;
+                        &lt;forename&gt;&lt;abbr&gt;K.&lt;/abbr&gt;&lt;/forename&gt;
+                        &lt;surname&gt;WOLFE&lt;/surname&gt;&lt;/persName&gt;&lt;/docAuthor&gt;&lt;/div&gt;</blockquote>
+                    <blockquote></blockquote>
+                </li>
+                <li>See also's: Paragraphs in boldface that begin "See also" should be set as a
+                    &lt;list&gt; within a &lt;div type="ref"&gt;. References are separated by
+                    semicolons; each points to another article in this publication, and will have a
+                    &lt;ref&gt; element with @target pointing to the appropriate article:
+                        <blockquote>&lt;p&gt;&lt;bold&gt;See also Hall, Connor; Homeland Harmony
+                        Quartet; Rangers Quartet&lt;/bold&gt;&lt;/p&gt;<br /><br /> &lt;div
+                        type="ref"&gt;<br /> &lt;p&gt;See also
+                        &lt;/p&gt;&lt;list&gt;&lt;item&gt;&lt;ref target="eag000??"&gt;Hall,
+                        Connor&lt;/ref&gt;&lt;/item&gt; &lt;item&gt;&lt;ref
+                        target="eag000??"&gt;Homeland Harmony Quartet&lt;/ref&gt;&lt;/item&gt;
+                        &lt;item&gt;&lt;ref target="eag000??"&gt;Rangers
+                        Quartet&lt;/ref&gt;&lt;/item&gt;&lt;/list&gt;<br />&lt;/div&gt;</blockquote></li>
+                <li>Bibliographies are titled “Reference and Further Reading". Discographies may be
+                    titled “Discography", “Selected discography", or “Compilations".<br /><br /> a)
+                    Some discographies and "selected recordings" lists are inline, where items are
+                    separated by semi-colons; some have each item on its own line. In the TEI-XML,
+                    you do not need to differentiate between these. All will be &lt;list&gt; with
+                    &lt;item&gt; children.<br /><br /> b) Some Discographies have subsections, such
+                    as &lt;sec id="S25"&gt; and &lt;sec id="S26"&gt; in the source XML. Each can be
+                    a separate “ography".</li>
+                <li><i>If we decide to tag the terms in the Index at the end of the book as <a
+                        href="../tei_rilm_instructions.html#indexes">described in the main
+                        instructions</a>, then the list itself does not need to be converted.</i></li>
+
+            </ol>
+            <p>Please refer also to the two provided xml samples.</p>
+            <p><br /><a id="text-types"><b>Table of article categories for @type values</b></a></p>
+            <table>
+                <tr>
+                    <td><b>geo</b>
+                    </td>
+                    <td>
+                        <b>topic</b>
+                    </td>
+                    <td>
+                        <b>person</b>
+                    </td>
+                    <td>
+                        <b>institution</b>
+                    </td>
+                    <td>
+                        <b>genre</b>
+                    </td>
+                    <td>
+                        <b>instrument</b>
+                    </td>
+                    <td>
+                        <b>work</b>
+                    </td>
+                    <td>
+                        <b>group</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Los Angeles, Gospel in </td>
+                    <td> Azusa Street Revival </td>
+                    <td> Abernathy, Lee Roy </td>
+                    <td> Calvary Chapel, Costa Mesa </td>
+                    <td> Black Gospel Musicals </td>
+                    <td> Banjo </td>
+                    <td> Easy Instructor, The </td>
+                    <td> Andrews Gospel Singers, The </td>
+                </tr>
+                <tr>
+                    <td> Memphis, Gospel in </td>
+                    <td> Barbershop Quartets </td>
+                    <td> Ackley, Alfred </td>
+                    <td> Canaan Records </td>
+                    <td> Bluegrass </td>
+                    <td> Guitar </td>
+                    <td> &quot;Gospel Boogie&quot; </td>
+                    <td> Andrus, Blackwood &amp; Company </td>
+                </tr>
+                <tr>
+                    <td> New York, Gospel in </td>
+                    <td> Catholic Church, Gospel in </td>
+                    <td> Ackley, Bentley DeForest </td>
+                    <td> Church of God in Christ (COGIC) </td>
+                    <td> Blues </td>
+                    <td> Piano </td>
+                    <td>
+                        <i>Gospel Pearls</i>
+                    </td>
+                    <td> Angelic Gospel Singers </td>
+                </tr>
+                <tr>
+                    <td> Singers Glen, Virginia </td>
+                    <td> Dove Awards </td>
+                    <td> Acuff, Roy </td>
+                    <td> Folkways Records </td>
+                    <td> Gospel Movies </td>
+                    <td> Saxophone </td>
+                    <td>
+                        <i>Gospel Singing Jubilee</i>
+                    </td>
+                    <td> Anointed Pace Sisters </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Globilization of Gospel </td>
+                    <td> Adams, Yolanda </td>
+                    <td> Gospel Music Association </td>
+                    <td> Jazz </td>
+                    <td> Tambourines </td>
+                    <td>
+                        <i>Harp of Zion, The</i>
+                    </td>
+                    <td> Archers, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Gospel Choirs </td>
+                    <td> Akers, Doris </td>
+                    <td> Gospel Music Workshop of America </td>
+                    <td> Rock Gospel </td>
+                    <td> Trombone </td>
+                    <td>
+                        <i>Kentucky Harmony</i>
+                    </td>
+                    <td> Armond Morales and the Imperials </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Gospel Periodicals </td>
+                    <td> Alexander, Charles McCallum </td>
+                    <td> Hartford Music Company </td>
+                    <td> Sacred Pageants </td>
+                    <td> Trumpet </td>
+                    <td>
+                        <i>Missouri Harmony, The</i>
+                    </td>
+                    <td> Arthur Smith and His Crossroads Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Gospel Quartets </td>
+                    <td> Allen, Rance </td>
+                    <td> Heart Warming Records </td>
+                    <td> Shout (Ring Shout) </td>
+                    <td></td>
+                    <td>
+                        <i>National Barn Dance</i>
+                    </td>
+                    <td> Bailes Brothers, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Performance Styles </td>
+                    <td> Allen, Richard </td>
+                    <td> Homeland Records </td>
+                    <td> Soul Gospel </td>
+                    <td></td>
+                    <td>
+                        <i>Rural Harmony, The</i>
+                    </td>
+                    <td> Barren Cross </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Religious Folk Songs of the Negro </td>
+                    <td> Anderson, Robert </td>
+                    <td> International Gospel Music Hall of Fame and Museum, Inc. </td>
+                    <td> Southern Gospel </td>
+                    <td></td>
+                    <td>
+                        <i>Sacred Harp, The</i>
+                    </td>
+                    <td> Barrett Sisters </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Revivals </td>
+                    <td> Andrews, Inez </td>
+                    <td> King Records </td>
+                    <td> Spirituals </td>
+                    <td></td>
+                    <td>
+                        <i>Singing News, The</i>
+                    </td>
+                    <td> Bethlehem </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Shape-Note Singing </td>
+                    <td> Armstrong, Vanessa Bell </td>
+                    <td> Light Records </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <i>Slave Songs of the United States</i>
+                    </td>
+                    <td> Blackwood Brothers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Singing in Tongues </td>
+                    <td> Bagwell, Wendy </td>
+                    <td> Lillenas Publishing Company </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <i>Southern Harmony, The</i>
+                    </td>
+                    <td> Blue Jay Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Singing Schools </td>
+                    <td> Barrows, Cliff </td>
+                    <td> Malaco Records </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <i>Vaughan Family Visitor, The</i>
+                    </td>
+                    <td> Blue Ridge Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Bartlet, Eugene Monroe </td>
+                    <td> Maranatha! Records </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Blue Sky Boys (Bolick Brothers) </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Bass, Martha </td>
+                    <td> Myrrh Records </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Bobby Jones and New Life </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Baxter, J. R., Jr. </td>
+                    <td> Nashboro Records </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Boones, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Baylor, Helen </td>
+                    <td> National Baptist Convention </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Boyer Brothers, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Beck, Elder Charles D. </td>
+                    <td> National Convention of Gospel Choirs and Choruses </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Brooklyn Tabernacle Choir </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Bennard, George </td>
+                    <td> National Guitars (National Music Company) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Brown's Ferry Four </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Bliss, Philip Paul </td>
+                    <td> National Quartet Convention </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Caravans </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Bostic, Joe </td>
+                    <td> Rainbow Records </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Carson, James and Martha </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Bradbury, William Batchelder </td>
+                    <td> Skylite Recording Company </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Carter Family, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Bradford, Alex </td>
+                    <td> Specialty Records Company </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Cathedral Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Bradley, John Robert </td>
+                    <td> Stamps-Baxter </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Charioteers, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> Brewster, William Herbert </td>
+                    <td> Virginia Normal Music School </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Charles E. Fuller and the Old Fashioned Revival Hour </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Brumley, Albert Edward </td>
+                    <td> WLAC AM </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Charles Fold Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Burnett, Reverend J. C. </td>
+                    <td> Zondervan Publishing Company </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Chestnut Grove Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Caesar, Shirley </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Chuck Wagon Gang, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Campbell, Lucie </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Consolers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Carman </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Cooper, Wilma Lee and Stoney </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Carmichael, Ralph </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Cox Family, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Carson, Martha </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Davis Sisters </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Cash, Johnny </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> DC Talk </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Chapman, Gary </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Deal Family, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Cheeks, Julius </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Dixie Hummingbirds </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Cheré, Tami (Tami Cheré Gunden) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Dixie Melody Boys </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Clark, Elbernita </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Don and Earl </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Clawson, Cynthia </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Don Reno and Red Smiley (and the Tennessee Cut-Ups) </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Cleveland, James </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Dove Brothers, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Coates, Dorothy Love </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Drinkards, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Coats, J. B. </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Duck Creek Quartet, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Cooke, Edna Gallmon </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Easter Brothers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Cooke, Sam </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Easter, Jeff and Sheri </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Crosby, Fanny Jane </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Edwin Hawkins Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Crouch, Andre </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Fairfield Four </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Davis, James Houston &quot;Jimmie&quot; </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Fisk Jubilee Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Davis, Reverend Gary (Blind Gary Davis) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Five Blind Boys of Alabama </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Derricks, Cleavant </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Five Blind boys of Mississippi </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Dixon, Jessy </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Flatt, Lester, and Earl Scruggs </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Doane, William Howard </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Florida Boys, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Dorsey, Thomas </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Gay Sisters </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Dranes, Arizona Juanita </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Golden Gate Quartet, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Ely, Brother Claude </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Good Shepherd Quartet, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Favors, Malachi </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Gospel Harmony Boys </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Fischer, John </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Greater Vision </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Foley, Red </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Greenes, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Fong, Ogden </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Happy Goodman Family </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Ford, Tennessee Ernie </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Harmonizing Four </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Forehand, Blind Mamie </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Haven of Rest Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Fowler, Wally </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Heavenly Gospel Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Francisco, Don </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Hee Haw Gospel Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Franklin, Aretha </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Heirloom </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Franklin, Kirk </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Higher Vision </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Franklin, Reverend C. L. </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Highway QCs, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Frye, Theodore R. </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Homeland Harmony Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Funk, Joseph </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Hoppers, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Girard, Chuck </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Hovie Lister and the Statesmen Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Gough, David </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Howard Hunt and the Supreme Angels </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Grant, Amy </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Isaacs, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Green, Al </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> J. T. Adams and the Men of Texas </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Green, Keith </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Jackson Southernaires </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hall, Connor </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Jake Hess and the Imperials </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hall, Danniebelle </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Jars of Clay </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hall, Vera </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> John Daniel Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hamblen, Stuart </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Jordanaires, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hammond, Fred </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Karen Peck and New River </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Harper, Redd </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Kenny Parker Trio </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Harrington, Bob </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> King Sacred Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Harris, Larnelle </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Kingdom Heirs, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hawkins, Tremaine </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Kingsmen, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hawkins, Walter </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Kirk Franklin &amp; the Family </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hearn, Billy Ray </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Klaudt Indian Family, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hibbard, Bruce </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Lanny Wolfe Trio </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hill, James Vaughn &quot;Jim&quot; </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Lawson, Doyle, and Quicksilver </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hoffmann, Elisha Albright </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> LeFevres, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Houston, Cissy </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Lewis Family, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Ingalls, Jeremiah </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Louvin Brothers, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Jackson, George Pullen </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Love Song </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Jackson, Mahalia </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Marksmen, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Jackson, Wanda Lavonne </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Masters Family, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Jarvis, J. D. </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Mattie Moss Clark and the Southwest Michigan State Choir </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Jenkins, Blind Andy </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> McCravy, Frank and James </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Johnson, Blind Willie </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> McKameys, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Jones, Absalom </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Meditation Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Jones, Bessie </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Mighty Clouds of Joy </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Kaiser, Kurt </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Mississippi Mass Choir </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Karnes, Alfred Grant </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Molly O'Day and Lynn Davis </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Kartsonakis, Dino </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Newsboys </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Kelsey, Samuel </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Norfolk Jubilee Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Kieffer, Aldine S. </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Oak Ridge Boys </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Kirkpatrick, William James </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> O'Neal Twins </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Knight, Madame Marie </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Original Gospel Harmonettes </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Lane, Cristy </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Pace, Reverend Charles, and the Pace Jubilee Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Leavitt, Joshua </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Parker Family, The (Rex and Eleanor Parker) </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Lister, Mosie </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Perry Sisters </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Lowry, Robert </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Petra </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Martin, Roberta </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Phipps Family, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Martin, Sallie </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Pilgrim Travelers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Mason, Lowell </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Plainsmen Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>May, Joseph &quot;Brother Joe&quot; </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Point of Grace </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>McClurkin, Donnie </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Primitive Quartet, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>McCracken, Jarrell </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Principles, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>McGranahan, James </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Prophets Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>McGuire, Barry </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Rangers Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Michaux, Elder Lightfoot Solomon </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Rebels Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Monroe, Bill </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Reverend John P. Kee and the New Life Community Choir </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Moore, Reverend Arnold Dwight &quot;Gatemouth&quot; </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Rex Humbard Family Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Moore, Reverend James </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Rex Nelon Singers, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Morris, Homer Franklin </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Rogers, Roy, and Dale Evans </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Morris, Kenneth </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> 2nd Chapter of Acts </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Morton, Paul </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Selah Jubilee Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Nix, Reverend A. W. </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Sensational Nightingales </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Norcross, Marvin </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Silver Leaf Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Norman, Larry </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Singing Cookes, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Norwood, Dorothy </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Singing Rambos, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Nutt, Grady </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Slaughter, Henry and Hazel </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Paris, Twila </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Smith Brothers, The (Tennessee and Smitty) </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Parsons, Squire </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Smith's Sacred Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Patti, Sandi </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Soul Stirrers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Phillips, Philip </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Southern California Community Choir </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Phillips, Washington </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Speer Family, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Phipps, Ernest </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Spirit of Memphis Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Phipps, Wintley </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> St. Paul Baptist Church Choir of Los Angeles </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Presley, Elvis </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Stamps Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Presley, Luther </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Stanley Brothers, The (Ralph Stanley) </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Reed, Blind Alfred </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Staple Singers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Robinson, Cleophus </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Stars of Faith, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Rodeheaver, Homer Alvan </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Statler Brothers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Roman, Lulu </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Stryper </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Root, George Frederick </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Sullivan, Jerry and Tammy </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Ruebush, Ephraim </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Sullivans, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Sankey, Ira David </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Sunshine Boys Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Shea, George Beverly </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Swan Silvertones </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Sherwood, William Henry </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Swanee Quintet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Showalter, Anthony Johnson </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Swanee River Boys </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Smith, Connie </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Take </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Smith, Michael W. </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Tennesseans Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Smith, Willie Mae Ford </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Thrasher Brothers, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Stanphill, Ira F. </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Trace Family Trio, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Stebbins, George Coles </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Tuttle, Wesley and Marilyn </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Stonehill, Randy </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Vaughan Quartet </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Story, Carl </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Walter Hawkins Love Center Choir </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Summers, Myrna </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Ward Trio (Ward Singers) </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Sumner, John Daniel &quot;J. D.&quot; </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Watkins Family </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Swaggart, Jimmy </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Weatherfords, The (Quartet and Trio) </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Sweney, John R. </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Wellington, Frank, and John McGhee </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Swope-DuPree, Sheryl </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Whisnants, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Taggart, Blind Joe </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Williams Brothers </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Talbot, John Michael </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Winans, The </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Taylor, Steve </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> Wings Over Jordan </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Tharpe, Sister Rosetta </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Tindley, Charles Albert </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Towner, Daniel Brink </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Tripp, LaVerne </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Unseld, Benjamin Carl </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Vaughan, James David </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Walker, Albertina </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Walker, Hezekiah </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Washington, Ernestine B. </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Waters, Ethel </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Watkins, Charles </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Watts, Isaac </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Wells, Kitty </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Wetherington, James S. &quot;Big Chief&quot; </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Whittle, Daniel Webster </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Wilkins, Reverend Robert </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Williams, Marion </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Winsett, Robert Emmett </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Yohe, Vicky </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

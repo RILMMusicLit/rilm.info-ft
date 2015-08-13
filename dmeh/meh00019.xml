@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Borucas y térrabas</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Sociedad General de Autores y Editores</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<publisher>Instituto Complutense de Ciencias Musicales</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+				<title>Diccionario de la música española e hispanoamericana</title>
+						<editor>
+							<forename/>
+							<surname/>
+						</editor>
+						<imprint>
+							<publisher>Sociedad General de Autores y Editores</publisher>
+							<pubPlace>[Madrid]</pubPlace>
+							<date>1999</date>
+						</imprint>
+						<biblScope unit="vol">4</biblScope>
+						<biblScope unit="col" from="648">648</biblScope>
+						<biblScope unit="col" to="650">650</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<normalization>
+					<p>Some abbrevations have been replaced by unabbrevated terms.</p>
+				</normalization>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="14.1" notAfter="2014-03-04">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="es">Spanish</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-03-04" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="meh00019" type="topic" xml:lang="es">
+		<body>
+			<div type="one-section" xml:id="d1">
+				<head>Borucas y térrabas.</head>
+				<p xml:id="p1">Costa Rica. Grupos aborígenes. Territorialmente se considera como una sola reserva, situada a unos 45 kilómetros al sur de Buenos Aires de Puntarenas. La conforman: Boruca, Curé (Currés), Casablanca, Rey Curré, Cajón, Mano de Tigre, Bijagual, Lagarto, Puerto Nuevo, El Maíz, Buenos Aires, Térraba y otros caseríos. Son grupos bastante transculturizados, hasta tal punto que los pueblos y caseríos que los componen están perdiendo su fisonomía auténticamente indígena. La lengua boruca es conocida por los más ancianos y por algunos niños y jóvenes que recibieron instrucción de Espíritu Santo Maroto, antiguo diablo mayor. La dominación española en las comunidades borucas y térrabas fue determinante y temprana, en los albores de la conquista. Las principales manifestaciones socio-culturales <pb n="649"/>son producto del mestizaje cultural hispano-indígena, entre ellas, la fiesta de los Diablitos y Negritos. En la música de tradición oral se encuentran también ambos elementos, lo hispánico y lo indígena. En la fiesta de los Diablitos el argumento está cargado de imágenes de origen español e indígena. Los térrabas, por su parte, han adoptado completamente el patrón cultural de los borucas. Boruca es el centro de intercambio comercial y cultural para estas comunidades. Entre los borucas está muy arraigada la idea de un personaje mitológico llamado Cuasran que según ellos vive aún en las montañas. La caída bajo el dominio español dio origen a un extraordinario símbolo del sentido de su independencia y su añoranza por la época prehispánica; incluso la figura de Tatica Volcán (o Cuasran) ha trascendido al folclore de otros pueblos de la región. La actividad de las juntas o peonadas fue hasta hace poco de gran importancia en su vida social. Su principal objetivo consiste en unirse voluntariamente para trabajar en la tierra, recoger la cosecha, construir un rancho, etc. El responsable de su organización debe ofrecer comida, chicha y todo lo nesesario para el baile.</p>
+				<p xml:id="p2"><hi rend="italic">Fiesta de los Diablitos y su música</hi>. Desde el punto de vista cultural, Boruca se identifica con dos festividades: la de los Diablitos y la de los Negritos, ambas con argumentos que permiten ubicarlas dentro de su marco histórico lleno de simbolismos.</p>
+				<p xml:id="p3"><hi rend="italic">Fiesta de los Negritos y su música</hi>. Se dice negritos y no indígenas porque en el transcurso de la colonia el negro acompañaba constantemente y en todos los sentidos al español, incorporándose rápidamente al proceso de mestizaje étnico cultural de Costa Rica. Boruca, por lo tanto, fue una población indígena que no estuvo exenta del contacto negro y español. Debe agregarse el hecho de que tanto los borucas como sus vecinos térrabas fueron pueblos que sufrieron rápidamente las consecuencias de la conquista por encontrarse dentro de la ruta de los españoles hacia Panamá. No está de más señalar la proximidad de estas dos comunidades indígenas con Panamá, un país de predominio étnico y cultural negro.</p>
+				<p xml:id="p4">A diferencia de las fiestas de los Diablitos de Boruca, la fiesta de los Negritos, aunque tiene connotaciones paganas, se encuentra dentro del contexto de las celebraciones cívico-religiosas en honor a la Virgen de la Purísima Concepción. Aparte de las celebraciones religiosas al compás de toques de tambor y flauta, se interpreta por todo el vecindario una danza compuesta por cuatro figuras: la primera, segunda y tercera las baila el <q>pitero</q> con la <q>mulita</q>; la cuarta, llamada <q>cumbia</q>, es libre. Entre otros aspectos importantes tradicionales que se conservan en este juego-danza están las <q>bufonadas</q>, bromas de doble sentido y hablado enredado y <q>chineado</q>. Cada figura de la danza termina en gritería y cantos (salomas).</p>
+				<p xml:id="p5"><hi rend="italic">El saloma y las décimas</hi>. Es un canto bastante arraigado entre borucas, térrabas y guaymíes, cuya zona geográfica tiene muchos aspectos culturales comunes con la provincia de Chiriquí, Panamá. Es un canto recitado sumamente expresivo que puede ser solamente vocal o con algunas palabras intercaladas. El recurso del falsete es explotado por el salomero de una manera admirable, produciendo notas sumamente agudas y con una mecánica vocal excelente. Dentro de la comunidad, el buen salomero es admirado por su destreza. La temática de este género vocal es por lo general de trabajo, de amor, y los salomas propios del baile de los Diablitos. Las décimas, por su parte, son composiciones poético-musicales que constan de diez versos de un ritmo indefinido. Generalmente se refieren a alguna experiencia personal, un relato histórico, un trato, una herencia, etc. Es un canto más bien recitado. Se recurre al falsete para concluir la poesía.</p>
+				<figure xml:id="f1">
+					<html:img src="images/meh00019-f1.png"/>
+				<p xml:id="p6"><hi rend="italic">Maraca boruca y tambor de doble parche de los indígenas térrabas (Fotos: R. Mills; Ar. J. L. Acevedo)</hi></p>
+				</figure>
+				<p xml:id="p7"><hi rend="italic">Música indígena.</hi> Son pocas las expresiones musicales auténticamente indígenas. En música instrumental encontramos solamente los tres toques del baile de los Negritos, el toque del baile de los Diablitos y algunos cantos interpretados por dos o tres ancianos (mamitas) en dialecto brunka. Se recuerdan también algunas melodías, pero desgraciadamente se ha olvidado por completo la letra; esto demuestra el grado de aculturación de las reservas boruca-térraba.</p>
+				<p xml:id="p8"><hi rend="italic">Instrumentos musicales</hi>. El tambor (kebek) se construye de madera de balsa y cedro. El tronco es hueco, en ambos extremos lleva parches de piel de saíno o cusuco y un aro de bejuco donde se enrolla el parche, éste se tensa con un mecate (cuerda) amarrado a ambos aros en forma de zig-zag. Las <pb n="650"/>flautas (kiví) se construyen con caña de carrizo; por la dificultad de conseguir este material es un instrumento que está siendo reemplazado por flautas dulces de metal, plásticas y de madera. Las jícaras son los materiales que se usan para la caja de resonancia de las maracas, algunas veces adornadas con motivos indígenas; el mango se construye de madera y en el interior de la jícara se introducen unas semillas negras; el mango se amarra a la jícara con un mecate. El violín, aunque no es un instrumento de esta tradición cultural, ha sido aceptado hace ya bastante tiempo por los indígenas de Boruca y Térraba. Se construyen rústicamente con la técnica del vaciado o talla (covao), haciéndose uso de las maderas y materiales propios del lugar.</p>
+			</div>
+			<div type="authors" xml:id="d2">
+				<docAuthor><persName><forename>JORGE</forename> <forename>LUIS</forename> <surname>ACEVEDO</surname></persName></docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

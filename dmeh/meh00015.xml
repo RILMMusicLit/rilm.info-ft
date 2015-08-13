@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://www.rilm.info/ft/css/tei_dmeh.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/working/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Boisselot, Javier [Dominique-François-Xavier]</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Sociedad General de Autores y Editores</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<publisher>Instituto Complutense de Ciencias Musicales</publisher>
+				<pubPlace>Madrid</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+				<title>Diccionario de la música española e hispanoamericana</title>
+						<editor>
+							<forename/>
+							<surname/>
+						</editor>
+						<imprint>
+							<publisher>Sociedad General de Autores y Editores</publisher>
+							<pubPlace>[Madrid]</pubPlace>
+							<date>1999</date>
+						</imprint>
+						<biblScope unit="vol">4</biblScope>
+						<biblScope unit="col" from="550">550</biblScope>
+						<biblScope unit="col" to="550">550</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<normalization>
+					<p>Some abbrevations have been replaced by unabbrevated terms.</p>
+				</normalization>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="14.1" notAfter="2014-03-04">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="es">Spanish</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-03-04" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="meh00015" type="person" xml:lang="es">
+		<body>
+			<div type="one-section" xml:id="d1">
+				<p xml:id="p1"><rilmPerson xml:id="r1"><persName><surname>Boisselot</surname>, <forename>Javier</forename> [Dominique-François-Xavier].</persName> <birth><placeName>Montpellier (Francia)</placeName>, <date when="1811-12-13" when-custom="1811" precision="low">13-XII-1811?</date></birth>; <death><placeName>Marsella (Francia)</placeName>, <date when="1893-04-08" when-custom="1893" precision="low">8-IV-1893?</date></death> <occupation>Fabricante de pianos</occupation>, <occupation>compositor</occupation> y <occupation>editor</occupation>.</rilmPerson> Su padre Jean-Louis Boisselot fundó una fábrica de pianos en Marsella (Francia), pero fue Louis Boisselot, el hijo y sucesor de Jean-Louis, quien estableció en 1848 una fábrica de pianos en Barcelona. Dos años más tarde Louis murió y las fábricas pasaron a manos de su hermano Javier, quien había sido compositor. En el mismo año de 1850 la casa barcelonesa participó en la Exposición Pública en Madrid, donde exhibió pianos de cola y de cilindro, entre ellos un modelo de siete octavas, y presentó en la Exposición Universal de París de 1855 tres modelos construidos en España. Según afirmó Mesonero Romanos, la casa Boisselot fabricaba en 1854 pianos en Madrid. En 1860 la empresa fue ubicada en la calle de Poniente, 16, de Barcelona y ocupó a más de cien operarios. En ese año exhibió un piano de gran forma, oblicuo, con barras y clavijero de hierro, fabricado expresamente para las colonias. En el mismo año de 1860 la empresa pasó a llamarse Boisselot y Bernareggi, y mantuvo lazos empresariales con el almacén de música de Anastasio García en la calle Príncipe, 14, de Madrid. Francisco Bernareggi había sido socio gerente de la empresa Boisselot desde hacía varios años. A partir de 1863, año de la muerte de Francisco Bernareggi, la firma bajo la dirección de José Bernareggi complementó su actividad principal con la publicación de partituras. En 1865 Javier Boisselot se retiró del negocio familiar en favor de su sobrino Frantz, quien cortó los lazos empresariales con España, con lo cual la compañía Boisselot y Bernareggi se transformó, bajo el nombre de Bernareggi y Cía., en una de las empresas constructoras de pianos de propiedad española más importantes y mejores del país.</p>
+			</div>
+			<div type="ography" xml:id="d2">
+				<head>BIBLIOGRAFÍA:</head>
+				<list>
+					<item><bibl xml:id="b1"><author>R. de Mesoneros Romanos</author>: <title>Nuevo manual histórico y topográfico de Madrid</title>, Madrid, <date>1854</date></bibl></item><item><bibl xml:id="b2"><author>A. de 1a Farge</author>: <title rend="quoted">Visitas a la Exposición Universal; tercera visita</title>, <title>GM</title>, <date>1855</date>, 31 y 32, 243-5, 251-2</bibl></item><item><bibl xml:id="b3"><author>C. Pierre</author>: <title>Les Facteurs d’instruments de musique</title>, París, <date>1893</date> (ed. facs. Ginebra, 1976)</bibl></item><item><bibl xml:id="b4"><author>A. Devriès, F. Lesure</author>: <title>Dictionnaire des éditeurs de musique français</title>, Ginebra, Minkoff, <date>1988</date></bibl>.</item>
+				</list>
+			</div>
+			<div type="authors" xml:id="d3">
+				<docAuthor><persName><forename>Beryl</forename> <forename>Kenyon</forename> <nameLink>de</nameLink> <surname>Pascual</surname></persName></docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

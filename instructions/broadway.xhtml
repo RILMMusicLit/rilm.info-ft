@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Broadway</title>
+    </head>
+    <body>
+        <a id="broadway"></a> <h4>Broadway: Its History, People, and Places an Encyclopedia
+            (bae)</h4> <ol>
+                <li class="r201412" title="Added 12/2014">If the first paragraph contains birth and/or death
+                    information--signalled by "b." or "d." then the the &lt;text&gt; element should have
+                    @type="person" and the first paragraph should contain &lt;rilmPerson&gt; as a direct child:
+                    <blockquote>&lt;text type="person" xml:lang="en" xml:id="bae0001"&gt; <br /> &lt;body&gt;
+                        <br /> &lt;div type="body" xml:id="d1"&gt; <br /> &lt;p&gt;&lt;rilmPerson&gt;&lt;hi
+                        rend="bold"&gt;&lt;surname&gt;YOUMANS&lt;/surname&gt;,
+                        &lt;forename&gt;VINCENT&lt;/forename&gt;.&lt;/hi&gt; The quintessential 1920s composer;
+                        &lt;birth&gt;b. &lt;placeName&gt;New York, New York&lt;/placeName&gt;, &lt;date
+                        when="1898-09-27" when-custom="1898"&gt;September 27, 1898&lt;/date&gt;&lt;/birth&gt;;
+                        &lt;death&gt;d. &lt;placeName&gt;Denver, Colorado&lt;/placeName&gt;, &lt;date
+                        when="1946-04-05"&gt;April 5,
+                        1946&lt;/date&gt;&lt;/death&gt;.&lt;/rilmPerson&gt;&lt;/p&gt;</blockquote> All other articles
+                    should have &lt;text type="topic"&gt;</li>
+                <li class="r201412" title="Added 12/2014">All articles should contain one &lt;div&gt;, which
+                    should have @type="body"</li>
+                <li class="r201412" title="Added 12/2014">The headwords of each article (the first words in each
+                    one) are in allcaps and bold. Keep them in all caps and tag them with &lt;hi rend="bold"&gt;,
+                    as above.</li>
+                <li class="r201412" title="Added 12/2014">All cross-references are in small caps in the source
+                    files. Please convert them to Roman and tag them &lt;ref&gt;. The link them to the appropriate
+                    article with @target. (The contents of @targe will have to be entered after all documents have
+                    been created.)</li>
+                <li class="r201412" title="Added 12/2014">Apostrophes in the source XML file are all represented
+                    in the source file as U+0027;. Please convert these to U+2019. *Please note that right
+                    single-quotes are already encoded as U+2019--you should convert these to &lt;q
+                    rend="single"&gt; before you convert the apostrophes so it can all be done automatically.</li>
+                <li class="r201412" title="Added 12/2014">Block quotes: see <a href="../tei_rilm_instructions.html#blockquotes"
+                    target="_blank">above</a>.</li>
+                <li class="r201412" title="Added 12/2014">See-references: see <a href="../tei_rilm_instructions.html#see-refs" target="_blank"
+                    >above</a>.</li>
+                <li class="r201412" title="Added 12/2014">Titles with dates: There are many text strings that
+                    corform to the following pattern: <blockquote><i>Title</i> (DD/MM/YY, #
+                        performances)</blockquote>For instance, <blockquote><i>Du Barry Was a Lady</i> (12/6/39; 408
+                            performances)</blockquote>These should all be tagged in the following
+                    manner:<blockquote>&lt;bibl&gt;&lt;title type=&quot;work&quot;&gt;Du Barry Was a
+                        Lady&lt;/title&gt; (&lt;run quantity=&quot;408&quot;
+                        unit=&quot;perf&quot;&gt;&lt;rilmPerformance type=&quot;first&quot;&gt;&lt;date
+                        when=&quot;1939-12-06&quot;
+                        when-custom=&quot;1923&quot;&gt;12/6/39&lt;/date&gt;&lt;/rilmPerformance&gt;; 408
+                        performances&lt;/run&gt;)&lt;/bibl&gt;</blockquote>Two-digit years are always
+                    19--.<br /><em>*This tagging should be able to be done in an automated fashion.</em></li>
+                <li class="r201412" title="Added 12/2014">Index (lines 6148&#8211;16574): See <a href="../tei_rilm_instructions.html#indexes" target="blank"
+                    >above</a>. Also, page numbers in <b>boldface</b> can be ignored.</li>
+                <li>The following sections should each receive its own document: "ACKNOWLEDGMENTS" and
+                    "INTRODUCTION". In the Introduction, please tag all phrases in small caps as &lt;ref> and link
+                    them to the appropriate document.</li>
+            </ol>
+    </body>
+</html>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Percussionists</title>
+    </head>
+    <body>
+        <div class="r201412" title="Added 12/2014"><a id="percussionists"></a>
+            <h4>Percussionists: A Biographical Dictionary (pbd)</h4> <ol>
+                <li>All entries should have &lt;text type="person">.</li>
+                <li>Each entry begins with a name (surname, forename(s), "addName") in allcaps, followed by
+                    birth and death information in parentheses. These two things together should be set in a
+                    &lt;rilmPerson&gt; element.</li>
+                <li>In the birth and death information, "b." and "d." should be eliminated--the &lt;birth&gt;
+                    and &lt;death&gt; elements will take their place.</li>
+                <li>Within the body text &lt;div type="bio"&gt;, an asterisk denotes a cross reference.</li>
+                <li> For any "ography" with the heading "Discography" or "Selected Discography", each line
+                    starts with a publisher name, followe by a identifying code. The publisher's name will either
+                    be spelled out in words (e.g. "Blue Note") or an initialism (e.g. "DMP"). There will often be
+                    another abbreviation after this name (e.g. "ACRE"), which is part of the indentifying code.
+                    That code consists of numbers, sometimes preceded by letters. Following the code, there is an
+                    italicized title, which should always be tagged &lt;title type="work"&gt; in Discographies.
+                    Following the title, there is often Roman text in parentheses. This is usually an author, and
+                    should be tagged &lt;author&gt; without the parentheses. Some examples [from p. 263 and 304]: <ul>
+                        <li>&lt;bibl&gt;&lt;publisher&gt;Accurate&lt;/publisher&gt;&lt;idno type="label"&gt;ACRE
+                            5016&lt;/idno&gt;: &lt;title type="work"&gt;Falling from Grace&lt;/title&gt;
+                            (&lt;author&gt;Plunge&lt;/author&gt;, &lt;date&gt;1996&lt;/date&gt;.&lt;/bibl&gt;</li>
+                        <li>&lt;bibl&gt;&lt;publisher&gt;ECM&lt;/publisher&gt;&lt;idno
+                            type="label"&gt;1073&lt;/idno&gt;: &lt;title type="work"&gt;Bright Size Life&lt;/title&gt;
+                            (&lt;author&gt;Pat Metheny&lt;/author&gt;), &lt;date&gt;1975&lt;/date&gt;.&lt;/bibl&gt;</li>
+                        <li>&lt;bibl&gt;&lt;publisher&gt;PM&lt;/publisher&gt;&lt;idno
+                            type="label"&gt;PMR001&lt;/idno&gt;: &lt;title type="work"&gt;Open Sky&lt;/title&gt;.
+                            &lt;date&gt;1973&lt;/date&gt;.&lt;/bibl&gt;</li>
+                        <li>&lt;bibl&gt;&lt;publisher&gt;RMD&lt;/publisher&gt;/&lt;publisher&gt;RMC&lt;/publisher&gt;&lt;idno
+                            type="label"&gt;81208&lt;/idno&gt;: &lt;title type="work"&gt;In Session&lt;/title&gt;
+                            (&lt;author&gt;Tito Puente’s Golden Latin Jazz All-Stars&lt;/author&gt;),
+                            &lt;date&gt;1994&lt;/date&gt;.&lt;/bibl&gt;</li>
+                    </ul> If the Roman text in parentheses starts with a lowercase letter, start the author
+                    element with the first capitalized word, as in the following example (from p. 302): <ul>
+                        <li>&lt;bibl&gt;&lt;publisher&gt;University of Illinois&lt;/publisher&gt;&lt;idno
+                            type="label"&gt;CR53&lt;/idno&gt;: &lt;title type="work"&gt;School of Music&lt;/title&gt;
+                            (cond. &lt;author&gt;University of Illinois Perc. Ens.&lt;/author&gt;),
+                            &lt;date&gt;1975&lt;/date&gt;.&lt;/bibl&gt;</li>
+                    </ul> If the Roman text in parentheses is a date, please use &lt;date&gt; instead of
+                    &lt;title&gt;</li>
+                <li> For any "ography" with the heading of "Videography" or "Selected Videography", follow the
+                    same instructions as for "Discography", except that material within parenthese should not be
+                    tagged. Also, the following caveat: there are often multiple publishers for videos, and often
+                    no identifying code. A couple examples, from p. 273 and 284: <ul>
+                        <li>&lt;bibl&gt;&lt;publisher&gt;Kultur Video&lt;/publisher&gt;: &lt;title type="work"&gt;Red
+                            Norvo&lt;/title&gt; (with Tal Farlow), &lt;date&gt;1982&lt;/date&gt;.&lt;/bibl&gt;</li>
+                        <li>&lt;bibl&gt;&lt;publisher&gt;Audio Visual Images&lt;/publisher&gt;/&lt;publisher&gt;New
+                            Dimension Media&lt;/publisher&gt;: &lt;title type="work"&gt;The Dreamer That Remains: A
+                            Portrait of Harry Partch&lt;/title&gt;, &lt;date&gt;1974&lt;/date&gt; (produced by Betty
+                            Freeman and directed by Stephen Pouliot)&lt;/bibl&gt;</li>
+                    </ul> </li>
+                <li>Please make the following replacements in the text: <table border="1">
+                    <tbody>
+                        <tr>
+                            <th>Abbreviation</th>
+                            <th>Replacement</th>
+                        </tr>
+                        <tr>
+                            <td>AFM</td>
+                            <td>&lt;orgName&gt;American Federation of Musicians&lt;/orgName&gt;</td>
+                        </tr>
+                        <tr>
+                            <td><i>DB</i></td>
+                            <td>&lt;title type="periodical"&gt;Down Beat&lt;/title&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>IAJE</td>
+                            <td>&lt;orgName&gt;International Association of Jazz Educators&lt;/orgName&gt;</td>
+                        </tr>
+                        <tr>
+                            <td><i>IM</i></td>
+                            <td>&lt;title type="periodical"&gt;International Musician&lt;/title&gt;</td>
+                        </tr>
+                        <tr>
+                            <td><i>LD</i></td>
+                            <td>&lt;title type="periodical"&gt;Ludwig Drummer&lt;/title&gt;</td>
+                        </tr>
+                        <tr>
+                            <td><i>MD</i></td>
+                            <td>&lt;title type="periodical"&gt;Modern Drummer&lt;/title&gt;</td>
+                        </tr>
+                        <tr>
+                            <td><i>MP</i></td>
+                            <td>&lt;title type="periodical"&gt;Modern Percussionist&lt;/title&gt;</td>
+                        </tr>
+                        <tr>
+                            <td><i>PNM</i></td>
+                            <td>&lt;title type="periodical"&gt;Percussive Notes&lt;/title&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>PASIC<sup>®</sup></td>
+                            <td> Percussive Arts Society International Convention (PASIC<sup>®</sup>)</td>
+                        </tr>
+                        <tr>
+                            <td><i>ASCAPBD</i></td>
+                            <td>&lt;bibl&gt;&lt;title type="monograph"&gt;ASCAP Biographical Dictionary&lt;/title&gt;,
+                                &lt;edition&gt;4th ed.&lt;/edition&gt; &lt;pubPlace&gt;New York&lt;/pubPlace&gt;:
+                                &lt;publisher&gt;Jaques Cattell Press&lt;/publisher&gt;/&lt;publisher&gt;R. R. Bowker
+                                Co.&lt;/publisher&gt;, &lt;date&gt;1980&lt;/date&gt;.&lt;/bibl&gt; </td>
+                        </tr>
+                        <tr>
+                            <td>Southern, <i>BDA-AAM</i></td>
+                            <td>&lt;bibl&gt;&lt;author&gt;&lt;surname&gt;Southern&lt;/surname&gt;,
+                                &lt;forename&gt;Eileen&lt;/forename&gt;&lt;/author&gt;. &lt;title
+                                type="monograph"&gt;Biographical Dictionary of Afro-American and African
+                                Musicians&lt;/title&gt;. &lt;pubPlace&gt;Westport, CT&lt;/pubPlace&gt;:
+                                &lt;publisher&gt;Greenwood Press&lt;/publisher&gt;,
+                                &lt;date&gt;1982&lt;/date&gt;.&lt;/bibl&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Larrick, <i>BET-CP</i></td>
+                            <td>&lt;bibl&gt;&lt;author&gt;&lt;surname&gt;Larrick&lt;/surname&gt;,
+                                &lt;forename&gt;Geary&lt;/forename&gt;&lt;/author&gt;. &lt;title
+                                type="monograph"&gt;Biographical Essays on Twentieth-Century
+                                Percussionists&lt;/title&gt;. &lt;pubPlace&gt;Lewiston, New York&lt;/pubPlace&gt;:
+                                &lt;publisher&gt;Edwin Mellen Press&lt;/publisher&gt;,
+                                &lt;date&gt;1992&lt;/date&gt;.&lt;/bibl&gt; </td>
+                        </tr>
+                        <tr>
+                            <td>Korall, <i>DM</i></td>
+                            <td>&lt;bibl&gt;&lt;author&gt;&lt;surname&gt;Korall&lt;/surname&gt;,
+                                &lt;forename&gt;Burt&lt;/forename&gt;&lt;/author&gt;. &lt;title
+                                type="monograph"&gt;Drummin’ Men&lt;/title&gt; &lt;pubPlace&gt;New
+                                York&lt;/pubPlace&gt;: &lt;publisher&gt;Schirmer Books&lt;/publisher&gt;,
+                                &lt;date&gt;1990&lt;/date&gt;.&lt;/bibl&gt; </td>
+                        </tr>
+                        <tr>
+                            <td>Hunt, <i>52nd St.</i></td>
+                            <td>&lt;bibl ref=""&gt;&lt;author&gt;&lt;surname&gt;Hunt&lt;/surname&gt;,
+                                &lt;forename&gt;Joe&lt;/forename&gt;&lt;/author&gt;. &lt;title type="monograph"&gt;52nd
+                                Street Beat&lt;/title&gt;. &lt;pubPlace&gt;New Albany, IN&lt;/pubPlace&gt;:
+                                &lt;publisher&gt;Aebersold Music, Inc.&lt;/publisher&gt;,
+                                &lt;date&gt;1994&lt;/date&gt;.&lt;/bibl&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Spagnardi, <i>GJD</i></td>
+                            <td>&lt;bibl&gt;&lt;author&gt;&lt;surname&gt;Spagnardi&lt;/surname&gt;,
+                                &lt;forename&gt;Ronald&lt;/forename&gt;&lt;/author&gt;. &lt;title
+                                type="monograph"&gt;The Great Jazz Drummers&lt;/title&gt;. &lt;pubPlace&gt;Cedar Grove,
+                                New Jersey&lt;/pubPlace&gt;: &lt;publisher&gt;Modern Drummer
+                                Publications&lt;/publisher&gt;, &lt;date&gt;1992&lt;/date&gt;.&lt;/bibl&gt; </td>
+                        </tr>
+                        <tr>
+                            <td>Avgerinos, <i>KB</i></td>
+                            <td>&lt;bibl&gt;&lt;author&gt;&lt;surname&gt;Avgerinos&lt;/surname&gt;,
+                                &lt;forename&gt;Gerassimos&lt;/forename&gt;&lt;/author&gt;.
+                                &lt;title&gt;Künstler-Biographien: Die Miglieder im Berliner Philharmonischen Orchester
+                                von 1882–1972&lt;/title&gt;. &lt;publisher&gt;Gerassimos Avgerinos&lt;/publisher&gt;,
+                                &lt;date&gt;1972&lt;/date&gt;.&lt;/bibl&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Cook, <i>LDT</i></td>
+                            <td>&lt;bibl&gt;&lt;editor role="complier"&gt;&lt;surname&gt;Cook&lt;/surname&gt;,
+                                &lt;forename&gt;Rob&lt;/forename&gt;&lt;/editor&gt;, compiler.&lt;title
+                                type="monograph"&gt; Leedy Drum Topics&lt;/title&gt;. &lt;pubPlace&gt;Anaheim Hills,
+                                CA&lt;/pubPlace&gt;: &lt;publisher&gt;Cedarcreek Publishing&lt;/publisher&gt;,
+                                &lt;date&gt;1993&lt;/date&gt;&lt;/bibl&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Sadie, <i>NG</i></td>
+                            <td>&lt;bibl&gt;&lt;editor&gt;&lt;surname&gt;Sadie&lt;/surname&gt;,
+                                &lt;forename&gt;Stanley&lt;/forename&gt;&lt;/editor&gt;, ed. &lt;title
+                                type="monograph"&gt;The New Grove Dictionary of Music and Musicians&lt;/title&gt;.
+                                &lt;pubPlace&gt;London&lt;/pubPlace&gt;: &lt;publisher&gt;Macmillan
+                                Press&lt;/publisher&gt;, &lt;date&gt;1980&lt;/date&gt;.&lt;/bibl&gt; </td>
+                        </tr>
+                        <tr>
+                            <td>Hitchcock, <i>NGA</i></td>
+                            <td>&lt;bibl&gt;&lt;editor&gt;&lt;surname&gt;Hitchcock&lt;/surname&gt;,
+                                &lt;forename&gt;H.&lt;/forename&gt;
+                                &lt;forename&gt;Wiley&lt;/forename&gt;&lt;/editor&gt;, and
+                                &lt;editor&gt;&lt;forename&gt;Stanley&lt;/forename&gt;
+                                &lt;surname&gt;Sadie&lt;/surname&gt;&lt;/editor&gt;, eds. &lt;title
+                                type="monograph"&gt;The New Grove Dictionary of American Music&lt;/title&gt;.
+                                &lt;biblScope unit="vol"&gt;4 vols.&lt;/biblScope&gt;
+                                &lt;pubPlace&gt;London&lt;/pubPlace&gt;: &lt;publisher&gt;Macmillan&lt;/publisher&gt;,
+                                &lt;date&gt;1986&lt;/date&gt;.&lt;/bibl&gt; </td>
+                        </tr>
+                        <tr>
+                            <td>Kernfeld, <i>NGJ</i></td>
+                            <td>&lt;bibl&gt;&lt;editor&gt;&lt;surname&gt;Kernfeld&lt;/surname&gt;,
+                                &lt;forename&gt;Barry&lt;/forename&gt;&lt;/editor&gt;, ed.&lt;title&gt;The New Grove
+                                Dictionary of Jazz&lt;/title&gt;, &lt;biblScope unit="vol"&gt;vols.
+                                1-2&lt;/biblScope&gt;. &lt;pubPlace&gt;New York&lt;/pubPlace&gt;: &lt;publisher&gt;Grove
+                                Dictionaries of Music, Inc.&lt;/publisher&gt;,
+                                &lt;date&gt;1988&lt;/date&gt;.&lt;/bibl&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Borland, <i>WWAMC</i></td>
+                            <td>&lt;bibl&gt;&lt;editor&gt;&lt;surname&gt;Borland&lt;/surname&gt;,
+                                &lt;forename&gt;Carol&lt;/forename&gt;&lt;/editor&gt;, ed. &lt;title&gt;Who’s Who in
+                                American Music: Classical&lt;/title&gt;. &lt;pubPlace&gt;New York&lt;/pubPlace&gt;:
+                                &lt;publisher&gt;Jaques Cattell Press&lt;/publisher&gt;/&lt;publisher&gt;R. R. Bowker
+                                Co.&lt;/publisher&gt;, &lt;date&gt;1983&lt;/date&gt;.&lt;/bibl&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Cahn, <i>XAR</i></td>
+                            <td>&lt;bibl&gt;&lt;author&gt;&lt;surname&gt;Cahn&lt;/surname&gt;,
+                                &lt;forename&gt;William&lt;/forename&gt;
+                                &lt;forename&gt;&lt;abbr&gt;L.&lt;/abbr&gt;&lt;/forename&gt;&lt;/author&gt;&lt;title&gt;The
+                                Xylophone in Acoustic Recordings (1877-1929)&lt;/title&gt;. &lt;pubPlace&gt;Bloomfield,
+                                NY&lt;/pubPlace&gt;: &lt;publisher&gt;William L. Cahn Publishing&lt;/publisher&gt;,
+                                &lt;date&gt;1996&lt;/date&gt;.&lt;/bibl&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>Strain, <i>XYLO</i></td>
+                            <td>&lt;bibl&gt;&lt;author&gt;&lt;surname&gt;Strain&lt;/surname&gt;,
+                                &lt;forename&gt;James&lt;/forename&gt;
+                                &lt;forename&gt;Allen&lt;/forename&gt;&lt;/author&gt;. &lt;title&gt;The Xylophone, ca.
+                                1878-1930: Its Published Literature, Development as a Concert Instrument, and Use in
+                                Musical Organizations&lt;/title&gt;. DMA dissertation, &lt;orgName type="uni"
+                                &gt;University of Rochester, Eastman School of Music&lt;/orgName&gt;,
+                                &lt;date&gt;1995&lt;/date&gt;.&lt;/bibl&gt;</td>
+                        </tr>
+                    </tbody>
+                </table> </li>
+                <li>At the end of many bibliographies, there is are bibliographic references in smaller type,
+                    often with the heading "<b>GEN. BIB</b>". This section should be a separate &lt;div
+                    type="ography"&gt; with a @subtype="secondary": &lt;div xml:id="d3" type="ography"
+                    subtype="secondary"&gt;. Then each item in that list will be separated by either a period or a
+                    semicolon.</li>
+                <li class="r201412">Index (pages 419-429): See <a href="../tei_rilm_instructions.html#indexes" target="_blank">above</a>. Also, page numbers
+                    in <b>boldface</b> can be ignored</li>
+                <li>Appendix (pages 413-416): Create an XML file for each person in this section. All text
+                    should go in a &lt;div type="bio"> except any bracketed text at the end, which should go in
+                    &lt;div type="ography">. See pbdEXAMPLE2.xml and pdbEXAMPLE3.xml.</li>
+                <li>The following sections should each have its own XML document:"CONTENTS" (p. vii), "PREFACE"
+                    (pp. ix-xi), "ACKNOWLEDGMENTS" (p. xiii), "ABBREVIATIONS" (pp. xv-xvi), and "GENERAL
+                    BIBLIOGRAPHY" (pp. 417-418).</li>
+            </ol> </div> 
+    </body>
+</html>

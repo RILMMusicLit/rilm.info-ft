@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Dizionario universale dei musicisti</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="DUM">Dizionario universale dei musicisti (Schmidl)</h4>
+      </div>
+    </a>
+    <div class="r201506" title="Added, 6/2015">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print</li>
+            <li>Articles will have &lt;div type="heading"> and &lt;div type="body"></li>
+            <li>Double-angle quotation marks ( « » ) are used throughout.</li>
+            <li>Italic type is used to indicate <i>titles</i>, so tag
+              with &lt;title> rather than &lt;hi>.</li>
+            <li>All entries are &lt;text type="person">.</li>
+          </ul></li>
+        <li><b>Front matter</b>: <ul><li>make a file for the cover with only illustration; </li><li>make the TEI title "[cover]"</li>
+          <li>make a file for advertisements "[advertisements]"</li>
+          <li>title page </li>
+          <li>copyright page</li>  <li>Vol. 1 additionally has a "Prefazione" (Preface).</li></ul></li>
+        <li>Tag the <b>entry heads</b> as &lt;div type="heading">, containing &lt;rilmPerson> and
+          &lt;persName> elements. Most heads start with <i>surnames</i> but do not indicate where
+          the forename starts!<ul>
+            <li><i>In general</i>, tag up to the first space character as &lt;surname>, and the
+              remaining words as &lt;forename>: <br />[<b>Luciani Sebastiano
+                Arturo.</b>]<blockquote>&lt;persName>&lt;surname>Luciani&lt;/surname>
+                &lt;forename>Sebastiano&lt;/forename>
+                &lt;forename>Arturo&lt;/forename>&lt;/persName>.</blockquote>[<b>Oddone-Sulli-Rao
+                Elisabetta.</b>]<blockquote>&lt;persName>&lt;surname>Oddone-Sulli-Rao&lt;/surname>
+                &lt;forename>Elisabetta&lt;/forename>&lt;persName>.</blockquote></li>
+            <li>IF the name <i>begins with</i> "Mac " (i.e. with a space after "Mac") or begins with
+              "O’ ", use the first <i>two</i> words as
+                &lt;surname>:<blockquote>&lt;persName>&lt;surname>Mac Dowel&lt;/surname>
+                &lt;forename>Edward&lt;/forename>
+                &lt;forename>Alexander&lt;/forename>&lt;/persName>.</blockquote></li>
+            <li>IF the name <i>contains</i> " y " (lower-case "y" with a space on both sides), use
+              the first <i>three</i> words as surname: <blockquote>&lt;persName>&lt;surname>Ocón y
+                Rivas&lt;/surname>
+              &lt;forename>Edoardo&lt;/forename>&lt;/persName>.</blockquote></li>
+            <li>Parentheses in the head indicate variant name forms or titles. Tag each in its own
+              &lt;persName> element (but in the same &lt;rilmPerson>). Don't tag words not
+              capitalized.  [<b>Reimann (Reymannus, Reymanni) Matteo.</b>]
+                <blockquote>&lt;rilmPerson>&lt;persName>&lt;surname>Reimann&lt;/surname>&lt;/persName>
+                (&lt;persName>&lt;surname>Reymannus&lt;/surname>&lt;/persName>,&lt;persName>&lt;surname>Reymanni&lt;/surname>&lt;/persName>)
+                &lt;persName>&lt;forename>Matteo&lt;/forename>&lt;/persName>&lt;/rilmPerson></blockquote>[<b>Molière
+                (il cuí ver nome è Poquelin) Giovanni
+                Battista.</b>]<blockquote>&lt;rilmPerson>&lt;persName>&lt;surname>Molière&lt;/surname>&lt;/persName>
+                (il cuí ver nome è &lt;persName>&lt;surname>Poquelin&lt;/surname>&lt;/persName>)
+                &lt;persName>&lt;forename>Giovanni&lt;/forename>
+                &lt;forename>Battista&lt;/forename>&lt;/persName>&lt;/rilmPerson>.</blockquote></li>
+          </ul></li>
+        <li><b>See-references</b> are indicated by "vedasi" or "vedi" as <b>Surname Forename, vedasi
+            Surname Forename</b>.</li>
+      </ol>
+      <p><b>The <i>Supplemento</i> volume </b>contains both new entries and additions to entries
+        already in vol. 1 or vol. 2.  Additions to previous entries are marked with an asterisk
+        preceding the heading: [<b>*Abrahamsen Erico.</b>].  New entries have no such asterisk.</p>
+      <ol>
+        <li>Treat <b>new entries</b> in the Supplement identically with entries in vols. 1 and 2
+          (with different TEI header, of course).</li>
+        <li>For <b>additions to previous entries</b>, treat identically <i>except</i> in the
+          &lt;text> element, add a @corresp attribute pointing to the &lt;text> @xml:id of the
+          original entry:<ul>
+            <li>&lt;text type="person" xml:lang="it" xml:id="dum-0000x"> for the original entry</li>
+            <li>&lt;text type="person" xml:lang="it" xml:id="dum-0000y" corresp="#dum0000x"> for the
+              supplement entry.</li>
+          </ul></li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

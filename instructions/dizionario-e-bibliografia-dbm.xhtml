@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Dizionario e bibliografia della musica (1836)</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="grove-GR1">Dizionario e bibliografia della musica (1836)</h4>
+      </div>
+    </a>
+    <div class="r201504" title="Added, 3/2014">
+      <p>This publication should be converted from rich PDF.</p>
+      <p>The first two volumes comprise the Dictionary ("Dizionario"); the second two volumes (3-4)
+        comprise the bibliography ("bibliografia"). They are essentially separate publications.</p>
+      <ul>
+        <li><b>Dizionario</b>:<ol>
+            <li><b>Front matter</b> includes only a <b>title page</b> and a <b>Prefazione</b>
+              (preface) </li>
+            <li>All entries are &lt;text type="topic"></li>
+            <li>Entries have only &lt;div type="body">. There are no headings or lists</li>
+            <li>Footnotes should be handled as described in the <a
+                href="ft/tei_rilm_instructions.html#footnotes">general instructions</a>.</li>
+
+            <li>The <b>article title</b> is given in all-capital type. Start with a &lt;div
+              type="body"> and &lt;p>. Use the word or words in all capitals as the &lt;title> in
+              the TEI header and tag it &lt;term> within the &lt;p>.</li>
+            <li><b>See references</b>
+              <i>and</i>
+              <b>Cross references</b> are indicated by an italic letter "V" followed by a period. <ul>
+                <li>The "v" may be capital or lower case.</li>
+                <li>The target term is set in small capitals.</li>
+                <li>Examples:<ul>
+                    <li>[A CAPRICCIO, ad arbitrio dell'esecutore. <i>V.</i>
+                      <small>AD LIBITUM</small>.]</li>
+                    <li>[Il sig. Mott a Londra, aggiunse recentemente a' Pianoforti un meccanismo
+                      simile del sig. Walker (<i>v.</i>
+                      <small>CELESTINO</small>), e ne rese il suono più forte ancora.]</li>
+                  </ul></li>
+                <li>Treat stand-alone See references according to the <a
+                    href="ft/tei_rilm_instructions.html#see-refs">general rules for see
+                    references</a>. If there is text between the referring term and the target term,
+                  include it in the &lt;term> element in the target article.</li>
+                <li>For <a href="ft/tei_rilm_instructions.html#cross-refs">Cross references within
+                    articles</a>, tag only the text in small caps (not the word "articolo", for
+                  example).</li>
+                <li><i>If the letter "v" is not italic / slanted, the reference is to another
+                    publication.</i></li>
+                <li><i>There are examples of multiple referring terms pointing to a single target
+                    term by way of a large brace "}". There are examples in vol. 1, on pages 13 and
+                    23 (among many others).</i></li>
+              </ul></li>
+            <li>There are illustrations within some articles, but all <b>musical examples</b>
+              (notated music) are printed together in volume 2, beginning after page 301. The are
+              referred to in the articles as "Fig.1", "Fig.2", etc. Please separate these figures
+              each in their own image file. and reference them in the appropriate articles.</li>
+            <li>Set the articles in the <b>Aggiunte</b> section identically to others in the
+              Dictionary.</li>
+            <li>Set the <b>Errata</b> list as a &lt;table>.</li>
+          </ol></li>
+
+        <li><b>Bibliografia</b>
+          <ol>
+            <li>The front matter includes a preface (Prefazione) and a table of contents (Tavola
+              della materie).</li>
+            <li>Quotation marks are low and double for both opening and closing: („ text „).</li>
+            <li>Please see the file  DBM-TOC.pdf. In principle, make each item in the table of
+              contents into a separate file IF it is more than just a heading. Parts outlined in the
+              file should be marked up in one file.</li>
+            <li>Mark up prose passages as body text, but tag italic type as &lt;title> elements:<ul>
+                <li>[<i>g)</i><br />ARISTIDE QUINTILIANO<br />vivea secondo Fabricìo dopo Cicerone
+                  (vale a dire verso il principio dell'Era cristiana), avendolo criticato nel suo
+                  secondo libro <i>De musica</i> y p. 69, per avere scritto contro la musica nella
+                  sua Opera <i>De repubblica</i>...]</li>
+              </ul><blockquote>&lt;div type="section" n="g)">&lt;head>ARISTIDE QUINTILIANO&lt;/head>
+                &lt;p>vivea secondo Fabricìo dopo Cicerone (vale a dire verso il principio dell'Era
+                cristiana), avendolo criticato nel suo secondo libro &lt;title>De musica&lt;/title>
+                y p. 69, per avere scritto contro la musica nella sua Opera &lt;title>De
+                repubblica&lt;/title>...&lt;/p>&lt;/div></blockquote> Enclose passages in smaller
+              type in &lt;note> tags.</li>
+            <li>List entries are identifiable by either an all-capital name or italic title at the
+              beginning. They may include any or all of the following: <ul>
+                <li>The author name in surname-forename order, typeset with Surname in all capitals,
+                  and forename(s) in small-captitals in parentheses, followed by a comma:<br />
+                  [KEMPELN (<small>WOLFGANG VON</small>),]</li>
+                <li>A biographical note, often containing birth and death information ("nato a" =
+                  "born at"; "morto a" = "died at"), followed by a colon: <br />[I. R. consigliere
+                  della cancelleria aulica a Vienna, nato a Presburgo l’anno 1729, morto a Vienna
+                  nel 1804:]</li>
+                <li>A title, in italic type, followed by a period:<br /> [<i>Mechanismus der
+                    menschlichen Sprache, nebst der Beschreibung einer sprechenden Maschine, Mit 27
+                    Kupfertafeln.</i>]</li>
+                <li>Place and date of publication: [Wien, 1791.]</li>
+                <li>Other bibliographic information, possibly including other titles: <br /> [Anche
+                  in lingua francese col titolo: <i>Le Mécanisme de la parole y suivi de la
+                    déscription d’une machine parlante, et enrichi de 27 planches</i>. Ibid.] </li>
+                <li>An annotation, usually in smaller type:<br /> [<small>Nella sua traduzione
+                    tedesca delle <i>Malattie nervose</i> del Tissot, 1’Autore parla a lungo della
+                    caratteristica della voce cantante, e per estratto nella musicale Gazzetta reale
+                    di Spira, 1788.</small>]</li>
+              </ul><blockquote>&lt;item>&lt;bibl>&lt;author>&lt;rilmPerson>&lt;persName>&lt;surname>KEMPELN&lt;/surname>
+                (&lt;forename>WOLFGANG&lt;/forename> &lt;nameLink>VON&lt;/nameLink>)&lt;/persName>,
+                I. R. consigliere della cancelleria aulica a Vienna, &lt;birth>nato a
+                &lt;placeName>Presburgo&lt;/placeName> l’anno &lt;date when="1729"
+                when-custom="1729">1729&lt;/date>&lt;/birth>, &lt;death>morto a
+                &lt;placeName>Vienna&lt;/placeName> nel &lt;date when="1804"
+                when-custom="1804">1804&lt;/date>&lt;/death>&lt;/rilmPerson>&lt;/author>:
+                &lt;title>Mechanismus der menschlichen Sprache, nebst der Beschreibung einer
+                sprechenden Maschine, Mit 27 Kupfertafeln&lt;/title>.
+                &lt;pubPlace>Wien&lt;/pubPlace>, &lt;date>1791&lt;/date>, 8. Anche in lingua
+                francese col titolo: &lt;title>Le Mécanisme de la parole y suivi de la déscription
+                d’une machine parlante, et enrichi de 27 planches&lt;/title>. Ibid.&lt;/bibl>
+                &lt;note>Nella sua traduzione tedesca delle &lt;hi rend="italic">Malattie
+                nervose&lt;/hi> del Tissot, 1’Autore parla a lungo della caratteristica della voce
+                cantante, e per estratto nella musicale Gazzetta reale di Spira,
+                1788.&lt;/note>&lt;/item> </blockquote></li>
+            <li>When an author name is printed in all-caps with no small caps, enclose the name in
+              &lt;author> tags but omit &lt;forename> and &lt;surname> tags: [ERODOTO D'
+              ALICARNASSO]; [TEONE DI SMIRNA] </li>
+            <li>Entries without author begin with a title in italic type.</li>
+            <li><i>Some "lists"</i> may contain only one item!</li>
+          </ol></li>
+      </ul>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>

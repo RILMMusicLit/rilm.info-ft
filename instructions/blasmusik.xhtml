@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../tei.css" rel="stylesheet" type="text/css" />
+        <title>Das Blasmusik-Lexikon</title>
+    </head>
+    <body>
+        <a id="blasmusik"></a> <h4 class="r201412" title="Added 12/2014">Das
+            Blasmusik-Lexikon (dbl)</h4> <ol>
+                <li class="r201501" title="Added 01/2015">Most entries will be &lt;text type="person">. Those can be identified by a heading with
+                    boldface surname followed by a non-boldface forename. Entries with headings that are entirely
+                    boldface should have &lt;text type="topic">.</li>
+                <li class="r201412" title="Added 12/2014">Each entry contains a heading, a biographical paragraph, and (usually) one or more of the
+                    following lists: Werke (works), Bearbeitungen (arrangements), Märsche (marches), Schriften
+                    (writings), Aufsätze (essays), and Literatur (bibliography). Lists with the heading
+                    "Literatur" should be in a &lt;div type="ography">. All others should be in a &lt;div
+                    type="works"></li>
+                <li class="r201412" title="Added 12/2014">Bibliographies: Lists with the heading "Literatur" are bibliographies. These lists are set
+                    inline with each item separated by a semi-colon. Do not tag anythin in these lists; each item
+                    should go in a &lt;bibl>.</li>
+                <li class="r201412" title="Added 12/2014">Works lists: All other lists (such as those with headings "Werke", "Bearbeitungen",
+                    "Märsche", "Schriften", or "Aufsätze") are works lists. These lists have one item per line.
+                    For these lists, tag all text up to the first comma as &lt;title>. Tag a four-digit year at
+                    the end of the item as &lt;date>; and tag anything between "bearb." and the next comma as
+                    &lt;editor type="arranger">, as in the following
+                    examples:<blockquote>&lt;item>&lt;bibl>&lt;title>Les Goyescas&lt;/title>, Intermezzo, bearb.
+                        &lt;editor type="arranger">Pierre Dupont&lt;/editor>, Martin
+                        &lt;date>1986&lt;/date>&lt;/bibl>.&lt;/item></blockquote><blockquote>&lt;item>&lt;bibl>&lt;title>Ouvertüre
+                            zu &lt;q>Lucrezia Borgia&lt;/q>&lt;/title>, bearb. &lt;editor
+                            type="arranger">Dörle&lt;/editor>, Schulz (A = B).</blockquote> </li>
+                <li class="r201412" title="Added 12/2014">Front- and back matter: The following sections should each be set in a single file: "Zum
+                    Geleit" (p. 5), "Vorwort" (pp. 7-10), and "Abgekürzt zitierte Literatur" (pp. 13-18) following
+                    the instructions above.</li>
+                <li class="r201501" title="Added 01/2015">See references: If the name that is the source of a see-ref also appears in the heading of
+                    the destination entry, the source entry can be ignored. For example, If the source entry
+                    is<blockquote>Abel Lex, s. Max Leemann</blockquote>and heading of the destination entry is <blockquote>Leeman Max (Pseud. Lex Abel)</blockquote> The entry with "Abel Lex, s. Max Leemann" can simply be ignored.</li>
+            </ol> 
+    </body>
+</html>
