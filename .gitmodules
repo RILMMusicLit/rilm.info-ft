@@ -1,3 +1,6 @@
 [submodule "schema/mgg"]
 	path = schema/mgg
 	url = https://github.com/RILMMusicLit/tei_schema.git
+[submodule "schema/collections"]
+	path = schema/collections
+	url = https://github.com/RILMMusicLit/tei_schema.git
