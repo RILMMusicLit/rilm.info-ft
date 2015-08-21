@@ -136,6 +136,7 @@ content: "*";
   border: 1px solid #EEEFEE;
   padding: 3px;
   color: inherit;
+  text-align:left;
   background-color:inherit;
 }
 .rilm-cell.rilm-role_label {
