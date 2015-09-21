@@ -719,6 +719,10 @@ quote > note {
  font-style: normal;   
 }
 
+note[type="editorial"] {
+    display: none;
+}
+
 notesStmt {
   display: block;
   margin-bottom: 1em;

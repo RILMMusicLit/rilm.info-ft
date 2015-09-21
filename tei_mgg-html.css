@@ -648,6 +648,9 @@ Label {
 .rilm-note.rilm-place_inline,  .rilm-note.rilm-place_unspecified {
   display: inline;
 }
+.rilm-note.rilm-type_editorial {
+    display: none;
+}
 .rilm-notesStmt {
   display: block;
   margin-bottom: 1em;
