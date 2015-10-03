@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt> 
+                <title>Title</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <table>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell>. von Takashi Masao Honma(* 1930), Chinary Ung </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell> 1930), Chinary Ung (* 1942), Sook-Ja Oh </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell> 1942), Sook-Ja Oh (* 1947), Qu Xiao-Song </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell> 1947), Qu Xiao-Song (* 1952), Yoshimatsu </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell> 1952), Yoshimatsu (* 1953), Kazumi Watanabe </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell> 1953), Kazumi Watanabe (* 1953), Liu Xiaogen </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell> 1953), Liu Xiaogen (* 1955), Josefino Chino Toledo </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell>5), Josefino Chino Toledo(* 1959), Keiko Fujiie </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell> 1959), Keiko Fujiie (* 1963), Peng Jing </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell> 1963), Peng Jing (* 1965), Hitoshi Nakamura </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell> 1965), Hitoshi Nakamura(* 1967), Chang Hui-Ni </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell> 1967), Chang Hui-Ni (* 1969) und Miaw-Ping Huang </cell>
+</row>
+<row>
+  <cell>Yamashita, Kazuhito</cell>
+  <cell/>
+  <cell>1969) und Miaw-Ping Huang(* 1970). Yamashitas Diskographie hat eine</cell>
+</row>
+<row>
+  <cell>Köszeghy, Pèter</cell>
+  <cell/>
+  <cell>lötistin Susanne Köszeghy(* 21. April 1971) geschrieben. Das Schrei</cell>
+</row>
+<row>
+  <cell>Björk</cell>
+  <cell/>
+  <cell> Techno-Musiker Mark Bell(* 1988), der mit ihr 1997 das Album Homog</cell>
+</row>
+<row>
+  <cell>Kattnigg, Rudolf Karl</cell>
+  <cell/>
+  <cell>e Sängerin Trude Kollinek(* 1900), die unter ihrem Künstlernamen Tr</cell>
+</row>
+<row>
+  <cell>Kattnigg, Rudolf Karl</cell>
+  <cell/>
+  <cell>ami mit Johannes Heesters(* 1903) und Gretl Schörg (1914–2006) am W</cell>
+</row>
+<row>
+  <cell>The Sixteen</cell>
+  <cell/>
+  <cell>ie von Harry Christophers(* 26. Dez. 1953 in Goudhurst, Kent, Engla</cell>
+</row>
+<row>
+  <cell>Bouws, Jan</cell>
+  <cell/>
+  <cell>–1983), Hubert du Plessis(* 1922) und Stefans Grové </cell>
+</row>
+<row>
+  <cell>Bouws, Jan</cell>
+  <cell/>
+  <cell> 1922) und Stefans Grové(* 1922) bekannt. Außerdem stellte er bede</cell>
+</row>
+<row>
+  <cell>Viklický, Emil</cell>
+  <cell/>
+  <cell>eine Lehrer Václav Kučera(* 1929), G. Crumb und J. Sermilä. Seit de</cell>
+</row>
+<row>
+  <cell>Picker, Tobias</cell>
+  <cell/>
+  <cell>hriftsteller Oliver Sacks(* 1933) (The man who mistook his wife for</cell>
+</row>
+<row>
+  <cell>Picker, Tobias</cell>
+  <cell/>
+  <cell>Songschreiber Gene Scheer(* 1958) als Librettist und der Regisseuri</cell>
+</row>
+<row>
+  <cell>Picker, Tobias</cell>
+  <cell/>
+  <cell>seurin Francesca Zambello(* 1956) zu gelingen scheint.</cell>
+</row>
+<row>
+  <cell>Grothe</cell>
+  <cell/>
+  <cell>Völker, Johannes Heesters(* 1903), Wolfgang Neuss (1923–1989), Erns</cell>
+</row>
+<row>
+  <cell>Edwards, Sian</cell>
+  <cell/>
+  <cell>ute mit u. a. Marin Alsop(* 1956), Julia Jones </cell>
+</row>
+<row>
+  <cell>Edwards, Sian</cell>
+  <cell/>
+  <cell> 1956), Julia Jones (* 1961) und S. Young zu den wenigen Fraue</cell>
+</row>
+<row>
+  <cell>Stoin, Vasil</cell>
+  <cell/>
+  <cell>asils Tochter Elena Stoin(* 1915).</cell>
+</row>
+<row>
+  <cell>Sinatra, Frank</cell>
+  <cell/>
+  <cell> Aznavour, Julio Iglesias(* 1943) und Gloria Estefan </cell>
+</row>
+<row>
+  <cell>Sinatra, Frank</cell>
+  <cell/>
+  <cell> 1943) und Gloria Estefan(* 1957). Allerdings stand er mit keinem v</cell>
+</row>
+<row>
+  <cell>Lang, Bernhard</cell>
+  <cell/>
+  <cell>able-Spielers Philip Jeck(* 1952) rückübertragen und gleichsam vers</cell>
+</row>
+<row>
+  <cell>Newlin, Dika</cell>
+  <cell/>
+  <cell> zählen Theodore Albrecht(* 1945), Roger Hannay (1930–2006) sowie M</cell>
+</row>
+<row>
+  <cell>Newlin, Dika</cell>
+  <cell/>
+  <cell>0–2006) sowie Mason Bates(* 1977).</cell>
+</row>
+<row>
+  <cell>Weintraubs Syncopators</cell>
+  <cell/>
+  <cell>larinettisten Horst Graff(* 1905 in Berlin) ein Amateur-Ensemble, d</cell>
+</row>
+<row>
+  <cell>Curran, Alvin</cell>
+  <cell/>
+  <cell>Melissa Gould und Jack Ox(* 1948) schuf Curran zahlreiche Klanginst</cell>
+</row>
+<row>
+  <cell>Zygel, Jean-François</cell>
+  <cell/>
+  <cell> auch Guillaume Connesson(* 1970), Th. Escaich, Anthony Girard </cell>
+</row>
+<row>
+  <cell>Zygel, Jean-François</cell>
+  <cell/>
+  <cell>. Escaich, Anthony Girard(* 1959) und Olivier Kaspar </cell>
+</row>
+<row>
+  <cell>Zygel, Jean-François</cell>
+  <cell/>
+  <cell> 1959) und Olivier Kaspar(* 1962) angehörten. Er war Prof. für Orch</cell>
+</row>
+<row>
+  <cell>Canat de Chizy, Édith</cell>
+  <cell/>
+  <cell>e sie sich bei Guy Reibel(* 1936) mit elektroakustischer Musik vert</cell>
+</row>
+<row>
+  <cell>Thürmer</cell>
+  <cell/>
+  <cell>971 unterband Jan Thürmer(* 10. Aug. 1946 in Meißen), Sohn von Walt</cell>
+</row>
+<row>
+  <cell>Sarmanto, Heikki</cell>
+  <cell/>
+  <cell> Bassisten Pekka Sarmanto(* 1945). Von 1966 bis 1970 war Sarmanto L</cell>
+</row>
+<row>
+  <cell>Scheuch</cell>
+  <cell/>
+  <cell>Sein Bruder Claudius (* 25. Sept. 1976) arbeitet eng mit dem Bä</cell>
+</row>
+<row>
+  <cell>Taylor, Paul</cell>
+  <cell/>
+  <cell>n (1901–1975), Pearl Lang(* 1922) und Anna Sokolov (1910–2000). 195</cell>
+</row>
+<row>
+  <cell>Hacks, Peter</cell>
+  <cell/>
+  <cell>ete z. B. mit Heinz Greul(* 1926) ab 1948 für Münchener Kabarettbüh</cell>
+</row>
+<row>
+  <cell>Hacks, Peter</cell>
+  <cell/>
+  <cell>tbühnen, mit André Asriel(* 1922) lieferte er nach 1955 sozialistis</cell>
+</row>
+<row>
+  <cell>Mainka, Jörg</cell>
+  <cell/>
+  <cell> Komponisten Alvin Lucier(* 1931), ein markantes Wechselspiel zwisc</cell>
+</row>
+<row>
+  <cell>Roggenkamp, Peter</cell>
+  <cell/>
+  <cell>05) und Karl Heinz Wahren(* 1933) ein.</cell>
+</row>
+<row>
+  <cell>Pohjola, Seppo</cell>
+  <cell/>
+  <cell>er Chordgt. Erkki Pohjola(* 1931), seine Tante die Pianistin Liisa </cell>
+</row>
+<row>
+  <cell>Pohjola, Seppo</cell>
+  <cell/>
+  <cell>e Pianistin Liisa Pohjola(* 1936), ein Onkel der Dgt. und Violinist</cell>
+</row>
+<row>
+  <cell>Pohjola, Seppo</cell>
+  <cell/>
+  <cell>d Violinist Paavo Pohjola(* 1934), ein anderer Onkel der Chordgt. u</cell>
+</row>
+<row>
+  <cell>Pohjola, Seppo</cell>
+  <cell/>
+  <cell>und Cellist Ensti Pohjola(* 1928) und sein Cousin der Dgt. und Viol</cell>
+</row>
+<row>
+  <cell>Pohjola, Seppo</cell>
+  <cell/>
+  <cell>nd Violinist Sakari Oramo(* 1965). Von 1987 bis 1990 studierte Pohj</cell>
+</row>
+<row>
+  <cell>Berger, Jean</cell>
+  <cell/>
+  <cell>sein Sohn Jonathan Berger(* 1954), Hochschullehrer am Center for Co</cell>
+</row>
+<row>
+  <cell>Swingle Singers</cell>
+  <cell/>
+  <cell> von Ward (Lamar) Swingle(* 1927) gegründet wurde. Die weiteren Mit</cell>
+</row>
+<row>
+  <cell>Vessella, Alessandro</cell>
+  <cell/>
+  <cell>(Klavier), Giovanni Furno(* 1840) (Komposition) und P. Serrao (1830</cell>
+</row>
+<row>
+  <cell>Moondog</cell>
+  <cell/>
+  <cell>nd Organisten Paul Jordan(* 1939) nach Deutschland und entschloß si</cell>
+</row>
+<row>
+  <cell>Müller, Thomas Samuel</cell>
+  <cell/>
+  <cell>Komponisten Thomas Müller(* 8. Dez. 1768), der ebenfalls in Strakon</cell>
+</row>
+<row>
+  <cell>Chatham, Rhys</cell>
+  <cell/>
+  <cell>en, was auch Glenn Branca(* 6. Okt. 1948) inspirierte. Ähnlich wie </cell>
+</row>
+<row>
+  <cell>Pyrophon</cell>
+  <cell/>
+  <cell>lammen von Andreas Oldörp(* 1959) im Röhrenbunker unter dem Hans-Al</cell>
+</row>
+<row>
+  <cell>Zadar</cell>
+  <cell>Das Musikleben seit dem 19. Jahrhundert</cell>
+  <cell>ist Giacometto Giacometti(* 1885) Dgt. der Società filarmonica. Er </cell>
+</row>
+<row>
+  <cell>Sauter</cell>
+  <cell/>
+  <cell>bernahm Carl (III) Sauter(* 1936), ein Bruder von Hans Sauter, die </cell>
+</row>
+<row>
+  <cell>Sauter</cell>
+  <cell/>
+  <cell>ustrie kommende Otto Hott(* 1940) die Mehrheit der Anteile; mit Ulr</cell>
+</row>
+<row>
+  <cell>Sauter</cell>
+  <cell/>
+  <cell>nteile; mit Ulrich Sauter(* 1952) als weiterer Gesellschafter verbl</cell>
+</row>
+<row>
+  <cell>Aphex Twin</cell>
+  <cell/>
+  <cell>Künstler Chris Cunningham(* 1970), die noch im gleichen Jahr in der</cell>
+</row>
+<row>
+  <cell>Gosfield, Annie</cell>
+  <cell/>
+  <cell> des Kreises um John Zorn(* 1953) und an experimentelle Rockmusik a</cell>
+</row>
+<row>
+  <cell>Gosfield, Annie</cell>
+  <cell/>
+  <cell>ebenspartner Roger Kleier(* 1958) und Joan Jeanrenaud </cell>
+</row>
+<row>
+  <cell>Gosfield, Annie</cell>
+  <cell/>
+  <cell>1958) und Joan Jeanrenaud(* 1956) auf, mit denen sie intensiv zusam</cell>
+</row>
+<row>
+  <cell>Gosfield, Annie</cell>
+  <cell/>
+  <cell>nstlern wie Manuel Ocampo(* 1965) an Klanginstallationen und der Ch</cell>
+</row>
+<row>
+  <cell>Gosfield, Annie</cell>
+  <cell/>
+  <cell>eographin Karole Armitage(* 1954).</cell>
+</row>
+<row>
+  <cell>Keller, Johann Michael Claudius</cell>
+  <cell/>
+  <cell>uf machten: Tochter Fides(* 1846) als Konzertsängerin und die Söhne</cell>
+</row>
+<row>
+  <cell>Keller, Johann Michael Claudius</cell>
+  <cell/>
+  <cell>rt (1847–1932) und August(* 1850) als Org. am Augsburger Dom. Späte</cell>
+</row>
+<row>
+  <cell>Schlömer, Joachim</cell>
+  <cell/>
+  <cell>ovs (Mikhail Baryshnikov)(* 1948) White Oak Dance Project, das Ball</cell>
+</row>
+<row>
+  <cell>Schlömer, Joachim</cell>
+  <cell/>
+  <cell>ouse und mit Graham Smith(* 1972) in Lissabon dogs, eine Zweimannko</cell>
+</row>
+<row>
+  <cell>Reinisch</cell>
+  <cell/>
+  <cell>nahm Johann Pirchner (II)(* 1928) die Geschäftsführung. 1998 erfolg</cell>
+</row>
+<row>
+  <cell>Gréco, Juliette</cell>
+  <cell/>
+  <cell>n Ch. Aznavour, Guy Béart(* 1930), G. Brassens, Léo Ferré (1916–199</cell>
+</row>
+<row>
+  <cell>Bunk, Gerard</cell>
+  <cell/>
+  <cell>erpädagogen Hans Hermanns(* 1879), dem er ans Hamburger Kons. folgt</cell>
+</row>
+<row>
+  <cell>Campo, Régis</cell>
+  <cell/>
+  <cell>und Dirigentin Kanako Abe(* 1973). 2001 wurde Lumen unter K. Nagano</cell>
+</row>
+<row>
+  <cell>Beerhalter, Alois</cell>
+  <cell/>
+  <cell>eiter mit Maria Franziska(* 4. Aug. 1811), Tochter des Historienmal</cell>
+</row>
+<row>
+  <cell>Beerhalter, Alois</cell>
+  <cell/>
+  <cell>tnachbarn Georg Reinhardt(* ca. 1789) für die Begleitung mit dem Pi</cell>
+</row>
+<row>
+  <cell>Weissenbruch</cell>
+  <cell/>
+  <cell>(-Jean-Baptiste-Chrétien)(* 1. April 1805 in Brüssel) um 1826 beleg</cell>
+</row>
+<row>
+  <cell>Sultan, Grete</cell>
+  <cell/>
+  <cell>r Tänzer Merce Cunningham(* 1919) und insbesondere J. Cage.</cell>
+</row>
+<row>
+  <cell>Carus-Verlag</cell>
+  <cell/>
+  <cell>enmusiker Günter Graulich(* 2. Juli 1926 in Stuttgart) und seiner F</cell>
+</row>
+<row>
+  <cell>Carus-Verlag</cell>
+  <cell/>
+  <cell>er Frau Waltraud Graulich(* 18. April 1937 in Calw) gegründet. G. G</cell>
+</row>
+<row>
+  <cell>Carus-Verlag</cell>
+  <cell/>
+  <cell>01) Dr. Johannes Graulich(* 2. Juli 1967 in Stuttgart).</cell>
+</row>
+<row>
+  <cell>Boerman, Jan</cell>
+  <cell/>
+  <cell>mmen mit Dick Raaijmakers(* 1930) ein privates elektronisches Studi</cell>
+</row>
+<row>
+  <cell>Boerman, Jan</cell>
+  <cell/>
+  <cell>ngen von Rudi van Dantzig(* 1933) weiteren Kreisen bekannt. 1982 er</cell>
+</row>
+<row>
+  <cell>Boerman, Jan</cell>
+  <cell/>
+  <cell>wähnen sind Kees Tazelaar(* 1962), Thom Willems </cell>
+</row>
+<row>
+  <cell>Boerman, Jan</cell>
+  <cell/>
+  <cell> 1962), Thom Willems (* 1955) und Sinta Wullur </cell>
+</row>
+<row>
+  <cell>Boerman, Jan</cell>
+  <cell/>
+  <cell> 1955) und Sinta Wullur (* 1958).</cell>
+</row>
+<row>
+  <cell>Laaber-Verlag</cell>
+  <cell/>
+  <cell>on Henning Müller-Buscher(* 8. Dez. 1944 in Leipzig) mit einem mw. </cell>
+</row>
+<row>
+  <cell>Laaber-Verlag</cell>
+  <cell/>
+  <cell>ammen mit Matthias Bückle(* 24. Juni 1965 in Geislingen a.d. Steige</cell>
+</row>
+<row>
+  <cell>Zavaro, Pascal</cell>
+  <cell/>
+  <cell>arimbaspielerin Keiko Abe(* 1937) am Tōhō-Musikuniversität in Tokyo</cell>
+</row>
+<row>
+  <cell>Zavaro, Pascal</cell>
+  <cell/>
+  <cell> bald Guillaume Connesson(* 1970), Th. Escaich, Anthony Girard </cell>
+</row>
+<row>
+  <cell>Zavaro, Pascal</cell>
+  <cell/>
+  <cell>. Escaich, Anthony Girard(* 1959) und Olivier Kaspar </cell>
+</row>
+<row>
+  <cell>Zavaro, Pascal</cell>
+  <cell/>
+  <cell> 1959) und Olivier Kaspar(* 1962) beitraten. Seit Ende der 1980er J</cell>
+</row>
+<row>
+  <cell>Métra, Jules Louis Olivier</cell>
+  <cell/>
+  <cell>n von Jean Baptiste Métra(* 1799) und Rosine-Marie Langlade </cell>
+</row>
+<row>
+  <cell>Métra, Jules Louis Olivier</cell>
+  <cell/>
+  <cell>und Rosine-Marie Langlade(* 1800) wuchs Métra im Milieu der wandern</cell>
+</row>
+<row>
+  <cell>Warchal, Bohdan</cell>
+  <cell/>
+  <cell> A. Hamerik, Juraj Hatrík(* 1941), J. und M. Haydn, P. Hellendaal, </cell>
+</row>
+<row>
+  <cell>Trexler, Georg Max</cell>
+  <cell/>
+  <cell>oswitha Christine Trexler(* 23. Nov. 1936 in Leipzig), ist besonder</cell>
+</row>
+<row>
+  <cell>50 Cent</cell>
+  <cell/>
+  <cell>Hop-Szene wie Lloyd Banks(* 1982), Tony Yayo </cell>
+</row>
+<row>
+  <cell>50 Cent</cell>
+  <cell/>
+  <cell> 1982), Tony Yayo (* 1978), Young Buck </cell>
+</row>
+<row>
+  <cell>50 Cent</cell>
+  <cell/>
+  <cell> 1978), Young Buck (* 1981) oder The Game </cell>
+</row>
+<row>
+  <cell>50 Cent</cell>
+  <cell/>
+  <cell> 1981) oder The Game (* 1979) eine Plattform liefert. Das Label</cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell>ie Franz Josef Degenhardt(* 1931), Reinhard Mey </cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell> 1931), Reinhard Mey (* 1942), Dieter Süverkrüp </cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell> 1942), Dieter Süverkrüp(* 1934), Hanns-Dieter Hüsch (1925–2005), </cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell>925–2005), Walter Moßmann(* 1941) und Hannes Wader </cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell> 1941) und Hannes Wader (* 1942), wurde hier entdeckt und buchstäb</cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell>Österreicher André Heller(* 1947), Georg Danzer </cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell> 1947), Georg Danzer (* 1946) und Ludwig Hirsch </cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell> 1946) und Ludwig Hirsch(* 1946) sowie die in der DDR aufgewachsen</cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell>acherinnen Bettina Wegner(* 1947), Barbara Thalheim </cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell> 1947), Barbara Thalheim(* 1948), Gerhard Schöne </cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell> 1948), Gerhard Schöne (* 1952) und Hans-Eckart Wenzel </cell>
+</row>
+<row>
+  <cell>Liedermacher</cell>
+  <cell/>
+  <cell>2) und Hans-Eckart Wenzel(* 1955).</cell>
+</row>
+<row>
+  <cell>Montand, Yves</cell>
+  <cell/>
+  <cell>em Pianisten Bob Castella(* 1925), der ihm, später auch mit eigenem</cell>
+</row>
+<row>
+  <cell>U2</cell>
+  <cell/>
+  <cell>setzung Larry Mullen, Jr.(* 31. Okt. 1961, Schlgz.), Bono (geb. Pau</cell>
+</row>
+<row>
+  <cell>U2</cell>
+  <cell/>
+  <cell> Gsg.) sowie Adam Clayton(* 13. März 1960, BGit.). Die als Schülerb</cell>
+</row>
+<row>
+  <cell>U2</cell>
+  <cell/>
+  <cell>Evans, Richard Dick Evans(* 1959), 1977 in die Avantgarde-Formation</cell>
+</row>
+<row>
+  <cell>U2</cell>
+  <cell/>
+  <cell>eoregisseur Anton Corbijn(* 1955), der nicht nur das Image der Band</cell>
+</row>
+<row>
+  <cell>Duo Gelland</cell>
+  <cell/>
+  <cell>en Geigern Martin Gelland(* 20. Jan. 1964), der bei Ricardo Odnopos</cell>
+</row>
+<row>
+  <cell>Duo Gelland</cell>
+  <cell/>
+  <cell>iner Frau Cecilia Gelland(* 20. Jan. 1961), die ihr Spiel bei Walte</cell>
+</row>
+<row>
+  <cell>Seiler</cell>
+  <cell/>
+  <cell>e Firma von Ursula Seiler(* 29. Sept. 1943 in Würzburg) geführt.</cell>
+</row>
+<row>
+  <cell>Winkler, Stephan</cell>
+  <cell/>
+  <cell> Komponisten Michael Beil(* 1963) das Produzententeam SKART, das se</cell>
+</row>
+<row>
+  <cell>Shaham, Gil</cell>
+  <cell/>
+  <cell>der Pianistin Orli Shaham(* 1975).</cell>
+</row>
+<row>
+  <cell>Lampersberg, Gerhard</cell>
+  <cell/>
+  <cell>erha, I. Eröd, Ernst Kölz(* 1929) oder A. Logothetis. Mit Konrad Ba</cell>
+</row>
+<row>
+  <cell>Klein, Juliane</cell>
+  <cell/>
+  <cell>sition bei Hermann Keller(* 1945) erhielt. 1984 bis 1989 studierte </cell>
+</row>
+<row>
+  <cell>Klein, Juliane</cell>
+  <cell/>
+  <cell>zusammen mit Thomas Bruns(* 1964) das Kammerensemble Neue Musik, Be</cell>
+</row>
+<row>
+  <cell>Vassallo, Paolino</cell>
+  <cell/>
+  <cell>d Josie Mallia Pulvirenti(* 1896). Vassallos drei an Massenet orien</cell>
+</row>
+<row>
+  <cell>Deep Purple</cell>
+  <cell/>
+  <cell>in der Besetzung Jon Lord(* 1941, Keyboards), Ian Gillan </cell>
+</row>
+<row>
+  <cell>Deep Purple</cell>
+  <cell/>
+  <cell>1, Keyboards), Ian Gillan(* 1945, Gsg.), Roger Glover </cell>
+</row>
+<row>
+  <cell>Deep Purple</cell>
+  <cell/>
+  <cell>1945, Gsg.), Roger Glover(* 1945, BGit.), Ritchie Blackmore </cell>
+</row>
+<row>
+  <cell>Deep Purple</cell>
+  <cell/>
+  <cell>BGit.), Ritchie Blackmore(* 1945, Git.) und Ian Paice </cell>
+</row>
+<row>
+  <cell>Deep Purple</cell>
+  <cell/>
+  <cell>1945, Git.) und Ian Paice(* 1948, Schlgz.) eine der stilprägenden F</cell>
+</row>
+<row>
+  <cell>Kurz, Ivan</cell>
+  <cell/>
+  <cell>ren u. a. Vladimír Wimmer(* 1960), Robert Hejnar </cell>
+</row>
+<row>
+  <cell>Kurz, Ivan</cell>
+  <cell/>
+  <cell> 1960), Robert Hejnar (* 1969), Michael Keprt </cell>
+</row>
+<row>
+  <cell>Kurz, Ivan</cell>
+  <cell/>
+  <cell> 1969), Michael Keprt (* 1972) und Michal Rataj </cell>
+</row>
+<row>
+  <cell>Kurz, Ivan</cell>
+  <cell/>
+  <cell> 1972) und Michal Rataj (* 1975). Kurz erhielt für seine Werke zah</cell>
+</row>
+<row>
+  <cell>Wolanek, Anton</cell>
+  <cell/>
+  <cell>Wolaneks Sohn Ferdinand (* 15. Jan. 1789 in Prag, Todesdaten unbek</cell>
+</row>
+<row>
+  <cell>Vlach</cell>
+  <cell/>
+  <cell> übernahm Jaroslav Motlík(* 1926) die Stelle des Bratschers, 1954 g</cell>
+</row>
+<row>
+  <cell>Kirchbaur, Alphons OSB</cell>
+  <cell/>
+  <cell>hweisbare David Kirchbaur(* 4. Juni 1655), der als Onkel von Alphon</cell>
+</row>
+<row>
+  <cell>þórarinsson, Jón</cell>
+  <cell/>
+  <cell>n) und Fjölnir Stefánsson(* 1930) gehörten. Daneben arbeitete þórar</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>1952 bis zur Gegenwart</cell>
+  <cell>8 von Operndir. Carl Riha(* 1923) nachdrücklich im Sinne des realis</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>1952 bis zur Gegenwart</cell>
+  <cell>eit waren Walter Stoschek(* 1912), Robert Satanowski (1928–1997), G</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>1952 bis zur Gegenwart</cell>
+  <cell> (1928–1997), Gert Bahner(* 1930), Gerhard Rolf Bauer, Christian Kl</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>1952 bis zur Gegenwart</cell>
+  <cell> Bauer, Christian Kluttig(* 1943), Alexander von Brück </cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>1952 bis zur Gegenwart</cell>
+  <cell>943), Alexander von Brück(* 1940) und Dieter-Gerhardt Worm </cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>1952 bis zur Gegenwart</cell>
+  <cell> und Dieter-Gerhardt Worm(* 1930). 1981 zum Generalmusikdirektor er</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>1952 bis zur Gegenwart</cell>
+  <cell>irektors Michael Heinicke(* 1950) mit Generalmusikdir. Heinz Fricke</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>1952 bis zur Gegenwart</cell>
+  <cell>1993 übernahm John Carewe(* 1933) die Leitung von Konzert und Oper.</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>1952 bis zur Gegenwart</cell>
+  <cell>Durch Oleg Caetani (* 1956), Sohn von Igor Markevitch, gelang</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>1952 bis zur Gegenwart</cell>
+  <cell>geleitet von John Mauceri(* 1945), statt. Caetanis Nachfolger, Nikš</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Chorwesen und Kirchenmusik seit dem 19. Jahrhundert</cell>
+  <cell>fort: Gustav Adolf Meinel(* 1871), Kantor an St. Markus, und Franz </cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Chorwesen und Kirchenmusik seit dem 19. Jahrhundert</cell>
+  <cell>mie, Bruno Oswald Bemmann(* 1859), Hugo Jochimsen </cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Chorwesen und Kirchenmusik seit dem 19. Jahrhundert</cell>
+  <cell> 1859), Hugo Jochimsen (* 1869) an der Schloßkirche, Georg Stolz </cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Chorwesen und Kirchenmusik seit dem 19. Jahrhundert</cell>
+  <cell>5–1979), Günther Reinhold(* 1945) und Siegfried Petri </cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Chorwesen und Kirchenmusik seit dem 19. Jahrhundert</cell>
+  <cell>1945) und Siegfried Petri(* 1963) wahrt die Schloßkirche auch als P</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Chorwesen und Kirchenmusik seit dem 19. Jahrhundert</cell>
+  <cell>musikdir. Günther Schmidt(* 1941), einstiger Thomaner in Leipzig un</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Chorwesen und Kirchenmusik seit dem 19. Jahrhundert</cell>
+  <cell>or Hans-Joachim Schwinger(* 1927), seinem Nachfolger Ullrich Böhme,</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Chorwesen und Kirchenmusik seit dem 19. Jahrhundert</cell>
+  <cell>pzig, und Steffen Walther(* 1963) die 1936 nach einem Entwurf von O</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Kompositorisches Schaffen seit dem 19. Jahrhundert</cell>
+  <cell>on früh: Gerd Natschinski(* 1928), der wohl erfolgreichste Repräsen</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Kompositorisches Schaffen seit dem 19. Jahrhundert</cell>
+  <cell>verließ, und Fr. Goldmann(* 1941), seit 1980 Leiter einer Meisterkl</cell>
+</row>
+<row>
+  <cell>Chemnitz</cell>
+  <cell>Kompositorisches Schaffen seit dem 19. Jahrhundert</cell>
+  <cell>1987) und Volkmar Leimert(* 1940).</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Audiovisuelle Konzepte</cell>
+  <cell>ten von Christina Kubisch(* 1948) und Rolf Julius </cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Audiovisuelle Konzepte</cell>
+  <cell> 1948) und Rolf Julius (* 1939): Kubisch kombiniert ihre Klänge v</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Audiovisuelle Konzepte</cell>
+  <cell>tionen von Tilman Küntzel(* 1959), Jutta Ravenna </cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Audiovisuelle Konzepte</cell>
+  <cell> 1959), Jutta Ravenna (* 1960) oder José Antonio Orts </cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Audiovisuelle Konzepte</cell>
+  <cell>0) oder José Antonio Orts(* 1955) sind visuelle und akustische Sign</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Echtzeitprozesse und Interaktivität</cell>
+  <cell>verlangt Manos Tsangaris’(* 1956) Installation Groß und Klein (1998</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Echtzeitprozesse und Interaktivität</cell>
+  <cell>h auch in Peter Ablingers(* 1959) Schaufensterstück (2004) aus der </cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Echtzeitprozesse und Interaktivität</cell>
+  <cell>lationen von Bruce Odland(* 1952) und Sam Auinger </cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Echtzeitprozesse und Interaktivität</cell>
+  <cell> 1952) und Sam Auinger (* 1956) im öffentlichen Raum zugrunde. Au</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Klangkunst als Klangforschung</cell>
+  <cell>nd Komponist Alvin Lucier(* 1931), der in seinen Installationen wie</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Klangkunst als Klangforschung</cell>
+  <cell>stem von Nicolas Collins’(* 1954) Pea Soup (1974) Rückkopplungen in</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Klangkunst als Klangforschung</cell>
+  <cell>nstlerin Maryanne Amacher(* 1943) ist der Raum und seine Bedeutung </cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Klangkunst als Klangforschung</cell>
+  <cell>ünstlers Bernhard Leitner(* 1938) sind hingegen die Bewegung des Kl</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Klangskulpturen und -objekte</cell>
+  <cell>ngkünstler Andreas Oldörp(* 1959) mit kleinen Gasflammen in senkrec</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Klangskulpturen und -objekte</cell>
+  <cell>spiele sind Ulrich Ellers(* 1953)  Im Kreis der Trommeln (1996) und</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Klangskulpturen und -objekte</cell>
+  <cell>jekte von Robert Jakobsen(* 1963) häufig an surrealistische Objekta</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Klangskulpturen und -objekte</cell>
+  <cell>ngkünstler wie Felix Hess(* 1941), Ron Kuivila </cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Klangskulpturen und -objekte</cell>
+  <cell> 1941), Ron Kuivila (* 1955) oder Ed Osborn </cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Klangskulpturen und -objekte</cell>
+  <cell> 1955) oder Ed Osborn (* 1964) vom interaktiven Charakter ihrer </cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Der öffentliche Raum</cell>
+  <cell>hren stellte Robin Minard(* 1953) mit seinen Klanginstallationen in</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Der öffentliche Raum</cell>
+  <cell>transferiert Bill Fontana(* 1947) ganze Klanglandschaften – 1987 ve</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Der öffentliche Raum</cell>
+  <cell>ionen von Hans Peter Kuhn(* 1952) im Außenraum. Kuhn markiert die v</cell>
+</row>
+<row>
+  <cell>Klangkunst</cell>
+  <cell>Der öffentliche Raum</cell>
+  <cell> weigert sich Georg Klein(* 1964), die Situation im urbanen Raum au</cell>
+</row>
+<row>
+  <cell>Revue</cell>
+  <cell>Revueformen nach 1945</cell>
+  <cell>en Tänzer Michael Flatley(* 1958) entstandenen Tanzshows Riverdance</cell>
+</row>
+<row>
+  <cell>Taiwan</cell>
+  <cell>Musikpflege seit dem Ende des 19. Jahrhunderts</cell>
+  <cell>ten, so z. B. Ma Shuilong(* 1939), Pan Huanglong </cell>
+</row>
+<row>
+  <cell>Taiwan</cell>
+  <cell>Musikpflege seit dem Ende des 19. Jahrhunderts</cell>
+  <cell> 1939), Pan Huanglong (* 1945), Ko Fan-Long (Ke Fan Long, * 1947</cell>
+</row>
+<row>
+  <cell>Taiwan</cell>
+  <cell>Musikpflege seit dem Ende des 19. Jahrhunderts</cell>
+  <cell>ang, * 1948) und Lai Dehe(* 1943).</cell>
+</row>
+<row>
+  <cell>Chinesisches Musiktheater</cell>
+  <cell>Neuzeit</cell>
+  <cell> 11) besonders Yu Zhenfei(* 1902) hervorzuheben. Der Stilunterschie</cell>
+</row>
+<row>
+  <cell>Chinesisches Musiktheater</cell>
+  <cell>Neuzeit</cell>
+  <cell>2P, Bd. 11), Zhang Junqiu(* 1920) und Yu Zhenfei. Nach einer Überga</cell>
+</row>
+</table>
+</body>
+</text>
+</TEI>
