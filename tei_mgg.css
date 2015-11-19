@@ -746,6 +746,14 @@ p[n]::before {
     content: attr(n) ". ";
     font-weight:bold;
 }
+
+quote > p:first-of-type {
+    display:inline;
+}
+quote>p:last-of-type {
+    display: inline;
+}
+
 pb {
   display: none;
 }

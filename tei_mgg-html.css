@@ -675,6 +675,13 @@ Label {
     font-style: normal !important;
     font-weight: bold;
     }
+    
+    .rilm-quote > .rilm-p:first-of-type {
+    display:inline;
+}
+.rilm-quote>.rilm-p:last-of-type {
+    display: inline;
+}
 .rilm-pb {
   display: none;
 }
