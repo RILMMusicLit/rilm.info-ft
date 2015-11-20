@@ -82,6 +82,6 @@ $('img').off('click');
     });
 }
 $(window).on('load', function() 
-{$(".optional").prepend("<p>Authors are not required to use the following tags:</p>");
+{$(".optional").prepend("<p class='center'>Authors are not required to use the following tags:</p>");
     
 });

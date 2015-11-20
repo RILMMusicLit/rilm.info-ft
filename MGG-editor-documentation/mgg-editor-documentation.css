@@ -95,6 +95,11 @@ h4 {
 .new {
 background-color: yellow;
 }
+p.center {
+    text-align:center;
+    font-style:italic;
+    background-color: yellow;
+}
 .screenshot {
     display: block;
     margin-left: 5em;
@@ -143,7 +148,7 @@ table, td, tr {
   width:0.4em;
   margin-right:0.5em;
   cursor:pointer;
-  );
+  
 }
 .toc li.collapsible img {
   margin-left: -1.3em;
