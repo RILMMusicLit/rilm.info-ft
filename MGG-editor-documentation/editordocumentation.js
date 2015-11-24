@@ -34,6 +34,18 @@ $(window).on('load', function()
 
     applyEventListeners();
     $(".indent-level-2 img").trigger('click');
+    
+    var lang = document.querySelector('body').getAttribute('lang');
+    var followingTags = '';
+    if (lang === 'en-US') 
+    {
+        followingTags = "<p class='center'>Authors are not required to use the following tags:</p>";
+    }
+    else if (lang === 'de-DE') 
+    {
+        followingTags = "<p class='center'>Die folgenden Auszeichnungen müssen Autoren nicht ausführen:</p>";
+    }
+    $(".optional").prepend(followingTags);
 });
 
 function applyEventListeners()
@@ -81,7 +93,3 @@ $('img').off('click');
         applyEventListeners();
     });
 }
-$(window).on('load', function() 
-{$(".optional").prepend("<p class='center'>Authors are not required to use the following tags:</p>");
-    
-});
