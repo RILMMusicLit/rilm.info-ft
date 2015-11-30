@@ -153,6 +153,8 @@ content: "*";
 }
 .rilm-cit.rilm-rend_block {
     display: block;
+    padding-left: 5em;
+    text-indent: 0;
 }
     
 .rilm-classCode {

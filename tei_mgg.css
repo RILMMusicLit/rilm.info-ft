@@ -145,6 +145,8 @@ cit {
 }
 cit[rend='block'] {
     display: block;
+    padding-left: 5em;
+    text-indent: 0;
 }
     
 classCode {
