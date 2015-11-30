@@ -143,6 +143,9 @@ change {
 cit {
   display: inline;
 }
+cit[rend='block'] {
+    display: block;
+}
     
 classCode {
   display: block;
