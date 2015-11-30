@@ -151,6 +151,9 @@ content: "*";
 .rilm-cit {
   display: inline;
 }
+.rilm-cit.rilm-rend_block {
+    display: block;
+}
     
 .rilm-classCode {
   display: block;
