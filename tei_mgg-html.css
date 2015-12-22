@@ -223,6 +223,10 @@ content: "†";
     text-indent:0;
 }
 
+.rilm-cell > .rilm-p {
+    text-indent: 0;
+}
+
 .rilm-div.rilm-type_family  .rilm-div.rilm-type_bio   .rilm-forename:first-of-type {
 font-weight: bold;
 }

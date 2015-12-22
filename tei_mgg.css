@@ -200,9 +200,9 @@ p[rend="block"] {
     margin-left:2em;
     text-indent:0;
 }
-/*div[type="heading"] > p {
-text-indent: 2em;
-}*/
+cell > p {
+    text-indent: 0;
+}
 
 div[type="family"] div[type="bio"] > forename:first-of-type {
 font-weight: bold;
