@@ -1045,7 +1045,10 @@ title[type='incipit']:before {
     content: open-quote;
     font-style: normal;
  }
- 
+ title[type='incipit']:after {
+    content: close-quote;
+    font-style: normal;
+}
 title[subtype="secondary"] {
     font-style:normal;
 }

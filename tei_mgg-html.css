@@ -970,6 +970,10 @@ font-style: normal;
     content: open-quote;
     font-style: normal;
  }
+ .rilm-title.rilm-type_incipit:after {
+  content: close-quote;
+font-style: normal;
+}
 
 .rilm-title.rilm-subtype_secondary {
     font-style:normal;
