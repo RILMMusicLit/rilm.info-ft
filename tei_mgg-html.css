@@ -962,6 +962,15 @@ font-style: normal;
     font-style:normal;
 }
 
+.rilm-title.rilm-type_incipit {
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+ }
+ 
+.rilm-title.rilm-type_incipit:before {
+    content: open-quote;
+    font-style: normal;
+ }
+
 .rilm-title.rilm-subtype_secondary {
     font-style:normal;
 }
