@@ -837,6 +837,9 @@ font-style: normal;
    color: inherit;
    background-color: #BBBBBB;
 }
+.rilm-row.rilm-rend_noborder {
+    border:none;
+}
 
 .rilm-rs {
   display: inline;

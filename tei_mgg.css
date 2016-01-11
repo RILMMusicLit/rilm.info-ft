@@ -911,6 +911,9 @@ row[role='label'] {
    color: inherit;
    background-color: #BBBBBB;
 }
+row[rend='noborder'] {
+    border:none;
+}
 
 rs {
   display: inline;
