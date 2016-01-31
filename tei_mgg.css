@@ -204,6 +204,10 @@ cell > p {
     text-indent: 0;
 }
 
+item > p {
+    text-indent: 0;
+}
+
 div[type="family"] div[type="bio"] > forename:first-of-type {
 font-weight: bold;
 }
@@ -744,7 +748,9 @@ orig {
 }
 p {
   display: block;
-  /*margin-bottom: 0.5em;*/
+}
+item > p {
+    display: inherit;
 }
 /*Added 2015-06-27:*/
 p[n]::before {

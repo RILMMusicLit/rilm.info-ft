@@ -226,6 +226,9 @@ content: "†";
 .rilm-cell > .rilm-p {
     text-indent: 0;
 }
+.rilm-item > .rilm-p {
+    text-indent: 0;
+}
 
 .rilm-div.rilm-type_family  .rilm-div.rilm-type_bio   .rilm-forename:first-of-type {
 font-weight: bold;
@@ -677,8 +680,11 @@ Label {
 .rilm-p {
   display: block;
   /*margin-bottom: 0.5em;*/
-  
 }
+.rilm-item > .rilm-p {
+    display: inherit;
+}
+
   .rilm-p.rilm-n::before {
     content: attr(data-rilm-n) ". " !important;
     font-style: normal !important;
