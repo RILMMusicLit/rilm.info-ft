@@ -134,14 +134,22 @@ content: "*";
 .rilm-cell {
   display: table-cell;
   border: 1px solid #EEEFEE;
-  padding: 3px;
+  border-bottom:none;
+  padding: .5em 1em .5em 1em;
   color: inherit;
   text-align:left;
+  text-indent: 0 !important;
   background-color:inherit;
 }
 .rilm-cell.rilm-role_label {
    color: inherit;
    background-color: #BBBBBB;
+}
+.rilm-row.rilm-rend_noborder > .rilm-cell {
+    border-right: 1px solid #EEEFEE;
+    border-top: none;
+    border-left: 1px solid #EEEFEE;
+    border-bottom: none;
 }
 .rilm-change {
   display: block;
@@ -843,9 +851,7 @@ font-style: normal;
    color: inherit;
    background-color: #BBBBBB;
 }
-.rilm-row.rilm-rend_noborder {
-    border:none;
-}
+
 
 .rilm-rs {
   display: inline;
@@ -931,6 +937,7 @@ font-style: normal;
   text-align: center;
   display: table;
   margin: 1em
+   border: 1px solid #EEEFEE;
 }
 .rilm-table   .rilm-head{
     display:table-caption;
