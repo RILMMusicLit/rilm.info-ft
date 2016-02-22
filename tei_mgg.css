@@ -540,7 +540,7 @@ item[n]:before {
      when there is an @n attribute? --DRS */
  
 div[type='works']  list item + item:before,  div[type='ography']  list item + item:before{
-     content: "\25A0  \0020 ";
+     content: "\0020\25A0\0020";
  }
 
 p item {
@@ -870,7 +870,7 @@ ref {
   color: blue;
   background-color: inherit;
 }
-ref[target*="mgg"]:before{
+ref[target*="document"]:before{
 content: "→ ";
 }
 

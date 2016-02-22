@@ -507,7 +507,7 @@ color: inherit;
 }
  
 .rilm-div.rilm-type_works   .rilm-list .rilm-item + .rilm-item:before,   .rilm-div.rilm-type_ography   .rilm-list .rilm-item + .rilm-item:before{
-     content: " \25A0  \0020 ";
+     content: "\0020\25A0\0020";
  }
 
  
@@ -802,7 +802,7 @@ font-style: normal;
   color: blue;
   background-color: inherit;
 }
-.rilm-ref[data-rilm-target*="mgg"]:before {
+.rilm-ref[data-rilm-target*="document"]:before {
     content: "→ ";
 }
 
