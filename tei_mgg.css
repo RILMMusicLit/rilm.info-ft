@@ -126,14 +126,23 @@ catRef {
 cell {
   display: table-cell;
   border: 1px solid #EEEFEE;
-  padding: 3px;
+  border-bottom:none;
+  padding: .5em 1em .5em 1em;
   color: inherit;
   text-align:left;
+  text-indent: 0 !important;
   background-color:inherit;
 }
 cell[role='label'] {
    color: inherit;
    background-color: #BBBBBB;
+}
+
+row[rend='noborder'] > cell {
+    border-right: 1px solid #EEEFEE;
+    border-top: none;
+    border-left: 1px solid #EEEFEE;
+    border-bottom: none;
 }
 change {
   display: block;
@@ -200,7 +209,8 @@ p[rend="block"] {
     margin-left:2em;
     text-indent:0;
 }
-cell > p {
+
+item > p {
     text-indent: 0;
 }
 
@@ -744,7 +754,9 @@ orig {
 }
 p {
   display: block;
-  /*margin-bottom: 0.5em;*/
+}
+item > p {
+    display: inherit;
 }
 /*Added 2015-06-27:*/
 p[n]::before {
@@ -911,9 +923,6 @@ row[role='label'] {
    color: inherit;
    background-color: #BBBBBB;
 }
-row[rend='noborder'] {
-    border:none;
-}
 
 rs {
   display: inline;
@@ -999,7 +1008,8 @@ div[type="person"] p[n]>rilmPerson>persName>surname {
 table {
   text-align: center;
   display: table;
-  margin: 1em
+  margin: 1em;
+  border: 1px solid #EEEFEE;
 }
 table > head{
     display:table-caption;
