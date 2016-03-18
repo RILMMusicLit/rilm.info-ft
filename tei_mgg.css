@@ -392,11 +392,7 @@ div[type="person"] p[n]>rilmPerson>persName>forename {
     font-weight:bold;
     font-style:normal;
 }
-/*Added 2015-06-27:*/
- persName[type='alt']>forename {
-    font-style: italic !important;
-    font-weight: normal !important;
-}
+
 formula {
   display: inline;
   font-style: italic;
@@ -782,7 +778,10 @@ pb:after {
   margin-top: 1em;
   text-align: center;
 }
-
+ persName[type='alt'] {
+    font-style: italic !important;
+    font-weight: normal !important;
+}
 
 principal {
   display: block;

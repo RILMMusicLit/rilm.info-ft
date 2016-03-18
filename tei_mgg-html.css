@@ -217,10 +217,6 @@ content: "†";
     font-weight:bold;
     font-style:normal;
 }
- .rilm-persName.rilm-type_alt>.rilm-forename {
-    font-style: italic !important;
-    font-weight: normal !important;
-}
 
 .rilm-p {
     text-indent: 2em;
@@ -716,7 +712,12 @@ Label {
   margin-top: 1em;
   text-align: center;
 }
-    
+ 
+  .rilm-persName.rilm-type_alt {
+    font-style: italic !important;
+    font-weight: normal !important;
+}
+
 .rilm-principal {
   display: block;
   margin-bottom: 0.5em;
