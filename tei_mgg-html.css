@@ -77,10 +77,15 @@ div.rilm-nodename-div, div.rilm-nodename-p{
 .rilm-att:before {
   content: "@";
 }
-.rilm-author {
+.rilm-bibl   .rilm-author {
   display: inline;
   font-variant: small-caps;
+  
 }
+
+.rilm-bibl .rilm-author.rilm-subtype_secondary {
+	font-variant:normal;
+}  
     
 .rilm-back {
   display: block;
@@ -629,11 +634,6 @@ Label {
   display: inline;
   text-transform: uppercase;
   font-size: smaller;
-}
-.rilm-bibl   .rilm-author {
-  display: inline;
-  font-variant: small-caps;
-  
 }
 .rilm-note {
   display: inherit;

@@ -72,6 +72,14 @@ author {
   display: inline;
   font-variant: small-caps;
 }
+bibl > author {
+  display: inline;
+  font-variant: small-caps;
+  
+}
+bibl > author[subtype='secondary'] {
+	font-variant:normal;
+}
     
 back {
   display: block;
@@ -692,11 +700,7 @@ docAuthor > name {
   text-transform: uppercase;
   font-size: smaller;
 }
-bibl > author {
-  display: inline;
-  font-variant: small-caps;
-  
-}
+
 note {
   display: inherit;
     font-style:normal;
