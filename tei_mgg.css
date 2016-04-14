@@ -375,12 +375,7 @@ extent {
 bibl extent {
   display: inline;
 }
- 
-graphic{
-    color: gray;
-    background-color: inherit;
-    content: "{" attr(url) "}";    
-}
+
 figure, notatedMusic, tableFigure {
   display: block;
   margin-bottom: 1em;
@@ -442,6 +437,12 @@ tag:after,gi:after {
 gloss {
   display: inline;
 }
+graphic{
+    color: gray;
+    background-color: inherit;
+    content: "{" attr(url) "}";    
+}
+
 group {
   display: block;
   margin-bottom: 1em;

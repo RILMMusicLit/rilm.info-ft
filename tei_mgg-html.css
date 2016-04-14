@@ -392,6 +392,14 @@ padding: 10px;
     transform:scale(0.5);*/
 }
 
+.rilm-formula > .rilm-graphic {
+	display: inline;
+	border: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	text-indent:0;
+}
+
 .rilm-p > img {
 height: 1em;
 width: auto;
@@ -401,6 +409,11 @@ margin: 0 0 0 0;
 padding: 0 0 0 .5em;
 color: inherit;
 }
+.rilm-formula > img {
+	height: 1em;
+	color: inherit;
+}
+
 
 .rilm-figure, .rilm-notatedMusic, .rilm-tableFigure {
   display: block;
