@@ -80,6 +80,9 @@ div.rilm-nodename-div, div.rilm-nodename-p{
 .rilm-bibl   .rilm-author {
   display: inline;
   font-variant: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
   
 }
 
@@ -121,7 +124,7 @@ content: "*";
   margin-left: 10px;
   display: block;
   font-family: 'times new roman', 'Bravura Text', serif;
-  /*font-family: roman, 'times new roman', times, serif; */
+  font-variant-numeric: oldstyle-nums;
 
 }
 .rilm-byline {
@@ -343,6 +346,9 @@ font-weight: bold;
 
 .rilm-bibl  .rilm-editor.rilm-subtype_primary {
       font-variant: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
 }
 
     
@@ -1256,9 +1262,15 @@ font-style: normal
 
 .rilm-text.rilm-type_family   .rilm-list   .rilm-head {
     font-variant: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
 }
 .rilm-list   .rilm-head {
     font-variant: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
 }
 
 .rilm-figure .rilm-head, .rilm-figure .rilm-p, .rilm-notatedMusic .rilm-head, .rilm-notatedMusic .rilm-p, .rilm-tableFigure .rilm-head, .rilm-tableFigure .rilm-p {
@@ -1315,6 +1327,9 @@ font-style: normal
 *.rilm-rend_smallcaps {
   display: inline;
   font-variant: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
   font-style: inherit;
 }
 *.rilm-rend_sup {
