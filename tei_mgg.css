@@ -70,11 +70,17 @@ att:before {
 }
 author {
   display: inline;
-  font-variant: small-caps;
+  font-variant-caps: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
 }
 bibl > author {
   display: inline;
-  font-variant: small-caps;
+   font-variant-caps: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
   
 }
 bibl > author[subtype='secondary'] {
@@ -116,6 +122,7 @@ body {
   margin-left: 10px;
   display: block;
   font-family: 'times new roman', FreeSerif, 'Bravura Text', serif;
+  font-variant-numeric:lining-nums;
   /*font-family: roman, 'times new roman', times, serif; */
 
 }
@@ -340,7 +347,10 @@ bibl editor {
 }
 
 bibl editor[subtype="primary"]  {
-      font-variant: small-caps;
+       font-variant-caps: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
 }
 
     
@@ -473,7 +483,10 @@ group {
 }
 *[rend="smallcaps"] {
   display: inline;
-  font-variant: small-caps;
+   font-variant-caps: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
   font-style: inherit;
 }
 *[rend="sup"] {
@@ -1313,10 +1326,16 @@ div[type='heading'] p persName[type='alt'] > surname, div[type='heading'] p pers
 
 
 text[type='family']  list > head {
-    font-variant: small-caps;
+    font-variant-caps: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
 }
 list > head {
-    font-variant: small-caps;
+     font-variant-caps: small-caps;
+-moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
 }
 docAuthor {
     text-transform:uppercase
