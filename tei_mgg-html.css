@@ -136,8 +136,9 @@ content: "*";
   margin-left: 10px;
   display: block;
  font-size:.90em;
-  font-family: 'Fedra Serif A Book', 'Bravura Text', Unifont, monospace, sans-serif;
+  font-family: 'Fedra Serif A', 'Bravura Text', Unifont, monospace, sans-serif;
   font-variant-numeric: oldstyle-nums;
+  font-feature-settings: "onum";
 
 }
 .rilm-byline {
