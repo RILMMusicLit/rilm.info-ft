@@ -14,6 +14,7 @@ $LastChangedDate$, $LastChangedRevision$, $LastChangedBy$
 ============================================================= */
 /* Use Times New Roman for default font test */
 
+
 div{
 	display: inline;
 	margin: 0px;
@@ -38,6 +39,12 @@ div.rilm-nodename-div, div.rilm-nodename-p{
 @font-face {
     font-family: FreeSerif;
     src: url('http://rilm.info/ft/FreeSerif.woff') format('woff')
+}
+
+@font-face {
+    font-family: Skolar;
+    src: url('http://rilm.info/ft/SkolarPETEST-Regular.woff') format('woff');
+    src: url('http://rilm.info/ft/SkolarPETEST-Italic.woff') format('woff');
 }
 
 * {
