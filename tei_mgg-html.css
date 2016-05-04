@@ -44,7 +44,13 @@ div.rilm-nodename-div, div.rilm-nodename-p{
 @font-face {
     font-family: Skolar;
     src: url('http://rilm.info/ft/SkolarPETEST-Regular.woff') format('woff');
-    src: url('http://rilm.info/ft/SkolarPETEST-Italic.woff') format('woff');
+    
+}
+
+@font-face {
+font-family: Skolar;
+src: url('http://rilm.info/ft/SkolarPETEST-Italic.woff') format('woff');
+font-style: italic;
 }
 
 * {
@@ -135,15 +141,15 @@ content: "*";
   margin-top: 5px;
   margin-left: 10px;
   display: block;
- font-size:.90em;
-  font-family: 'Fedra Serif A', 'Bravura Text', Unifont, monospace, sans-serif;
+ font-size: 1em;
+  font-family: 'Skolar PE TEST', 'Bravura Text', Unifont, monospace, sans-serif;
   font-variant-numeric: oldstyle-nums;
   font-feature-settings: "onum";
 
 }
 .rilm-byline {
   display: block;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
   margin-bottom: 0.5em;
 }
 .rilm-category {
@@ -297,7 +303,7 @@ font-weight: bold;
 
 .rilm-div.rilm-type_section > .rilm-head > .rilm-div {
     display: block;
-     font-family: 'Fedra Serif A Book Italic';
+     font-style: italic;
     text-indent: 2em;
     padding-top: 1em;
 }
@@ -381,7 +387,7 @@ font-feature-settings: "smcp";
     
 .rilm-emph {
   display: inline;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
 }
 .rilm-epigraph {
   display: block;
@@ -446,11 +452,11 @@ color: inherit;
 
 .rilm-foreign {
   display: inline;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
 }
 .rilm-formula {
   display: inline;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
 }
 .rilm-front {
   display: block;
@@ -568,7 +574,7 @@ color: inherit;
 }
 .rilm-kw {
   display: inline;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
 }
 .rilm-l {
   display: block;
@@ -655,7 +661,7 @@ Label {
 }
 .rilm-mentioned {
   display: inline;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
 }
 .rilm-milestone {
   display: none;
@@ -832,7 +838,7 @@ font-style: normal;
 }
  .rilm-quote {
      display:inline;
-      font-family: 'Fedra Serif A Book Italic';
+      font-style: italic;
      quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
  }
  
@@ -856,7 +862,7 @@ font-style: normal;
 
 .rilm-reg {
   display: inline;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
 }
 .rilm-rendition {
   display: block;
@@ -951,7 +957,7 @@ font-style: normal;
 }
 .rilm-stage {
   display: inline;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
 }
 .rilm-rilmPerson.rilm-n>.rilm-persName>.rilm-surname {
     font-weight:bold;
@@ -975,7 +981,7 @@ font-style: normal;
 }
 .rilm-table   .rilm-head{
     display:table-caption;
-     font-family: 'Fedra Serif A Book Italic';
+     font-style: italic;
     margin-bottom: 6pt;
 }
 
@@ -1002,7 +1008,7 @@ font-style: normal;
 }
 .rilm-title {
   display: inline;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
 }
 .rilm-title.rilm-type_generic {
     font-style: normal;
@@ -1056,7 +1062,7 @@ font-style: normal;
   display: inline;
   color: silver;
   background-color: inherit;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
 }
 /* header-related material */
 .rilm-teiHeader {
@@ -1258,7 +1264,7 @@ Screen {
 }
 
 .rilm-orgName.rilm-type_performing {
-     font-family: 'Fedra Serif A Book Italic';
+     font-style: italic;
 }
 .rilm-orgName.rilm-type_trans {
     font-style: normal;
@@ -1269,7 +1275,7 @@ font-style: normal
 }
 
 .rilm-div.rilm-type_heading  .rilm-p  .rilm-persName.rilm-type_alt   .rilm-surname,  .rilm-div.rilm-type_heading  .rilm-p  .rilm-persName.rilm-type_alt   .rilm-forename {
-     font-family: 'Fedra Serif A Book Italic';
+     font-style: italic;
     font-weight: normal;
 }
 
@@ -1298,17 +1304,17 @@ font-feature-settings: "smcp";
 
 .rilm-figure, .rilm-notatedMusic, .rilm-tableFigure{
     margin: 2em 0em 2em 2em;
-     font-family: 'Fedra Serif A Book Italic';
+     font-style: italic;
     
 }
 .rilm-teiHeader {
     display:none
 }
 .rilm-pitch {
-    font-family: 'Fedra Serif A Book Italic';
+    font-style: italic;
 }
 .rilm-musNote {
-     font-family: 'Fedra Serif A Book Italic';
+     font-style: italic;
 }
 .rilm-titleStmt   .rilm-title {
     display:block   
@@ -1322,7 +1328,7 @@ font-feature-settings: "smcp";
 }
 *.rilm-rend_italic {
   display: inline;
-   font-family: 'Fedra Serif A Book Italic';
+   font-style: italic;
 }
  *.rilm-rend_roman {
   display:inline;
@@ -1358,7 +1364,7 @@ font-feature-settings: "smcp";
 }
 *.rilm-rend_quoted-italic {
     display: inline;
-     font-family: 'Fedra Serif A Book Italic';
+     font-style: italic;
     
      quotes: "»\200A" "\200A«"  "›\200A" "\200A‹";
  }
