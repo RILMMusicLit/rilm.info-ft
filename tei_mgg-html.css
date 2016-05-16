@@ -14,7 +14,6 @@ $LastChangedDate$, $LastChangedRevision$, $LastChangedBy$
 ============================================================= */
 /* Use Times New Roman for default font test */
 
-
 div{
 	display: inline;
 	margin: 0px;
@@ -44,7 +43,6 @@ div.rilm-nodename-div, div.rilm-nodename-p{
 @font-face {
     font-family: Skolar;
     src: url('http://rilm.info/ft/SkolarPETEST-Regular.woff') format('woff');
-    
 }
 
 @font-face {
@@ -52,6 +50,8 @@ font-family: Skolar;
 src: url('http://rilm.info/ft/SkolarPETEST-Italic.woff') format('woff');
 font-style: italic;
 }
+
+
 
 * {
     line-height: 1.75em;
@@ -98,11 +98,17 @@ font-style: italic;
 .rilm-bibl   .rilm-author {
   display: inline;
   font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
-  
+  } 
+  @supports(font-feature-settings: 'smcp') {
+    .rilm-bibl .rilm-author {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
 }
+
+  
 
 .rilm-bibl .rilm-author.rilm-subtype_secondary {
 	font-variant:normal;
@@ -241,7 +247,7 @@ content: "†";
     font-style:normal;
 }
 
-.rilm-div.rilm-type_person .rilm-p.rilm-n>.rilm-rilmPerson>.rilm-persName>.rilm-forename {
+.rilm-div.rilm-type_person .rilm-p.rilm-n>.rilm-rilmPerson:first-of-type>.rilm-persName>.rilm-forename {
     font-weight:bold;
     font-style:normal;
 }
@@ -279,20 +285,20 @@ font-weight: bold;
 
 
 .rilm-div.rilm-type_ography > .rilm-head {
-     text-transform: uppercase;
+    text-transform: uppercase;
     font-weight: bold;
     text-indent: inherit;
     display:block;
-        padding-top:1em;
-        font-size:.92em;
+    padding-top:1em;
+    font-size:.92em;
 }
 .rilm-div.rilm-type_works > .rilm-head {
     font-weight: bold;
     display: block;
     text-indent: 2em;
-     text-transform: uppercase;
-      padding-top:1em;
-        font-size:.92em;
+    text-transform: uppercase;
+    padding-top:1em;
+    font-size:.92em;
 }
 
 .rilm-div.rilm-type_section > .rilm-head {
@@ -366,10 +372,16 @@ font-weight: bold;
 
 .rilm-bibl  .rilm-editor.rilm-subtype_primary {
       font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
+      }
+        @supports(font-feature-settings: 'smcp') {
+    .rilm-bibl  .rilm-editor.rilm-subtype_primary {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
 }
+
 
     
 .rilm-eg {
@@ -964,7 +976,7 @@ font-style: normal;
     font-style:normal;
 }
 
-.rilm-div.rilm-type_person .rilm-p.rilm-n>.rilm-rilmPerson>.rilm-persName>.rilm-surname {
+.rilm-div.rilm-type_person .rilm-p.rilm-n>.rilm-rilmPerson:first-of-type>.rilm-persName>.rilm-surname {
     font-weight:bold;
     font-style:normal;
 }
@@ -1281,16 +1293,27 @@ font-style: normal
 
 
 .rilm-text.rilm-type_family   .rilm-list   .rilm-head {
-    font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
+    font-variant-caps: small-caps;
 }
+  @supports(font-feature-settings: 'smcp') {
+    .rilm-text.rilm-type_family   .rilm-list   .rilm-head {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
+}
+
 .rilm-list   .rilm-head {
     font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
+}
+  @supports(font-feature-settings: 'smcp') {
+    .rilm-list   .rilm-head {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
 }
 
 .rilm-figure .rilm-head, .rilm-figure .rilm-p, .rilm-notatedMusic .rilm-head, .rilm-notatedMusic .rilm-p, .rilm-tableFigure .rilm-head, .rilm-tableFigure .rilm-p {
@@ -1347,11 +1370,17 @@ font-feature-settings: "smcp";
 *.rilm-rend_smallcaps {
   display: inline;
   font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
   font-style: inherit;
 }
+  @supports(font-feature-settings: 'smcp') {
+    .rilm-rend_smallcaps {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+-webkit-font-feature-settings: "smcp";
+font-feature-settings: "smcp";
+    }
+}
+
 *.rilm-rend_sup {
   display: inline;
   vertical-align: super;
@@ -1377,4 +1406,3 @@ font-style: normal;
      content: close-quote;
 font-style: normal;
  }
-

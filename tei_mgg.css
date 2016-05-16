@@ -402,7 +402,7 @@ rilmPerson[n]>persName>forename {
     font-style:normal;
 }
 /*Added 2015-06-27:*/
-div[type="person"] p[n]>rilmPerson>persName>forename {
+div[type="person"] p[n]>rilmPerson:first-of-type>persName>forename {
     font-weight:bold;
     font-style:normal;
 }
@@ -1014,7 +1014,7 @@ rilmPerson[n]>persName>surname {
     font-style:normal;
 }
 /*Added 2015-06-27:*/
-div[type="person"] p[n]>rilmPerson>persName>surname {
+div[type="person"] p[n]>rilmPerson:first-of-type>persName>surname {
     font-weight:bold;
     font-style:normal;
 }
