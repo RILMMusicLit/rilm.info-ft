@@ -71,19 +71,27 @@ att:before {
 author {
   display: inline;
   font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
+}
+        @supports(font-feature-settings: 'smcp') {
+    author {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
 }
 bibl > author {
   display: inline;
    font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
- 
 }
-
+        @supports(font-feature-settings: 'smcp') {
+    bibl > author {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
+}
 bibl > author[subtype='secondary'] {
 	font-variant:normal;
 }
@@ -253,6 +261,13 @@ div[type="contents"] > head {
     font-size: smaller;
     font-weight: bold;
 }
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    div[type="contents"] > head  {      
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
 div[type="contents"] > list > item {
     display: block;
 }
@@ -265,6 +280,13 @@ div[type="ography"] > head {
     padding-top:1em;
     font-size:.92em;
 }
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    div[type="ography"] > head  {      
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
 div[type="works"] > head {
     font-weight: bold;
     display: block;
@@ -273,7 +295,13 @@ div[type="works"] > head {
        padding-top:1em;
         font-size:.92em;
 }
-
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    div[type="works"] > head  {      
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
 div[type="section"] > head {
     display: block;
     font-weight: 600;
@@ -349,9 +377,14 @@ bibl editor {
 
 bibl editor[subtype="primary"]  {
        font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
+}
+        @supports(font-feature-settings: 'smcp') {
+    bibl editor[subtype="primary"] {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
 }
 
     
@@ -482,13 +515,25 @@ group {
   display: inline;
   text-transform: uppercase;
 }
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    *[rend="uppercase"]  {      
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
 *[rend="smallcaps"] {
   display: inline;
    font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
   font-style: inherit;
+}
+        @supports(font-feature-settings: 'smcp') {
+    *[rend="smallcaps"] {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
 }
 *[rend="sup"] {
   display: inline;
@@ -715,7 +760,13 @@ docAuthor > name {
   text-transform: uppercase;
   font-size: smaller;
 }
-
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    docAuthor > name  {      
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
 note {
   display: inherit;
     font-style:normal;
@@ -1328,20 +1379,36 @@ div[type='heading'] p persName[type='alt'] > surname, div[type='heading'] p pers
 
 text[type='family']  list > head {
     font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
+}
+        @supports(font-feature-settings: 'smcp') {
+    text[type='family']  list > head {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
 }
 list > head {
      font-variant: small-caps;
--moz-font-feature-settings: "smcp";
--webkit-font-feature-settings: "smcp";
-font-feature-settings: "smcp";
+}
+        @supports(font-feature-settings: 'smcp') {
+    list > head {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
 }
 docAuthor {
     text-transform:uppercase
 }
-
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    docAuthor  {      
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
 figure, notatedMusic, tableFigure{
     margin: 2em 0em 2em 2em;
     font-style: italic;

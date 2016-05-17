@@ -18,41 +18,29 @@ div{
 	display: inline;
 	margin: 0px;
 }
-
 div.rilm-nodename-div, div.rilm-nodename-p{
 	clear:both;
 	display:block;
 	margin: 10px 0 10px 0;
 	
 }
-
-@font-face {
-
-}
-
 @font-face {
   font-family: 'Bravura Text';
   src: url('http://rilm.info/ft/BravuraText.woff') format('woff') /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
 @font-face {
     font-family: FreeSerif;
     src: url('http://rilm.info/ft/FreeSerif.woff') format('woff')
 }
-
 @font-face {
     font-family: Skolar;
     src: url('http://rilm.info/ft/SkolarPETEST-Regular.woff') format('woff');
 }
-
 @font-face {
 font-family: Skolar;
 src: url('http://rilm.info/ft/SkolarPETEST-Italic.woff') format('woff');
 font-style: italic;
 }
-
-
-
 * {
     line-height: 1.75em;
 }
@@ -107,13 +95,9 @@ font-style: italic;
         font-feature-settings: "smcp";
     }
 }
-
-  
-
 .rilm-bibl .rilm-author.rilm-subtype_secondary {
 	font-variant:normal;
-}  
-    
+}     
 .rilm-back {
   display: block;
   border: thin black solid;
@@ -280,9 +264,7 @@ font-weight: bold;
     display: block;
     margin-bottom: .25em;
     font-weight: bold;
-
 }
-
 
 .rilm-div.rilm-type_ography > .rilm-head {
     text-transform: uppercase;
@@ -292,6 +274,15 @@ font-weight: bold;
     padding-top:1em;
     font-size:.92em;
 }
+
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    .rilm-div.rilm-type_ography > .rilm-head  {      
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
+
 .rilm-div.rilm-type_works > .rilm-head {
     font-weight: bold;
     display: block;
@@ -300,6 +291,15 @@ font-weight: bold;
     padding-top:1em;
     font-size:.92em;
 }
+
+        @supports(font-feature-settings: 'case', 'cpsp') {
+ .rilm-div.rilm-type_works > .rilm-head {      
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
+
 
 .rilm-div.rilm-type_section > .rilm-head {
     display: block;
@@ -341,13 +341,18 @@ font-weight: bold;
     text-transform: uppercase;
 
 }
-    
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    .rilm-docAuthor {   
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
+   
 .rilm-byline  .rilm-docAuthor {
   display: inline;
-  
 }
-    
-    
+     
 .rilm-edition {
   display: block;
   margin-bottom: 0.5em;
@@ -452,7 +457,6 @@ color: inherit;
 	color: inherit;
 }
 
-
 .rilm-figure, .rilm-notatedMusic, .rilm-tableFigure {
   display: block;
   /*max-width:70%;*/
@@ -513,9 +517,6 @@ color: inherit;
   display: block;
   margin-bottom: 1em;
 }
-
-    
-
 
 .rilm-ident {
   display: inline;
@@ -641,6 +642,13 @@ Label {
     font-size: smaller;
     font-weight: bold;
 }
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    .rilm-div.rilm-type_contents   .rilm-head {       
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
     
 .rilm-list.rilm-rend_runon {
   display: inline;
@@ -686,6 +694,14 @@ Label {
   text-transform: uppercase;
   font-size: smaller;
 }
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    .rilm-docAuthor   .rilm-name {      
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
+
 .rilm-note {
   display: inherit;
 }
@@ -1323,6 +1339,13 @@ font-style: normal
     text-transform:uppercase;
     font-size: .85em;
     font-weight: bold;
+}    
+      @supports(font-feature-settings: 'case', 'cpsp', 'smcp') {
+      .rilm-docAuthor {}
+        -moz-font-feature-settings: "case", "case", "cpsp";
+        -webkit-font-feature-settings: "case", "case", "cpsp";
+        font-feature-settings: 'case', 'cpsp', "case", "cpsp";
+        }
 }
 
 .rilm-figure, .rilm-notatedMusic, .rilm-tableFigure{
@@ -1367,6 +1390,13 @@ font-style: normal
   display: inline;
   text-transform: uppercase;
 }
+        @supports(font-feature-settings: 'case', 'cpsp') {
+    *.rilm-rend_uppercase {     
+        -moz-font-feature-settings: "case", "cpsp";
+        -webkit-font-feature-settings: "case", "cpsp";
+        font-feature-settings: "case", "cpsp";
+    }
+}
 *.rilm-rend_smallcaps {
   display: inline;
   font-variant: small-caps;
@@ -1393,8 +1423,7 @@ font-feature-settings: "smcp";
 }
 *.rilm-rend_quoted-italic {
     display: inline;
-     font-style: italic;
-    
+     font-style: italic;  
      quotes: "»\200A" "\200A«"  "›\200A" "\200A‹";
  }
  
