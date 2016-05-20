@@ -933,41 +933,17 @@ font-style: normal;
    background-color: #BBBBBB;
 }
 
-
 .rilm-rs {
   display: inline;
 }
 .rilm-s {
   display: inline;
 }
-.rilm-salute {
-  display: block;
-  margin-bottom: 0.5em;
-}
-.rilm-samplingDecl {
-  display: block;
-  margin-bottom: 1em;
-}
+
 .rilm-seg {
   display: inline;
 }
-.rilm-seriesStmt {
-  display: block;
-  margin-bottom: 1em;
-}
-.rilm-sic {
-  display: inline;
-  color: red;
-  background-color: inherit;
-}
     
-.rilm-sic:after {
-  content: " .rilm-sic";
-}
-.rilm-signed {
-  display: block;
-  text-align: right;
-}
 .rilm-soCalled {
   display: inline;
   quotes: '›\200A' '\200A‹';
@@ -983,23 +959,6 @@ font-style: normal;
 font-style: normal;
 }
     
-.rilm-sp {
-  display: block;
-  margin-bottom: 0.5em;
-  margin-left: 2em;
-}
-.rilm-speaker {
-  display: inline;
-  font-weight: bold;
-}
-.rilm-sponsor {
-  display: block;
-  margin-bottom: 0.5em;
-}
-.rilm-stage {
-  display: inline;
-   font-style: italic;
-}
 .rilm-rilmPerson.rilm-n>.rilm-persName>.rilm-surname {
     font-weight:bold;
     font-style:normal;
@@ -1026,27 +985,14 @@ font-style: normal;
     margin-bottom: 6pt;
 }
 
-.rilm-tagUsage {
-  display: block;
-  margin-bottom: 0.5em;
-}
-.rilm-taxonomy {
-  display: block;
-  margin-bottom: 0.5em;
-}
+
 .rilm-term {
   font-family: sans-serif;
   color: blue;
   background-color: inherit;
   display: inline;
 }
-.rilm-textClass {
-  display: block;
-  margin-bottom: 0.5em;
-}
-.rilm-time {
-  display: inline;
-}
+
 .rilm-title {
   display: inline;
    font-style: italic;
@@ -1076,35 +1022,7 @@ font-style: normal;
     font-style:normal;
 }
  
-.rilm-titlePage {
-  display: block;
-  border: thin black solid;
-  margin-bottom: 2em;
-  text-align: center;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 1em;
-}
-.rilm-titlePart {
-  display: block;
-}
-.rilm-titleStmt {
-  font-size: large;
-  font-weight: bold;
-  margin-bottom: 1em;
-  text-align: center;
-}
-.rilm-trailer {
-  display: block;
-  margin-bottom: 1em;
-}
-.rilm-unclear {
-  display: inline;
-  color: silver;
-  background-color: inherit;
-   font-style: italic;
-}
+
 /* header-related material */
 .rilm-teiHeader {
   display: block;
@@ -1223,77 +1141,6 @@ font-style: normal;
 }
 
 
-/* OUCS additions */
-Button {
-	  font-family: monospace;
-	  color: red;
-	  font-weight: bold;
-	  background-color: rgb(75%,75%,75%)
-	  }
-Value {
-	  font-family: monospace;
-	  color: rgb(255, 102, 0);
-	  background-color: inherit;
-	  }
-Code {
-	  font-family: monospace;
-	  color: red;
-	  background-color: inherit;
-	  }
-Field {
-	   font-family: monospace;
-	   color: red;
-	   background-color: inherit;
-	   }
-Filespec {
-	      font-family: monospace;
-	      color: red;
-	      background-color: inherit;
-	      }
-Input {
-	   font-family: monospace;
-	   color: green;
-	   background-color: inherit;
-	   }
-Key {
-	 font-family: monospace;
-         text-decoration: underline;
-	 color: green;
-	 background-color: inherit;
-	 }
-Link {
-	  font-family: monospace;
-	  color: green;
-	  background-color: inherit;
-	  text-decoration: underline;
-	  }
-Menu {
-	  font-family: monospace;
-	  color: red;
-	  background-color: inherit;
-	  }
-Output {
-	    font-family: monospace;
-	    color: red;
-	    background-color: inherit;
-	    }
-Icon {
-	color: inherit;
-	background-color : #B0E0E6;
-	font-weight : bold;
-}
-Screen {
-  font-family: monospace;
-  padding-top: 3mm;
-  padding-left: 4pt;
-  padding-bottom: 2pt;
-  display: block;
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-  white-space: pre;
-  color: inherit;
-  background-color: #FFCC99;
-   }
 .rilm-div.rilm-type_heading  .rilm-persName   .rilm-surname,  .rilm-div.rilm-type_heading  .rilm-persName.rilm-type_preferred   .rilm-surname {
     font-weight: bold;
 }
@@ -1319,7 +1166,6 @@ font-style: normal
      font-style: italic;
     font-weight: normal;
 }
-
 
 .rilm-text.rilm-type_family   .rilm-list   .rilm-head {
     font-variant-caps: small-caps;
