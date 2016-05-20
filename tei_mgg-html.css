@@ -69,39 +69,6 @@ font-style: italic;
 .rilm-abbr {
   display: inline;
 }
-.rilm-add {
-  display: inline;
-  color: green;
-  background-color: inherit;
-  text-decoration: underline;
-}
-.rilm-address {
-  display: block;
-  margin-top: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-bottom: 2em;
-}
-.rilm-addrLine {
-  display: block;
-  white-space: nowrap;
-}
-.rilm-anchor {
-  display: none;
-}
-.rilm-argument {
-  display: block;
-  margin-bottom: 0.5em;
-}
-.rilm-att {
-  display: inline;
-  font-family: roman, 'times new roman', times, serif;
-  color: blue;
-  background-color: inherit;
-}
-.rilm-att:before {
-  content: "@";
-}
 .rilm-bibl   .rilm-author {
   display: inline;
   font-variant: small-caps;
@@ -117,35 +84,15 @@ font-style: italic;
 .rilm-bibl .rilm-author.rilm-subtype_secondary {
 	font-variant:normal;
 }     
-.rilm-back {
-  display: block;
-  border: thin black solid;
-  margin-top: 1em;
-  padding-top: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-bottom: 0.5em;
-}
 .rilm-bibl {
   display: inline;
 }
-    
-.rilm-biblFull {
-  display: inline;
-}
- 
-
 .rilm-biblScope {
   display: inline;
 }
- 
 .rilm-birth:before {
 content: "*";
-}    
-.rilm-imprint   .rilm-biblScope {
-  display: block;
-}
-    
+}     
 .rilm-body {
   margin-top: 5px;
   margin-left: 10px;
@@ -153,22 +100,10 @@ content: "*";
  font-size: 1em;
  font-weight: 400;
   /*font-family: 'Times New Roman', 'Bravura Text', serif;*/
-  font-family: 'Sirba PE', sans-serif, 'Bravura Text';
+  font-family: 'Skolar PE TEST', sans-serif, 'Bravura Text';
   font-variant-numeric: oldstyle-nums;
   font-feature-settings: "onum";
 
-}
-.rilm-byline {
-  display: block;
-   font-style: italic;
-  margin-bottom: 0.5em;
-}
-.rilm-category {
-  display: block;
-  margin-bottom: 1em;
-}
-.rilm-catRef {
-  display: none;
 }
 .rilm-cell {
   display: table-cell;
@@ -190,11 +125,6 @@ content: "*";
     border-left: 1px solid #EEEFEE;
     border-bottom: none;
 }
-.rilm-change {
-  display: block;
-  margin-bottom: 1em;
-  margin-left: 2em;
-}
 .rilm-cit {
   display: inline;
 }
@@ -203,49 +133,15 @@ content: "*";
     padding: 0 3em 0 3em;
     text-indent: 0;
 }
-    
-.rilm-classCode {
-  display: block;
-}
-.rilm-elementSpec,  .rilm-macroSpec,  .rilm-classSpec {
-  display: block;
-  margin-bottom: 1em;
-}
-.rilm-closer {
-  display: block;
-  margin-bottom: 1em;
-}
-.rilm-code {
-  display: inline;
-  font-family: monospace;
-}
-.rilm-corr {
-  display: inline;
-  color: green;
-  background-color: inherit;
-}
-.rilm-creation {
-  display: block;
-}
 .rilm-date {
   display: inline;
-}
-    
+} 
 .rilm-change   .rilm-date,  .rilm-publicationStmt   .rilm-date {
   display: block;
   font-weight: bold;
 }
-.rilm-dateline {
-  display: inline;
-}
 .rilm-death:before {
 content: "†";
-}
-.rilm-del {
-  display: inline;
-  color: red;
-  background-color: inherit;
-  text-decoration: line-through;
 }
 .rilm-rilmPerson.rilm-n>.rilm-persName>.rilm-forename {
     font-weight:bold;
@@ -328,8 +224,6 @@ font-weight: bold;
 
 .rilm-div.rilm-type_section > .rilm-head {
     display: block;
-    /*font-weight: 600;
-    text-indent: 2em;*/
 }
 
 .rilm-div.rilm-type_section > .rilm-head > .rilm-div {
@@ -338,10 +232,6 @@ font-weight: bold;
     text-indent: 2em;
     padding-top: 1em;
 }
-
-/*div.rilm-type_section {
-    text-indent: 2em;*/
-
 
 .rilm-head.rilm-n::before {
     content: attr(data-rilm-n) ". " !important;
@@ -355,15 +245,7 @@ font-weight: bold;
     display:inline;
 }
 
-
-.rilm-divGen {
-  display: none;
-}
-
-.rilm-byline  .rilm-docAuthor {
-  display: inline;
-}
-     
+  
 .rilm-edition {
   display: block;
   margin-bottom: 0.5em;
@@ -373,10 +255,6 @@ font-weight: bold;
   display: inline;
 }
     
-.rilm-editionStmt {
-  display: block;
-  margin-bottom: 1em;
-}
 .rilm-editor {
   display: block;
   margin-bottom: 0.5em;
@@ -397,39 +275,13 @@ font-weight: bold;
         font-feature-settings: "smcp";
     }
 }
-    
-.rilm-eg {
-  font-family: monospace;
-  padding-top: 3mm;
-  padding-left: 4pt;
-  padding-bottom: 2pt;
-  display: block;
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-  white-space: pre;
-  color: inherit;
-  background-color: #FFCC99;
-}
-    
+      
 .rilm-emph {
   display: inline;
    font-style: italic;
 }
-.rilm-epigraph {
-  display: block;
-  margin-bottom: 1em;
-  text-align: center;
-}
-    
-.rilm-extent {
-  display: block;
-  margin-bottom: 1em;
-}
-    
-.rilm-bibl  .rilm-extent {
-  display: inline;
-}
- 
+  
+
 .rilm-graphic {
 color: gray;
 background-color: inherit;
@@ -483,54 +335,13 @@ color: inherit;
   display: inline;
    font-style: italic;
 }
-.rilm-front {
-  display: block;
-  margin-bottom: 1em;
-  padding-top: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-bottom: 0.5em;
-}
-.rilm-funder {
-  display: block;
-  margin-bottom: 0.5em;
-}
-/*.rilm-gap {
-  display: none;
-}*/
-    
+  
 .rilm-gap:after {
   content: "[…]";
   color: red;
   font-weight: bold;
 }
-.rilm-gi,tag {
-  display: inline;
-  font-family: sans-serif;
-  color: blue;
-  background-color: inherit;
-}
-    
-.rilm-tag:before,gi:before {
-  content: "<";
-}
-    
-.rilm-tag:after,gi:after {
-  content: "";
-}
-    
-.rilm-gloss {
-  display: inline;
-}
-.rilm-group {
-  display: block;
-  margin-bottom: 1em;
-}
 
-.rilm-ident {
-  display: inline;
-  font-family: monospace;
-}
 .rilm-idno {
   display: block;
   margin-bottom: 1em;
@@ -540,26 +351,6 @@ color: inherit;
   display: inline;
 }
         
-.rilm-imprint {
-  display: inline;
-}
-.rilm-index {
-  display: none;
-}
-.rilm-interp {
-  display: none;
-}
-.rilm-interpGrp {
-  display: none;
-}
-
-
-/*rilm-list  .rilm-item {
-  display: inline;
-  display: list-item;
-  
-}*/
-    
 .rilm-item {
   display: list-item;
   
@@ -583,36 +374,10 @@ color: inherit;
      content: "\0020\25A0\0020";
  }
 
- 
-.rilm-change  .rilm-item {
-  display: block;
-  margin-bottom: 0.5em;
-  margin-left: 1em;
-  margin-top: 0.5em;
-}
-.rilm-keywords {
-  display: block;
-  margin-bottom: 0.5em;
-}
-.rilm-kw {
-  display: inline;
-   font-style: italic;
-}
 .rilm-l {
   display: block;
   white-space: nowrap;
 }
-/*label {
-  display: inline;
-  font-weight: bold;
-}
-Label {
-	display: inline;
-	font-weight : bold;
-	color : #2F4F4F;
-           background-color: inherit;
-}*/
-    
 
 .rilm-langUsage {
   display: block;
@@ -663,8 +428,7 @@ Label {
     
 .rilm-list.rilm-rend_runon {
   display: inline;
-}
-    
+}    
 .rilm-list.rilm-type_bulleted {
   list-style-type: disc;
   list-style-position: outside;
@@ -686,20 +450,11 @@ Label {
   list-style-type: none;
 }
     
-.rilm-listBibl {
-  display: block;
-  margin-bottom: 0.5em;
-}
 .rilm-mentioned {
   display: inline;
    font-style: italic;
 }
-.rilm-milestone {
-  display: none;
-}
-.rilm-name {
-  display: inline;
-}
+
 .rilm-docAuthor   .rilm-name {
   display: inline;
   text-transform: uppercase;
@@ -747,20 +502,7 @@ Label {
 .rilm-note.rilm-type_editorial {
     display: none;
 }
-.rilm-notesStmt {
-  display: block;
-  margin-bottom: 1em;
-}
-.rilm-num {
-  display: inline;
-}
-.rilm-opener {
-  display: block;
-  margin-bottom: 0.5em;
-}
-.rilm-orig {
-  display: inline;
-}
+
 .rilm-p {
   display: block;
 
@@ -780,17 +522,6 @@ Label {
 }
 .rilm-quote>.rilm-p:last-of-type {
     display: inline;
-}
-.rilm-pb {
-  display: none;
-}
-    
-.rilm-pb:after {
-  content: attr(n);
-  font-weight: bold;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  text-align: center;
 }
  
   .rilm-persName.rilm-type_alt {
@@ -829,10 +560,6 @@ Label {
   display: inline;
 }
     
-.rilm-imprint   .rilm-pubPlace,  .rilm-publicationStmt   .rilm-pubPlace {
-  display: block;
-  margin-bottom: 0.5em;
-}
 .rilm-q {
   display: inline;
   quotes:  '»\200A' '\200A«' '›\200A' '\200A‹';
@@ -851,8 +578,7 @@ Label {
 .rilm-q > .rilm-quote {
     quotes: '›\200A' '\200A‹';
 }
-   
-    
+      
 .rilm-q:before {
   content: open-quote;
 font-style: normal;
@@ -900,21 +626,6 @@ font-style: normal;
 .rilm-ref[data-rilm-target*="document"]:before {
     content: "→ ";
 }
-
-.rilm-reg {
-  display: inline;
-   font-style: italic;
-}
-.rilm-rendition {
-  display: block;
-  margin-bottom: 0.5em;
-}
-.rilm-resp {
-  display: inline;
-}
-.rilm-respStmt {
-  display: block;
-}
     
 .rilm-bibl  .rilm-respStmt {
   display: inline;
@@ -933,12 +644,6 @@ font-style: normal;
    background-color: #BBBBBB;
 }
 
-.rilm-rs {
-  display: inline;
-}
-.rilm-s {
-  display: inline;
-}
 
 .rilm-seg {
   display: inline;
