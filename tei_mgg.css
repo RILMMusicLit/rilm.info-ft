@@ -25,60 +25,13 @@ $LastChangedDate$, $LastChangedRevision$, $LastChangedBy$
     font-family: FreeSerif;
     src: url('http://rilm.info/ft/FreeSerif.woff') format('woff')
 }
-
-
 * {
-    line-height: 1.5em;
+    line-height: 1.75em;
 }
 TEI {
 }
 abbr {
   display: inline;
-}
-add {
-  display: inline;
-  color: green;
-  background-color: inherit;
-  text-decoration: underline;
-}
-address {
-  display: block;
-  margin-top: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-bottom: 2em;
-}
-addrLine {
-  display: block;
-  white-space: nowrap;
-}
-anchor {
-  display: none;
-}
-argument {
-  display: block;
-  margin-bottom: 0.5em;
-}
-att {
-  display: inline;
-  font-family: roman, 'times new roman', times, serif;
-  color: blue;
-  background-color: inherit;
-}
-att:before {
-  content: "@";
-}
-author {
-  display: inline;
-  font-variant: small-caps;
-}
-        @supports(font-feature-settings: 'smcp') {
-    author {
-        font-variant: normal;
-        -moz-font-feature-settings: "smcp";
-        -webkit-font-feature-settings: "smcp";
-        font-feature-settings: "smcp";
-    }
 }
 bibl > author {
   display: inline;
@@ -95,33 +48,12 @@ bibl > author {
 bibl > author[subtype='secondary'] {
 	font-variant:normal;
 }
-    
-back {
-  display: block;
-  border: thin black solid;
-  margin-top: 1em;
-  padding-top: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-bottom: 0.5em;
-}
 bibl {
   display: inline;
 }
-    
-biblFull {
-  display: inline;
-}
- 
-
 biblScope {
   display: inline;
-}
-    
-imprint > biblScope {
-  display: block;
-}
-    
+}    
 birth:before {
 content: "*";
 }
@@ -130,22 +62,11 @@ body {
   margin-top: 5px;
   margin-left: 10px;
   display: block;
+  font-size: 1em;
+  font-weight: 400;
   font-family: 'times new roman', FreeSerif, 'Bravura Text', serif;
   font-variant-numeric: oldstyle-nums;
-  /*font-family: roman, 'times new roman', times, serif; */
-
-}
-byline {
-  display: block;
-  font-style: italic;
-  margin-bottom: 0.5em;
-}
-category {
-  display: block;
-  margin-bottom: 1em;
-}
-catRef {
-  display: none;
+  font-feature-settings: "onum";
 }
 cell {
   display: table-cell;
@@ -168,11 +89,6 @@ row[rend='noborder'] > cell {
     border-left: 1px solid #EEEFEE;
     border-bottom: none;
 }
-change {
-  display: block;
-  margin-bottom: 1em;
-  margin-left: 2em;
-}
 cit {
   display: inline;
 }
@@ -181,200 +97,47 @@ cit[rend='block'] {
     padding: 0 3em 0 3em;
     text-indent: 0;
 }
-    
-classCode {
-  display: block;
-}
-elementSpec, macroSpec, classSpec {
-  display: block;
-  margin-bottom: 1em;
-}
-closer {
-  display: block;
-  margin-bottom: 1em;
-}
-code {
-  display: inline;
-  font-family: monospace;
-}
-corr {
-  display: inline;
-  color: green;
-  background-color: inherit;
-}
-creation {
-  display: block;
-}
 date {
   display: inline;
-}
-    
-change > date, publicationStmt > date {
-  display: block;
-  font-weight: bold;
-}
-dateline {
-  display: inline;
-}
+}    
 death:before {
 content: "†";
 }
-del {
-  display: inline;
-  color: red;
-  background-color: inherit;
-  text-decoration: line-through;
-}
-
-p {
-    text-indent: 2em;
-}
-p[rend="block"] {
-    margin-left:2em;
-    text-indent:0;
-}
-
-item > p {
-    text-indent: 0;
-}
-
-div[type="family"] div[type="bio"] > forename:first-of-type {
-font-weight: bold;
+div[type="contents"] {
+ display: block;
 }
 div[type="ography"], div[type="works"]{
     text-indent: 2em;
     font-size: .92em;
 }
-
-body > head {
-    display: block;
-    margin-left: 2em;
-    margin-bottom: .25em;
-    
-}
-div[type="contents"] {
- display: block;
- 
-}
-div[type="contents"] > head {
-    text-transform: uppercase;
-    font-size: smaller;
-    font-weight: bold;
-}
-        @supports(font-feature-settings: 'case', 'cpsp') {
-    div[type="contents"] > head  {      
-        -moz-font-feature-settings: "case", "cpsp";
-        -webkit-font-feature-settings: "case", "cpsp";
-        font-feature-settings: "case", "cpsp";
-    }
-}
-div[type="contents"] > list > item {
-    display: block;
-}
-
-div[type="ography"] > head {
-     text-transform: uppercase;
-    font-weight: bold;
-    text-indent: 2em;
-    display:block;
-    padding-top:1em;
-    font-size:.92em;
-}
-        @supports(font-feature-settings: 'case', 'cpsp') {
-    div[type="ography"] > head  {      
-        -moz-font-feature-settings: "case", "cpsp";
-        -webkit-font-feature-settings: "case", "cpsp";
-        font-feature-settings: "case", "cpsp";
-    }
-}
-div[type="works"] > head {
-    font-weight: bold;
-    display: block;
-    text-indent: 2em;
-     text-transform: uppercase;
-       padding-top:1em;
-        font-size:.92em;
-}
-        @supports(font-feature-settings: 'case', 'cpsp') {
-    div[type="works"] > head  {      
-        -moz-font-feature-settings: "case", "cpsp";
-        -webkit-font-feature-settings: "case", "cpsp";
-        font-feature-settings: "case", "cpsp";
-    }
-}
-div[type="section"] > head {
-    display: block;
-    font-weight: 600;
-    text-indent: 2em;
-    margin-top: 1em;
-}
-
 div[type="section"] > head > div {
     display: block;
     font-style: italic;
     text-indent: 2em;
 }
-
-/*div[type="section"] {
-    text-indent: 2em;*/
-
-
-head[n]::before {
-    content: attr(n) ". ";
-    font-style:normal;
-}
-head[n*=I], head[n*=V], head[n*=X], head[n*=L], head[n*=C]{
-      display: block;
-    font-style: italic;
-    text-indent: 2em;
-}
-
-head > note {
-    text-transform: none;
-    font-size:medium;
-    font-weight: normal;
-    display:inline;
-}
-
-
-divGen {
-  display: none;
-}
 docAuthor {
-  display: block;
-  margin-bottom: 0.5em;
-  margin-left: 2em;
+    text-transform: uppercase;
     font-size: .85em;
     font-weight: bold;
+    display: block;
+    margin-bottom: 0.5em;
+    margin-left: 2em;
+} 
+      @supports(font-feature-settings: 'c2sc', 'smcp') {
+            docAuthor {
+      	font-size: 1.15em;
+      	text-transform: none;
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+        }
 }
-    
-byline docAuthor {
-  display: inline;
-}
-    
-    
-edition {
-  display: block;
-  margin-bottom: 0.5em;
-}
-    
 bibl edition {
   display: inline;
-}
-    
-editionStmt {
-  display: block;
-  margin-bottom: 1em;
-}
-editor {
-  display: block;
-  margin-bottom: 0.5em;
-}
-    
+}    
 bibl editor {
   display: inline;
 }
-
 bibl editor[subtype="primary"]  {
        font-variant: small-caps;
 }
@@ -385,114 +148,491 @@ bibl editor[subtype="primary"]  {
         -webkit-font-feature-settings: "smcp";
         font-feature-settings: "smcp";
     }
-}
-
-    
-eg {
-  font-family: monospace;
-  padding-top: 3mm;
-  padding-left: 4pt;
-  padding-bottom: 2pt;
-  display: block;
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-  white-space: pre;
-  color: inherit;
-  background-color: #FFCC99;
-}
-    
+}    
 emph {
   display: inline;
   font-style: italic;
 }
-epigraph {
-  display: block;
-  margin-bottom: 1em;
-  text-align: center;
-}
-    
-extent {
-  display: block;
-  margin-bottom: 1em;
-}
-    
-bibl extent {
-  display: inline;
-}
-
 figure, notatedMusic, tableFigure {
   display: block;
-  margin-bottom: 1em;
+  font-style: italic;
+  margin: 2em 0em 2em 2em;
+  font-size: 1.4em;
+  zoom: 65%;
 }
 foreign {
   display: inline;
   font-style: italic;
 }
-
-/*Added 2015-06-27:*/
-rilmPerson[n]>persName>forename {
-    font-weight:bold;
-    font-style:normal;
-}
-/*Added 2015-06-27:*/
-div[type="person"] p[n]>rilmPerson:first-of-type>persName>forename {
-    font-weight:bold;
-    font-style:normal;
-}
-
 formula {
   display: inline;
   font-style: italic;
 }
-front {
-  display: block;
-  margin-bottom: 1em;
-  padding-top: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-bottom: 0.5em;
+rilmPerson[n]>persName>forename {
+    font-weight:bold;
+    font-style:normal;
 }
-funder {
-  display: block;
-  margin-bottom: 0.5em;
+div[type="person"] p[n]>rilmPerson:first-of-type>persName>forename {
+    font-weight:bold;
+    font-style:normal;
 }
-
-    
+div[type="family"] div[type="bio"] > forename:first-of-type {
+font-weight: bold;
+}
+div[type='heading'] p persName[type='alt'] > surname, div[type='heading'] p persName[type='alt'] > forename {
+    font-style: italic;
+    font-weight: normal;
+}    
 gap:after {
-  content: "[...]";
+  content: "[…]";
   font-weight: bold;
   color: red;
-}
-gi,tag {
-  display: inline;
-  font-family: sans-serif;
-  color: blue;
-  background-color: inherit;
-}
-    
-tag:before,gi:before {
-  content: "<";
-}
-    
-tag:after,gi:after {
-  content: ">";
-}
-    
-gloss {
-  display: inline;
 }
 graphic{
     color: gray;
     background-color: inherit;
-    content: "{" attr(url) "}";    
+    content: none !important;
+    clear: both;
+    display: block;
+    border: 1px solid #000;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    /*-moz-transform:scale(0.5);
+      -webkit-transform:scale(0.5);
+      transform:scale(0.5);*/  
 }
-
-group {
+formula > graphic {
+    display: inline;
+	border: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	text-indent:0;
+}
+body > head {
+    display: block;
+    margin-left: 2em;
+    margin-bottom: .25em;
+    font-weight: bold;
+}
+div[type="section"] > head {
+    display: block;
+    font-weight: 600;
+    text-indent: 2em;
+    margin-top: 1em;
+}
+table > head{
+    display:table-caption;
+    font-style: italic;
+    margin-bottom: 6pt;
+}  
+head[n]::before {
+    content: attr(n) ". ";
+    font-style:normal;
+}
+list > head {
+     font-variant: small-caps;
+}
+        @supports(font-feature-settings: 'smcp') {
+    list > head {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
+}
+div[type="ography"] > head {
+     text-transform: uppercase;
+    font-weight: bold;
+    text-indent: inherit;
+    display:block;
+    padding-top:1em;
+    font-size:.92em;
+}
+        @supports(font-feature-settings: 'c2sc', 'smcp') {
+    div[type="ography"] > head  { 
+    	font-size: 1.1em;  
+    	text-transform: none;   
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+    }
+}
+div[type="works"] > head {
+    font-weight: bold;
+    display: block;
+    text-indent: 2em;
+     text-transform: uppercase;
+       padding-top:1em;
+        font-size:.92em;
+}
+        @supports(font-feature-settings: 'c2sc', 'smcp') {
+ div[type="works"] > head {   
+ 	font-size: 1.1em;   
+ 	text-transform: none;
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp"; 
+    }
+}
+div[type="contents"] > head {
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: bold;
+}
+        @supports(font-feature-settings: 'c2sc', 'smcp') {
+    div[type="contents"] > head { 
+    	font-size: 1em;     
+    	text-transform: none; 
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+    }
+}
+text[type='family']  list > head {
+    font-variant: small-caps;
+}
+        @supports(font-feature-settings: 'smcp') {
+    text[type='family']  list > head {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
+}
+head[n*=I], head[n*=V], head[n*=X], head[n*=L], head[n*=C]{
+      display: block;
+    font-style: italic;
+    text-indent: 2em;
+} 
+bibl idno {
+  display: inline;
+}
+imprint {
+  display: inline;
+}
+item {
+    display:list-item;
+}
+p item {
+    display:block
+}
+item[n]:before {
+  content: attr(n) ". " ;
+  list-style: none;
+} 
+div[type="contents"] > list > item {
+    display: block;
+}
+div[type='works']  list item + item:before,  div[type='ography']  list item + item:before{
+     content: "\0020\25A0\0020";
+ }
+div[type="section"] list item, div[type="bio"] list item, div[type="criticism"] list item {
   display: block;
+}
+div[type="ography"] list item, div[type="works"] list item  {
+  display: inline;
+}
+div[type="works"] div[type="section"] list item, div[type="ography"] div[type="section"] list item {
+display: inline;
+}    
+l {
+  display: block;
+  white-space: nowrap;
+}
+lb {
+  display: block;
+}
+lg {
+  display: block;
+  margin-bottom: 0.5em;
+}
+div[type="ography"] list, div[type="works"] list {
+  display: block;
+  list-style-type: disc;
+  list-style-position: outside;
   margin-bottom: 1em;
+  margin-top: .5em;
+}
+list[rend="list"] {
+    list-style-type: disc;
+    list-style-position:outside;
+}
+list[rend="inline"] {
+  display: inline;
+}
+list[rend="bulleted"] {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+list[rend="numbered"] {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+list[rend="lower-latin"] {
+  list-style-type: lower-latin;
+  list-style-position: outside;
+}
+list[rend="lower-greek"] {
+  list-style-type: lower-greek;
+  list-style-position: outside;
+}
+list[rend="lower-roman"] {
+  list-style-type: lower-roman;
+  list-style-position: outside;
+}
+list[rend="upper-latin"] {
+  list-style-type: upper-latin;
+  list-style-position: outside;
+}
+list[rend="upper-greek"] {
+  list-style-type: upper-greek;
+  list-style-position: outside;
+}
+list[rend="upper-roman"] {
+  list-style-type: upper-roman;
+  list-style-position: outside;
+}
+mentioned {
+  display: inline;
+  font-style: italic;
+}
+musNote {
+    font-style: italic;
 }
 
-    
+docAuthor > name {
+  display: inline;
+  text-transform: uppercase;
+  font-size: smaller;
+}
+        @supports(font-feature-settings: 'c2sc', 'smcp') {
+    docAuthor > name { 
+    	font-size: 1.3em;  
+    	text-transform: none;   
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+    }
+}
+note {
+  display: inherit;
+    font-style:normal;
+}
+quote > note {
+ font-style: normal;   
+}
+*[rend="italic"] > note {
+    font-style: normal;
+}
+*[rend="quoted-italic"] > note {
+    font-style: normal;
+}
+head > note {
+    text-transform: none;
+    font-size:medium;
+    font-weight: normal;
+    display:inline;
+    font-variant: normal;
+    font-feature-settings: normal;
+    -moz-font-feature-settings: normal;
+    -webkit-font-feature-settings: normal;
+}   
+note[type="editorial"] {
+    display: none;
+}
+orgName {
+    font-style: italic;
+}
+orgName[type='performing'] {
+    font-style: italic;
+}
+orgName[type='trans'] {
+    font-style: normal;
+}
+orgName[type='uni'] {
+    font-style: normal;
+}
+div[type='heading'] orgName, div[type='heading'] orgName[type='preferred'] {
+    font-weight:bold;
+}
+p {
+    text-indent: 2em;
+    display: block;
+}
+p[rend="block"] {
+    margin-left:2em;
+    text-indent:0;
+}
+cell > p {
+    text-indent: 0;
+}
+item > p {
+    text-indent: 0;
+    display: inherit;
+}
+p[n]::before {
+    content: attr(n) ". ";
+    font-style: normal !important;
+    font-weight:bold;
+}
+quote > p:first-of-type {
+    display:inline;
+}
+quote > p:last-of-type {
+    display: inline;
+}
+figure head, figure p, notatedMusic head, notatedMusic p, tableFigure head, tableFigure p {
+    display: inline !important;
+}
+persName[type='alt'] {
+    font-style: italic !important;
+    font-weight: normal !important;
+}
+div[type='heading'] persName[type='preferred'] {
+    font-style:normal;
+}
+pitch {
+   font-style: italic;
+}
+publisher {
+  display: inline;
+}
+pubPlace {
+  display: inline;
+}
+q {
+  display: inline;
+  quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+  margin-top: 0em;
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-bottom: 0em;
+}
+q[rend="single"] {
+    quotes:  '›\200A' '\200A‹'
+}
+quote > q {
+    quotes: '›\200A' '\200A‹';
+}  
+q:before {
+  content: open-quote;
+  font-style: normal;
+}
+q:after {
+  content: close-quote;
+  font-style: normal;
+}
+q[rend="left-double"] {
+    quotes: '»\200A' ''; 
+}
+q[rend="right-double"] {
+    quotes: '\200A«' '';
+}
+q[rend="left-double"]:before {
+  content: open-quote;
+  font-style: normal;  
+}
+q[rend="right-double"]:after {
+  content: close-quote;
+  font-style: normal;    
+}
+ quote {
+     display:inline;
+     font-style: italic;
+     quotes: '»\200A' '\200A«'  '›\200A' '\200A‹';
+ }
+q > quote {
+    quotes: '›\200A' '\200A‹';
+}
+ quote:before {
+     content: open-quote;
+      font-style: normal;
+ }
+ quote:after {
+     content: close-quote;
+      font-style: normal;
+ }
+ref {
+  display: inline;
+  color: blue;
+  background-color: inherit;
+}
+ref[target*="document"]:before{
+content: "→ ";
+}
+rilmPerson[n]::before {
+    content: attr(n) ". ";
+    font-weight:bold;
+}
+row {
+  display: table-row;
+}
+row[role='label'] {
+   color: inherit;
+   background-color: #BBBBBB;
+}
+soCalled {
+  display: inline;
+  quotes: "›\200A" "\200A‹";
+}
+soCalled:before {
+  content: open-quote;
+  font-style: normal;
+}
+soCalled:after {
+  content: close-quote;
+  font-style: normal;
+}
+rilmPerson[n]>persName>surname {
+    font-weight:bold;
+    font-style:normal;
+}
+div[type="person"] p[n]>rilmPerson:first-of-type>persName>surname {
+    font-weight:bold;
+    font-style:normal;
+}
+ persName[type='alt']>surname {
+    font-style: italic !important;
+    font-weight: normal !important;
+}
+div[type='heading'] persName > surname, div[type='heading'] persName[type='preferred'] > surname {
+    font-weight: bold;
+}
+table {
+  text-align: center;
+  display: table;
+  margin: 1em;
+  border: 1px solid #EEEFEE;
+}
+teiHeader {
+    display:none
+}
+title {
+  display: inline;
+  font-style:italic;
+}
+title[type='generic'] {
+    font-style: normal;
+}
+
+title[type='translated'] {
+    font-style:normal;
+}
+
+title[type='incipit'] {
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+ }
+title[type='incipit']:before {
+    content: open-quote;
+    font-style: normal;
+ }
+ title[type='incipit']:after {
+    content: close-quote;
+    font-style: normal;
+}
+title[subtype="secondary"] {
+    font-style:normal;
+}
 *[rend="bold"] {
   /*display: inline;*/
   font-weight: bold;
@@ -515,11 +655,13 @@ group {
   display: inline;
   text-transform: uppercase;
 }
-        @supports(font-feature-settings: 'case', 'cpsp') {
-    *[rend="uppercase"]  {      
-        -moz-font-feature-settings: "case", "cpsp";
-        -webkit-font-feature-settings: "case", "cpsp";
-        font-feature-settings: "case", "cpsp";
+        @supports(font-feature-settings: 'c2sc', 'smcp') {
+    *[rend="uppercase"] {
+    	font-size: 1.1em;   
+    	text-transform: none;  
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
     }
 }
 *[rend="smallcaps"] {
@@ -548,10 +690,8 @@ group {
 *[rend="quoted-italic"] {
     display: inline;
     font-style:italic;
-    
      quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
  }
- 
 *[rend="quoted-italic"]:before {
      content: open-quote;
 font-style: normal;
@@ -561,609 +701,6 @@ font-style: normal;
 font-style: normal;
  }
 
-
-ident {
-  display: inline;
-  font-family: monospace;
-}
-idno {
-  display: block;
-  margin-bottom: 1em;
-}
-    
-bibl idno {
-  display: inline;
-}
-        
-imprint {
-  display: inline;
-}
-index {
-  display: none;
-}
-interp {
-  display: none;
-}
-interpGrp {
-  display: none;
-}
-list[type = "gloss"] item {
-  display: block;
-  margin-left: 1em;
-}
-
-div[type="section"] list item, div[type="bio"] list item, div[type="criticism"] list item {
-  display: block;
-  
-}
-
-div[type="ography"] list item, div[type="works"] list item  {
-  display: inline;
-  
-}
-div[type="works"] div[type="section"] list item, div[type="ography"] div[type="section"] list item {
-display: inline;
-}    
-
-    
-item[n]:before {
-  content: attr(n) ". " ;
-  list-style: none;
-} /* should there be space after the content?
-     And should default marker be suppressed
-     when there is an @n attribute? --DRS */
- 
-div[type='works']  list item + item:before,  div[type='ography']  list item + item:before{
-     content: "\0020\25A0\0020";
- }
-
-p item {
-    display:block
-}
-
- 
-change item {
-  display: block;
-  margin-bottom: 0.5em;
-  margin-left: 1em;
-  margin-top: 0.5em;
-}
-keywords {
-  display: block;
-  margin-bottom: 0.5em;
-}
-kw {
-  display: inline;
-  font-style: italic;
-}
-l {
-  display: block;
-  white-space: nowrap;
-}
-/*label {
-  display: inline;
-  font-weight: bold;
-}
-Label {
-	display: inline;
-	font-weight : bold;
-	color : #2F4F4F;
-           background-color: inherit;
-}*/
-    
-
-langUsage {
-  display: block;
-  margin-bottom: 1em;
-}
-lb {
-  display: block;
-}
-lg {
-  display: block;
-  margin-bottom: 0.5em;
-}
-list {
-  display: block;
-  list-style-type: disc;
-  list-style-position: outside;
-  margin-bottom: 1em;
-  margin-top: .5em;
-}
-    
-list[rend="runon"] {
-  display: inline;
-}
-    
-list[type="bulleted"] {
-  list-style-type: disc;
-  list-style-position: outside;
-}
-list[type="unordered"] {
-  list-style-type: disc;
-  list-style-position: outside;
-}
-list[type="ordered"] {
-  list-style-type: decimal;
-  list-style-position: outside;
-}
-    
-list[type="numbered"] {
-  list-style-type: decimal;
-  list-style-position: outside;
-}
-list[type="none"] {
-  list-style-type: none;
-}
-list[type="table"] {
-    display:table;
-    text-align: center;
-  margin: 1em;
-    border:solid 1px #EEEFEE;
-    table-layout: fixed;
-     width: 95%;
- border-collapse: collapse;
-}
-/*list[type="table"] seg[type="header"] {
-    display:inline-block;
-    text-align:center;
-  background-color: lightgray;
-  
-}*/
-list[type="table"] item bibl, list[type="table"] item seg[type="header"] {
-   display:table-row;
-   border: 1px solid #EEEFEE; 
-   }
-   
-   seg[type="header"] {
-       background-color:lightgray;
-   }
-
-list[type="table"] item seg[type="header"] > * {
-    display:table-cell;
-    width: 12.5%;
-   padding: .2em;
- border: 1px solid #EEEFEE;
-text-align:left;
-    overflow: hidden;
-    
-}
-   
-list[type="table"] item bibl > * {
-display:table-cell;
-overflow: hidden;
-width: 12.5%;
- border: 1px solid #EEEFEE;
-  padding: .2em;
-  color: inherit;
-  text-align:left;
-  background-color:inherit;
-  } 
-
-
-listBibl {
-  display: block;
-  margin-bottom: 0.5em;
-}
-mentioned {
-  display: inline;
-  font-style: italic;
-}
-milestone {
-  display: none;
-}
-name {
-  display: inline;
-}
-docAuthor > name {
-  display: inline;
-  text-transform: uppercase;
-  font-size: smaller;
-}
-        @supports(font-feature-settings: 'case', 'cpsp') {
-    docAuthor > name  {      
-        -moz-font-feature-settings: "case", "cpsp";
-        -webkit-font-feature-settings: "case", "cpsp";
-        font-feature-settings: "case", "cpsp";
-    }
-}
-note {
-  display: inherit;
-    font-style:normal;
-}
-    
-note[n]:before {
-  content: attr(n);
-  vertical-align: super;
-}
-    
-note[place="left"] {
-  float: left;
-}
-    
-note[place="right"] {
-  float: right;
-}
-    
-note[place="inline"], note[place="unspecified"] {
-  display: inline;
-}
-
-*[rend="italic"] > note {
-    font-style: normal;
-}
-*[rend="quoted-italic"] > note {
-    font-style: normal;
-}
-
-quote > note {
- font-style: normal;   
-}
-
-note[type="editorial"] {
-    display: none;
-}
-
-notesStmt {
-  display: block;
-  margin-bottom: 1em;
-}
-num {
-  display: inline;
-}
-opener {
-  display: block;
-  margin-bottom: 0.5em;
-}
-orig {
-  display: inline;
-}
-p {
-  display: block;
-}
-item > p {
-    display: inherit;
-}
-/*Added 2015-06-27:*/
-p[n]::before {
-    content: attr(n) ". ";
-    font-weight:bold;
-}
-
-quote > p:first-of-type {
-    display:inline;
-}
-quote>p:last-of-type {
-    display: inline;
-}
-
-pb {
-  display: none;
-}
-    
-pb:after {
-  content: attr(n);
-  font-weight: bold;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  text-align: center;
-}
- persName[type='alt'] {
-    font-style: italic !important;
-    font-weight: normal !important;
-}
-
-principal {
-  display: block;
-  margin-bottom: 0.5em;
-}
-ptr {
-    color: navy;
-    text-decoration: underline;
-    background-color: inherit;
-}
-ptr:before{
-    background-color: inherit;
-    color: red;
-    content:"[" attr(target) "]";
-}
-
-publicationStmt {
-  display: block;
-  margin-bottom: 1em;
-}
-publisher {
-  display: inline;
-}
-    
-imprint > publisher, publicationStmt > publisher {
-  display: block;
-  margin-bottom: 0.5em;
-}
-pubPlace {
-  display: inline;
-}
-    
-imprint > pubPlace, publicationStmt > pubPlace {
-  display: block;
-  margin-bottom: 0.5em;
-}
-q {
-  display: inline;
-  quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
-  margin-top: 0em;
-  margin-left: 0em;
-  margin-right: 0em;
-  margin-bottom: 0em;
-}
-q[rend="single"] {
-    quotes:  '›\200A' '\200A‹'
-}
-quote > q {
-    quotes: '›\200A' '\200A‹';
-}
-
-q > quote {
-    quotes: '›\200A' '\200A‹';
-}
-    
-    
-q:before {
-  content: open-quote;
-  font-style: normal;
-}
-    
-q:after {
-  content: close-quote;
-  font-style: normal;
-}
-q[rend="left-double"] {
-    quotes: '»\200A' ''; 
-}
-q[rend="right-double"] {
-    quotes: '\200A«' '';
-}
-q[rend="left-double"]:before {
-  content: open-quote;
-  font-style: normal;  
-}
-q[rend="right-double"]:after {
-  content: close-quote;
-  font-style: normal;    
-}
- quote {
-     display:inline;
-     font-style: italic;
-     quotes: '»\200A' '\200A«'  '›\200A' '\200A‹';
- }
- 
- quote:before {
-     content: open-quote;
-      font-style: normal;
- }
- quote:after {
-     content: close-quote;
-      font-style: normal;
- }
- 
-ref {
-  display: inline;
-  color: blue;
-  background-color: inherit;
-}
-ref[target*="document"]:before{
-content: "→ ";
-}
-
-reg {
-  display: inline;
-  font-style: italic;
-}
-rendition {
-  display: block;
-  margin-bottom: 0.5em;
-}
-resp {
-  display: inline;
-}
-respStmt {
-  display: block;
-}
-    
-bibl respStmt {
-  display: inline;
-}
-    
-rdg:before {
-  background-color: inherit;
-  content: "[" attr(wit) "] ";
-  color: red;
-  }
-
-/*Added 2015-06-27:*/
-rilmPerson[n]::before {
-    content: attr(n) ". ";
-    font-weight:bold;
-}
-row {
-  display: table-row;
-}
-row[role='label'] {
-   color: inherit;
-   background-color: #BBBBBB;
-}
-
-rs {
-  display: inline;
-}
-s {
-  display: inline;
-}
-salute {
-  display: block;
-  margin-bottom: 0.5em;
-}
-samplingDecl {
-  display: block;
-  margin-bottom: 1em;
-}
-/*seg {
-  display: inline;
-}*/
-seriesStmt {
-  display: block;
-  margin-bottom: 1em;
-}
-sic {
-  display: inline;
-  color: red;
-  background-color: inherit;
-}
-    
-sic:after {
-  content: " [sic]";
-}
-signed {
-  display: block;
-  text-align: right;
-}
-soCalled {
-  display: inline;
-  quotes: "›\200A" "\200A‹";
-}
-    
-soCalled:before {
-  content: open-quote;
-  font-style: normal;
-}
-    
-soCalled:after {
-  content: close-quote;
-  font-style: normal;
-}
-    
-sp {
-  display: block;
-  margin-bottom: 0.5em;
-  margin-left: 2em;
-}
-speaker {
-  display: inline;
-  font-weight: bold;
-}
-sponsor {
-  display: block;
-  margin-bottom: 0.5em;
-}
-stage {
-  display: inline;
-  font-style: italic;
-}
-/*Added 2015-06-27:*/
-rilmPerson[n]>persName>surname {
-    font-weight:bold;
-    font-style:normal;
-}
-/*Added 2015-06-27:*/
-div[type="person"] p[n]>rilmPerson:first-of-type>persName>surname {
-    font-weight:bold;
-    font-style:normal;
-}
-/*Added 2015-06-27:*/
- persName[type='alt']>surname {
-    font-style: italic !important;
-    font-weight: normal !important;
-}
-table {
-  text-align: center;
-  display: table;
-  margin: 1em;
-  border: 1px solid #EEEFEE;
-}
-table > head{
-    display:table-caption;
-    font-style: italic;
-    margin-bottom: 6pt;
-}
-
-tagUsage {
-  display: block;
-  margin-bottom: 0.5em;
-}
-taxonomy {
-  display: block;
-  margin-bottom: 0.5em;
-}
-term {
-  font-family: sans-serif;
-  color: blue;
-  background-color: inherit;
-  display: inline;
-}
-textClass {
-  display: block;
-  margin-bottom: 0.5em;
-}
-time {
-  display: inline;
-}
-title {
-  display: inline;
-  font-style:italic;
-}
-title[type='generic'] {
-    font-style: normal;
-}
-
-title[type='translated'] {
-    font-style:normal;
-}
-
-title[type='incipit'] {
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
- }
- 
-title[type='incipit']:before {
-    content: open-quote;
-    font-style: normal;
- }
- title[type='incipit']:after {
-    content: close-quote;
-    font-style: normal;
-}
-title[subtype="secondary"] {
-    font-style:normal;
-}
- 
-titlePage {
-  display: block;
-  border: thin black solid;
-  margin-bottom: 2em;
-  text-align: center;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 1em;
-}
-titlePart {
-  display: block;
-}
-titleStmt {
-  font-size: large;
-  font-weight: bold;
-  margin-bottom: 1em;
-  text-align: center;
-}
-trailer {
-  display: block;
-  margin-bottom: 1em;
-}
-unclear {
-  display: inline;
-  color: silver;
-  background-color: inherit;
-  font-style: italic;
-}
 /* header-related material */
 teiHeader {
   display: block;
@@ -1201,7 +738,6 @@ teiHeader {
     teiHeader biblStruct biblScope[type='part']:before  {
      content: 'Series: ';
  }
- 
 titleStmt > author {
   display: block;
   margin-bottom: 1em;
@@ -1257,16 +793,13 @@ projectDesc {
   display: block;
   margin-bottom: 1em;
 }
-        
 docDate {
   display: block;
   margin-bottom: 0.5em;
 }
-    
 docImprint docDate {
   display: inline;
 }
-    
 docEdition {
   display: block;
   margin-bottom: 0.5em;
@@ -1280,152 +813,52 @@ docTitle {
   font-weight: bold;
   margin-bottom: 0.5em;
 }
-
-
-/* OUCS additions */
-Button {
-	  font-family: monospace;
-	  color: red;
-	  font-weight: bold;
-	  background-color: rgb(75%,75%,75%)
-	  }
-Value {
-	  font-family: monospace;
-	  color: rgb(255, 102, 0);
-	  background-color: inherit;
-	  }
-Code {
-	  font-family: monospace;
-	  color: red;
-	  background-color: inherit;
-	  }
-Field {
-	   font-family: monospace;
-	   color: red;
-	   background-color: inherit;
-	   }
-Filespec {
-	      font-family: monospace;
-	      color: red;
-	      background-color: inherit;
-	      }
-Input {
-	   font-family: monospace;
-	   color: green;
-	   background-color: inherit;
-	   }
-Key {
-	 font-family: monospace;
-         text-decoration: underline;
-	 color: green;
-	 background-color: inherit;
-	 }
-Link {
-	  font-family: monospace;
-	  color: green;
-	  background-color: inherit;
-	  text-decoration: underline;
-	  }
-Menu {
-	  font-family: monospace;
-	  color: red;
-	  background-color: inherit;
-	  }
-Output {
-	    font-family: monospace;
-	    color: red;
-	    background-color: inherit;
-	    }
-Icon {
-	color: inherit;
-	background-color : #B0E0E6;
-	font-weight : bold;
-}
-Screen {
-  font-family: monospace;
-  padding-top: 3mm;
-  padding-left: 4pt;
-  padding-bottom: 2pt;
-  display: block;
-  margin-top: 12pt;
-  margin-bottom: 12pt;
-  white-space: pre;
-  color: inherit;
-  background-color: #FFCC99;
-   }
-div[type='heading'] persName > surname, div[type='heading'] persName[type='preferred'] > surname {
-    font-weight: bold;
-}
-div[type='heading'] persName[type='preferred'] {
-    font-style:normal;
-}
-div[type='heading'] orgName, div[type='heading'] orgName[type='preferred'] {
-    font-weight:bold;
-}
-
-orgName {
-    font-style: italic;
-}
-orgName[type='trans'] {
-    font-style: normal;
-}
-
-
-div[type='heading'] p persName[type='alt'] > surname, div[type='heading'] p persName[type='alt'] > forename {
-    font-style: italic;
-    font-weight: normal;
-}
-
-
-text[type='family']  list > head {
-    font-variant: small-caps;
-}
-        @supports(font-feature-settings: 'smcp') {
-    text[type='family']  list > head {
-        font-variant: normal;
-        -moz-font-feature-settings: "smcp";
-        -webkit-font-feature-settings: "smcp";
-        font-feature-settings: "smcp";
-    }
-}
-list > head {
-     font-variant: small-caps;
-}
-        @supports(font-feature-settings: 'smcp') {
-    list > head {
-        font-variant: normal;
-        -moz-font-feature-settings: "smcp";
-        -webkit-font-feature-settings: "smcp";
-        font-feature-settings: "smcp";
-    }
-}
-docAuthor {
-    text-transform:uppercase
-}
-        @supports(font-feature-settings: 'case', 'cpsp') {
-    docAuthor  {      
-        -moz-font-feature-settings: "case", "cpsp";
-        -webkit-font-feature-settings: "case", "cpsp";
-        font-feature-settings: "case", "cpsp";
-    }
-}
-figure, notatedMusic, tableFigure{
-    margin: 2em 0em 2em 2em;
-    font-style: italic;
-    
-}
-teiHeader {
-    display:none
-}
-pitch {
-   font-style: italic;
-}
-musNote {
-    font-style: italic;
-}
-titleStmt > title {
-    display:block   
-}
 titleStmt > title:before {
   content: "Title: ";
   }
+  titleStmt > title {
+    display:block   
+}
+/*End of header-related material*/
+/* CSS for turning lists into tables */
+list[type="table"] {
+    display:table;
+    text-align: center;
+  margin: 1em;
+    border:solid 1px #EEEFEE;
+    table-layout: fixed;
+     width: 95%;
+ border-collapse: collapse;
+}
+/*list[type="table"] seg[type="header"] {
+    display:inline-block;
+    text-align:center;
+  background-color: lightgray;
+}*/
+list[type="table"] item bibl, list[type="table"] item seg[type="header"] {
+   display:table-row;
+   border: 1px solid #EEEFEE; 
+   }
+   seg[type="header"] {
+       background-color:lightgray;
+   }
+
+list[type="table"] item seg[type="header"] > * {
+    display:table-cell;
+    width: 12.5%;
+   padding: .2em;
+ border: 1px solid #EEEFEE;
+text-align:left;
+    overflow: hidden; 
+}
+list[type="table"] item bibl > * {
+display:table-cell;
+overflow: hidden;
+width: 12.5%;
+ border: 1px solid #EEEFEE;
+  padding: .2em;
+  color: inherit;
+  text-align:left;
+  background-color:inherit;
+  } 
+/* End of list-table CSS */
