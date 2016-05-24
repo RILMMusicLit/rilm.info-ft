@@ -1,4 +1,4 @@
-/* =============================================================
+﻿/* =============================================================
     CSS2 specification for TEI in oXygen.
  derived from stylesheet byat
     Author: Adrian Edwards (adrian_edwards@yahoo.com)
@@ -93,7 +93,7 @@ body {
   display: block;
   font-size: 1em;
   font-weight: 400;
-  font-family: 'times new roman', FreeSerif, 'Bravura Text', serif;
+  font-family: Skolar, FreeSerif, 'Bravura Text', serif;
   font-variant-numeric: oldstyle-nums;
   font-feature-settings: "onum";
 }
