@@ -25,6 +25,35 @@ $LastChangedDate$, $LastChangedRevision$, $LastChangedBy$
     font-family: FreeSerif;
     src: url('http://rilm.info/ft/FreeSerif.woff') format('woff')
 }
+@font-face {
+    font-family: Skolar;
+    src: url('http://rilm.info/ft/SkolarPETEST-Regular.woff') format('woff')
+}
+@font-face {
+    font-family: Skolar;
+    font-style: italic;
+    src: url('http://rilm.info/ft/SkolarPETEST-Rtalic.woff') format('woff')
+}
+@font-face {
+font-face: Sirba;
+src url('http://rilm.info/ft/SirbaPE-Regular.otf') format('otf')
+}
+@font-face {
+font-face: Sirba;
+font-style: italic;
+src url('http://rilm.info/ft/SirbaPE-Italic.otf') format('otf')
+}
+@font-face {
+font-face: Sirba;
+font-weight: 700;
+src url('http://rilm.info/ft/SirbaPE-Bold.otf') format('otf')
+}
+@font-face {
+font-face: Sirba;
+font-style: italic;
+font-weight: 700;
+src url('http://rilm.info/ft/SirbaPE-BoldItalic.otf') format('otf')
+}
 * {
     line-height: 1.75em;
 }
