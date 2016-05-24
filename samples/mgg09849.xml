@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://rilm.info/ft/tei_mgg.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/mgg/tei_rilm.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title>Parry, Sir Hubert</title>
+				<respStmt>
+					<resp>Encoded by</resp>
+					<orgName>Aptara, Inc.</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Bärenreiter-Verlag Karl Vötterle GmbH &amp; Co. KG</publisher>
+				<pubPlace>Kassel</pubPlace>
+				<publisher>J. B. Metzlersche Verlagsbuchhandlung &amp; C.E. Poeschel Verlag GmbH</publisher>
+				<pubPlace>Stuttgart</pubPlace>
+				<pubPlace>Weimar</pubPlace>
+				<distributor>Répertoire International de Littérature Musicale</distributor>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<monogr>
+						<title>Die Musik in Geschichte und Gegenwart: Allgemeine Enzyklopädie der Musik</title>
+						<edition n="2">Zweite neubearbeitete Ausgabe</edition>
+						<editor>
+							<forename>Ludwig</forename>
+							<surname>Finscher</surname>
+						</editor>
+						<imprint>
+							<publisher>Bärenreiter</publisher>
+							<pubPlace>Kassel</pubPlace>
+							<publisher>Metzler</publisher>
+							<pubPlace>Stuttgart</pubPlace>
+							<date>2005</date>
+						</imprint>
+						<biblScope unit="part">Personenteil</biblScope>
+						<biblScope unit="vol">13</biblScope>
+						<biblScope unit="col" from="139">139</biblScope>
+						<biblScope unit="col" to="142">142</biblScope>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<editorialDecl>
+				<quotation marks="none">
+					<p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+				</quotation>
+				<hyphenation eol="some">
+					<p>End-of-line hyphenation silently removed where appropriate</p>
+				</hyphenation>
+			</editorialDecl>
+			<appInfo>
+				<application ident="oXygenXMLEditor" version="15.2" notAfter="2015-08-14">
+					<label>oXygen XML Editor</label>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="de">German</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<listChange>
+				<change when="2015-08-14" status="created"/>
+			</listChange>
+		</revisionDesc>
+	</teiHeader>
+	<text xml:id="mgg09849" type="person" xml:lang="de-DE-1901">
+		<body>
+			<div type="heading" xml:id="d1">
+				<p xml:id="p1"><cb n="139"/><rilmPerson><persName><surname>Parry</surname></persName>, <persName><forename>Sir</forename> (<addName>Charles</addName>) <forename>Hubert</forename> (<addName>Hastings</addName>)</persName></rilmPerson></p>
+			</div>
+			<div type="bio" xml:id="d2">
+				<p xml:id="p2"><rilmPerson><birth><date when="1848-02-27" when-custom="1848">27. Febr. 1848</date> in Bournemouth</birth>, <death><date when="1918-10-07" when-custom="1918">7. Okt. 1918</date> in Rustington (Sussex)</death>, <occupation>Komponist</occupation> und <occupation>Musikpädagoge</occupation></rilmPerson>. Parry wuchs als sechstes Kind aus erster Ehe des Malers und Kunstsammlers Thomas Gambier Parry auf Highnam Court nahe Gloucester auf. In Eton erhielt er Unterricht durch George Elvey an der St. George’s Chapel und erlangte den B.Mus. 1866. Am Exeter College in Oxford studierte er Jura und neuere Geschichte. Während des Sommers 1867 erhielt er Musikunterricht durch H. H. Pierson in Stuttgart. Nachdem er 1870 den Grad des B. A. erlangt hatte, wurde er bei <hi rend="italic">Lloyd’s of London</hi> angestellt. In London nahm Parry seine Studien wieder auf, zunächst bei W. Sterndale Bennett, dann bei E. Dannreuther. Die verstärkte Beschäftigung mit zeitgenössischer Instrumentalmusik führte von 1875 bis 1879 zur Komposition einer größeren Anzahl Kammermusikwerke für Dannreuthers Salonkonzerte. Durch dessen Einfluß wurde Parry begeisterter Wagnerianer, assistierte Dannreuther bei Wagners London-Reise 1877 und besuchte die <hi rend="italic">Bayreuther Festspiele</hi> 1876 zur UA des <hi rend="italic">Rings</hi> und 1882, um dreimal <hi rend="italic">Parsifal</hi> zu hören. Seine Wagner-Bewunderung fand ihren Niederschlag in einem <hi rend="italic">Concertstück</hi> (1877), der Ouvertüre <hi rend="italic">Guillem de Cabestanh</hi> (1878) und den <hi rend="italic">Scenes from Prometheus Unbound</hi> (1880).</p>
+				<p xml:id="p3">1877 gab Parry seine Stellung bei Lloyd’s auf. Ermutigt wurde er hierzu durch Dannreuther und G. Grove, der ihn als Subeditor des neuen <hi rend="italic">Dictionary of Music and Musicians</hi> engagierte; zu diesem Projekt steuerte er 123 Artikel bei. Seine musikwissenschaftliche Vielfalt (unter anderem bearbeitete er auch Werke von William Boyce und Henry Purcell) und seine kompositorischen Fähigkeiten überzeugten Grove, Parry 1883 als Gründungsprof. für Musikgeschichte an das Royal College of Music zu berufen; zu seinen Schülern gehörten A. Benjamin, H. Walford Davies, G. Holst, A. Somervell und R. Vaughan Williams. Im selben Jahr wurde ihm durch die Univ. Oxford eine Ehrendoktorwürde verliehen. Parrys erste Phase professionellen Musikerlebens von 1880 bis 1883 war geprägt durch die Komposition von Instrumentalmusik. Sein einziger Versuch auf dem Gebiet der Oper, <hi rend="italic">Guenever</hi>, wurde auf Grund des schwachen Librettos und Parrys mangelnder Bühnenerfahrung 1886 von C. Rosa abgelehnt. In der Folgezeit komponierte Parry für die Bühne allenthalben Musik zu Aufführungen griechischer Dramen in Oxford und Cambridge. Ein erster großer Überraschungserfolg auf einem anderen Gebiet gelang ihm 1887 mit der Ode <hi rend="italic">Blest Pair of Sirens</hi>. Es folgten diverse Kompositionsaufträge für Chorfestivals. Zu Königin Victorias diamantenem Thronjubiläum 1897 komponierte er ein Magnificat. Durch seine Verdienste auf dem Gebiet der symphonischen Chorkomposition wurde Parry als inoffizieller Hofkomponist angesehen. Bereits ab 1888 hatte er an der Royal Institution Vorträge gehalten, 1895 folgte er Grove als Rektor des Royal College of Music, wurde 1898 zum Ritter geschlagen (1902 folgte die Ernennung zum <hi rend="italic">Baronet</hi>) und 1900 Nachfolger J. Stainers als Musikprof. der Univ. Oxford. Gesundheitliche Probleme zwangen ihn, diese Professur 1908 aufzugeben; bis zu seinem Tod blieb er Rektor des Royal College of Music.</p>
+				<p xml:id="p4">Zwischen 1898 und 1908 komponierte Parry eine Reihe <q rend="italic"><q rend="single">ethical</q> oratorios</q> (J. Dibble 1992, S. 355ff.); ihr vergleichsweise geringer Erfolg ließ ihn mit der <hi rend="italic">Ode on the Nativity</hi> (1912) und <hi rend="italic">The Chivalry of the Sea</hi> (1916) zu traditionelleren Themen zurückkehren. Durch die Initiativen der <hi rend="italic">Philharmonic Society</hi> befaßte sich Parry auch wieder mit Orchestermusik, revidierte seine vierte und komponierte seine fünfte Symphonie sowie seine einzige Symphonische Dichtung <hi rend="italic">From Death to Life</hi> (1914). Sein letztes substantielles Werk sind die sechs Motetten <hi rend="italic">Songs of Farewell</hi> (1916–1918).</p>
+			</div>
+			<div type="works" xml:id="d3">
+				<head>Werke</head>
+			<div type="section" xml:id="d4" n="A">
+				<head n="A">Vokalmusik <note>(Auswahl; veröff. in London)</note></head>
+			<div type="section" xml:id="d5" n="I">
+				<head n="I">Chorwerke mit Begleitung</head>
+				<list>
+					<item><bibl xml:id="b8"><title>In My Distress</title>, Anthem (<date>1863</date>)</bibl></item>
+					<item><bibl xml:id="b9">Magnificat und <title rend="quoted-italic">Nunc dimittis</title> A-Dur für Chor und Orgel (<date>1864</date>)</bibl></item>
+					<item><bibl xml:id="b10"><title>Blessed is He</title>, Anthem, <date>1865</date></bibl></item>
+					<item><bibl xml:id="b11"><cb n="140"/><title>Morning, Communion and Evening Service</title> D-Dur für Chor und Orgel, <date>1868/69</date></bibl></item>
+					<item><bibl xml:id="b12"><title rend="quoted-italic">Kyrie eleison</title>, Fuge für 8st. Chor und Orgel (<date>1867</date>)</bibl></item>
+					<item><bibl xml:id="b13"><title>O Lord Thou hast Cast Us out</title> (Bibel), Kant. für Chor und Orch., <date>1867</date></bibl></item>
+					<item><bibl xml:id="b14"><title>Scenes from Prometheus Unbound</title> (Percy Bysshe Shelley), dramat. Kant. für 4 Solost., Chor und Orch., <date>1880</date></bibl></item>
+					<item><bibl xml:id="b15"><title>Ode from the Contention of Ajax and Ulysses</title> (James Shirley) für Chor und Orch., <date>1885</date></bibl></item>
+					<item><bibl xml:id="b16"><title>Blest Pair of Sirens</title> (John Milton), Ode für dass., <date>1887</date></bibl></item>
+					<item><bibl xml:id="b17"><title>Judith, or the Regeneration of Manasseh</title> (Apokryphen/Parry), Or. für 4 Solost., Chor und Orch., <date>1888</date></bibl></item>
+					<item><bibl xml:id="b18"><title>Ode on St. Cecilia’s Day</title> (Alexander Pope) für S, B, Chor und Orch., <date>1889</date></bibl></item>
+					<item><bibl xml:id="b19"><title>L’Allegro ed il Pensieroso</title> (Milton), Kant. für dass., <date>1890</date></bibl></item>
+					<item><bibl xml:id="b20"><title>De Profundis</title>, Ps. 130 für S, 12st. Chor und Orch., <date>1891</date></bibl></item>
+					<item><bibl xml:id="b21"><title>Eton</title> (Algernon C. Swinburne), Ode für Chor und Orch., <date>1891</date></bibl></item>
+					<item><bibl xml:id="b22"><title>Job</title> (Bibel/Parry), Or. für 4 Solost., Chor und Orch., <date>1892</date> (Kl.A.), <date>1898</date> (Part.)</bibl></item>
+					<item><bibl xml:id="b23"><title>The Lotos-Eaters</title> (Alfred Tennyson), chorisches Lied für S, Chor und Orch., <date>1892</date></bibl></item>
+					<item><bibl xml:id="b24"><title>King Saul</title> (Bibel/Parry), Or. für 4 Solost., Chor und Orch., <date>1894</date></bibl></item>
+					<item><bibl xml:id="b25"><title>Invocation to Music</title> (Robert Bridges), Ode zu Ehren H. Purcells für 3 Solost., Chor und Orch., <date>1895</date></bibl></item>
+					<item><bibl xml:id="b26"><title>A Song of Darkness and Light</title> (Bridges), Ode für S, Chor und Orch., <date>1898</date></bibl></item>
+					<item><bibl xml:id="b27"><title>The North Wind</title> (William Ernest Henley), für B und Orch., <date>1899</date></bibl></item>
+					<item><bibl xml:id="b28"><title>The Soldier’s Tent</title> (aus <title>The Bard of Dimbovitza</title>, übs. von <editor role="translator"><forename><abbr>A.</abbr></forename> <surname>Strettell</surname></editor>/<editor role="translator"><forename><abbr>C.</abbr></forename> <surname>Sylva</surname></editor>), Scena für Bar. und Orch., <date>1901</date></bibl></item>
+					<item><bibl xml:id="b29"><title rend="quoted-italic">Te Deum laudamus</title> F-Dur für S, B, Chor und Orch., <date>1900</date>; rev. mit engl. Text, <date>1913</date></bibl></item>
+					<item><bibl xml:id="b30"><title>Ode to Music</title> (Arthur Christopher Benson) für 5 Solost., Chor und Orch., <date>1901</date></bibl></item>
+					<item><bibl xml:id="b31"><title>I was Glad When They Said unto Me</title>, Ps. 122, Coronation Anthem für Edward VII. für Chor und Orgel, <date>1902</date>; rev. für George V. (<date>1911</date>)</bibl></item>
+					<item><bibl xml:id="b32"><title>War and Peace</title> (Benson/Parry), Symph. Ode für 4 Solost., Chor und Orch., <date>1903</date></bibl></item>
+					<item><bibl xml:id="b33"><title>Voces clamantium – The Voices of Them That Cry</title> (Bibel/Parry), Mot. für S, B, Chor und Orch., <date>1903</date></bibl></item>
+					<item><bibl xml:id="b34"><title>The Love That Casteth out Fear</title> (Bibel/Parry), Sinfonia sacra für Chor und Orch., <date>1904</date></bibl></item>
+					<item><bibl xml:id="b35"><title>The Pied Piper of Hamelin</title> (Robert Browning), Kant. für T, B, Chor und Orch., <date>1905</date> (Kl.A.), <date>1906</date> (Part.)</bibl></item>
+					<item><bibl xml:id="b36"><title>The Soul’s Ransom</title> (Bibel/Parry), Sinfonia sacra für S, B, Chor und Orch., <date>1906</date></bibl></item>
+					<item><bibl xml:id="b37"><title>The Vision of Life</title> (Parry), Symph. Gedicht für dass., <date>1907</date>; rev. <date>1914</date></bibl></item>
+					<item><bibl xml:id="b38"><title>Beyond These Voices There is Peace</title> (Bibel/Parry) für dass., <date>1908</date></bibl></item>
+					<item><bibl xml:id="b39"><title>Eton Memorial Ode</title> (Bridges) für Chor und Orch., <date>1908</date></bibl></item>
+					<item><bibl xml:id="b40">Te Deum D-Dur für dass., <date>1911</date> (zur Krönung von George V. in Westminster Abbey)</bibl></item>
+					<item><bibl xml:id="b41"><title>Ode on the Nativity</title> (William Dunbar) für S, Chor und Orch., <date>1912</date></bibl></item>
+					<item><bibl xml:id="b42"><title>God is Our Hope</title>, Ps. 46, Anthem für B, Doppelchor und Orch., <date>1913</date></bibl></item>
+					<item><bibl xml:id="b43"><title>Jerusalem</title> (William Blake) für Chor und Orch., <date>1916</date></bibl></item>
+					<item><bibl xml:id="b44"><title>England</title> (William Shakespeare) für Chor und Orch., <date>1919</date></bibl></item>
+				</list>
+			</div>
+			<div type="section" xml:id="d6" n="II">
+				<head n="II">Chöre a cappella</head>
+				<list>
+					<item><bibl xml:id="b45"><title><q rend="left-double"/>Tell Me Where is Fancy Bred</title> (Shakespeare) für 4st. Chor (<date>1864</date>)</bibl></item>
+					<item><bibl xml:id="b46"><title rend="quoted-italic">Fair daffodils</title> (Robert Herrick), Madrigal für 5st. Chor, <date>1866</date></bibl></item>
+					<item><bibl xml:id="b47"><title>Sorrow and Pain</title> (Lady C. Elliott), Meditation für 6st. Chor, <date>1869</date></bibl></item>
+					<item><bibl xml:id="b48">3 Trios für FrCh., <date>1875</date></bibl></item>
+					<item><bibl xml:id="b49"><title>6 Lyrics from an Elizabethan Song Book</title> für 4–6st. Chor, <date>1897</date></bibl></item>
+					<item><bibl xml:id="b50"><title>6 Modern Lyrics</title> für 4st. Chor, <date>1897</date></bibl></item>
+					<item><bibl xml:id="b51">8 Four-part Songs, <date>1898</date></bibl></item>
+					<item><bibl xml:id="b52"><title>Who Can Dwell with Greatness</title> (A. Dobson) für 5st. Chor (<date>1899</date>), L. <date>1899</date></bibl></item>
+					<item><bibl xml:id="b53">7 Part-songs für 3st. Chor, <date>1910</date></bibl></item>
+					<item><bibl xml:id="b54"><title>Songs of Farewell</title>, <date>1916–1918</date></bibl></item>
+					<item><bibl xml:id="b55">Hymns u. a. mehrst. Gsge.</bibl></item>
+				</list>
+			</div>
+			<div type="section" xml:id="d7" n="III">
+				<head n="III">Lieder für Solostimme und Klavier</head>
+				<list>
+					<item><bibl xml:id="b56"><title rend="quoted-italic">Why Does Azure Deck the Sky</title> (Moore) (<date>1865</date>), L. <date>1866</date></bibl></item>
+					<item><bibl xml:id="b57"><title rend="quoted-italic">Angel Hosts, Sweet Love, Befriend Thee</title> (Francis Hervey), <date>1867</date></bibl></item>
+					<item><bibl xml:id="b58"><title>The River of Life</title> (Earl of Pembroke), <date>1870</date></bibl></item>
+					<item><bibl xml:id="b59">[74] <title>English Lyrics</title>, 12 sets, <date>1885–1920</date></bibl></item>
+					<item><bibl xml:id="b60"><title>A  Garland of</title> [6] <title>Shakespearian and Other Old-fashioned Songs</title>, <date>1874</date></bibl></item>
+					<item><bibl xml:id="b61">3 <title>Odes of Anacreon</title> (übs. von <editor role="translator">Moore</editor>), <date>1880</date>, Nr. 2 orchestriert (<date>1891</date>)</bibl></item>
+					<item><bibl xml:id="b62">4 Sonnette (Shakespeare, dt. Übs. von <editor role="translator"><forename><abbr>F.</abbr></forename> <surname>Bodenstedt</surname></editor>), <date>1887</date></bibl></item>
+					<item><bibl xml:id="b63"><title>The Maid of Elsinore</title> (H. Boulton), L. <date>1891</date></bibl></item>
+					<item><bibl xml:id="b64"><title>Newfoundland</title> (Cavendish Boyle), 1. Fassung, <date>1904</date>, 2. Fassung (<date>1904</date>?)</bibl></item>
+					<item><bibl xml:id="b65"><title>Von edler Art</title> (aus einem Nürnberger Liederbuch, 1549, übs. von <editor role="translator"><forename>Paul</forename> <surname>England</surname></editor>), <date>1906</date></bibl></item>
+					<item><bibl xml:id="b66"><title rend="quoted-italic">Fear no more the Heat of the Sun</title> (Shakespeare), L. <date>1906</date></bibl></item>
+					<item><bibl xml:id="b67"><title>The Laird of Cockpen</title> (Lady Nairn) für Bar. und Kl., <date>1907</date></bibl></item>
+				</list>
+			</div>
+			</div>
+			<div type="section" xml:id="d8" n="B">
+				<head n="B">Bühnenwerke</head>
+				<list>
+					<item><bibl xml:id="b68"><title>The Birds</title> (Aristophanes, engl. von Arthur W. Verrall), Schauspielmusik (<date>1883</date> Cambridge; rev. <date>1903</date> Cambridge), L. <date>1885</date>, rev. Cambridge <date>1903</date></bibl></item>
+					<item><bibl xml:id="b69"><title>Guenever</title> (Una Taylor, dt. von Friedrich Althaus), Oper (<date>1884–1886</date>, rev. <date>1886</date>)</bibl></item>
+					<item><bibl xml:id="b70"><title>The Frogs</title> (Aristophanes, engl. von D. G. Hogarth/A. D. Godley), Schauspielmusik (<date>1892</date> Oxford; rev. <date>1909</date> ebd.), Lpz. <date>1892</date></bibl></item>
+					<item><bibl xml:id="b71"><title>Hypatia</title> (Stuart Ogilvie), dass. (<date>1893</date> London, Haymarket Theatre); auch als Suite für Orch.</bibl></item>
+					<item><bibl xml:id="b72"><title>A Repentance</title> (Pearl Mary Teresa Craigie), dass. (<date>1899</date> London, St James’s Theatre)</bibl></item>
+					<item><bibl xml:id="b73"><title>Agamemnon</title> (Aeschylus, engl. von H. J. Edwards), dass. (<date>1900</date> Cambridge), L. <date>1900</date></bibl></item>
+					<item><bibl xml:id="b74"><title>The Clouds</title> (Aristophanes, engl. von Godley), dass. (<date>1905</date> Oxford), Lpz. <date>1905</date></bibl></item>
+					<item><bibl xml:id="b75"><title>Proserpine</title> (Shelley), Ballett (<date>1912</date> London, Haymarket Theatre)</bibl></item>
+					<item><bibl xml:id="b76"><title>The Acharnians</title> (Aristophanes), Schauspielmusik (<date>1914</date> Oxford), L. <date>1914</date></bibl></item>
+				</list>
+			</div>
+			<div type="section" xml:id="d9" n="C">
+				<head n="C">Instrumentalmusik <note>(Auswahl; veröffentlicht in London)</note></head>
+			<div type="section" xml:id="d10" n="I">
+				<head n="I">Orchesterwerke</head>
+				<list>
+					<item><bibl xml:id="b77">Klavierkonz. Fis-Dur (<date>1878–1880</date>, rev. <date>1884</date> und <date>1895</date>)</bibl></item>
+					<item><bibl xml:id="b78">Symph. Nr. 1 G-Dur (<date>1880–1882</date>)</bibl></item>
+					<item><bibl xml:id="b79">dass. Nr. 2 (<title>Cambridge</title>) F-Dur (<date>1882/83</date>, rev. <date>1887</date>, <date>1895</date>), <date>1906</date></bibl></item>
+					<item><bibl xml:id="b80"><title>Suite moderne (Suite symphonique)</title> (<date>1886</date>; rev. <date>1892</date>)</bibl></item>
+					<item><bibl xml:id="b81">Symph. Nr. 3 (<title>English</title>) C-Dur (<date>1887–1889</date>, rev. <date>1895</date>, <date>1902</date>), <date>1907</date></bibl></item>
+					<item><bibl xml:id="b82">dass. Nr. 4 e-Moll (<date>1889</date>; rev. als <title>Finding the Way</title> <date>1909/10</date>), <date>1921</date></bibl></item>
+					<item><bibl xml:id="b83"><title>An English Suite</title> für StrOrch. (<date>1890–1918</date>), <cb n="141"/><date>1921</date></bibl></item>
+					<item><bibl xml:id="b84"><title>Overture to an Unwritten Tragedy</title> a-Moll (<date>1893</date>; rev. <date>1894</date>, <date>1905</date>), <date>1906</date></bibl></item>
+					<item><bibl xml:id="b85"><title>Lady Radnor’s Suite</title> für StrOrch. (<date>1894</date>), <date>1902</date>; für Kl., <date>1905</date>; für V. und Kl., <date>1915</date></bibl></item>
+					<item><bibl xml:id="b86"><title>Elegy for Brahms</title> a-Moll (<date>1897</date>)</bibl></item>
+					<item><bibl xml:id="b87"><title>Symphonic Variations</title> e-Moll, <date>1897</date></bibl></item>
+					<item><bibl xml:id="b88"><title>Symphonic Fantasia <q rend="single">1912</q></title> (Symph. Nr. 5) h-Moll (<date>1912</date>), <date>1922</date></bibl></item>
+					<item><bibl xml:id="b89"><title>From Death to Life</title>, Symph. Dichtung b-Moll/B-Dur (<date>1914</date>, rev. <date>1915</date>)</bibl></item>
+				</list>
+			</div>
+			<div type="section" xml:id="d11" n="II">
+				<head n="II">Kammermusik</head>
+				<list>
+					<item><bibl xml:id="b90">3 StrQu. g (<date>1867</date>), C (<date>1868</date>), G (<date>1878–1880</date>), <date>1995</date></bibl></item>
+					<item><bibl xml:id="b91">2 Son. d (<date>1875</date>), D (<date>1888/89</date>, rev. <date>1894</date>) für V. und Kl.</bibl></item>
+					<item><bibl xml:id="b92">3 Klaviertrios e (<date>1877</date>), Lpz. <date>1879</date>; h, <date>1884</date>, G (<date>1889/90</date>, rev. <date>1893</date>)</bibl></item>
+					<item><bibl xml:id="b93">Nonett B-Dur für Bläser (<date>1877</date>)</bibl></item>
+					<item><bibl xml:id="b94"><title>Fantasie Son. in einem Satz</title> h-Moll für V. und Kl. (<date>1878</date>)</bibl></item>
+					<item><bibl xml:id="b95">Klavierqu. As-Dur (<date>1879</date>), <date>1884</date></bibl></item>
+					<item><bibl xml:id="b96">Son. A-Dur für Vc. und Kl. (<date>1879/80</date>), <date>1883</date></bibl></item>
+					<item><bibl xml:id="b97">StrQnt. Es-Dur (<date>1883</date>, rev. <date>1896</date>, <date>1902</date>), L. <date>1909</date></bibl></item>
+					<item><bibl xml:id="b98">Werke für V. und Kl.</bibl></item>
+				</list>
+			</div>
+			<div type="section" xml:id="d12" n="III">
+				<head n="III">Klaviermusik</head>
+				<list>
+					<item><bibl xml:id="b99">Son. f-Moll für Kl. 4hd. (<date>1865</date>)</bibl></item>
+					<item><bibl xml:id="b100"><title>Sonnets and Songs without Words</title>, 3 H., <date>1869</date>, <date>1875</date>, <date>1877</date></bibl></item>
+					<item><bibl xml:id="b101"><title>Charakterbilder. Seven Ages of Mind. Studies</title>, <date>1872</date></bibl></item>
+					<item><bibl xml:id="b102"><title>Großes Duo</title> e-Moll für 2 Kl. (<date>1875–1877</date>), Lpz. <date>1877</date></bibl></item>
+					<item><bibl xml:id="b103">Son. A-Dur (<date>1876/77</date>), <date>1878</date></bibl></item>
+					<item><bibl xml:id="b104">Son. F-Dur, <date>1877</date></bibl></item>
+					<item><bibl xml:id="b105"><title>Theme and Nineteen Var.</title> d-Moll (<date>1878</date>), <date>1885</date></bibl></item>
+					<item><bibl xml:id="b106"><title>Characteristic Popular Tunes of the British Isles</title> für Kl. 4hd., 2 Bücher, <date>1885</date></bibl></item>
+					<item><bibl xml:id="b107">[10] <title>Shulbrede Tunes</title> (<date>1911–1914</date>), L. <date>1914</date></bibl></item>
+					<item><bibl xml:id="b108"><title>Hands across the Centuries</title>, Suite (<date>1916–1918</date>), <date>1918</date></bibl></item>
+					<item><bibl xml:id="b109">diverse kleine Klavierstücke</bibl></item>
+				</list>
+			</div>
+			<div type="section" xml:id="d13" n="IV">
+				<head n="IV">Orgelwerke</head>
+				<list>
+					<item><bibl xml:id="b110"><title>Grand Fugue with 3 Subjects</title> G-Dur (<date>1865</date>)</bibl></item>
+					<item><bibl xml:id="b111"><title>3 Chorale Fantasias</title> (<date>1911–1914</date>), L. <date>1915</date></bibl></item>
+					<item><bibl xml:id="b112">7 <title>Chorale Preludes</title>, H. 1 und 2, <date>1912</date> und <date>1916</date></bibl></item>
+					<item><bibl xml:id="b113"><title>Fantasia and Fugue</title> G-Dur, <date>1913</date></bibl></item>
+					<item><bibl xml:id="b114"><title>Toccata and Fugue <q rend="single">The Wanderer</q></title> G-Dur/e-Moll, <date>1921</date></bibl></item>
+				</list>
+			</div>
+			</div>
+			<div type="section" xml:id="d14" n="D">
+				<head n="D">Edition</head>
+				<list>
+					<item><bibl xml:id="b115"><title>Arion. A Collection of Madrigals <note>[…]</note> etc. by Ancient Composers</title>, L. <date>1899</date> (mit W. B. Squire/L. Benson)</bibl></item>
+				</list>
+			</div>
+			<div type="section" xml:id="d15" n="E">
+				<head n="E">Schriften <note>(veröff. in London, sofern nicht anders angegeben)</note></head>
+				<list>
+					<item><bibl xml:id="b116">123 Artikel in <title>A Dictionary of Music and Musicians</title>, hrsg. von <editor><forename><abbr>G.</abbr></forename> <surname>Grove</surname></editor>, <date>1890</date></bibl></item>
+					<item><bibl xml:id="b117"><title>On Some Bearings of the Historical Method upon Music</title>, in: <title rend="roman">PMA</title> <biblScope unit="vol">11</biblScope>, <date>1884/85</date>, <biblScope unit="pp">1–9</biblScope></bibl></item>
+					<item><bibl xml:id="b118"><title>Studies of Great Composers</title>, <date>1886</date>, <edition rend="sup">25</edition><date>ca. 1950</date></bibl></item>
+					<item><bibl xml:id="b119"><title>The Art of Music</title>, <date>1893</date>; erw. <title>The Evolution of the Art of Music</title>, <date>1896</date>, <edition rend="sup">11</edition><date>1950</date></bibl></item>
+					<item><bibl xml:id="b120"><title>Summary of the History and Development of Mediaeval and Modern European Music</title>, <date>1893</date>, <edition rend="sup">2</edition><date>1904</date></bibl></item>
+					<item><bibl xml:id="b121"><title>Purcell</title>, in: <title rend="roman">National Review</title> <biblScope unit="vol">26</biblScope>, <date>1895/96</date>, <biblScope unit="pp">339–350</biblScope></bibl></item>
+					<item><bibl xml:id="b122"><title>The Essentials of Church Music</title>, in: <title rend="roman">Church Congress 1899</title>, <biblScope unit="pp">416–420</biblScope></bibl></item>
+					<item><bibl xml:id="b123"><title>The Music of the Seventeenth Century</title>, <date>1902</date> (= <series><title subtype="secondary">OHM</title> <biblScope unit="vol">3</biblScope></series>), rev. von <editor role="reviser"><forename><abbr>E.</abbr></forename> <forename><abbr>J.</abbr></forename> <surname>Dent</surname></editor> <edition rend="sup">2</edition><date>1938</date></bibl></item>
+					<item><bibl xml:id="b124"><title>Johann Sebastian Bach: The Story of the Development of a Great Personality</title>, N.Y./L. <date>1909</date>, rev. <edition rend="sup">8</edition><date>1946</date></bibl></item>
+					<item><bibl xml:id="b125"><title>How Modern Song Grew up</title>, in: <title rend="roman">MT</title> <biblScope unit="vol">52</biblScope>, <date>1911</date>, <biblScope unit="pp">11–15</biblScope></bibl></item>
+					<item><bibl xml:id="b126"><title>The Meaning of Ugliness in Art</title>, in: <meeting>Kgr.Ber. IMS London <date>1911</date></meeting>, <date>1912</date>, <date>77–83</date></bibl></item>
+					<item><bibl xml:id="b127"><title>Style in Musical Art</title>, <date>1911</date>, <edition rend="sup">2</edition><date>1924</date></bibl></item>
+					<item><bibl xml:id="b128"><title>Things That Matter</title>, in: <title rend="roman">MQ</title> <biblScope unit="vol">1</biblScope>, <date>1915</date>, <biblScope unit="pp">313–328</biblScope></bibl></item>
+					<item><bibl xml:id="b129"><title>The Significance of Monteverde</title>, in: <title rend="roman">PMA</title> <biblScope unit="vol">42</biblScope>, <date>1915/16</date>, <biblScope unit="pp">51–67</biblScope></bibl></item>
+					<item><bibl xml:id="b130"><title>Instinct and Character</title> (Ms., <date>ca. 1915–1918</date>), GB-Lbl, GB-Lcm, GB-Ob und GB-Shulbrede Priory (Sussex)</bibl></item>
+					<item><bibl xml:id="b131"><title>College Addresses, Delivered to Pupils of the Royal College of Music</title>, hrsg. von <editor><forename><abbr>H.</abbr></forename> <forename><abbr>C.</abbr></forename> <surname>Colles</surname></editor>, <date>1920</date></bibl></item>
+					<item><bibl xml:id="b132">unveröff. Vortragsskripte, GB-Ob und GB-Lcm</bibl></item>
+				</list>
+			</div>
+			</div>
+			<div type="criticism" xml:id="d16">
+				<p xml:id="p5">Auch wenn Parry keine so umfangreiche Schülerriege vorweisen kann wie sein Kollege am Royal College of Music Ch. V. Stanford, übte er doch auf verschiedene Weisen intensiv Einfluß auf die Musikentwicklung seiner Zeit aus. Als Lehrer von Holst und Vaughan Williams und als Rektor des Royal College of Music prägte er ganze Generationen angehender Komponisten und Musiker, bes. durch seinen ausgeprägten sensiblen Humanismus und Liberalismus, der gleichwohl in der Musik wie im Leben Aspekte des Traditionellen nicht über Bord warf (hierin wurde er Vorbild u. a. für H. Howells, G. Dyson und G. Finzi). Er schätzte E. Smyths Einsatz für die Gleichberechtigung der Frau, war ein begeisterter Segler (<hi rend="italic">Toccata and Fugue</hi> für Orgel [1912–1918] ist nach seiner Yacht <hi rend="italic">The Wanderer</hi> benannt), balancierte seine Position zwischen Hedonismus (<hi rend="italic">The Lotos-Eaters</hi>, (1892) und intensiver, doch nicht institutionsgebundener Religiosität und tiefer Moralität; in Oxford kam er mit wesentlichen Strömungen der britischen Philosophie- und Kunstentwicklung in Kontakt, die großen Einfluß auf ihn hatten. In seinem musikalischen Credo stand die deutsche Musik stets über der aller anderen Länder, doch versuchte er auch bei Werken, die er nicht schätzen konnte, deren Eigenart zu würdigen. Seine musikalische Neugier blieb bis zu seinem Lebensende ungebrochen, noch in hohem Alter befaßte er sich mit dem Schaffen von A. Schönberg und I. Stravinskij.</p>
+				<p xml:id="p6">Vor allem A. Boults Einspielungen in den 1970er Jahren initiierten eine intensive Wiederbelebung von Parrys Œuvre. Seine Musik <cb n="142"/>meidet weitgehend laute Effekte, ist bei Vokalkompositionen stets eng textgebunden und besitzt gelegentlich eine Energie, die manche Mängel im Bereich harmonischer und melodischer Erfindung kompensiert. <hi rend="italic">Jerusalem</hi> (1916) hat regelrechte Popularität erlangt und wird jährlich, wenngleich in E. Elgars opulenterem Orchestergewand, bei der <hi rend="italic">Last Night of the Proms</hi> gegeben. Lange stark durch Mendelssohn Bartholdy und Schumann, später durch Brahms, zwischenzeitlich auch durch Wagner beeinflußt, blieb als bedeutendstes Merkmal seiner Kompositionstechnik eine große Ernsthaftigkeit und Integrität, die dem Schönheitsideal des Viktorianismus nahe steht. Die Möglichkeiten zyklischer Formgestaltung erkundete Parry schon früh, etwa in seiner <hi rend="italic">Fantasie Sonate</hi> (1878) und dem Klaviertrio h-Moll (1884), aber auch in der zweiten Hälfte von <hi rend="italic">Job</hi> (1892) oder der Symphonischen Dichtung <hi rend="italic">From Death to Life</hi> (1914, rev. 1915). In seinen besten Werken, etwa dem <title><q rend="single">Great</q>Evening Service</title> D-Dur (1881), dem <hi rend="italic">Theme and Nineteen Variations</hi> d-Moll (1878), der fünften Symphonie (1912), den <hi rend="italic">Songs of Farewell</hi> (1916–1918) sowie einigen seiner Lieder überwindet Parry die Beliebigkeit harmonischer Floskeln, wenngleich er auch hier strikt diatonisches Denken nicht verläßt.</p>
+			</div>
+			<div type="ography" xml:id="d17">
+				<head>Literatur</head>
+				<list>
+					<item><bibl xml:id="b139"><title>The R•C•M Magazine</title> <biblScope unit="vol">15</biblScope>, <date>1918</date>, <biblScope unit="issue">H. 1</biblScope> (= <series><title subtype="secondary">Parry-Heft</title></series>)</bibl></item>
+					<item><bibl xml:id="b140"><author><forename><abbr>A.</abbr></forename> <forename><abbr>C.</abbr></forename> <surname>Mackenzie</surname></author>, <title>H. H. Parry. His Works and Place among British Composers</title>, in: <title rend="roman">RAM Club Magazine</title> <biblScope unit="vol">56</biblScope>, <date>1919</date>, <biblScope unit="pp">7–12</biblScope></bibl></item>
+					<item><bibl xml:id="b141"><author><forename><abbr>J.</abbr></forename> <forename><abbr>A.</abbr></forename> <surname>Fuller-Maitland</surname></author>, <title>H. Parry</title>, in: <title rend="roman">MQ</title> <biblScope unit="vol">5</biblScope>, <date>1919</date>, <biblScope unit="pp">299–307</biblScope></bibl></item>
+					<item><bibl xml:id="b142"><author><forename><abbr>R.</abbr></forename> <forename><abbr>O.</abbr></forename> <surname>Morris</surname></author>, <title>H. Parry</title>, in: <title rend="roman">ML</title> <biblScope unit="vol">1</biblScope>, <date>1920</date>, <biblScope unit="pp">94-103</biblScope></bibl></item>
+					<item><bibl xml:id="b143"><author><forename><abbr>D.</abbr></forename> <surname>Ponsonby</surname></author>, <title>Pages from the Note-Books of H. Parry</title>, in: <title rend="roman">dass.</title>, <biblScope unit="pp">318–329</biblScope></bibl></item>
+					<item><bibl xml:id="b144"><author><forename><abbr>H.</abbr></forename> <forename><abbr>C.</abbr></forename> <surname>Colles</surname></author>, <title>Parry as a Song-writer</title>, in: <title rend="roman">MT</title> <biblScope unit="vol">62</biblScope>, <date>1921</date>, <biblScope unit="pp">82–87</biblScope>, <biblScope unit="pp">155–158</biblScope>, <biblScope unit="pp">235–238</biblScope></bibl></item>
+					<item><bibl xml:id="b145"><author><forename><abbr>C.</abbr></forename> <forename><abbr>L.</abbr></forename> <surname>Graves</surname></author>, <title>H. Parry – His Life and Works</title>, <biblScope unit="vol">2 Bde.</biblScope>, <pubPlace>L.</pubPlace> <date>1926</date></bibl></item>
+					<item><bibl xml:id="b146"><author><forename><abbr>G.</abbr></forename> <forename><abbr>M.</abbr></forename> <surname>Greene</surname></author>, <title>Two Witnesses. A Personal Recollection of H. Parry and Friedrich von Hügel</title>, <pubPlace>L.</pubPlace> <pubPlace>u. a.</pubPlace> <date>1930</date></bibl></item>
+					<item><bibl xml:id="b147"><author><forename><abbr>J.</abbr></forename> <forename><abbr>A.</abbr></forename> <surname>Fuller-Maitland</surname></author>, <title>The Music of Parry and Stanford</title>, <pubPlace>Cambridge</pubPlace> <date>1934</date></bibl></item>
+					<item><bibl xml:id="b148"><author><forename><abbr>A.</abbr></forename> <forename><abbr>E.</abbr></forename> <forename><abbr>F.</abbr></forename> <surname>Dickinson</surname></author>, <title>The Neglected Parry</title>, in: <title rend="roman">MT</title> <biblScope unit="vol">90</biblScope>, <date>1949</date>, <biblScope unit="pp">108-111</biblScope></bibl></item>
+					<item><bibl xml:id="b149"><author><forename><abbr>W.</abbr></forename> <forename>Fiedler</forename> <surname>Chappell</surname></author>, <title>The Late Nineteenth Century Renaissance of Music in England (with Special Reference to the Work of Parry and Stanford)</title>, Magisterarbeit <pubPlace>Melbourne</pubPlace> <date>1963</date> (mschr.)</bibl></item>
+					<item><bibl xml:id="b150"><author><forename><abbr>G.</abbr></forename> <surname>Beechey</surname></author>, <title>Parry and His Organ Music</title>, in: <title rend="roman">MT</title> <biblScope unit="vol">109</biblScope>, <date>1968</date>, <biblScope unit="pp">956–958</biblScope> und <biblScope unit="pp">1057–1059</biblScope></bibl></item>
+					<item><bibl xml:id="b151"><author><forename><abbr>J.</abbr></forename> <forename><abbr>C.</abbr></forename> <surname>Dibble</surname></author>, <title>H. Parry and English Diatonic Dissonance</title>, in: <title rend="roman">British Music Society Journal</title> <biblScope unit="vol">5</biblScope>, <date>1983</date>, <biblScope unit="pp">58–71</biblScope></bibl></item>
+					<item><bibl xml:id="b152"><author><forename><abbr>J.</abbr></forename> <forename><abbr>C.</abbr></forename> <surname>Dibble</surname></author>, <title>Parry and Elgar: a New Perspective</title>, in: <title rend="roman">MT</title> <biblScope unit="vol">125</biblScope>, <date>1984</date>, <biblScope unit="pp">639–643</biblScope></bibl></item>
+					<item><bibl xml:id="b153"><author><forename><abbr>S.</abbr></forename> <surname>Banfield</surname></author>, <title>Sensibility and English Song</title>, <pubPlace>Cambridge</pubPlace> <date>1985</date>, bes. <biblScope unit="pp">19–25</biblScope> und <biblScope unit="pp">137–138</biblScope></bibl></item>
+					<item><bibl xml:id="b154"><author><forename><abbr>J.</abbr></forename> <forename><abbr>C.</abbr></forename> <surname>Dibble</surname></author>, <title>The Music of H. Parry: a Critical and Analytical Study</title>, Diss. <orgName type="uni">Southampton</orgName> <date>1986</date>, rev. <title>H. H. Parry. His Life and Music</title>, <pubPlace>Oxd.</pubPlace> <pubPlace>u. a.</pubPlace> <date>1992</date></bibl></item>
+					<item><bibl xml:id="b155"><author><forename><abbr>M.</abbr></forename> <forename><abbr>J.</abbr></forename> <surname>Allis</surname></author>, <title>Parry and Solo Song Composition</title>, in: <title rend="roman">MR</title> <biblScope unit="vol">52</biblScope>, <date>1991</date>, <biblScope unit="pp">31–51</biblScope></bibl></item>
+					<item><bibl xml:id="b156"><author><forename><abbr>J.</abbr></forename> <forename><abbr>C.</abbr></forename> <surname>Dibble</surname></author>, <title>National Developments in Britain and Ireland: a Matter of Style and Morality</title>, in: <title rend="roman">Welttheater. Die Künste im 19. Jh.</title>, hrsg. von <editor><forename><abbr>P.</abbr></forename> <surname>Andraschke</surname></editor>/<editor><forename><abbr>E.</abbr></forename> <surname>Spaude</surname></editor>, <pubPlace>Fr.i.Br.</pubPlace> <date>1992</date>, <biblScope unit="pp">58–65</biblScope></bibl></item>
+					<item><bibl xml:id="b157"><author><forename><abbr>J.</abbr></forename> <forename><abbr>B.</abbr></forename> <surname>Jones</surname></author>, <title>A Parry Miscellany: Some Manuscripts in the Bodleian Library</title>, in: <title rend="roman">MR</title> <biblScope unit="vol">55</biblScope>, <date>1994</date>, <biblScope unit="pp">13–22</biblScope></bibl></item>
+					<item><bibl xml:id="b158"><author><forename><abbr>B.</abbr></forename> <surname>Benoliel</surname></author>, <title>Parry before <q rend="single">Jerusalem</q>: Studies of His Life and Music with Excerpts from His Published Writings</title>, <pubPlace>Aldershot</pubPlace> <pubPlace>u. a.</pubPlace> <date>1997</date></bibl></item>
+					<item><bibl xml:id="b159"><author><forename><abbr>M.</abbr></forename> <surname>Pilkington</surname></author>, <title>Parry and Stanford</title>, <pubPlace>L.</pubPlace> <date>1997</date> (= <series><title subtype="secondary">English Solo Song: Guides to the Repertoire</title> <biblScope unit="vol">5</biblScope></series>)</bibl></item>
+					<item><bibl xml:id="b160"><author><forename><abbr>A.</abbr></forename> <surname>Boden</surname></author>, <title>The Parrys of the Golden Vale: Background to Genius</title>, <pubPlace>L.</pubPlace> <date>1998</date></bibl></item>
+					<item><bibl xml:id="b161"><author><forename><abbr>B.</abbr></forename> <forename><abbr>E.</abbr></forename> <surname>Fleming</surname></author>, <title>Chamber Music for Single Instrument and Piano by Sir Ch. H. H. Parry</title>, Diss. <orgName type="uni">Univ. of Kan.</orgName> <date>1998</date></bibl></item>
+					<item><bibl xml:id="b162"><author><forename><abbr>J.</abbr></forename> <forename><abbr>C.</abbr></forename> <surname>Dibble</surname></author>, <title>Parry as Historiographer</title>, in: <title rend="roman">Nineteenth-century British Music Studies</title> <biblScope unit="vol">1</biblScope>, hrsg. von <editor><forename><abbr>B.</abbr></forename> <surname>Zon</surname></editor>, <pubPlace>Aldershot</pubPlace> <pubPlace>u. a.</pubPlace> <date>1999</date>, <biblScope unit="pp">37–51</biblScope></bibl></item>
+					<item><bibl xml:id="b163"><author><forename><abbr>B.</abbr></forename> <surname>Mohn</surname></author>, <title>Das engl. Or. im 19. Jh.</title>, <pubPlace>Paderborn</pubPlace> <pubPlace>u. a.</pubPlace> <date>2000</date></bibl></item>
+					<item><bibl xml:id="b164"><author><forename><abbr>J.</abbr></forename> <forename><abbr>C.</abbr></forename> <surname>Dibble</surname></author>, in: <title rend="roman">NGroveD</title> (<edition rend="sup">2</edition><date>2001</date>)</bibl></item>
+					<item><bibl xml:id="b165"><author><forename><abbr>M.</abbr></forename> <forename><abbr>J.</abbr></forename> <surname>Allis</surname></author>, <title>Bridges, Parry and the Invocation</title>, in: <title rend="roman">Nineteenth-century British Music Studies</title> <biblScope unit="vol">2</biblScope>, hrsg. von <editor><forename><abbr>J.</abbr></forename> <surname>Dibble</surname></editor>/<editor><forename><abbr>B.</abbr></forename> <surname>Zon</surname></editor>, <pubPlace>Aldershot</pubPlace>/<pubPlace>Burlington</pubPlace> <date>2002</date>, <biblScope unit="pp">295–318</biblScope></bibl></item>
+					<item><bibl xml:id="b166"><author><forename><abbr>T.</abbr></forename> <surname>Hold</surname></author>, <title>Parry to Finzi, Twenty English Song-composers</title>, <pubPlace>Woodbridge</pubPlace> <date>2002</date></bibl></item>
+					<item><bibl xml:id="b167"><author><forename><abbr>M.</abbr></forename> <forename><abbr>J.</abbr></forename> <surname>Allis</surname></author>, <title>Parry’s Creative Process</title>, <pubPlace>Aldershot</pubPlace> <date>2003</date></bibl></item>
+					<item><bibl xml:id="b168"><author><forename><abbr>P.</abbr></forename> <surname>Hardwick</surname></author>, <title>British Organ Music of the Twentieth Century</title>, <pubPlace>Lanham/Md.</pubPlace> <date>2003</date></bibl></item>
+				</list>
+			</div>
+			<div type="authors" xml:id="d18">
+				<docAuthor><persName><forename>jürgen</forename> <surname>schaarwächter</surname></persName></docAuthor>
+			</div>
+		</body>
+	</text>
+</TEI>

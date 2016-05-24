@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://rilm.info/ft/tei_mgg.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/mgg/tei_rilm.xsd">
+  <teiHeader xml:lang="en">
+    <fileDesc>
+      <titleStmt>
+        <title>Melos</title>
+        <respStmt>
+          <resp>Encoded by</resp>
+          <orgName>Aptara, Inc.</orgName>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Bärenreiter-Verlag Karl Vötterle GmbH &amp; Co. KG</publisher>
+        <pubPlace>Kassel</pubPlace>
+        <publisher>J. B. Metzlersche Verlagsbuchhandlung &amp; C.E. Poeschel Verlag GmbH</publisher>
+        <pubPlace>Stuttgart</pubPlace>
+        <pubPlace>Weimar</pubPlace>
+        <distributor>Répertoire International de Littérature Musicale</distributor>
+      </publicationStmt>
+      <sourceDesc>
+        <biblStruct>
+          <monogr>
+            <title>Die Musik in Geschichte und Gegenwart: Allgemeine Enzyklopädie der Musik</title>
+            <edition n="2">Zweite neubearbeitete Ausgabe</edition>
+            <editor>
+              <forename>Ludwig</forename>
+              <surname>Finscher</surname>
+            </editor>
+            <imprint>
+              <publisher>Bärenreiter</publisher>
+              <pubPlace>Kassel</pubPlace>
+              <publisher>Metzler</publisher>
+              <pubPlace>Stuttgart</pubPlace>
+              <date>1997</date>
+            </imprint>
+            <biblScope unit="part">Sachteil</biblScope>
+            <biblScope unit="vol">6</biblScope>
+            <biblScope unit="col" from="118">118</biblScope>
+            <biblScope unit="col" to="121">121</biblScope>
+          </monogr>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <quotation marks="none">
+          <p>No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+        </quotation>
+        <hyphenation eol="some">
+          <p>End-of-line hyphenation silently removed where appropriate</p>
+        </hyphenation>
+      </editorialDecl>
+      <appInfo>
+        <application ident="oXygenXMLEditor" version="14.1" notAfter="2015-01-21">
+          <label>oXygen XML Editor</label>
+        </application>
+      </appInfo>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="de">German</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2015-01-21" status="created"/>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:id="mgg15710" type="topic" xml:lang="de-DE-1901">
+    <body>
+      <div type="heading" xml:id="d1">
+        <p rend="bold" xml:id="p1">Melos</p>
+        <div type="contents" xml:id="d2">
+          <head>inhalt:</head>
+           <list>
+	            <item n="I"><ref target="#d3">Herkunft</ref>.</item>
+	            <item n="II"><ref target="#d4">Griechische Musiktheorie</ref>.</item>
+	            <item n="III"><ref target="#d5">Lateinische Musiktheorie</ref>.</item>
+	            <item n="IV"><ref target="#d6">Italienische und deutsche Musiktheorie</ref>.</item>
+            </list>
+        </div>
+      </div>
+      <div type="section" xml:id="d3" n="I">
+        <head n="I">Herkunft</head>
+        <p xml:id="p2">Der älteste Beleg für <hi rend="italic">Melos</hi> (griech. <hi rend="italic">μέλος</hi>, Neutrum; Pl. Mele, <hi rend="italic">τὰ μέλη</hi>; urspr.: Körperglied) mit musikalischer Bedeutung findet sich in einem Fragment des Archilochos von Paros (7. Jh. v. Chr.): <q rend="italic">ὡς Διωνύσου ἅνακτος καλὸν ἐξάρξαι μέλος οἶδα διθύρ αμβον οἶνωι</q> (<q>des Dionysos, des Herrschers schönes Melos anzustimmen, weiß ich den Dithyrambos</q>; Fragm. 120, M. L. West [Hrsg.], <hi rend="italic">Iambi et elegi graeci</hi>, Bd. 1, Oxd. 1971, S. 47). Auch <hi rend="italic">Dithyrambos</hi> wird hier erstmals erwähnt (<ref target="mgg15305">Dithyrambus</ref>). Mit Melos bezeichnet Archilochos das in Form eines Dithyrambos dargebote Chorlied. In der griechischen Chorlyrik bezeichnet Melos seit dem 7. Jh. v. Chr. neben dem lyrischen Chorlied (Alkman, Fragm. 14, D. L. Page [Hrsg.], <hi rend="italic">Poetae melici graeci</hi>, Oxd. 1962, S. 34; Stesichoros, Fragm. 14D, ebd., S. 115) die auf einem Instrument vorgetragene Melodie (Alkman, Fragm. 37b und 97, ebd., S. 45 und 74). Das Flötenspiel Pans wird <q>melodisch</q> (<hi rend="italic">ἔν μελέεσσιν</hi>) nicht einmal von einem Vogel übertroffen (Homer, <hi rend="italic">Hymne</hi> V, Vs. 19, Z. 16, Ausg. T. W. Allen, Oxd. 1930, S. 83). Pindar (5. Jh. v. Chr.) nennt seine von den Musen empfangene Ode zu Ehren des Olympioniken <q>ein süßes Melos</q> (<q rend="italic">γλυκὺ γὰρ αὐτω̨̑ μέλος</q>; <hi rend="italic">Olympische Ode</hi> X, Vs. 3, Ausg. O. Werner, Mn. 1967, S. 78). Auch in der klassischen Tragödie bezeichnet Melos das Chorlied. Aristophanes (um 445-385 v. Chr.) nennt die Mele in den <hi rend="italic">Fröschen</hi> (Vs. 862) <q>die Nerven</q> (<q rend="italic">τὰ νευ̑ ρ α</q>) der Tragödie.</p>
+        <p xml:id="p3">An der berühmten Stelle im 3. Buch der <hi rend="italic">Politeia</hi> definiert Platon Melos als aus dreierlei zusammengesetzt: Wort, Tonart und Rhythmus (<q rend="italic">λόγος, ἁρ μονία, καὶ ῥ υθμός</q>, 398 c / d). Damit ist hier die der Erziehung dienende Vokalmusik bezeichnet. Offenbar erfaßt Melos das der Musik Eigentümliche, die Tonfortschreitung, denn Platon beschreibt es an anderer Stelle als Klang- bzw. Stimmbewegung (<q rend="italic">φωνη̑ς κίνησις</q>, <hi rend="italic">Nomoi</hi>, 672e). Das Wort <hi rend="italic">μελῳδία</hi>, zusammengesetzt aus <hi rend="italic">μέλος</hi> und <hi rend="italic">ᾠδή</hi> (Gesang), heißt zunächst nur: Melos singen (<ref target="mgg15706">Melodie</ref>). Bei Platon findet sich der früheste Beleg: Er kritisiert die Heterophonie, die dann entsteht, wenn die Saiten andere Melodien (<hi rend="italic">μέλη</hi>) erklingen lassen als die vom Komponisten festgelegte gesungene Melodie (<hi rend="italic">μελῳδία; Nomoi</hi>, 812d). Bei Aristoteles ist Melodia nur an einer einzigen Stelle belegt (<hi rend="italic">Politeia</hi>, 1339b 20). Melos bezeichnet bei ihm in erster Linie die Melodie: In der <hi rend="italic">Politeia</hi> (1340a 18) führt er Melos und Rhythmus als die in der Musik wirksamen Elemente an. An anderer Stelle (1341b 32) nennt er drei Arten von Mele: ethische, praktische und ekstatische. Die Natur der Tonarten (<hi rend="italic">ἁρ μονίαι</hi>) sei so beschaffen, daß jede einzelne für ein ganzes Melos verantwortlich sei. Demnach bezeichnet Aristoteles mit Melos auch ein in sich abgeschlossenes, durch eine Tonart bestimmtes Musikstück.</p>
+      </div>
+      <div type="section" xml:id="d4" n="II">
+        <head n="II">Griechische Musiktheorie</head>
+        <p xml:id="p4">Der Aristoteles-Schüler Aristoxenos (4. Jh. v. Chr.) machte es sich zur Aufgabe, die beiden in der Musik wirksamen Elemente Melos und Rhythmus wissenschaftlich zu ergründen. Schon im ersten Satz <cb n="119"/>seiner <hi rend="italic">Elementa harmonica</hi> nennt er die Harmonik die wichtigste Disziplin in der <q>Wissenschaft vom Melos</q> (<hi rend="italic">μέλους ἐπιστήμης</hi>; Ausg. R. da Rios, Rom 1954, S. 5, Z. 4). Im Gegensatz zu den Pythagoreern verfolgt Aristoxenos das Phänomen Musik anhand der Stimmbewegung. Der Raum, welcher der Stimme zum Singen zur Verfügung steht, ist das Melos, der Tonraum. Für Aristoxenos sind die im Melos vorherrschenden Stimmbewegungen natürlichen Ursprungs. Er unterscheidet ein sprachliches (<hi rend="italic">λογω̑ δες</hi>) und ein musikalisches (<hi rend="italic">μουσικόν</hi>) Melos. Während jenes Sprachmelodie bedeutet, zeichnet sich das musikalische Melos durch intervallische (<hi rend="italic">διαστηματική</hi>) Stimmbewegung aus, denn es entsteht, wenn die Stimme auf einer Tonhöhe (<hi rend="italic">τάσις</hi>) stehenbleibt (ebd., S. 20, Z. 17). Aristoxenos unterscheidet ein unharmonisches und ein harmonisches musikalisches Melos. Das harmonische Melos (<hi rend="italic">ἡρ μοσμένον</hi>) ist durch eine nicht zufällige Komposition (<hi rend="italic">σύνθεσις</hi>) geformt (ebd., S. 23, Z. 22). Durch sie erhält jeder Ton im Melos eine ihm eigene Funktion (<hi rend="italic">δύναμις</hi>). Die wichtigste Grundregel besagt, daß der vierte Ton mit dem ersten in der Quarte oder der fünfte mit dem ersten in der Quinte konsonieren muß, damit er <q>im Melos</q> (<hi rend="italic">ἐμμελής</hi>) ist. Jeder Ton, der diese Bedingung nicht erfüllt, muß als <q>aus dem Melos herausfallend</q> (<hi rend="italic">ἐκμελής</hi>) angesehen werden (ebd., S. 67, Z. 7).</p>
+        <p xml:id="p5">Im ersten der drei Bücher <hi rend="italic">De musica</hi> definiert Aristeides Quintilianus (3. Jh. n. Chr.) das Verhältnis von Musik und Melos: <q>Musik ist die Wissenschaft vom Melos und dem, was mit dem Melos geschieht</q> <hi rend="italic">(Μουσική ἐστιν ἐπιστήμη μέλους καὶ τω̑ν περ ὶ μέλος συμβαινόντων</hi>; <hi rend="italic">De musica</hi>, I, 4, Ausg. R. P. Winnington-Ingram, Lpz. 1963, S. 4, Z. 18f.). Die Musik sei die theoretische und praktische Kunst vom vollständigen (<hi rend="italic">τέλειον</hi>) und instrumentalen (<hi rend="italic">ὀρ γανικόν</hi>) Melos (ebd., S. 4, Z. 19). Nach Aristeides ist das Melos vollkommen, wenn es aus Harmonia, Rhythmus und Sprache (<hi rend="italic">λέξις</hi>) zusammengesetzt ist (ebd., S. 28, Z. 9f.). Innerhalb der Harmonik definiert er das Melos als <q>eine Folge von Tönen, die in Höhe und Tiefe unähnlich sind</q> (<q rend="italic">πλοκὴ φθογγων ἀνομοίων ὀξύτητι καὶ βαρ ύτητι</q>, ebd., S. 28, Z. 9f.), und erblickt im Melos ein formloses Tonmaterial, das erst durch den Rhythmus bewegt und geformt wird (ebd., S. 40, Z. 21-25). Schon Damon hätte den Rhythmus männlich und das Melos weiblich genannt (ebenso in den <hi rend="italic">Pseudo-Aristotelischen Problemata</hi>, 922b 29). In der <hi rend="italic">μελοποιία</hi>, dem Verfertigen von Mele bzw. der Kompositionslehre (<ref target="mgg15709">Melopöie</ref>), wird ein Melos nach Aristeides vollkommen genannt, wenn es mit der Mese beginnt und schließt. Theoretisch erfaßt wird die Lage (tief, mittel, hoch) und die melodische Figur, z. B. Sekundgang (<hi rend="italic">ἀγωγή</hi>) oder die Folge unterschiedlicher Intervalle (<hi rend="italic">πλοκή</hi>). Während das Melos zur vollkommenen Erziehung dient (<hi rend="italic">De musica</hi>, I, 12, Ausg. Winnington-Ingram, Lpz. 1963, S. 30), ist die Melodia für Aristeides nur der <q>Vortrag eines Melos</q> (<q rend="italic">ἀπαγγελία μέλους</q>; ebd., S. 29).</p>
+      </div>
+      <div type="section" xml:id="d5" n="III">
+        <head n="III">Lateinische Musiktheorie</head>
+        <p xml:id="p6">Martianus Capella (5. Jh. n. Chr.) übernimmt die Definition von Aristeides Quintilianus dort, wo er Melos als Folge von hohen und tiefen Tönen beschreibt: <q rend="italic">melos est actus acuti aut gravioris soni</q> (<hi rend="italic">De nuptiis Philologiae et Mercurii</hi>, Ausg. J. Willis, Lpz. 1983, S. 371, Z. 21). Wie bei Aristeides ist das Melos für ihn weiblich und hat im Gegensatz zum formenden Rhythmus stoffliche Qualität: <q rend="italic">melos feminam noverimus, etenim melos materies est</q> (ebd., S. 384, Z. 10f.). Boethius bezieht sich auf Aristoxenos, wenn er den Ton als emmelischen Fall der Stimme auf eine einzige Tonhöhe bestimmt: <q rend="italic">Sonus igitur est vocis casus emmeles, id est aptus melo, in unam intensionem</q> (<hi rend="italic">De institutione musica</hi>, I, 8, Ausg. Friedlein, S. 195, Z. 3). In Übereinstimmung mit Aristoxenos gibt er an, daß es drei Geschlechter von Mele gebe: <q rend="italic">de generibus melorum sunt tria: diatonum, chroma, enarmonium</q> (ebd., S. 212, Z. 24). Isidorus (6. Jh. n. Chr.) setzt Melos mit <hi rend="italic">euphonia</hi> (Wohlklang) gleich und führt Melos fälschlicherweise auf <hi rend="italic">melleus</hi> (honigsüß) zurück (<hi rend="italic">Etymologiae <cb n="120"/>sive Origines</hi>, Buch 3, Ausg. W. M. Lindsay, Oxd. 1911, Kap. 20, 4). In der <hi rend="italic">Musica</hi> und <hi rend="italic">Scolica enchiriadis</hi> wird Melos zum zentralen Medium. Musik sei die Wissenschaft vom guten Modulieren, und dies heiße, das süßklingende Melos zu lenken (<q rend="italic">Melos suavisonum moderari</q>, Ausg. H. Schmid, Mn. 1981, S. 60, Z. 2). Nur die <q rend="italic">factura meli</q>, also die Beschaffenheit der Töne und Modi, lasse die Kunst erkennen (ebd., S. 57, Z. 13). Das zweistimmige Melos wird <hi rend="italic">organum</hi> genannt (ebd., S. 205, Z. 5): <q rend="italic">Ex hac simphonia nascitur ea nobilis cantilena, quam diaphoniam vocitamus, id est organum melos</q> (ebd., S. 206, Z. 18).</p>
+        <p xml:id="p7">In der musiktheoretischen Diskussion des Mittelalters wird Melos zunehmend durch Melodia ersetzt. Melodisch (<hi rend="italic">emmeles</hi>) werden die Töne genannt, die fähig sind, eine Melodia zu bilden. So nennt Johannes Aegidius de Zamorra <hi rend="italic">emmeles</hi> die Töne, die <q rend="italic">aptus harmonicae melodiae</q> oder <q rend="italic">ad melos, id est melodiam, aptari</q> sind (<hi rend="italic">Ars musica</hi> [um 1270], CSM 20, S. 60 und 85), Georgius Anselmus Parmensis jene, <q rend="italic">quibus melodie sunt apte</q> (<hi rend="italic">De musica</hi> [1434], Ausg. G. Massera, Flz. 1961, S. 110, Z. 9), und Fr. Gaffurius diejenigen, die <q rend="italic">ad melodiam aptentur</q> (<hi rend="italic">Practica musice</hi>, Mld. 1496, S. 206, Z. 13). Jacobus Leodiensis setzt Melodia aus <q rend="italic">modulatio, harmonia vel cantus</q> zusammen (<hi rend="italic">Speculum musicae</hi> [3. Jahrzehnt des 14. Jh.], Buch 6, CSM 3 / VI, S. 160). Terminologische Unschärfen zeigen sich bei Johannes Tinctoris, der in seinem <hi rend="italic">Terminorum musicae diffinitorium</hi> (Treviso 1495) Melos wie Melodia als <hi rend="italic">harmonia</hi> definiert und <hi rend="italic">melum</hi> mit <hi rend="italic">cantus</hi> übersetzt.</p>
+      </div>
+      <div type="section" xml:id="d6" n="IV">
+        <head n="IV">Italienische und deutsche Musiktheorie</head>
+        <p xml:id="p8">Im italienischen Musikschrifttum der Renaissance hat der Begriff <hi rend="italic">Melos</hi> eine untergeordnete Bedeutung. P. Aaron setzt in seinem <hi rend="italic">Toscanello in musica</hi>, offensichtlich in Anlehnung an Isidor, Euphonia mit Melos gleich (Buch 1, Kap. 5, Bologna [<hi rend="sup">1</hi>1523], erw. <hi rend="sup">2</hi>1529, <hi rend="sup">3</hi>1539). G. M. Artusi zeigt deutlich die Verschiebung der Bedeutung von Melos zu Melodia um 1600: Der <hi rend="italic">melopeo</hi> ist für ihn ein <q rend="italic">fabricatore della melodia</q> (<hi rend="italic">Discorso secondo musicale di Antonio Braccino di Todi</hi>, Vdg. 1608, S. 5). Nur G. B. Doni, der in seinem <hi rend="italic">Trattato della musica scenica</hi> (in: <hi rend="italic">Lyra Barberina</hi>, Buch 2, um 1635) auf Aristoteles Bezug nimmt, greift auf Melos zurück: Dieses könne nicht alleine stehen, denn jeder Modus (<hi rend="italic">armonia</hi>) habe ein Melos (<hi rend="italic">canto</hi>). Im Register seiner <hi rend="italic">De praestantia musicae veteris libri tres</hi> (Flz. 1647) definiert Doni <hi rend="italic">melos</hi> als <q rend="italic">modi musici</q>, <hi rend="italic">melos vocale</hi> als <q rend="italic">cantus vocis</q> und <hi rend="italic">melos organicum</hi> als <q rend="italic">cantus instrumenti</q> (S. 246 und 250).</p>
+        <p xml:id="p9">Beim Übergang in die deutschsprachige musiktheoretische Literatur wird auf den Begriff <hi rend="italic">Melos</hi> meist verzichtet. Eine Ausnahme macht Fr. Wilh. Marpurg, der Martianus Capella übersetzt: <q rend="italic">Das Melos ist die Verbindung der scharfen Töne mit den gelinden</q> (<hi rend="italic">Historisch-Kritische Beyträge zur Aufnahme der Musik</hi>, Bd. 3, Bln. 1757, S. 268). Im <hi rend="italic">Critischen Musikus</hi> überträgt Joh. A. Scheibe das achte Buch der <hi rend="italic">Politik</hi> des Aristoteles ins Deutsche; er übersetzt Melos mit <q rend="italic">Gesangsweise</q>, erklärt jedoch zutreffend in einer Fußnote: <q rend="italic">Sonst wird Melos sehr oft in weitläufigerem Verstande genommen, also, daß es die ganze Musik bedeutet. Wie sie denn auch alle Arten musikalischer Stücke, sie mögen nun gesungen, oder gespielet werden, dadurch überhaupt angezeigt haben</q> (<hi rend="italic">Der critische Musikus</hi>, Ausg. Lpz. 1745, S. 820).</p>
+        <p xml:id="p10">Noch im 19. Jh. spielt der Begriff <hi rend="italic">Melos</hi> in der deutschen Musiktheorie keine Rolle; nicht einmal H. Riemann verzeichnet ein entsprechendes Stichwort in seinem <hi rend="italic">Musik-Lexikon</hi> (Lpz. 1882). Erst zu Beginn des 20. Jh. besinnt man sich auf den Terminus. Anfangs entdeckt ihn die gerade entstehende Musikethnologie: Die Melodien außereuropäischer Kulturen werden unter dem Stichwort Melos systematisch erfaßt. Der Begriff Melos ist neutral und im Gegensatz zu Melodie nicht an westeuropäische Harmonievorstellungen gebunden (vgl. <ref target="#b4">E. M. von Hornbostel 1913</ref>). Auch im Umkreis der Neuen Musik bedient man sich des Begriffs: Dort, wo die <q rend="single">schöne</q> Melodie ihre beherrschende Rolle innerhalb der Musik verliert, auf die Kategorie Melodie jedoch nicht verzichtet werden soll, wird vom <cb n="121"/>Melos gesprochen. <ref target="#b6">Hans Mersmann, 1924</ref> bis 1933 Leiter der Zeitschrift <hi rend="italic">Melos</hi>, sieht das Melos durch Kraft, Fläche, Bewegung und Klang bestimmt (Mersmann 1926). In seiner <hi rend="italic">Deutung des Melos</hi> (1923) definiert es J. M. Hauer als Tonbewegung. <ref target="#b7">Werner Danckert (1932)</ref> bezeichnet mit Melos den von Tonhöhenbewegungen beherrschten Tonraum. Heute wird Melos vorwiegend im Musikjournalismus als Synonym für Weise gebraucht.</p>
+      </div>
+      <div type="ography" xml:id="d7">
+        <head>literatur</head>
+         <list>
+	          <item><bibl xml:id="b1"><author><forename><abbr>H.</abbr></forename> <surname>Abert</surname></author>, <title>Die Lehre vom Ethos in der griech. Musik</title>, <pubPlace>Lpz.</pubPlace> <date>1899</date> (= <series><title subtype="secondary">Slg. mw. Arbeiten</title> <biblScope unit="vol">2</biblScope></series>)</bibl></item>
+	          <item><bibl xml:id="b3"><author><forename><abbr>C.</abbr></forename> <surname>Stumpf</surname></author>, <title>Gesch. des Consonanzbegriffes I</title>, <pubPlace>Mn.</pubPlace> <date>1901</date></bibl></item>
+	          <item><bibl xml:id="b4"><author><forename><abbr>E.</abbr></forename> <forename><abbr>M.</abbr></forename> <nameLink>von</nameLink> <surname>Hornbostel</surname></author>, <title>Gesänge aus Ruanda</title>, in: <editor><forename><abbr>G.</abbr></forename> <surname>Tessman</surname></editor>, Die Pangwe: Völkerkundliche Monographie eines westafrik. Negerstammes, <pubPlace>Bln.</pubPlace> <date>1913</date>, <biblScope unit="vol">Bd. 2</biblScope>, <biblScope unit="pp">397-403</biblScope></bibl></item>
+	          <item><bibl xml:id="b5"><author><forename><abbr>J.</abbr></forename> <forename><abbr>M.</abbr></forename> <surname>Hauer</surname></author>, <title>Deutung des Melos</title>, <pubPlace>Lpz.</pubPlace> <date>1923</date></bibl></item>
+	          <item><bibl xml:id="b6"><author><forename><abbr>H.</abbr></forename> <surname>Mersmann</surname></author>, <title>Angewandte Musikästhetik</title>, <pubPlace>Bln.</pubPlace> <date>1926</date></bibl></item>
+	          <item><bibl xml:id="b7"><author><forename><abbr>W.</abbr></forename> <surname>Danckert</surname></author>, <title>Ursymbole mus. Gestaltung</title>, <pubPlace>Kassel</pubPlace> <date>1932</date></bibl></item>
+	          <item><bibl xml:id="b8"><author><forename><abbr>J.</abbr></forename> <surname>Handschin</surname></author>, <title>Der Toncharakter. Eine Einf. in die Tonpsychologie</title>, <pubPlace>Z.</pubPlace> <date>1948</date></bibl></item>
+	          <item><bibl xml:id="b9"><author><forename><abbr>H.</abbr></forename> <surname>Hüschen</surname></author> / <author><forename><abbr>C.</abbr></forename> <surname>Dahlhaus</surname></author>, Art. <title>Melodie</title>, in: <title rend="roman">MGG</title> (<date>1961</date>)</bibl></item>
+	          <item><bibl xml:id="b10"><author><forename><abbr>L.</abbr></forename> <surname>Richter</surname></author>, <title>Zur Wissenschaftslehre von der Musik bei Platon und Aristoteles</title>, <pubPlace>Bln.</pubPlace> <date>1961</date></bibl></item>
+	          <item><bibl xml:id="b11"><author><forename><abbr>E.</abbr></forename> <surname>Lippmann</surname></author>, <title>Musical Thought in Ancient Greece</title>, <pubPlace>N.Y.</pubPlace> <date>1964</date></bibl></item>
+	          <item><bibl xml:id="b12"><author><forename><abbr>H.</abbr></forename> <surname>Koller</surname></author>, <title>Melos</title>, in: <title rend="roman">Glotta</title> <biblScope unit="vol">43</biblScope>, <date>1965</date>, <biblScope unit="pp">24-38</biblScope></bibl></item>
+	          <item><bibl xml:id="b13"><author><forename><abbr>L.</abbr></forename> <surname>Richter</surname></author>, <title>Die Neue Musik in der griech. Antike</title>, in: <title rend="roman">AfMw</title> <biblScope unit="vol">25</biblScope>, <date>1968</date>, <biblScope unit="pp">1-18</biblScope> und <biblScope unit="pp">134-147</biblScope></bibl></item>
+	          <item><bibl xml:id="b14"><author><forename><abbr>J.</abbr></forename> <surname>Lohmann</surname></author>, <title>Musiké und Logos</title>, <pubPlace>Stg.</pubPlace> <date>1970</date></bibl></item>
+	          <item><bibl xml:id="b15"><author><forename><abbr>D.</abbr></forename> <surname>Zoltai</surname></author>, <title>Ethos und Affekt. Gesch. der philosophischen Musikästhetik von den Anfängen bis zu Hegel</title>, <pubPlace>Bln.</pubPlace> / <pubPlace>Budapest</pubPlace> <date>1970</date></bibl></item>
+	          <item><bibl xml:id="b16"><author><forename><abbr>A.</abbr></forename> <surname>Riethmüller</surname></author>, Art. <title>Phtongos</title>, in: <title rend="roman">HMT</title> (<date>1974</date>)</bibl></item>
+	          <item><bibl xml:id="b17"><author>Ders.</author>, Art. <title>Psophos</title>, in: <title rend="roman">dass.</title> (<date>1976</date>)</bibl></item>
+	          <item><bibl xml:id="b18"><author><forename><abbr>W.</abbr></forename> <surname>Seidel</surname></author>, Art. <title>Rhythmus / numerus</title>, in: <title rend="roman">dass.</title> (<date>1980</date>)</bibl></item>
+	          <item><bibl xml:id="b19"><author><forename><abbr>R.</abbr></forename> <surname>Görner</surname></author>, <title>Das Melos – ein unzeitgemäßer Begriff?</title>, in: <title rend="roman">Sprachkunst</title> <biblScope unit="vol">13</biblScope>, <date>1982</date>, <biblScope unit="pp">109-128</biblScope></bibl></item>
+	          <item><bibl xml:id="b20"><author><forename><abbr>A.</abbr></forename> <surname>Bélis</surname></author>, <title>Aristoxène de Tarente et Aristote. Le Traité d’harmonique</title>, <pubPlace>P.</pubPlace> <date>1986</date></bibl></item>
+	          <item><bibl xml:id="b21"><editor subtype="primary"><forename><abbr>A.</abbr></forename> <surname>Riethmüller</surname></editor> / <editor><forename><abbr>Fr.</abbr></forename> <surname>Zaminer</surname></editor> (Hrsg.), <title>Die Musik des Altertums</title>, <pubPlace>Laaber</pubPlace> <date>1989</date>, <biblScope unit="pp">113-206</biblScope> (= <series><title subtype="secondary">NHdb</title> <biblScope unit="vol">1</biblScope></series>)</bibl></item>
+	          <item><bibl xml:id="b23"><editor subtype="primary"><forename><abbr>Fr.</abbr></forename> <surname>Zaminer</surname></editor> (Hrsg.), <title>Ital. Mth. im 16. und 17. Jh. Antikenrezeption und Satzlehre</title>, <pubPlace>Dst.</pubPlace> <date>1989</date> (= <series><title subtype="secondary">GMth</title> <biblScope unit="vol">7</biblScope></series>)</bibl></item>
+	          <item><bibl xml:id="b25"><editor subtype="primary">Ders.</editor> (Hrsg.), <title>Rezeption des antiken Fachs im MA.</title>, <pubPlace>ebd.</pubPlace> <date>1990</date> (= <series><title subtype="secondary">dass.</title> <biblScope unit="vol">3</biblScope></series>)</bibl></item>
+	          <item><bibl xml:id="b27"><author><forename><abbr>M.</abbr></forename> <forename><abbr>L.</abbr></forename> <surname>West</surname></author>, <title>Ancient Greek Music</title>, <pubPlace>N.Y.</pubPlace> <date>1992</date></bibl></item>
+          </list>
+      </div>
+      <div type="authors" xml:id="d8">
+        <docAuthor><persName><forename>nicole</forename> <surname>schmitt-ludwig</surname></persName></docAuthor>
+      </div>
+    </body>
+  </text>
+</TEI>
