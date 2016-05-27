@@ -666,9 +666,6 @@ font-style: normal;
   margin: 1em;
    border: 1px solid #EEEFEE;
 }
-.rilm-teiHeader {
-    display:none
-}
 .rilm-title {
   display: inline;
    font-style: italic;
@@ -872,3 +869,6 @@ font-style: normal;
   margin-bottom: 0.5em;
 }
 /*End of header-related material*/
+.rilm-teiHeader {
+    display:none;
+}
