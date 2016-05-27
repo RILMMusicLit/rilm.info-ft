@@ -644,9 +644,6 @@ table {
   margin: 1em;
   border: 1px solid #EEEFEE;
 }
-teiHeader {
-    display:none
-}
 title {
   display: inline;
   font-style:italic;
@@ -902,3 +899,6 @@ width: 12.5%;
   background-color:inherit;
   } 
 /* End of list-table CSS */
+teiHeader {
+    display:none
+}
