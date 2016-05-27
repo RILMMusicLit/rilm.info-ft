@@ -256,7 +256,7 @@ body > head {
 }
 div[type="section"] > head {
     display: block;
-    font-weight: 600;
+    font-weight: 700;
     text-indent: 2em;
     margin-top: 1em;
 }
