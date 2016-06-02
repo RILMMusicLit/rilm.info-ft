@@ -53,43 +53,57 @@ font-style: italic;
 }*/
 @font-face {
   font-family: 'Bravura Text';
-  src: url('http://rilm.acceptance.hinttech.com:8080/public/rilm-common/fonts/BravuraText.woff') format('woff') 
+  src: url('/public/rilm-common/fonts/BravuraText.woff') format('woff') 
 }
 @font-face {
     font-family: FreeSerif;
-    src: url('http://rilm.acceptance.hinttech.com:8080/public/rilm-common/fonts/FreeSerif.woff') format('woff')
+    src: url('/public/rilm-common/fonts/FreeSerif.woff') format('woff')
 }
 @font-face {
     font-family: Skolar;
-    src: url('http://rilm.acceptance.hinttech.com:8080/public/rilm-common/fonts/SkolarPETEST-Regular.woff') format('woff');
-    src: url('http://rilm.acceptance.hinttech.com:8080/public/rilm-common/fonts/SkolarPETEST-Regular.otf') format('otf');
     font-style: normal;
+    src: url('/public/rilm-common/fonts/SkolarPETEST-Regular.woff') format('woff');
+    src: url('/public/rilm-common/fonts/SkolarPETEST-Regular.otf') format('otf');
 }
 @font-face {
 font-family: Skolar;
-src: url('http://rilm.acceptance.hinttech.com:8080/public/rilm-common/fonts/SkolarPETEST-Italic.woff') format('woff');
-src: url('http://rilm.acceptance.hinttech.com:8080/public/rilm-common/fonts/SkolarPETEST-Italic.otf') format('otf');
 font-style: italic;
+src: url('/public/rilm-common/fonts/SkolarPETEST-Italic.woff') format('woff');
+src: url('/public/rilm-common/fonts/SkolarPETEST-Italic.otf') format('otf');
 }
 @font-face {
-    font-family: SirbaPE;
-    src: url( 'http://rilm.acceptance.hinttech.com:8080/public/rilm-common/fonts/SirbaPE-Regular.otf') format('otf');
+    font-family: Skolar;
+    font-style: normal;
+    font-weight: 700;
+    src: url('/public/rilm-common/fonts/SkolarPETEST-Bold.woff') format('woff');
+    src: url('/public/rilm-common/fonts/SkolarPETEST-Bold.otf') format('otf');
 }
 @font-face {
-    font-family: SirbaPE;
+    font-family: Skolar;
     font-style: italic;
-    src: url( 'http://rilm.acceptance.hinttech.com:8080/public/rilm-common/fonts/SirbaPE-Italic.otf') format('otf');
+    font-weight: 700;
+    src: url('/public/rilm-common/fonts/SkolarPETEST-BoldItalic.woff') format('woff');
+    src: url('/public/rilm-common/fonts/SkolarPETEST-BoldItalic.otf') format('otf');
 }
 @font-face {
-    font-family: SirbaPE;
+    font-family: Sirba;
+    src: url( '/public/rilm-common/fonts/SirbaPE-Regular.otf') format('otf');
+}
+@font-face {
+    font-family: Sirba;
+    font-style: italic;
+    src: url( '/public/rilm-common/fonts/SirbaPE-Italic.otf') format('otf');
+}
+@font-face {
+    font-family: Sirba;
     font-weight: bold;
-    src: url( 'http://rilm.acceptance.hinttech.com:8080/public/rilm-common/fonts/SirbaPE-Bold.otf') format('otf');
+    src: url( '/public/rilm-common/fonts/SirbaPE-Bold.otf') format('otf');
 }
 @font-face {
-    font-family: SirbaPE;
+    font-family: Sirba;
     font-weight:bold;
     font-style:italic;
-    src: url( 'http://rilm.acceptance.hinttech.com:8080/public/rilm-common/fonts/SirbaPE-BoldItalic.otf') format('otf');
+    src: url( '/public/rilm-common/fonts/SirbaPE-BoldItalic.otf') format('otf');
 }
 * {
     line-height: 1.75em;
@@ -130,7 +144,7 @@ content: "*";
  font-size: 1em;
  font-weight: 400;
   /*font-family: 'Times New Roman', 'Bravura Text', serif;*/
-  font-family: 'Sirba PE', sans-serif, 'Bravura Text';
+  font-family: Skolar, sans-serif, 'Bravura Text';
   font-variant-numeric: oldstyle-nums;
   font-feature-settings: "onum";
 }
