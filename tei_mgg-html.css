@@ -34,23 +34,6 @@ color: inherit;
 	height: 1em;
 	color: inherit;
 }
-/*@font-face {
-  font-family: 'Bravura Text';
-  src: url('https://mgg-edit.rilm.org/public/rilm-common/fonts/BravuraText.woff') format('woff')
-}
-@font-face {
-    font-family: FreeSerif;
-    src: url('https://mgg-edit.rilm.org/public/rilm-common/fonts/FreeSerif.woff') format('woff')
-}
-@font-face {
-    font-family: Skolar;
-    src: url('https://mgg-edit.rilm.org/public/rilm-common/fonts/SkolarPETEST-Regular.woff') format('woff');
-}
-@font-face {
-font-family: Skolar;
-src: url('https://mgg-edit.rilm.org/public/rilm-common/fonts/SkolarPETEST-Italic.woff') format('woff');
-font-style: italic;
-}*/
 @font-face {
   font-family: 'Bravura Text';
   src: url('/public/rilm-common/fonts/BravuraText.woff') format('woff') 

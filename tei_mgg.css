@@ -45,26 +45,6 @@ font-style: italic;
 font-weight: 700;
 src: url('http://rilm.info/ft/fonts/SkolarPETEST-BoldItalic.woff') format('woff')
 }
-@font-face {
-font-family: Sirba;
-src: url('http://rilm.info/ft/fonts/SirbaPE-Regular.otf') format('otf')
-}
-@font-face {
-font-family: Sirba;
-font-style: italic;
-src: url('http://rilm.info/ft/fonts/SirbaPE-Italic.otf') format('otf')
-}
-@font-face {
-font-family: Sirba;
-font-weight: 700;
-src: url('http://rilm.info/ft/fonts/SirbaPE-Bold.otf') format('otf')
-}
-@font-face {
-font-family: Sirba;
-font-style: italic;
-font-weight: 700;
-src: url('http://rilm.info/ft/fonts/SirbaPE-BoldItalic.otf') format('otf')
-}
 * {
     line-height: 1.75em;
 }
