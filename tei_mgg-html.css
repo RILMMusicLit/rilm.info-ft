@@ -63,47 +63,23 @@ font-style: italic;
     font-family: Skolar;
     font-style: normal;
     src: url('/public/rilm-common/fonts/SkolarPETEST-Regular.woff') format('woff');
-    src: url('/public/rilm-common/fonts/SkolarPETEST-Regular.otf') format('otf');
 }
 @font-face {
 font-family: Skolar;
 font-style: italic;
 src: url('/public/rilm-common/fonts/SkolarPETEST-Italic.woff') format('woff');
-src: url('/public/rilm-common/fonts/SkolarPETEST-Italic.otf') format('otf');
 }
 @font-face {
     font-family: Skolar;
     font-style: normal;
     font-weight: 700;
     src: url('/public/rilm-common/fonts/SkolarPETEST-Bold.woff') format('woff');
-    src: url('/public/rilm-common/fonts/SkolarPETEST-Bold.otf') format('otf');
 }
 @font-face {
     font-family: Skolar;
     font-style: italic;
     font-weight: 700;
     src: url('/public/rilm-common/fonts/SkolarPETEST-BoldItalic.woff') format('woff');
-    src: url('/public/rilm-common/fonts/SkolarPETEST-BoldItalic.otf') format('otf');
-}
-@font-face {
-    font-family: Sirba;
-    src: url( '/public/rilm-common/fonts/SirbaPE-Regular.otf') format('otf');
-}
-@font-face {
-    font-family: Sirba;
-    font-style: italic;
-    src: url( '/public/rilm-common/fonts/SirbaPE-Italic.otf') format('otf');
-}
-@font-face {
-    font-family: Sirba;
-    font-weight: bold;
-    src: url( '/public/rilm-common/fonts/SirbaPE-Bold.otf') format('otf');
-}
-@font-face {
-    font-family: Sirba;
-    font-weight:bold;
-    font-style:italic;
-    src: url( '/public/rilm-common/fonts/SirbaPE-BoldItalic.otf') format('otf');
 }
 * {
     line-height: 1.75em;
@@ -308,6 +284,9 @@ padding: 10px;
 .rilm-head.rilm-n::before {
     content: attr(data-rilm-n) ". " !important;
     font-style: normal !important;
+}
+.rilm-figure > .rilm-head:after, .rilm-notatedMusic > .rilm-head:after, .rilm-tableFigure > .rilm-head:after {
+content: " ";
 }
 .rilm-list   .rilm-head {
     font-variant: small-caps;

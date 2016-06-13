@@ -269,6 +269,10 @@ head[n]::before {
     content: attr(n) ". ";
     font-style:normal;
 }
+figure > head:after, notatedMusic > head:after, tableFigure > head:after {
+content: " ";
+}
+
 list > head {
      font-variant: small-caps;
 }
