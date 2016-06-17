@@ -102,8 +102,8 @@ content: "*";
   display: block;
  font-size: 1em;
  font-weight: 400;
-  /*font-family: 'Times New Roman', 'Bravura Text', serif;*/
-  font-family: Skolar, sans-serif, 'Bravura Text';
+  font-family: Georgia, 'Bravura Text', serif;
+  /*font-family: Skolar, sans-serif, 'Bravura Text';*/
   font-variant-numeric: oldstyle-nums;
   font-feature-settings: "onum";
 }
@@ -155,22 +155,12 @@ content: "†";
     padding-top: 1em;
 }
 .rilm-docAuthor {
-    text-transform: uppercase;
     font-size: .85em;
     font-weight: bold;
     display: block;
     margin-bottom: 0.5em;
     margin-left: 2em;
 }    
-      @supports(font-feature-settings: 'c2sc', 'smcp') {
-      .rilm-docAuthor {
-      	font-size: 1.15em;
-      	text-transform: none;
-        -moz-font-feature-settings: "c2sc", "smcp";
-        -webkit-font-feature-settings: "c2sc", "smcp";
-        font-feature-settings: "c2sc", "smcp";
-        }
-}
 .rilm-bibl  .rilm-edition {
   display: inline;
 }
@@ -330,6 +320,20 @@ content: " ";
         font-feature-settings: "c2sc", "smcp";
     }
 }
+.rilm-text.rilm-type_family .rilm-div.rilm-type_contents   .rilm-head {
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: bold;
+}
+        @supports(font-feature-settings: 'c2sc', 'smcp') {
+    .rilm-div.rilm-type_contents   .rilm-head { 
+    	font-size: 1em;     
+    	text-transform: none; 
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+    }
+}
 .rilm-text.rilm-type_family   .rilm-list   .rilm-head {
     font-variant-caps: small-caps;
 }
@@ -438,20 +442,6 @@ content: " ";
 .rilm-musNote {
      font-style: italic;
 }
-.rilm-docAuthor   .rilm-name {
-  display: inline;
-  text-transform: uppercase;
-  font-size: smaller;
-}
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
-    .rilm-docAuthor   .rilm-name { 
-    	font-size: 1.3em;  
-    	text-transform: none;   
-        -moz-font-feature-settings: "c2sc", "smcp";
-        -webkit-font-feature-settings: "c2sc", "smcp";
-        font-feature-settings: "c2sc", "smcp";
-    }
-}
 .rilm-note {
   display: inherit;
 }
@@ -511,6 +501,20 @@ font-style: normal
     }
     .rilm-quote > .rilm-p:first-of-type {
     display:inline;
+}
+.rilm-docAuthor   .rilm-persName {
+  display: inline;
+  text-transform: uppercase;
+  font-size: smaller;
+}
+        @supports(font-feature-settings: 'c2sc', 'smcp') {
+    .rilm-docAuthor   .rilm-persName { 
+    	font-size: 1.3em;  
+    	text-transform: none;   
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+    }
 }
 .rilm-quote>.rilm-p:last-of-type {
     display: inline;

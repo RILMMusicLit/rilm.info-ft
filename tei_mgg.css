@@ -136,22 +136,12 @@ div[type="section"] > head > div {
     text-indent: 2em;
 }
 docAuthor {
-    text-transform: uppercase;
     font-size: .85em;
     font-weight: bold;
     display: block;
     margin-bottom: 0.5em;
     margin-left: 2em;
 } 
-      @supports(font-feature-settings: 'c2sc', 'smcp') {
-            docAuthor {
-      	font-size: 1.15em;
-      	text-transform: none;
-        -moz-font-feature-settings: "c2sc", "smcp";
-        -webkit-font-feature-settings: "c2sc", "smcp";
-        font-feature-settings: "c2sc", "smcp";
-        }
-}
 bibl edition {
   display: inline;
 }    
@@ -312,6 +302,20 @@ div[type="contents"] > head {
         font-feature-settings: "c2sc", "smcp";
     }
 }
+text[type='family'] div[type="contents"] > head {
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: normal;
+}
+        @supports(font-feature-settings: 'c2sc', 'smcp') {
+    div[type="contents"] > head { 
+    	font-size: 1em;     
+    	text-transform: none; 
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+    }
+}
 text[type='family']  list > head {
     font-variant: small-caps;
 }
@@ -424,20 +428,6 @@ musNote {
     font-style: italic;
 }
 
-docAuthor > name {
-  display: inline;
-  text-transform: uppercase;
-  font-size: smaller;
-}
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
-    docAuthor > name { 
-    	font-size: 1.3em;  
-    	text-transform: none;   
-        -moz-font-feature-settings: "c2sc", "smcp";
-        -webkit-font-feature-settings: "c2sc", "smcp";
-        font-feature-settings: "c2sc", "smcp";
-    }
-}
 note {
   display: inherit;
     font-style:normal;
@@ -498,6 +488,20 @@ p[n]::before {
     content: attr(n) ". ";
     font-style: normal !important;
     font-weight:bold;
+}
+docAuthor > persName {
+  display: inline;
+  text-transform: uppercase;
+  font-size: smaller;
+}
+        @supports(font-feature-settings: 'c2sc', 'smcp') {
+    docAuthor > persName { 
+    	font-size: 1.3em;  
+    	text-transform: none;   
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+    }
 }
 quote > p:first-of-type {
     display:inline;
