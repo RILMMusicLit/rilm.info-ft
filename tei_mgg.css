@@ -332,9 +332,12 @@ head[n*=I], head[n*=V], head[n*=X], head[n*=L], head[n*=C]{
     font-style: italic;
     text-indent: 2em;
 } 
-div[type='ography'] head[n*=I], div[type='ography'] head[n*=V], div[type='ography'] head[n*=X], div[type='ography'] head[n*=L], div[type='ography']head[n*=C], div[type='works'] head[n*=I], div[type='works'] head[n*=V], div[type='works'] head[n*=X], div[type='works'] head[n*=L], head[n*=C]{
+/*div[type='ography'] head[n*=I], div[type='ography'] head[n*=V], div[type='ography'] head[n*=X], div[type='ography'] head[n*=L], div[type='ography']head[n*=C], div[type='works'] head[n*=I], div[type='works'] head[n*=V], div[type='works'] head[n*=X], div[type='works'] head[n*=L], head[n*=C]{
     font-style: normal;
-} 
+} */
+div[type='ography'] head, div[type='works'] head {
+	font-style: normal;
+}
 bibl idno {
   display: inline;
 }
