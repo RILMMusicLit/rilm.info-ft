@@ -43,6 +43,54 @@ color: inherit;
     src: url('/public/rilm-common/fonts/FreeSerif.woff') format('woff')
 }
 @font-face {
+	font-family: AndanaSC;
+	src: url('/public/rilm-common/fonts/AndanaSC-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: AndanaSC;
+	font-weight: 700;
+	src: url('/public/rilm-common/fonts/AndanaSC-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: Andana;
+	font-style: normal;
+	src: url('/public/rilm-common/fonts/Andana-Regular.woff') format('woff');
+	}
+@font-face {
+	font-family: Andana;
+	font-style: italic;
+	src: url('/public/rilm-common/fonts/Andana-Italic.woff') format('woff');
+}	
+@font-face {
+	font-family: Andana;
+	font-weight: 700;
+	src: url('/public/rilm-common/fonts/Andana-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: Andana;
+	font-style: bold;
+	src: url('/public/rilm-common/fonts/Andana-BoldItalic.woff') format('woff');
+}
+@font-face {
+	font-family: FontinSC;
+	font-style: normal;
+	src: url('/public/rilm-common/fonts/Fontin-SmallCaps.woff') format('woff');
+	}
+@font-face {
+	font-family: Fontin;
+	font-style: italic;
+	src: url('/public/rilm-common/fonts/Fontin-Italic.woff') format('woff');
+}	
+@font-face {
+	font-family: Fontin;
+	font-weight: 700;
+	src: url('/public/rilm-common/fonts/Fontin-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: Fontin;
+	src: url('/public/rilm-common/fonts/Fontin-Regular.woff') format('woff');
+}
+@font-face {
     font-family: Skolar;
     font-style: normal;
     src: url('/public/rilm-common/fonts/SkolarPETEST-Regular.woff') format('woff');
@@ -74,16 +122,17 @@ src: url('/public/rilm-common/fonts/SkolarPETEST-Italic.woff') format('woff');
 }
 .rilm-bibl   .rilm-author {
   display: inline;
-  font-variant: small-caps;
+  /*font-variant: small-caps;*/
+  font-family: FontinSC;
   }
-  @supports(font-feature-settings: 'smcp') {
+/*  @supports(font-feature-settings: 'smcp') {
     .rilm-bibl .rilm-author {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
         -webkit-font-feature-settings: "smcp";
         font-feature-settings: "smcp";
     }
-}
+}*/
 .rilm-bibl .rilm-author.rilm-subtype_secondary {
 	font-variant:normal;
 }     
@@ -102,7 +151,7 @@ content: "*";
   display: block;
  font-size: 1em;
  font-weight: 400;
-  font-family: Georgia, 'Bravura Text', serif;
+  font-family: Fontin, 'Bravura Text', serif;
   /*font-family: Skolar, sans-serif, 'Bravura Text';*/
   font-variant-numeric: oldstyle-nums;
   font-feature-settings: "onum";
@@ -168,16 +217,17 @@ content: "†";
   display: inline;
 }
 .rilm-bibl  .rilm-editor.rilm-subtype_primary {
-      font-variant: small-caps;
+      /*font-variant: small-caps;*/
+      font-family: FontinSC;
       }
-    @supports(font-feature-settings: 'smcp') {
+/*    @supports(font-feature-settings: 'smcp') {
     .rilm-bibl  .rilm-editor.rilm-subtype_primary {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
         -webkit-font-feature-settings: "smcp";
         font-feature-settings: "smcp";
     }
-}
+}*/
 .rilm-emph {
   display: inline;
    font-style: italic;
@@ -262,16 +312,16 @@ padding: 10px;
 content: " ";
 }
 .rilm-list   .rilm-head {
-    font-variant: small-caps;
+    /*font-variant: small-caps;*/
 }
-  @supports(font-feature-settings: 'smcp') {
+/*  @supports(font-feature-settings: 'smcp') {
     .rilm-list   .rilm-head {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
         -webkit-font-feature-settings: "smcp";
         font-feature-settings: "smcp";
     }
-}
+}*/
 .rilm-div.rilm-type_ography > .rilm-head {
     text-transform: uppercase;
     font-weight: bold;
@@ -280,7 +330,7 @@ content: " ";
     padding-top:1em;
     font-size:.92em;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+ /*       @supports(font-feature-settings: 'c2sc', 'smcp') {
     .rilm-div.rilm-type_ography > .rilm-head  { 
     	font-size: 1.1em;  
     	text-transform: none;   
@@ -288,7 +338,7 @@ content: " ";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
     }
-}
+}*/
 .rilm-div.rilm-type_works > .rilm-head {
     font-weight: bold;
     display: block;
@@ -297,7 +347,7 @@ content: " ";
     padding-top:1em;
     font-size:.92em;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+ /*       @supports(font-feature-settings: 'c2sc', 'smcp') {
  .rilm-div.rilm-type_works > .rilm-head {   
  	font-size: 1.1em;   
  	text-transform: none;
@@ -305,13 +355,13 @@ content: " ";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp"; 
     }
-}
+}*/
 .rilm-div.rilm-type_contents   .rilm-head {
     text-transform: uppercase;
     font-size: smaller;
     font-weight: bold;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+ /*       @supports(font-feature-settings: 'c2sc', 'smcp') {
     .rilm-div.rilm-type_contents   .rilm-head { 
     	font-size: 1em;     
     	text-transform: none; 
@@ -319,13 +369,13 @@ content: " ";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
     }
-}
+}*/
 .rilm-text.rilm-type_family .rilm-div.rilm-type_contents   .rilm-head {
     text-transform: uppercase;
     font-size: smaller;
     font-weight: bold;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+  /*      @supports(font-feature-settings: 'c2sc', 'smcp') {
     .rilm-div.rilm-type_contents   .rilm-head { 
     	font-size: 1em;     
     	text-transform: none; 
@@ -333,18 +383,18 @@ content: " ";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
     }
-}
+}*/
 .rilm-text.rilm-type_family   .rilm-list   .rilm-head {
-    font-variant-caps: small-caps;
+    /*font-variant: small-caps;*/
 }
-  @supports(font-feature-settings: 'smcp') {
+/*  @supports(font-feature-settings: 'smcp') {
     .rilm-text.rilm-type_family   .rilm-list   .rilm-head {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
         -webkit-font-feature-settings: "smcp";
         font-feature-settings: "smcp";
     }
-}
+}*/
 .rilm-bibl  .rilm-idno {
   display: inline;
 }
@@ -507,7 +557,7 @@ font-style: normal
   text-transform: uppercase;
   font-size: smaller;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+/*        @supports(font-feature-settings: 'c2sc', 'smcp') {
     .rilm-docAuthor   .rilm-persName { 
     	font-size: 1.3em;  
     	text-transform: none;   
@@ -515,7 +565,7 @@ font-style: normal
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
     }
-}
+}*/
 .rilm-quote>.rilm-p:last-of-type {
     display: inline;
 }
@@ -692,7 +742,7 @@ font-style: normal;
   display: inline;
   text-transform: uppercase;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+ /*       @supports(font-feature-settings: 'c2sc', 'smcp') {
     *.rilm-rend_uppercase {
     	font-size: 1.1em;   
     	text-transform: none;  
@@ -700,20 +750,21 @@ font-style: normal;
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
     }
-}
+}*/
 *.rilm-rend_smallcaps {
   display: inline;
-  font-variant: small-caps;
+  /*font-variant: small-caps;*/
+  font-family: FontinSC;
   font-style: inherit;
 }
-  @supports(font-feature-settings: 'smcp') {
+/*  @supports(font-feature-settings: 'smcp') {
     .rilm-rend_smallcaps {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
 -webkit-font-feature-settings: "smcp";
 font-feature-settings: "smcp";
     }
-}
+}*/
 *.rilm-rend_sup {
   display: inline;
   vertical-align: super;
