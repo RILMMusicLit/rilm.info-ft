@@ -490,6 +490,9 @@ item > p {
     text-indent: 0;
     display: inherit;
 }
+quote > p {
+	font-style: italic;
+	}
 p[n]::before {
     content: attr(n) ". ";
     font-style: normal !important;

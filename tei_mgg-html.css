@@ -552,6 +552,15 @@ font-style: normal
     .rilm-quote > .rilm-p:first-of-type {
     display:inline;
 }
+.rilm-quote>.rilm.p {
+font-style: italic;
+}
+.rilm-quote>.rilm-p:last-of-type {
+    display: inline;
+}
+.rilm-figure .rilm-head, .rilm-figure .rilm-p, .rilm-notatedMusic .rilm-head, .rilm-notatedMusic .rilm-p, .rilm-tableFigure .rilm-head, .rilm-tableFigure .rilm-p {
+   display: inline !important;
+} 
 .rilm-docAuthor   .rilm-persName {
   display: inline;
   text-transform: uppercase;
@@ -566,12 +575,7 @@ font-style: normal
         font-feature-settings: "c2sc", "smcp";
     }
 }*/
-.rilm-quote>.rilm-p:last-of-type {
-    display: inline;
-}
-.rilm-figure .rilm-head, .rilm-figure .rilm-p, .rilm-notatedMusic .rilm-head, .rilm-notatedMusic .rilm-p, .rilm-tableFigure .rilm-head, .rilm-tableFigure .rilm-p {
-   display: inline !important;
-} 
+
   .rilm-persName.rilm-type_alt {
     font-style: italic !important;
     font-weight: normal !important;
