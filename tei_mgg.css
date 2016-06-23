@@ -84,7 +84,7 @@ body {
   display: block;
   font-size: 1em;
   font-weight: 400;
-  font-family: Skolar, FreeSerif, 'Bravura Text', serif;
+  font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;
   font-variant-numeric: oldstyle-nums;
   font-feature-settings: "onum";
 }
@@ -128,7 +128,6 @@ div[type="contents"] {
 }
 div[type="ography"], div[type="works"]{
     text-indent: 2em;
-    font-size: .92em;
 }
 div[type="section"] > head > div {
     display: block;
@@ -136,7 +135,6 @@ div[type="section"] > head > div {
     text-indent: 2em;
 }
 docAuthor {
-    font-size: .85em;
     font-weight: bold;
     display: block;
     margin-bottom: 0.5em;
@@ -357,18 +355,24 @@ item[n]:before {
 div[type="contents"] > list > item {
     display: block;
 }
-div[type='works']  list item + item:before,  div[type='ography']  list item + item:before{
+/*div[type='works']  list item + item:before,  div[type='ography']  list item + item:before{
      content: "\0020\25A0\0020";
- }
+ }*/
 div[type="section"] list item, div[type="bio"] list item, div[type="criticism"] list item {
   display: block;
 }
-div[type="ography"] list item, div[type="works"] list item  {
+div[type="ography"] list item, div[type="works"] list item {
+	text-indent: -1.5em;
+	display: list-item;
+	padding-left: 1.5em;
+	margin-bottom: .6em;
+}
+/*div[type="ography"] list item, div[type="works"] list item  {
   display: inline;
 }
 div[type="works"] div[type="section"] list item, div[type="ography"] div[type="section"] list item {
 display: inline;
-}    
+}*/    
 l {
   display: block;
   white-space: nowrap;
@@ -382,8 +386,7 @@ lg {
 }
 div[type="ography"] list, div[type="works"] list {
   display: block;
-  list-style-type: disc;
-  list-style-position: outside;
+  list-style-type: none;
   margin-bottom: 1em;
   margin-top: .5em;
 }
@@ -501,11 +504,10 @@ p[n]::before {
 docAuthor > persName {
   display: inline;
   text-transform: uppercase;
-  font-size: smaller;
 }
         @supports(font-feature-settings: 'c2sc', 'smcp') {
     docAuthor > persName { 
-    	font-size: 1.3em;  
+    	font-size: 1.1em;  
     	text-transform: none;   
         -moz-font-feature-settings: "c2sc", "smcp";
         -webkit-font-feature-settings: "c2sc", "smcp";

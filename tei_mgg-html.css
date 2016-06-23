@@ -195,7 +195,6 @@ content: "†";
 }
 .rilm-div.rilm-type_ography,  .rilm-div.rilm-type_works{
     text-indent: 2em;
-      font-size: .92em;
 }
 .rilm-div.rilm-type_section > .rilm-head > .rilm-div {
     display: block;
@@ -204,7 +203,6 @@ content: "†";
     padding-top: 1em;
 }
 .rilm-docAuthor {
-    font-size: .85em;
     font-weight: bold;
     display: block;
     margin-bottom: 0.5em;
@@ -416,17 +414,15 @@ content: " ";
    .rilm-type_contents   .rilm-list .rilm-item{
     display:block;
 }
-.rilm-div.rilm-type_works   .rilm-list .rilm-item + .rilm-item:before,   .rilm-div.rilm-type_ography   .rilm-list .rilm-item + .rilm-item:before{
-     content: "\0020\25A0\0020";
- }
+
 .rilm-type_section .rilm-list .rilm-item, .rilm-type_bio .rilm-list .rilm-item, .rilm-type_criticism .rilm-list .rilm-item {
     display: block;
 }
 .rilm-type_ography .rilm-list .rilm-item, .rilm-type_works .rilm-list .rilm-item {
-    display: inline;
-}
-.rilm-type_ography .rilm-type_section .rilm-list .rilm-item, .rilm-type_works .rilm-type_section .rilm-list .rilm-item {
-    display: inline;
+		text-indent: -1.5em;
+	display: list-item;
+	padding-left:1.5em;
+	margin-bottom: .6em;
 }
 .rilm-l {
   display: block;
@@ -441,8 +437,7 @@ content: " ";
 }
 .rilm-type_ography .rilm-list, .rilm-type_works .rilm-list {
   display: block;
-  list-style-type: disc;
-  list-style-position: outside;
+  list-style-type: none;
   margin-bottom: 1em;
   margin-top: .5em;
 }
@@ -564,7 +559,6 @@ font-style: italic;
 .rilm-docAuthor   .rilm-persName {
   display: inline;
   text-transform: uppercase;
-  font-size: smaller;
 }
 /*        @supports(font-feature-settings: 'c2sc', 'smcp') {
     .rilm-docAuthor   .rilm-persName { 
