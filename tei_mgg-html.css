@@ -170,17 +170,7 @@ content: "*";
 .rilm-cell.rilm-role_label {
    color: inherit;
    background-color: #BBBBBB;
-    /*  font-variant: small-caps;*/
-    font-family: FontinSC;
 }
- /*       @supports(font-feature-settings: 'smcp') {
-    bibl editor[subtype="primary"] {
-        font-variant: normal;
-        -moz-font-feature-settings: "smcp";
-        -webkit-font-feature-settings: "smcp";
-        font-feature-settings: "smcp";
-    }
-}*/
 .rilm-row.rilm-rend_noborder > .rilm-cell {
     border-right: 1px solid #EEEFEE;
     border-top: none;
@@ -667,7 +657,17 @@ font-style: normal;
 .rilm-row.rilm-role_label {
    color: inherit;
    background-color: #BBBBBB;
-}  
+       /*  font-variant: small-caps;*/
+    font-family: FontinSC;
+}
+ /*       @supports(font-feature-settings: 'smcp') {
+    bibl editor[subtype="primary"] {
+        font-variant: normal;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+    }
+}*/
 .rilm-soCalled {
   display: inline;
   quotes: '›\200A' '\200A‹';
