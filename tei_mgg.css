@@ -609,10 +609,12 @@ row {
 row[role='label'] {
    color: inherit;
    background-color: #BBBBBB;
-    font-variant: small-caps;
+   font-variant: small-caps;
+   font-weight:700;
+   font-size:1.1em;
 }
         @supports(font-feature-settings: 'smcp') {
-    bibl editor[subtype="primary"] {
+    row[role='label'] {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
         -webkit-font-feature-settings: "smcp";
