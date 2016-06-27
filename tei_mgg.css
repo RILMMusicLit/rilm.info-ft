@@ -16,48 +16,48 @@ $LastChangedDate$, $LastChangedRevision$, $LastChangedBy$
 /*@namespace url(http://www.tei-c.org/ns/1.0);
 @namespace xml url(http://www.w3.org/2001/XMLSchema-instance);*/
 
-@font-face {
-  font-family: 'Bravura Text';
-  src: url('http://rilm.info/ft/fonts/BravuraText.woff') format('woff') /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+@font-face{
+    font-family: 'Bravura Text';
+    src: url('http://rilm.info/ft/fonts/BravuraText.woff') format('woff') /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-@font-face {
+@font-face{
     font-family: FreeSerif;
     src: url('http://rilm.info/ft/fonts/FreeSerif.woff') format('woff')
 }
-@font-face {
+@font-face{
     font-family: Skolar;
     src: url('http://rilm.info/ft/fonts/SkolarPETEST-Regular.woff') format('woff')
 }
-@font-face {
+@font-face{
     font-family: Skolar;
     font-style: italic;
     src: url('http://rilm.info/ft/fonts/SkolarPETEST-Italic.woff') format('woff')
 }
-@font-face {
-font-family: Skolar;
-font-weight: 700;
-src: url('http://rilm.info/ft/fonts/SkolarPETEST-Bold.woff') format('woff')
+@font-face{
+    font-family: Skolar;
+    font-weight: 700;
+    src: url('http://rilm.info/ft/fonts/SkolarPETEST-Bold.woff') format('woff')
 }
-@font-face {
-font-family: Skolar;
-font-style: italic;
-font-weight: 700;
-src: url('http://rilm.info/ft/fonts/SkolarPETEST-BoldItalic.woff') format('woff')
+@font-face{
+    font-family: Skolar;
+    font-style: italic;
+    font-weight: 700;
+    src: url('http://rilm.info/ft/fonts/SkolarPETEST-BoldItalic.woff') format('woff')
 }
-* {
+*{
     line-height: 1.75em;
 }
-TEI {
+TEI{
 }
-abbr {
-  display: inline;
+abbr{
+    display: inline;
 }
-bibl > author {
-  display: inline;
-   font-variant: small-caps;
+bibl > author{
+    display: inline;
+    font-variant: small-caps;
 }
-        @supports(font-feature-settings: 'smcp') {
+@supports(font-feature-settings: 'smcp') {
     bibl > author {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
@@ -65,136 +65,140 @@ bibl > author {
         font-feature-settings: "smcp";
     }
 }
-bibl > author[subtype='secondary'] {
-	font-variant:normal;
+bibl > author[subtype = 'secondary']{
+    font-variant: normal;
 }
-bibl {
-  display: inline;
+bibl{
+    display: inline;
 }
-biblScope {
-  display: inline;
-}    
-birth:before {
-content: "*";
+biblScope{
+    display: inline;
 }
-
-body {
-  margin-top: 5px;
-  margin-left: 10px;
-  display: block;
-  font-size: 1em;
-  font-weight: 400;
-  font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;
-  font-variant-numeric: oldstyle-nums;
-  font-feature-settings: "onum";
-}
-cell {
-  display: table-cell;
-  border: 1px solid #EEEFEE;
-  border-bottom:none;
-  padding: .5em 1em .5em 1em;
-  color: inherit;
-  text-align:left;
-  text-indent: 0 !important;
-  background-color:inherit;
-}
-cell[role='label'] {
-   color: inherit;
-   background-color: #BBBBBB;
+birth:before{
+    content: "*";
 }
 
-row[rend='noborder'] > cell {
+body{
+    margin-top: 5px;
+    margin-left: 10px;
+    display: block;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;
+    font-variant-numeric: oldstyle-nums;
+    font-feature-settings: "onum";
+}
+cell{
+    display: table-cell;
+    border: 1px solid #EEEFEE;
+    border-bottom: none;
+    padding: .5em 1em .5em 1em;
+    color: inherit;
+    text-align: left;
+    text-indent: 0 !important;
+    background-color: inherit;
+}
+cell[role = 'label']{
+    color: inherit;
+    background-color: #BBBBBB;
+}
+
+row[rend = 'noborder'] > cell{
     border-right: 1px solid #EEEFEE;
     border-top: none;
     border-left: 1px solid #EEEFEE;
     border-bottom: none;
 }
-cit {
-  display: inline;
+cit{
+    display: inline;
 }
-cit[rend='block'] {
+cit[rend = 'block']{
     display: block;
     padding: 0 3em 0 3em;
     text-indent: 0;
 }
-date {
-  display: inline;
-}    
-death:before {
-content: "†";
+date{
+    display: inline;
 }
-div[type="contents"] {
- display: block;
+death:before{
+    content: "†";
 }
-div[type="ography"], div[type="works"]{
+div[type = "contents"]{
+    display: block;
+}
+div[type = "ography"],
+div[type = "works"]{
     text-indent: 2em;
 }
-div[type="section"] > head > div {
+div[type = "section"] > head > div{
     display: block;
     font-style: italic;
     text-indent: 2em;
 }
-docAuthor {
+docAuthor{
     font-weight: bold;
     display: block;
     margin-bottom: 0.5em;
     margin-left: 2em;
-} 
-bibl edition {
-  display: inline;
-}    
-bibl editor {
-  display: inline;
 }
-bibl editor[subtype="primary"]  {
-       font-variant: small-caps;
+bibl edition{
+    display: inline;
 }
-        @supports(font-feature-settings: 'smcp') {
+bibl editor{
+    display: inline;
+}
+bibl editor[subtype = "primary"]{
+    font-variant: small-caps;
+}
+@supports(font-feature-settings: 'smcp') {
     bibl editor[subtype="primary"] {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
         -webkit-font-feature-settings: "smcp";
         font-feature-settings: "smcp";
     }
-}    
-emph {
-  display: inline;
-  font-style: italic;
 }
-figure, notatedMusic, tableFigure {
-  display: block;
-  font-style: italic;
-  margin: 2em 0em 2em 2em;
-  font-size: 1.4em;
-  zoom: 65%;
+emph{
+    display: inline;
+    font-style: italic;
 }
-foreign {
-  display: inline;
-  font-style: italic;
+figure,
+notatedMusic,
+tableFigure{
+    display: block;
+    font-style: italic;
+    margin: 2em 0em 2em 2em;
+    font-size: 1.4em;
+    zoom: 65%;
 }
-formula {
-  display: inline;
-  font-style: italic;
+foreign{
+    display: inline;
+    font-style: italic;
 }
-rilmPerson[n]>persName>forename {
-    font-weight:bold;
-    font-style:normal;
+formula{
+    display: inline;
+    font-style: italic;
 }
-div[type="person"] p[n]>rilmPerson:first-of-type>persName>forename {
-    font-weight:bold;
-    font-style:normal;
+rilmPerson[n] > persName > forename{
+    font-weight: bold;
+    font-style: normal;
 }
-div[type="family"] div[type="bio"] > forename:first-of-type {
-font-weight: bold;
+div[type = "person"] p[n] > rilmPerson:first-of-type > persName > forename{
+    font-weight: bold;
+    font-style: normal;
 }
-div[type='heading'] p persName[type='alt'] > surname, div[type='heading'] p persName[type='alt'] > forename {
+div[type = "family"] div[type = "bio"] > forename:first-of-type{
+    font-weight: bold;
+}
+div[type = 'heading'] p persName[type = 'alt'] > surname,
+div[type = 'heading'] p persName[type = 'alt'] > forename{
     font-style: italic;
     font-weight: normal;
-}    
-gap:after {
-  content: "[…]";
-  font-weight: bold;
-  color: red;
+}
+gap:after{
+    content: "[…]";
+    font-weight: bold;
+    color: red;
 }
 graphic{
     color: gray;
@@ -207,44 +211,46 @@ graphic{
     padding: 10px;
     /*-moz-transform:scale(0.5);
       -webkit-transform:scale(0.5);
-      transform:scale(0.5);*/  
+      transform:scale(0.5);*/
 }
-formula > graphic {
+formula > graphic{
     display: inline;
-	border: none;
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
-	text-indent:0;
+    border: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-indent: 0;
 }
-body > head {
+body > head{
     display: block;
     margin-left: 2em;
     margin-bottom: .25em;
     font-weight: bold;
 }
-div[type="section"] > head {
+div[type = "section"] > head{
     display: block;
     font-weight: 700;
     text-indent: 2em;
     margin-top: 1em;
 }
 table > head{
-    display:table-caption;
+    display: table-caption;
     font-style: italic;
     margin-bottom: 6pt;
-}  
-head[n]::before {
-    content: attr(n) ". ";
-    font-style:normal;
 }
-figure > head:after, notatedMusic > head:after, tableFigure > head:after {
-content: " ";
+head[n]::before{
+    content: attr(n) ". ";
+    font-style: normal;
+}
+figure > head:after,
+notatedMusic > head:after,
+tableFigure > head:after{
+    content: " ";
 }
 
-list > head {
-     font-variant: small-caps;
+list > head{
+    font-variant: small-caps;
 }
-        @supports(font-feature-settings: 'smcp') {
+@supports(font-feature-settings: 'smcp') {
     list > head {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
@@ -252,15 +258,15 @@ list > head {
         font-feature-settings: "smcp";
     }
 }
-div[type="ography"] > head {
-     text-transform: uppercase;
+div[type = "ography"] > head{
+    text-transform: uppercase;
     font-weight: bold;
     text-indent: inherit;
-    display:block;
-    padding-top:1em;
-    font-size:.92em;
+    display: block;
+    padding-top: 1em;
+    font-size: .92em;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+@supports(font-feature-settings: 'c2sc', 'smcp') {
     div[type="ography"] > head  { 
     	font-size: 1.1em;  
     	text-transform: none;   
@@ -269,15 +275,15 @@ div[type="ography"] > head {
         font-feature-settings: "c2sc", "smcp";
     }
 }
-div[type="works"] > head {
+div[type = "works"] > head{
     font-weight: bold;
     display: block;
     text-indent: 2em;
-     text-transform: uppercase;
-       padding-top:1em;
-        font-size:.92em;
+    text-transform: uppercase;
+    padding-top: 1em;
+    font-size: .92em;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+@supports(font-feature-settings: 'c2sc', 'smcp') {
  div[type="works"] > head {   
  	font-size: 1.1em;   
  	text-transform: none;
@@ -286,12 +292,12 @@ div[type="works"] > head {
         font-feature-settings: "c2sc", "smcp"; 
     }
 }
-div[type="contents"] > head {
+div[type = "contents"] > head{
     text-transform: uppercase;
     font-size: smaller;
     font-weight: bold;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+@supports(font-feature-settings: 'c2sc', 'smcp') {
     div[type="contents"] > head { 
     	font-size: 1em;     
     	text-transform: none; 
@@ -300,12 +306,12 @@ div[type="contents"] > head {
         font-feature-settings: "c2sc", "smcp";
     }
 }
-text[type='family'] div[type="contents"] > head {
+text[type = 'family'] div[type = "contents"] > head{
     text-transform: uppercase;
     font-size: smaller;
     font-weight: normal;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+@supports(font-feature-settings: 'c2sc', 'smcp') {
     div[type="contents"] > head { 
     	font-size: 1em;     
     	text-transform: none; 
@@ -314,10 +320,10 @@ text[type='family'] div[type="contents"] > head {
         font-feature-settings: "c2sc", "smcp";
     }
 }
-text[type='family']  list > head {
+text[type = 'family'] list > head{
     font-variant: small-caps;
 }
-        @supports(font-feature-settings: 'smcp') {
+@supports(font-feature-settings: 'smcp') {
     text[type='family']  list > head {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
@@ -325,187 +331,197 @@ text[type='family']  list > head {
         font-feature-settings: "smcp";
     }
 }
-head[n*=I], head[n*=V], head[n*=X], head[n*=L], head[n*=C]{
-      display: block;
+head[n *= I],
+head[n *= V],
+head[n *= X],
+head[n *= L],
+head[n *= C]{
+    display: block;
     font-style: italic;
     text-indent: 2em;
-} 
+}
 /*div[type='ography'] head[n*=I], div[type='ography'] head[n*=V], div[type='ography'] head[n*=X], div[type='ography'] head[n*=L], div[type='ography']head[n*=C], div[type='works'] head[n*=I], div[type='works'] head[n*=V], div[type='works'] head[n*=X], div[type='works'] head[n*=L], head[n*=C]{
     font-style: normal;
 } */
-div[type='ography'] head, div[type='works'] head {
-	font-style: normal;
+div[type = 'ography'] head,
+div[type = 'works'] head{
+    font-style: normal;
 }
-bibl idno {
-  display: inline;
+bibl idno{
+    display: inline;
 }
-imprint {
-  display: inline;
+imprint{
+    display: inline;
 }
-item {
-    display:list-item;
+item{
+    display: list-item;
 }
-p item {
-    display:block
+p item{
+    display: block
 }
-item[n]:before {
-  content: attr(n) ". " ;
-  list-style: none;
-} 
-div[type="contents"] > list > item {
+item[n]:before{
+    content: attr(n) ". ";
+    list-style: none;
+}
+div[type = "contents"] > list > item{
     display: block;
 }
 /*div[type='works']  list item + item:before,  div[type='ography']  list item + item:before{
      content: "\0020\25A0\0020";
  }*/
-div[type="section"] list item, div[type="bio"] list item, div[type="criticism"] list item {
-  display: block;
+div[type = "section"] list item,
+div[type = "bio"] list item,
+div[type = "criticism"] list item{
+    display: block;
 }
-div[type="ography"] list item, div[type="works"] list item {
-	text-indent: -1.5em;
-	display: list-item;
-	padding-left: 1.5em;
-	margin-bottom: .6em;
+div[type = "ography"] list item,
+div[type = "works"] list item{
+    text-indent: -1.5em;
+    display: list-item;
+    padding-left: 1.5em;
+    margin-bottom: .6em;
 }
 /*div[type="ography"] list item, div[type="works"] list item  {
   display: inline;
 }
 div[type="works"] div[type="section"] list item, div[type="ography"] div[type="section"] list item {
 display: inline;
-}*/    
-l {
-  display: block;
-  white-space: nowrap;
+}*/
+l{
+    display: block;
+    white-space: nowrap;
 }
-lb {
-  display: block;
+lb{
+    display: block;
 }
-lg {
-  display: block;
-  margin-bottom: 0.5em;
+lg{
+    display: block;
+    margin-bottom: 0.5em;
 }
-div[type="ography"] list, div[type="works"] list {
-  display: block;
-  list-style-type: none;
-  margin-bottom: 1em;
-  margin-top: .5em;
+div[type = "ography"] list,
+div[type = "works"] list{
+    display: block;
+    list-style-type: none;
+    margin-bottom: 1em;
+    margin-top: .5em;
 }
-list[rend="list"] {
+list[rend = "list"]{
     list-style-type: disc;
-    list-style-position:outside;
+    list-style-position: outside;
 }
-list[rend="inline"] {
-  display: inline;
+list[rend = "inline"]{
+    display: inline;
 }
-list[rend="bulleted"] {
-  list-style-type: disc;
-  list-style-position: outside;
+list[rend = "bulleted"]{
+    list-style-type: disc;
+    list-style-position: outside;
 }
-list[rend="numbered"] {
-  list-style-type: decimal;
-  list-style-position: outside;
+list[rend = "numbered"]{
+    list-style-type: decimal;
+    list-style-position: outside;
 }
-list[rend="lower-latin"] {
-  list-style-type: lower-latin;
-  list-style-position: outside;
+list[rend = "lower-latin"]{
+    list-style-type: lower-latin;
+    list-style-position: outside;
 }
-list[rend="lower-greek"] {
-  list-style-type: lower-greek;
-  list-style-position: outside;
+list[rend = "lower-greek"]{
+    list-style-type: lower-greek;
+    list-style-position: outside;
 }
-list[rend="lower-roman"] {
-  list-style-type: lower-roman;
-  list-style-position: outside;
+list[rend = "lower-roman"]{
+    list-style-type: lower-roman;
+    list-style-position: outside;
 }
-list[rend="upper-latin"] {
-  list-style-type: upper-latin;
-  list-style-position: outside;
+list[rend = "upper-latin"]{
+    list-style-type: upper-latin;
+    list-style-position: outside;
 }
-list[rend="upper-greek"] {
-  list-style-type: upper-greek;
-  list-style-position: outside;
+list[rend = "upper-greek"]{
+    list-style-type: upper-greek;
+    list-style-position: outside;
 }
-list[rend="upper-roman"] {
-  list-style-type: upper-roman;
-  list-style-position: outside;
+list[rend = "upper-roman"]{
+    list-style-type: upper-roman;
+    list-style-position: outside;
 }
-mentioned {
-  display: inline;
-  font-style: italic;
+mentioned{
+    display: inline;
+    font-style: italic;
 }
-musNote {
+musNote{
     font-style: italic;
 }
 
-note {
-  display: inherit;
-    font-style:normal;
-}
-quote > note {
- font-style: normal;   
-}
-*[rend="italic"] > note {
+note{
+    display: inherit;
     font-style: normal;
 }
-*[rend="quoted-italic"] > note {
+quote > note{
     font-style: normal;
 }
-head > note {
+*[rend = "italic"] > note{
+    font-style: normal;
+}
+*[rend = "quoted-italic"] > note{
+    font-style: normal;
+}
+head > note{
     text-transform: none;
-    font-size:medium;
+    font-size: medium;
     font-weight: normal;
-    display:inline;
+    display: inline;
     font-variant: normal;
     font-feature-settings: normal;
     -moz-font-feature-settings: normal;
     -webkit-font-feature-settings: normal;
-}   
-note[type="editorial"] {
+}
+note[type = "editorial"]{
     display: none;
 }
-orgName {
+orgName{
     font-style: italic;
 }
-orgName[type='performing'] {
+orgName[type = 'performing']{
     font-style: italic;
 }
-orgName[type='trans'] {
+orgName[type = 'trans']{
     font-style: normal;
 }
-orgName[type='uni'] {
+orgName[type = 'uni']{
     font-style: normal;
 }
-div[type='heading'] orgName, div[type='heading'] orgName[type='preferred'] {
-    font-weight:bold;
+div[type = 'heading'] orgName,
+div[type = 'heading'] orgName[type = 'preferred']{
+    font-weight: bold;
 }
-p {
+p{
     text-indent: 2em;
     display: block;
 }
-p[rend="block"] {
-    margin-left:2em;
-    text-indent:0;
-}
-cell > p {
+p[rend = "block"]{
+    margin-left: 2em;
     text-indent: 0;
 }
-item > p {
+cell > p{
+    text-indent: 0;
+}
+item > p{
     text-indent: 0;
     display: inherit;
 }
-quote > p {
-	font-style: italic;
-	}
-p[n]::before {
+quote > p{
+    font-style: italic;
+}
+p[n]::before{
     content: attr(n) ". ";
     font-style: normal !important;
-    font-weight:bold;
+    font-weight: bold;
 }
-docAuthor > persName {
-  display: inline;
-  text-transform: uppercase;
+docAuthor > persName{
+    display: inline;
+    text-transform: uppercase;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+@supports(font-feature-settings: 'c2sc', 'smcp') {
     docAuthor > persName { 
     	font-size: 1.1em;  
     	text-transform: none;   
@@ -514,106 +530,111 @@ docAuthor > persName {
         font-feature-settings: "c2sc", "smcp";
     }
 }
-quote > p:first-of-type {
-    display:inline;
-}
-quote > p:last-of-type {
+quote > p:first-of-type{
     display: inline;
 }
-figure head, figure p, notatedMusic head, notatedMusic p, tableFigure head, tableFigure p {
+quote > p:last-of-type{
+    display: inline;
+}
+figure head,
+figure p,
+notatedMusic head,
+notatedMusic p,
+tableFigure head,
+tableFigure p{
     display: inline !important;
 }
-persName[type='alt'] {
+persName[type = 'alt']{
     font-style: italic !important;
     font-weight: normal !important;
 }
-div[type='heading'] persName[type='preferred'] {
-    font-style:normal;
+div[type = 'heading'] persName[type = 'preferred']{
+    font-style: normal;
 }
-pitch {
-   font-style: italic;
+pitch{
+    font-style: italic;
 }
-publisher {
-  display: inline;
+publisher{
+    display: inline;
 }
-pubPlace {
-  display: inline;
+pubPlace{
+    display: inline;
 }
-q {
-  display: inline;
-  quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
-  margin-top: 0em;
-  margin-left: 0em;
-  margin-right: 0em;
-  margin-bottom: 0em;
+q{
+    display: inline;
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+    margin-top: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    margin-bottom: 0em;
 }
-q[rend="single"] {
-    quotes:  '›\200A' '\200A‹'
+q[rend = "single"]{
+    quotes: '›\200A' '\200A‹'
 }
-quote > q {
+quote > q{
     quotes: '›\200A' '\200A‹';
-}  
-q:before {
-  content: open-quote;
-  font-style: normal;
 }
-q:after {
-  content: close-quote;
-  font-style: normal;
+q:before{
+    content: open-quote;
+    font-style: normal;
 }
-q[rend="left-double"] {
-    quotes: '»\200A' ''; 
+q:after{
+    content: close-quote;
+    font-style: normal;
 }
-q[rend="right-double"] {
+q[rend = "left-double"]{
+    quotes: '»\200A' '';
+}
+q[rend = "right-double"]{
     quotes: '\200A«' '';
 }
-q[rend="left-double"]:before {
-  content: open-quote;
-  font-style: normal;  
+q[rend = "left-double"]:before{
+    content: open-quote;
+    font-style: normal;
 }
-q[rend="right-double"]:after {
-  content: close-quote;
-  font-style: normal;    
+q[rend = "right-double"]:after{
+    content: close-quote;
+    font-style: normal;
 }
- quote {
-     display:inline;
-     font-style: italic;
-     quotes: '»\200A' '\200A«'  '›\200A' '\200A‹';
- }
-q > quote {
+quote{
+    display: inline;
+    font-style: italic;
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+}
+q > quote{
     quotes: '›\200A' '\200A‹';
 }
- quote:before {
-     content: open-quote;
-      font-style: normal;
- }
- quote:after {
-     content: close-quote;
-      font-style: normal;
- }
-ref {
-  display: inline;
-  color: blue;
-  background-color: inherit;
+quote:before{
+    content: open-quote;
+    font-style: normal;
 }
-ref[target*="document"]:before{
-content: "→ ";
+quote:after{
+    content: close-quote;
+    font-style: normal;
 }
-rilmPerson[n]::before {
+ref{
+    display: inline;
+    color: blue;
+    background-color: inherit;
+}
+ref[target *= "document"]:before{
+    content: "→ ";
+}
+rilmPerson[n]::before{
     content: attr(n) ". ";
-    font-weight:bold;
+    font-weight: bold;
 }
-row {
-  display: table-row;
+row{
+    display: table-row;
 }
-row[role='label'] {
-   color: inherit;
-   background-color: #BBBBBB;
-   font-variant: small-caps;
-   font-weight:700;
-   font-size:1.1em;
+row[role = 'label']{
+    color: inherit;
+    background-color: #BBBBBB;
+    font-variant: small-caps;
+    font-weight: 700;
+    font-size: 1.1em;
 }
-        @supports(font-feature-settings: 'smcp') {
+@supports(font-feature-settings: 'smcp') {
     row[role='label'] {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
@@ -621,88 +642,89 @@ row[role='label'] {
         font-feature-settings: "smcp";
     }
 }
-soCalled {
-  display: inline;
-  quotes: "›\200A" "\200A‹";
+soCalled{
+    display: inline;
+    quotes: "›\200A" "\200A‹";
 }
-soCalled:before {
-  content: open-quote;
-  font-style: normal;
-}
-soCalled:after {
-  content: close-quote;
-  font-style: normal;
-}
-rilmPerson[n]>persName>surname {
-    font-weight:bold;
-    font-style:normal;
-}
-div[type="person"] p[n]>rilmPerson:first-of-type>persName>surname {
-    font-weight:bold;
-    font-style:normal;
-}
- persName[type='alt']>surname {
-    font-style: italic !important;
-    font-weight: normal !important;
-}
-div[type='heading'] persName > surname, div[type='heading'] persName[type='preferred'] > surname {
-    font-weight: bold;
-}
-table {
-  text-align: center;
-  display: table;
-  margin: 1em;
-  border: 1px solid #EEEFEE;
-}
-title {
-  display: inline;
-  font-style:italic;
-}
-title[type='generic'] {
-    font-style: normal;
-}
-
-title[type='translated'] {
-    font-style:normal;
-}
-
-title[type='incipit'] {
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
- }
-title[type='incipit']:before {
+soCalled:before{
     content: open-quote;
     font-style: normal;
- }
- title[type='incipit']:after {
+}
+soCalled:after{
     content: close-quote;
     font-style: normal;
 }
-title[subtype="secondary"] {
-    font-style:normal;
+rilmPerson[n] > persName > surname{
+    font-weight: bold;
+    font-style: normal;
 }
-*[rend="bold"] {
-  /*display: inline;*/
-  font-weight: bold;
+div[type = "person"] p[n] > rilmPerson:first-of-type > persName > surname{
+    font-weight: bold;
+    font-style: normal;
 }
-*[rend="italic"] {
-  display: inline;
-  font-style: italic;
+persName[type = 'alt'] > surname{
+    font-style: italic !important;
+    font-weight: normal !important;
 }
- *[rend="roman"] {
-  display:inline;
-  font-style: normal;
-  text-transform: inherit !important;
-  font-variant: inherit !important;
- }
-*[rend="underline"] {
-  display: inline;
-  text-decoration:underline;
+div[type = 'heading'] persName > surname,
+div[type = 'heading'] persName[type = 'preferred'] > surname{
+    font-weight: bold;
 }
-*[rend="uppercase"] {
-  display: inline;
-  text-transform: uppercase;
+table{
+    text-align: center;
+    display: table;
+    margin: 1em;
+    border: 1px solid #EEEFEE;
 }
-        @supports(font-feature-settings: 'c2sc', 'smcp') {
+title{
+    display: inline;
+    font-style: italic;
+}
+title[type = 'generic']{
+    font-style: normal;
+}
+
+title[type = 'translated']{
+    font-style: normal;
+}
+
+title[type = 'incipit']{
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+}
+title[type = 'incipit']:before{
+    content: open-quote;
+    font-style: normal;
+}
+title[type = 'incipit']:after{
+    content: close-quote;
+    font-style: normal;
+}
+title[subtype = "secondary"]{
+    font-style: normal;
+}
+*[rend = "bold"]{
+    /*display: inline;*/
+    font-weight: bold;
+}
+*[rend = "italic"]{
+    display: inline;
+    font-style: italic;
+}
+*[rend = "roman"]{
+    display: inline;
+    font-style: normal;
+    text-transform: inherit !important;
+    font-variant: inherit !important;
+}
+*[rend = "underline"]{
+    display: inline;
+    text-decoration: underline;
+}
+*[rend = "uppercase"]{
+    display: inline;
+    text-transform: uppercase;
+}
+@supports(font-feature-settings: 'c2sc', 'smcp') {
     *[rend="uppercase"] {
     	font-size: 1.1em;   
     	text-transform: none;  
@@ -711,12 +733,12 @@ title[subtype="secondary"] {
         font-feature-settings: "c2sc", "smcp";
     }
 }
-*[rend="smallcaps"] {
-  display: inline;
-   font-variant: small-caps;
-  font-style: inherit;
+*[rend = "smallcaps"]{
+    display: inline;
+    font-variant: small-caps;
+    font-style: inherit;
 }
-        @supports(font-feature-settings: 'smcp') {
+@supports(font-feature-settings: 'smcp') {
     *[rend="smallcaps"] {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
@@ -724,191 +746,192 @@ title[subtype="secondary"] {
         font-feature-settings: "smcp";
     }
 }
-*[rend="sup"] {
-  display: inline;
-  vertical-align: super;
-  font-size: 60%;
-}
-*[rend="sub"] {
-  display: inline;
-  vertical-align: sub;
-  font-size: 60%;
-}
-*[rend="quoted-italic"] {
+*[rend = "sup"]{
     display: inline;
-    font-style:italic;
-     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
- }
-*[rend="quoted-italic"]:before {
-     content: open-quote;
-font-style: normal;
- }
-*[rend="quoted-italic"]:after {
-     content: close-quote;
-font-style: normal;
- }
+    vertical-align: super;
+    font-size: 60%;
+}
+*[rend = "sub"]{
+    display: inline;
+    vertical-align: sub;
+    font-size: 60%;
+}
+*[rend = "quoted-italic"]{
+    display: inline;
+    font-style: italic;
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+}
+*[rend = "quoted-italic"]:before{
+    content: open-quote;
+    font-style: normal;
+}
+*[rend = "quoted-italic"]:after{
+    content: close-quote;
+    font-style: normal;
+}
 
 /* header-related material */
-teiHeader {
-  display: block;
-  font-family: sans-serif;
-  color: silver;
-  background-color: rgb(251, 242, 234);
-  border: solid black 1pt;
-  margin-bottom: 2em;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 1em;
+teiHeader{
+    display: block;
+    font-family: sans-serif;
+    color: silver;
+    background-color: rgb(251, 242, 234);
+    border: solid black 1pt;
+    margin-bottom: 2em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
 }
- teiHeader biblStruct title:before  {
-     content: 'Title: ';
- }
-  teiHeader biblStruct editor:before  {
-     content: 'Editor: ';
- }
-  teiHeader biblStruct publisher:before  {
-     content: 'Publisher: ';
- }
-  teiHeader biblStruct pubPlace:before  {
-     content: 'Place of publication: ';
- }
-  teiHeader biblStruct date:before  {
-     content: 'Year of publication: ';
- }
-  teiHeader biblStruct biblScope[type='vol']:before  {
-     content: 'Volume: ';
- }
-   teiHeader biblStruct biblScope[type='col']:before  {
-     content: 'Columns: ';
- }
-    teiHeader biblStruct biblScope[type='part']:before  {
-     content: 'Series: ';
- }
-titleStmt > author {
-  display: block;
-  margin-bottom: 1em;
+teiHeader biblStruct title:before{
+    content: 'Title: ';
 }
-teiHeader biblScope {
+teiHeader biblStruct editor:before{
+    content: 'Editor: ';
+}
+teiHeader biblStruct publisher:before{
+    content: 'Publisher: ';
+}
+teiHeader biblStruct pubPlace:before{
+    content: 'Place of publication: ';
+}
+teiHeader biblStruct date:before{
+    content: 'Year of publication: ';
+}
+teiHeader biblStruct biblScope[type = 'vol']:before{
+    content: 'Volume: ';
+}
+teiHeader biblStruct biblScope[type = 'col']:before{
+    content: 'Columns: ';
+}
+teiHeader biblStruct biblScope[type = 'part']:before{
+    content: 'Series: ';
+}
+titleStmt > author{
+    display: block;
+    margin-bottom: 1em;
+}
+teiHeader biblScope{
     display: block;
     margin-bottom: .3em;
 }
-teiHeader > title {
- border: solid silver .5em;
+teiHeader > title{
+    border: solid silver .5em;
     margin-bottom: 1em;
     padding: .5em;
-    }
+}
 
-authority {
-  display: block;
-  margin-bottom: 0.5em;
+authority{
+    display: block;
+    margin-bottom: 0.5em;
 }
-availability {
-  display: block;
-  margin-bottom: 0.5em;
+availability{
+    display: block;
+    margin-bottom: 0.5em;
 }
-fileDesc {
-  display: block;
-  margin-bottom: 1em;
+fileDesc{
+    display: block;
+    margin-bottom: 1em;
 }
-sourceDesc {
-  display: block;
-  border: thin silver solid;
-  margin-bottom: 1em;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 1em;
+sourceDesc{
+    display: block;
+    border: thin silver solid;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
 }
-revisionDesc {
-  display: block;
-  margin-bottom: 1em;
+revisionDesc{
+    display: block;
+    margin-bottom: 1em;
 }
-catDesc {
-  display: block;
-  margin-bottom: 0.5em;
+catDesc{
+    display: block;
+    margin-bottom: 0.5em;
 }
-encodingDesc {
-  display: block;
-  margin-bottom: 1em;
+encodingDesc{
+    display: block;
+    margin-bottom: 1em;
 }
-profileDesc {
-  display: block;
-  margin-bottom: 1em;
+profileDesc{
+    display: block;
+    margin-bottom: 1em;
 }
-projectDesc {
-  display: block;
-  margin-bottom: 1em;
+projectDesc{
+    display: block;
+    margin-bottom: 1em;
 }
-docDate {
-  display: block;
-  margin-bottom: 0.5em;
+docDate{
+    display: block;
+    margin-bottom: 0.5em;
 }
-docImprint docDate {
-  display: inline;
+docImprint docDate{
+    display: inline;
 }
-docEdition {
-  display: block;
-  margin-bottom: 0.5em;
+docEdition{
+    display: block;
+    margin-bottom: 0.5em;
 }
-docImprint {
-  display: block;
-  margin-bottom: 0.5em;
+docImprint{
+    display: block;
+    margin-bottom: 0.5em;
 }
-docTitle {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5em;
+docTitle{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
-titleStmt > title:before {
-  content: "Title: ";
-  }
-  titleStmt > title {
-    display:block   
+titleStmt > title:before{
+    content: "Title: ";
+}
+titleStmt > title{
+    display: block
 }
 /*End of header-related material*/
 /* CSS for turning lists into tables */
-list[type="table"] {
-    display:table;
+list[type = "table"]{
+    display: table;
     text-align: center;
-  margin: 1em;
-    border:solid 1px #EEEFEE;
+    margin: 1em;
+    border: solid 1px #EEEFEE;
     table-layout: fixed;
-     width: 95%;
- border-collapse: collapse;
+    width: 95%;
+    border-collapse: collapse;
 }
 /*list[type="table"] seg[type="header"] {
     display:inline-block;
     text-align:center;
   background-color: lightgray;
 }*/
-list[type="table"] item bibl, list[type="table"] item seg[type="header"] {
-   display:table-row;
-   border: 1px solid #EEEFEE; 
-   }
-   seg[type="header"] {
-       background-color:lightgray;
-   }
-
-list[type="table"] item seg[type="header"] > * {
-    display:table-cell;
-    width: 12.5%;
-   padding: .2em;
- border: 1px solid #EEEFEE;
-text-align:left;
-    overflow: hidden; 
+list[type = "table"] item bibl,
+list[type = "table"] item seg[type = "header"]{
+    display: table-row;
+    border: 1px solid #EEEFEE;
 }
-list[type="table"] item bibl > * {
-display:table-cell;
-overflow: hidden;
-width: 12.5%;
- border: 1px solid #EEEFEE;
-  padding: .2em;
-  color: inherit;
-  text-align:left;
-  background-color:inherit;
-  } 
+seg[type = "header"]{
+    background-color: lightgray;
+}
+
+list[type = "table"] item seg[type = "header"] > *{
+    display: table-cell;
+    width: 12.5%;
+    padding: .2em;
+    border: 1px solid #EEEFEE;
+    text-align: left;
+    overflow: hidden;
+}
+list[type = "table"] item bibl > *{
+    display: table-cell;
+    overflow: hidden;
+    width: 12.5%;
+    border: 1px solid #EEEFEE;
+    padding: .2em;
+    color: inherit;
+    text-align: left;
+    background-color: inherit;
+}
 /* End of list-table CSS */
-teiHeader {
-    display:none
+teiHeader{
+    display: none
 }

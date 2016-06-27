@@ -14,119 +14,120 @@ $LastChangedDate$, $LastChangedRevision$, $LastChangedBy$
 ============================================================= */
 /* Use Times New Roman for default font test */
 div{
-	display: inline;
-	margin: 0px;
+    display: inline;
+    margin: 0px;
 }
-div.rilm-nodename-div, div.rilm-nodename-p{
-	clear:both;
-	display:block;
-	margin: 10px 0 10px 0;
+div.rilm-nodename-div,
+div.rilm-nodename-p{
+    clear: both;
+    display: block;
+    margin: 10px 0 10px 0;
 }
-.rilm-p > img {
-height: 1em;
-width: auto;
-display: inline;
-border: none;
-margin: 0 0 0 0;
-padding: 0 0 0 .5em;
-color: inherit;
+.rilm-p > img{
+    height: 1em;
+    width: auto;
+    display: inline;
+    border: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 .5em;
+    color: inherit;
 }
-.rilm-formula > img {
-	height: 1.2em;
-	vertical-align: text-bottom;
-	color: inherit;
+.rilm-formula > img{
+    height: 1.2em;
+    vertical-align: text-bottom;
+    color: inherit;
 }
-@font-face {
-  font-family: 'Bravura Text';
-  src: url('/public/rilm-common/fonts/BravuraText.woff') format('woff') 
+@font-face{
+    font-family: 'Bravura Text';
+    src: url('/public/rilm-common/fonts/BravuraText.woff') format('woff')
 }
-@font-face {
+@font-face{
     font-family: FreeSerif;
     src: url('/public/rilm-common/fonts/FreeSerif.woff') format('woff')
 }
-@font-face {
-	font-family: AndanaSC;
-	src: url('/public/rilm-common/fonts/AndanaSC-Regular.woff') format('woff');
+@font-face{
+    font-family: AndanaSC;
+    src: url('/public/rilm-common/fonts/AndanaSC-Regular.woff') format('woff');
 }
-@font-face {
-	font-family: AndanaSC;
-	font-weight: 700;
-	src: url('/public/rilm-common/fonts/AndanaSC-Bold.woff') format('woff');
+@font-face{
+    font-family: AndanaSC;
+    font-weight: 700;
+    src: url('/public/rilm-common/fonts/AndanaSC-Bold.woff') format('woff');
 }
-@font-face {
-	font-family: Andana;
-	font-style: normal;
-	src: url('/public/rilm-common/fonts/Andana-Regular.woff') format('woff');
-	}
-@font-face {
-	font-family: Andana;
-	font-style: italic;
-	src: url('/public/rilm-common/fonts/Andana-Italic.woff') format('woff');
-}	
-@font-face {
-	font-family: Andana;
-	font-weight: 700;
-	src: url('/public/rilm-common/fonts/Andana-Bold.woff') format('woff');
+@font-face{
+    font-family: Andana;
+    font-style: normal;
+    src: url('/public/rilm-common/fonts/Andana-Regular.woff') format('woff');
 }
-@font-face {
-	font-family: Andana;
-	font-style: bold;
-	src: url('/public/rilm-common/fonts/Andana-BoldItalic.woff') format('woff');
+@font-face{
+    font-family: Andana;
+    font-style: italic;
+    src: url('/public/rilm-common/fonts/Andana-Italic.woff') format('woff');
 }
-@font-face {
-	font-family: FontinSC;
-	font-style: normal;
-	src: url('/public/rilm-common/fonts/Fontin-SmallCaps.woff') format('woff');
-	}
-@font-face {
-	font-family: Fontin;
-	font-style: italic;
-	src: url('/public/rilm-common/fonts/Fontin-Italic.woff') format('woff');
-}	
-@font-face {
-	font-family: Fontin;
-	font-weight: 700;
-	src: url('/public/rilm-common/fonts/Fontin-Bold.woff') format('woff');
+@font-face{
+    font-family: Andana;
+    font-weight: 700;
+    src: url('/public/rilm-common/fonts/Andana-Bold.woff') format('woff');
 }
-@font-face {
-	font-family: Fontin;
-	src: url('/public/rilm-common/fonts/Fontin-Regular.woff') format('woff');
+@font-face{
+    font-family: Andana;
+    font-style: bold;
+    src: url('/public/rilm-common/fonts/Andana-BoldItalic.woff') format('woff');
 }
-@font-face {
+@font-face{
+    font-family: FontinSC;
+    font-style: normal;
+    src: url('/public/rilm-common/fonts/Fontin-SmallCaps.woff') format('woff');
+}
+@font-face{
+    font-family: Fontin;
+    font-style: italic;
+    src: url('/public/rilm-common/fonts/Fontin-Italic.woff') format('woff');
+}
+@font-face{
+    font-family: Fontin;
+    font-weight: 700;
+    src: url('/public/rilm-common/fonts/Fontin-Bold.woff') format('woff');
+}
+@font-face{
+    font-family: Fontin;
+    src: url('/public/rilm-common/fonts/Fontin-Regular.woff') format('woff');
+}
+@font-face{
     font-family: Skolar;
     font-style: normal;
     src: url('/public/rilm-common/fonts/SkolarPETEST-Regular.woff') format('woff');
 }
-@font-face {
-font-family: Skolar;
-font-style: italic;
-src: url('/public/rilm-common/fonts/SkolarPETEST-Italic.woff') format('woff');
+@font-face{
+    font-family: Skolar;
+    font-style: italic;
+    src: url('/public/rilm-common/fonts/SkolarPETEST-Italic.woff') format('woff');
 }
-@font-face {
+@font-face{
     font-family: Skolar;
     font-style: normal;
     font-weight: 700;
     src: url('/public/rilm-common/fonts/SkolarPETEST-Bold.woff') format('woff');
 }
-@font-face {
+@font-face{
     font-family: Skolar;
     font-style: italic;
     font-weight: 700;
     src: url('/public/rilm-common/fonts/SkolarPETEST-BoldItalic.woff') format('woff');
 }
-* {
+*{
     line-height: 1.75em;
 }
-.rilm-TEI {
+.rilm-TEI{
 }
-.rilm-abbr {
-  display: inline;
+.rilm-abbr{
+    display: inline;
 }
-.rilm-bibl   .rilm-author {
-  display: inline;
-  /*font-variant: small-caps;*/
-  font-family: 'Alegreya SC';
-  }
+.rilm-bibl .rilm-author{
+    display: inline;
+    /*font-variant: small-caps;*/
+    font-family: 'Alegreya SC';
+}
 /*  @supports(font-feature-settings: 'smcp') {
     .rilm-bibl .rilm-author {
         font-variant: normal;
@@ -135,90 +136,91 @@ src: url('/public/rilm-common/fonts/SkolarPETEST-Italic.woff') format('woff');
         font-feature-settings: "smcp";
     }
 }*/
-.rilm-bibl .rilm-author.rilm-subtype_secondary {
-	font-variant:normal;
-}     
-.rilm-bibl {
-  display: inline;
+.rilm-bibl .rilm-author.rilm-subtype_secondary{
+    font-variant: normal;
 }
-.rilm-biblScope {
-  display: inline;
+.rilm-bibl{
+    display: inline;
 }
-.rilm-birth:before {
-content: "*";
-}     
-.rilm-body {
-  margin: 10px 40px 10px 50px;
-  display: block;
- font-size: 1em;
- font-weight: 400;
-  font-family: Alegreya, 'Bravura Text', serif;
-  /*font-family: Skolar, sans-serif, 'Bravura Text';*/
-  font-variant-numeric: oldstyle-nums;
-  font-feature-settings: "onum";
+.rilm-biblScope{
+    display: inline;
 }
-.rilm-cell {
-  display: table-cell;
-  border: 1px solid #EEEFEE;
-  border-bottom:none;
-  padding: .5em 1em .5em 1em;
-  color: inherit;
-  text-align:left;
-  text-indent: 0 !important;
-  background-color:inherit;
+.rilm-birth:before{
+    content: "*";
 }
-.rilm-cell.rilm-role_label {
-   color: inherit;
-   background-color: #BBBBBB;
+.rilm-body{
+    margin: 10px 40px 10px 50px;
+    display: block;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: Alegreya, 'Bravura Text', serif;
+    /*font-family: Skolar, sans-serif, 'Bravura Text';*/
+    font-variant-numeric: oldstyle-nums;
+    font-feature-settings: "onum";
 }
-.rilm-row.rilm-rend_noborder > .rilm-cell {
+.rilm-cell{
+    display: table-cell;
+    border: 1px solid #EEEFEE;
+    border-bottom: none;
+    padding: .5em 1em .5em 1em;
+    color: inherit;
+    text-align: left;
+    text-indent: 0 !important;
+    background-color: inherit;
+}
+.rilm-cell.rilm-role_label{
+    color: inherit;
+    background-color: #BBBBBB;
+}
+.rilm-row.rilm-rend_noborder > .rilm-cell{
     border-right: 1px solid #EEEFEE;
     border-top: none;
     border-left: 1px solid #EEEFEE;
     border-bottom: none;
 }
-.rilm-cit {
-  display: inline;
+.rilm-cit{
+    display: inline;
 }
-.rilm-cit.rilm-rend_block {
+.rilm-cit.rilm-rend_block{
     display: block;
     padding: 0 3em 0 3em;
     text-indent: 0;
 }
-.rilm-date {
-  display: inline;
-} 
-.rilm-death:before {
-content: "†";
+.rilm-date{
+    display: inline;
 }
-.rilm-div.rilm-type_contents {
- display: block;
+.rilm-death:before{
+    content: "†";
 }
-.rilm-div.rilm-type_ography,  .rilm-div.rilm-type_works{
+.rilm-div.rilm-type_contents{
+    display: block;
+}
+.rilm-div.rilm-type_ography,
+.rilm-div.rilm-type_works{
     text-indent: 2em;
 }
-.rilm-div.rilm-type_section > .rilm-head > .rilm-div {
+.rilm-div.rilm-type_section > .rilm-head > .rilm-div{
     display: block;
-     font-style: italic;
+    font-style: italic;
     text-indent: 2em;
     padding-top: 1em;
 }
-.rilm-docAuthor {
+.rilm-docAuthor{
     font-weight: bold;
     display: block;
     margin-bottom: 0.5em;
     margin-left: 2em;
-}    
-.rilm-bibl  .rilm-edition {
-  display: inline;
 }
-.rilm-bibl  .rilm-editor {
-  display: inline;
+.rilm-bibl .rilm-edition{
+    display: inline;
 }
-.rilm-bibl  .rilm-editor.rilm-subtype_primary {
-      /*font-variant: small-caps;*/
-      font-family: 'Alegreya SC';
-      }
+.rilm-bibl .rilm-editor{
+    display: inline;
+}
+.rilm-bibl .rilm-editor.rilm-subtype_primary{
+    /*font-variant: small-caps;*/
+    font-family: 'Alegreya SC';
+}
 /*    @supports(font-feature-settings: 'smcp') {
     .rilm-bibl  .rilm-editor.rilm-subtype_primary {
         font-variant: normal;
@@ -227,90 +229,94 @@ content: "†";
         font-feature-settings: "smcp";
     }
 }*/
-.rilm-emph {
-  display: inline;
-   font-style: italic;
+.rilm-emph{
+    display: inline;
+    font-style: italic;
 }
-.rilm-figure, .rilm-notatedMusic, .rilm-tableFigure {
-  display: block;
-  font-style: italic;
-  margin: 2em 0em 2em 2em;
-  font-size: 1.4em;
-  zoom: 65%;
+.rilm-figure,
+.rilm-notatedMusic,
+.rilm-tableFigure{
+    display: block;
+    font-style: italic;
+    margin: 2em 0em 2em 2em;
+    font-size: 1.4em;
+    zoom: 65%;
 }
-.rilm-foreign {
-  display: inline;
-   font-style: italic;
+.rilm-foreign{
+    display: inline;
+    font-style: italic;
 }
-.rilm-formula {
-  display: inline;
-   font-style: italic;
+.rilm-formula{
+    display: inline;
+    font-style: italic;
 }
-.rilm-rilmPerson.rilm-n>.rilm-persName>.rilm-forename {
-    font-weight:bold;
-    font-style:normal;
+.rilm-rilmPerson.rilm-n > .rilm-persName > .rilm-forename{
+    font-weight: bold;
+    font-style: normal;
 }
-.rilm-div.rilm-type_person .rilm-p.rilm-n>.rilm-rilmPerson:first-of-type>.rilm-persName>.rilm-forename {
-    font-weight:bold;
-    font-style:normal;
+.rilm-div.rilm-type_person .rilm-p.rilm-n > .rilm-rilmPerson:first-of-type > .rilm-persName > .rilm-forename{
+    font-weight: bold;
+    font-style: normal;
 }
-.rilm-div.rilm-type_family  .rilm-div.rilm-type_bio   .rilm-forename:first-of-type {
-font-weight: bold;
-}  
-.rilm-div.rilm-type_heading  .rilm-p  .rilm-persName.rilm-type_alt   .rilm-forename {
+.rilm-div.rilm-type_family .rilm-div.rilm-type_bio .rilm-forename:first-of-type{
+    font-weight: bold;
+}
+.rilm-div.rilm-type_heading .rilm-p .rilm-persName.rilm-type_alt .rilm-forename{
     font-style: italic;
     font-weight: normal;
 }
-.rilm-gap:after {
-  content: "[…]";
-  color: red;
-  font-weight: bold;
+.rilm-gap:after{
+    content: "[…]";
+    color: red;
+    font-weight: bold;
 }
-.rilm-graphic {
-color: gray;
-background-color: inherit;
-content: none !important;
-clear: both;
-display: block;
-border: 1px solid #000;
-margin: 5px 5px 5px 0;
-padding: 10px;
-/*-moz-transform:scale(0.5);
+.rilm-graphic{
+    color: gray;
+    background-color: inherit;
+    content: none !important;
+    clear: both;
+    display: block;
+    border: 1px solid #000;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    /*-moz-transform:scale(0.5);
     -webkit-transform:scale(0.5);
     transform:scale(0.5);*/
 }
-.rilm-formula > .rilm-graphic {
-	display: inline;
-	border: none;
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
-	text-indent:0;
+.rilm-formula > .rilm-graphic{
+    display: inline;
+    border: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-indent: 0;
 }
-.rilm-body > .rilm-head {
+.rilm-body > .rilm-head{
     display: block;
     margin-bottom: .25em;
     margin-left: 2em;
     font-weight: bold;
 }
-.rilm-div.rilm-type_section > .rilm-head {
+.rilm-div.rilm-type_section > .rilm-head{
     display: block;
     font-weight: 700;
     text-indent: 2em;
     margin-top: 1em;
 }
-.rilm-table   .rilm-head{
-    display:table-caption;
-     font-style: italic;
+.rilm-table .rilm-head{
+    display: table-caption;
+    font-style: italic;
     margin-bottom: 6pt;
 }
-.rilm-head.rilm-n::before {
+.rilm-head.rilm-n::before{
     content: attr(data-rilm-n) ". " !important;
     font-style: normal !important;
 }
-.rilm-figure > .rilm-head:after, .rilm-notatedMusic > .rilm-head:after, .rilm-tableFigure > .rilm-head:after {
-content: " ";
+.rilm-figure > .rilm-head:after,
+.rilm-notatedMusic > .rilm-head:after,
+.rilm-tableFigure > .rilm-head:after{
+    content: " ";
 }
-.rilm-list   .rilm-head {
+.rilm-list .rilm-head{
     /*font-variant: small-caps;*/
 }
 /*  @supports(font-feature-settings: 'smcp') {
@@ -321,15 +327,15 @@ content: " ";
         font-feature-settings: "smcp";
     }
 }*/
-.rilm-div.rilm-type_ography > .rilm-head {
+.rilm-div.rilm-type_ography > .rilm-head{
     text-transform: uppercase;
     font-weight: bold;
     text-indent: inherit;
-    display:block;
-    padding-top:1em;
-    font-size:.92em;
+    display: block;
+    padding-top: 1em;
+    font-size: .92em;
 }
- /*       @supports(font-feature-settings: 'c2sc', 'smcp') {
+/*       @supports(font-feature-settings: 'c2sc', 'smcp') {
     .rilm-div.rilm-type_ography > .rilm-head  { 
     	font-size: 1.1em;  
     	text-transform: none;   
@@ -338,15 +344,15 @@ content: " ";
         font-feature-settings: "c2sc", "smcp";
     }
 }*/
-.rilm-div.rilm-type_works > .rilm-head {
+.rilm-div.rilm-type_works > .rilm-head{
     font-weight: bold;
     display: block;
     text-indent: 2em;
     text-transform: uppercase;
-    padding-top:1em;
-    font-size:.92em;
+    padding-top: 1em;
+    font-size: .92em;
 }
- /*       @supports(font-feature-settings: 'c2sc', 'smcp') {
+/*       @supports(font-feature-settings: 'c2sc', 'smcp') {
  .rilm-div.rilm-type_works > .rilm-head {   
  	font-size: 1.1em;   
  	text-transform: none;
@@ -355,12 +361,12 @@ content: " ";
         font-feature-settings: "c2sc", "smcp"; 
     }
 }*/
-.rilm-div.rilm-type_contents   .rilm-head {
+.rilm-div.rilm-type_contents .rilm-head{
     text-transform: uppercase;
     font-size: smaller;
     font-weight: bold;
 }
- /*       @supports(font-feature-settings: 'c2sc', 'smcp') {
+/*       @supports(font-feature-settings: 'c2sc', 'smcp') {
     .rilm-div.rilm-type_contents   .rilm-head { 
     	font-size: 1em;     
     	text-transform: none; 
@@ -369,12 +375,12 @@ content: " ";
         font-feature-settings: "c2sc", "smcp";
     }
 }*/
-.rilm-text.rilm-type_family .rilm-div.rilm-type_contents   .rilm-head {
+.rilm-text.rilm-type_family .rilm-div.rilm-type_contents .rilm-head{
     text-transform: uppercase;
     font-size: smaller;
     font-weight: bold;
 }
-  /*      @supports(font-feature-settings: 'c2sc', 'smcp') {
+/*      @supports(font-feature-settings: 'c2sc', 'smcp') {
     .rilm-div.rilm-type_contents   .rilm-head { 
     	font-size: 1em;     
     	text-transform: none; 
@@ -383,7 +389,7 @@ content: " ";
         font-feature-settings: "c2sc", "smcp";
     }
 }*/
-.rilm-text.rilm-type_family   .rilm-list   .rilm-head {
+.rilm-text.rilm-type_family .rilm-list .rilm-head{
     /*font-variant: small-caps;*/
 }
 /*  @supports(font-feature-settings: 'smcp') {
@@ -394,172 +400,182 @@ content: " ";
         font-feature-settings: "smcp";
     }
 }*/
-.rilm-bibl  .rilm-idno {
-  display: inline;
-}
-.rilm-imprint {
+.rilm-bibl .rilm-idno{
     display: inline;
 }
-.rilm-item {
-  display: list-item;
+.rilm-imprint{
+    display: inline;
 }
-.rilm-p .rilm-item {
-    display:block
+.rilm-item{
+    display: list-item;
 }
-.rilm-item.rilm-n:before {
-   content: attr(data-rilm-n) ". " !important;
-  list-style: none;
+.rilm-p .rilm-item{
+    display: block
+}
+.rilm-item.rilm-n:before{
+    content: attr(data-rilm-n) ". " !important;
+    list-style: none;
 } /* should there be space after the content?
      And should default marker be suppressed
      when there is an @n attribute? --DRS */
-   .rilm-type_contents   .rilm-list .rilm-item{
-    display:block;
-}
-
-.rilm-type_section .rilm-list .rilm-item, .rilm-type_bio .rilm-list .rilm-item, .rilm-type_criticism .rilm-list .rilm-item {
+.rilm-type_contents .rilm-list .rilm-item{
     display: block;
 }
-.rilm-type_ography .rilm-list .rilm-item, .rilm-type_works .rilm-list .rilm-item {
-		text-indent: -1.5em;
-	display: list-item;
-	padding-left:1.5em;
-	margin-bottom: .6em;
+
+.rilm-type_section .rilm-list .rilm-item,
+.rilm-type_bio .rilm-list .rilm-item,
+.rilm-type_criticism .rilm-list .rilm-item{
+    display: block;
 }
-.rilm-l {
-  display: block;
-  white-space: nowrap;
+.rilm-type_ography .rilm-list .rilm-item,
+.rilm-type_works .rilm-list .rilm-item{
+    text-indent: -1.5em;
+    display: list-item;
+    padding-left: 1.5em;
+    margin-bottom: .6em;
 }
-.rilm-lb {
-  display: block;
+.rilm-l{
+    display: block;
+    white-space: nowrap;
 }
-.rilm-lg {
-  display: block;
-  margin-bottom: 0.5em;
+.rilm-lb{
+    display: block;
 }
-.rilm-type_ography .rilm-list, .rilm-type_works .rilm-list {
-  display: block;
-  list-style-type: none;
-  margin-bottom: 1em;
-  margin-top: .5em;
+.rilm-lg{
+    display: block;
+    margin-bottom: 0.5em;
 }
-.rilm-list.rilm-rend_list {
-  list-style-type: disc;
-  list-style-position: outside;
+.rilm-type_ography .rilm-list,
+.rilm-type_works .rilm-list{
+    display: block;
+    list-style-type: none;
+    margin-bottom: 1em;
+    margin-top: .5em;
 }
-.rilm-list.rilm-rend_inline {
-  display: inline;
-}    
-.rilm-list.rilm-rend_bulleted {
-  list-style-type: disc;
-  list-style-position: outside;
-}    
-.rilm-list.rilm-rend_numbered {
-  list-style-type: decimal;
-  list-style-position: outside;
+.rilm-list.rilm-rend_list{
+    list-style-type: disc;
+    list-style-position: outside;
 }
-.rilm-list.rilm-rend_lower-latin {
-  list-style-type: lower-latin;
-  list-style-position: outside;
+.rilm-list.rilm-rend_inline{
+    display: inline;
 }
-.rilm-list.rilm-rend_lower-greek {
-  list-style-type: lower-greek;
-  list-style-position: outside;
+.rilm-list.rilm-rend_bulleted{
+    list-style-type: disc;
+    list-style-position: outside;
 }
-.rilm-list.rilm-rend_lower-roman {
-  list-style-type: lower-roman;
-  list-style-position: outside;
+.rilm-list.rilm-rend_numbered{
+    list-style-type: decimal;
+    list-style-position: outside;
 }
-.rilm-list.rilm-rend_upper-latin {
-  list-style-type: upper-latin;
-  list-style-position: outside;
+.rilm-list.rilm-rend_lower-latin{
+    list-style-type: lower-latin;
+    list-style-position: outside;
 }
-.rilm-list.rilm-rend_upper-greek {
-  list-style-type: upper-greek;
-  list-style-position: outside;
+.rilm-list.rilm-rend_lower-greek{
+    list-style-type: lower-greek;
+    list-style-position: outside;
 }
-.rilm-list.rilm-rend_upper-roman {
-  list-style-type: upper-roman;
-  list-style-position: outside;
+.rilm-list.rilm-rend_lower-roman{
+    list-style-type: lower-roman;
+    list-style-position: outside;
 }
-.rilm-mentioned {
-  display: inline;
-   font-style: italic;
+.rilm-list.rilm-rend_upper-latin{
+    list-style-type: upper-latin;
+    list-style-position: outside;
 }
-.rilm-musNote {
-     font-style: italic;
+.rilm-list.rilm-rend_upper-greek{
+    list-style-type: upper-greek;
+    list-style-position: outside;
 }
-.rilm-note {
-  display: inherit;
+.rilm-list.rilm-rend_upper-roman{
+    list-style-type: upper-roman;
+    list-style-position: outside;
 }
-.rilm-quote > .rilm-note {
-    font-style: normal;   
+.rilm-mentioned{
+    display: inline;
+    font-style: italic;
 }
-.rilm-rend_italic > .rilm-note {
-      font-style: normal;
+.rilm-musNote{
+    font-style: italic;
 }
-.rilm-rend_quoted-italic > .rilm-note {
+.rilm-note{
+    display: inherit;
+}
+.rilm-quote > .rilm-note{
     font-style: normal;
 }
-.rilm-head   .rilm-note {
+.rilm-rend_italic > .rilm-note{
+    font-style: normal;
+}
+.rilm-rend_quoted-italic > .rilm-note{
+    font-style: normal;
+}
+.rilm-head .rilm-note{
     text-transform: none;
-    font-size:medium;
+    font-size: medium;
     font-weight: normal;
-    display:inline;
+    display: inline;
     font-variant: normal;
     font-feature-settings: normal;
     -moz-font-feature-settings: normal;
     -webkit-font-feature-settings: normal;
 }
-.rilm-note.rilm-type_editorial {
+.rilm-note.rilm-type_editorial{
     display: none;
 }
-.rilm-orgName.rilm-type_performing {
-     font-style: italic;
+.rilm-orgName.rilm-type_performing{
+    font-style: italic;
 }
-.rilm-orgName.rilm-type_trans {
+.rilm-orgName.rilm-type_trans{
     font-style: normal;
 }
-.rilm-orgName.rilm-type_uni {
-font-style: normal
+.rilm-orgName.rilm-type_uni{
+    font-style: normal
 }
-.rilm-div.rilm-type_heading  .rilm-orgName,  .rilm-div.rilm-type_heading  .rilm-orgName.rilm-type_preferred {
-    font-weight:bold;
+.rilm-div.rilm-type_heading .rilm-orgName,
+.rilm-div.rilm-type_heading .rilm-orgName.rilm-type_preferred{
+    font-weight: bold;
 }
-.rilm-p {
+.rilm-p{
     text-indent: 2em;
-      display: block;
+    display: block;
 }
-.rilm-p.rilm-rend_block {
-    margin-left:2em;
-    text-indent:0;
-}
-.rilm-cell > .rilm-p {
+.rilm-p.rilm-rend_block{
+    margin-left: 2em;
     text-indent: 0;
 }
-.rilm-item > .rilm-p {
+.rilm-cell > .rilm-p{
+    text-indent: 0;
+}
+.rilm-item > .rilm-p{
     text-indent: 0;
     display: inherit;
 }
-  .rilm-p.rilm-n::before {
+.rilm-p.rilm-n::before{
     content: attr(data-rilm-n) ". " !important;
     font-style: normal !important;
     font-weight: bold;
-    }
-    .rilm-quote > .rilm-p:first-of-type {
-    display:inline;
 }
-.rilm-quote>.rilm.p {
-font-style: italic;
-}
-.rilm-quote>.rilm-p:last-of-type {
+.rilm-quote > .rilm-p:first-of-type{
     display: inline;
 }
-.rilm-figure .rilm-head, .rilm-figure .rilm-p, .rilm-notatedMusic .rilm-head, .rilm-notatedMusic .rilm-p, .rilm-tableFigure .rilm-head, .rilm-tableFigure .rilm-p {
-   display: inline !important;
-} 
-.rilm-docAuthor   .rilm-persName {
-  display: inline;
-  text-transform: uppercase;
+.rilm-quote > .rilm.p{
+    font-style: italic;
+}
+.rilm-quote > .rilm-p:last-of-type{
+    display: inline;
+}
+.rilm-figure .rilm-head,
+.rilm-figure .rilm-p,
+.rilm-notatedMusic .rilm-head,
+.rilm-notatedMusic .rilm-p,
+.rilm-tableFigure .rilm-head,
+.rilm-tableFigure .rilm-p{
+    display: inline !important;
+}
+.rilm-docAuthor .rilm-persName{
+    display: inline;
+    text-transform: uppercase;
 }
 /*        @supports(font-feature-settings: 'c2sc', 'smcp') {
     .rilm-docAuthor   .rilm-persName { 
@@ -571,98 +587,98 @@ font-style: italic;
     }
 }*/
 
-  .rilm-persName.rilm-type_alt {
+.rilm-persName.rilm-type_alt{
     font-style: italic !important;
     font-weight: normal !important;
 }
-.rilm-div.rilm-type_heading  .rilm-persName.rilm-type_preferred {
-    font-style:normal;
+.rilm-div.rilm-type_heading .rilm-persName.rilm-type_preferred{
+    font-style: normal;
 }
-.rilm-pitch {
+.rilm-pitch{
     font-style: italic;
 }
-.rilm-publisher {
-  display: inline;
+.rilm-publisher{
+    display: inline;
 }
-.rilm-pubPlace {
-  display: inline;
+.rilm-pubPlace{
+    display: inline;
 }
-.rilm-q {
-  display: inline;
-  quotes:  '»\200A' '\200A«' '›\200A' '\200A‹';
-  margin-top: 0em;
-  margin-left: 0em;
-  margin-right: 0em;
-  margin-bottom: 0em;
+.rilm-q{
+    display: inline;
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+    margin-top: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    margin-bottom: 0em;
 }
-.rilm-q.rilm-rend_single {
-    quotes:  '›\200A' '\200A‹';
-}
-.rilm-quote > .rilm-q {
+.rilm-q.rilm-rend_single{
     quotes: '›\200A' '\200A‹';
 }
-.rilm-q > .rilm-quote {
+.rilm-quote > .rilm-q{
     quotes: '›\200A' '\200A‹';
 }
-.rilm-q:before {
-  content: open-quote;
-font-style: normal;
+.rilm-q > .rilm-quote{
+    quotes: '›\200A' '\200A‹';
 }
-.rilm-q:after {
-  content: close-quote;
-font-style: normal;
+.rilm-q:before{
+    content: open-quote;
+    font-style: normal;
 }
-.rilm-q.rilm-rend_left-double {
-    quotes: '»\200A' ''; 
+.rilm-q:after{
+    content: close-quote;
+    font-style: normal;
 }
-.rilm-q.rilm-rend_right-double {
+.rilm-q.rilm-rend_left-double{
+    quotes: '»\200A' '';
+}
+.rilm-q.rilm-rend_right-double{
     quotes: '\200A«' '';
 }
-.rilm-q.rilm-rend_left-double::before {
-  content: open-quote;
-  font-style: normal;  
+.rilm-q.rilm-rend_left-double::before{
+    content: open-quote;
+    font-style: normal;
 }
-.rilm-q.rilm-rend_right-double::after {
-  content: close-quote;
-  font-style: normal;    
+.rilm-q.rilm-rend_right-double::after{
+    content: close-quote;
+    font-style: normal;
 }
- .rilm-quote {
-     display:inline;
-      font-style: italic;
-     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
- }
- .rilm-quote:before {
-     content: open-quote;
-font-style: normal;
- }
- .rilm-quote:after {
-     content: close-quote;
-font-style: normal;
- }
-.rilm-ref {
-  display: inline;
-  color: blue;
-  background-color: inherit;
+.rilm-quote{
+    display: inline;
+    font-style: italic;
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
-.rilm-ref[data-rilm-target*="document"]:before {
+.rilm-quote:before{
+    content: open-quote;
+    font-style: normal;
+}
+.rilm-quote:after{
+    content: close-quote;
+    font-style: normal;
+}
+.rilm-ref{
+    display: inline;
+    color: blue;
+    background-color: inherit;
+}
+.rilm-ref[data-rilm-target *= "document"]:before{
     content: "→ ";
 }
-.rilm-rilmPerson.rilm-n:before {
+.rilm-rilmPerson.rilm-n:before{
     content: attr(data-rilm-n) ". " !important;
-    font-weight:bold;
+    font-weight: bold;
 }
-.rilm-row {
-  display: table-row;
+.rilm-row{
+    display: table-row;
 }
-.rilm-row.rilm-role_label {
-   color: inherit;
-   background-color: #BBBBBB;
-       /*  font-variant: small-caps;*/
+.rilm-row.rilm-role_label{
+    color: inherit;
+    background-color: #BBBBBB;
+    /*  font-variant: small-caps;*/
     font-family: 'Alegreya SC';
-    font-weight:700;
-    font-size:1.1em;
+    font-weight: 700;
+    font-size: 1.1em;
 }
- /*       @supports(font-feature-settings: 'smcp') {
+/*       @supports(font-feature-settings: 'smcp') {
     .rilm-row.rilm-role_label {
         font-variant: normal;
         -moz-font-feature-settings: "smcp";
@@ -670,90 +686,91 @@ font-style: normal;
         font-feature-settings: "smcp";
     }
 }*/
-.rilm-soCalled {
-  display: inline;
-  quotes: '›\200A' '\200A‹';
+.rilm-soCalled{
+    display: inline;
+    quotes: '›\200A' '\200A‹';
 }
-.rilm-soCalled:before {
-  content: open-quote;
-font-style: normal;
+.rilm-soCalled:before{
+    content: open-quote;
+    font-style: normal;
 }
-.rilm-soCalled:after {
-  content: close-quote;
-font-style: normal;
+.rilm-soCalled:after{
+    content: close-quote;
+    font-style: normal;
 }
-.rilm-rilmPerson.rilm-n>.rilm-persName>.rilm-surname {
-    font-weight:bold;
-    font-style:normal;
+.rilm-rilmPerson.rilm-n > .rilm-persName > .rilm-surname{
+    font-weight: bold;
+    font-style: normal;
 }
-.rilm-div.rilm-type_person .rilm-p.rilm-n>.rilm-rilmPerson:first-of-type>.rilm-persName>.rilm-surname {
-    font-weight:bold;
-    font-style:normal;
+.rilm-div.rilm-type_person .rilm-p.rilm-n > .rilm-rilmPerson:first-of-type > .rilm-persName > .rilm-surname{
+    font-weight: bold;
+    font-style: normal;
 }
- .rilm-persName.rilm-type_alt>.rilm-surname {
+.rilm-persName.rilm-type_alt > .rilm-surname{
     font-style: italic !important;
     font-weight: normal !important;
 }
-.rilm-div.rilm-type_heading  .rilm-persName   .rilm-surname,  .rilm-div.rilm-type_heading  .rilm-persName.rilm-type_preferred   .rilm-surname {
+.rilm-div.rilm-type_heading .rilm-persName .rilm-surname,
+.rilm-div.rilm-type_heading .rilm-persName.rilm-type_preferred .rilm-surname{
     font-weight: bold;
 }
-.rilm-div.rilm-type_heading  .rilm-p  .rilm-persName.rilm-type_alt   .rilm-surname {
-     font-style: italic;
+.rilm-div.rilm-type_heading .rilm-p .rilm-persName.rilm-type_alt .rilm-surname{
+    font-style: italic;
     font-weight: normal;
 }
-.rilm-table {
-  text-align: center;
-  display: table;
-  margin: 1em;
-   border: 1px solid #EEEFEE;
+.rilm-table{
+    text-align: center;
+    display: table;
+    margin: 1em;
+    border: 1px solid #EEEFEE;
 }
-.rilm-title {
-  display: inline;
-   font-style: italic;
+.rilm-title{
+    display: inline;
+    font-style: italic;
 }
-.rilm-title.rilm-type_generic {
+.rilm-title.rilm-type_generic{
     font-style: normal;
 }
-.rilm-title.rilm-type_translated {
-    font-style:normal;
+.rilm-title.rilm-type_translated{
+    font-style: normal;
 }
-.rilm-title.rilm-type_incipit {
+.rilm-title.rilm-type_incipit{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
- }
-.rilm-title.rilm-type_incipit:before {
+}
+.rilm-title.rilm-type_incipit:before{
     content: open-quote;
     font-style: normal;
- }
- .rilm-title.rilm-type_incipit:after {
-  content: close-quote;
-font-style: normal;
 }
-.rilm-title.rilm-subtype_secondary {
-    font-style:normal;
+.rilm-title.rilm-type_incipit:after{
+    content: close-quote;
+    font-style: normal;
 }
-*.rilm-rend_bold {
-  display: inline;
-  font-weight: bold;
+.rilm-title.rilm-subtype_secondary{
+    font-style: normal;
 }
-*.rilm-rend_italic {
-  display: inline;
-   font-style: italic;
+*.rilm-rend_bold{
+    display: inline;
+    font-weight: bold;
 }
- *.rilm-rend_roman {
-  display:inline;
-  font-style: normal;
-  font-variant: inherit !important;
-  text-transform: inherit !important;
- }
-*.rilm-rend_underline {
-  display: inline;
-  text-decoration:underline;
+*.rilm-rend_italic{
+    display: inline;
+    font-style: italic;
 }
-*.rilm-rend_uppercase {
-  display: inline;
-  text-transform: uppercase;
+*.rilm-rend_roman{
+    display: inline;
+    font-style: normal;
+    font-variant: inherit !important;
+    text-transform: inherit !important;
 }
- /*       @supports(font-feature-settings: 'c2sc', 'smcp') {
+*.rilm-rend_underline{
+    display: inline;
+    text-decoration: underline;
+}
+*.rilm-rend_uppercase{
+    display: inline;
+    text-transform: uppercase;
+}
+/*       @supports(font-feature-settings: 'c2sc', 'smcp') {
     *.rilm-rend_uppercase {
     	font-size: 1.1em;   
     	text-transform: none;  
@@ -762,11 +779,11 @@ font-style: normal;
         font-feature-settings: "c2sc", "smcp";
     }
 }*/
-*.rilm-rend_smallcaps {
-  display: inline;
-  /*font-variant: small-caps;*/
-  font-family: 'Alegreya SC';
-  font-style: inherit;
+*.rilm-rend_smallcaps{
+    display: inline;
+    /*font-variant: small-caps;*/
+    font-family: 'Alegreya SC';
+    font-style: inherit;
 }
 /*  @supports(font-feature-settings: 'smcp') {
     .rilm-rend_smallcaps {
@@ -776,141 +793,141 @@ font-style: normal;
 font-feature-settings: "smcp";
     }
 }*/
-*.rilm-rend_sup {
-  display: inline;
-  vertical-align: super;
-  font-size: 60%;
-}
-*.rilm-rend_sub {
-  display: inline;
-  vertical-align: sub;
-  font-size: 60%;
-}
-*.rilm-rend_quoted-italic {
+*.rilm-rend_sup{
     display: inline;
-     font-style: italic;  
-     quotes: "»\200A" "\200A«"  "›\200A" "\200A‹";
- }
-*.rilm-rend_quoted-italic:before {
-     content: open-quote;
-font-style: normal;
- }
-*.rilm-rend_quoted-italic:after {
-     content: close-quote;
-font-style: normal;
- }
- /* header-related material */
-.rilm-teiHeader {
-  display: block;
-  font-family: sans-serif;
-  color: silver;
-  background-color: rgb(251, 242, 234);
-  border: solid black 1pt;
-  margin-bottom: 2em;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 1em;
+    vertical-align: super;
+    font-size: 60%;
 }
- teiHeader biblStruct title:before  {
-     content: 'Title: ';
- }
-  teiHeader biblStruct editor:before  {
-     content: 'Editor: ';
- }
-  teiHeader biblStruct publisher:before  {
-     content: 'Publisher: ';
- }
-  teiHeader biblStruct pubPlace:before  {
-     content: 'Place of publication: ';
- }
-  teiHeader biblStruct date:before  {
-     content: 'Year of publication: ';
- }
-  teiHeader biblStruct biblScope.rilm-type_vol:before  {
-     content: 'Volume: ';
- }
-   teiHeader biblStruct biblScope.rilm-type_col:before  {
-     content: 'Columns: ';
- }
-    teiHeader biblStruct biblScope.rilm-type_part:before  {
-     content: 'Series: ';
- }
-.rilm-titleStmt   .rilm-author {
-  display: block;
-  margin-bottom: 1em;
+*.rilm-rend_sub{
+    display: inline;
+    vertical-align: sub;
+    font-size: 60%;
 }
-.rilm-teiHeader  .rilm-biblScope {
+*.rilm-rend_quoted-italic{
+    display: inline;
+    font-style: italic;
+    quotes: "»\200A" "\200A«" "›\200A" "\200A‹";
+}
+*.rilm-rend_quoted-italic:before{
+    content: open-quote;
+    font-style: normal;
+}
+*.rilm-rend_quoted-italic:after{
+    content: close-quote;
+    font-style: normal;
+}
+/* header-related material */
+.rilm-teiHeader{
+    display: block;
+    font-family: sans-serif;
+    color: silver;
+    background-color: rgb(251, 242, 234);
+    border: solid black 1pt;
+    margin-bottom: 2em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+teiHeader biblStruct title:before{
+    content: 'Title: ';
+}
+teiHeader biblStruct editor:before{
+    content: 'Editor: ';
+}
+teiHeader biblStruct publisher:before{
+    content: 'Publisher: ';
+}
+teiHeader biblStruct pubPlace:before{
+    content: 'Place of publication: ';
+}
+teiHeader biblStruct date:before{
+    content: 'Year of publication: ';
+}
+teiHeader biblStruct biblScope.rilm-type_vol:before{
+    content: 'Volume: ';
+}
+teiHeader biblStruct biblScope.rilm-type_col:before{
+    content: 'Columns: ';
+}
+teiHeader biblStruct biblScope.rilm-type_part:before{
+    content: 'Series: ';
+}
+.rilm-titleStmt .rilm-author{
+    display: block;
+    margin-bottom: 1em;
+}
+.rilm-teiHeader .rilm-biblScope{
     display: block;
     margin-bottom: .3em;
 }
-.rilm-teiHeader   .rilm-title {
- border: solid silver .5em;
+.rilm-teiHeader .rilm-title{
+    border: solid silver .5em;
     margin-bottom: 1em;
     padding: .5em;
-    }
-.rilm-authority {
-  display: block;
-  margin-bottom: 0.5em;
 }
-.rilm-availability {
-  display: block;
-  margin-bottom: 0.5em;
+.rilm-authority{
+    display: block;
+    margin-bottom: 0.5em;
 }
-.rilm-fileDesc {
-  display: block;
-  margin-bottom: 1em;
+.rilm-availability{
+    display: block;
+    margin-bottom: 0.5em;
 }
-.rilm-sourceDesc {
-  display: block;
-  border: thin silver solid;
-  margin-bottom: 1em;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 1em;
+.rilm-fileDesc{
+    display: block;
+    margin-bottom: 1em;
 }
-.rilm-revisionDesc {
-  display: block;
-  margin-bottom: 1em;
+.rilm-sourceDesc{
+    display: block;
+    border: thin silver solid;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
 }
-.rilm-catDesc {
-  display: block;
-  margin-bottom: 0.5em;
+.rilm-revisionDesc{
+    display: block;
+    margin-bottom: 1em;
 }
-.rilm-encodingDesc {
-  display: block;
-  margin-bottom: 1em;
+.rilm-catDesc{
+    display: block;
+    margin-bottom: 0.5em;
 }
-.rilm-profileDesc {
-  display: block;
-  margin-bottom: 1em;
+.rilm-encodingDesc{
+    display: block;
+    margin-bottom: 1em;
 }
-.rilm-projectDesc {
-  display: block;
-  margin-bottom: 1em;
+.rilm-profileDesc{
+    display: block;
+    margin-bottom: 1em;
 }
-.rilm-docDate {
-  display: block;
-  margin-bottom: 0.5em;
+.rilm-projectDesc{
+    display: block;
+    margin-bottom: 1em;
 }
-.rilm-docImprint  .rilm-docDate {
-  display: inline;
+.rilm-docDate{
+    display: block;
+    margin-bottom: 0.5em;
 }
-.rilm-docEdition {
-  display: block;
-  margin-bottom: 0.5em;
+.rilm-docImprint .rilm-docDate{
+    display: inline;
 }
-.rilm-docImprint {
-  display: block;
-  margin-bottom: 0.5em;
+.rilm-docEdition{
+    display: block;
+    margin-bottom: 0.5em;
 }
-.rilm-docTitle {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5em;
+.rilm-docImprint{
+    display: block;
+    margin-bottom: 0.5em;
+}
+.rilm-docTitle{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 /*End of header-related material*/
-.rilm-teiHeader {
-    display:none;
+.rilm-teiHeader{
+    display: none;
 }
