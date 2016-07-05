@@ -1,24 +1,6 @@
-﻿/* =============================================================
-    CSS2 specification for TEI in oXygen.
- derived from stylesheet byat
-    Author: Adrian Edwards (adrian_edwards@yahoo.com)
-    Date:   2000-04-19impor
- edited by Sebastian Rahtz (sebastian.rahtz@oucs.ox.ac.uk)
-            2001-05-06
- 2003-08-29 start of new parent div resets child auto-count. kl
- 2003-11-06 list attr list-style-type was none, now disc. kl
- 2007-06  reworking for TEI P5 and oxygen
-
-$LastChangedDate$, $LastChangedRevision$, $LastChangedBy$
-============================================================= */
-/* Use Times New Roman for default font */
-
-/*@namespace url(http://www.tei-c.org/ns/1.0);
-@namespace xml url(http://www.w3.org/2001/XMLSchema-instance);*/
-
-@font-face {
+﻿@font-face {
     font-family: 'Bravura Text';
-    src: url('http://rilm.info/ft/fonts/BravuraText.woff') format('woff') /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: url('http://rilm.info/ft/fonts/BravuraText.woff') format('woff')
 }
 @font-face {
     font-family: FreeSerif;
@@ -71,7 +53,7 @@ bibl {
 biblScope {
     display: inline;
 }
-body {
+body {t
     font-weight: 400;
     font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;
     font-variant-numeric: oldstyle-nums;
@@ -172,6 +154,54 @@ div[type = "section"] > head {
     text-indent: 2em;
     margin-top: 1em;
 }
+div[type = "contents"] > head {
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: bold;
+}
+@supports(font-feature-settings: 'c2sc', 'smcp') {
+    div[type="contents"] > head { 
+    	font-size: 1em;     
+    	text-transform: none; 
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+    }
+}
+head[n = A],
+head[n = B],
+head[n *= C],
+head[n = D],
+head[n = E],
+head[n = F],
+head[n = G],
+head[n = H],
+head[n *= I],
+head[n = J],
+head[n = K],
+head[n = L],
+head[n = M],
+head[n = N],
+head[n = O],
+head[n = P],
+head[n = Q],
+head[n = R],
+head[n = S],
+head[n = T],
+head[n = U],
+head[n *= V],
+head[n = W],
+head[n *= X],
+head[n = Y],
+head[n = Z] {
+    display: block;
+    font-style: italic;
+    text-indent: 2em;
+}/*not in the Editorial System HTML CSS*/
+div[type = 'ography'] head,
+div[type = 'works'] head {
+    font-style: normal;
+}/*overrides the previous rule*/
 div[type = "ography"] > head, div[type = "works"] > head {
     text-transform: uppercase;
     font-weight: bold;
@@ -189,39 +219,7 @@ div[type = "ography"] > head, div[type = "works"] > head {
         font-feature-settings: "c2sc", "smcp";
     }
 }
-div[type = "contents"] > head {
-    text-transform: uppercase;
-    font-size: smaller;
-    font-weight: bold;
-}
-@supports(font-feature-settings: 'c2sc', 'smcp') {
-    div[type="contents"] > head { 
-    	font-size: 1em;     
-    	text-transform: none; 
-        -moz-font-feature-settings: "c2sc", "smcp";
-        -webkit-font-feature-settings: "c2sc", "smcp";
-        font-feature-settings: "c2sc", "smcp";
-    }
-}
-/*stopped here*/
-head[n *= I],
-head[n *= V],
-head[n *= X] {
-    display: block;
-    font-style: italic;
-    text-indent: 2em;
-}
-/*div[type='ography'] head[n*=I], div[type='ography'] head[n*=V], div[type='ography'] head[n*=X], div[type='ography'] head[n*=L], div[type='ography']head[n*=C], div[type='works'] head[n*=I], div[type='works'] head[n*=V], div[type='works'] head[n*=X], div[type='works'] head[n*=L], head[n*=C] {
-    font-style: normal;
-} */
-div[type = 'ography'] head,
-div[type = 'works'] head {
-    font-style: normal;
-}
 bibl idno {
-    display: inline;
-}
-imprint {
     display: inline;
 }
 item {
@@ -230,16 +228,9 @@ item {
 p item {
     display: block
 }
-item[n]:before {
-    content: attr(n) ". ";
-    list-style: none;
-}
-div[type = "contents"] > list > item {
+div[type = "contents"] list item {
     display: block;
 }
-/*div[type='works']  list item + item:before,  div[type='ography']  list item + item:before {
-     content: "\0020\25A0\0020";
- }*/
 div[type = "section"] list item,
 div[type = "bio"] list item,
 div[type = "criticism"] list item {
@@ -252,19 +243,13 @@ div[type = "works"] list item {
     padding-left: 1.5em;
     margin-bottom: .6em;
 }
-/*div[type="ography"] list item, div[type="works"] list item  {
-  display: inline;
-}
-div[type="works"] div[type="section"] list item, div[type="ography"] div[type="section"] list item {
-display: inline;
-}*/
 l {
     display: block;
     white-space: nowrap;
 }
 lb {
     display: block;
-}
+}/*do you want this to turn into a <br/> tag in html?*/
 lg {
     display: block;
     margin-bottom: 0.5em;
@@ -322,7 +307,6 @@ mentioned {
 musNote {
     font-style: italic;
 }
-
 note {
     display: inherit;
     font-style: normal;
@@ -363,6 +347,7 @@ orgName[type = 'uni'] {
 }
 div[type = 'heading'] orgName,
 div[type = 'heading'] orgName[type = 'preferred'] {
+    font-style: normal;
     font-weight: bold;
 }
 p {
@@ -383,24 +368,7 @@ item > p {
 quote > p {
     font-style: italic;
 }
-p[n]::before {
-    content: attr(n) ". ";
-    font-style: normal !important;
-    font-weight: bold;
-}
-docAuthor > persName {
-    display: inline;
-    text-transform: uppercase;
-}
-@supports(font-feature-settings: 'c2sc', 'smcp') {
-    docAuthor > persName { 
-    	font-size: 1.1em;  
-    	text-transform: none;   
-        -moz-font-feature-settings: "c2sc", "smcp";
-        -webkit-font-feature-settings: "c2sc", "smcp";
-        font-feature-settings: "c2sc", "smcp";
-    }
-}
+
 quote > p:first-of-type {
     display: inline;
 }
@@ -415,12 +383,22 @@ tableFigure head,
 tableFigure p {
     display: inline !important;
 }
+docAuthor > persName {
+    display: inline;
+    text-transform: uppercase;
+}
+@supports(font-feature-settings: 'c2sc', 'smcp') {
+    docAuthor > persName { 
+    	font-size: 1.1em;  
+    	text-transform: none;   
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+    }
+}
 persName[type = 'alt'] {
     font-style: italic !important;
     font-weight: normal !important;
-}
-div[type = 'heading'] persName[type = 'preferred'] {
-    font-style: normal;
 }
 pitch {
     font-style: italic;
@@ -431,76 +409,12 @@ publisher {
 pubPlace {
     display: inline;
 }
-q {
-    display: inline;
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
-    margin-top: 0em;
-    margin-left: 0em;
-    margin-right: 0em;
-    margin-bottom: 0em;
-}
-q[rend = "single"] {
-    quotes: '›\200A' '\200A‹'
-}
-quote > q {
-    quotes: '›\200A' '\200A‹';
-}
-q:before {
-    content: open-quote;
-    font-style: normal;
-}
-q:after {
-    content: close-quote;
-    font-style: normal;
-}
-q[rend = "left-double"] {
-    quotes: '»\200A' '';
-}
-q[rend = "right-double"] {
-    quotes: '\200A«' '';
-}
-q[rend = "left-double"]:before {
-    content: open-quote;
-    font-style: normal;
-}
-q[rend = "right-double"]:after {
-    content: close-quote;
-    font-style: normal;
-}
-quote {
-    display: inline;
-    font-style: italic;
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
-}
-q > quote {
-    quotes: '›\200A' '\200A‹';
-}
-quote:before {
-    content: open-quote;
-    font-style: normal;
-}
-quote:after {
-    content: close-quote;
-    font-style: normal;
-}
 ref {
     display: inline;
-    color: blue;
-    background-color: inherit;
-}
-ref[target *= "document"]:before {
-    content: "→ ";
-}
-rilmPerson[n]::before {
-    content: attr(n) ". ";
-    font-weight: bold;
 }
 row {
     display: table-row;
-    border: thin black solid;
-	border-left: none;
-	border-right:none;
-	box-sizing:border-box;
+    border-top: 1px solid black;
 }
 row[role = 'label'] {
     text-transform: uppercase;
@@ -519,33 +433,21 @@ row[rend='noborder'] {
     border-top: none;
     border-bottom: none;
 }
-soCalled {
-    display: inline;
-    quotes: "›\200A" "\200A‹";
-}
-soCalled:before {
-    content: open-quote;
-    font-style: normal;
-}
-soCalled:after {
-    content: close-quote;
-    font-style: normal;
-}
 rilmPerson[n] > persName > surname {
     font-weight: bold;
     font-style: normal;
 }
-div[type = "person"] p[n] > rilmPerson:first-of-type > persName > surname {
+div[type = 'person'] p[n] > rilmPerson:first-of-type > persName > surname {
     font-weight: bold;
     font-style: normal;
-}
-persName[type = 'alt'] > surname {
-    font-style: italic !important;
-    font-weight: normal !important;
 }
 div[type = 'heading'] persName > surname,
 div[type = 'heading'] persName[type = 'preferred'] > surname {
     font-weight: bold;
+}
+div[type = 'heading'] persName[type = 'alt'] > surname {
+    font-style: italic !important;
+    font-weight: normal !important;
 }
 table {
     display: table;
@@ -560,27 +462,13 @@ title {
 title[type = 'generic'] {
     font-style: normal;
 }
-
 title[type = 'translated'] {
-    font-style: normal;
-}
-
-title[type = 'incipit'] {
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
-}
-title[type = 'incipit']:before {
-    content: open-quote;
-    font-style: normal;
-}
-title[type = 'incipit']:after {
-    content: close-quote;
     font-style: normal;
 }
 title[subtype = "secondary"] {
     font-style: normal;
 }
 *[rend = "bold"] {
-    /*display: inline;*/
     font-weight: bold;
 }
 *[rend = "italic"] {
@@ -636,179 +524,7 @@ title[subtype = "secondary"] {
 *[rend = "quoted-italic"] {
     display: inline;
     font-style: italic;
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
-*[rend = "quoted-italic"]:before {
-    content: open-quote;
-    font-style: normal;
-}
-*[rend = "quoted-italic"]:after {
-    content: close-quote;
-    font-style: normal;
-}
-
-/* header-related material */
-teiHeader {
-    display: block;
-    font-family: sans-serif;
-    color: silver;
-    background-color: rgb(251, 242, 234);
-    border: solid black 1pt;
-    margin-bottom: 2em;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-}
-teiHeader biblStruct title:before {
-    content: 'Title: ';
-}
-teiHeader biblStruct editor:before {
-    content: 'Editor: ';
-}
-teiHeader biblStruct publisher:before {
-    content: 'Publisher: ';
-}
-teiHeader biblStruct pubPlace:before {
-    content: 'Place of publication: ';
-}
-teiHeader biblStruct date:before {
-    content: 'Year of publication: ';
-}
-teiHeader biblStruct biblScope[type = 'vol']:before {
-    content: 'Volume: ';
-}
-teiHeader biblStruct biblScope[type = 'col']:before {
-    content: 'Columns: ';
-}
-teiHeader biblStruct biblScope[type = 'part']:before {
-    content: 'Series: ';
-}
-titleStmt > author {
-    display: block;
-    margin-bottom: 1em;
-}
-teiHeader biblScope {
-    display: block;
-    margin-bottom: .3em;
-}
-teiHeader > title {
-    border: solid silver .5em;
-    margin-bottom: 1em;
-    padding: .5em;
-}
-
-authority {
-    display: block;
-    margin-bottom: 0.5em;
-}
-availability {
-    display: block;
-    margin-bottom: 0.5em;
-}
-fileDesc {
-    display: block;
-    margin-bottom: 1em;
-}
-sourceDesc {
-    display: block;
-    border: thin silver solid;
-    margin-bottom: 1em;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-}
-revisionDesc {
-    display: block;
-    margin-bottom: 1em;
-}
-catDesc {
-    display: block;
-    margin-bottom: 0.5em;
-}
-encodingDesc {
-    display: block;
-    margin-bottom: 1em;
-}
-profileDesc {
-    display: block;
-    margin-bottom: 1em;
-}
-projectDesc {
-    display: block;
-    margin-bottom: 1em;
-}
-docDate {
-    display: block;
-    margin-bottom: 0.5em;
-}
-docImprint docDate {
-    display: inline;
-}
-docEdition {
-    display: block;
-    margin-bottom: 0.5em;
-}
-docImprint {
-    display: block;
-    margin-bottom: 0.5em;
-}
-docTitle {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5em;
-}
-titleStmt > title:before {
-    content: "Title: ";
-}
-titleStmt > title {
-    display: block
-}
-/*End of header-related material*/
-/* CSS for turning lists into tables */
-list[type = "table"] {
-    display: table;
-    text-align: center;
-    margin: 1em;
-    border: solid 1px #EEEFEE;
-    table-layout: fixed;
-    width: 95%;
-    border-collapse: collapse;
-}
-/*list[type="table"] seg[type="header"] {
-    display:inline-block;
-    text-align:center;
-  background-color: lightgray;
-}*/
-list[type = "table"] item bibl,
-list[type = "table"] item seg[type = "header"] {
-    display: table-row;
-    border: 1px solid #EEEFEE;
-}
-seg[type = "header"] {
-    background-color: lightgray;
-}
-
-list[type = "table"] item seg[type = "header"] > * {
-    display: table-cell;
-    width: 12.5%;
-    padding: .2em;
-    border: 1px solid #EEEFEE;
-    text-align: left;
-    overflow: hidden;
-}
-list[type = "table"] item bibl > * {
-    display: table-cell;
-    overflow: hidden;
-    width: 12.5%;
-    border: 1px solid #EEEFEE;
-    padding: .2em;
-    color: inherit;
-    text-align: left;
-    background-color: inherit;
-}
-/* End of list-table CSS */
 teiHeader {
     display: none
 }
@@ -818,8 +534,7 @@ birth:before {
     content: "*";
 }
 body {
-    margin-top: 5px;
-    margin-left: 10px;
+    margin: 10px;
     display: block;
     font-size: 1em;
 }
@@ -861,7 +576,112 @@ notatedMusic > head:after,
 tableFigure > head:after {
     content: " ";
 }
-
+item[n]:before {
+    content: attr(n) ". ";
+    list-style: none;
+}
+p[n]::before {
+    content: attr(n) ". ";
+    font-style: normal !important;
+    font-weight: bold;
+}/*need any of this?*/
+q {
+    display: inline;
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+    margin-top: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    margin-bottom: 0em;
+}
+q[rend = "single"] {
+    quotes: '›\200A' '\200A‹'
+}
+quote > q {
+    quotes: '›\200A' '\200A‹';
+}
+q:before {
+    content: open-quote;
+    font-style: normal;
+}
+q:after {
+    content: close-quote;
+    font-style: normal;
+}
+q[rend = "left-double"] {
+    quotes: '»\200A' '';
+}
+q[rend = "right-double"] {
+    quotes: '\200A«' '';
+}
+q[rend = "left-double"]:before {
+    content: open-quote;
+    font-style: normal;
+}
+q[rend = "right-double"]:after {
+    content: close-quote;
+    font-style: normal;
+}
+quote {
+    display: inline;
+    font-style: italic;
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+}
+q > quote {
+    quotes: '›\200A' '\200A‹';
+}
+quote:before {
+    content: open-quote;
+    font-style: normal;
+}
+quote:after {
+    content: close-quote;
+    font-style: normal;
+}
+ref {
+    color: blue;
+    background-color: inherit;
+}
+ref[target *= 'document']:before {
+    content: "→ ";
+}/*keep this in, and ?find a way to distinguish web from internal links*/
+rilmPerson[n]::before {
+    content: attr(n) ". ";
+    font-weight: bold;
+}
+soCalled {
+    display: inline;
+    quotes: "›\200A" "\200A‹";
+}
+soCalled:before {
+    content: open-quote;
+    font-style: normal;
+}
+soCalled:after {
+    content: close-quote;
+    font-style: normal;
+}
 table {
 	margin: 1em;
+}
+title[type = 'incipit'] {
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+}
+title[type = 'incipit']:before {
+    content: open-quote;
+    font-style: normal;
+}
+title[type = 'incipit']:after {
+    content: close-quote;
+    font-style: normal;
+}
+*[rend = "quoted-italic"] {
+    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+}
+*[rend = "quoted-italic"]:before {
+    content: open-quote;
+    font-style: normal;
+}
+*[rend = "quoted-italic"]:after {
+    content: close-quote;
+    font-style: normal;
 }
