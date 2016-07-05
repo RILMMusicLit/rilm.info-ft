@@ -1,38 +1,10 @@
-﻿@font-face {
-    font-family: 'Bravura Text';
-    src: url('http://rilm.info/ft/fonts/BravuraText.woff') format('woff')
-}
-@font-face {
-    font-family: FreeSerif;
-    src: url('http://rilm.info/ft/fonts/FreeSerif.woff') format('woff')
-}
-@font-face {
-    font-family: Skolar;
-    src: url('http://rilm.info/ft/fonts/SkolarPETEST-Regular.woff') format('woff')
-}
-@font-face {
-    font-family: Skolar;
-    font-style: italic;
-    src: url('http://rilm.info/ft/fonts/SkolarPETEST-Italic.woff') format('woff')
-}
-@font-face {
-    font-family: Skolar;
-    font-weight: 700;
-    src: url('http://rilm.info/ft/fonts/SkolarPETEST-Bold.woff') format('woff')
-}
-@font-face {
-    font-family: Skolar;
-    font-style: italic;
-    font-weight: 700;
-    src: url('http://rilm.info/ft/fonts/SkolarPETEST-BoldItalic.woff') format('woff')
-}
-* {
+﻿*{
     line-height: 1.75em;
 }
-abbr {
+abbr{
     display: inline;
 }
-bibl > author {
+bibl > author{
     display: inline;
     font-variant: small-caps;
 }
@@ -44,55 +16,55 @@ bibl > author {
         font-feature-settings: "smcp";
     }
 }
-bibl > author[subtype='secondary'] {
+bibl > author[subtype = 'secondary']{
     font-variant: normal;
 }
-bibl {
+bibl{
     display: inline;
 }
-biblScope {
+biblScope{
     display: inline;
 }
-body {t
+body{
     font-weight: 400;
     font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;
     font-variant-numeric: oldstyle-nums;
     font-feature-settings: "onum";
 }
-cell {
+cell{
     display: table-cell;
-    box-sizing:border-box;
-	text-align:left;
-	padding: 0.5em;
-	position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 0.5em;
+    position: relative;
 }
-cit {
+cit{
     display: inline;
 }
-cit[rend = 'block'] {
+cit[rend = 'block']{
     display: block;
     padding: 0 3em 0 3em;
     text-indent: 0;
 }
-date {
+date{
     display: inline;
 }
-div[type = "contents"] {
+div[type = "contents"]{
     display: block;
 }
-docAuthor {
+docAuthor{
     font-weight: bold;
     display: block;
     margin-bottom: 0.5em;
     margin-left: 2em;
 }
-bibl edition {
+bibl edition{
     display: inline;
 }
-bibl editor {
+bibl editor{
     display: inline;
 }
-bibl editor[subtype = "primary"] {
+bibl editor[subtype = "primary"]{
     font-variant: small-caps;
 }
 @supports(font-feature-settings: 'smcp') {
@@ -103,67 +75,70 @@ bibl editor[subtype = "primary"] {
         font-feature-settings: "smcp";
     }
 }
-emph {
+emph{
     display: inline;
     font-style: italic;
 }
 figure,
 notatedMusic,
-tableFigure {
+tableFigure{
     display: block;
     font-style: italic;
     margin: 2em;
 }
-foreign {
+foreign{
     display: inline;
     font-style: italic;
 }
-formula {
+formula{
     display: inline;
     font-style: italic;
 }
-rilmPerson[n] > persName > forename {
+rilmPerson[n] > persName > forename{
     font-weight: bold;
     font-style: normal;
 }
-div[type = "person"] p[n] > rilmPerson:first-of-type > persName > forename {
+div[type = "person"] p[n] > rilmPerson:first-of-type > persName > forename{
     font-weight: bold;
     font-style: normal;
 }
-div[type = "family"] div[type = "bio"] > forename:first-of-type {
+div[type = "family"] div[type = "bio"] > forename:first-of-type{
     font-weight: bold;
 }
 div[type = 'heading'] p persName[type = 'alt'] > surname,
-div[type = 'heading'] p persName[type = 'alt'] > forename {
+div[type = 'heading'] p persName[type = 'alt'] > forename{
     font-style: italic;
     font-weight: normal;
 }
-graphic {
+graphic{
     display: block;
     border: 1px solid #000;
     margin: 5px 5px 5px 0;
     padding: 10px;
+    background-color: inherit;
+    content: none !important;
+    clear: both;
 }
-formula > graphic {
+formula > graphic{
     display: inline;
     border: none;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     text-indent: 0;
 }
-body > head {
+body > head{
     display: block;
     margin-left: 2em;
     margin-bottom: .25em;
     font-weight: bold;
 }
-div[type = "section"] > head {
+div[type = "section"] > head{
     display: block;
     font-weight: bold;
     text-indent: 2em;
     margin-top: 1em;
 }
-div[type = "contents"] > head {
+div[type = "contents"] > head{
     text-transform: uppercase;
     font-size: smaller;
     font-weight: bold;
@@ -202,16 +177,17 @@ head[n *= V],
 head[n = W],
 head[n *= X],
 head[n = Y],
-head[n = Z] {
+head[n = Z]{
     display: block;
     font-style: italic;
     text-indent: 2em;
-}/*not in the Editorial System HTML CSS*/
+} /*not in the Editorial System HTML CSS*/
 div[type = 'ography'] head,
-div[type = 'works'] head {
+div[type = 'works'] head{
     font-style: normal;
-}/*overrides the previous rule*/
-div[type = "ography"] > head, div[type = "works"] > head {
+} /*overrides the previous rule*/
+div[type = "ography"] > head,
+div[type = "works"] > head{
     text-transform: uppercase;
     font-weight: bold;
     text-indent: inherit;
@@ -228,111 +204,114 @@ div[type = "ography"] > head, div[type = "works"] > head {
         font-feature-settings: "c2sc", "smcp";
     }
 }
-head[n]:before {
+head[n]:before{
     font-style: normal;
 }
-bibl idno {
+bibl idno{
     display: inline;
 }
-item {
+item{
     display: list-item;
 }
-p item {
+item[n]:before{
+    list-style: none;
+}
+p item{
     display: block
 }
-div[type = "contents"] list item {
+div[type = "contents"] list item{
     display: block;
 }
 div[type = "section"] list item,
 div[type = "bio"] list item,
-div[type = "criticism"] list item {
+div[type = "criticism"] list item{
     display: block;
 }
 div[type = "ography"] list item,
-div[type = "works"] list item {
+div[type = "works"] list item{
     text-indent: -1.5em;
     display: list-item;
     padding-left: 1.5em;
     margin-bottom: .6em;
 }
-l {
+l{
     display: block;
     white-space: nowrap;
 }
-lb {
+lb{
     display: block;
-}/*do you want this to turn into a <br/> tag in html?*/
-lg {
+}
+lg{
     display: block;
     margin-bottom: 0.5em;
 }
 div[type = "ography"] list,
-div[type = "works"] list {
+div[type = "works"] list{
     display: block;
     list-style-type: none;
     margin-bottom: 1em;
     margin-top: .5em;
 }
-list[rend = "list"] {
+list[rend = "list"]{
     list-style-type: disc;
     list-style-position: outside;
 }
-list[rend = "inline"] {
+list[rend = "inline"]{
     display: inline;
 }
-list[rend = "bulleted"] {
+list[rend = "bulleted"]{
     list-style-type: disc;
     list-style-position: outside;
 }
-list[rend = "numbered"] {
+list[rend = "numbered"]{
     list-style-type: decimal;
     list-style-position: outside;
 }
-list[rend = "lower-latin"] {
+list[rend = "lower-latin"]{
     list-style-type: lower-latin;
     list-style-position: outside;
 }
-list[rend = "lower-greek"] {
+list[rend = "lower-greek"]{
     list-style-type: lower-greek;
     list-style-position: outside;
 }
-list[rend = "lower-roman"] {
+list[rend = "lower-roman"]{
     list-style-type: lower-roman;
     list-style-position: outside;
 }
-list[rend = "upper-latin"] {
+list[rend = "upper-latin"]{
     list-style-type: upper-latin;
     list-style-position: outside;
 }
-list[rend = "upper-greek"] {
+list[rend = "upper-greek"]{
     list-style-type: upper-greek;
     list-style-position: outside;
 }
-list[rend = "upper-roman"] {
+list[rend = "upper-roman"]{
     list-style-type: upper-roman;
     list-style-position: outside;
 }
-mentioned {
+mentioned{
     display: inline;
     font-style: italic;
 }
-musNote {
+musNote{
     font-style: italic;
 }
-note {
+note{
     display: inherit;
     font-style: normal;
 }
-quote > note {
+quote > note{
     font-style: normal;
 }
-*[rend = "italic"] > note {
+*[rend = "italic"] > note{
     font-style: normal;
 }
-*[rend = "quoted-italic"] > note {
+*[rend = "quoted-italic"] > note{
     font-style: normal;
 }
-head > note {
+head > note{
     text-transform: none;
     font-size: medium;
     font-weight: normal;
@@ -342,53 +321,53 @@ head > note {
     -moz-font-feature-settings: normal;
     -webkit-font-feature-settings: normal;
 }
-note[type = "editorial"] {
+note[type = "editorial"]{
     display: none;
 }
-orgName {
+orgName{
     font-style: italic;
 }
-orgName[type = 'performing'] {
+orgName[type = 'performing']{
     font-style: italic;
 }
-orgName[type = 'trans'] {
+orgName[type = 'trans']{
     font-style: normal;
 }
-orgName[type = 'uni'] {
+orgName[type = 'uni']{
     font-style: normal;
 }
 div[type = 'heading'] orgName,
-div[type = 'heading'] orgName[type = 'preferred'] {
+div[type = 'heading'] orgName[type = 'preferred']{
     font-style: normal;
     font-weight: bold;
 }
-p {
+p{
     text-indent: 2em;
     display: block;
 }
-p[rend = "block"] {
+p[rend = "block"]{
     margin-left: 2em;
     text-indent: 0;
 }
-p[n]:before {
+p[n]:before{
     font-style: normal !important;
     font-weight: bold;
 }
-cell > p {
+cell > p{
     text-indent: 0;
 }
-item > p {
+item > p{
     text-indent: 0;
     display: inherit;
 }
-quote > p {
+quote > p{
     font-style: italic;
 }
 
-quote > p:first-of-type {
+quote > p:first-of-type{
     display: inline;
 }
-quote > p:last-of-type {
+quote > p:last-of-type{
     display: inline;
 }
 figure head,
@@ -396,10 +375,10 @@ figure p,
 notatedMusic head,
 notatedMusic p,
 tableFigure head,
-tableFigure p {
+tableFigure p{
     display: inline !important;
 }
-docAuthor > persName {
+docAuthor > persName{
     display: inline;
     text-transform: uppercase;
 }
@@ -412,61 +391,61 @@ docAuthor > persName {
         font-feature-settings: "c2sc", "smcp";
     }
 }
-persName[type = 'alt'] {
+persName[type = 'alt']{
     font-style: italic !important;
     font-weight: normal !important;
 }
-pitch {
+pitch{
     font-style: italic;
 }
-publisher {
+publisher{
     display: inline;
 }
-pubPlace {
+pubPlace{
     display: inline;
 }
-q {
+q{
     display: inline;
     margin-top: 0em;
     margin-left: 0em;
     margin-right: 0em;
     margin-bottom: 0em;
 }
-q:before {
+q:before{
     font-style: normal;
 }
-q:after {
+q:after{
     font-style: normal;
 }
-q[rend = "left-double"]:before {
+q[rend = "left-double"]:before{
     font-style: normal;
 }
-q[rend = "right-double"]:after {
+q[rend = "right-double"]:after{
     font-style: normal;
 }
-quote {
+quote{
     display: inline;
     font-style: italic;
 }
-quote:before {
+quote:before{
     font-style: normal;
 }
-quote:after {
+quote:after{
     font-style: normal;
 }
-ref {
+ref{
     display: inline;
     color: rgb(40, 90, 153);
     background-color: inherit;
 }
-rilmPerson[n]:before {
+rilmPerson[n]:before{
     font-weight: bold;
 }
-row {
+row{
     display: table-row;
     border-top: 1px solid black;
 }
-row[role = 'label'] {
+row[role = 'label']{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.1em;
@@ -479,85 +458,85 @@ row[role = 'label'] {
         font-feature-settings: "c2sc", "smcp";
     }
 }
-row[rend='noborder'] {
+row[rend = 'noborder']{
     border-top: none;
     border-bottom: none;
 }
-soCalled {
+soCalled{
     display: inline;
 }
-soCalled:before {
+soCalled:before{
     font-style: normal;
 }
-soCalled:after {
+soCalled:after{
     font-style: normal;
 }
-rilmPerson[n] > persName > surname {
+rilmPerson[n] > persName > surname{
     font-weight: bold;
     font-style: normal;
 }
-div[type = 'person'] p[n] > rilmPerson:first-of-type > persName > surname {
+div[type = 'person'] p[n] > rilmPerson:first-of-type > persName > surname{
     font-weight: bold;
     font-style: normal;
 }
 div[type = 'heading'] persName > surname,
-div[type = 'heading'] persName[type = 'preferred'] > surname {
+div[type = 'heading'] persName[type = 'preferred'] > surname{
     font-weight: bold;
 }
-div[type = 'heading'] persName[type = 'alt'] > surname {
+div[type = 'heading'] persName[type = 'alt'] > surname{
     font-style: italic !important;
     font-weight: normal !important;
 }
-table {
+table{
     display: table;
     text-indent: 0;
     text-align: center;
     border-collapse: collapse;
     margin: 1em;
 }
-title {
+title{
     display: inline;
     font-style: italic;
 }
-title[type = 'generic'] {
+title[type = 'generic']{
     font-style: normal;
 }
-title[type = 'translated'] {
+title[type = 'translated']{
     font-style: normal;
 }
-title[subtype = "secondary"] {
+title[subtype = "secondary"]{
     font-style: normal;
 }
-title[type = 'incipit']:before {
+title[type = 'incipit']:before{
     font-style: normal;
 }
-title[type = 'incipit']:after {
+title[type = 'incipit']:after{
     font-style: normal;
 }
-*[rend = "quoted-italic"]:before {
+*[rend = "quoted-italic"]:before{
     font-style: normal;
 }
-*[rend = "quoted-italic"]:after {
+*[rend = "quoted-italic"]:after{
     font-style: normal;
 }
-*[rend = "bold"] {
+*[rend = "bold"]{
     font-weight: bold;
 }
-*[rend = "italic"] {
+*[rend = "italic"]{
     display: inline;
     font-style: italic;
 }
-*[rend = "roman"] {
+*[rend = "roman"]{
     display: inline;
     font-style: normal;
     text-transform: inherit !important;
     font-variant: inherit !important;
 }
-*[rend = "underline"] {
+*[rend = "underline"]{
     display: inline;
     text-decoration: underline;
 }
-*[rend = "uppercase"] {
+*[rend = "uppercase"]{
     display: inline;
     text-transform: uppercase;
 }
@@ -570,7 +549,7 @@ title[type = 'incipit']:after {
         font-feature-settings: "c2sc", "smcp";
     }
 }
-*[rend = "smallcaps"] {
+*[rend = "smallcaps"]{
     display: inline;
     font-variant: small-caps;
     font-style: inherit;
@@ -583,137 +562,158 @@ title[type = 'incipit']:after {
         font-feature-settings: "smcp";
     }
 }
-*[rend = "sup"] {
+*[rend = "sup"]{
     display: inline;
     vertical-align: super;
     font-size: 60%;
 }
-*[rend = "sub"] {
+*[rend = "sub"]{
     display: inline;
     vertical-align: sub;
     font-size: 60%;
 }
-*[rend = "quoted-italic"] {
+*[rend = "quoted-italic"]{
     display: inline;
     font-style: italic;
 }
-teiHeader {
+teiHeader{
     display: none
 }
 
 /*XML only rules*/
-birth:before {
+@font-face{
+    font-family: 'Bravura Text';
+    src: url('http://rilm.info/ft/fonts/BravuraText.woff') format('woff')
+}
+@font-face{
+    font-family: FreeSerif;
+    src: url('http://rilm.info/ft/fonts/FreeSerif.woff') format('woff')
+}
+@font-face{
+    font-family: Skolar;
+    src: url('http://rilm.info/ft/fonts/SkolarPETEST-Regular.woff') format('woff')
+}
+@font-face{
+    font-family: Skolar;
+    font-style: italic;
+    src: url('http://rilm.info/ft/fonts/SkolarPETEST-Italic.woff') format('woff')
+}
+@font-face{
+    font-family: Skolar;
+    font-weight: 700;
+    src: url('http://rilm.info/ft/fonts/SkolarPETEST-Bold.woff') format('woff')
+}
+@font-face{
+    font-family: Skolar;
+    font-style: italic;
+    font-weight: 700;
+    src: url('http://rilm.info/ft/fonts/SkolarPETEST-BoldItalic.woff') format('woff')
+}
+birth:before{
     content: "*";
 }
-body {
+body{
     margin: 10px;
     display: block;
     font-size: 1em;
 }
-death:before {
+death:before{
     content: "†";
 }
 figure,
 notatedMusic,
-tableFigure {
+tableFigure{
     font-size: 1.4em;
     zoom: 65%;
 }
-gap:after {
+gap:after{
     content: "[…]";
     font-weight: bold;
     color: red;
 }
-graphic {
-    color: gray;
-    background-color: inherit;
-    content: none !important;
-    clear: both;
-}
-head[n]:before {
+head[n]:before{
     content: attr(n) ". ";
 }
 figure > head:after,
 notatedMusic > head:after,
-tableFigure > head:after {
+tableFigure > head:after{
     content: " ";
 }
-item[n]:before {
-    content: attr(n) ". ";
-    list-style: none;
-}
-p[n]:before {
+item[n]:before{
     content: attr(n) ". ";
 }
-q {
+p[n]:before{
+    content: attr(n) ". ";
+}
+q{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
-q[rend = "single"] {
-    quotes: '›\200A' '\200A‹'
-}
-quote > q {
+q[rend = "single"]{
     quotes: '›\200A' '\200A‹';
 }
-q:before {
+quote > q{
+    quotes: '›\200A' '\200A‹';
+}
+q:before{
     content: open-quote;
 }
-q:after {
+q:after{
     content: close-quote;
 }
-q[rend = "left-double"] {
+q[rend = "left-double"]{
     quotes: '»\200A' '';
 }
-q[rend = "right-double"] {
+q[rend = "right-double"]{
     quotes: '\200A«' '';
 }
-q[rend = "left-double"]:before {
+q[rend = "left-double"]:before{
     content: open-quote;
 }
-q[rend = "right-double"]:after {
+q[rend = "right-double"]:after{
     content: close-quote;
 }
-quote {
+quote{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
-q > quote {
+q > quote{
     quotes: '›\200A' '\200A‹';
 }
-quote:before {
+quote:before{
     content: open-quote;
 }
-quote:after {
+quote:after{
     content: close-quote;
 }
-ref[target *= 'document']:before {
+ref[target *= 'document']:before{
     content: "→ ";
 }
-rilmPerson[n]:before {
+rilmPerson[n]:before{
     content: attr(n) ". ";
 }
-soCalled {
+soCalled{
     quotes: "›\200A" "\200A‹";
 }
-soCalled:before {
+soCalled:before{
     content: open-quote;
 }
-soCalled:after {
+soCalled:after{
     content: close-quote;
 }
-title[type = 'incipit'] {
+title[type = 'incipit']{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
-title[type = 'incipit']:before {
+title[type = 'incipit']:before{
     content: open-quote;
 }
-title[type = 'incipit']:after {
+title[type = 'incipit']:after{
     content: close-quote;
 }
-*[rend = "quoted-italic"] {
+*[rend = "quoted-italic"]{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
-*[rend = "quoted-italic"]:before {
+*[rend = "quoted-italic"]:before{
     content: open-quote;
 }
-*[rend = "quoted-italic"]:after {
+*[rend = "quoted-italic"]:after{
     content: close-quote;
 }
