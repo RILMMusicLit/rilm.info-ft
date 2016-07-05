@@ -110,6 +110,12 @@ div.rilm-nodename-p{
 .rilm-div.rilm-type_contents{
     display: block;
 }
+.rilm-docAuthor{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5em;
+    margin-left: 2em;
+}
 .rilm-bibl .rilm-edition{
     display: inline;
 }
@@ -540,12 +546,6 @@ font-feature-settings: "smcp";
 .rilm-death:before{
     content: "†";
 }
-.rilm-docAuthor{
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5em;
-    margin-left: 2em;
-}
 .rilm-figure,
 .rilm-notatedMusic,
 .rilm-tableFigure{
@@ -566,7 +566,7 @@ font-feature-settings: "smcp";
     margin: 5px 5px 5px 0;
     padding: 10px;
 }
-.rilm-head.rilm-n::before{
+.rilm-head.rilm-n:before{
     content: attr(data-rilm-n) ". " !important;
     font-style: normal !important;
 }
@@ -581,7 +581,7 @@ font-feature-settings: "smcp";
 } /* should there be space after the content?
      And should default marker be suppressed
      when there is an @n attribute? --DRS */
-.rilm-p.rilm-n::before{
+.rilm-p.rilm-n:before{
     content: attr(data-rilm-n) ". " !important;
     font-style: normal !important;
     font-weight: bold;
@@ -617,11 +617,11 @@ font-feature-settings: "smcp";
 .rilm-q.rilm-rend_right-double{
     quotes: '\200A«' '';
 }
-.rilm-q.rilm-rend_left-double::before{
+.rilm-q.rilm-rend_left-double:before{
     content: open-quote;
     font-style: normal;
 }
-.rilm-q.rilm-rend_right-double::after{
+.rilm-q.rilm-rend_right-double:after{
     content: close-quote;
     font-style: normal;
 }
