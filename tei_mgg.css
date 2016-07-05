@@ -80,6 +80,12 @@ date {
 div[type = "contents"] {
     display: block;
 }
+docAuthor {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5em;
+    margin-left: 2em;
+}
 bibl edition {
     display: inline;
 }
@@ -134,6 +140,9 @@ div[type = 'heading'] p persName[type = 'alt'] > forename {
 }
 graphic {
     display: block;
+    border: 1px solid #000;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
 }
 formula > graphic {
     display: inline;
@@ -218,6 +227,9 @@ div[type = "ography"] > head, div[type = "works"] > head {
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
     }
+}
+head[n]:before {
+    font-style: normal;
 }
 bibl idno {
     display: inline;
@@ -358,6 +370,10 @@ p[rend = "block"] {
     margin-left: 2em;
     text-indent: 0;
 }
+p[n]:before {
+    font-style: normal !important;
+    font-weight: bold;
+}
 cell > p {
     text-indent: 0;
 }
@@ -409,8 +425,42 @@ publisher {
 pubPlace {
     display: inline;
 }
+q {
+    display: inline;
+    margin-top: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    margin-bottom: 0em;
+}
+q:before {
+    font-style: normal;
+}
+q:after {
+    font-style: normal;
+}
+q[rend = "left-double"]:before {
+    font-style: normal;
+}
+q[rend = "right-double"]:after {
+    font-style: normal;
+}
+quote {
+    display: inline;
+    font-style: italic;
+}
+quote:before {
+    font-style: normal;
+}
+quote:after {
+    font-style: normal;
+}
 ref {
     display: inline;
+    color: rgb(40, 90, 153);
+    background-color: inherit;
+}
+rilmPerson[n]:before {
+    font-weight: bold;
 }
 row {
     display: table-row;
@@ -433,6 +483,15 @@ row[rend='noborder'] {
     border-top: none;
     border-bottom: none;
 }
+soCalled {
+    display: inline;
+}
+soCalled:before {
+    font-style: normal;
+}
+soCalled:after {
+    font-style: normal;
+}
 rilmPerson[n] > persName > surname {
     font-weight: bold;
     font-style: normal;
@@ -454,6 +513,7 @@ table {
     text-indent: 0;
     text-align: center;
     border-collapse: collapse;
+    margin: 1em;
 }
 title {
     display: inline;
@@ -466,6 +526,18 @@ title[type = 'translated'] {
     font-style: normal;
 }
 title[subtype = "secondary"] {
+    font-style: normal;
+}
+title[type = 'incipit']:before {
+    font-style: normal;
+}
+title[type = 'incipit']:after {
+    font-style: normal;
+}
+*[rend = "quoted-italic"]:before {
+    font-style: normal;
+}
+*[rend = "quoted-italic"]:after {
     font-style: normal;
 }
 *[rend = "bold"] {
@@ -541,12 +613,6 @@ body {
 death:before {
     content: "†";
 }
-docAuthor {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5em;
-    margin-left: 2em;
-}
 figure,
 notatedMusic,
 tableFigure {
@@ -563,13 +629,9 @@ graphic {
     background-color: inherit;
     content: none !important;
     clear: both;
-    border: 1px solid #000;
-    margin: 5px 5px 5px 0;
-    padding: 10px;
 }
-head[n]::before {
+head[n]:before {
     content: attr(n) ". ";
-    font-style: normal;
 }
 figure > head:after,
 notatedMusic > head:after,
@@ -580,18 +642,11 @@ item[n]:before {
     content: attr(n) ". ";
     list-style: none;
 }
-p[n]::before {
+p[n]:before {
     content: attr(n) ". ";
-    font-style: normal !important;
-    font-weight: bold;
-}/*need any of this?*/
+}
 q {
-    display: inline;
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
-    margin-top: 0em;
-    margin-left: 0em;
-    margin-right: 0em;
-    margin-bottom: 0em;
 }
 q[rend = "single"] {
     quotes: '›\200A' '\200A‹'
@@ -601,11 +656,9 @@ quote > q {
 }
 q:before {
     content: open-quote;
-    font-style: normal;
 }
 q:after {
     content: close-quote;
-    font-style: normal;
 }
 q[rend = "left-double"] {
     quotes: '»\200A' '';
@@ -615,15 +668,11 @@ q[rend = "right-double"] {
 }
 q[rend = "left-double"]:before {
     content: open-quote;
-    font-style: normal;
 }
 q[rend = "right-double"]:after {
     content: close-quote;
-    font-style: normal;
 }
 quote {
-    display: inline;
-    font-style: italic;
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
 q > quote {
@@ -631,57 +680,40 @@ q > quote {
 }
 quote:before {
     content: open-quote;
-    font-style: normal;
 }
 quote:after {
     content: close-quote;
-    font-style: normal;
-}
-ref {
-    color: blue;
-    background-color: inherit;
 }
 ref[target *= 'document']:before {
     content: "→ ";
-}/*keep this in, and ?find a way to distinguish web from internal links*/
-rilmPerson[n]::before {
+}
+rilmPerson[n]:before {
     content: attr(n) ". ";
-    font-weight: bold;
 }
 soCalled {
-    display: inline;
     quotes: "›\200A" "\200A‹";
 }
 soCalled:before {
     content: open-quote;
-    font-style: normal;
 }
 soCalled:after {
     content: close-quote;
-    font-style: normal;
-}
-table {
-	margin: 1em;
 }
 title[type = 'incipit'] {
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
 title[type = 'incipit']:before {
     content: open-quote;
-    font-style: normal;
 }
 title[type = 'incipit']:after {
     content: close-quote;
-    font-style: normal;
 }
 *[rend = "quoted-italic"] {
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
 *[rend = "quoted-italic"]:before {
     content: open-quote;
-    font-style: normal;
 }
 *[rend = "quoted-italic"]:after {
     content: close-quote;
-    font-style: normal;
 }
