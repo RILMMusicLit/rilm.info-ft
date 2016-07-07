@@ -96,6 +96,19 @@ div.rilm-nodename-p{
 	padding: 0.5em;
 	position: relative;
 }
+.rilm-cell.rilm-role_label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+/*@supports(font-feature-settings: 'c2sc', 'smcp') {
+    row[role='label'] {
+        text-transform: none;  
+        -moz-font-feature-settings: "c2sc", "smcp";
+        -webkit-font-feature-settings: "c2sc", "smcp";
+        font-feature-settings: "c2sc", "smcp";
+    }
+}*/
 .rilm-cit{
     display: inline;
 }
