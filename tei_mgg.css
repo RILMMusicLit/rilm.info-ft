@@ -155,7 +155,7 @@ div[type = "section"] > head{
 }
 div[type = "contents"] > head{
     text-transform: uppercase;
-    font-size: smaller;
+    font-size: .92em;
     font-weight: 700;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
@@ -396,6 +396,7 @@ tableFigure p{
 docAuthor > persName{
     display: inline;
     text-transform: uppercase;
+    font-size: .92em;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     docAuthor > persName { 
@@ -463,11 +464,11 @@ row{
 row[role = 'label']{
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.1em;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     row[role='label'] {
         text-transform: none;  
+        font-size: 1.1em;
         -moz-font-feature-settings: "c2sc", "smcp";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
@@ -638,8 +639,8 @@ death:before{
 figure,
 notatedMusic,
 tableFigure{
-    font-size: 1.4em;
-    zoom: 65%;
+    /*font-size: 1.4em;*/
+    /*zoom: 65%;*/
 }
 gap:after{
     content: "[…]";
