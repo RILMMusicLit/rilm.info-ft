@@ -1,4 +1,5 @@
-﻿*{
+﻿@import url(https://fonts.typotheque.com/WF-027756-009318.css);
+*{
     line-height: 1.75em;
 }
 abbr{
@@ -27,7 +28,8 @@ biblScope{
 }
 body{
     font-weight: 400;
-    font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;
+    font-family: 'Fedra Serif A', 'Bravura Text', Georgia, serif;
+    /*font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;*/
     font-variant-numeric: oldstyle-nums;
     font-feature-settings: "onum";
 }
