@@ -42,7 +42,7 @@ cell{
 }
 cell[role = 'label'] {
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.1em;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
@@ -68,7 +68,7 @@ div[type = 'contents']{
     display: block;
 }
 docAuthor{
-    font-weight: bold;
+    font-weight: 700;
     display: block;
     margin-bottom: 0.5em;
     margin-left: 2em;
@@ -110,15 +110,15 @@ formula{
     font-style: italic;
 }
 rilmPerson[n] > persName > forename{
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 div[type = "person"] p[n] > rilmPerson:first-of-type > persName > forename{
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 div[type = "family"] div[type = "bio"] > forename:first-of-type{
-    font-weight: bold;
+    font-weight: 700;
 }
 div[type = 'heading'] p persName[type = 'alt'] > surname,
 div[type = 'heading'] p persName[type = 'alt'] > forename{
@@ -145,18 +145,18 @@ body > head{
     display: block;
     margin-left: 2em;
     margin-bottom: .25em;
-    font-weight: bold;
+    font-weight: 700;
 }
 div[type = "section"] > head{
     display: block;
-    font-weight: bold;
+    font-weight: 700;
     text-indent: 2em;
     margin-top: 1em;
 }
 div[type = "contents"] > head{
     text-transform: uppercase;
     font-size: smaller;
-    font-weight: bold;
+    font-weight: 700;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     div[type="contents"] > head { 
@@ -204,7 +204,7 @@ div[type = 'works'] head{
 div[type = "ography"] > head,
 div[type = "works"] > head{
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     text-indent: inherit;
     display: block;
     padding-top: 1em;
@@ -354,7 +354,7 @@ orgName[type = 'uni']{
 div[type = 'heading'] orgName,
 div[type = 'heading'] orgName[type = 'preferred']{
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
 }
 p{
     text-indent: 2em;
@@ -366,7 +366,7 @@ p[rend = "block"]{
 }
 p[n]:before{
     font-style: normal !important;
-    font-weight: bold;
+    font-weight: 700;
 }
 cell > p{
     text-indent: 0;
@@ -454,7 +454,7 @@ ref{
     background-color: inherit;
 }
 rilmPerson[n]:before{
-    font-weight: bold;
+    font-weight: 700;
 }
 row{
     display: table-row;
@@ -462,7 +462,7 @@ row{
 }
 row[role = 'label']{
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.1em;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
@@ -487,16 +487,16 @@ soCalled:after{
     font-style: normal;
 }
 rilmPerson[n] > persName > surname{
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 div[type = 'person'] p[n] > rilmPerson:first-of-type > persName > surname{
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 div[type = 'heading'] persName > surname,
 div[type = 'heading'] persName[type = 'preferred'] > surname{
-    font-weight: bold;
+    font-weight: 700;
 }
 div[type = 'heading'] persName[type = 'alt'] > surname{
     font-style: italic !important;
@@ -535,7 +535,7 @@ title[type = 'incipit']:after{
     font-style: normal;
 }
 *[rend = "bold"]{
-    font-weight: bold;
+    font-weight: 700;
 }
 *[rend = "italic"]{
     display: inline;
@@ -643,7 +643,7 @@ tableFigure{
 }
 gap:after{
     content: "[…]";
-    font-weight: bold;
+    font-weight: 700;
     color: red;
 }
 head[n]:before{
