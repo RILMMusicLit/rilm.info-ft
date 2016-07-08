@@ -1,4 +1,4 @@
-﻿@import url(https://fonts.typotheque.com/WF-027756-009318.css);
+﻿/*@import url(https://fonts.typotheque.com/WF-027756-009318.css);*/
 *{
     line-height: 1.75em;
 }
@@ -28,8 +28,8 @@ biblScope{
 }
 body{
     font-weight: 400;
-    font-family: 'Fedra Serif A', 'Bravura Text', Georgia, serif;
-    /*font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;*/
+    /*font-family: 'Fedra Serif A', 'Bravura Text', Georgia, serif;*/
+    font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;
     font-variant-numeric: oldstyle-nums;
     font-feature-settings: "onum";
 }
@@ -123,7 +123,7 @@ div[type = "family"] div[type = "bio"] > forename:first-of-type{
 div[type = 'heading'] p persName[type = 'alt'] > surname,
 div[type = 'heading'] p persName[type = 'alt'] > forename{
     font-style: italic;
-    font-weight: normal;
+    font-weight: 400;
 }
 graphic{
     display: block;
@@ -329,7 +329,7 @@ quote > note{
 head > note{
     text-transform: none;
     font-size: medium;
-    font-weight: normal;
+    font-weight: 400;
     display: inline;
     font-variant: normal;
     font-feature-settings: normal;
@@ -409,7 +409,7 @@ docAuthor > persName{
 }
 persName[type = 'alt']{
     font-style: italic !important;
-    font-weight: normal !important;
+    font-weight: 400 !important;
 }
 pitch{
     font-style: italic;
@@ -501,7 +501,7 @@ div[type = 'heading'] persName[type = 'preferred'] > surname{
 }
 div[type = 'heading'] persName[type = 'alt'] > surname{
     font-style: italic !important;
-    font-weight: normal !important;
+    font-weight: 400 !important;
 }
 table{
     display: table;
