@@ -191,17 +191,11 @@ div.rilm-nodename-p{
     padding: 0 0 0 0;
     text-indent: 0;
 }
-.rilm-body > .rilm-head{
-    display: block;
-    margin-left: 2em;
-    margin-bottom: .25em;
-    font-weight: bold;
-}
 .rilm-div.rilm-type_section > .rilm-head{
     display: block;
     font-weight: bold;
     text-indent: 2em;
-    margin-top: 1em;
+    margin: 1em 0 .75em 0;
 }
 .rilm-div.rilm-type_contents .rilm-head{
     text-transform: uppercase;
@@ -225,7 +219,7 @@ div.rilm-nodename-p{
     font-weight: bold;
     text-indent: inherit;
     display: block;
-    padding-top: 1em;
+    margin: 1em 0 .75em 0;
     font-size: .92em;
 }
 /*       @supports(font-feature-settings: 'c2sc', 'smcp') {
