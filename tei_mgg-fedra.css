@@ -32,6 +32,7 @@ body{
     /*font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;*/
     font-variant-numeric: oldstyle-nums;
     font-feature-settings: "onum";
+    font-size: .9em;
 }
 cell{
     display: table-cell;
