@@ -32,7 +32,6 @@ body{
     /*font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;*/
     font-variant-numeric: oldstyle-nums;
     font-feature-settings: "onum";
-    font-size: .9em;
 }
 cell{
     display: table-cell;
@@ -626,7 +625,7 @@ birth:before{
 body{
     margin: 10px;
     display: block;
-    font-size: 1em;
+    font-size: .9em;
 }
 death:before{
     content: "†";
