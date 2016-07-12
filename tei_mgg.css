@@ -67,6 +67,9 @@ date{
 div[type = 'contents']{
     display: block;
 }
+text[type= 'family'] div[type= 'heading'] div[type= 'contents'] {
+    margin-left: 2em;
+}
 docAuthor{
     font-weight: 600;
     display: block;
@@ -164,6 +167,9 @@ div[type = "contents"] > head{
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
     }
+}
+text[type= 'family'] > div[type= 'heading'] > div[type= 'contents'] head {
+    display: inline;
 }
 head[n = A],
 head[n = B],
@@ -337,16 +343,16 @@ div[type = "contents"] > head > note{
     font-size: inherit;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
-    div[type="contents"] > head { 
+    div[type="contents"] > head > note { 
     	font-size: .91em;
     }
 }
-div[type = "ography"] > head,
-div[type = "works"] > head{
+div[type = "ography"] > head > note,
+div[type = "works"] > head > note{
     font-size: inherit;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
-    div[type="ography"] > head, div[type = "works"] > head  { 
+    div[type="ography"] > head > note, div[type = "works"] > head > note { 
     	font-size: .91em;
     }
 }
@@ -406,6 +412,9 @@ notatedMusic p,
 tableFigure head,
 tableFigure p{
     display: inline !important;
+}
+text[type= 'family'] div[type= 'heading'] div[type= 'contents'] p {
+    display: inline;
 }
 docAuthor > persName{
     display: inline;
