@@ -141,11 +141,15 @@ formula > graphic{
     padding: 0 0 0 0;
     text-indent: 0;
 }
-div[type = "section"] > head{
+div[type = "section"] > head {
     display: block;
     font-weight: 600;
     text-indent: 2em;
     margin: 1em 0 .75em 0;
+}
+div[type='works'] div[type = "section"] > head,
+div[type='ography'] div[type = "section"] > head{
+    text-indent: 0;
 }
 div[type = "contents"] > head{
     text-transform: uppercase;
@@ -322,13 +326,29 @@ quote > note{
 }
 head > note{
     text-transform: none;
-    font-size: medium;
     font-weight: 400;
     display: inline;
     font-variant: normal;
     font-feature-settings: normal;
     -moz-font-feature-settings: normal;
     -webkit-font-feature-settings: normal;
+}
+div[type = "contents"] > head > note{
+    font-size: inherit;
+}
+@supports(font-feature-settings: 'c2sc', 'smcp') {
+    div[type="contents"] > head { 
+    	font-size: .91em;
+    }
+}
+div[type = "ography"] > head,
+div[type = "works"] > head{
+    font-size: inherit;
+}
+@supports(font-feature-settings: 'c2sc', 'smcp') {
+    div[type="ography"] > head, div[type = "works"] > head  { 
+    	font-size: .91em;
+    }
 }
 note[type = "editorial"]{
     display: none;
