@@ -66,6 +66,7 @@ date{
 }
 div[type = 'contents']{
     display: block;
+    margin-bottom: 1em;
 }
 text[type= 'family'] div[type= 'heading'] div[type= 'contents'] {
     margin-left: 2em;
