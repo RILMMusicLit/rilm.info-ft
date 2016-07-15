@@ -59,7 +59,14 @@ cit[rend = 'block']{
 date{
     display: inline;
 }
-div[type = 'contents']{
+div ~ div {
+    display: block;
+    margin: 2em 0 1em 0;
+}
+div[type='heading'] + div {
+    margin-top: 1em;
+}
+div[type = 'contents'] {
     display: block;
     margin-bottom: 1em;
 }
@@ -144,7 +151,7 @@ div[type = "section"] > head {
     display: block;
     font-weight: 600;
     text-indent: 2em;
-    margin: 1em 0 .75em 0;
+    margin-bottom: .5em;
 }
 div[type='works'] div[type = "section"] > head,
 div[type='ography'] div[type = "section"] > head{
@@ -207,7 +214,7 @@ div[type = "works"] > head{
     font-weight: 600;
     text-indent: inherit;
     display: block;
-    margin: 1em 0 .75em 0;
+    /*margin: 1em 0 .75em 0;*/
     font-size: .92em;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
@@ -419,7 +426,7 @@ docAuthor > persName{
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     docAuthor > persName { 
-    	font-size: 1.1em;  
+    	font-size: 1.15em;  
     	text-transform: none;   
         -moz-font-feature-settings: "c2sc", "smcp";
         -webkit-font-feature-settings: "c2sc", "smcp";
