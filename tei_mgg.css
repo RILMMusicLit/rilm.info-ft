@@ -333,7 +333,8 @@ quote > note{
 *[rend = "quoted-italic"] > note{
     font-style: normal;
 }
-head > note{
+head > note,
+cell > note{
     text-transform: none;
     font-weight: 400;
     display: inline;
