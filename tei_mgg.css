@@ -63,6 +63,12 @@ div ~ div {
     display: block;
     margin: 2em 0 1em 0;
 }
+p + div[type='authors'],
+list + div[type='authors'],
+table + div[type='authors'] {
+    display: block;
+    margin-top: 1em;
+}
 div[type='heading'] + div {
     margin-top: 1em;
 }
