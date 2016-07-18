@@ -72,7 +72,7 @@ table + div[type='authors'] {
 div[type='heading'] + div {
     margin-top: 1em;
 }
-div[type = 'contents'] {
+div[type = 'heading'] {
     display: block;
     margin-bottom: 1em;
 }
