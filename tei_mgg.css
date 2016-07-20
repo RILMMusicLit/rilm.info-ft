@@ -27,6 +27,8 @@ body{
     font-weight: 400;
     font-variant-numeric: oldstyle-nums;
     font-feature-settings: "onum";
+    line-height: .14em;
+    letter-spacing: .004em;
 }
 cell{
     display: table-cell;
@@ -67,6 +69,9 @@ p + div[type='authors'],
 list + div[type='authors'],
 table + div[type='authors'] {
     display: block;
+    margin-top: 1em;
+}
+div[type='contents'] {
     margin-top: 1em;
 }
 div[type='heading'] + div {
@@ -661,9 +666,6 @@ teiHeader{
     font-style: italic;
     font-weight: 600;
     src: url('http://rilm.info/ft/fonts/SkolarPETEST-BoldItalic.woff') format('woff')
-}
-*{
-    line-height: 1.75em;
 }
 birth:before{
     content: "*";
