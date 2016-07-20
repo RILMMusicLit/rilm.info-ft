@@ -27,7 +27,7 @@ body{
     font-weight: 400;
     font-variant-numeric: oldstyle-nums;
     font-feature-settings: "onum";
-    line-height: .14em;
+    line-height: 1.4em;
     letter-spacing: .004em;
 }
 cell{
