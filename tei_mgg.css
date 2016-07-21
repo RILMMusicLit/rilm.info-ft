@@ -243,6 +243,15 @@ head[n]:before{
 bibl idno{
     display: inline;
 }
+img{
+    display: block;
+    border: 1px solid #000;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    background-color: inherit;
+    content: none !important;
+    clear: both;
+}
 item{
     display: list-item;
 }
