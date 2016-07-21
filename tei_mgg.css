@@ -56,6 +56,7 @@ cit{
 cit[rend = 'block']{
     display: block;
     padding: 0 3em 0 3em;
+    box-sizing: border-box;
     text-indent: 0;
 }
 date{
@@ -147,6 +148,7 @@ graphic{
     border: 1px solid #000;
     margin: 5px 5px 5px 0;
     padding: 10px;
+    box-sizing: border-box;
     background-color: inherit;
     content: none !important;
     clear: both;
@@ -243,11 +245,12 @@ head[n]:before{
 bibl idno{
     display: inline;
 }
-img{
+img {
     display: block;
     border: 1px solid #000;
     margin: 5px 5px 5px 0;
     padding: 10px;
+    box-sizing: border-box;
     background-color: inherit;
     content: none !important;
     clear: both;
@@ -275,6 +278,7 @@ div[type = "works"] list item{
     display: list-item;
     padding-left: 1.5em;
     margin-bottom: .6em;
+    box-sizing: border-box;
 }
 l{
     display: block;
