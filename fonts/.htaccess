@@ -1,0 +1,5 @@
+﻿<FilesMatch "\.(ttf|otf|eot|woff)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin: http://mgg-dev.rilm.org
+  </IfModule>
+</FilesMatch>
