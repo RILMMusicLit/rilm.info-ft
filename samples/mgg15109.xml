@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fontoxml-author author-id="6085469726896633112" name="Elizabeth Martin"?>
+<?xml-stylesheet type="text/css" href="http://rilm.info/ft/tei_mgg.css"?>
+<TEI xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://rilm.info/ft/schema/mgg/tei_rilm.xsd" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <teiHeader xml:lang="en">
+    <fileDesc>
+      <titleStmt>
+  <title>Aulos</title>
+  <respStmt>
+    <resp>Encoded by</resp>
+    <orgName>Aptara, Inc.</orgName>
+  </respStmt>
+      </titleStmt>
+      <publicationStmt>
+  <publisher>Bärenreiter-Verlag Karl Vötterle GmbH &amp; Co. KG</publisher>
+  <pubPlace>Kassel</pubPlace>
+  <publisher>J. B. Metzlersche Verlagsbuchhandlung &amp; C.E. Poeschel Verlag GmbH</publisher>
+  <pubPlace>Stuttgart</pubPlace>
+  <pubPlace>Weimar</pubPlace>
+  <distributor>Répertoire International de Littérature Musicale</distributor>
+      </publicationStmt>
+      <sourceDesc>
+  <biblStruct>
+    <monogr>
+      <title>Die Musik in Geschichte und Gegenwart: Allgemeine Enzyklopädie der Musik</title>
+      <edition n="2">Zweite neubearbeitete Ausgabe</edition>
+      <editor>
+              <forename>Ludwig</forename>
+              <surname>Finscher</surname>
+            </editor>
+      <imprint>
+        <publisher>Bärenreiter</publisher>
+        <pubPlace>Kassel</pubPlace>
+        <publisher>Metzler</publisher>
+        <pubPlace>Stuttgart</pubPlace>
+        <date>1994</date>
+      </imprint>
+      <biblScope unit="part">Sachteil</biblScope>
+      <biblScope unit="vol">1</biblScope>
+      <biblScope unit="col" from="1039">1039</biblScope>
+      <biblScope unit="col" to="1043">1043</biblScope>
+    </monogr>
+  </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+  <quotation marks="none">
+    <p xml:id="id-963b1289-fa4a-083c-fd9a-e55a38fc2935">No quotation marks have been used. Instead the &lt;q&gt; and &lt;quote&gt; elements are used. Single quotes are indicated with an @type attribute on those elements.</p>
+  </quotation>
+  <hyphenation eol="some">
+    <p xml:id="id-67afb2a5-daec-a0fc-dd73-a58ad27a04f7">End-of-line hyphenation silently removed where appropriate</p>
+  </hyphenation>
+      </editorialDecl>
+      <appInfo>
+  <application ident="oXygenXMLEditor" version="14.1" notAfter="2015-01-22">
+    <label>oXygen XML Editor</label>
+  </application>
+      </appInfo>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+  <language ident="de">German</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <listChange>
+  <change when="2015-01-22" status="created"/>
+  <change when="2015-07-23" who="6085469726896633112">Elizabeth Martin</change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:id="mgg15109" type="topic" xml:lang="de-DE-1901">
+    <body>
+      <div type="heading" xml:id="id-7bbad2f3-a839-d25e-e566-8a1227839ed7">
+  <p rend="bold" xml:id="id-a82d719e-bfe5-55b3-6bc0-27fa17f2bd02">Aulos, griech. αὐλός</p>
+  <div type="contents" xml:id="id-ba1075ab-22ef-89b5-cf17-5a3aa4c1e2ee">
+    <head>inhalt:</head>
+    <list>
+      <item n="I"><ref target="internal:mgg15109/de-de/1.0#id-dd7da4e5-3918-764e-4355-b1c2cd8c834e">Form und Spielweise</ref>.</item>
+      <item n="II"><ref target="internal:mgg15109/de-de/1.0#id-cd15d2a7-272c-3444-c4cf-6ded1322730a">Ikonographie und Geschichte</ref>.</item>
+    </list>
+  </div>
+      </div>
+      <div type="section" xml:id="id-dd7da4e5-3918-764e-4355-b1c2cd8c834e" n="I">
+  <head n="I">Form und Spielweise</head>
+  <p xml:id="id-29982eaf-f6af-7b60-6932-023abe7de21a">Der Aulos – ein Rohrblattinstrument – gilt als das bedeutendste altgriechische Blasinstrument und wurde meist aus Schilfrohr gefertigt. Er bestand aus einer langen zylindrischen oder leicht konischen Spielröhre (<hi rend="italic">bombyx</hi>, βόμβυξ) und einem doppelten eiförmigen Zwischenstück (<hi rend="italic">holmos,</hi> ὅλμος, <hi rend="italic">hypholmion</hi>, ὑφόλμιον), in das zwei Zungenplättchen gesteckt wurden. Das Instrument besaß meist vier (ovale) Grifflöcher (τρυπήματα), die jedoch ikonographisch in der <cb n="1040"/>Vasenmalerei unzulänglich verbürgt sind. Genauer informieren Grabbeigaben (die ältesten aus dem Heiligtum der Artemis Orthia in Sparta); hiernach besaß der Aulos maximal drei Löcher, in einigen Fällen ein zusätzliches Loch auf der Gegenseite (durch den Daumen bedient) zum Überblasen, und zwar zwischen dem ersten und zweiten vorderen Griffloch. Pollux (ca. 200 n.Chr.), der über das bombyx unterrichtete (<hi rend="italic">Onomatikon</hi> 4, 70, hrsg. von E. Bethe, Lpz. 1900), gab vier Grifflöcher an; daneben sind jedoch – auch ikonographisch aus der Spätzeit des Instrumentes – bis zu fünfzehn Bohrlöcher überliefert, wobei es sich aber auch um Schallöcher gehandelt haben könnte. Das Überblasregister wurde sehr wahrscheinlich eingesetzt, um ein Oktavieren zu erreichen; ein nochmaliges Überblasen könnte den Quintraum – der sich mit vier Grifflöchern ausfüllen ließ – geboten haben, was allerdings von H. Beck<?fontoxml-change-addition-start author-id="6085469726896633112" change-id="change-4" timestamp="1437684493448"?>er<?fontoxml-change-addition-end change-id="change-4"?><?fontoxml-change-deletion author-id="6085469726896633112" change-id="change-3" text="mann" timestamp="1437684492584"?> (1966, S. 50/51) als hypothetisch verworfen wurde.</p>
+  <p xml:id="id-330a9161-b1e7-dac4-64ee-96edbe384fef">Die Beschaffenheit und Herstellung des Mundstücks (ξεῦγος, Plural ξεῦγη) wurden bereits um ca. 300 v.Chr. von dem bedeutendsten Schüler des Aristoteles, Theophrastos, eingehend beschrieben (Περὶ φυτῶν ἱστορίας, hrsg. von H. Hort, L. 1946). Die Einzelmundstücke (γλῶτται) hatten Spitze (στόμα) und Zunge (γλῶττα, eine idioglotte Aufschlagzunge), wobei nach Theophrastos die Zungen gegen die Schnittfläche gerichtet sein sollten. Ein Vergleich dieses Mundstücks mit dem im Mittelmeerraum beherrschenden ägyptischen <hi rend="italic">Zummârah</hi> ist naheliegend. <ref target="internal:mgg15109/de-de/1.0#id-2e6f0858-e4cc-ed0e-c429-94ac4ef65a3e">A. A. Howard (1899</ref>, S. 22) deutete es noch irrigerweise als Fagottmundstück. Ikonographisch sind Belege (Vasenbilder) unsicher, da das Mundstück in der Mundhöhle verdeckt geblasen wurde. Bei freigehaltenem Instrument neigt M. Wegner (1949, S. 54) zur Deutung als trapezförmiges Rohr; dem stehen jedoch Funde von rechteckig verlaufenden antiken Oboenröhren aus Ägypten entgegen (das obere trapezförmige Ende des holmos bzw. <hi rend="italic">hypholmos</hi> ist so auch ohne Mundstück vorstellbar). Das Rohrblatt wurde überwiegend einzeln, nur gelegentlich doppelt eingesetzt (<ref target="internal:mgg15109/de-de/1.0#id-7bf66955-abe7-8fce-5896-6f7972f4c5dc">H. Becker 1966</ref>, S. 54; J. McKinnon, in: NGroveD 1, S. 700; s. dagegen L. Picken 1975, S. 362).</p>
+  <p xml:id="id-fb301ae2-ee12-e12b-46e1-61b5dbd7c9f6">Die Länge des Aulos betrug ca. 50 cm ohne große Variationsbreite. Er ist im Schrifttum auch als <hi rend="italic">kalamos</hi> (d.h. Schilfrohr) oder als lybischer <hi rend="italic">lotos</hi> geführt, beide Namen verweisen auf das Werkholz beim Instrumentenbau; als Material sind auch Knochen (Elfenbein) und Metall (Erz) überliefert. Der Aulos wurde meist paarweise mit zwei getrennten Röhren gespielt, die V-förmig auseinander gehalten wurden, bei Dreilochröhren mit stützendem Kleinfinger, bei Vierlochröhren mit untergelegtem Daumen. Die typische Haltung ist schräg nach vorne gebeugt, doch sind auch Jünglinge und Mädchen bei Tanz und Springen in anderer Stellung bildlich überliefert.</p>
+  <p xml:id="id-8960bbc6-b48a-14d3-1323-cc6dc1518c10">Zum Spiel wurde eine Leder- bzw. Leinenbinde (φορβειά, lat. <hi rend="italic">capistrum</hi>) um die Wangen gebunden und am Hinterkopf kreuzweise verknotet. Über Ober- und Unterlippe geführt dienten solche mit zwei kleinen Öffnungen versehenen Binden der Halterung der Spielröhre, was schon C. Sachs (1913, Art. <hi rend="italic">Phorbeia</hi>, und 1940, S.138/139) beschreibt; obwohl vereinzelt bemerkt wird, daß die Binden auch die Entstellung des Gesichtes mäßigen sollten (z.B. ein unästhetisches Aufblähen der Wangen, s. <ref target="internal:mgg15109/de-de/1.0#id-2e6f0858-e4cc-ed0e-c429-94ac4ef65a3e">A. A. Howard 1899</ref>, S. 23), wird das in der Praxis kaum Bedeutung erlangt haben. Darüber hinaus könnten die Binden jedoch die Lippenmuskeln vor Ermüdung geschützt haben; die περιστόμιον genannte Doppelbinde scheint besonders bei virtuosem Vortrag beliebt gewesen zu sein, bei Aulos-spielenden Hetären ist sie nur selten sichtbar (<ref target="internal:mgg15109/de-de/1.0#id-d14457ed-b5fc-b878-095e-83ec35ed11e7">M. Wegner 1949</ref>, Taf. 40, S. 69). Männer trugen die Binden bei dramatischen Szenen und Opferritualen fast immer, auch wenn die Fixierung des Mundstücks nicht dem freieren Lippenansatz diente.</p>
+  <p xml:id="id-353fad38-7ffc-0307-bf5c-df54f49b51e4">Mit dem Instrument war die vollständige antike Oktavskala nicht darzustellen, wohl aber der tetrachordale Raum. Die zweite, mitunter nicht gleichlange Röhre diente nicht als Nullbordun, sondern <cb n="1041"/>dem Mitspiel in mehr oder minder parallelem Einklang bzw. engem Intervallabstand (Stufenbordun oder Intervallkopplung). Auffällig ist das symmetrische Greifen auf dem Spielröhrenpaar. Eine geregelte Zweistimmigkeit ist – den pseudo-aristotelischen Problemen entsprechend – auszuschließen (W. Vetter, Art. <hi rend="italic">Ethos</hi>, in: MGG 3, Sp. 1582), allenfalls sind Schwebungseffekte in Sekunden anzunehmen. Ein hervortretender Schallbecher einer Röhre spricht nicht für das Bordunspiel (<ref target="internal:mgg15109/de-de/1.0#id-60b58ed5-fd4f-5abe-0ea5-9824e746c242">H. Becker 1966</ref>, S.118), während Grifflöcher nicht dagegen sprechen (vgl. C. Sachs 1929, S. 168 und <ref target="internal:mgg15109/de-de/1.0#id-a9a4904b-908a-ec51-eda5-debfed357c6c">W. Wiora 1955</ref>, S. 324). Es ist anzunehmen, daß sich bei der Mehrzahl der gedoppelten Auloi Melodie und Bordunton in scharfer Heterophonie begegnet sind. Die Kegelform des Korpus ist bereits früh belegt, was gegen ein Dominieren der zylindrischen Spielröhre aus Bambusrohr spricht (vgl. die bekannte <hi rend="italic">Marsyas</hi>-Schale ca. 400 v.Chr., Abb. bei <ref target="internal:mgg15109/de-de/1.0#id-7bf66955-abe7-8fce-5896-6f7972f4c5dc">H. Becker 1966</ref>). Analoge Doppelinstrumente sind bis zur Gegenwart in Gebrauch und dienen morphologischen Vergleichen (<ref target="internal:mgg15109/de-de/1.0#id-3eea71d5-b2f0-b132-3853-49ed560e6a02">L. Picken 1975</ref>, S. 472-485).</p>
+      </div>
+      <div type="section" xml:id="id-cd15d2a7-272c-3444-c4cf-6ded1322730a" n="II">
+  <head n="II">Ikonographie und Geschichte</head>
+  <p xml:id="id-8b757889-ff98-19b5-8066-4565055f36f2">Auleten waren männlich oder weiblich (αὐλοὶ ἀνδρε<?fontoxml-change-addition-start author-id="6085469726896633112" change-id="change-7" timestamp="1437684652516"?>ι̑<?fontoxml-change-addition-end change-id="change-7"?><?fontoxml-change-deletion author-id="6085469726896633112" change-id="change-6" text="ῖ" timestamp="1437684575969"?>οι, γυναικεῖοι) möglicherweise war dadurch auch eine Spezies des Instruments bzw. dessen Klanglage festgelegt. Bei Tanz und Gelage sind überwiegend weibliche Spieler dargestellt. Mit bekränztem Haupt und festlichem Gewand wirkten Auleten bei Faustkämpfen und akrobatischen Tänzen mit, von denen schon Homer in seiner Odyssee berichtet (<ref target="internal:mgg15109/de-de/1.0#id-d14457ed-b5fc-b878-095e-83ec35ed11e7">M. Wegner 1949</ref>, Taf. 52, S. 83); insbesondere dieses Auftreten bei Sportlern erlaubt den Rückschluß, daß das Instrument zu geschmeidiger Bewegung und zur geistigen Reinigung (von <q rend="single">chaotischen</q> Vorstellungen) eingesetzt wurde. Oft überliefert sind auch Szenen junger Tänzerinnen im Wirbel des durch den Auleten angefeuerten Rhythmus (dabei meist das Klappern der <hi rend="italic">krotola</hi> mit beiden Händen); bei Trinkgelagen wurden häufig Hetären als Spielerinnen eingesetzt. Ikonographisch überliefert sind außerdem die aus Fell verfertigten Instrumententaschen (συβήνη) mit seitlich angefügtem Futteral für das Mundstück.</p>
+  <p xml:id="id-84e2351c-8d1c-4db8-aaf9-f464875788e4">Zur Zeit des Antigeneidas (ca. 400-370 wirkend) änderte sich die Spielpraxis: die ältere, <q rend="single">unplastische</q> Aufschlagszunge (ἄπλάστος) wurde von einer neuen, geformten (πλάσις) abgelöst, was <ref target="internal:mgg15109/de-de/1.0#id-c3c90616-3c14-85c7-cf42-d4685687e592">K. Schlesinger (1939</ref>, S. 66) als Übergang zum Doppelrohrblatt (zwei gegeneinanderschlagende Zungen) deutete, aber in jüngerer Forschung (<ref target="internal:mgg15109/de-de/1.0#id-60b58ed5-fd4f-5abe-0ea5-9824e746c242">H. Becker 1966</ref>, S. 59/60) bestritten wird. Die neuere Spielweise wurde bereits von <ref target="internal:mgg15109/de-de/1.0#id-4354cb28-69b9-28aa-d852-b72b2790cbcf">A. A. Howard (1893</ref>, S. 25) und von <ref target="internal:mgg15109/de-de/1.0#id-e64e1fc3-ccd6-ed98-ba6e-3ba6e74142e0">J. Curtis (1914</ref>, S. 91-93) mit der Mundstückfrage in Verbindung gebracht: danach benutzt die <q rend="single">ältere</q> Spielweise das Doppelrohrblatt, die <q rend="single">jüngere</q> die Windkapsel, die das Rohrblatt umschlossen habe (<hi rend="italic">hypholmion</hi>). Diesem ist insofern zu widersprechen, als eine Windkapsel nur eine starre Tongebung erlaubt hätte, während Theophrastos unter <q rend="single">plastisch</q> eher eine subjektiv bewegliche gemeint haben dürfte (vgl. auch <ref target="internal:mgg15109/de-de/1.0#id-60b58ed5-fd4f-5abe-0ea5-9824e746c242">H. Becker 1966</ref>, S. 59/60 und 62). Seit Antigeneidas ist somit ein <q rend="single">lippendirigiertes</q> Spiel eingeführt (im Sinne einer neueren abendländischen Blaskultur); möglich bleibt auch eine Bevorzugung tieferer Tonlagen der Melodik (<ref target="internal:mgg15109/de-de/1.0#id-4f1bf3fa-d1fb-ee63-ffbf-7d434c80238c">W. Boetticher 1964</ref>, <hi rend="sup">2</hi>1979, Sp. 378).</p>
+  <p xml:id="id-73b421e7-7823-f0ac-25d9-c3c1065456be">Die Anlässe zum Aulosspiel waren vielfältig. Athenaios sieht im heroischen Zeitalter die Auloi nur bei den Barbaren, Glaikos von Rhegion demgegenüber noch vor den Begründern des kitharodischen Nomoi (s. Plutarch, <hi rend="italic">De musica</hi> 4, hrsg. von K. Ziegler, Bln. 1959, Sp. 25-28; zu weiteren literarischen Quellen vgl. <ref target="internal:mgg15109/de-de/1.0#id-4f1bf3fa-d1fb-ee63-ffbf-7d434c80238c">W. Boetticher 1964</ref>, <hi rend="sup">2</hi>1979, Sp. 757). Bei den Lakedaimoniern häufen sich Hinweise, daß Auloi auch in der Kriegsmusik eingesetzt wurden; bei Totenklagen ist das Instrument bei den Phrygern (αὐλοὶ Μαριανδυνοί) verbürgt, zu Gesängen eines <hi rend="italic">Paians</hi>, zum Hochzeitskosmos (Homer, αὐλοὶ γαμήλιον bei Pollux), zum Waffentanz bei den Kretern (πυρρίχη), als Arbeitslied (z.B. Teigkneten). Die Phryger sollen zu erweitertem Tonumfang angeregt haben (μαγαδις αὐλός bei Athenaios).</p>
+  <p xml:id="id-a5ca142c-523f-6270-76bc-6bbd2f061a29"><cb n="1042"/>Zum Aulosklang bietet Theognis aus Magara (ca. 544-541 v.Chr.) Hinweise mit seinen Versen in einer gnomologischen Sammlung. Seit P<?fontoxml-change-deletion author-id="6085469726896633112" change-id="change-11" text="h" timestamp="1437684705117"?>ythagoras wurde der übermütig-panegyrische Ton kritisiert (ὐβριστικόν, οὐδαμῶς), Pratinas von Phleius († wahrscheinlich 467 v. Chr.) bemängelt, daß das Instrument beim wilden Satyrchor den Gesang erdrücke (Fragmente aus Athenaios). Unter den vornehmen Athenern hielt Alkibiades den Aulos für unziemlich, auch weil sich das Gesicht des Spielers entstelle; in einem attischen Epigramm wird der Aulos in spöttischer Weise zitiert. Aristoteles rechnet den Aulos zu den τεχνικὰ ἄργανα, die im Unterricht ungeeignet seien wegen des unangemessen bacchischen Klangs.</p>
+  <p xml:id="id-a2a9081b-c502-dbbe-81f4-1279ed742690">Die römischen Dichter heben dann auch den threnodischen Ton hervor (Lukrez, Catull), daneben wurden aber u.a. die Charakterisierungen <q rend="italic">scharfklingend</q> und <q rend="italic">voll Raserei</q> beibehalten. Erst Apuleius spricht von einem vornehmem Trauerton; positive Urteile lauten <q rend="italic">schön</q> (καλλιβόας) und <q>süß</q> (γλυκύς bei Sophokles). Noch bei Cicero (<hi rend="italic">Pro L. Murena</hi>, 13, 29) gilt ein Kitharode als geschickter als ein Aulet (<q rend="italic">Ut aiunt in Graecis artificibus eos auloedos esse, qui citharoedi fieri possent</q>). In der Spätzeit gebrauchte man für die edlere Kithara das Verbum πραὖνειν, für den Aulos ἐξοργιάζειν (hierzu bereits H. Abert, <hi rend="italic">Die Lehre vom Ethos in der griechischen Musik</hi>, Lpz. 1899, S. 63)</p>
+  <p xml:id="id-1c2b3b70-4924-b968-95ab-4defedea61a1">In der römischen Spätantike sind die Grifflöcher vermehrt, auch sind <hi rend="italic">kerata</hi> üblich. Daneben begegnen Röhrenpaare mit abweichenden Längen, z.T. mit gebogenem Ende (<hi rend="italic">tibia impares</hi>), auch <hi rend="italic">tibia incentiva</hi> und <hi rend="italic">tibia succentiva</hi> genannt. Ein <hi rend="italic">Monaulos</hi> (μόναυλος, ein Rohr) ist schon bei Plinius (<hi rend="italic">Maior naturalis historia</hi> 7, 204) und Martianus Capella erwähnt (entspricht wohl der altägyptischen Langrohrpfeife).</p>
+  <p xml:id="id-60992087-dcc9-9cc8-ec32-2e4f7aa7ddde">In pompejanischer Zeit wurde das Instrument nicht mehr vom Spieler verfertigt, sondern in Werkstätten produziert; ein Ringmechanismus löste das alte Verfahren, mit Wachskügelchen einzelne Grifflöcher zu schließen, um bestimmte Tonstufen auszuschalten, ab. Der späte <hi rend="italic">Plagiaulos</hi> (πλαγίαυλος, lat. <hi rend="italic">calamus obliquus</hi>) – wohl eine Querflöte – war durch die Etrusker nach Rom gelangt (s. u.a. G. Wille, <hi rend="italic">Musica romana</hi>, Bln. 1967, S. 174). Eine späte Nebenform ist ferner <hi rend="italic">Niglaros</hi> (νίγλαρος), ein Kleinaulos mit schrillem Ton ägyptisch-phönizischer Provenienz, überliefert bei Pollux (4, 76) und Athenaios (4, 174, vgl. hierzu <ref target="internal:mgg15109/de-de/1.0#id-60b58ed5-fd4f-5abe-0ea5-9824e746c242">W. D. Anderson 1966</ref>, S. 228-231).</p>
+      </div>
+      <div type="ography" xml:id="id-66ba2ad7-31e2-d2bb-224f-79ef79283682">
+  <head>literatur</head>
+  <list>
+    <item>
+      <bibl xml:id="id-b296a2b3-43cd-6579-a55f-5b4eb69a151c"><author>
+    <forename>
+      <abbr>K.</abbr>
+    </forename> <nameLink>von</nameLink> <surname>Jan</surname>
+        </author>, <title>Die Musikinstr umente der Griechen und Römer</title>, in <title rend="roman">Fs. Gymnasium Landsberg</title>, Landsberg <date>1884</date>, <biblScope unit="pp">34-39</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-4354cb28-69b9-28aa-d852-b72b2790cbcf"><author>
+    <forename>
+      <abbr>A.</abbr>
+    </forename> <forename>
+      <abbr>A.</abbr>
+    </forename> <surname>Howard</surname>
+        </author>, <title>The Aulos or Tibia</title>, in: <title rend="roman">Havard Studies of Classical Philology</title> <biblScope unit="vol">4</biblScope>, <date>1893</date>, <biblScope unit="pp">1-60</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-d1e5d7c2-8f30-402a-7fd2-18d8f720518d"><author>
+    <forename>
+      <abbr>K.</abbr>
+    </forename> <nameLink>von</nameLink> <surname>Jan</surname>
+        </author>, Art. <title>Aulos</title>, in: <title rend="roman">Pauly-Wissowa RE</title></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-cbeb8a5b-6859-3aeb-33fe-938b878cd2d5"><author>Ders.</author>, Art. <title>Auletik</title>, in: <title rend="roman">dass.</title></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-2e6f0858-e4cc-ed0e-c429-94ac4ef65a3e"><author>
+    <forename>
+      <abbr>A.</abbr>
+    </forename> <forename>
+      <abbr>A.</abbr>
+    </forename> <surname>Howard</surname>
+        </author>, <title>The Mouthpiece of the Aulos</title>, in: <title rend="roman">Havard Studies of Classical Philology</title> <biblScope unit="vol">10</biblScope>, <date>1899</date>, <biblScope unit="vol">19-37</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-71ebf2ff-4f53-f4c4-0740-d8656feeac2a"><author>
+    <forename>
+      <abbr>C.</abbr>
+    </forename> <surname>Sachs</surname>
+        </author>, <title>Real-Lexikon der Musikinstr.</title>, <pubPlace>Bln.</pubPlace> <date>1913</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-e64e1fc3-ccd6-ed98-ba6e-3ba6e74142e0"><author>
+    <forename>
+      <abbr>J.</abbr>
+    </forename> <surname>Curtis</surname>
+        </author>, <title>The Double Flute</title>s, in: <title rend="roman">Journal of Hellenic Studies</title> <biblScope unit="vol">34</biblScope>, <date>1914</date>, <biblScope unit="pp">89-105</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-c618d46c-4b90-d69d-2a8d-aae0b72d05f7"><author>
+    <forename>
+      <abbr>T.</abbr>
+    </forename> <forename>
+      <abbr>L.</abbr>
+    </forename> <surname>Southgate</surname>
+        </author>, <title>Ancient Flutes from Egypt</title>, in: <title rend="roman">dass.</title> <biblScope unit="vol">35</biblScope>, <date>1915</date>, <biblScope unit="pp">12-21</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-8e297892-b3c2-7a37-4a16-ac75e88dbd6d"><author>Ders.</author>, <title>Paper on Meroë Auloi</title>, in: <title rend="roman">dass.</title> <biblScope unit="vol">35</biblScope>, <date>1915</date>, <biblScope unit="pp">78-89</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-bd5ed833-fb92-aa00-1e1a-9c766e83f92c"><author>
+    <forename>
+      <abbr>C.</abbr>
+    </forename> <surname>Sachs</surname>
+        </author>, <title>Musik des Altertums</title>, <pubPlace>Breslau</pubPlace> <date>1924</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-90d25990-0a56-89fa-08be-7bdc86ea8bf8"><author>Ders.</author>, <title>Zweiklänge im Altertum</title>, in: <title rend="roman">Fs. Joh. Wolf</title>, <pubPlace>Bln.</pubPlace> <date>1929</date>, <biblScope unit="pp">168-173</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-59218c98-cf87-52c9-9bba-d3d94e418996"><author>
+    <forename>
+      <abbr>H.</abbr>
+    </forename> <surname>Huchzermeyer</surname>
+        </author>, <title>Aulos und Kithara in der griech. Musik</title>, Diss. <orgName type="uni">Münster</orgName>, <pubPlace>Emsdetten</pubPlace> <date>1931</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-786e51d0-f2a6-e559-817a-43516b59ce08"><author>
+    <forename>
+      <abbr>D.</abbr>
+    </forename> <nameLink>von</nameLink> <surname>Bartha</surname>
+        </author>, <title>Die avarische Doppelschalmei von Jánoshida</title>, <pubPlace>Budapest</pubPlace> <date>1934</date> (= <series>
+    <title subtype="secondary">Archeologica Hungarica</title> <biblScope unit="vol">19</biblScope>
+        </series>)</bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-763a44d4-fa70-a432-3c20-d53cce60bd34"><author>
+    <forename>
+      <abbr>O.</abbr>
+    </forename> <surname>Broneer</surname>
+        </author>, <title>Excavations in Corinth</title> (<date type="comp">1934</date>), in: <title rend="roman">American Journal of Archeology</title> <biblScope unit="vol">39</biblScope>, <date>1935</date>, <biblScope unit="pp">53-75</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-3c633636-894f-9a5e-621d-acd79fff76ef"><author>
+    <forename>
+      <abbr>H.</abbr>
+    </forename> <surname>Husmann</surname>
+        </author>, <title>Olympos</title>, in: <title rend="roman">Jb. Peters</title> <biblScope unit="vol">44</biblScope>, <date>1937</date>, <biblScope unit="pp">29-44</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-a27fb3aa-9622-4895-db93-41d5d5301c57"><author>
+    <forename>
+      <abbr>J.</abbr>
+    </forename> <forename>
+      <abbr>D.</abbr>
+    </forename> <surname>Beazley</surname>
+        </author>, <title>Excavations at Al Mina, Sueidia, III: The Red-figured Vases</title>, in: <title rend="roman">Journal of Hellenic Studies</title> <biblScope unit="vol">59</biblScope>, <date>1939</date>, <biblScope unit="pp">1-44</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-c3c90616-3c14-85c7-cf42-d4685687e592"><author>
+    <forename>
+      <abbr>K.</abbr>
+    </forename> <surname>Schlesinger</surname>
+        </author>, <title>The Greek Aulos</title>, <pubPlace>L.</pubPlace> <date>1939</date> (vgl. hierzu J. Handschin, in: <title rend="roman">AMl</title> <biblScope unit="vol">20</biblScope>, <date>1948</date>, und R. P. Winnington-Ingram in: <title rend="roman">Journal of Hellenic Studies</title> <biblScope unit="vol">59</biblScope>, <date>1939</date>, <biblScope unit="pp">305-307</biblScope>)</bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-5815884a-bb9c-9dc6-9d86-ec2d3aba4999"><author>
+    <forename>
+      <abbr>N.</abbr>
+    </forename> <forename>
+      <abbr>B.</abbr>
+    </forename> <surname>Bodley</surname>
+        </author>, <title>The Auloi of Meroë. A Study of the Greek-Egyptian Auloi Found of Meroë, Egypt</title>, in: <title rend="roman">American Journal of Archeology</title> <biblScope unit="vol">50</biblScope>, <date>1946</date>, <biblScope unit="pp">217-240</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-34d2749b-f46c-0a99-3586-5d59f4969eb5"><author>
+    <forename>
+      <abbr>J.</abbr>
+    </forename> <forename>
+      <abbr>D.</abbr>
+    </forename> <surname>Beazley</surname>
+        </author>, <title>Etruscan Vase-Painting</title>, <pubPlace>Oxd.</pubPlace> <date>1947</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-d14457ed-b5fc-b878-095e-83ec35ed11e7"><author>
+    <forename>
+      <abbr>M.</abbr>
+    </forename> <surname>Wegner</surname>
+        </author>, <title>Das Musikleben der Griechen</title>, <pubPlace>Bln.</pubPlace> <date>1949</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-9a9aed66-b13b-c313-ec98-48af1d3a6ef0"><author>
+    <forename>
+      <abbr>G.</abbr>
+    </forename> <surname>Fleischhauer</surname>
+        </author>, <title>Die Musikergenossenschaften im hellen.-röm. Altertum</title>, Diss. <orgName type="uni">Halle</orgName> <date>1950</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-748529a1-246e-7a2e-6cbc-d34204a22b29"><author>
+    <forename>
+      <abbr>M.</abbr>
+    </forename> <surname>Wegner</surname>
+        </author>, <title>Die Musikinstrumente des alten Orients</title>, <pubPlace>Münster</pubPlace> <date>1950</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-ae26ad12-23ec-ab8e-d97c-7f06600ab606"><author>Ders.</author>, <title>Griechenland</title>, <pubPlace>Lpz.</pubPlace> <date>o.J.</date> (= <series><title subtype="secondary">MgB</title> <biblScope unit="vol">II</biblScope>,<biblScope unit="issue">4</biblScope></series>)</bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-6de8b324-7204-eb66-7ec0-1ade1abd436a"><author>
+    <forename>
+      <abbr>D.</abbr>
+    </forename> <nameLink>von</nameLink> <surname>Bothmer</surname>
+        </author>, in: <title rend="roman">Journal of Hellenic Studies</title> <biblScope unit="vol">71</biblScope>, <date>1951</date>, <biblScope unit="pp">46-65</biblScope> (mit Taf.)</bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-a9a4904b-908a-ec51-eda5-debfed357c6c"><author>
+    <forename>
+      <abbr>W.</abbr>
+    </forename> <surname>Wiora</surname>
+        </author>, <title>Zwischen Einstimmigkeit und Mehrstimmigkeit in der griechisch-röm. Antike</title>, in: <title rend="roman">Fs. M. Schneider</title>, <pubPlace>Lpz.</pubPlace> <date>1955</date>, <biblScope unit="pp">319-334</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-f11a99bb-5a84-12df-f1b2-b9374b7da8ab"><author>
+    <forename>
+      <abbr>J.</abbr>
+    </forename> <forename>
+      <abbr>D.</abbr>
+    </forename> <surname>Beazley</surname>
+        </author>, <title>Hydria-Fragments in Corinth</title>, in: <title rend="roman">Hesperia</title> <biblScope unit="vol">24</biblScope>, <date>1955</date>, S. <biblScope unit="pp">305-319</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-d5133c25-195d-6187-0ef8-831f2ccfaf27"><author>
+    <forename>
+      <abbr>J.</abbr>
+    </forename> <surname>Henderson</surname>
+        </author>, <title>Ancient Greek Music</title>, in: <title rend="roman">NOHM</title> <biblScope unit="vol">1</biblScope>, <biblScope unit="pp">336-403</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-bdb205a8-da2c-ea8e-142d-b22ef2329d86"><author>
+    <forename>
+      <abbr>W.</abbr>
+    </forename> <surname>Wiora</surname>
+        </author>, <title>Volks- und Kunstmusik in der griech.-röm. Antike</title>, <pubPlace><cb n="1043"/>Kassel</pubPlace> 1957</bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-e3a4931f-f96b-ee4c-8113-7e6a4ab99b52"><author>
+    <forename>
+      <abbr>R.</abbr>
+    </forename> <forename>
+      <abbr>P.</abbr>
+    </forename> <surname>Winnington-Ingram</surname>
+        </author>, <title>Ancient Greece Music</title>, in: <title rend="roman">Lustrum</title> <biblScope unit="vol">3</biblScope>, <date>1958</date>, <biblScope unit="pp">5-57</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-595a67bb-a52d-083e-ee93-de9df9407a75"><author>
+    <forename>
+      <abbr>Thr.</abbr>
+    </forename> <surname>Georgiades</surname>
+        </author>, <title>Musik und Rhythmus bei den Griechen</title>, <pubPlace>Hbg.</pubPlace> <date>1958</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-13b35b88-b4cb-1371-356c-7165c806629d"><author>
+    <forename>
+      <abbr>H.</abbr>
+    </forename> <surname>Husmann</surname>
+        </author>, <title>Grundlagen der antike und oriental. Musikkultur</title>, <pubPlace>Bln.</pubPlace> <date>1961</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-2c4a064a-9ff7-37d1-d5aa-82e15ec0c0c0"><author>
+    <forename>
+      <abbr>H.</abbr>
+    </forename> <surname>Becker</surname>
+        </author>, <title>Zur Spielpraxis des griech. Aulos</title>, in: <meeting>Kgr.Ber. GfM Kassel <date>1962</date></meeting>, <pubPlace>Kassel</pubPlace> <pubPlace>u.a.</pubPlace> <biblScope unit="vol">G1963</biblScope>, <biblScope unit="pp">300-302</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-7bf66955-abe7-8fce-5896-6f7972f4c5dc"><author>
+    <forename>
+      <abbr>H.</abbr>
+    </forename> <surname>Keller</surname>
+        </author>, <title>Musik und Dichtung im alten Griechenland</title>, <pubPlace>Bern</pubPlace>/<pubPlace>Mn.</pubPlace> <date>1963</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-be1062cb-9d1b-9d34-fce3-3f3e690074a3"><author>
+    <forename>
+      <abbr>G.</abbr>
+    </forename> <surname>Fleischhauer</surname>
+        </author>, <title>Etrurien und Rom</title>, <pubPlace>Lpz.</pubPlace> <date>1965</date> (= <series><title subtype="secondary">MgB</title> <biblScope unit="vol">II</biblScope>,<biblScope unit="issue">5</biblScope></series>)</bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-8ce85b4c-8942-14b5-c2eb-47e6713cdf1b"><author>
+    <forename>
+      <abbr>H.</abbr>
+    </forename> <surname>Becker</surname>
+        </author>, <title>Zur Entwicklungsgesch. der antiken und ma. Rohrblattinstrumente</title>, HabSchr. <pubPlace>Hbg.</pubPlace> <date>1966</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-60b58ed5-fd4f-5abe-0ea5-9824e746c242"><author>
+    <forename>
+      <abbr>W.</abbr>
+    </forename> <surname>Anderson</surname>
+        </author>, <title>Ethos and Education in Greek Music</title>, <pubPlace>Cambridge</pubPlace>/<pubPlace>Mass.</pubPlace> <date>1966</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-4f1bf3fa-d1fb-ee63-ffbf-7d434c80238c"><author>
+    <forename>
+      <abbr>W.</abbr>
+    </forename> <surname>Boetticher</surname>
+        </author>, Art. <title>Antigeneidas</title>, in: <title rend="roman">Der Kleine Pauly, Lex. der Antike</title> <biblScope unit="vol">1</biblScope>, <pubPlace>Stg.</pubPlace> <date>1964</date>; <edition rend="sup">2</edition><date>1979</date>, <biblScope unit="vol">378</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-067b6168-c3ab-51cd-a758-2d56ce184d07"><author>Ders.</author>, in: <title rend="roman">dass.</title> <biblScope unit="vol">1</biblScope>, <biblScope unit="pp">755-759</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-f7a14552-5b32-81e6-2988-26e6de36780b"><author>
+    <forename>
+      <abbr>J.</abbr>
+    </forename> <surname>Mountford</surname>
+        </author>/<author>
+    <forename>
+      <abbr>R.</abbr>
+    </forename> <forename>
+      <abbr>A.</abbr>
+    </forename> <surname>Winnington-Ingram</surname>
+        </author>, Art. <title>Music</title>, in: <title rend="roman">The Oxford Classical Dict.</title>, <pubPlace>Oxd.</pubPlace> <edition rend="sup">2</edition><date>1970</date>, <biblScope unit="pp">705f</biblScope>.</bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-6168c10f-f5e2-5c36-95f0-b07c42145424"><author>
+    <forename>
+      <abbr>J.</abbr>
+    </forename> <forename>
+      <abbr>R.</abbr>
+    </forename> <surname>Jannot</surname>
+        </author>, <title>L’Aulos étrusque</title>, in: <title rend="roman">Antiquité classique</title> <biblScope unit="vol">43</biblScope>, <date>1974</date>, <biblScope unit="pp">118-142</biblScope></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-3eea71d5-b2f0-b132-3853-49ed560e6a02"><author>
+    <forename>
+      <abbr>L.</abbr>
+    </forename> <surname>Picken</surname>
+        </author>, <title>Folk Musical Instruments of Turkey</title>, <pubPlace>Oxd.</pubPlace> <date>1975</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-7e54dfb8-36b3-f9a9-3416-a040a0407561"><author>
+    <forename>
+      <abbr>R.</abbr>
+    </forename> <forename>
+      <abbr>D.</abbr>
+    </forename> <surname>Anderson</surname>
+        </author>, <title>Catalogue of Egyptian Antiquities in the British Museum</title>, <biblScope unit="vol">Bd. 3</biblScope>, <pubPlace>L.</pubPlace> <date>1976</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-aeaa0616-5132-bea2-d793-74153437905f"><author>
+    <forename>
+      <abbr>C.</abbr>
+    </forename> <surname>Zieglere</surname>
+        </author>, <title>Les Instruments de musique égyptiens au musée du Louvre</title>, <biblScope unit="issue">P.</biblScope> <date>1979</date></bibl>
+    </item>
+    <item>
+      <bibl xml:id="id-11a039fc-12af-ba5c-5b8a-b633a02969e1"><author>
+    <forename>
+      <abbr>J.</abbr>
+    </forename> <forename>
+      <abbr>W.</abbr>
+    </forename> <surname>Mc Kinnon</surname>
+        </author>, in: <title rend="roman">NGroveD.</title></bibl>
+    </item>
+  </list>
+      </div>
+      <div type="authors" xml:id="id-2b8a95b9-c9d4-7cbc-ab7f-f21e91606344">
+  <docAuthor>
+    <persName>
+      <forename>wolfgang</forename> <surname>boetticher</surname>
+    </persName>
+  </docAuthor>
+      </div>
+    </body>
+  </text>
+</TEI>
