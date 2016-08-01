@@ -163,7 +163,6 @@ formula > graphic{
 div[type = "section"] > head {
     display: block;
     font-weight: 600;
-    text-indent: 2em;
     margin-bottom: .5em;
 }
 div[type='works'] div[type = "section"] > head,
@@ -215,7 +214,6 @@ head[n = Y],
 head[n = Z]{
     display: block;
     font-style: italic;
-    text-indent: 2em;
 } /*not in the Editorial System HTML CSS*/
 div[type = 'ography'] head,
 div[type = 'works'] head{
@@ -406,7 +404,7 @@ div[type = 'heading'] orgName[type = 'preferred']{
 }
 p{
     display: block;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 p[rend = "block"]{
     margin-left: 2em;
