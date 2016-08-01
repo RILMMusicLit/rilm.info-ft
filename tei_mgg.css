@@ -414,8 +414,11 @@ p[n]:before{
     font-style: normal !important;
     font-weight: 600;
 }
-cell > p{
+cell > p {
     text-indent: 0;
+}
+div[type = 'heading'] > p {
+    font-size:1.25em;
 }
 item > p{
     text-indent: 0;
