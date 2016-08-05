@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Opernlexikon</title>
+  </head>
+  <body>
+    <a>
+      <div><h4 id="sol">Opernlexikon</h4></div>
+    </a>
+    <div class="r201607" title="Added 7/2016">
+      <ul>
+        <li><b>General notes:</b>
+          <ul>
+            <li>This work consists of four parts (<i>Teil</i>), each of which includes 2 or 3
+              volumes (<i>Band</i>): <ol>
+                <li><i>Titlekatalog</i>: a catalogue of opera titles and their composer(s), 3
+                  vols.</li>
+                <li><i>Komponisten</i>: a catalogue of composers of opera with lists of titles
+                  composed by each, 3 vols.</li>
+                <li><i>Librettisten</i>: a catalogue of authors of opera texts with lists of titles
+                  written by each, 3 vols.</li>
+                <li><i>Nachträge</i>: supplements to the prior parts--chronologies, indexes, and
+                  additional entries.</li>
+              </ol>The first three parts are similar and will be processed similarly, but there are
+              differences in the tagging details.</li>
+            <li>Each volume (11 total) begins with a half-title page, a series-title page, a
+              volume-title page, and a copyright page. There is no need to scan or convert the
+              half-title or series-title pages.</li>
+            <li>Each volume has a distinct publication year and ISBN number, which should be
+              reflected in the TEI headers.</li>
+          </ul></li>
+        <li><b>Part I: Titel katalog</b><ul>
+            <li>The <b>front matter</b> of Band 1 consists of an <i>introduction</i> given in four
+              languages (German, English, French, and Italian) and a <i>list of abbreviations</i> ("Abkürzungen").<ul>
+                <li>Create a separate TEI file for each translation of the introduction--"Zur
+                  Einführung", "Introduction", "Introduction", and "Presentazione". <ul>
+                    <li>Start a new &lt;div type="section"> at each center-aligned heading ("The
+                      Opera", "Bibliographical and Source Works on Opera", etc.)</li>
+                    <li>Tag footnotes as described in <a
+                        href="http://rilm.info/ft/tei_rilm_instructions.html#footnotes"
+                        >http://rilm.info/ft/tei_rilm_instructions.html#footnotes</a>.</li>
+                    <li>Tag the bibliography in the middle of the second section as a &lt;list>;
+                      keep the City names outside the &lt;bibl>
+                        elements:<blockquote>&lt;list>&lt;item>Berlin:
+                        &lt;bibl>&lt;author>&lt;forename>HERBERT&lt;/forename>
+                        &lt;surname>GRAF&lt;/surname>&lt;/author>, &lt;title>Das
+                        Repertoire[…]</blockquote></li>
+                  </ul></li>
+                <li>Tag the list of abbreviations as a two-column table. The letters along the left
+                  ("A", "B", etc.) may be <i>omitted</i>.</li>
+              </ul></li>
+            <li>The <b>body</b> of Part I is a tabular list of opera titles with additional data for
+              each. <ul>
+                <li>Create a TEI file for each <i>distinct</i> title. For example, on page 1 of vol.
+                  1, only <i>one file each</i> should be created for the titles "À la belle étoile"
+                  and "À la mer". These are indicated by ditto (") marks or by <i>exact</i>
+                  repetition of the title text.</li>
+                <li>Printed column 1--use for the &lt;title> element in the TEI header, and as a
+                  &lt;head>&lt;title type="work> in the &lt;div type="body">. <i>Transpose the
+                    articles in parentheses ("The", "La", "L' ", etc.) to the beginning of the
+                    title.</i></li>
+                <li>Create a five-column &lt;table> for the remaining four <i>printed</i> columns
+                  (printed column 2 is to be split in two columns in the TEI table). <i>Spell out
+                    any repetitions indicated by </i>(")<i> or by </i>(-)<i>; If a space is blank in
+                    the print, leave an empty </i>&lt;cell><i> element</i>.<ul>
+                    <li>Insert a row for column headings with the contents "[Gattung des Werkes]",
+                      "[Anzahl der Akte"], "[Komponist(en)]", "[Textautor(en)]", and "[Nähere
+                      Aufführungsdaten]". Include the square brackets.</li>
+                    <li>First &lt;cell>: use the <i>text</i> from printed column 2 ("Optte",
+                      "Vaudeville", "Op.ser.", etc.) and tag &lt;genre>.</li>
+                    <li>Second &lt;cell>: use the <i>numeral</i> from printed column 2 (1, 1, 3,
+                      etc.) and tag &lt;biblScope unit="acts"></li>
+                    <li>Third &lt;cell>: use the text in printed column 3. Tag with
+                      &lt;rilmPerson>&lt;author> and &lt;forename> and &lt;surname> where possible.
+                      Multiple names are separated in print by "u." (and) or "m." (with) or commas;
+                      tag each separately. Enclose in a &lt;ref> pointing to the name entry in any
+                      of the other parts (composers, librettists, supplement).</li>
+                    <li>Fourth &lt;cell>: use the text in printed column 4. Tag with
+                      &lt;rilmPerson>&lt;author role="librettist"> and &lt;forename> and
+                      &lt;surname> where possible. Multiple names are separated in print by "u."
+                      (and) or "m." (with) or commas. Enclose in a &lt;ref> pointing to the name
+                      entry in any of the other parts (composers, librettists, supplement).</li>
+                    <li>Fifth &lt;cell>: use the text in printed column 5. Tag as
+                      &lt;rilmPerformance type="first">. Tag text before the date as &lt;placeName>,
+                      the date as &lt;date>, and text following the date as &lt;orgName>. Printed
+                      dates are in D.M.YYYY format.</li>
+                  </ul></li>
+              </ul></li>
+          </ul></li>
+        <li><b>Part II: Komponisten</b> will be, for the most part, treated similarly to Part I.<ul>
+            <li><b>Front matter</b>: tag as for Part I; use the printed titles ("Vorwort",
+              "Preface", etc.)</li>
+            <li>
+              <p>The entries in the main <b>body</b> are all persons. Nearly all include a <b>heading</b> with a personal name and birth and death information, followed by a <b>list of works</b>.</p>
+              <p><i>Do not create a TEI file for entries that have only see references (indicated by "s.").</i> IF the target entries can be found, add the name to the target documents as described <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">here</a>.</p>
+              <p><i>IF the target entry cannot be found (often it cannot), OR if the reference says only "s. Index" or "s. Nachtrag", OMIT the reference.</i></p>
+              <ul>
+                <li><b>Headings</b> should be tagged as &lt;div type="heading">&lt;p> containing a
+                  &lt;rilmPerson> and &lt;persName>:<ul>
+                    <li>Tag the letterspaced, underlined name as &lt;surname>; close up the
+                      spaces.</li>
+                    <li>Tag capitalized names in normal spacing, not underlined, as &lt;forename>;
+                        <i>non-capitalized</i> words e.g. "dall' " as &lt;nameLink></li>
+                    <li>Insert a comma between the surname and forename(s) and use for the TEI
+                      &lt;title>.</li>
+                    <li>The information in parentheses should be tagged with &lt;birth>, &lt;death>,
+                      &lt;date> and &lt;placeName> as appropriate. Dates are printed as D.M.YYYY;
+                        <i>explanatory phrases suce as "54 Jahre alt" should be included within the
+                        </i>&lt;rilmPerson><i> element, but left outside of </i>&lt;birth><i> or
+                        </i>&lt;death><i> tags.</i></li>
+                    <li>Some entries with long lists have the heading name repeated midway through
+                      the list; These are distiguished from true headings in that they are NOT
+                      letter spaced. (See page 126 of Part II, Vol. 1, "Boieldieu, F.A." for an
+                      example). <i>OMIT these.</i></li>
+                  </ul></li>
+                <li><i>Very few entries have a one-line <b>body text</b> immediately following the
+                    entry heading. tag as a &lt;div type="body"></i>
+                  <p>[<u>A r t u s</u> Alexandre (gest. 21.8.1911 La Varenne bei Paris, 90 Jahre alt)<br /> Komponist von mehr als 250 Melodramen un. Feerien]<br /> <br /> [<u>C a f a r o</u> Pasquale (8.2.1706 (1726?) S. Pietro/Galatino - 23.10.1787)<br /> (trat 1735 als Schüler ins Conservat. de la Pietra ein, das Geburtsjahr dürfte daher wohl 1726 sein)]<br /> <br /></p>
+                  These would be tagged as follows:
+                    <blockquote>&lt;head>&lt;rilmPerson>&lt;persName>&lt;surname>Artus&lt;/surname>
+                    &lt;forename>Alexandre&lt;/forename>&lt;/persName> (&lt;death>gest. &lt;date
+                    when="1911-08-21 when-custom="1911">21.8.1911&lt;/date> &lt;placeName>La Varenne
+                    bei Paris&lt;/placeName>&lt;/death>, 90 Jahre
+                    alt)&lt;/rilmPerson>&lt;/p>&lt;/div> <br />&lt;div type="body">&lt;p>Komponist
+                    von mehr als 250 Melodramen un.
+                    Feerien&lt;/p>&lt;/div></blockquote><blockquote>&lt;div
+                    type="heading">&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Cafaro&lt;/surname>
+                    &lt;forename>Pasquale&lt;/forename>(&lt;birth>&lt;date when="1706-02-08"
+                    when-custom="1706">8.2.1706 (&lt;date when="1726"
+                    precision="low">1726&lt;/date>?) &lt;placeName>S.
+                    Pietro/Galatino&lt;/placeName>&lt;/birth> - &lt;death>&lt;date
+                    when="1787-10-23">23.10.1787&lt;/date>&lt;/death>)&lt;/rilmPerson>&lt;/p>&lt;/div>
+                    <br />&lt;div type="body">&lt;p>(trat 1735 als Schüler ins Conservat. de la
+                    Pietra ein, das Geburtsjahr dürfte daher wohl 1726
+                    sein)&lt;/p>&lt;/div></blockquote></li>
+                <li>The <b>work lists</b> are printed in table with four-columns. Enclose in a
+                  &lt;div type="works"> and tag as a five-column &lt;table> as described below.
+                    <i>If there is a subheading such as "Possen" or "Op.:" aligned with the main
+                    heading, tag it as &lt;head>; if an </i>additional<i> heading is encountered
+                    (that is not a repeat of the composer name), end the &lt;table> element, tag the
+                    heading &lt;head>, and start a new &lt;table> after.</i><ul>
+                    <li>Insert a row at the top of each table for column headings, with the contents
+                      "[Titel des Werkes]", "[Gattung des Werkes]", "[Anzahl der Akte]",
+                      "[Textautor(en)]", and "[Nähere Aufführungsdaten]" in italics. Include the
+                      square brackets.</li>
+                    <li>First &lt;cell>: use the text from printed column 1. Tag the text as
+                      &lt;title type="work">. <i>If the first column begins with a numeral and
+                        period</i>, open the &lt;title> element after it. </li>
+                    <li>Second &lt;cell>: use the <i>text</i> in printed column 2 as &lt;genre> </li>
+                    <li>Third &lt;cell>: use the numeral in printed column 2; tag with &lt;biblScope
+                      type="acts"></li>
+                    <li>Fourth &lt;cell>: use the text in printed column 3.<ul>
+                        <li>Multiple names are separated by "u." (and) or "m." (with) or commas. </li>
+                        <li>Tag names <i>without parentheses</i> with &lt;rilmPerson>&lt;author
+                          role="librettist">, and &lt;forename> and &lt;surname> where possible;
+                            <i>tag names inside parentheses as </i>&lt;rilmPerson>&lt;persName>, and
+                          &lt;forename> and &lt;surname> where possible.</li>
+                        <li>Enclose in a &lt;ref> pointing to the name entry in the other parts
+                          (librettists, supplement).</li>
+                        <li><i>Do not tag if the column begins "Vater", "Sohn", or "nach".</i></li>
+                      </ul></li>
+                    <li>Fifth &lt;cell>: use the text in printed column 4. Tag as
+                      &lt;rilmPerformance type="first">. Tag text before the date as &lt;placeName>,
+                      the date as &lt;date>, and text following the date as &lt;orgName>. Printed
+                      dates are in D.M.YYYY format.</li>
+                  </ul></li>
+              </ul>
+            </li>
+          </ul></li>
+        <li><b>Part III: Librettisten</b><ul>
+            <li>Front matter: tag as for Part I; use the printed titles ("Vorwort", "Preface",
+              etc.)</li>
+            <li>
+              <p>The <b>entries</b> in the main body are all persons. Nearly all include a <b>heading</b> with a personal name and birth and death information, followed by a <b>list of works</b>. Very few have one or two sentences of <b>body text</b> containing biographical information.</p>
+              <p><i>Do not create a TEI file for entries that have only see references (indicated by "s.").</i> IF the target entries can be found, add the name to the target documents as described <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">here</a>.</p>
+              <p><i>IF the target entry cannot be found (often it cannot), OR if the reference says only "s. Index" or "s. Nachtrag" or "s. Op.Komp.Lex", OMIT the reference.</i></p>
+              <ul>
+                <li><b>Headings</b> should be tagged as &lt;div type="heading">&lt;p> containing a
+                  &lt;rilmPerson> and &lt;persName>:<ul>
+                    <li>Tag the letterspaced, underlined name as &lt;surname></li>
+                    <li>Tag capitalized names in normal space, not underlined as &lt;forename>;
+                        <i>non-capitalized</i> words e.g. "dall' " as &lt;nameLink></li>
+                    <li>Insert a comma between the surname and forename(s) and use for the TEI
+                      &lt;title>.</li>
+                    <li>The information in parentheses should be tagged with &lt;birth>, &lt;death>,
+                      &lt;date> and &lt;placeName> as appropriate. Dates are printed as D.M.YYYY;
+                        <i>explanatory phrases should be included within the </i>&lt;rilmPerson><i>
+                        element, but left outside of </i>&lt;birth><i> or </i>&lt;death><i>
+                        tags.</i></li>
+                    <li><i>Some entries with long lists have the heading name repeated midway
+                        through the list; These are distiguished from true headings in that they are
+                        NOT letter spaced.</i> (See page 176 of Part III, Vol. 1, "Checcherini, G."
+                      for an example). <i>OMIT these.</i></li>
+                  </ul></li>
+                <li>The <b>work lists</b> are printed in tables with five-columns. Enclose in a
+                  &lt;div type="works"> and tag as a <i>six-column</i> &lt;table> as described below.<ul>
+                    <li>Insert a row at the top of each table for column headings, with the contents
+                      "[Titel des Werkes]", "[Gattung des Werkes]", "[Anzahl der Akte"],
+                      "[Mitarbeiter]", "[Komponist(en)]", and "[Aufführungsdaten]". Include the
+                      square brackets.</li>
+                    <li>First &lt;cell>: use the text from printed column 1. Tag the text as
+                      &lt;title type="work">. <i>If the first column begins with a numeral and
+                        period</i>, open the &lt;title> element after it. </li>
+                    <li>Second &lt;cell>: use the <i>text</i> in printed column 2 as &lt;genre> </li>
+                    <li>Third &lt;cell>: use the numeral in printed column 2; tag with &lt;biblScope
+                      type="acts"></li>
+                    <li>Fourth &lt;cell>: use the text in printed column 3.<ul>
+                        <li>Tag as &lt;rilmPerson>&lt;persName>, and &lt;forename> and &lt;surname>
+                          where possible. </li>
+                        <li><i>Leave the </i>"m. "<i> outside of the &lt;rilmPerson>
+                          element</i>.</li>
+                        <li>Multiple names are separated by "u." or commas. </li>
+                        <li>Enclose each in a &lt;ref> pointing to the name entry in this or other
+                          parts</li>
+                      </ul></li>
+                    <li>Fifth &lt;cell>: use the text in printed column 4.<ul>
+                        <li>Omit the parentheses.</li>
+                        <li>Tag as &lt;rilmPerson>&lt;persName>, and &lt;forename> and &lt;surname>
+                          where possible.</li>
+                        <li>Multiple names are separated by "u." (and) or "m." (with) or commas. </li>
+                        <li>Enclose each in a &lt;ref> pointing to the name entry in the other parts
+                          (composers, supplement).</li>
+                        <li><i>Do not tag if the text begins "Musik" or "Diverse".</i></li>
+                      </ul></li>
+                    <li>Sixth &lt;cell>: use the text in printed column 5. Tag as
+                      &lt;rilmPerformance type="first">. Tag text as &lt;placeName> and the date as
+                      &lt;date>. Printed dates are in D.M.YYYY format. (There are no &lt;orgName>s
+                      in this part.)</li>
+                  </ul></li>
+              </ul>
+            </li>
+          </ul></li>
+        <li><b>Part IV: Nachträge</b> has many distinct sections, which are listed in the two
+          volumes' tables of contents (Inhalt). <i>Process the title pages and tables of
+            abbreviations (Abkürzungen) as for the other volumes.</i>
+          <ul>
+            <li><i>Zur Geschichte der Oper. Chronologishes Verzeichnis bis 1700</i>: <ul>
+                <li>Use this title, as listed in the table of contents in the TEI Header.</li>
+                <li>Use the all-capital text on p. 10 ("ZUR GESCHICHTE DER OPER") as &lt;div
+                  type="heading">; use the remainder ("Entwicklungsgang der Oper,...") as the first
+                  &lt;p> within &lt;div type="body">.</li>
+                <li>Set the following, through page 75, as six-column tables.<ul>
+                    <li>Begin a &lt;div type="section"> at each year. Use the year as a &lt;head>
+                      preceding the &lt;table></li>
+                    <li>Insert column headings "[Gattung des Werkes]", and "[Titel des Werkes]"
+                      (including the brackets) as the first two cells of the first row, followed by
+                      "Komponist", "Textautor", and "Ort u. Zeit der Aufführung" as printed.</li>
+                    <li>For subsequent rows:<ul>
+                        <li>Tag the contents of columns 3 and 4 as &lt;ref>(s) pointing to the entry
+                          for the name(s) in the other Parts</li>
+                        <li>Multiple names are separated by commas or "u." </li>
+                      </ul></li>
+                  </ul></li>
+              </ul></li>
+            <li><i>Komponisten als Textautoren</i>:<ul>
+                <li>Use this title in the TEI header AND as the contents of &lt;div
+                  type="heading">.</li>
+                <li>Use the entire text on page 77 as the contents of the first &lt;p> of &lt;div
+                  type="body"></li>
+                <li>CONVERT ONLY THE HEADINGS (omit the work lists)</li>
+                <li>Close up the names; tag with a &lt;ref> pointing to the entry for that name in
+                  other Parts.</li>
+              </ul></li>
+            <li><i>Index zum Komponisten-Lexikon mit Ergänzungen</i> includes a list of the entries
+              in the three volumes of Part II, intercollated with additional <i>new</i> entries.
+              CONVERT <i>ONLY</i> THE NEW ENTRIES, WHICH SHOULD BE HANDLED <i>EXACTLY</i> AS IN PART
+              II (Komponisten). CREATE A TEI FILE FOR EACH NEW ENTRY.<ul>
+                <li>New entries are distinguished by underlined letterspaced text (whereas other
+                  names are letterspaced but NOT underlined).</li>
+              </ul></li>
+          </ul>
+          <b>Volume 2:</b>
+          <ul>
+            <li><i>Verzeichnis der deutschen Singspiele (Opern) vom Jahre 1701 bis einschließlich
+                1800</i> p.11: <ul>
+                <li>Use this text (from the volume table of contents) for the TEI header &lt;title>; </li>
+                <li>Use the text on p.13 as &lt;div type="heading">; </li>
+                <li>Make a new &lt;div type="section"> for each year; use the year as &lt;head> and
+                  set the remainder in a five-column table.</li>
+                <li><i>Tag the contents of the third and fourth columns</i> as &lt;ref> pointing to
+                  entries for that name in other Parts.</li>
+              </ul></li>
+            <li><i>Verzeichnis der deutschen Singspiele (Opern) vom Jahre 1801 bis einschließlich
+                1900</i> p.53: <ul>
+                <li>Process as above </li>
+                <li>Use the text on p.53 as &lt;div type="heading">; </li>
+              </ul></li>
+            <li><i>Verzeichnis von deutschen Opern, Singspielen und Operetten vom Jahre 1901 an
+                (Uraufführungen)</i> p.117: <ul>
+                <li>Process as above. </li>
+                <li>Use the first block of text on p.117 as &lt;div type="heading">; use the second
+                  as the first &lt;p> of &lt;div type="body">. </li>
+              </ul></li>
+            <li><i>Verzeichnis der Uraufführungen von Opern in Italien in den Jahren 1701 bis
+                1800</i> p.169: <ul>
+                <li>Use the first block of text on p.169 as &lt;div type="heading">, and the second
+                  block as as the first &lt;p> of &lt;div type="body">. </li>
+                <li>Make a new &lt;div type="section"> for each place name </li>
+                <li>Use the place name as &lt;head> and set the remainder in a <i>four-column</i>
+                  table (note that the printed table itself wraps to a second column for each
+                  place).</li>
+                <li>Tag the contents of the third column as a &lt;ref> pointing to entries for that
+                  name in other Parts.</li>
+              </ul></li>
+            <li><i>Verzeichnis der Uraufführungen von Opern in Bologna, Rom, Florenz, Mailand,
+                Genua, Neapel und Venedig in den Jahren 1701 bis 1800</i> p.189<ul>
+                <li>Process as above</li>
+              </ul></li>
+            <li><i>Verzeichnis der Uraufführungen von Opern in Italien in den Jahren 1801 bis
+                1852</i> p.241<ul>
+                <li>Use this text (from the volume table of contents) for the TEI header &lt;title>; </li>
+                <li>Use the text on p.13 as &lt;div type="heading">; </li>
+                <li>Make a new &lt;div type="section"> for each year; use the year as &lt;head> and
+                  set the remainder in a five-column table.</li>
+                <li>Tag the contents of the fourth column as a &lt;ref> pointing to entries for that
+                  name in other Parts</li>
+              </ul></li>
+            <li><i>Verzeichnis der Uraufführungen von Opern in Italien in den Jahren 1853 bis
+                1900</i> p.293 <ul>
+                <li>Tag as above.</li>
+              </ul></li>
+            <li><i>Verzeichnis von Opern mit italienischem Text, deren Uraufführung außerhalb
+                Italiens erfolgte</i> p.339: <ul>
+                <li>Use the two blocks of text on p.339 as &lt;div type="heading"> and &lt;div
+                  type="body">&lt;p></li>
+                <li>Start a &lt;div type="section"> at each place name.</li>
+                <li>Set the remainder as a six-column &lt;table></li>
+                <li>Tag the contents of the fourth column as a &lt;ref> pointing to entries for that
+                  name in other Parts</li>
+              </ul></li>
+            <li><i>Verzeichnis der Uraufführungen in Italien von Opern mit italienischem Text,
+                welche Nichtitaliener zu Komponisten haben</i> p.395:<ul>
+                <li>CONVERT ONLY THE HEADINGS (omit the work lists)</li>
+                <li>Close up the names; tag with a &lt;ref> pointing to the entry for that name in
+                  other Parts.</li>
+              </ul></li>
+            <li><i>Verzeichnis von Opernkomponisten, welche ein Alter von unter 41 oder über 80
+                Jahre erreichten</i> p.405<ul>
+                <li>Tag as two &lt;div type="section">, beginning the second at p.410</li>
+                <li>Tag the lists as a <i>three-column</i> table. Please <i>close up the
+                    letterspacing</i> of the names.</li>
+                <li>Tag the contents of the first column as a &lt;ref> pointing to entries for that
+                  name in other Parts</li>
+              </ul></li>
+            <li>Verzeichnis der Opernkomponistinnen nebst Verzeichnis ihrer Bühnenwerke p.415 <ul>
+                <li>CONVERT ONLY THE HEADINGS (omit the work lists)</li>
+                <li>Close up the names; tag with a &lt;ref> pointing to the entry for that name in
+                  other Parts.</li>
+              </ul></li>
+            <li><i>Verzeichnis der seit Entstehung der Oper bis zur jüngsten Zeit (ca. 1925) von
+                weiblichen Autoren komponiretn Opern und opernhaften Werken. (Chronologisch nach
+                Jahren geordnet)</i> p.428 [not listed in the printed table of contents!]<ul>
+                <li>Tag as a six-column table.</li>
+              </ul></li>
+            <li><i>Verzeichnis von Opern- und Operettenkomponisten nach ihrem Geburtsort unter
+                Beifügung des Geburtsjahres</i> - p.441<ul>
+                <li>Tag as a two-column table. Close up the letterspacing.</li>
+              </ul></li>
+            <li>Verzeichnis von Opern- und Operettenkomponisten nach deren Geburtsjahr in
+              chronologischer Anordnung p.489<ul>
+                <li>Tag as a two-column table.</li>
+              </ul></li>
+            <li>Verzeichnis von Opern- und Operettenkomponisten nach deren Todesjahr chronologisch
+              geordnet p.513<ul>
+                <li>Tag as a two-column table.</li>
+              </ul></li>
+            <li>Nachwort p.531: Include the image on p. 532</li>
+          </ul></li>
+      </ul>
+      <p>Please also refer to the sample files.</p>
+    </div>
+  </body>
+</html>

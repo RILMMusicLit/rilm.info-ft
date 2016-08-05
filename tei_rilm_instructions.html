@@ -39,6 +39,9 @@
     </ul>
     <h5>Encyclopedias</h5>
     <ul>
+      <li><i>new:</i>
+        <a href="instructions/opernlexikon.xhtml" class="r201607">Opernlexikon</a></li>
+
       <li><a href="instructions/blasmusik.xhtml" class="r201412">Das Blasmusik Lexikon</a></li>
       <li><a href="instructions/riemann11.xhtml" class="r201412">Hugo Riemanns Musik Lexikon - Elfte
           Auflage (1929)</a></li>
@@ -175,8 +178,7 @@
       element</p>
     <h2><a id="names">Names</a></h2>
     <p> All instances of &lt;persName&gt;, &lt;author&gt;, and &lt;editor&gt; should contain
-      &lt;forename&gt; and &lt;surname&gt; when possible. <span class="r201406"
-        title="Added, 06/2014">(Some names will also require &lt;nameLink&gt;, &lt;addName&gt;,
+      &lt;forename&gt; and &lt;surname&gt; when possible. <span class="r201406" title="Added, 06/2014">(Some names will also require &lt;nameLink&gt;, &lt;addName&gt;,
         &lt;genName&gt;, or &lt;roleName&gt;)</span> Abbreviated names should appear within
       &lt;abbr&gt;. For example, the name "D. Franković" might appear like this:
       &lt;author&gt;&lt;forename&gt;&lt; abbr&gt;D.&lt;/abbr&gt;&lt;forename&gt;
@@ -367,12 +369,9 @@
         numerals separated by a fraction slash ( ⁄).</p>
     </del>
     <p class="r201405" title="Added 05/2014">Time signatures: If recognizable through formatting,
-      time signatures should be marked up as arabic numerals separated by a slash (or <span
-        class="large">&#x1d134;</span> or <span class="large">&#x1d135;</span>) within a
+      time signatures should be marked up as arabic numerals separated by a slash (or <span class="large">&#x1d134;</span> or <span class="large">&#x1d135;</span>) within a
       &lt;timeSig&gt; element. E.g. &lt;timeSig&gt;3/4&lt;/timeSig&gt; </p>
-    <p class="r201410" title="Added, 10/17/2014">For musical symbols, use <span class="music"
-        >&#x266F;</span>, <span class="music">&#x266D;</span>, and <span class="music"
-        >&#x266E;</span> and Unicode range 1D100–1D1FF. </p>
+    <p class="r201410" title="Added, 10/17/2014">For musical symbols, use <span class="music">&#x266F;</span>, <span class="music">&#x266D;</span>, and <span class="music">&#x266E;</span> and Unicode range 1D100–1D1FF. </p>
     <h2><a id="pagebreaks">Page breaks and hyphenation</a></h2>
     <p title="Edited 03/2014">Page breaks and column breaks should be marked with &lt;pb&gt; and
       &lt;cb&gt; elements respectively and @n </p>
@@ -391,9 +390,10 @@
         &lt;ref> element. If the reference points to a whole article, the @target should point to
         the xml:id of that article In this case there should be no "#" in the @target contents, and
         the reference should be to the xml:id rather than the filename (which has a file
-        extension):</p><blockquote>müßte reichen von der &lt;ref target="mgg15403">Frühchristlichen
-        Musik&lt;/ref> bis zur geistlichen Musik</blockquote> If the reference points to a section
-      of another article, the "#" should be used to indicate that section:<blockquote>&lt;ref
+        extension):</p><blockquote>müßte
+        reichen von der &lt;ref target="mgg15403">Frühchristlichen Musik&lt;/ref> bis zur
+        geistlichen Musik</blockquote> If the reference points to a section of another article, the
+      "#" should be used to indicate that section:<blockquote>&lt;ref
         target="mgg15546#d9">Kammermusik im 20. Jahrhundert&lt;/ref></blockquote></div><h2><a
         id="see-refs">See-References</a></h2>
     <p class="r201412" title="Added 12/2014">Many publications have entries that are only
@@ -419,8 +419,7 @@
       <blockquote>&lt;note n="*" place="foot">Ibid, p.7&lt;/note></blockquote>
     </div>
     <h2><a id="encoding">Encoding</a></h2>
-    <p class="r201401" title="Added 01/2014">(This instruction has changed) <a
-        href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CH.html#D4-46-2">Per the TEI
+    <p class="r201401" title="Added 01/2014">(This instruction has changed) <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CH.html#D4-46-2">Per the TEI
         guidelines</a>, use Normalization Form C (NFC) for encoding. This requires the use of
       precomposed characters when possible. </p>
     <div class="r201504" title="Added, 04/2015">
