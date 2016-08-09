@@ -320,9 +320,10 @@ div.rilm-nodename-p{
     font-style: italic;
 }
 .rilm-note{
-    display: inherit;
+    display: inline;
     font-style: normal;
-}
+    font-weight: normal;
+}/*XML CSS has display: inherit and no font-weight. Should it be the same as this?*/
 .rilm-quote > .rilm-note{
     font-style: normal;
 }
@@ -588,11 +589,15 @@ font-feature-settings: "smcp";
 } /* should there be space after the content?
      And should default marker be suppressed
      when there is an @n attribute? --DRS */
+
 .rilm-p.rilm-n:before{
     content: attr(data-rilm-n) ". " !important;
     font-style: normal !important;
     font-weight: bold;
 }
+.rilm-div.rilm-type_heading > .rilm-p {
+    font-weight: 600;
+}/*HTML CSS only*/
 .rilm-q{
     display: inline;
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
@@ -659,6 +664,9 @@ font-feature-settings: "smcp";
     content: attr(data-rilm-n) ". " !important;
     font-weight: bold;
 }
+.rilm-div.rilm-type_heading > .rilm-p > .rilm-rilmPerson {
+    font-weight: normal;
+}/*HTML CSS only*/
 .rilm-soCalled{
     display: inline;
     quotes: '›\200A' '\200A‹';

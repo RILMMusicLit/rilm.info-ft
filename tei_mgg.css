@@ -719,6 +719,9 @@ item[n]:before{
 p[n]:before{
     content: attr(n) ". ";
 }
+text[type = 'topic'] div[type = 'heading'] > p {
+    font-weight: 600;
+}
 q{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
