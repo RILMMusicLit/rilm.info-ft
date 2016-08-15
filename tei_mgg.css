@@ -135,7 +135,7 @@ div[type = "person"] p[n] > rilmPerson:first-of-type > persName > forename{
     font-weight: 600;
     font-style: normal;
 }
-div[type = "family"] div[type = "bio"] > forename:first-of-type{
+text[type = "family"] div[type = "bio"] > forename:first-of-type{
     font-weight: 600;
 }
 div[type = 'heading'] p persName[type = 'alt'] > surname,
