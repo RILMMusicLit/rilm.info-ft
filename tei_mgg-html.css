@@ -32,28 +32,7 @@ div.rilm-nodename-p{
     font-family: FreeSerif;
     src: url('/public/rilm-common/fonts/FreeSerif.woff') format('woff')
 }
-@font-face{
-    font-family: Skolar;
-    font-style: normal;
-    src: url('/public/rilm-common/fonts/SkolarPETEST-Regular.woff') format('woff');
-}
-@font-face{
-    font-family: Skolar;
-    font-style: italic;
-    src: url('/public/rilm-common/fonts/SkolarPETEST-Italic.woff') format('woff');
-}
-@font-face{
-    font-family: Skolar;
-    font-style: normal;
-    font-weight: 700;
-    src: url('/public/rilm-common/fonts/SkolarPETEST-Bold.woff') format('woff');
-}
-@font-face{
-    font-family: Skolar;
-    font-style: italic;
-    font-weight: 700;
-    src: url('/public/rilm-common/fonts/SkolarPETEST-BoldItalic.woff') format('woff');
-}
+/*Above this point for this file only*/
 *{
     line-height: 1.75em;
 }
