@@ -16,6 +16,10 @@ bibl > author{
 }
 bibl > author[subtype = 'secondary']{
     font-variant: normal;
+    text-transform: none; /*added 2016-08-20*/
+    -moz-font-feature-settings: "smcp" off;
+    -webkit-font-feature-settings: "smcp" off;
+    font-feature-settings: "smcp" off;
 }
 bibl{
     display: inline;
