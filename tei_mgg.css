@@ -273,6 +273,7 @@ div[type = "section"] list item,
 div[type = "bio"] list item,
 div[type = "criticism"] list item{
     display: block;
+    margin-bottom: 1.5em;
 }
 div[type = "ography"] list item,
 div[type = "works"] list item{

@@ -307,6 +307,7 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 .rilm-div.rilm-type_bio .rilm-list .rilm-item,
 .rilm-div.rilm-type_criticism .rilm-list .rilm-item{
     display: block;
+    margin-bottom: 1.5em;
 }
 .rilm-div.rilm-type_ography .rilm-list .rilm-item,
 .rilm-div.rilm-type_works .rilm-list .rilm-item{
