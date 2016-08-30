@@ -732,14 +732,20 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     margin-right: 0em;
     margin-bottom: 0em;
 }
+.rilm-title.rilm-type_incipit > .rilm-q{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+.rilm-quote > .rilm-q{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+.rilm-rend_quoted-italic > .rilm-q{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
 .rilm-q.rilm-rend_single{
     quotes: '›\200A' '\200A‹';
 }
-.rilm-quote > .rilm-q{
-    quotes: '›\200A' '\200A‹';
-}
-.rilm-quote > .rilm-q{
-    quotes: '›\200A' '\200A‹';
+.rilm-q.rilm-rend_single > .rilm-q{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 .rilm-q:before{
     content: open-quote;
@@ -765,7 +771,13 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
 .rilm-q > .rilm-quote {
-    quotes: '›\200A' '\200A‹';
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+.rilm-title.rilm-type_incipit > .rilm-quote{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+.rilm-rend_quoted-italic > .rilm-q{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 .rilm-quote:before{
     content: open-quote;
@@ -791,20 +803,38 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 .rilm-title.rilm-type_incipit{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
+q > .rilm-title.rilm-type_incipit{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+quote > .rilm-title.rilm-type_incipit{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+.rilm-rend_quoted-italic > .rilm-title.rilm-type_incipit{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
 .rilm-title.rilm-type_incipit:before{
     content: open-quote;
 }
 .rilm-title.rilm-type_incipit:after{
     content: close-quote;
 }
-*.rilm-rend_quoted-italic{
+.rilm-rend_quoted-italic{
     quotes: "»\200A" "\200A«" "›\200A" "\200A‹";
 }
-*.rilm-rend_quoted-italic:before{
+q > .rilm-rend_quoted-italic{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+quote > .rilm-rend_quoted-italic{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+.rilm-title.rilm-type_incipit > .rilm-rend_quoted-italic{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+.rilm-rend_quoted-italic:before{
     content: open-quote;
     font-style: normal;
 }
-*.rilm-rend_quoted-italic:after{
+.rilm-rend_quoted-italic:after{
     content: close-quote;
     font-style: normal;
 }

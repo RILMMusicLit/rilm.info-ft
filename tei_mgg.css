@@ -457,7 +457,7 @@ docAuthor > persName{
 }
 docAuthor > persName[type='inverted']{
     display: none;
-}
+}/*XML CSS only*/
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     docAuthor > persName { 
     	font-size: 1.15em;  
