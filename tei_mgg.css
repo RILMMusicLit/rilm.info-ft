@@ -730,10 +730,16 @@ text[type = 'topic'] div[type = 'heading'] > p {
 q{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
-q[rend = "single"]{
-    quotes: '›\200A' '\200A‹';
+title[type = 'incipit'] > q{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 quote > q{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+*[rend='quoted-italic'] > q{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+q[rend = "single"]{
     quotes: '›\200A' '\200A‹';
 }
 q:before{
@@ -760,6 +766,12 @@ quote{
 q > quote{
     quotes: '›\200A' '\200A‹';
 }
+title[type = 'incipit'] > quote{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
+*[rend='quoted-italic'] > quote{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+}
 quote:before{
     content: open-quote;
 }
@@ -784,6 +796,15 @@ soCalled:after{
 title[type = 'incipit']{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
+q > title[type = 'incipit']{
+   quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+}
+quote > title[type = 'incipit']{
+   quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+}
+*[rend='quoted-italic'] > title[type = 'incipit']{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+}
 title[type = 'incipit']:before{
     content: open-quote;
 }
@@ -792,6 +813,15 @@ title[type = 'incipit']:after{
 }
 *[rend = "quoted-italic"]{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+}
+q > *[rend = "quoted-italic"]{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+}
+quote > *[rend = "quoted-italic"]{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+}
+title[type='incipit'] > *[rend = "quoted-italic"]{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
 }
 *[rend = "quoted-italic"]:before{
     content: open-quote;
