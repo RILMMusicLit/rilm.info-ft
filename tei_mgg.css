@@ -455,6 +455,9 @@ docAuthor > persName{
     text-transform: uppercase;
     font-size: .92em;
 }
+docAuthor > persName[type='inverted']{
+    display: none;
+}
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     docAuthor > persName { 
     	font-size: 1.15em;  
@@ -739,8 +742,11 @@ quote > q{
 *[rend='quoted-italic'] > q{
     quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
-q[rend = "single"]{
+q[rend = 'single']{
     quotes: '›\200A' '\200A‹';
+}
+q[rend= 'single'] > q{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 q:before{
     content: open-quote;
@@ -764,7 +770,7 @@ quote{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
 q > quote{
-    quotes: '›\200A' '\200A‹';
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 title[type = 'incipit'] > quote{
     quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
