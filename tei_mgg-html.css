@@ -54,6 +54,7 @@ div.rilm-nodename-p{
 .rilm-bibl .rilm-author.rilm-subtype_secondary{
     font-variant: normal;
     text-transform: none;
+    font-family: Alegreya;
     -moz-font-feature-settings: "smcp" off;
     -webkit-font-feature-settings: "smcp" off;
     font-feature-settings: "smcp" off;
