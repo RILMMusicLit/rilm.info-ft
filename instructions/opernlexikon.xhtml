@@ -11,6 +11,7 @@
       <div><h4 id="sol">Opernlexikon</h4></div>
     </a>
     <div class="r201607" title="Added 7/2016">
+    <p style="background-color: #FFFF00">emended 19 Sept 2016</p>
       <ul>
         <li><b>General notes:</b>
           <ul>
@@ -75,8 +76,8 @@
                       etc.) and tag &lt;biblScope unit="acts"></li>
                     <li>Third &lt;cell>: use the text in printed column 3. Tag with
                       &lt;rilmPerson>&lt;author> and &lt;forename> and &lt;surname> where possible.
-                      Multiple names are separated in print by "u." (and) or "m." (with) or commas;
-                      tag each separately. Enclose in a &lt;ref> pointing to the name entry in any
+                      Multiple names may be separated in print by "u.", "m.", "v." or commas;
+                      tag each separately and leave any words <i>not capitalized</i> outside the &lt;rilmPerson> elements. Enclose each in a &lt;ref> pointing to the name entry in any
                       of the other parts (composers, librettists, supplement).</li>
                     <li>Fourth &lt;cell>: use the text in printed column 4. Tag with
                       &lt;rilmPerson>&lt;author role="librettist"> and &lt;forename> and
@@ -88,6 +89,15 @@
                       the date as &lt;date>, and text following the date as &lt;orgName>. Printed
                       dates are in D.M.YYYY format.</li>
                   </ul></li>
+              </ul></li>
+          <li style="background-color: #FFFF00">There is a brief
+              catalogue silently inserted between the ("E") and ("F") sections on pp. 367-368 of
+              volume 1, entitled "Bühnenwerke mit Musik, deren Texte Cervantes Roman....zur
+              Grundlage haben."<ul>
+                <li>Use the entire title as the &lt;title> in the TEI header and as the &lt;div
+                  type="heading"></li>
+                <li>Omit the text "Komponist (….….….…...)" at the top right.</li>
+                <li>Set as a simple &lt;list>.</li>
               </ul></li>
           </ul></li>
         <li><b>Part II: Komponisten</b> will be, for the most part, treated similarly to Part I.<ul>
@@ -153,7 +163,8 @@
                     <li>Third &lt;cell>: use the numeral in printed column 2; tag with &lt;biblScope
                       type="acts"></li>
                     <li>Fourth &lt;cell>: use the text in printed column 3.<ul>
-                        <li>Multiple names are separated by "u." (and) or "m." (with) or commas. </li>
+                        <li>Multiple names may be separated in print by "u.", "m.", "v." or commas;
+                      tag each separately and leave any words <i>not capitalized</i> outside the &lt;rilmPerson> elements.</li>
                         <li>Tag names <i>without parentheses</i> with &lt;rilmPerson>&lt;author
                           role="librettist">, and &lt;forename> and &lt;surname> where possible;
                             <i>tag names inside parentheses as </i>&lt;rilmPerson>&lt;persName>, and
@@ -212,7 +223,9 @@
                           where possible. </li>
                         <li><i>Leave the </i>"m. "<i> outside of the &lt;rilmPerson>
                           element</i>.</li>
-                        <li>Multiple names are separated by "u." or commas. </li>
+                        <li>Multiple names may be separated in print by "u.", "m.", "v." or commas;
+                          tag each separately and leave any words <i>not capitalized</i> outside the
+                          &lt;rilmPerson> elements.</li>
                         <li>Enclose each in a &lt;ref> pointing to the name entry in this or other
                           parts</li>
                       </ul></li>
@@ -220,7 +233,9 @@
                         <li>Omit the parentheses.</li>
                         <li>Tag as &lt;rilmPerson>&lt;persName>, and &lt;forename> and &lt;surname>
                           where possible.</li>
-                        <li>Multiple names are separated by "u." (and) or "m." (with) or commas. </li>
+                        <li>Multiple names may be separated in print by "u.", "m.", "v." or commas;
+                          tag each separately and leave any words <i>not capitalized</i> outside the
+                          &lt;rilmPerson> elements.</li>
                         <li>Enclose each in a &lt;ref> pointing to the name entry in the other parts
                           (composers, supplement).</li>
                         <li><i>Do not tag if the text begins "Musik" or "Diverse".</i></li>
@@ -232,6 +247,21 @@
                   </ul></li>
               </ul>
             </li>
+          <li style="background-color: #FFFF00">Make a separate
+              file for the paragraph after the entry "Zygoma" on vol. 3, page 1039, beginning "Die
+              Anzahl der verzeichneten Textautoren...".  Make the title of the file "[Note]"
+              (including the brackets).</li>
+          <li style="background-color: #FFFF00">Omit the word "Nachtrag" on p. 1039, and make an entry for "Abrány.." just like any
+              of the other names in this part.</li>
+          <li style="background-color: #FFFF00"><i><b>Verzeichnis der Opern</b>, deren Text Shakespeare's Bühnenwerke zur Grundlage
+                haben</i>. This three-page catalogue begins on p. 1041 of vol. 3 of this part. <ul>
+                <li>Tag this as a single TEI file. Start a new &lt;div type="section"> at each work
+                  title ("Hamlet", "King Lear", etc.) and use the work title as &lt;head>. </li>
+                <li>Set each of the lists as a six-column table with the following first row:
+                  "[Titel des Werkes]", "[Gattung des Werkes]", "[Anzahl der Akte]",
+                  "[Textautor(en)]", "[Komponist(en)]", and "[Nähere
+                  Aufführungsdaten]".</li>
+              </ul></li>
           </ul></li>
         <li><b>Part IV: Nachträge</b> has many distinct sections, which are listed in the two
           volumes' tables of contents (Inhalt). <i>Process the title pages and tables of
@@ -242,7 +272,8 @@
                 <li>Use the all-capital text on p. 10 ("ZUR GESCHICHTE DER OPER") as &lt;div
                   type="heading">; use the remainder ("Entwicklungsgang der Oper,...") as the first
                   &lt;p> within &lt;div type="body">.</li>
-                <li>Set the following, through page 75, as six-column tables.<ul>
+                <li>Set the following, through page 75, as
+                  <span  style="background-color: #FFFF00">five-column tables</span>.<ul>
                     <li>Begin a &lt;div type="section"> at each year. Use the year as a &lt;head>
                       preceding the &lt;table></li>
                     <li>Insert column headings "[Gattung des Werkes]", and "[Titel des Werkes]"
@@ -251,7 +282,9 @@
                     <li>For subsequent rows:<ul>
                         <li>Tag the contents of columns 3 and 4 as &lt;ref>(s) pointing to the entry
                           for the name(s) in the other Parts</li>
-                        <li>Multiple names are separated by commas or "u." </li>
+                        <li>Multiple names may be separated in print by "u.", "m.", "v." or commas;
+                          tag each separately and leave any words <i>not capitalized</i> outside the
+                          &lt;rilmPerson> elements.</li>
                       </ul></li>
                   </ul></li>
               </ul></li>
