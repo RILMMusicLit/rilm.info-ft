@@ -147,7 +147,16 @@ div[type = 'heading'] p persName[type = 'alt'] > forename{
     font-style: italic;
     font-weight: 400;
 }
-graphic{
+graphic {
+   height: 1em;
+    width: auto;
+    display: inline;
+    border: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 .25em;
+    color: inherit;
+}
+figure > graphic, notatedMusic > graphic, tableFigure > graphic {
     display: block;
     border: 1px solid #000;
     margin: 5px 5px 5px 0;
@@ -158,11 +167,9 @@ graphic{
     clear: both;
 }
 formula > graphic{
-    display: inline;
-    border: none;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    text-indent: 0;
+    height: 1.2em;
+    vertical-align: text-bottom;
+    color: inherit;
 }
 div[type = "section"] > head {
     display: block;
