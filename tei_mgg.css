@@ -21,6 +21,12 @@ bibl > author[subtype = 'secondary']{
     -webkit-font-feature-settings: "smcp" off;
     font-feature-settings: "smcp" off;
 }
+author[role = 'librettist'],
+author[role = 'lyricist'],
+author[role = 'performer'],
+author[role = 'director']{
+    font-variant: normal;
+}
 bibl{
     display: inline;
 }
@@ -41,7 +47,7 @@ cell{
     padding: 0.5em;
     position: relative;
 }
-cell[role = 'label'] {
+cell[role = 'label']{
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.1em;
@@ -66,27 +72,27 @@ cit[rend = 'block']{
 date{
     display: inline;
 }
-div ~ div {
+div ~ div{
     display: block;
     margin: 2em 0 1em 0;
 }
-p + div[type='authors'],
-list + div[type='authors'],
-table + div[type='authors'] {
+p + div[type = 'authors'],
+list + div[type = 'authors'],
+table + div[type = 'authors']{
     display: block;
     margin-top: 1em;
 }
-div[type='contents'] {
+div[type = 'contents']{
     margin-top: 1em;
 }
-div[type='heading'] + div {
+div[type = 'heading'] + div{
     margin-top: 1em;
 }
-div[type = 'heading'] {
+div[type = 'heading']{
     display: block;
     margin-bottom: 1em;
 }
-text[type= 'family'] div[type= 'heading'] div[type= 'contents'] {
+text[type = 'family'] div[type = 'heading'] div[type = 'contents']{
     margin-left: 2em;
 }
 docAuthor{
@@ -147,8 +153,8 @@ div[type = 'heading'] p persName[type = 'alt'] > forename{
     font-style: italic;
     font-weight: 400;
 }
-graphic {
-   height: 1em;
+graphic{
+    height: 1em;
     width: auto;
     display: inline;
     border: none;
@@ -156,12 +162,14 @@ graphic {
     padding: 0 0 0 .25em;
     color: inherit;
 }
-figure > graphic, notatedMusic > graphic, tableFigure > graphic {
+figure > graphic,
+notatedMusic > graphic,
+tableFigure > graphic{
     display: block;
     height: auto;
     border: 1px solid #000;
-    margin: 5px 5px 5px 0;
-    padding: 10px;
+    margin: .35em .35em .35em 0;
+    padding: .65em;
     box-sizing: border-box;
     background-color: inherit;
     content: none !important;
@@ -172,13 +180,13 @@ formula > graphic{
     vertical-align: text-bottom;
     color: inherit;
 }
-div[type = "section"] > head {
+div[type = "section"] > head{
     display: block;
     font-weight: 600;
     margin-bottom: .5em;
 }
-div[type='works'] div[type = "section"] > head,
-div[type='ography'] div[type = "section"] > head{
+div[type = 'works'] div[type = "section"] > head,
+div[type = 'ography'] div[type = "section"] > head{
     text-indent: 0;
 }
 div[type = "contents"] > head{
@@ -195,7 +203,7 @@ div[type = "contents"] > head{
         font-feature-settings: "c2sc", "smcp";
     }
 }
-text[type= 'family'] > div[type= 'heading'] > div[type= 'contents'] head {
+text[type = 'family'] > div[type = 'heading'] > div[type = 'contents'] head{
     display: inline;
 }
 head[n = A],
@@ -255,7 +263,7 @@ head[n]:before{
 bibl idno{
     display: inline;
 }
-img {
+img{
     display: block;
     border: 1px solid #000;
     margin: 5px 5px 5px 0;
@@ -427,11 +435,11 @@ p[n]:before{
     font-style: normal !important;
     font-weight: 600;
 }
-cell > p {
+cell > p{
     text-indent: 0;
 }
-div[type = 'heading'] > p {
-    font-size:1.25em;
+div[type = 'heading'] > p{
+    font-size: 1.25em;
 }
 item > p{
     text-indent: 0;
@@ -455,7 +463,7 @@ tableFigure head,
 tableFigure p{
     display: inline !important;
 }
-text[type= 'family'] div[type= 'heading'] div[type= 'contents'] p {
+text[type = 'family'] div[type = 'heading'] div[type = 'contents'] p{
     display: inline;
 }
 docAuthor > persName{
@@ -463,9 +471,9 @@ docAuthor > persName{
     text-transform: uppercase;
     font-size: .92em;
 }
-docAuthor > persName[type='inverted']{
+docAuthor > persName[type = 'inverted']{
     display: none;
-}/*XML CSS only*/
+} /*XML CSS only*/
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     docAuthor > persName { 
     	font-size: 1.15em;  
@@ -735,7 +743,7 @@ item[n]:before{
 p[n]:before{
     content: attr(n) ". ";
 }
-text[type = 'topic'] div[type = 'heading'] > p {
+text[type = 'topic'] div[type = 'heading'] > p{
     font-weight: 600;
 }
 q{
@@ -747,13 +755,13 @@ title[type = 'incipit'] > q{
 quote > q{
     quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
-*[rend='quoted-italic'] > q{
+*[rend = 'quoted-italic'] > q{
     quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 q[rend = 'single']{
     quotes: '›\200A' '\200A‹';
 }
-q[rend= 'single'] > q{
+q[rend = 'single'] > q{
     quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 q:before{
@@ -783,7 +791,7 @@ q > quote{
 title[type = 'incipit'] > quote{
     quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
-*[rend='quoted-italic'] > quote{
+*[rend = 'quoted-italic'] > quote{
     quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 quote:before{
@@ -811,13 +819,13 @@ title[type = 'incipit']{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
 q > title[type = 'incipit']{
-   quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 quote > title[type = 'incipit']{
-   quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
-*[rend='quoted-italic'] > title[type = 'incipit']{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+*[rend = 'quoted-italic'] > title[type = 'incipit']{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 title[type = 'incipit']:before{
     content: open-quote;
@@ -829,13 +837,13 @@ title[type = 'incipit']:after{
     quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
 }
 q > *[rend = "quoted-italic"]{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 quote > *[rend = "quoted-italic"]{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
-title[type='incipit'] > *[rend = "quoted-italic"]{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«'; 
+title[type = 'incipit'] > *[rend = "quoted-italic"]{
+    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
 }
 *[rend = "quoted-italic"]:before{
     content: open-quote;

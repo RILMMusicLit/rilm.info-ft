@@ -59,6 +59,12 @@ div.rilm-nodename-p{
     -webkit-font-feature-settings: "smcp" off;
     font-feature-settings: "smcp" off;
 }
+.rilm-author.rilm-role_librettist,
+.rilm-author.rilm-role_lyricist,
+.rilm-author.rilm-role_performer,
+.rilm-author.rilm-role_director{
+    font-variant: normal;
+}
 .rilm-bibl{
     display: inline;
 }
@@ -286,7 +292,7 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 .rilm-img{
     display: block;
     border: 1px solid #000;
-    margin: 5px 5px 5px 0;
+    margin: .35em .35em .35em 0;
     box-sizing: border-box;
     background-color: inherit;
     content: none !important;
