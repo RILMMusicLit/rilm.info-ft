@@ -691,12 +691,11 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 .rilm-death:before{
     content: "†";
 }
-.rilm-figure,
-.rilm-notatedMusic,
-.rilm-tableFigure{
-    font-size: 1.4em;
+.rilm-figure img,
+.rilm-notatedMusic img,
+.rilm-tableFigure img{
     zoom: 65%;
-}
+}/*Editorial System only*/
 .rilm-gap:after{
     content: "[…]";
     font-weight: 600;

@@ -721,12 +721,6 @@ body{
 death:before{
     content: "†";
 }
-figure,
-notatedMusic,
-tableFigure{
-    /*font-size: 1.4em;*/
-    /*zoom: 65%;*/
-}
 gap:after{
     content: "[…]";
     font-weight: 600;
