@@ -533,6 +533,9 @@ ref{
 rilmPerson[n]:before{
     font-weight: 600;
 }
+rilmPerson[type = 'inverted'], rilmPerson[type = 'full'] {
+    display: none;
+}/*for Delivery System only*/
 row{
     display: table-row;
     border-top: 1px solid black;
