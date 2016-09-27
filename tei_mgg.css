@@ -750,22 +750,22 @@ text[type = 'topic'] div[type = 'heading'] > p{
     font-weight: 600;
 }
 q{
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+    quotes: '»' '«' '›' '‹';
 }
 title[type = 'incipit'] > q{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 quote > q{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 *[rend = 'quoted-italic'] > q{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 q[rend = 'single']{
-    quotes: '›\200A' '\200A‹';
+    quotes: '›' '‹';
 }
 q[rend = 'single'] > q{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 q:before{
     content: open-quote;
@@ -774,10 +774,10 @@ q:after{
     content: close-quote;
 }
 q[rend = "left-double"]{
-    quotes: '»\200A' '';
+    quotes: '»' '';
 }
 q[rend = "right-double"]{
-    quotes: '\200A«' '';
+    quotes: '«' '';
 }
 q[rend = "left-double"]:before{
     content: open-quote;
@@ -786,16 +786,16 @@ q[rend = "right-double"]:after{
     content: close-quote;
 }
 quote{
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+    quotes: '»' '«' '›' '‹';
 }
 q > quote{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 title[type = 'incipit'] > quote{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 *[rend = 'quoted-italic'] > quote{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 quote:before{
     content: open-quote;
@@ -810,7 +810,7 @@ rilmPerson[n]:before{
     content: attr(n) ". ";
 }
 soCalled{
-    quotes: "›\200A" "\200A‹";
+    quotes: "›" "‹";
 }
 soCalled:before{
     content: open-quote;
@@ -819,16 +819,16 @@ soCalled:after{
     content: close-quote;
 }
 title[type = 'incipit']{
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+    quotes: '»' '«' '›' '‹';
 }
 q > title[type = 'incipit']{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 quote > title[type = 'incipit']{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 *[rend = 'quoted-italic'] > title[type = 'incipit']{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 title[type = 'incipit']:before{
     content: open-quote;
@@ -837,16 +837,16 @@ title[type = 'incipit']:after{
     content: close-quote;
 }
 *[rend = "quoted-italic"]{
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+    quotes: '»' '«' '›' '‹';
 }
 q > *[rend = "quoted-italic"]{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 quote > *[rend = "quoted-italic"]{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 title[type = 'incipit'] > *[rend = "quoted-italic"]{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 *[rend = "quoted-italic"]:before{
     content: open-quote;

@@ -733,26 +733,26 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 }/*HTML CSS only*/
 .rilm-q{
     display: inline;
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+    quotes: '»' '«' '›' '‹';
     margin-top: 0em;
     margin-left: 0em;
     margin-right: 0em;
     margin-bottom: 0em;
 }
 .rilm-title.rilm-type_incipit > .rilm-q{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-quote > .rilm-q{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-rend_quoted-italic > .rilm-q{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-q.rilm-rend_single{
-    quotes: '›\200A' '\200A‹';
+    quotes: '›' '‹';
 }
 .rilm-q.rilm-rend_single > .rilm-q{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-q:before{
     content: open-quote;
@@ -761,10 +761,10 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     content: close-quote;
 }
 .rilm-q.rilm-rend_left-double{
-    quotes: '»\200A' '';
+    quotes: '»' '';
 }
 .rilm-q.rilm-rend_right-double{
-    quotes: '\200A«' '';
+    quotes: '«' '';
 }
 .rilm-q.rilm-rend_left-double:before{
     content: open-quote;
@@ -775,16 +775,16 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     font-style: normal;
 }
 .rilm-quote{
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+    quotes: '»' '«' '›' '‹';
 }
 .rilm-q > .rilm-quote {
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-title.rilm-type_incipit > .rilm-quote{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-rend_quoted-italic > .rilm-q{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-quote:before{
     content: open-quote;
@@ -799,7 +799,7 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     content: attr(data-rilm-n) ". ";
 }/*HTML CSS only*/
 .rilm-soCalled{
-    quotes: '›\200A' '\200A‹';
+    quotes: '›' '‹';
 }
 .rilm-soCalled:before{
     content: open-quote;
@@ -808,16 +808,16 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     content: close-quote;
 }
 .rilm-title.rilm-type_incipit{
-    quotes: '»\200A' '\200A«' '›\200A' '\200A‹';
+    quotes: '»' '«' '›' '‹';
 }
 q > .rilm-title.rilm-type_incipit{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 quote > .rilm-title.rilm-type_incipit{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-rend_quoted-italic > .rilm-title.rilm-type_incipit{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-title.rilm-type_incipit:before{
     content: open-quote;
@@ -826,16 +826,16 @@ quote > .rilm-title.rilm-type_incipit{
     content: close-quote;
 }
 .rilm-rend_quoted-italic{
-    quotes: "»\200A" "\200A«" "›\200A" "\200A‹";
+    quotes: "»" "«" "›" "‹";
 }
 q > .rilm-rend_quoted-italic{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 quote > .rilm-rend_quoted-italic{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-title.rilm-type_incipit > .rilm-rend_quoted-italic{
-    quotes: '›\200A' '\200A‹' '»\200A' '\200A«';
+    quotes: '›' '‹' '»' '«';
 }
 .rilm-rend_quoted-italic:before{
     content: open-quote;
