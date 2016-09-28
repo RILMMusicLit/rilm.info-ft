@@ -77,8 +77,8 @@ div.rilm-nodename-p{
     /*font-family: Skolar, sans-serif, 'Bravura Text';*/
     font-variant-numeric: oldstyle-nums;
     font-feature-settings: "onum";
-    line-height: 1.4em;
-    letter-spacing: .004em;
+    line-height: 1.75em;
+    letter-spacing: .01em;
 }
 .rilm-cell{
     display: table-cell;

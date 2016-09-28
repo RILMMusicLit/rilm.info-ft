@@ -37,8 +37,10 @@ body{
     font-weight: 400;
     font-variant-numeric: oldstyle-nums;
     font-feature-settings: "onum";
-    line-height: 1.4em;
-    letter-spacing: .004em;
+    line-height: 1.75em;
+    /*was 1.4em*/
+    letter-spacing: .01em;
+    /*was .04em*/
 }
 cell{
     display: table-cell;
