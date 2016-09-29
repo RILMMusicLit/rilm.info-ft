@@ -473,9 +473,6 @@ docAuthor > persName{
     text-transform: uppercase;
     font-size: .92em;
 }
-docAuthor > persName[type = 'inverted']{
-    display: none;
-} /*XML CSS only*/
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     docAuthor > persName { 
     	font-size: 1.15em;  
@@ -485,6 +482,9 @@ docAuthor > persName[type = 'inverted']{
         font-feature-settings: "c2sc", "smcp";
     }
 }
+docAuthor > persName[type = 'inverted'], docAuthor > persName[type = 'full']{
+    display: none;
+} /*Delivery System only*/
 persName[type = 'alt']{
     font-style: italic !important;
     font-weight: 400 !important;
@@ -535,9 +535,6 @@ ref{
 rilmPerson[n]:before{
     font-weight: 600;
 }
-rilmPerson[type = 'inverted'], rilmPerson[type = 'full'] {
-    display: none;
-}/*for Delivery System only*/
 row{
     display: table-row;
     border-top: 1px solid black;
