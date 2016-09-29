@@ -482,9 +482,12 @@ docAuthor > persName{
         font-feature-settings: "c2sc", "smcp";
     }
 }
-docAuthor > persName[type = 'inverted'], docAuthor > persName[type = 'full']{
+docAuthor > persName[type = 'inverted'] {
     display: none;
 } /*Delivery System only*/
+rilmPerson > persName[type = 'inverted'], rilmPerson > persName[type = 'full'] {
+    display: none;
+}
 persName[type = 'alt']{
     font-style: italic !important;
     font-weight: 400 !important;
