@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Encylopédie de la musique (Lavignac)</title>
+  </head>
+  <body>
+    <a>
+      <div><h4 id="lav">Encylopédie de la musique</h4></div>
+    </a>
+    <div class="r201609" title="Added 9/2016">
+      <p>This title will be converted from PDF to XML plus split-PDFs. The PDFs we will supply have a text layer, but the accuracy is poor on many pages. Please create a new text layer in the split PDFs. </p>
+      <p><b>General notes:</b> </p>
+      <ul>
+        <li>This work consists of two parts each with multiple volumes: <ol>
+            <li><i>Histoire de la musique</i>, 5 vols.</li>
+            <li><i>Technique, esthétique, pédagogie</i>, 6 vols.</li>
+          </ol>Include these titles in the &lt;biblScope unit="part"> in the TEI header of each
+          article.</li>
+        <li>The documents <a href="lav-part-I-articles.xhtml">LAV list of articles-part I</a> and <a href="lav-part-I-articles.xhtml">LAV list of articles-part II</a> enumerate
+          the individual articles in each volume. Use the version of the <i>title</i> given in those
+          documents, but use the version of the <i>author name</i> as it appears at the head of the
+          article.</li>
+        <li>Each volume has a distinct publication year, which should be reflected in the TEI
+          headers. *Use the publication year given on the <i>title</i> page of each volume, not the
+          copyright page.*</li>
+        <li>Most of the titles, section heads, and personal names are in all-capital letters or
+          small caps. Please normalize case throughout.</li>
+        <li>Capture footnotes in &lt;note> elements within the body text. In print, footnote numbers
+          restart from "1" on each page. <i>In the TEI, please number the notes continuously through
+            each article</i>. </li>
+        <li>If there is <i>non-Latin script</i> – Arabic, Chinese, Greek, Hebrew, Japanese – that
+          you cannot capture via OCR, replace it with a &lt;gap> element with an @xml:lang attribute
+          giving the language of the omitted text. [Le nom de <i>Mahala</i> מחלה,
+            qui...]<blockquote>&lt;p>Le nom de &lt;hi rend="italic">Mahala&lt;/hi> &lt;gap
+            xml:lang="Hebrew"/>, qui...&lt;/p></blockquote><i>Capture Egyptian hieroglyphs and
+            Ethiopic characters as images AND insert a </i>&lt;gap><i> element.</i></li>
+        <li>Asterisms (⁂) are used as section breaks when there is no number or head. Omit the
+          asterism BUT start a new &lt;div type="section"> at its position.</li>
+        <li>Random pages have a copyright notice at the bottom, "Copyright by Ch. Delagrave...".
+          Ignore these.</li>
+        <li>Replace quotation marks (« and ») with &lt;q> tags; <i>don't leave a space between the
+            tags and quoted text</i>. <br />[...des effets « dramatiques », et...]<blockquote>...des
+            effets &lt;q>dramatiques&lt;/q>, et...</blockquote></li>
+        <li>Close up space between colons and preceding text.</li>
+      </ul>
+      <p><b>Part I: Histoire de la musique</b>: A table of contents for all volumes of this part is given on page 3397ff of volume 5.</p><ul>
+        <li><b>Volume 1: Antiquité—Moyen Age</b><ul>
+            <li>Use the text "Antiquité—Moyen Age" as the content of the &lt;biblScope unit="vol">
+              element in the TEI headers.</li>
+            <li>Create TEI files for the title page, copyright page, "Avertissement" and a
+              "Sommaire". Tag the latter as a &lt;list>. </li>
+            <li>The half-title page may be omitted as all the information there is repeated on the
+              title page.</li>
+            <li>Omit the titles on page 1 above the word "Égypte".</li>
+            <li>Nest &lt;div type="section">s as enumerated in the table of contents and suggested
+              by the headers. For example: in the first "Egypt" article, the levels are:<ul>
+                <li>Centered, all caps</li>
+                <li>Roman numeral – Centered, bold</li>
+                <li>Paragraph first line, bold.</li>
+              </ul></li>
+            <li>Capture each figure in a separate image file even if they are adjacent; for example,
+              page 69 should have ten image files associated with it. Put the text of the caption in
+              a &lt;p> within the &lt;figure> element. </li>
+            <li>Capture tables as xml &lt;table>s wherever possible (when they do not contain
+              musical notation, etc.), such as on pp. 17-20. </li>
+            <li>In "La musique occidental" (p. 556 ff), personal names are typeset in
+                S<small>MALL</small> C<small>APS</small>. Please normalize case and tag as
+              &lt;rilmPerson>&lt;persName>.</li>
+          </ul></li>
+        <li><b>Volume 2</b>: Italie—Allemagne<ul>
+            <li>Omit the half-title page.</li>
+            <li>In the articles "Italie: Seizième et dix-septièms siècles." and " "Italie:
+              Dix-septième siècle. L'Opéra …", tag text <b>in captions</b> in <small>SMALL
+                CAPS</small> as &lt;persName> and in <i>italic</i> as &lt;title>, and years as
+                &lt;date>:<br />[H<small>ORATIO</small> V<small>ECCHI</small>, 1590. — <i>So ben mi
+                ch' à bon tempo. Aria a quattro.</i>] (p.
+                663)<blockquote>&lt;persName>&lt;forename>Horatio&lt;/forename>
+                &lt;surname>Vecchi&lt;/surname>&lt;/persName>, &lt;date>1590&lt;/date>. —
+                &lt;title>So ben mi ch' à bon tempo. Aria a quattro.&lt;/title></blockquote></li>
+            <li>In the article "Les Rossiniens d'Italie" (p. 861 ff), tag bold text at the
+              beginnings of paragraphs (not within) as &lt;rilmPerson>&lt;persName>, and start a new
+              &lt;div type="section">. Names are given in "Surname (Forenames)"
+                format.<br />[<b>Coccia (Carlo)</b> naquit à Naples...]<blockquote>&lt;div
+                type="section"> &lt;p>&lt;persName>&lt;surname>Coccia&lt;/surname>
+                (&lt;forename>Carlo&lt;/forename>)&lt;persName>...</blockquote></li>
+            <li>In the article "Les contemporaines" (p. 901 ff), tag bold text at the beginnings of
+              paragraphs as &lt;persName>, and start a new &lt;rilmPerson>&lt;div type="section">..
+              They are given in "SURNAME (Forenames)" format. <i>Please normalize
+                capitalization.</i><br />[<b>BOITO (Arrigo)</b> naquit...]<blockquote>&lt;div
+                type="section"> &lt;p>&lt;persName>&lt;surname>Boito&lt;/surname>
+                (&lt;forename>Arrigo&lt;/forename>)&lt;persName>...</blockquote></li>
+            <li>In the article "Allemagne: Le Romantisme (1815 à 1837)" (p. 1060 ff), tag body text
+              in bold as &lt;rilmPerson>&lt;persName>. Names are given in forename(s)-surname order.
+                <br />[<b>August-Alexander
+                Klengel</b>]<blockquote>&lt;persName>&lt;forename>August&lt;/forename>-&lt;forename>Alexander&lt;/forename>
+                &lt;surname>Klengel&lt;/surname>&lt;/persName></blockquote></li>
+          </ul></li>
+        <li><b>Volume 3</b>: France—Belgique—Angleterre<ul>
+            <li>Omit the half-title page.</li>
+            <li>In the article "France: Seizième siècle. A propos de la musique française à l'époque
+              de la Renaissance" (p. 1261 ff), tag text <b>in captions</b> in Small Caps as
+              &lt;persName> and in italic as &lt;title>, and years as &lt;date>.</li>
+            <li>Note the captions and beginning of new examples on pp. 1328, 1334, 1337, and
+              1339.</li>
+            <li>In the article "École romantique française de 1815 à 1837" (p. 1661 ff), tag bold
+              text at the beginnings of paragraphs (not within) as &lt;rilmPerson>&lt;persName>, and
+              start a new &lt;div type="section">. Names with parentheses are given in "Surname
+              (Forenames)" format; without parentheses in forename-surname order.<br />[<b>Boëly
+                (Alexandre-Pierre-François)</b>...<br /><b>Louis Niedermeyer</b>...] ( both on p.
+              1683)</li>
+            <li>In the article "France: Période contemporaine" (pp. 1697-1812), tag each heading in
+              bold all-capitals as a &lt;rilmPerson>&lt;persName>. Please normalize capitalization.
+              (Where only one name is given, assume it is a surname).<ul>
+                <li>In the subsection "Compositeurs de music instrumentale..." (p. 1812), tag bold
+                  text at the beginnings of paragraphs as &lt;rilmPerson>&lt;persName>. Names are in
+                  "Forename SURNAME" format; please normalize capitalization. Do not begin a new
+                  &lt;div>.</li>
+              </ul></li>
+          </ul></li>
+        <li><b>Volume 4</b>: Espagne—Portugal<ul>
+            <li>Body text in small caps please tag as &lt;persName>. Don't parse forenames and
+              surnames, as no consistent rule is followed throughout.</li>
+            <li>From page 2470 forward, tag text in <b>bold</b> as &lt;persName>.</li>
+          </ul></li>
+        <li><b>Volume 5</b>: Russie—...—Amerique<ul>
+            <li>Replace any non-Latin script that cannot be captured with a &lt;gap> and @xml:lang.
+              There are Greek, Arabic, Chinese, and Ethiopic in this volume.</li>
+            <li>From page 2501 through 2560, tag centered headings in all caps as
+              &lt;head>&lt;persName>.</li>
+            <li>On page 2565, tag bold text as &lt;persName>. Don't parse forenames and
+              surnames.</li>
+            <li>From page 2574, col. 2, through page 2584, tag italic text <i>ONLY at the beginning
+                of a paragraph</i> as &lt;persName>. Tag other italics as &lt;hi> as usual.</li>
+            <li>From page 2586 through page 2655, tag body text in <b>bold</b> as
+              &lt;persName>.</li>
+            <li>From 2656 through 2675, tag body text in small caps as &lt;persName>.</li>
+            <li>From 3313 through 3324, tag body text in small caps as &lt;persName>.</li>
+          </ul></li>
+      </ul>
+      <p><b>Part II: Technique – Esthétique – Pédagogie</b></p><ul>
+        <li>Omit the half title page of each volume.</li>
+        <li><b>Volume 1</b>: Tendances de la musique – Technique générale<ul>
+            <li>Omit the text preceding "Les tendances" on page 1</li>
+            <li>Capture the italic text at the bottom of page 1 as a &lt;note> immediately following
+              the title. <i>Omit the copyright notice.</i></li>
+            <li>From the page 1 through page 182: <ul>
+                <li>tag names in the heads and body text in <small>SMALL CAPS</small> with
+                  &lt;persName>. Often only surnames are given in the body text;</li>
+                <li>tag text in captions in <small>SMALL CAPS</small> as &lt;persName> and in
+                    <i>italic</i> as &lt;title></li>
+              </ul></li>
+            <li>On page 185, no. 11, the text after the dash should not be bold.</li>
+            <li>On page 202, no. 3, the text after the dash (through "mesure") should not be
+              bold.</li>
+          </ul></li>
+        <li><b>Volume 2</b>: Physiology vocale et auditive – Technique vocale et instrumentale<ul>
+            <li>Tag names in the body text in small caps with &lt;persName> throughout this
+              volume.</li>
+          </ul></li>
+        <li><b>Volume 3</b>: Technique instrumentale<ul>
+            <li>Tag names in the body text in small caps with &lt;persName> throughout this
+              volume.</li>
+            <li>Tag the list on page 2086 as a &lt;div type="ography">.</li>
+            <li>Tag the lists on pages 2095, 2103-04, 2111, etc., up to p. 2116, as &lt;list>; tag
+              the italic text as &lt;title type="work">.</li>
+            <li>Create a separate TEI file for the "Errata et addenda" at the bottom of page
+              2127.</li>
+          </ul></li>
+        <li><b>Volume 4</b>: Orchestration — Musique liturgique des différents cultes<ul>
+            <li>Tag text in <b>captions</b> in <small>SMALL CAPS</small> as &lt;persName> and in
+                <i>italic</i> as &lt;title>.</li>
+            <li>On pages 2144-2146 and 2149, tag the two-column passages as &lt;list>, not
+                &lt;table>.<blockquote>&lt;list>&lt;item>hautbois,&lt;/item>&lt;item>bassons,&lt;/item>&lt;item>clarinettes,&lt;/item>&lt;item>cymbales,&lt;/item>&lt;item>cors,&lt;/item>&lt;item>grosse
+                caisse.&lt;/item>&lt;/list></blockquote></li>
+            <li>From page 2220 through 2235, tag the contents of headings in bold, centered, as
+              &lt;rilmPerson>&lt;persName>; capture birth and death dates where given.</li>
+          </ul></li>
+        <li><b>Volume 6</b>: Pédagogie – Écoles – Concerts – Théatres<ul>
+            <li>Tag lists between page 3496 and page as &lt;div type="works"> <i>unless</i> headed
+              by "Bibliographie", in which case &lt;div type="ography">. In both cases, tag each
+              item as &lt;bibl>, text in italic as &lt;title>.</li>
+          </ul></li>
+      </ul>
+      <p>Please also refer to the example files.</p>
+    </div>
+  </body>
+</html>
