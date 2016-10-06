@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Dizionario degli editori musicali italiani 1750-1930</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="DEM">Dizionario degli editori musicali italiani 1750-1930</h4>
+      </div>
+    </a>
+    <div class="r201610" title="Added, 10/2016">
+      <p>This single-volume work in Italian contains brief articles on persons and publishing institutions in Italy.</p>
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print</li>
+            <li>Articles will have &lt;div type="heading">, &lt;div type="body">, and &lt;div
+              type="ography>. </li>
+            <li>Guillemet- style quotation marks ( « » ) are used.</li>
+            <li>Italic type is used to indicate <i>titles</i> in body text and bibliographies, so
+              tag with &lt;title> rather than &lt;hi>.</li>
+            <li>See-reference and cross-references are both indicated with right-pointing
+              arrows.</li>
+          </ul></li>
+        <li><b>Front matter</b><ul>
+            <li>Title page</li>
+            <li>Editors page: parse and tag &lt;persName>, &lt;forename>, &lt;surname></li>
+            <li>"Indice" (contents): tag as a two-column table.</li>
+            <li>"Premessa" (preface): Tag the line "b.m.a." as &lt;docAuthor>.</li>
+            <li>"L’editoria musicale in Italia tra gli ultimi decenni del Settecento e i primi del
+              Novecento": <ul>
+                <li>Use &lt;div type="heading"> for the title, &lt;div type="authors"> for the name. </li>
+                <li>Within the &lt;div type="body">, start a nested &lt;div type="section"> at each
+                  of the six italic headings.</li>
+              </ul></li>
+            <li>"Abbreviazioni e sigle": Tag as &lt;list> elements. Begin a new one at each italic
+              heading. </li>
+            <li>OMIT the quarter title page (p. 37).</li>
+          </ul></li>
+        <li><b>Entries on persons</b> begin with a heading in <b>bold</b> containing a comma.<ul>
+            <li>Use the bold text as the TEI &lt;title> and as the content of &lt;div
+              type="heading">. Within the &lt;div type="heading">, tag &lt;rilmPerson>&lt;persName>,
+              etc. OMIT the final period</li>
+            <li>Begin a new &lt;div type="section"> in the body text whenever there is a double-line
+              space. <i>The first appears at the bottom of page 41.</i></li>
+            <li>Begin &lt;div type="ography"> at the text "Fonti e bibl.:" Tag that as &lt;head>,
+              tag the remainder as a &lt;list> with &lt;item>&lt;bibl> children.<ul>
+                <li>Items in the list are delimited in print by semicolons (;)</li>
+                <li>Tag italic text within each &lt;bibl> as &lt;title></li>
+                <li>Tag <i>unquoted</i> roman text <i>before</i> the title as &lt;author></li>
+                <li>Tag <i>quoted</i> roman text <i>before</i> the title as &lt;title
+                  type="article"></li>
+                <li>Tag <i>quoted</i> roman text <i>after</i> the title as &lt;title
+                  type="periodical"></li>
+                <li>Most four-digit numbers less than 2001 will be &lt;date>.</li>
+                <li>Except for articles in periodicals, the roman text immediate before the date
+                  will be &lt;pubPlace> comma &lt;publisher>.</li>
+              </ul>[<i>Lunario genouese compilato dal Signor Regina e C. per l'anno…</i>, Genova,
+              Pagano, 1877-1898; E. Trevisani, <i>Rivista industriale e commerciale di Genova e
+                provincia</i>, Genova, A.E. Bacigalupi, 1896, pp. 157-160; <i>Annuario genovese
+                (Lunaria signor Regina). Guida amministrativacommerciale e industriale di Genova}
+                provincia e Liguria per l'anno ...</i>, Genova, Pagano, 1899-1917; F.P. Oliveri,
+              «Adolfo Armanino», in <i>Dizionario biografico dei liguri. Dalle origini al 1990</i>,
+              a c. di W. Piastra, Genova, Consulta Ligure, 1992-, I ,pp. 237-238; L. Aversano, <i>II
+                commercia di edizioni e manoscritti musicali tra Italia e Germania nel primo
+                Ottocento (1800-1830)</i>, «Fonti musicali italiane», IV, 1999,
+                113-160]<blockquote>&lt;list>&lt;item>&lt;bibl>&lt;title>Lunario genouese compilato
+                dal Signor Regina e C. per l'anno…&lt;/title>, &lt;pubPlace>Genova&lt;/pubPlace>,
+                &lt;publisher>Pagano&lt;/publisher>, &lt;date>1877-1898&lt;/date>&lt;/bibl>;
+                &lt;/item>&lt;item>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>E.&lt;/abbr>&lt;/forename>
+                &lt;surname>Trevisani&lt;/surname>&lt;/author>, &lt;title>Rivista industriale e
+                commerciale di Genova e provincia&lt;/title>, &lt;pubPlace>Genova&lt;/pubPlace>,
+                &lt;publisher>A.E. Bacigalupi&lt;/publisher>, &lt;date>1896&lt;/date>, pp.
+                &lt;biblScope unit="pp">157-160&lt;/biblScope>&lt;/bibl>;
+                &lt;/item>&lt;item>&lt;bibl>&lt;title>Annuario genovese (Lunaria signor Regina).
+                Guida amministrativa commerciale e industriale di Genova} provincia e Liguria per
+                l'anno ...&lt;/title>, &lt;pubPlace>Genova&lt;/pubPlace>,
+                &lt;publisher>Pagano&lt;/publisher>, &lt;date>1899-1917&lt;/date>&lt;/bibl>;
+                &lt;/item>&lt;item>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>F.&lt;/abbr>&lt;/forename>&lt;forename>&lt;abbr>P.&lt;/abbr>&lt;/forename>
+                &lt;surname>Oliveri&lt;/surname>&lt;/author>, &lt;title type="article">Adolfo
+                Armanino&lt;/title>, in &lt;title>Dizionario biografico dei liguri. Dalle origini al
+                1990&lt;/title>, a c. di &lt;editor>&lt;forename>&lt;abbr>W.&lt;/abbr>&lt;/forename>
+                &lt;surname>Piastra&lt;/surname>&lt;/editor>, &lt;pubPlace>Genova&lt;/pubPlace>,
+                &lt;publisher>Consulta Ligure&lt;/publisher>, &lt;date>1992-&lt;/date>,
+                &lt;biblScope unit="vol">I&lt;/biblScope> ,pp. &lt;biblScope
+                unit="pp">237-238&lt;/biblScope>&lt;/bibl>;
+                &lt;/item>&lt;item>&lt;bibl>&lt;author>&lt;forename>&lt;abbr>L.&lt;/abbr>&lt;/forename>
+                &lt;surname>Aversano&lt;/surname>&lt;/author>, &lt;title type="article">II commercia
+                di edizioni e manoscritti musicali tra Italia e Germania nel primo Ottocento
+                (1800-1830)&lt;/title>, &lt;title type="periodical">Fonti musicali
+                italiane&lt;/title>, &lt;biblScope unit="vol">IV&lt;/biblScope>,
+                &lt;date>1999&lt;/date>, &lt;biblScope
+                unit="pp">113-160&lt;/biblScope>&lt;/bibl>&lt;/item>&lt;/list></blockquote></li>
+          </ul></li>
+        <li><b>Institution entries</b>
+          <i>will not have a comma in the bold heading</i>. They are otherwise identically formatted
+          to person entries. Make &lt;text type="corporate">.<ul>
+            <li>Use the bold text as the TEI &lt;title> and as the content of &lt;div
+              type="heading">. Within the &lt;div type="heading">, tag &lt;orgName>. OMIT the final
+              period</li>
+          </ul></li>
+        <li>A few entries have <i><b>both</b></i> a <b>personal</b> name and a <b>corporate</b> name
+          in the heading. Treat as corporate, but do tag the name and its consituent parts. See
+          dem-example-1.xml.</li>
+        <li><b>See-references</b> and <b>cross-references</b> are both indicated with right-pointing arrows.<ul>
+            <li><b>See references</b> are in the form [<b>Referring Term ➙ Target Term</b>] Treat
+              these per <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs"
+                >http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a>.</li>
+            <li><b>Cross references</b> in body text are indicated by a right-pointing arrow
+                <i>before</i> the target term. </li>
+          </ul></li>
+        <li><b>Back matter</b>:<ul>
+            <li><i>Fonti e bibliografia</i><ol>
+                <li>tag the prose text as &lt;div type="body"> with two sections--one from the
+                  beginning until the double-line-space on p. 373; the second until the bold
+                  head.</li>
+                <li>begin a &lt;div type="ography"> after the prose, and create a &lt;div
+                  type="section"> beginning with each bold head.</li>
+              </ol></li>
+            <li>Facsimile reproductions: Group the plates between pages 384 and 385 into one TEI
+              file.</li>
+            <li><i>Case editrici musicali italiane 1750-1930</i>: Tag as a &lt;list>. Tag the text
+              before the colon in each item as &lt;placeName>.</li>
+            <li><i>Indice dei nomi</i>: Process according to <a
+                href="http://rilm.info/ft/tei_rilm_instructions.html#indexes"
+                >http://rilm.info/ft/tei_rilm_instructions.html#indexes</a>.</li>
+            <li>Copyright page: Include the address for Società Italiana di Musicologia (two pages
+              later) in the same TEI file.</li>
+          </ul></li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>
