@@ -764,7 +764,7 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     quotes: '»' '';
 }
 .rilm-q.rilm-rend_right-double{
-    quotes: '«' '';
+    quotes: '' '«';
 }
 .rilm-q.rilm-rend_left-double:before{
     content: open-quote;

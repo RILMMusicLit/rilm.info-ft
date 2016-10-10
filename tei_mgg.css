@@ -775,7 +775,7 @@ q[rend = "left-double"]{
     quotes: '»' '';
 }
 q[rend = "right-double"]{
-    quotes: '«' '';
+    quotes: '' '«';
 }
 q[rend = "left-double"]:before{
     content: open-quote;
