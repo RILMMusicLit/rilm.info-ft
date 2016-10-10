@@ -411,7 +411,6 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     -moz-font-feature-settings: normal;
     -webkit-font-feature-settings: normal;
 }
-/*stopped here*/
 .rilm-div.rilm-type_contents > .rilm-head > .rilm-note{
     font-size: inherit;
 }
@@ -537,8 +536,10 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     font-weight: 600;
 }
 .rilm-row{
-    display: table-row;
-    border-top: 1px solid black;
+    display: table-row; 
+}
+.rilm-div.rilm-type_works .rilm-row, .rilm-div.rilm-type_ography .rilm-row {
+	border-top: 1px solid black;
 }
 .rilm-row.rilm-role_label{
     /*  text-transform: uppercase;*/

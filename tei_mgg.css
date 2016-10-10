@@ -538,8 +538,10 @@ ref{
 rilmPerson[n]:before{
     font-weight: 600;
 }
-row{
+row {
     display: table-row;
+}
+div[type = 'works'] row, div[type= 'ography'] row {
     border-top: 1px solid black;
 }
 row[role = 'label']{
