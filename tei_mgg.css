@@ -365,6 +365,13 @@ mentioned{
 musNote{
     font-style: italic;
 }
+div[type = 'heading'] persName > surname ~ nameLink,
+div[type = 'heading'] persName[type = 'preferred'] > surname ~ nameLink {
+   font-weight: 600; 
+}
+div[type = 'heading'] persName[type = 'alt'] > surname ~ nameLink {
+    font-weight: 400;
+}
 note{
     display: inherit;
     font-style: normal;

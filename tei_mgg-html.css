@@ -388,6 +388,13 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 .rilm-musNote{
     font-style: italic;
 }
+.rilm-div.rilm-type_heading .rilm-persName > .rilm-surname ~ .rilm-nameLink,
+.rilm-div.rilm-type_heading .rilm-persName.rilm-type_preferred > .rilm-surname ~ .rilm-nameLink {
+   font-weight: 600; 
+}
+.rilm-div.rilm-type_heading .rilm-persName.rilm-type_alt > .rilm-surname ~ .rilm-nameLink {
+    font-weight: 400;
+}
 .rilm-note{
     display: inline;
     font-style: normal;
