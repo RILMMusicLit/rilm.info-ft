@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Československý hudební slovník osob a institucí</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="CSH">Československý hudební slovník osob a institucí</h4>
+      </div>
+    </a>
+    <div class="r201610" title="Added, 10/2016">
+      <p>This is a two-volume encyclopedia containing brief articles on persons and institutions in the former Czechoslovakia.</p>
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from scanned print</li>
+            <li>High-low German style quotation marks („ ‟) are used.</li>
+            <li>In body text and worklists (but NOT in see-references), italic type is used to
+              indicate <i>titles</i>, so tag with &lt;title> rather than &lt;hi>.</li>
+            <li>Note that the two volumes have different publication dates, namely 1963 and 1965.
+              Note this for the TEI headers.</li>
+            <li>The two volumes also have slightly different front matter, so please encode and
+              process both.</li>
+          </ul></li>
+        <li><b>Front matter</b><ul>
+            <li>Half title page – OMIT</li>
+            <li>Dedication page</li>
+            <li>Title page</li>
+            <li>Editors / copyright page: Tag the three editors ("Redaktořy") as names</li>
+            <li>"Předmluva" (preface): Tag the last line "Brno...1962" as &lt;byline>; author names
+              as &lt;docAuthor>.</li>
+            <li>"Poznámka redakce Státního hudebního vydavatelství"</li>
+            <li>"Slovníky a literatura" (bibliography), set as in a &lt;div type="ography">, and
+              create a list with a &lt;bibl> in each &lt;item>. Tag following this
+              pattern:<br />[D l a b a č  Bohumír: <i>Allgemeines historisches Künstlerlexikon für
+                Böhmen und zum Theil auch Mähren und Schlesien</i> (Praha 1815, G. Haase, 3 svazky].
+                <blockquote>&lt;item>&lt;bibl>&lt;author>&lt;surname>Dlabač&lt;/surname>
+                &lt;forename>Bohumír&lt;/forename>&lt;/author>: &lt;title>Allgemeines historisches
+                Künstlerlexikon für Böhmen und zum Theil auch Mähren und Schlesien&lt;/title>
+                (&lt;pubPlace>Praha&lt;/pubPlace> &lt;date>1815&lt;/date>, &lt;publisher>G.
+                Haase&lt;/publisher>, &lt;biblScope unit="vol" n="3">3
+                svazky&lt;/biblScope>.&lt;/bibl>&lt;/item> </blockquote>(Close up the letterspacing
+              of the author surname.)</li>
+            <li>"Šifry přispěvatelů" (contributors): After the initial paragraph, tag the list as a
+              two-column &lt;table>. Tag the content of the second &lt;cell> as &lt;persName> in
+              forename(s)-surname order.</li>
+            <li>"Zkratky" (abbreviations): tag as a two-column table.</li>
+          </ul></li>
+        <li><b>Entries on persons</b> can be distinguished from non-person articles by letterspaced
+          text immediately following the bold text at the beginning of the article.<ul>
+            <li>The surname is given first, in bold.</li>
+            <li>There is no comma between the surname and forename(s).</li>
+            <li>The (first) forename is set in letterspaced text. <i>Subsequent forenames</i> are
+              set in normal, Roman text, followed by a comma.<ul>
+                <li><i>Use the contents of the &lt;persName> as the &lt;title> in the TEI
+                    header.</i></li>
+                <li>Where there is more than one person by the same name, the publication inserts a
+                  superscript number and right parenthesis mark after the name. <i>Add a left paren,
+                    drop the number to the baseline, move it before the comma, and add a space after
+                    the name.</i> [ <b>Červenka</b> V á c l a v,<sup>1</sup>) český sborm., …
+                    ]<blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Červenka&lt;/surname>
+                    &lt;forename>Václav&lt;/forename>&lt;/persName> (1),
+                    &lt;nationality>&lt;abbr>čes.&lt;/abbr>&lt;/nationality> &lt;occupation>vojenský
+                    kap.&lt;/occupation>,</blockquote></li>
+              </ul></li>
+            <li>A few entries include an academic degree following the forename(s): "PhDr.", "JUDr."
+              Tag as &lt;roleName type="honorific"> if distinguishable.</li>
+            <li>If the text immediately following the comma is one of the following, tag as
+              &lt;nationality> "český", "česká", "čes.", "slovenský", "slovenská", "slov.". If is it
+              "čech", "moravský", "moravská", "mor.", do not tag. </li>
+            <li>Tag the text after the name or nationality (if present), up to the next comma as
+              &lt;occupation>. <i>Exception:</i> if the name or nationality is followed by "čech",
+              "moravský", "moravská", "mor.", begin the &lt;occupation> element after it.</li>
+            <li>"n." is followed by birthdate - comma - birthplace - comma or period</li>
+            <li>"z." is followed by deathdate - comma - deathplace - period<ul>
+                <li>Dates are in DD. MM(roman). YYYY format.</li>
+              </ul></li>
+          </ul>
+          <b><i>Wrap all of the above in a </i>&lt;rilmPerson><i> element.</i></b>
+          <br />
+          <br />[<b>Czihalová-Funková</b> I v e t a, slovenská operná speváčka (mezzosoprán), n. 14.
+          IX. 1939, Žilina. … ]<br />[<b>Červenka</b> V á c l a v  František, čes. vojenský kap., n.
+          28. IX. 1864, Braník (u Prahy), z. 22. VIII. 1921, Praha. … ]<br />[<b>Groh</b> J o s e f,
+          varhaník, n. 15. XII. 1815, Rumburk, z. 27. V. 1881, Teplice. … ]
+            <blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Czihalová-Funková&lt;/surname>
+            &lt;forename>Iveta&lt;/forename>&lt;/persName>,
+            &lt;nationality>slovenská&lt;/nationality> &lt;occupation>operná speváčka
+            (mezzosoprán)&lt;/occupation>, &lt;birth>n. &lt;date when="1939-10-14"
+            when-custom="1939">14. IX. 1939&lt;/date>,
+            &lt;placeName>Žilina&lt;/placeName>&lt;/birth>&lt;/rilmPerson>. …
+            &lt;/p></blockquote><blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Červenka&lt;/surname>
+            &lt;forename>Václav&lt;/forename>  &lt;forename>František&lt;/forename>&lt;/persName>,
+            &lt;nationality>&lt;abbr>čes.&lt;/abbr>&lt;/nationality> &lt;occupation>vojenský
+            kap.&lt;/occupation>, &lt;birth>n. &lt;date when="1864-09-28" when-custom="1864">28. IX.
+            1864&lt;/date>, &lt;placeName>Braník (u Prahy)&lt;/placeName>&lt;/birth>, &lt;death>z.
+            &lt;date when="1921-08-22" when-custom="1921">22. VIII. 1921&lt;/date>,
+            &lt;placeName>Praha&lt;/placeName>&lt;/death>&lt;/rilmPerson>. …
+            &lt;/p></blockquote><blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Groh&lt;/surname>
+            &lt;forename>Josef&lt;/forename>&lt;/persName>, &lt;occupation>varhaník&lt;/occupation>,
+            &lt;birth>n. &lt;date when="1815-12-15" when-custom="1815">15. XII. 1815&lt;/date>,
+            &lt;placeName>Rumburk&lt;/placeName>&lt;/birth>, &lt;death>&lt;date when="1881-05-27"
+            when-custom="1881">z. 27. V. 1881&lt;/date>,
+            &lt;placeName>Teplice&lt;/placeName>&lt;/death>.&lt;/rilmPerson>&lt;/p> </blockquote><ul>
+            <li>In the print, there is no typographic break between the body text and any worklist
+              or bibliography. Nevertheless, start a new &lt;div type="works"> if you can identify
+              the beginning of a worklist. There are two ways to do so:<ul>
+                <li>Look for keywords "Skladby" or "Skladeb" or "Dila" and back up to the preceding
+                  period. </li>
+                <li>Look for letterspaced text, which is used for instrumentation.</li>
+              </ul><i>It is okay not to tag a worklist if there is any uncertainty about where it
+                starts.</i></li>
+            <li>Start a &lt;div type="ography"> if you can identify from keywords "Práce",
+              "Literarni", or "Knihy". These keywords themselves are often letterspaced. </li>
+          </ul></li>
+        <li><b>Personal name see references</b> are in the form [<b>Surname</b> F o r e n a m e, v.
+            <i>Targetsurname</i> Targetfore.] Treat these per <a
+            href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs"
+            >http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a>.</li>
+        <li><b>Institution entries</b> do NOT have letterspaced text following the bold. </li>
+        <li><b>Article Authors</b> are sometimes indicated at the end of the article by a dash and
+          initials in italic, followed by a right bracket.<ul>
+            <li>Add a &lt;div type="authors"> and a &lt;docAuthor> element and <i>repeat</i> the
+              initials in it. (see the examples).</li>
+          </ul></li>
+        <li><b>Each entry is followed by a symbol</b> indicating the <b>editor</b> of the article: <ul>
+            <li>☉ = Gracian Černušák</li>
+            <li>✻ = Bohumír Štědroň</li>
+            <li>∆ = Zdenko Nováček</li>
+          </ul>Include the correct name in the &lt;div type="authors"> as &lt;docAuthor>. Precede
+          the &lt;persName> element by "Red. " (see the example files).</li>
+        <li>There are <b>Plates of photos</b> between pp. 552 and 553 in vol. 1, and between pp. 672
+          and 673 in vol. 2.  <i>INSERT these into the articles</i> to which they relate between the
+          &lt;div type="body"> and the following &lt;div> (whether works, ography, or authors). The
+          relationship should be clear according to the captions--<i>where it is not, please query
+            RILM contacts.</i></li>
+        <li><b>Back matter</b> consists of one page in each volume containing editorial and library
+          cataloguing information.</li>
+      </ol>
+      <p>Please inquire if there are any questions.</p>
+    </div>
+  </body>
+</html>
