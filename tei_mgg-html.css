@@ -186,7 +186,7 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     font-weight: 600;
     font-style: normal;
 }
-.rilm-text.rilm-type_family .rilm-div.rilm-type_bio .rilm-forename:first-of-type{
+.rilm-text.rilm-type_family .rilm-div.rilm-type_bio .rilm-forename:first-of-type, .rilm-text.rilm-type_family .rilm-div.rilm-type_narrative .rilm-forename:first-of-type{
     font-weight: 600;
 }
 .rilm-div.rilm-type_heading .rilm-p .rilm-persName.rilm-type_alt .rilm-surname,
@@ -312,6 +312,7 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 }
 .rilm-div.rilm-type_section .rilm-list .rilm-item,
 .rilm-div.rilm-type_bio .rilm-list .rilm-item,
+.rilm-div.rilm-type_narrative .rilm-list .rilm-item,
 .rilm-div.rilm-type_criticism .rilm-list .rilm-item{
     display: block;
     margin-bottom: 1.5em;

@@ -1,5 +1,4 @@
-﻿/*@import url(https://fonts.typotheque.com/WF-027756-009318.css);*/
-abbr{
+﻿abbr{
     display: inline;
 }
 bibl > author{
@@ -147,7 +146,7 @@ div[type = "person"] p[n] > rilmPerson:first-of-type > persName > forename{
     font-weight: 600;
     font-style: normal;
 }
-text[type = "family"] div[type = "bio"] > forename:first-of-type{
+text[type = "family"] div[type = "bio"] > forename:first-of-type, text[type = "family"] div[type = "narrative"] > forename:first-of-type{
     font-weight: 600;
 }
 div[type = 'heading'] p persName[type = 'alt'] > surname,
@@ -289,6 +288,7 @@ div[type = "contents"] list item{
 }
 div[type = "section"] list item,
 div[type = "bio"] list item,
+div[type = "narrative"] list item,
 div[type = "criticism"] list item{
     display: block;
     margin-bottom: 1.5em;
@@ -723,8 +723,7 @@ birth:before{
     content: "*";
 }
 body{
-    /*font-family: 'Fedra Serif A', 'Bravura Text', Georgia, serif;*/
-    font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;
+    font-family: Skolar, FreeSerif, 'Bravura Text', serif;
     margin: 10px;
     display: block;
     font-size: 1em;
