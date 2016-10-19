@@ -305,6 +305,13 @@ l{
     display: block;
     white-space: nowrap;
 }
+label {
+    display: inline;
+    font-style: normal;
+}
+p > label, rilmPerson > label {
+    font-weight: 600;
+}
 lb{
     display: block;
 }
