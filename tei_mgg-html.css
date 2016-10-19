@@ -286,6 +286,14 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
         font-feature-settings: "c2sc", "smcp";
     }
 }*/
+.rilm-head.rilm-n:before{
+    content: attr(data-rilm-n) ". ";
+}
+.rilm-figure > .rilm-head:after,
+.rilm-notatedMusic > .rilm-head:after,
+.rilm-tableFigure > .rilm-head:after{
+    content: " ";
+}
 .rilm-bibl .rilm-idno{
     display: inline;
 }
@@ -325,6 +333,11 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     margin-bottom: .6em;
     box-sizing: border-box;
 }
+.rilm-item.rilm-n:before{
+    content: attr(data-rilm-n) ". ";
+} /* should there be space after the content?
+     And should default marker be suppressed
+     when there is an @n attribute? --DRS */
 .rilm-l{
     display: block;
     white-space: nowrap;
@@ -480,6 +493,12 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 .rilm-text.rilm-type_family rilm.div.rilm-type_heading .rilm-div.rilm-type_contents .rilm-p{
     display: inline;
 }
+.rilm-p.rilm-n:before{
+    content: attr(data-rilm-n) ". ";
+}
+.rilm-text.rilm-type_topic .rilm-div.rilm-type_heading > .rilm-p {
+    font-weight: 600;
+}/*HTML CSS only*/
 .rilm-docAuthor > .rilm-persName{
     display: inline;
 }
@@ -719,26 +738,6 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     margin: 5px 5px 5px 0;
     padding: 10px;
 }
-.rilm-head.rilm-n:before{
-    content: attr(data-rilm-n) ". ";
-}
-.rilm-figure > .rilm-head:after,
-.rilm-notatedMusic > .rilm-head:after,
-.rilm-tableFigure > .rilm-head:after{
-    content: " ";
-}
-.rilm-item.rilm-n:before{
-    content: attr(data-rilm-n) ". ";
-} /* should there be space after the content?
-     And should default marker be suppressed
-     when there is an @n attribute? --DRS */
-
-.rilm-p.rilm-n:before{
-    content: attr(data-rilm-n) ". ";
-}
-.rilm-text.rilm-type_topic .rilm-div.rilm-type_heading > .rilm-p {
-    font-weight: 600;
-}/*HTML CSS only*/
 .rilm-q{
     display: inline;
     quotes: '»' '«' '›' '‹';
