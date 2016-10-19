@@ -261,14 +261,6 @@ div[type = "works"] > head{
 head[n]:before{
     font-style: normal;
 }
-head[n]:before{
-    content: attr(n) ". ";
-}
-figure > head:after,
-notatedMusic > head:after,
-tableFigure > head:after{
-    content: " ";
-}
 bibl idno{
     display: inline;
 }
@@ -308,9 +300,6 @@ div[type = "works"] list item{
     padding-left: 1.5em;
     margin-bottom: .6em;
     box-sizing: border-box;
-}
-item[n]:before{
-    content: attr(n) ". ";
 }
 l{
     display: block;
@@ -485,12 +474,6 @@ tableFigure p{
 }
 text[type = 'family'] div[type = 'heading'] div[type = 'contents'] p{
     display: inline;
-}
-p[n]:before{
-    content: attr(n) ". ";
-}
-text[type = 'topic'] div[type = 'heading'] > p{
-    font-weight: 600;
 }
 docAuthor > persName{
     display: inline;
@@ -752,6 +735,23 @@ gap:after{
     content: "[…]";
     font-weight: 600;
     color: red;
+}
+head[n]:before{
+    content: attr(n) ". ";
+}
+figure > head:after,
+notatedMusic > head:after,
+tableFigure > head:after{
+    content: " ";
+}
+item[n]:before{
+    content: attr(n) ". ";
+}
+p[n]:before{
+    content: attr(n) ". ";
+}
+text[type = 'topic'] div[type = 'heading'] > p{
+    font-weight: 600;
 }
 q{
     quotes: '»' '«' '›' '‹';
