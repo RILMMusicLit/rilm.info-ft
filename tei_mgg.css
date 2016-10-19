@@ -264,11 +264,6 @@ head[n]:before{
 head[n]:before{
     content: attr(n) ". ";
 }
-figure > head:after,
-notatedMusic > head:after,
-tableFigure > head:after{
-    content: " ";
-}
 bibl idno{
     display: inline;
 }
@@ -752,6 +747,11 @@ gap:after{
     content: "[…]";
     font-weight: 600;
     color: red;
+}
+figure > head:after,
+notatedMusic > head:after,
+tableFigure > head:after{
+    content: " ";
 }
 q{
     quotes: '»' '«' '›' '‹';

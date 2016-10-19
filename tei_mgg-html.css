@@ -289,11 +289,6 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 .rilm-head.rilm-n:before{
     content: attr(data-rilm-n) ". ";
 }
-.rilm-figure > .rilm-head:after,
-.rilm-notatedMusic > .rilm-head:after,
-.rilm-tableFigure > .rilm-head:after{
-    content: " ";
-}
 .rilm-bibl .rilm-idno{
     display: inline;
 }
@@ -737,6 +732,11 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     border: 1px solid #000;
     margin: 5px 5px 5px 0;
     padding: 10px;
+}
+.rilm-figure > .rilm-head:after,
+.rilm-notatedMusic > .rilm-head:after,
+.rilm-tableFigure > .rilm-head:after{
+    content: " ";
 }
 .rilm-q{
     display: inline;
