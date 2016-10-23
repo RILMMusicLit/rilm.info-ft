@@ -75,9 +75,6 @@ quote:before{
 quote:after{
     content: none;
 }
-ref[target *= 'document']:before{
-    content: "";
-}
 rilmPerson[n]:before{
     content: attr(n) "";
 }
