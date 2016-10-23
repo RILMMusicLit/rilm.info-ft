@@ -1,0 +1,128 @@
+birth:before{
+    content: "";
+}
+death:before{
+    content: "";
+}
+gap:after{
+    content: "";
+}
+head[n]:before{
+    content: attr(n) "";
+}
+figure > head:after,
+notatedMusic > head:after,
+tableFigure > head:after{
+    content: "";
+}
+item[n]:before{
+    content: attr(n) "";
+}
+p[n]:before{
+    content: attr(n) "";
+}
+q{
+    quotes: '' '' '' '';
+}
+title[type = 'incipit'] > q{
+    quotes: '' '' '' '';
+}
+quote > q{
+    quotes: '' '' '' '';
+}
+*[rend = 'quoted-italic'] > q{
+    quotes: '' '' '' '';
+}
+q[rend = 'single']{
+    quotes: '' '';
+}
+q[rend = 'single'] > q{
+    quotes: '' '' '' '';
+}
+q:before{
+    content: none;
+}
+q:after{
+    content: none;
+}
+q[rend = "left-double"]{
+    quotes: '' '';
+}
+q[rend = "right-double"]{
+    quotes: '' '';
+}
+q[rend = "left-double"]:before{
+    content: none;
+}
+q[rend = "right-double"]:after{
+    content: none;
+}
+quote{
+    quotes: '' '' '' '';
+}
+q > quote{
+    quotes: '' '' '' '';
+}
+title[type = 'incipit'] > quote{
+    quotes: '' '' '' '';
+}
+*[rend = 'quoted-italic'] > quote{
+    quotes: '' '' '' '';
+}
+quote:before{
+    content: none;
+}
+quote:after{
+    content: none;
+}
+ref[target *= 'document']:before{
+    content: "";
+}
+rilmPerson[n]:before{
+    content: attr(n) "";
+}
+soCalled{
+    quotes: "" "";
+}
+soCalled:before{
+    content: none;
+}
+soCalled:after{
+    content: none;
+}
+title[type = 'incipit']{
+    quotes: '' '' '' '';
+}
+q > title[type = 'incipit']{
+    quotes: '' '' '' '';
+}
+quote > title[type = 'incipit']{
+    quotes: '' '' '' '';
+}
+*[rend = 'quoted-italic'] > title[type = 'incipit']{
+    quotes: '' '' '' '';
+}
+title[type = 'incipit']:before{
+    content: none;
+}
+title[type = 'incipit']:after{
+    content: none;
+}
+*[rend = "quoted-italic"]{
+    quotes: '' '' '' '';
+}
+q > *[rend = "quoted-italic"]{
+    quotes: '' '' '' '';
+}
+quote > *[rend = "quoted-italic"]{
+    quotes: '' '' '' '';
+}
+title[type = 'incipit'] > *[rend = "quoted-italic"]{
+    quotes: '' '' '' '';
+}
+*[rend = "quoted-italic"]:before{
+    content: none;
+}
+*[rend = "quoted-italic"]:after{
+    content: none;
+}
