@@ -737,6 +737,7 @@ teiHeader{
 }
 @font-face {
    font-family: SkolarSans;
+   font-style: italic;
     src: url('http://rilm.info/ft/fonts/SkolarSansPEWeb-LtIt.woff') format('woff'),
         url('http://rilm.info/ft/fonts/SkolarSansPEWeb-LtIt.woff2') format('woff2');
 }
@@ -752,18 +753,11 @@ body{
 death:before{
     content: "†";
 }
-@media screen {
-  div[type = "print-cit"] {
-    display: none;
-  }
-}
-@media print {
-  div[type = "print-cit"] {
- display:block;
- font-family: SkolarSans, sans-serif;
- line-height:1.2em;
- font-size:.875em;
-  }
+div[type = "print-cit"] {
+    display:block;
+    font-family: SkolarSans, sans-serif;
+    line-height:1.3em;
+    font-size:1em;
 }
 gap:after{
     content: "[…]";
