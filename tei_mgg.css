@@ -1,17 +1,4 @@
-﻿@media screen {
-  div[type = "print-cit"] {
-    display: none;
-  }
-}
-@media print {
-  div[type = "print-cit"] {
- display:block;
- font-family: 'Skolar Sans';
- line-height:1.2em;
- font-size:.875em;
-  }
-}
-abbr{
+﻿abbr{
     display: inline;
 }
 bibl > author{
@@ -764,6 +751,19 @@ body{
 }
 death:before{
     content: "†";
+}
+@media screen {
+  div[type = "print-cit"] {
+    display: none;
+  }
+}
+@media print {
+  div[type = "print-cit"] {
+ display:block;
+ font-family: 'Skolar Sans';
+ line-height:1.2em;
+ font-size:.875em;
+  }
 }
 gap:after{
     content: "[…]";
