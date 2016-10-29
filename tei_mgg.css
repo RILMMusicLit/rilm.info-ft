@@ -1,4 +1,17 @@
-﻿abbr{
+﻿@media screen {
+  div[type = "print-cit"] {
+    display: none;
+  }
+}
+@media print {
+  div[type = "print-cit"] {
+ display:compact;
+ font-family: 'Skolar Sans';
+ line-height:1.2em;
+ font-size:.875em;
+  }
+}
+abbr{
     display: inline;
 }
 bibl > author{
@@ -51,11 +64,11 @@ cell{
 cell[role = 'label']{
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.1em;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     row[role='label'] {
-        text-transform: none;  
+        text-transform: none;
+        font-size: 1.1em;
         -moz-font-feature-settings: "c2sc", "smcp";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
@@ -728,7 +741,17 @@ teiHeader{
     font-style: italic;
     font-weight: 600;
     src: url('http://rilm.info/ft/fonts/SkolarPEWeb-SemiboldItalic.woff') format('woff'),
-        url('http://rilm.info/ft/fonts/SkolarPEWeb-SemiboldItalic.woff') format('woff');
+        url('http://rilm.info/ft/fonts/SkolarPEWeb-SemiboldItalic.woff2') format('woff2');
+}
+@font-face {
+    font-family: SkolarSans;
+    src: url('http://rilm.info/ft/fonts/SkolarSansPEWeb-Lt.woff') format('woff'),
+        url('http://rilm.info/ft/fonts/SkolarSansPEWeb-Lt.woff2') format('woff2');
+}
+@font-face {
+   font-family: SkolarSans;
+    src: url('http://rilm.info/ft/fonts/SkolarSansPEWeb-LtIt.woff') format('woff'),
+        url('http://rilm.info/ft/fonts/SkolarSansPEWeb-LtIt.woff2') format('woff2');
 }
 birth:before{
     content: "*";
