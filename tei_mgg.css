@@ -5,7 +5,7 @@
 }
 @media print {
   div[type = "print-cit"] {
- display:compact;
+ display:block;
  font-family: 'Skolar Sans';
  line-height:1.2em;
  font-size:.875em;
