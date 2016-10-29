@@ -760,7 +760,7 @@ death:before{
 @media print {
   div[type = "print-cit"] {
  display:block;
- font-family: 'Skolar Sans';
+ font-family: SkolarSans, sans-serif;
  line-height:1.2em;
  font-size:.875em;
   }
