@@ -194,6 +194,139 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     font-style: italic;
     font-weight: 400;
 }
+.rilm-g {
+display: inline-block;
+position: relative;
+}
+.rilm-g.rilm-data-tei-ref_accidentalBakiyeFlat{
+    font-size: 2em;
+    transform: translateY(130%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_accidentalFlat{
+    font-size: 2em;
+    transform: translateY(130%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_accidentalNatural{
+    font-size: 2em;
+    transform: translateY(100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+}
+.rilm-g.rilm-data-tei-ref_accidentalSharp{
+    font-size: 2em;
+    transform: translateY(100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_accidentalSori{
+    font-size: 1.8em;
+    transform: translateY(60%);
+    line-height: 0.22em;
+    width: .4em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_csymDiminished{
+    font-size: .6em;
+    transform: translateY(-260%);
+    line-height: 0.22em;
+    width: 1em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_figbass6Raised{
+    font-size: 1.4em;
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+}
+.rilm-g.rilm-data-tei-ref_gClefSharp5Below{
+    font-size: 1.3em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    width: .6em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_medRenFlatHardB{
+    font-size: 2.2em;
+    transform: translateY(135%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_mensuralProlation2{
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_mensuralProlation3{
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_mensuralProlation5{
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_mensuralProlation6{
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_mensuralProlation9{
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_noteHalfUp{
+    font-size: 1.4em;
+    transform: translateY(160%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_timeSigCommon{
+    font-size: 1.8em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_timeSigCutCommon{
+    font-size: 1.8em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-data-tei-ref_timeSig6over8{
+    font-size: 1.4em;
+    transform: translateY(20%);
+    line-height: 0.22em;
+    width: .45em;
+    display: inline-block;
+    position: relative;
+ }   
 .rilm-graphic{
     display: block;
     border: 1px solid #000;

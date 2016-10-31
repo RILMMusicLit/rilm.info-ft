@@ -154,6 +154,139 @@ div[type = 'heading'] p persName[type = 'alt'] > forename{
     font-style: italic;
     font-weight: 400;
 }
+g {
+display: inline-block;
+position: relative;
+}
+g[data-tei-ref = 'accidentalBakiyeFlat'] {
+    font-size: 2em;
+    transform: translateY(130%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'accidentalFlat'] {
+    font-size: 2em;
+    transform: translateY(130%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'accidentalNatural'] {
+    font-size: 2em;
+    transform: translateY(100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+}
+g[data-tei-ref = 'accidentalSharp'] {
+    font-size: 2em;
+    transform: translateY(100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'accidentalSori'] {
+    font-size: 1.8em;
+    transform: translateY(60%);
+    line-height: 0.22em;
+    width: .4em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'csymDiminished'] {
+    font-size: .6em;
+    transform: translateY(-260%);
+    line-height: 0.22em;
+    width: 1em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'figbass6Raised'] {
+    font-size: 1.4em;
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+}
+g[data-tei-ref = 'gClefSharp5Below'] {
+    font-size: 1.3em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    width: .6em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'medRenFlatHardB'] {
+    font-size: 2.2em;
+    transform: translateY(135%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'mensuralProlation2'] {
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'mensuralProlation3'] {
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'mensuralProlation5'] {
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'mensuralProlation6'] {
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'mensuralProlation9'] {
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'noteHalfUp'] {
+    font-size: 1.4em;
+    transform: translateY(160%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'timeSigCommon'] {
+    font-size: 1.8em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'timeSigCutCommon'] {
+    font-size: 1.8em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[data-tei-ref = 'timeSig6over8'] {
+    font-size: 1.4em;
+    transform: translateY(20%);
+    line-height: 0.22em;
+    width: .45em;
+    display: inline-block;
+    position: relative;
+ }   
 graphic{
     height: 1em;
     width: auto;
