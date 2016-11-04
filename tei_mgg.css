@@ -158,35 +158,35 @@ g {
 display: inline-block;
 position: relative;
 }
-g[data-tei-ref = 'accidentalBakiyeFlat'] {
+g[ref = 'accidentalBakiyeFlat'] {
     font-size: 2em;
     transform: translateY(130%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'accidentalFlat'] {
+g[ref = 'accidentalFlat'] {
     font-size: 2em;
     transform: translateY(130%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'accidentalNatural'] {
+g[ref = 'accidentalNatural'] {
     font-size: 2em;
     transform: translateY(100%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
 }
-g[data-tei-ref = 'accidentalSharp'] {
+g[ref = 'accidentalSharp'] {
     font-size: 2em;
     transform: translateY(100%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'accidentalSori'] {
+g[ref = 'accidentalSori'] {
     font-size: 1.8em;
     transform: translateY(60%);
     line-height: 0.22em;
@@ -194,7 +194,7 @@ g[data-tei-ref = 'accidentalSori'] {
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'csymDiminished'] {
+g[ref = 'csymDiminished'] {
     font-size: .6em;
     transform: translateY(-260%);
     line-height: 0.22em;
@@ -202,13 +202,13 @@ g[data-tei-ref = 'csymDiminished'] {
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'figbass6Raised'] {
+g[ref = 'figbass6Raised'] {
     font-size: 1.4em;
     line-height: 0.21em;
     display: inline-block;
     position: relative;
 }
-g[data-tei-ref = 'gClefSharp5Below'] {
+g[ref = 'gClefSharp5Below'] {
     font-size: 1.3em;
     transform: translateY(-100%);
     line-height: 0.22em;
@@ -216,70 +216,70 @@ g[data-tei-ref = 'gClefSharp5Below'] {
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'medRenFlatHardB'] {
+g[ref = 'medRenFlatHardB'] {
     font-size: 2.2em;
     transform: translateY(135%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'mensuralProlation2'] {
+g[ref = 'mensuralProlation2'] {
     font-size: 1.8em;
     transform: translateY(110%);
     line-height: 0.21em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'mensuralProlation3'] {
+g[ref = 'mensuralProlation3'] {
     font-size: 1.8em;
     transform: translateY(110%);
     line-height: 0.21em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'mensuralProlation5'] {
+g[ref = 'mensuralProlation5'] {
     font-size: 1.8em;
     transform: translateY(110%);
     line-height: 0.21em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'mensuralProlation6'] {
+g[ref = 'mensuralProlation6'] {
     font-size: 1.8em;
     transform: translateY(110%);
     line-height: 0.21em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'mensuralProlation9'] {
+g[ref = 'mensuralProlation9'] {
     font-size: 1.8em;
     transform: translateY(110%);
     line-height: 0.21em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'noteHalfUp'] {
+g[ref = 'noteHalfUp'] {
     font-size: 1.4em;
     transform: translateY(160%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'timeSigCommon'] {
+g[ref = 'timeSigCommon'] {
     font-size: 1.8em;
     transform: translateY(-100%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'timeSigCutCommon'] {
+g[ref = 'timeSigCutCommon'] {
     font-size: 1.8em;
     transform: translateY(-100%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-g[data-tei-ref = 'timeSig6over8'] {
+g[ref = 'timeSig6over8'] {
     font-size: 1.4em;
     transform: translateY(20%);
     line-height: 0.22em;

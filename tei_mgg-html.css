@@ -198,35 +198,35 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 display: inline-block;
 position: relative;
 }
-.rilm-g.rilm-data-tei-ref_accidentalBakiyeFlat{
+.rilm-g.rilm-ref_accidentalBakiyeFlat{
     font-size: 2em;
     transform: translateY(130%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_accidentalFlat{
+.rilm-g.rilm-ref_accidentalFlat{
     font-size: 2em;
     transform: translateY(130%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_accidentalNatural{
+.rilm-g.rilm-ref_accidentalNatural{
     font-size: 2em;
     transform: translateY(100%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
 }
-.rilm-g.rilm-data-tei-ref_accidentalSharp{
+.rilm-g.rilm-ref_accidentalSharp{
     font-size: 2em;
     transform: translateY(100%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_accidentalSori{
+.rilm-g.rilm-ref_accidentalSori{
     font-size: 1.8em;
     transform: translateY(60%);
     line-height: 0.22em;
@@ -234,7 +234,7 @@ position: relative;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_csymDiminished{
+.rilm-g.rilm-ref_csymDiminished{
     font-size: .6em;
     transform: translateY(-260%);
     line-height: 0.22em;
@@ -242,13 +242,13 @@ position: relative;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_figbass6Raised{
+.rilm-g.rilm-ref_figbass6Raised{
     font-size: 1.4em;
     line-height: 0.21em;
     display: inline-block;
     position: relative;
 }
-.rilm-g.rilm-data-tei-ref_gClefSharp5Below{
+.rilm-g.rilm-ref_gClefSharp5Below{
     font-size: 1.3em;
     transform: translateY(-100%);
     line-height: 0.22em;
@@ -256,70 +256,70 @@ position: relative;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_medRenFlatHardB{
+.rilm-g.rilm-ref_medRenFlatHardB{
     font-size: 2.2em;
     transform: translateY(135%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_mensuralProlation2{
+.rilm-g.rilm-ref_mensuralProlation2{
     font-size: 1.8em;
     transform: translateY(110%);
     line-height: 0.21em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_mensuralProlation3{
+.rilm-g.rilm-ref_mensuralProlation3{
     font-size: 1.8em;
     transform: translateY(110%);
     line-height: 0.21em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_mensuralProlation5{
+.rilm-g.rilm-ref_mensuralProlation5{
     font-size: 1.8em;
     transform: translateY(110%);
     line-height: 0.21em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_mensuralProlation6{
+.rilm-g.rilm-ref_mensuralProlation6{
     font-size: 1.8em;
     transform: translateY(110%);
     line-height: 0.21em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_mensuralProlation9{
+.rilm-g.rilm-ref_mensuralProlation9{
     font-size: 1.8em;
     transform: translateY(110%);
     line-height: 0.21em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_noteHalfUp{
+.rilm-g.rilm-ref_noteHalfUp{
     font-size: 1.4em;
     transform: translateY(160%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_timeSigCommon{
+.rilm-g.rilm-ref_timeSigCommon{
     font-size: 1.8em;
     transform: translateY(-100%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_timeSigCutCommon{
+.rilm-g.rilm-ref_timeSigCutCommon{
     font-size: 1.8em;
     transform: translateY(-100%);
     line-height: 0.22em;
     display: inline-block;
     position: relative;
     }
-.rilm-g.rilm-data-tei-ref_timeSig6over8{
+.rilm-g.rilm-ref_timeSig6over8{
     font-size: 1.4em;
     transform: translateY(20%);
     line-height: 0.22em;
