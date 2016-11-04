@@ -352,6 +352,7 @@ position: relative;
 .rilm-div.rilm-type_works .rilm-div.rilm-type_section > .rilm-head,
 .rilm-div.rilm-type_ography .rilm-div.rilm-type_section > .rilm-head{
     text-indent: 0;
+    padding-bottom: .5em;
 }
 .rilm-div.rilm-type_contents > .rilm-head{
     text-transform: uppercase;

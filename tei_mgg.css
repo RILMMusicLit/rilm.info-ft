@@ -322,6 +322,7 @@ div[type = "section"] > head{
 div[type = 'works'] div[type = "section"] > head,
 div[type = 'ography'] div[type = "section"] > head{
     text-indent: 0;
+    padding-bottom: .5em;
 }
 div[type = "contents"] > head{
     text-transform: uppercase;
