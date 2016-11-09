@@ -585,7 +585,7 @@ img.rilm-graphic {
 .rilm-cell > .rilm-p{
     text-indent: 0;
 }
-.rilm-div.rilm-type_heading > .rilm.p{
+.rilm-div.rilm-type_heading > .rilm.p:first-child{
     font-size:1.25em;
 }
 .rilm-item > .rilm-p{
