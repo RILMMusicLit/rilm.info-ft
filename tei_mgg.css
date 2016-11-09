@@ -293,7 +293,7 @@ graphic{
     display: inline;
     border: none;
     margin: 0 0 0 0;
-    padding: 0 0.25em 0 .35em;
+    padding: 0 0.35em 0 .35em;
     color: inherit;
     transform: scaleX(2.5) scaleY(2.5);
     }
