@@ -1,5 +1,4 @@
-﻿/*@import url(https://fonts.typotheque.com/WF-027756-009318.css);*/
-abbr{
+﻿abbr{
     display: inline;
 }
 bibl > author{
@@ -52,11 +51,11 @@ cell{
 cell[role = 'label']{
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.1em;
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     row[role='label'] {
-        text-transform: none;  
+        text-transform: none;
+        font-size: 1.1em;
         -moz-font-feature-settings: "c2sc", "smcp";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
@@ -147,7 +146,7 @@ div[type = "person"] p[n] > rilmPerson:first-of-type > persName > forename{
     font-weight: 600;
     font-style: normal;
 }
-text[type = "family"] div[type = "bio"] > forename:first-of-type{
+text[type = "family"] div[type = "bio"] > forename:first-of-type, text[type = "family"] div[type = "narrative"] > forename:first-of-type{
     font-weight: 600;
 }
 div[type = 'heading'] p persName[type = 'alt'] > surname,
@@ -155,15 +154,149 @@ div[type = 'heading'] p persName[type = 'alt'] > forename{
     font-style: italic;
     font-weight: 400;
 }
+g {
+display: inline-block;
+position: relative;
+}
+g[ref = 'accidentalBakiyeFlat'] {
+    font-size: 2em;
+    transform: translateY(130%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'accidentalFlat'] {
+    font-size: 2em;
+    transform: translateY(130%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'accidentalNatural'] {
+    font-size: 2em;
+    transform: translateY(100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+}
+g[ref = 'accidentalSharp'] {
+    font-size: 2em;
+    transform: translateY(100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'accidentalSori'] {
+    font-size: 1.8em;
+    transform: translateY(60%);
+    line-height: 0.22em;
+    width: .4em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'csymDiminished'] {
+    font-size: .6em;
+    transform: translateY(-260%);
+    line-height: 0.22em;
+    width: 1em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'figbass6Raised'] {
+    font-size: 1.4em;
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+}
+g[ref = 'gClefSharp5Below'] {
+    font-size: 1.3em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    width: .6em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'medRenFlatHardB'] {
+    font-size: 2.2em;
+    transform: translateY(135%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'mensuralProlation2'] {
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'mensuralProlation3'] {
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'mensuralProlation5'] {
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'mensuralProlation6'] {
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'mensuralProlation9'] {
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'noteHalfUp'] {
+    font-size: 1.4em;
+    transform: translateY(160%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'timeSigCommon'] {
+    font-size: 1.8em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'timeSigCutCommon'] {
+    font-size: 1.8em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+g[ref = 'timeSig6over8'] {
+    font-size: 1.4em;
+    transform: translateY(20%);
+    line-height: 0.22em;
+    width: .45em;
+    display: inline-block;
+    position: relative;
+ }   
 graphic{
     height: 1em;
     width: auto;
     display: inline;
     border: none;
     margin: 0 0 0 0;
-    padding: 0 0 0 .25em;
+    padding: 0 0.35em 0 .35em;
     color: inherit;
-}
+    transform: scaleX(2.5) scaleY(2.5);
+    }
 figure > graphic,
 notatedMusic > graphic,
 tableFigure > graphic{
@@ -176,11 +309,13 @@ tableFigure > graphic{
     background-color: inherit;
     content: none !important;
     clear: both;
+    transform: none;
 }
 formula > graphic{
     height: 1.2em;
     vertical-align: text-bottom;
     color: inherit;
+    transform: none;
 }
 div[type = "section"] > head{
     display: block;
@@ -190,6 +325,7 @@ div[type = "section"] > head{
 div[type = 'works'] div[type = "section"] > head,
 div[type = 'ography'] div[type = "section"] > head{
     text-indent: 0;
+    padding-bottom: .5em;
 }
 div[type = "contents"] > head{
     text-transform: uppercase;
@@ -289,6 +425,7 @@ div[type = "contents"] list item{
 }
 div[type = "section"] list item,
 div[type = "bio"] list item,
+div[type = "narrative"] list item,
 div[type = "criticism"] list item{
     display: block;
     margin-bottom: 1.5em;
@@ -304,6 +441,13 @@ div[type = "works"] list item{
 l{
     display: block;
     white-space: nowrap;
+}
+label {
+    display: inline;
+    font-style: normal;
+}
+p > label, rilmPerson > label {
+    font-weight: 600;
 }
 lb{
     display: block;
@@ -447,7 +591,7 @@ p[n]:before{
 cell > p{
     text-indent: 0;
 }
-div[type = 'heading'] > p{
+div[type = 'heading'] > p:first-child{
     font-size: 1.25em;
 }
 item > p{
@@ -701,36 +845,56 @@ teiHeader{
 }
 @font-face{
     font-family: Skolar;
-    src: url('http://rilm.info/ft/fonts/SkolarPETEST-Regular.woff') format('woff')
+    src: url('http://rilm.info/ft/fonts/SkolarPEWeb-Regular.woff') format('woff'),
+         url('http://rilm.info/ft/fonts/SkolarPEWeb-Regular.woff2') format('woff2');
 }
 @font-face{
     font-family: Skolar;
     font-style: italic;
-    src: url('http://rilm.info/ft/fonts/SkolarPETEST-Italic.woff') format('woff')
+    src: url('http://rilm.info/ft/fonts/SkolarPEWeb-Italic.woff') format('woff'),
+        url('http://rilm.info/ft/fonts/SkolarPEWeb-Italic.woff2') format('woff2');
 }
 @font-face{
     font-family: Skolar;
     font-weight: 600;
-    src: url('http://rilm.info/ft/fonts/SkolarPETEST-Bold.woff') format('woff')
+    src: url('http://rilm.info/ft/fonts/SkolarPEWeb-Semibold.woff') format('woff'),
+        url('http://rilm.info/ft/fonts/SkolarPEWeb-Semibold.woff2') format('woff2');
 }
 @font-face{
     font-family: Skolar;
     font-style: italic;
     font-weight: 600;
-    src: url('http://rilm.info/ft/fonts/SkolarPETEST-BoldItalic.woff') format('woff')
+    src: url('http://rilm.info/ft/fonts/SkolarPEWeb-SemiboldItalic.woff') format('woff'),
+        url('http://rilm.info/ft/fonts/SkolarPEWeb-SemiboldItalic.woff2') format('woff2');
+}
+@font-face {
+    font-family: SkolarSans;
+    src: url('http://rilm.info/ft/fonts/SkolarSansPEWeb-Lt.woff') format('woff'),
+        url('http://rilm.info/ft/fonts/SkolarSansPEWeb-Lt.woff2') format('woff2');
+}
+@font-face {
+   font-family: SkolarSans;
+   font-style: italic;
+    src: url('http://rilm.info/ft/fonts/SkolarSansPEWeb-LtIt.woff') format('woff'),
+        url('http://rilm.info/ft/fonts/SkolarSansPEWeb-LtIt.woff2') format('woff2');
 }
 birth:before{
     content: "*";
 }
 body{
-    /*font-family: 'Fedra Serif A', 'Bravura Text', Georgia, serif;*/
-    font-family: 'Skolar PE TEST', Skolar, FreeSerif, 'Bravura Text', serif;
+    font-family: Skolar, FreeSerif, 'Bravura Text', serif;
     margin: 10px;
     display: block;
     font-size: 1em;
 }
 death:before{
     content: "†";
+}
+div[type = "print-cit"] {
+    display:block;
+    font-family: SkolarSans, sans-serif;
+    line-height:1.3em;
+    font-size:1em;
 }
 gap:after{
     content: "[…]";

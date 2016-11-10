@@ -9,20 +9,6 @@ div.rilm-nodename-p{
     display: block;
     margin-bottom: 1.7em;
 }
-.rilm-p > img{
-    height: 1em;
-    width: auto;
-    display: inline;
-    border: none;
-    margin: 0 0 0 0;
-    padding: 0 0 0 .5em;
-    color: inherit;
-}
-.rilm-formula > img{
-    height: 1.2em;
-    vertical-align: text-bottom;
-    color: inherit;
-}
 @font-face{
     font-family: 'Bravura Text';
     src: url('/public/rilm-common/fonts/BravuraText.woff') format('woff');
@@ -186,7 +172,7 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     font-weight: 600;
     font-style: normal;
 }
-.rilm-text.rilm-type_family .rilm-div.rilm-type_bio .rilm-forename:first-of-type{
+.rilm-text.rilm-type_family .rilm-div.rilm-type_bio .rilm-forename:first-of-type, .rilm-text.rilm-type_family .rilm-div.rilm-type_narrative .rilm-forename:first-of-type{
     font-weight: 600;
 }
 .rilm-div.rilm-type_heading .rilm-p .rilm-persName.rilm-type_alt .rilm-surname,
@@ -194,22 +180,167 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
     font-style: italic;
     font-weight: 400;
 }
-.rilm-graphic{
+.rilm-g {
+display: inline-block;
+position: relative;
+}
+.rilm-g.rilm-ref_accidentalBakiyeFlat{
+    font-size: 2em;
+    transform: translateY(130%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_accidentalFlat{
+    font-size: 2em;
+    transform: translateY(130%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_accidentalNatural{
+    font-size: 2em;
+    transform: translateY(100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+}
+.rilm-g.rilm-ref_accidentalSharp{
+    font-size: 2em;
+    transform: translateY(100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_accidentalSori{
+    font-size: 1.8em;
+    transform: translateY(60%);
+    line-height: 0.22em;
+    width: .4em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_csymDiminished{
+    font-size: .6em;
+    transform: translateY(-260%);
+    line-height: 0.22em;
+    width: 1em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_figbass6Raised{
+    font-size: 1.4em;
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+}
+.rilm-g.rilm-ref_gClefSharp5Below{
+    font-size: 1.3em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    width: .6em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_medRenFlatHardB{
+    font-size: 2.2em;
+    transform: translateY(135%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_mensuralProlation2{
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_mensuralProlation3{
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_mensuralProlation5{
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_mensuralProlation6{
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_mensuralProlation9{
+    font-size: 1.8em;
+    transform: translateY(110%);
+    line-height: 0.21em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_noteHalfUp{
+    font-size: 1.4em;
+    transform: translateY(160%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_timeSigCommon{
+    font-size: 1.8em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_timeSigCutCommon{
+    font-size: 1.8em;
+    transform: translateY(-100%);
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+    }
+.rilm-g.rilm-ref_timeSig6over8{
+    font-size: 1.4em;
+    transform: translateY(20%);
+    line-height: 0.22em;
+    width: .45em;
+    display: inline-block;
+    position: relative;
+ }   
+img.rilm-graphic {
+    height: 1em;
+    width: auto;
+    display: inline;
+    border: none;
+    margin: 0 0 0 0;
+    padding: 0 0.35em 0 .35em;
+    color: inherit;
+    transform: scaleX(2.5) scaleY(2.5);
+}
+.rilm-figure > img.rilm-graphic,
+.rilm-notatedMusic > img.rilm-graphic,
+.rilm-tableFigure > img.rilm-graphic {
     display: block;
+    height: auto;
     border: 1px solid #000;
-    margin: 5px 5px 5px 0;
-    padding: 10px;
+    margin: .35em .35em .35em 0;
+    padding: .65em;
     box-sizing: border-box;
     background-color: inherit;
     content: none !important;
     clear: both;
-}
-.rilm-formula > .rilm-graphic{
-    display: inline;
-    border: none;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    text-indent: 0;
+    transform: none;
+    }
+.rilm-formula > img.rilm-graphic {
+    height: 1.2em;
+    vertical-align: text-bottom;
+    color: inherit;
 }
 .rilm-div.rilm-type_section > .rilm-head{
     display: block;
@@ -219,6 +350,7 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 .rilm-div.rilm-type_works .rilm-div.rilm-type_section > .rilm-head,
 .rilm-div.rilm-type_ography .rilm-div.rilm-type_section > .rilm-head{
     text-indent: 0;
+    padding-bottom: .5em;
 }
 .rilm-div.rilm-type_contents > .rilm-head{
     text-transform: uppercase;
@@ -312,6 +444,7 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 }
 .rilm-div.rilm-type_section .rilm-list .rilm-item,
 .rilm-div.rilm-type_bio .rilm-list .rilm-item,
+.rilm-div.rilm-type_narrative .rilm-list .rilm-item,
 .rilm-div.rilm-type_criticism .rilm-list .rilm-item{
     display: block;
     margin-bottom: 1.5em;
@@ -452,7 +585,7 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 .rilm-cell > .rilm-p{
     text-indent: 0;
 }
-.rilm-div.rilm-type_heading > .rilm.p{
+.rilm-div.rilm-type_heading > .rilm.p:first-child{
     font-size:1.25em;
 }
 .rilm-item > .rilm-p{
