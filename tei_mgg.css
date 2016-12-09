@@ -288,34 +288,33 @@ g[ref = 'timeSig6over8'] {
     position: relative;
  }   
 graphic{
-    height: 1em;
+    height: 2em;
     width: auto;
-    display: inline;
+    display: inline-block;
+    vertical-align: middle;
     border: none;
     margin: 0 0 0 0;
     padding: 0 0.35em 0 .35em;
     color: inherit;
-    transform: scaleX(2.5) scaleY(2.5);
+    box-sizing: border-box;
     }
 figure > graphic,
 notatedMusic > graphic,
 tableFigure > graphic{
     display: block;
+    vertical-align: initial;
     height: auto;
     border: 1px solid #000;
     margin: .35em .35em .35em 0;
     padding: .65em;
-    box-sizing: border-box;
     background-color: inherit;
     content: none !important;
     clear: both;
-    transform: none;
 }
 formula > graphic{
     height: 1.2em;
     vertical-align: text-bottom;
     color: inherit;
-    transform: none;
 }
 div[type = "section"] > head{
     display: block;
