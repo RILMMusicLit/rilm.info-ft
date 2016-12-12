@@ -400,15 +400,34 @@ head[n]:before{
 bibl idno{
     display: inline;
 }
-img{
-    display: block;
-    border: 1px solid #000;
-    margin: 5px 5px 5px 0;
-    padding: 10px;
+img {
+    height: 2em;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    margin: 0 0 0 0;
+    padding: 0 0.35em 0 .35em;
+    color: inherit;
     box-sizing: border-box;
+    }
+figure > img,
+notatedMusic > img,
+tableFigure > img{
+    display: block;
+    vertical-align: initial;
+    height: auto;
+    border: 1px solid #000;
+    margin: .35em .35em .35em 0;
+    padding: .65em;
     background-color: inherit;
     content: none !important;
     clear: both;
+}
+formula > img{
+    height: 1.2em;
+    vertical-align: text-bottom;
+    color: inherit;
 }
 item{
     display: list-item;
