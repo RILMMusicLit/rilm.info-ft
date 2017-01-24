@@ -62,7 +62,7 @@ div.rilm-nodename-p{
     font-family: Alegreya, 'Bravura Text', Georgia, serif;
     /*font-family: Skolar, sans-serif, 'Bravura Text';*/
     font-variant-numeric: oldstyle-nums;
-    font-feature-settings: "onum";
+    font-feature-settings: "onum", "kern", "liga", "calt";
     line-height: 1.75em;
     letter-spacing: .01em;
 }
