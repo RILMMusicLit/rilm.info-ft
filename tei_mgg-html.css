@@ -166,7 +166,6 @@ rilm.text.rilm-type_family .rilm-div.rilm-type_heading .rilm-div.rilm-type_conte
 }
 .rilm-rilmPerson.rilm-n > .rilm-persName > .rilm-forename{
     font-weight: 600;
-    font-style: normal;
 }
 .rilm-div.rilm-type_person .rilm-p.rilm-n > .rilm-rilmPerson:first-of-type > .rilm-persName > .rilm-forename{
     font-weight: 600;

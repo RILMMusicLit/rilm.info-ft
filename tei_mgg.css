@@ -140,8 +140,8 @@ formula{
 }
 rilmPerson[n] > persName > forename{
     font-weight: 600;
-    font-style: normal;
 }
+rilmPerson[n] 
 div[type = "person"] p[n] > rilmPerson:first-of-type > persName > forename{
     font-weight: 600;
     font-style: normal;
