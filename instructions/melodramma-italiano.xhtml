@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>IL MELODRAMMA ITALIANO</title>
+  </head>
+  <body>
+    <div>
+      <h4 id="SSA"><a>Il melodramma italiano 1861-1900: Dizionario bio-bibliografico dei
+          compositori</a> (<i>SSA</i>)</h4> and <h4 id="SSB"><a>Il melodramma italiano 1901-1925:
+          Dizionario bio-bibliografico dei compositori</a> (<i>SSB</i>)</h4></div>
+    <div class="r201704" title="Added, 4/2017">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication is in two parts: the first part (<i><b>SSA</b></i>) comprises one
+              volume; the second part (<i><b>SSB</b></i>) comprises two print volumes contained in
+              one PDF.</li>
+            <li>All entries are &lt;text type="person"></li>
+            <li>Articles in the first part will have a &lt;div type="heading"> and a &lt;div
+              type="ography>. Entries in <b>SSB</b> may also have a &lt;div type="works">.</li>
+            <li>Italic type is used to indicate <i>titles</i> in body text and bibliographies, so
+              tag with &lt;title> rather than &lt;hi>.</li>
+            <li>Where text is set in S<small>MALL</small> C<small>APS</small>, convert to normal
+              case.</li>
+            <li>Convert high quotation marks ( “ ” ) to &lt;q> tags. </li>
+            <li><i>Guillemet-style quotes </i>(« »)<i> mark periodical titles. Tag the contents of
+              </i>« »<i> as </i>&lt;title type="periodical">.</li>
+          </ul></li>
+        <li><b><i>SSA</i> Front matter</b><ul>
+            <li>Title page (OMIT the cover)</li>
+            <li>ISBN page: Do not create a TEI file for this page; append the ISBN itself to the
+              Title-page file.</li>
+            <li>"Introduzione" (introduction)</li>
+            <li>"Ringraziamenti" (acknowledgements)</li>
+          </ul></li>
+        <li><b>ENTRIES</b> begin with a numeral and heading in <b>bold</b> type followed by smaller
+          Roman type in parentheses.<ul>
+            <li>Personal names are formatted as <b>Lastname [rolename] Forename [Forename]</b>, with
+              no comma. Tag any uncapitalized word as &lt;roleName> <i>except</i> "detto".<ul>
+                <li>Create a TEI &lt;title> by omitting the numeral, inserting a comma before the
+                  first space, and capitalizing the first letter of any all-lower case words (except
+                  "detto")<br />Print: <b>39. Antolisei don Raffaele</b>:
+                    <blockquote>&lt;titleStmt>&lt;title>Antolisei, Don
+                    Raffaele&lt;/title>&lt;/titleStmt></blockquote><blockquote>&lt;div
+                    type="heading">&lt;p>39.
+                    &lt;rilmPerson>&lt;persName>&lt;surname>Antolisei&lt;/surname>
+                    &lt;roleName>don&lt;/roleName>
+                    &lt;forename>Raffaele&lt;/forename>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div></blockquote></li>
+                <li>When the word <i>"detto"</i> appears, create the TEI &lt;title> using only the
+                  part before "detto". <br />Print: <b>49. Aspa Rosario detto
+                    Sari</b>:<blockquote>&lt;titleStmt>&lt;title>Aspa,
+                    Rosario&lt;/title>&lt;/titleStmt></blockquote>For the &lt;div type="heading">,
+                  tag the part following the "detto" as &lt;addName>. Don't tag the word
+                    "detto":<blockquote>&lt;div type="heading">&lt;p>49.
+                    &lt;rilmPerson>&lt;persName>&lt;surname>Aspa&lt;/surname>
+                    &lt;forename>Rosario&lt;/forename> detto
+                    &lt;addName>Sari&lt;/addName>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div></blockquote></li>
+              </ul></li>
+            <li>Tag the <b>birth and death information</b> in parentheses as &lt;birth> and
+              &lt;death> within the &lt;rilmPerson> element (see examples).</li>
+            <li>Start &lt;div type="body"> for the <b>paragraph(s) of prose</b>. Tag words in
+                <i>italic</i> type as &lt;title>, and the information in parentheses immediately
+              following the title as &lt;rilmPerformance>. Tag &lt;placeName>, &lt;orgName>, and
+              &lt;date> as shown in the example files. <i>(Note: some place and theater names may
+                fall outside the parentheses. If these can be caught, tag them, but it is acceptible
+                if they are not.)</i></li>
+            <li><b>WORKLISTS (<i>SSB only</i>)</b> are distinguished from the body text by smaller
+              type and an italic word or phrase at the beginning.<ul>
+                <li>Start a &lt;div type="works"> and &lt;list> here. </li>
+                <li>Tag each indented paragraph as &lt;item>&lt;bibl>. Tag the italicized text as
+                  &lt;title type="work">.</li>
+                <li>Where possible, tag personal names (capitalized) after "libretto di" as
+                  &lt;author role="librettist">.</li>
+              </ul></li>
+            <li><b>BIBLIOGRAPHIES in <i>SSA</i></b> are printed in one continuous paragraph. End the
+              &lt;div type="body"> and start a &lt;div type="ography">.<ul>
+                <li>Tag the word "Bibliografia" as &lt;head>.</li>
+                <li>For the following &lt;list>, start a new &lt;item>&lt;bibl> at each semicolon
+                  (;).</li>
+                <li>Items in small caps that have no other information are abbreviations and do not
+                  need to be tagged further. Leave in all
+                    caps:<br />[S<small>CHMIDL</small>;]<blockquote>&lt;item>&lt;bibl>SCHMIDL&lt;/bibl>&lt;/item></blockquote></li>
+                <li>For other items: <ul>
+                    <li>Tag text in small caps as &lt;author>. Names are in forename-surname order.
+                      Normalize case.</li>
+                    <li>Tag text in italic as &lt;title>.</li>
+                    <li>If there are two italic titles separated by "in" (not italic), tag the first
+                      &lt;title type="article"> and the second as &lt;title type="collection">.</li>
+                    <li>Tag text in « » as &lt;title type="periodical">.</li>
+                    <li>Tag the text BEFORE the date as &lt;publisher>; tag the text before the
+                      comma as &lt;pubPlace>. See examples.</li>
+                    <li>Tag personal names after "a cura" as &lt;editor>.</li>
+                  </ul>[<i>Dizionario biografico dei liguri. Dalle origini al 1990</i>, a cura di
+                  William Piastra, Genova, Consulta Ligure, 1994, II, pp.
+                    183-184;]<blockquote>&lt;item>&lt;bibl>&lt;title>Dizionario biografico dei
+                    liguri. Dalle origini al 1990&lt;/title>, a cura di
+                    &lt;editor>&lt;persName>&lt;forename>William&lt;/forename>
+                    &lt;surname>Piastra&lt;/surname>&lt;/persName>&lt;/editor>,
+                    &lt;pubPlace>Genova&lt;/pubPlace>, &lt;publisher>Consulta Ligure&lt;/publisher>,
+                    &lt;biblScope unit="yr">1994&lt;/biblScope>, &lt;biblScope
+                    unit="vol">II&lt;/biblScope>, pp. &lt;biblScope
+                    unit="pp">183-184&lt;/biblScope>&lt;/bibl>&lt;/item></blockquote>[D<small>ANIELE</small>
+                    R<small>UBBOLI</small>, <i>Basta un titolo per la gloria: "Il Bacio" di Arditi,
+                    "Visione veneziana" di Brogi, "Serenata-Rimpianto" di Toselli e "Lolita" di
+                    Buzzi-Peccia</i> in <i>La romanza italiana da salotto</i>, a cura di Francesco
+                  Sanvitale, Torino, EDT - Istituto Nazionale Tostiano, 2002, pp.
+                    468-474;]<blockquote>&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>Daniele&lt;/forename>
+                    &lt;surname>Rubboli&lt;/surname>&lt;/persName>&lt;/author>, &lt;title
+                    type="article">Basta un titolo per la gloria: &lt;q>Il Bacio&lt;/q> di Arditi,
+                    &lt;q>Visione veneziana&lt;/q> di Brogi, &lt;q>Serenata-Rimpianto&lt;/q> di
+                    Toselli e &lt;q>Lolita&lt;/q> di Buzzi-Peccia&lt;/title> in &lt;title
+                    type="collection">La romanza italiana da salotto&lt;/title>, a cura di
+                    &lt;editor>&lt;persName>&lt;forename>Francesco&lt;/forename>
+                    &lt;surname>Sanvitale&lt;/surname>&lt;/persName>&lt;/editor>,
+                    &lt;pubPlace>Torino&lt;/pubPlace>, &lt;publisher>EDT - Istituto Nazionale
+                    Tostiano&lt;/publisher>, &lt;biblScope unit="yr">2002&lt;/biblScope>, pp.
+                    &lt;biblScope
+                  unit="pp">468-474&lt;/biblScope>&lt;/bibl>&lt;/item></blockquote></li>
+              </ul></li>
+            <li><b>BIBLIOGRAPHIES in <i>SSB</i></b> are different from those in <i>SSA</i>: they are
+              divided according to type of document or publication. <ul>
+                <li>As above, use "Bibliografia" as the content of &lt;head>.</li>
+                <li>Make a first &lt;list> with the abbreviated entries.</li>
+                <li>After the first list, tag "Biografie ed epistolari." as &lt;p>, then start a
+                  second &lt;list> element.</li>
+                <li>Tag the next indented text up to the period (for example, "Studi e recenzione.")
+                  as &lt;p>, begin the next &lt;list>, and so on. See the example files.</li>
+                <li>Authors, titles, etc. are typeset just as in Part 1, and should be tagged the
+                  same as in Part 1.</li>
+              </ul>
+            </li>
+          </ul></li>
+        <li><b><i>SSA</i> Back matter</b>: <ul>
+            <li><b>Compositori di repertorio</b> (pp. 507-508): </li>
+            <li>Altri lavori rappresentati in prima assoluta tra il 1861 e il 1900 (pp.
+              509-512):</li>
+            <li>Bibliografia (pp. 513-531):</li>
+            <li>Indice generale [table of contents] (p.533)</li>
+            <li>«HISTORIAE MUSICAE CULTORES»: tag as &lt;text type="advertisement">; treat as a
+              bibliography; leave the beginning number and "Esaurito" <i>outside</i> the &lt;bibl>
+                element.<blockquote>&lt;item>1. &lt;bibl>&lt;title>Mostra di strumenti musicali in
+                disegni degli Uffizi&lt;/title>. A cura di
+                &lt;editor>&lt;persName>&lt;forename>&lt;abbr>L.&lt;/abbr>&lt;/forename>
+                &lt;surname>Marcucci&lt;/surname>&lt;/persName>&lt;/editor>. &lt;biblScope
+                unit="yr">1952&lt;/biblScope>.&lt;/bibl> Esaurito&lt;/item></blockquote></li>
+          </ul></li>
+        <li><b><i>SSB</i>, vol. 1, Front matter. </b><ul>
+            <li>COVER: OMIT</li>
+            <li>Synopsis (beginning "Ai primi del Novecento per il melodramma italiano...")</li>
+            <li>Title page</li>
+            <li>Copyright / ISBN page</li>
+            <li>"Introduzione" (introduction)</li>
+            <li>"Ringraziamenti" (acknowledgements)</li>
+          </ul></li>
+        <li><b><i>SSB</i>, vol. 1, Back matter. OMIT</b></li>
+        <li><b><i>SSB</i>, vol. 2, Front matter. OMIT</b></li>
+        <li><b><i>SSB</i>, vol. 2, Back matter:</b><ul>
+            <li><b>Compositori di repertorio</b> (pp. 939-941): tag as a &lt;list> with
+              footnotes.</li>
+            <li><b>Libretti di opere musicali non rappresentate o di rappresentazione incerta</b>
+              (pp. 943-945): as above</li>
+            <li><b>Operette, <i>vaudevilles</i>, riviste, parodie e scherzi musicali</b> senza
+              indicazione dell’autore della musica o con musica adattata (pp. 947-952): as
+              above</li>
+            <li><b>Bibliografia</b> (pp. 956-1008): <ul>
+                <li>Begin a new &lt;div type="section"> at each bold heading, and tag the bold text
+                  as &lt;head>.</li>
+                <li>For entries with an equality ( = ) sign, leave the = and the text before it
+                    <i>outside</i> &lt;bibl> element.</li>
+                <li>Names in small caps <i>after</i> the = sign are in Lastname Firstname order.
+                  Please normalize the case.</li>
+                <li>For entries with square brackets <i>[ ] </i>around the first italicized word,
+                  tag the contents of the brackets as &lt;title type="incipit">.</li>
+              </ul></li>
+            <li><b>Indice generale</b> [table of contents] (p.1009)</li>
+            <li>Printer's mark: OMIT</li>
+            <li>«HISTORIAE MUSICAE CULTORES»: as for SSA</li>
+            <li>Author biography (beginning "ANDREA SESSA, nato a Milano nel 1963, laureato in
+              giurisprudenza e giornalista professionista, è...")</li>
+          </ul></li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>
