@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="./tei.css" rel="stylesheet" type="text/css" />
+    <title>Neues historisch-biographisches Lexikon der Tonkünstler</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="GBN">Neues historisch-biographisches Lexikon der Tonkünstler (1812-1814)</h4>
+      </div>
+    </a>
+    <div class="r201702" title="Added, 2/2017">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication will be converted from supplied PDF.</li>
+            <li>Text is <i>mainly in gothic script</i>, specifically Walbaum Fraktur type, but
+                <i>non-German words are printed in Roman type</i>. Some portions of the text are
+              illegible in the PDF; these passages should be represented with an empty &lt;gap>
+              element. </li>
+            <li>Every page has a <i>catchword</i>, and some have additional printer's marks, as the
+              bottom line; OMIT these. </li>
+            <li>Personal names are distinguished by loose letter spacing.</li>
+            <li>There are four volumes, dated 1812, 1812, 1813, and 1814. <i>The end of the fourth
+                volume is an appendix.</i></li>
+          <li>All entries are &lt;text type="person"&gt;.</li>
+            <li>Entries will NOT have &lt;div type="heading"> or &lt;div type="subheading">. All
+              will have &lt;div type="body"> and some will have one or more &lt;div type="works"> </li>
+            <li>Low-high German-style quotation marks („ ‟) are used. See below for special
+              treatment of block quotes.</li>
+          </ul></li>
+        <li><b>Front matter</b> will include a title page, a "Pränumeranten-Verzeichniß", and
+          lengthy "Vorrede" from volume 1; and the title page and "Pränumeranten-Verzeichniß" for
+          the subsequent three volumes. <i>Skip half-title pages</i>.</li>
+        <li><b>Personal names</b> as the titles of entries are given in <i>surname-forename</i>
+          order. The surname is in letter-spaced type; forename(s), if any, is (are) given in
+          parentheses. <ul>
+            <li>(...) means that the forename is unknown. If there is no forename at all—usually the
+              case with ancient names—there are no parentheses, and the name should be tagged
+              &lt;persName> only, without &lt;forename> or &lt;surname>. Examples: Antippus,
+              Antisthenes.</li>
+            <li>IF there is an alternate name, it is separated by "oder" ("or"): [Allatius oder
+              Allacci (Leo)]</li>
+            <li>Omit parentheses ( ) from the &lt;title&gt; element in the TEI header, and add a
+              comma following the surname, but KEEP the parentheses in the &lt;div type="body"&gt;
+              and do not add a comma.</li>
+          </ul></li>
+        <li><b>Long quotes</b> are indicated in the print by a low double-quotation mark repeated at
+          the beginning of each line of the quotation:<ul>
+            <li>[...ihm schreibt: „Es war auch vor einigen <br />„Jahren in Engländischer Sänger,
+              Na- <br />„mens Abell, in vieler Hochachtun, und <br />„ließ sich sowohl in Holland...
+              <br />„und Trinken sehr viel half.‟ — Bey diesem... ]</li>
+          </ul>Tag the quotation as &lt;cit rend="block"&gt;:<blockquote>&lt;p>...ihm schreibt:
+            &lt;/p><br />&lt;cit rend="block">&lt;quote>Es war auch vor einigen Jahren in
+            Engländischer Sänger, Namens Abell, in vieler Hochachtun, und ließ sich sowohl in
+            Holland... und Trinken sehr viel half.&lt;/quote>&lt;/cit> <br />&lt;p>Bey
+            diesem...&lt;/p></blockquote></li>
+        <li><b>See references</b> are in the form [Surname (Forename), s. Target.]   Treat these
+          according to the <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">general instructions</a>; add as keywords in the TEI header to the target
+          file.</li>
+        <li><b>Worklists</b> are usually run inline with the preceding text, but are delimited by
+          numerals with a following parenthesis mark. Make a &lt;div type="works">, and tag each
+          numbered work as &lt;item> in a &lt;list>. Long worklists may have dividing headers with
+          Roman numerals. Please see example files.</li>
+        <li>A large <b>Appendix</b> ("Anhang") contains several distinct indexes; each should be in
+          a separate TEI file:<ol>
+            <li><i>Vorerinnerung</i> (foreword): include the "Anhang" title page and "Inhalt des
+              Anhanges"</li>
+            <li><i>Verzeichniß in Kupfer gestochener und in Holz geschnittener Bildnisse berühmter
+                Tonlehrer und Tonkünstler</i><ul>
+                <li>Set the opening paragraph—including the word "Verzeichnis" but not the Roman
+                  number I—in &lt;div type="body"></li>
+                <li>Make a &lt;div type="section"> for each letter (A,B,C, etc.) and tag the letter
+                  as &lt;heading>.</li>
+                <li>Within each letter, create a list element with an item for each name; tag the
+                  name as such.<blockquote>&lt;item>*&lt;persName>&lt;surname>Aaron&lt;/surname>
+                    (&lt;forename>Pietr.&lt;/forename>)&lt;/persName> s. a. Lex. Anh. 2
+                    mal.&lt;/item></blockquote></li>
+              </ul></li>
+            <li><i>Fortgesetztes Verzeichniß einiger Gemälde nnd Zeichnungen von Bildnissen
+                berühmter Tonlehrer und Tonkünstler</i>. <ul>
+                <li>Set the opening paragraph, starting with the word "Fortgesetztes", in &lt;div
+                  type="body"></li>
+                <li>Tag the remainder in &lt;div type="section"> as a &lt;list> with an &lt;item>
+                  for each name; tag the name.</li>
+              </ul></li>
+            <li><i>Fortgesetztes Verzeichniß von Statüen und Büsten großer Tonlehrer und
+                Tonkünstler, auch von Abdrücken und Medaillen, mit Bildnissen derselben</i>. <ul>
+                <li>Tag same as the preceding.</li>
+              </ul></li>
+            <li><i>Fortgesetztes Verzeichniß von großen und berühmten Orgeln, deren Risse durch den
+                Grabstichel gemein gemacht worben sind</i>. <ul>
+                <li>Tag the opening paragraph as above. </li>
+                <li>Tag the remainder in &lt;div type="section"> as a &lt;list> with an &lt;item>
+                  for each entry; tag the first word of each entry as &lt;placeName>.</li>
+              </ul></li>
+            <li><i>Register über Erfindungen zur Vervollkommung der Kunst und der Instrumente</i>.
+              This is an index of terms pointing to name entries in the main dictionary. It also
+              contains see-references to itself.</li>
+            <li><i>Berichtigungen und Zusätze zum ganzen Werke</i>. These are corrections and
+              additions to main entries.<ul>
+                <li>Create a separate TEI file for each; append "[supplement]" to the contents of
+                  &lt;title> in the &lt;TEIheader>.</li>
+              </ul></li>
+          </ol></li>
+      </ol>
+      <p>Please refer to example files.</p>
+    </div>
+  </body>
+</html>
