@@ -763,6 +763,7 @@ img.rilm-graphic {
 *.rilm-rend_roman{
     display: inline;
     font-style: normal;
+    font-weight: 400;
     text-transform: inherit !important;
     font-variant: inherit !important;
 }
