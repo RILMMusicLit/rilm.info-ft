@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>The 20th century violin concertante</title>
+  </head>
+  <body>
+    <div>
+      <h4 id="bvc">The 20th century violin concertante</h4></div>
+    <div class="r201707" title="Added, 7/2017">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication is to be converted from PDF to XML.</li>
+            <li>In the PDF pages, an entry comprises a "card" with labeled fields. There is a
+              separate entry for each work title, but <i>ordered</i> according to personal name.
+              Furthermore, the name is repeated for each entry associated with it. In the output
+              files, <i>these should be COMBINED into one entry for each personal name.</i></li>
+            <li>All entries in the output TEI will therefore be &lt;text type="person">.</li>
+            <li>The pages have no "printed" numbers. Use the PDF file's page number for the TEI
+              Header &lt;biblScope> element.</li>
+          </ul></li>
+        <li><b>FRONT MATTER</b><ul>
+            <li>Cover: treat as a title page and create a TEI file for it.</li>
+            <li>Copyright page</li>
+            <li>Preface</li>
+            <li>Elaboration of terms and concepts <i>and</i> A word about references.<ul>
+                <li>Combine into ONE TEI file</li>
+                <li>Create an image file for the sample entry on p. 5</li>
+              </ul></li>
+          </ul></li>
+        <li><b>ENTRIES</b> Are formatted as "cards".<ul>
+            <li>Three boxes at the top are unlabeled, and contain, from top to bottom:<ul>
+                <li>Composer's name in non-Latin characters, where appropriate;</li>
+                <li>Composer's name in common or Latinized form, and birth and death dates;</li>
+                <li>Work title.</li>
+              </ul></li>
+            <li><i>(Subsequent boxes are labeled.)</i></li>
+            <li>Map the "fields" in the PDF entry as follows: <ul>
+                <li>Use the composer's common name and birth and death dates as the &lt;title> in
+                  the TEI header, and in &lt;div type="heading"></li>
+                <li>IF there is a non-Latin version of the composers name, use it in &lt;div
+                  type="subheading">; else omit the subheading.</li>
+                <li>Create a &lt;div type="works">&lt;list> for the remaining data. If a field
+                    <i>contains only a "?"</i>, insert an empty element only and omit the label for
+                  the field, unless otherwise indicated below.<ul>
+                    <li>Use the work title for &lt;title>. Add a period after the closing tag.</li>
+                    <li>If there is an opus number, include the word "Opus ", no colon, followed by
+                      the numeral in &lt;opus> tags. Add a period after the closing tag.</li>
+                    <li>Use "year" for the contents of a &lt;date> element. Add parentheses before
+                      and after the tags.</li>
+                    <li>Use "duration" next. Capitalize the label; do not tag the content; <i>If the
+                        value is a "?", omit entirely</i></li>
+                    <li>For "instr", Capitalize the label, tag the content &lt;instrumentation>. Add
+                      a period after the tag.</li>
+                    <li>If there is content in "mvt", include it after instrumentation; Omit the
+                      "mvt" label. Do not tag the content, but insert a semicolon instead of line
+                      breaks, and a period at the end. <i>If the content is "?" omit
+                      entirely.</i></li>
+                    <li>For "sco", spell out the label "Score: "; Tag the content as &lt;publisher>;
+                      add a period after the closing tag.</li>
+                    <li>For "wp", spell out the label as "World premiere: "; tag &lt;date>,
+                      &lt;rilmPerfomance> and names as shown in the examples. The
+                        <i>second-to-last</i> item within the parentheses will be &lt;orgName
+                      type="performing">; others will be tagged &lt;persName>. </li>
+                    <li>If there is content in "com" other than "–", tag it as &lt;note> and
+                        <i>omit</i> the "com" label. </li>
+                  </ul></li>
+              </ul></li>
+            <li>If the entry has a "headphone" icon, add an empty &lt;gap n="sound"/> element after
+              the closing &lt;/bibl> tag.</li>
+            <li>If the entry has a "musical notes" icon, add an empty &lt;gap n="score"/> element
+              after the closing &lt;/bibl> tag.</li>
+            <li>Where there is more than one entry for a composer, combine them into a single TEI
+              file by adding an additional &lt;item> element in the &lt;div type="works">&lt;list>
+              for each entry.</li>
+          </ul></li>
+      </ol>
+      <p>Please see the example files.</p>
+    </div>
+  </body>
+</html>
