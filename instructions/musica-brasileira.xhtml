@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Enciclopédia da música brasileira</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="emb">Enciclopédia da música brasileira: erudita, folclórica, popular</h4>
+      </div>
+    </a>
+    <div class="r201708" title="Added, 08/2017">
+      <ol>
+        <li><b>General comments</b>: <ul> <li>This publication should be converted from provided PDFs.</li> <li>Articles include topics, instruments, persons, and groups. </li> <li>Tag italic type as &lt;title> if it begins with an capital letter; &lt;hi rend="italic"> if ti
+              begins with a lower-case letter.</li> <li>High quotation marks (“ ”) are used.</li>
+            <li>Dates are given as dd/mm/yyyy throughout.</li> </ul></li>
+        <li><b>Front matter</b> (Abertura.pdf)<ul> <li>Title page</li> <li>Copyright page</li> <li>Editors lists (Primeira, Segunda, Terceira; pp. 3-5)--make three &lt;div type="section">, one for each page. Tag each bold-capital as &lt;head>, what is in-between as &lt;list>.</li> <li>"Tábua de matérias" (Table of contents).</li> <li>"Prefácio" (Preface)</li> <li>"Notas para uso da enciclopédia" (Note for users; pp. 9-11)--like the editors lists, make three &lt;div type="sections> (Primeira, Segunda, Terceira), and ordered lists in between.</li> <li>"Abreviaturas" (abbreviations; pp. 12-19): tag as a two-column &lt;table>.</li> <li>OMIT the repeated title page (p. 21).</li> </ul></li>
+        <li><b>Topic articles</b> can be distinguished by having normal-case bold headings; usually they are all lower case. Use the text in bold for the &lt;title> in the TEI header and for the &lt;div type="heading">. Use the remaining text for &lt;div type="body">. <ul> <li><i>If the text begins "O mesmo que", it is a see-reference. Don't make a file for it.</i></li> <li><i>When a given term means two or more different things, the entries' headings are followed by superscript numerals. Retain these as they are.</i></li> </ul></li>
+        <li><b>Instrument articles</b> are the same format as topic articles, but the text begins "Instrumento".</li>
+        <li><b>Person articles</b> have headings that have <i>either</i> all-caps-bold followed
+          immediately by parentheses, <i>OR</i> all-caps-bold followed by normal-case bold. <ul>
+            <li>Where the heading is only all-caps, use the bold text for the &lt;title> element in
+              the TEI header and for the &lt;div type="heading">. Use the part in parentheses as the
+              beginning of the &lt;div type="body">. <ul>
+                <li>Tag the bold text <i>as a whole</i> as &lt;rilmPerson>&lt;persName>&lt;addName
+                  type="nickname">.</li>
+                <li>Tag the name in parentheses as &lt;rilmPerson> corresponding to the first.
+                  Assume that all the names in parentheses are &lt;forename> except for the last,
+                  which is &lt;surname>. Tag &lt;nameLink> if you can identify as such.</li>
+              </ul>[<b>CASQUINHA</b> (Oto Henrique Trepte).]<blockquote>&lt;div
+                type="heading">&lt;p>&lt;rilmPerson xml:id="r1">&lt;persName>&lt;addName
+                type="nickname">CASQUINHA&lt;/addName>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div><br />&lt;div
+                type="body"> &lt;p>&lt;rilmPerson xml:id="r2"
+                corresp="r1">(&lt;persName>&lt;forename>Oto&lt;/forename>
+                &lt;forename>Henrique&lt;/forename>
+                &lt;surname>Trepte&lt;/surname>&lt;/persName>)....</blockquote></li>
+            <li>Where the heading has all-caps-bold followed by normal-case bold, again use the bold
+              text for the &lt;title> element in the TEI header and for the &lt;div type="heading">. <ul>
+                <li>Tag the bold text as &lt;rilmPerson>&lt;persName>, NOT with &lt;addName>.</li>
+              </ul>[<b>CASTRO Roberto de</b>.]<blockquote>&lt;div
+                type="heading">&lt;p>&lt;rilmPerson
+                xml:id="r1">&lt;persName>&lt;surname>CASTRO&lt;/surname>
+                &lt;forename>Roberto&lt;/forename>
+                &lt;nameLink>de&lt;/nameLink>&lt;/persName>&lt;/rilmPerson>&lt;/p>
+                &lt;/div></blockquote><ul>
+                <li>IF there is a name in parentheses following, tag as described above.</li>
+              </ul>[<b>CASTILHO Lindomar</b> (Lindomar Cabral).]<blockquote>&lt;div
+                type="heading">&lt;p>&lt;rilmPerson
+                xml:id="r1">&lt;persName>&lt;surname>CASTILHO&lt;/surname>
+                &lt;forename>Lindomar&lt;/forename>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div><br />&lt;div
+                type="body"> &lt;p>&lt;rilmPerson xml:id="r2"
+                corresp="r1">(&lt;persName>&lt;forename>Lindomar&lt;/forename>
+                &lt;surname>Cabral&lt;/surname>&lt;/persName>)....</blockquote></li>
+            <li>The body text of Person articles—beginning after the name in parentheses, if there
+              is one—begins with occupations followed by birth and death information. INCLUDE these
+              within the second &lt;rilmPerson> element. See the example files.</li>
+            <li><b>Worklists</b> in Person articles can be incomplete, called "<b>Obras</b>"
+              ("works"), or complete, called "<b>Obra completa</b>" ("Complete work"). <ul>
+                <li>Some "Obras" lists have subheadings. Tag the subheadings &lt;p>. Make a
+                  &lt;list> after each one, See example file emb00002.</li>
+                <li>"Obra completa" lists have two levels of subheadings. Makea &lt;div
+                  type="section"> for each subheading on its own line. See example file
+                  emb00005.</li>
+              </ul>
+            </li>
+          </ul></li>
+        <li><b>Group articles</b> have headings in all-caps-bold (no normal case), <i>NOT</i> followed by parentheses. <ul> <li>Use the bold text as &lt;title> in the teiHeader and tag as &lt;term> within the &lt;div type="heading">.<br />[<b>14 BIS</b>.]<blockquote>&lt;div type="heading">&lt;p>&lt;term>14 BIS&lt;/term>&lt;/p>&lt;/div></blockquote></li> </ul></li>
+        <li><b>See-references</b> have two different forms. Treat both kinds according to <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs" >http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a><ul> <li>[<b>term</b> O mesmo que <b>target</b>.] <i>Only used for terms / topics. The abbreviation following the referring term is the part of speech, and can be ignored in the case of references like this.</i></li> <li>[<b>NAME name</b>. Ver <b>TARGET</b>.] <i>Used for all types of entries.</i></li> <li><b>Cross references</b> may appear at the ends of articles, in the form [Ver <b>target</b>.] <i>References can also be inferred within the body text by the presence of superscript numerals.</i> See example file emb00003 for both kinds.</li> </ul></li>
+        <li><b>Back matter</b>:<ul> 
+          <li><i>ACADEMIA BRASILEIRA DE MÚSICA</i>: Tag as a five-column table; tag &lt;rilmPerson>,
+              &lt;persName> fields, and &lt;birth> and &lt;death> dates.</li>
+          <li><i>ÓPERAS BRASILEIRAS</i>: Tag as a six-column table.<ul>
+                <li>Tag the contents of the first column, "Titulo" as &lt;title>.</li>
+                <li>Tag the contents of the third column, "Música", as &lt;rilmPerson>,
+                  &lt;persName>. Assume the last name given is &lt;surname>; if only one name is
+                  given ("Villa-Lobos"), tag as &lt;surname>.</li>
+                <li>Tag the contents of the fourth column, "Libreto", also as &lt;rilmPerson> and
+                  &lt;persName>.</li>
+                <li>Tag the contents of the fifth column as &lt;date></li>
+                <li>Combine the last two printed columns into one, and tag as &lt;rilmPerformance>,
+                  &lt;orgName>, &lt;placeName> and
+                    &lt;date>.<blockquote>&lt;rilmPerformance>&lt;orgName>Teatro Lirico&lt;/orgName>
+                    (&lt;placeName>Rio de Janeiro RJ&lt;/placeName>) &lt;date when="1892-10-12"
+                    when-custom="1892">12/10/1892&lt;/date>&lt;/rilmPerformance></blockquote></li>
+                <li>Note that there are line wraps in some entries; when there are, subsequent
+                  columns align with the bottom line of the wrapped cell. (For example, "Domingos
+                  José Ferreira" corresponds with "Colombo ou O Descobrimento da América".)</li>
+              </ul></li> <li><i>ORQUESTRAS SINFÔNICAS DO BRASIL</i>: Tag as a five-column table.<ul>
+                <li>Tag the contents of the first three columns as &lt;placeName>, &lt;orgName
+                  type="performance">, and &lt;date>.</li>
+                <li>Repeat the place name (left column) for each associated
+                    entry.<blockquote>&lt;cell>&lt;placeName>RIO DE
+                    JANEIRO&lt;/placeName>&lt;/cell>&lt;cell>Orquestra Sinfônica
+                    Brasileira&lt;/cell>.. <br />&lt;cell>&lt;placeName>RIO DE
+                    JANEIRO&lt;/placeName>&lt;/cell>&lt;cell>Orquestra Sinfônica
+                    Nacional&lt;/cell>..</blockquote></li>
+              </ul></li> <li><i>PERIÓDICOS MUSICAIS</i>: Tag as if a bibliography. Italics as &lt;title type="periodical">;
+              names (Director) as &lt;editor>. Use the following for the introductory
+                paragraph:<blockquote>&lt;div type="body">&lt;p>Em 1855 teria circulado no Rio de
+                Janeiro RJ a primeira publicação periódica musical de que se tem notícia no Brasil –
+                &lt;title type="periodical">O Filo Harmônico&lt;/title>, segundo
+                &lt;bibl>&lt;author>&lt;persName>M. Moreira da Silva&lt;/persName>&lt;/author>, em
+                &lt;title type="article">A música no Brasil&lt;/title>, &lt;title
+                type="periodical">Ilustração Brasileira&lt;/title>, &lt;title>Rio de
+                Janeiro&lt;/title>, &lt;biblScope unit="sd">setembro/outubro&lt;/biblScope> de
+                &lt;biblScope unit="yr">1922&lt;/biblScope>&lt;/bibl>, nada constando sobre sua
+                periodicidade, direção e desaparecimento. Em São Paulo SP, a revista musical mais
+                antiga conhecida é &lt;title type="periodical">Música para Todos&lt;/title>, que se
+                publicou em 1895. Os componentes de uma associação estudantil do Instituto de
+                Música, de Salvador BA, publicaram alguns números de um jornalzinho intitulado
+                &lt;title type="periodical">PRELÚDIO&lt;/title>. &lt;title type="periodical">O
+                GUARANI&lt;/title> (1887 a 1890) e &lt;title type="periodical">O
+                PROGRESSO&lt;/title> (1887 a 1890) foram publicados em Porto Alegre RS.
+                Relacionam-se, a seguir, os periódicos musicais
+                brasileiros:&lt;/p>&lt;/div></blockquote></li>
+            <li><i>TEATROS NO BRASIL</i>: Tag as &lt;list> with &lt;items>. No further tags
+              required.</li> <li><i>BIBLIOGRAFIA</i>: Tag "Maria Alive Volpe" as &lt;docAuthor>. Please repeat the author names
+              represented by
+                underlines.<blockquote>&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;surname>ABREU&lt;/surname>,
+                &lt;forename>Gilda&lt;/forename>
+                &lt;nameLink>de&lt;/nameLink>&lt;/persName>&lt;/author>. &lt;title>A vida de Vicente
+                Celestino&lt;/title>. &lt;placeName>São Paulo&lt;/placeName>: &lt;publisher>Editora
+                Cupolo Ltda&lt;/publisher>., s.d.&lt;/bibl>&lt;/item>
+                &lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;surname>ABREU&lt;/surname>,
+                &lt;forename>Gilda&lt;/forename>
+                &lt;nameLink>de&lt;/nameLink>&lt;/persName>&lt;/author>. &lt;title>As canções na
+                vida de Vicente Celestino&lt;/title>. &lt;placeName>São Paulo&lt;/placeName>:
+                &lt;publisher>Editora Cupolo&lt;/publisher>,
+                &lt;date>1956&lt;/date>.&lt;/bibl>&lt;/item></blockquote></li> </ul></li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>
