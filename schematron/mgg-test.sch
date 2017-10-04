@@ -18,12 +18,20 @@
                 </report>
             </rule>
         </pattern>-->
-       <!--     -->
+       <!--     
         <pattern>
             <rule context="tei:quote[preceding-sibling::node()[1]]">
                 <report test="contains(., '&#x201d;')"
                     role="information">
                     There is a quote symbol directly before a quote element.
+                </report>
+            </rule>
+        </pattern>-->
+        <pattern>
+            <rule context="tei:div[@type='authors']">
+                <report test="following-sibling::tei:div"
+                    role="error">
+                    This authors section needs to be nested under the section it refers to.
                 </report>
             </rule>
         </pattern>
