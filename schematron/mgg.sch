@@ -183,6 +183,14 @@
         </rule>
     </pattern>
     <pattern>
+        <rule context="tei:docAuthor|tei:author|tei:editor">
+            <assert test="count(tei:rilmPerson) = 0"
+                role="error">
+                rilmPerson should not be a child of docAuthor, author, or editor.
+            </assert>
+        </rule>
+    </pattern>
+    <pattern>
         <rule context="tei:abbr">
             <report test= ". = 'd. J.' or
                 . = 'd. Ä' or
@@ -686,6 +694,78 @@
                 and not(contains(., 'Z&#x002e;'))" role="error">
                 pubPlace may not have this abbreviation as contents.
                 
+            </report>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="//tei:div[@type='section']/tei:p[1] | //tei:div[@type='section']/tei:list[1] | //tei:div[@type='section']/tei:table[1] | //tei:div[@type='bio']/tei:p[1] | //tei:div[@type='bio']/tei:list[1] | //tei:div[@type='bio']/tei:table[1] | //tei:div[@type='works']/tei:p[1] | //tei:div[@type='works']/tei:list[1] | //tei:div[@type='works']/tei:table[1] | //tei:div[@type='criticism']/tei:p[1] | //tei:div[@type='criticism']/tei:list[1] | //tei:div[@type='criticism']/tei:table[1] | //tei:div[@type='ography']/tei:p[1] | //tei:div[@type='ography']/tei:list[1] | //tei:div[@type='ography']/tei:table[1] | //tei:div[@type='person']/tei:p[1] | //tei:div[@type='person']/tei:list[1] | //tei:div[@type='person']/tei:table[1]">
+            <assert test="following-sibling::tei:div[@type='authors']"
+                role="error">
+                This section looks to be missing an authors section.
+            </assert>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:docAuthor">
+            <report test="tei:persName[2]"
+                role="error">
+                Each docAuthor should contain only one persName.
+            </report>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:text[@type='topic']//tei:div[@type='section']/tei:head">
+            <report test="tei:note and not(text())" 
+                role="warning">
+                This section looks to be missing an authors section.
+            </report>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:div[@type='person']">
+            <assert test="descendant::tei:rilmPerson" 
+                role="information">
+                This family member section might be missing a rilmPerson element.
+            </assert>
+        </rule>
+    </pattern>
+    <pattern>
+    <rule context="tei:text//text()">
+        <report test="contains(., '&#x2192;')"
+            role="warning">
+            There is an arrow (U+2192) here!
+        </report>
+    </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:rilmPerson">
+            <report test="contains(., '&#x002B;')"
+                role="warning">
+                It looks like there should be a Death tag here rather than a plus sign (U+002B)!
+            </report>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="//text()">
+            <report test="matches(., '/+\s?[0-9]+')"
+                role="warning">
+                The plus sign here should probably be a dagger or a Death tag.
+            </report>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="//text()">
+            <report test="matches(., '/*\s?[0-9]+')"
+                role="warning">
+                The asterisk here should perhaps be a Birth tag.
+            </report>
+        </rule>
+    </pattern>
+    <pattern>
+        <rule context="tei:div[@type='heading']">
+            <report test="(following-sibling::tei:div[@type='works']) or (following-sibling::tei:div[@type='criticism']) or (following-sibling::tei:div[@type='ography']) or (following-sibling::tei:div[@type='authors']) or (following-sibling::tei:div[@type='contents'])"
+                role="information">
+                The heading div is usually followed by a section, bio, or person div.
             </report>
         </rule>
     </pattern>
