@@ -900,6 +900,20 @@ img.rilm-graphic {
 .rilm-q:after{
     content: close-quote;
 }
+.rilm-q.rilm-rend_left-single{
+    quotes: '›' '';
+}
+.rilm-q.rilm-rend_right-single{
+    quotes: '' '‹';
+}
+.rilm-q.rilm-rend_left-single:before{
+    content: open-quote;
+    font-style: normal;
+}
+.rilm-q.rilm-rend_right-single:after{
+    content: close-quote;
+    font-style: normal;
+}
 .rilm-q.rilm-rend_left-double{
     quotes: '»' '';
 }
