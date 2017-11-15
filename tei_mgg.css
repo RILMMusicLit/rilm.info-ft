@@ -986,6 +986,18 @@ q:before{
 q:after{
     content: close-quote;
 }
+q[rend = "left-single"]{
+    quotes: '›' '';
+}
+q[rend = "right-single"]{
+    quotes: '' '‹';
+}
+q[rend = "left-single"]:before{
+    content: open-quote;
+}
+q[rend = "right-single"]:after{
+    content: close-quote;
+}
 q[rend = "left-double"]{
     quotes: '»' '';
 }
