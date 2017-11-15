@@ -254,6 +254,7 @@ position: relative;
     line-height: 0.21em;
     display: inline-block;
     position: relative;
+    width: .46em;
     }
 .rilm-g.rilm-ref_mensuralProlation3{
     font-size: 1.8em;
@@ -261,6 +262,7 @@ position: relative;
     line-height: 0.21em;
     display: inline-block;
     position: relative;
+    width: .46em;
     }
 .rilm-g.rilm-ref_mensuralProlation5{
     font-size: 1.8em;
@@ -268,6 +270,7 @@ position: relative;
     line-height: 0.21em;
     display: inline-block;
     position: relative;
+    width: .46em;
     }
 .rilm-g.rilm-ref_mensuralProlation6{
     font-size: 1.8em;
@@ -275,6 +278,7 @@ position: relative;
     line-height: 0.21em;
     display: inline-block;
     position: relative;
+    width: .46em;
     }
 .rilm-g.rilm-ref_mensuralProlation9{
     font-size: 1.8em;
@@ -282,6 +286,7 @@ position: relative;
     line-height: 0.21em;
     display: inline-block;
     position: relative;
+    width: .46em;
     }
 .rilm-g.rilm-ref_noteHalfUp{
     font-size: 1.4em;
@@ -311,7 +316,27 @@ position: relative;
     width: .45em;
     display: inline-block;
     position: relative;
- }   
+ }
+ .rilm-g.rilm-ref_figbass6Raised2{
+    font-size: 3em;
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+ }
+.rilm-g.rilm-ref_figbass5Raised3{
+    font-size: 1.25em;
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+ } 
+ .rilm-g.rilm-ref_accidentalQuarterToneFlatArabic{
+    font-size: 1.75em;
+    transform: translateY(-20%);
+    line-height: 0.22em;
+    width: .45em;
+    display: inline-block;
+    position: relative;
+ }
 img.rilm-graphic {
     height: 2em;
     width: auto;

@@ -229,6 +229,7 @@ g[ref = 'mensuralProlation2'] {
     line-height: 0.21em;
     display: inline-block;
     position: relative;
+    width: .46em;
     }
 g[ref = 'mensuralProlation3'] {
     font-size: 1.8em;
@@ -236,6 +237,7 @@ g[ref = 'mensuralProlation3'] {
     line-height: 0.21em;
     display: inline-block;
     position: relative;
+    width: .46em;
     }
 g[ref = 'mensuralProlation5'] {
     font-size: 1.8em;
@@ -243,6 +245,7 @@ g[ref = 'mensuralProlation5'] {
     line-height: 0.21em;
     display: inline-block;
     position: relative;
+    width: .46em;
     }
 g[ref = 'mensuralProlation6'] {
     font-size: 1.8em;
@@ -250,6 +253,7 @@ g[ref = 'mensuralProlation6'] {
     line-height: 0.21em;
     display: inline-block;
     position: relative;
+    width: .46em;
     }
 g[ref = 'mensuralProlation9'] {
     font-size: 1.8em;
@@ -257,6 +261,7 @@ g[ref = 'mensuralProlation9'] {
     line-height: 0.21em;
     display: inline-block;
     position: relative;
+    width: .46em;
     }
 g[ref = 'noteHalfUp'] {
     font-size: 1.4em;
@@ -286,7 +291,27 @@ g[ref = 'timeSig6over8'] {
     width: .45em;
     display: inline-block;
     position: relative;
- }   
+ }
+g[ref = 'figbass6Raised2'] {
+    font-size: 3em;
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+ }
+g[ref = 'figbass5Raised3'] {
+    font-size: 1.25em;
+    line-height: 0.22em;
+    display: inline-block;
+    position: relative;
+ } 
+ g[ref = 'accidentalQuarterToneFlatArabic'] {
+    font-size: 1.75em;
+    transform: translateY(-20%);
+    line-height: 0.22em;
+    width: .45em;
+    display: inline-block;
+    position: relative;
+ }
 graphic{
     height: 2em;
     width: auto;
