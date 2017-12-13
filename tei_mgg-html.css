@@ -691,7 +691,7 @@ img.rilm-graphic {
 .rilm-quote:after{
     font-style: normal;
 }
-.rilm-ref{
+.rilm-ref.rilm-target{
     display: inline;
     color: rgb(40, 90, 153);
     background-color: inherit;

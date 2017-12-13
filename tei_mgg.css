@@ -724,7 +724,7 @@ quote:before{
 quote:after{
     font-style: normal;
 }
-ref{
+ref[target]{
     display: inline;
     color: rgb(40, 90, 153);
     background-color: inherit;
