@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Stringed Instruments of the Middle Ages (Panum)</title>
+  </head>
+  <body>
+    <a>
+        <div><h4 id="psi">Stringed Instruments of the Middle Ages</h4></div>
+    </a>
+    <div class="r201806" title="Added 6/2018">
+      <p>This title will be converted from PDF prepared by LM Tech to XML plus split-PDFs. Please create a new text layer in the split PDFs, as the OCR accuracy is currently very poor. </p>
+        <p>Replace quotation marks (“ and ”) with &lt;q&gt; tags.</p>
+      <p>There are no bibliographies or discographies within the articles.</p>
+      <ul>
+                <li>Omit all blank pages in the given PDF from the split PDF files.</li>
+                <li>Omit the three pages that carry the "Book I.", "Book II.", and "Book III." titles (page 23 of the PDF, for example).</li>
+        <li>
+          <p>Most of the titles and section heads are printed in all-capital letters or small caps. Please normalize case throughout to US-English title case.</p>
+        </li>
+                <li>Omit the "Book" and "Part" indicators elsewhere, and use the text in the
+          document <a href="http://rilm.info/ft/instructions/Panum-list-of-articles.xhtml"
+            >Panum-list-of-articles</a> to create and title the individual articles. Divide
+          according to the page numbers given, and populate the two title fields of the TEI files as
+          indicated, but retain the lettering and numbering of internal headings. <ul>
+            <li>Omit the half-title page. Create TEI files for the frontispiece, title page, and
+              printer's mark as indicated on the list-of-articles. </li>
+            <li>Start a new &lt;div type="section"> wherever there is a heading in the print that
+              is on its own line OR is set in italic type in-line with the beginning of the
+              paragraph. For example, "B. The True Harp" on page 102 should start a &lt;div
+              type="section"> that has five sections nested within it:<ul>
+                <li>The Harp Among the Anglo-Saxons (p.104)</li>
+                <li> In Ireland (p.105)</li>
+                <li>In Wales (p.108)</li>
+                <li>In the Scandinavian Countries (p.111)</li>
+                <li> On the Continent (p.112)</li>
+              </ul></li>
+          </ul></li>
+        <li>Capture each figure in a separate image file and embed in the TEI in its own &lt;figure>
+          or &lt;notatedMusic> element.</li>
+        <li>Create a single TEI file and PDF file for the index.</li>
+        <li>Create a single TEI file and PDF file for the pages following the index. The page
+          numbering restarts from "1"; please use "B1–B48" as the numbering in the TEI file. Title
+          as given in <a href="http://rilm.info/ft/instructions/Panum-list-of-articles.xhtml"
+            >Panum-list-of-articles</a>.</li> Tag as &lt;text type="advertisement">, and mark up lists as &lt;div type="ograpy">, with list, item, and bibls. </ul>
+      <p>Please also refer to the example file.</p>
+    </div>
+  </body>
+</html>

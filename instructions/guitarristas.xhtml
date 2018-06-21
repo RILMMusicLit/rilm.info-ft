@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Diccionario de Guitarristas</title>
+  </head>
+  <body>
+    <div>
+      <h4 id="SSA"><u>Diccionario de Guitarristas...</u> (<i>pdg</i>)</h4></div>
+    <div class="r201805" title="Added, 6/2018">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>Convert from the PDF created by LM Tech. </li>
+                        <li><i>Note that the text layer is NOT very accurate. OCR should be redone with a Spanish dictionary.</i></li>
+            <li><i>The first 17 pages of the PDF will not be used.</i></li>
+            <li><b>Cross-references</b> (See-references) are in the form <b>LASTNAME, Firstname</b> — "Ver" Lastname2 Firstname2. Treat these according to <a
+                                href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs"
+                                >http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a> .</li>
+            <li>Convert all quotation marks ( “ ” ) to &lt;q&gt; tags. </li>
+          </ul></li>
+        <li><b><i>SSA</i> Front matter</b><ul>
+            <li>Portrait of the author, use "[Frontispiece]"</li> for the title.
+            <li>Title page</li>
+            <li><i>OMIT the Numeration and signature page (p.20 of the PDF).</i></li>
+            <li>Preludio</li>
+          </ul></li>
+        <li><b>PERSON ENTRIES</b> (print pp. 11-368) begin with <b>bold</b>, all-caps headings; formatted as <b>LASTNAME, Forename. —</b><ul>
+                        <li>To create the &lt;title> element in the TEI Header, omit the final period <i>unless</i> there is an abbreviation:<br />
+                            <b>CASTILLO, David del.</b> — <blockquote>&lt;titleStmt&gt;&lt;title&gt;CASTILLO, David del&lt;/title&gt;&lt;/titleStmt&gt;</blockquote>
+                            <b>CATALA, A. F.</b> — <blockquote>&lt;titleStmt&gt;&lt;title&gt;CATALA, A. F.&lt;/title&gt;&lt;/titleStmt&gt;</blockquote></li>
+                        <li>Use the same content for &lt;div type="header">, but keep the final period. Omit the M-dash.<blockquote>&lt;div type="heading" xml:id="d1">&lt;p xml:id="p1">&lt;rilmPerson xml:id="r1">&lt;persName>&lt;surname>CASTILLO&lt;/surname>, &lt;forename>David&lt;/forename> &lt;nameLink>del&lt;/nameLink>&lt;/persName>&lt;/rilmPerson>.&lt;/p> &lt;/div> </blockquote></li>
+                        <li>Where a forename is unknown, it is indicated in the print by "(…)". Omit this for the TEI Header, but include it in the &lt;div type="heading">, tagged as &lt;forename>:<br /><b>CATALDI ( ... )</b><blockquote>&lt;titleStmt&gt;&lt;title&gt;CATALDI&lt;/title&gt;&lt;/titleStmt&gt;</blockquote><blockquote>&lt;div type="heading" xml:id="d1">&lt;p xml:id="p1">&lt;rilmPerson xml:id="r1">&lt;persName>&lt;surname>CATALDI&lt;/surname> &lt;forename>( … )&lt;/forename>&lt;/persName>&lt;/rilmPerson>&lt;/p>&lt;/div></blockquote></li>
+                        <li>Start &lt;div type="body"&gt; for the paragraph(s) of prose.</li>
+                        <li>Many Person entries contain indented lines of poetry. Tag with &lt;lg> and &lt;l> tags. Omit surrounding quotation marks if present, but keep quotation marks within: <br />"Quando nascen Passarinho<br /> Trouxe quatro dote junto:<br /> Ser branco, dar-se a respeíto,<br /> "<b>Tocar pouco</b>" e cantar muíto."<br /><blockquote>&lt;lg>&lt;l>Quando nascen Passarinho&lt;/l> <br />&lt;l>Trouxe quatro dote junto:&lt;/l> <br />&lt;l>Ser branco, dar-se a respeíto,&lt;/l> <br />&lt;l>&lt;q>&lt;hi rend="bold">Tocar pouco&lt;/hi>&lt;/q> e cantar muíto.&lt;/l>&lt;/lg></blockquote></li>
+                        <li>There are no worklists nor bibliographies per se in the person entries. Tag things that look like tables (that clearly are arranged in columns) as &lt;table> (e.g. on p.25, 50); things that look like lists (that don't have clear columns) as &lt;list> (e.g. on p.63, pp.79-82).</li>
+                        <li>A few entries have an author given in bold at the end, right justified. (See print p.143 for example.) Tag with &lt;div type="authors"> and &lt;docAuthor>.</li>
+                    
+                <li><b>Apendice de guitarristas</b> (pp. 361-368): Process identically to entries in the main Persons section.</li>
+            <li><b>Luthiers</b> (pp. 369-410): Process as preceding sections, EXCEPT add "[Luthier]" to the &lt;title> element content in the TEI header.</li>
+                        <li><i>I have found two TOPIC entries withing the names: </i>ACTORES GUITARRISTAS<i> (p.12), and </i>POSEEDORES DE GUITARRAS "TORRES"<i>(p.392). There might be more that I have not found. They are distinguished by NOT having an M-dash following the heading. For handling, see below "<b>Topic entries</b>".</i></li></ul></li>
+                <li><b>TOPIC ENTRIES</b> (pp. 399-464):<ul>
+                        <li><b>Instruments</b> (pp. 399-422): Tag as &lt;text type="instrument">. Omit the trailing period and M-dash from the &lt;title> and &lt;div type="heading">. Tag the heading as &lt;term>. Where this is a lower case "o" in the heading (meaning "or"), tag the terms before and after separately:<br /><b>SHARUD</b> o <b>SHORODE.—</b><blockquote>&lt;titleStmt&gt;&lt;title&gt;SHARUD o SHORODE&lt;/title&gt;&lt;/titleStmt&gt;</blockquote><blockquote>&lt;div type="heading" xml:id="d1">&lt;p xml:id="p1">&lt;term xml:id="t1">SHARUD&lt;/term> o &lt;term xml:id="t2">SHORODE&lt;/term>&lt;/p>&lt;/div></blockquote></li>
+                        <li><b>Danzas</b> (pp. 425-452): Process as above, except &lt;text type="genre">.</li>
+                        <li><b>Terminologia</b> (pp. 455-464): Process as above, except &lt;text type="topic">.</li>
+                    </ul></li>
+          <li>BIBLIOGRAPHY (pp. 465-468): The given format is <b>TITLE</b>—por Firstname Lastname. PubPlace, Ano(s) YR.<br />HISTORIA DE LA MÚSICA—por José Forns. Madrid . 1925. <br />HISTORIA DE LA MÚSICA ANTIGUA—por P. Cesari. Madrid . Año 189!. <br />HISTORIA DE LA MÚSICA—por Hugo Rícmann, Barcelona. 1930. Colección Labor. <br />HISTORIA DE LA MÚSICA—2 tomos. por Eduardo López Chavarri. Barcelona. Er. Hs. de Paluztc, Años 1921-22. <br />HISTORIA DE LA MÚSICA ESPAÑOLA—Desde la venida de los Fenicios hasta el año 1850. 4 tomos. Madrid Barcelona. 1855. por Mariano Soriano Fuertes.<blockquote>&lt;div type="ography"><br />&lt;list><br />&lt;item>&lt;bibl>&lt;title>HISTORIA DE LA MÚSICA&lt;/title>—por &lt;author>José Forns&lt;/author>. &lt;pubPlace>Madrid&lt;/pubPlace> . &lt;biblScope unit="yr">1925&lt;/biblScope>.&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>HISTORIA DE LA MÚSICA ANTIGUA&lt;/title>—por &lt;author>P. Cesari&lt;/author>. &lt;pubPlace>Madrid&lt;/pubPlace> . Año &lt;biblScope unit="yr">1891&lt;/biblScope>.&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>HISTORIA DE LA MÚSICA&lt;/title>—por &lt;author>Hugo Riemann&lt;/author>, &lt;pubPlace>Barcelona&lt;/pubPlace>. &lt;biblScope unit="yr">1930&lt;/biblScope>. &lt;publisher>Colección Labor&lt;/publisher>.&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>HISTORIA DE LA MÚSICA&lt;/title>—2 tomos. por &lt;author>Eduardo López Chavarri&lt;/author>. &lt;pubPlace>Barcelona&lt;/pubPlace>. &lt;publisher>Er. Hs. de Paluzie&lt;/publisher>, Años &lt;biblScope unit="yr">1921-22&lt;/biblScope>.&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>HISTORIA DE LA MÚSICA ESPAÑOLA—Desde la venida de los Fenicios hasta el año 1850&lt;/title>. 4 tomos. &lt;pubPlace>Madrid&lt;/pubPlace>-&lt;pubPlace>Barcelona&lt;/pubPlace>. &lt;biblScope unit="yr">1855&lt;/biblScope>. por &lt;author>Mariano Soriano Fuertes&lt;/author>.&lt;/bibl>&lt;/item><br />&lt;/list>&lt;/div></blockquote>Begin a new &lt;div type="section"> for the "Obras Consultadas..." beginning at the bottom of p.467.</li>
+                <li><b>Obras para Guitarra</b>... (p. 471): Tag as a list with three nested lists for the numbered sub-entries.</li>
+                <li><b>Printers' mark</b>.</li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>
