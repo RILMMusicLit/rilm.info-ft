@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="./tei.css" rel="stylesheet" type="text/css" />
+    <title>Musical Instruments: A Comprehensive Dictionary (Marcuse)</title>
+  </head>
+  <body>
+    <a>
+      <div><h4 id="mcd">Musical Instruments: A Comprehensive Dictionary (Marcuse)</h4></div>
+    </a>
+    <div class="r201807" title="Added 7/2018">
+      <p>This title will be converted from scanned print. Please create a whole-volume PDF as well as article-level TEI and METS-ALTO.</p>
+      <p>All entries will be &lt;text type="instrument">. There is a lot of information contained in the typography itself, including translations, references, and identification of languages. </p>
+      <ol>
+        <li><b>Front Matter</b>: <ul>
+            <li>Title page (omit the half-title)</li>
+            <li>Copyright page</li>
+            <li>Preface. Include the "Use of the dictionary" as a div type="section".</li>
+            <li>Remaining front matter, including Contents, List of Illustrations, Pitch Names, and
+              Abbreviations</li>
+          </ul></li>
+        <li><b>References</b> in general: This work has numerous references between entries that
+          come in several different forms.<ul>
+            <li><b>See-references</b> appear in several forms:<ol>
+                <li><b>Term1,</b> see: term2. [e.g. <b>Crescent</b>, see: Jingling Johnnie.]</li>
+                <li><b>Term1</b>, Lang.: term2 [e.g. <b>Crécelle</b>, Fr.: cog rattle.]</li>
+                <li><b>Term2</b>, var. of term2 [e.g. <b>Dromslade</b>, var. of drumslade]</li>
+                <li><b>Term2</b>, syn. of term2  [e.g. <b>Dudi</b>, syn. of edaka.]</li>
+              </ol>Do not make a TEI file for these entries; instead, include the heading term in
+              the &lt;keywords> element of the target entry (refer to the <a
+                href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">general rules for see
+                references</a> ). <br /><b>N.B.</b>
+              <i>If there is additional information</i>, such as a translation, DO make a TEI file
+              and tag the target term with &lt;ref> if possible: [<b>Piob mor</b> (Gaelic: great
+              pipe), see: Highland pipe.]</li>
+            <li><b>Cross-references within the body</b> text are marked by asterisks. Tag the word
+              following the asterisk with &lt;ref>. <i>If you cannot match on one word, the target
+                entry might be two words:</i><br />[...and in England the so-called *whittle and dub
+              accompanied morris dances...]<blockquote>......and in England the so-called &lt;ref
+                target="??">whittle and dub&lt;/ref> accompanied morris dances...</blockquote>(There
+              is no entry for "Whittle", but there is for "Whittle and dub".)</li>
+            <li><b>Cross-references at the end of articles</b> are marked "See also: …" or "See: …"
+              or "<i>Cf.</i> …", with each target separated by a comma.</li>
+          </ul></li>
+        <li><b>Dictionary entries titles</b> are in bold, capitalized.<ul>
+            <li>Capture the <b>bold-type heading</b> as the &lt;title> in the &lt;teiHeader>. Use
+              the same text for the &lt;div type="heading">, and tag it as &lt;term>. Omit the comma
+              in both cases if it immediately follows the heading.</li>
+            <li>Begin the &lt;div type="body"> with whatever <b>follows</b> the bold type. <ol>
+                <li>Information in <b>parentheses</b> give the language of the term, sometimes
+                  followed by an English equivalent in ROMAN. <i>If</i> the English is given, tag
+                  the language of the heading term as well as its translation, and include a
+                  @corresp attribute:<br />[<b>Abeng</b> (Twi: animal horn), 1. generic name in
+                    Twi...]<blockquote>&lt;div type="heading">&lt;p>&lt;term xml:id="t1"
+                    xml:lang="tw">Abeng&lt;/term>&lt;/p>&lt;/div><br />&lt;div
+                    type="body">&lt;p>(Twi: &lt;term xml:id="t2" xml:lang="en" corresp="t1">animal
+                    horn&lt;/term>), 1. generic name in Twi...&lt;/p>&lt;/div></blockquote>If the
+                  term(s) following the language is(are) <i>ITALIC</i>, tag the language of the
+                  ITALIC term(s):<br />[<b>Action</b> (Fr.: <i>mécanique</i>; Ger.: <i>Mechanik</i>;
+                  It: <i>meccanica</i>), 1. the intermediary...]<blockquote>&lt;div
+                    type="heading">&lt;p>&lt;term
+                    xml:id="t1">Action&lt;/term>&lt;/p>&lt;/div><br />&lt;div
+                    type="body">&lt;p>(Fr.: &lt;term xml:id="t2" corresp="t1"
+                    xml:lang="fr">mécanique&lt;/term>; Ger.: &lt;term xml:id="t3" corresp="t1"
+                    xml:lang="de">Mechanik&lt;/term>; It: &lt;term xml:id="t4" corresp="t1"
+                    xml:lang="it">meccanica&lt;/term>), 1. the
+                    intermediary...]&lt;/p>&lt;/div></blockquote><br />If ONLY the language is given
+                  in parenthesis, include it as the @xml:lang of the TERM IN THE
+                    HEADING:<br />[<b>Abuba</b> (Heb.), reedpipe of ancient
+                    Israel...]<blockquote>&lt;div type="heading">&lt;p>&lt;term xml:id="t1"
+                    xml:lang="he">Abuba&lt;/term>&lt;/p>&lt;/div><br />&lt;div
+                    type="body">&lt;p>(Heb.), reedpipe of ancient
+                    Israel...&lt;/p>&lt;/div></blockquote></li>
+                <li><b>Square brackets</b> denote etymology. No need to tag the
+                    contents:<br />[<b>Aballa</b> [Sp. <i>aballar</i>, to move],
+                    …]<blockquote>&lt;div type="body">&lt;p>[Sp. &lt;hi
+                    rend="italic">aballar&lt;/hi>, to move],...&lt;/p>&lt;/div></blockquote></li>
+              </ol></li></ul></li>
+        <li><b>Alternate meanings</b> for the same term are marked by bold-type numbers in the body
+          text. <ul>
+            <li>Start a new &lt;p> at each number, even though they are inline in the
+                print:<br />[<b>Okuelé</b>, <b>1</b>. Cuban name of the okpelé; <b>2</b>. Afro-Cuban
+              ritual drum, goblet-shaped...]<blockquote>&lt;div type="heading">&lt;p>&lt;term
+                xml:id="t1">Okuelé&lt;/term>&lt;/p>&lt;/div><br />&lt;div type="body">&lt;p>1. Cuban
+                name of the &lt;ref>okpelé&lt;/ref>;&lt;/p><br />&lt;p>2. Afro-Cuban ritual drum,
+                goblet-shaped...&lt;/p>&lt;/div></blockquote></li>
+          </ul></li>
+            <li><b>Bibliographical references</b> are given as numerals, in parentheses, that are
+          keyed to the bibliography at the end of the volume (beginning page 603). Include a &lt;div
+          type="ography"> and <i>replace</i> each number in the entries with a &lt;bibl> element
+          containing the full marked-up bibliographic item from pages 603-608. See the example
+          files. </li>
+        <li><b>Photograph plates</b>: make a separate xml file for each; file names as "mcd-plate01"
+          through "mcd-plate24".</li>
+        </ol>
+      <p>Please also refer to the example files.</p>
+    </div>
+  </body>
+</html>
