@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="./tei.css" rel="stylesheet" type="text/css" />
+    <title>Real-Lexikon der Musikinstruments (Sachs)</title>
+  </head>
+  <body>
+    <a>
+      <div><h4 id="srl">Real-Lexikon der Musikinstruments (Sachs)</h4></div>
+    </a>
+    <div class="r201809" title="Added 9/2018">
+      <p>This title will be converted from scanned print. Please create a whole-volume PDF as well as article-level TEI and METS-ALTO.</p>
+      <p>All entries will be &lt;text type="instrument">.</p>
+      <p>Many entries include non-Latin script—Arabic/Persian, Cyrillic, Greek, Hebrew, Sanskrit. If the non-Latin text cannot be capture via OCR, replace it with a &lt;gap> element with an @xml:lang attribute giving the language of the omitted text. (see <a href="sachs-language-codes.xhtml">sachs-language-codes.xhtml</a>)</p>
+      <p>There is a lot of information given in the entries, including language, translations, synonyms, and plurals.</p>
+      <p><i>Quotation marks</i> are of the German low-high type (‚ ‛); <i>They have different specific meanings in this work, depending on context, and should not be substituted with "&lt;q>". Their interpretation is described below.</i></p>
+      <ol>
+        <li><b>Front Matter</b>: <ul>
+            <li>Dust jacket notes (on inside folds; not the outside covers).</li>
+            <li>Advertisement page ("American Musicological..."; omit the half-title)</li>
+            <li>Title page</li>
+            <li>Copyright page</li>
+            <li>Publisher's Note</li>
+            <li>Introduction to Dover Edition; use &lt;q> tags for the quotation marks in this
+              section <i>only</i>.</li>
+            <li>Vorwort. Include the "Use of the dictionary" as a div type="section".</li>
+            <li>"Abgekürzt zitierte allgemeine..." (bibliographical abbreviations)</li>
+            <li>"Abgekürzt zitierte Instrumenten..." (instrument collections' abbreviations)</li>
+            <li>"Abkürzungen der häufigsten..." (language and ethnic abbreviations)</li>
+            <li>"Transkriptions-schlüssel"</li>
+          </ul></li>
+        <li><b>Dictionary entries titles</b> are in bold, capitalized.<ul>
+            <li><b>See-references</b> appear in these forms:<ol>
+                <li><b>Term1</b> s. Term2. [e.g. <b>Abhubh</b>, s. Abub.]</li>
+                <li><b>Term1</b> = Term2 [e.g. <b>Arbeitsbalg</b> = Schöpfbalg.]</li>
+              </ol>Do not make a TEI file for these two kinds of entries; instead, include the
+              heading term in the &lt;keywords> element of the target entry (refer to the <a
+                href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">general rules for see
+                references</a>).<br /><i>For all other types of entries</i>, you will create a TEI file as below.</li>
+            <li>Capture the <b>bold-type heading</b> as the &lt;title> in the &lt;teiHeader>. Use
+              the same text for the &lt;div type="heading">, and tag it as &lt;term>. Omit the comma
+              following the heading in both elements.</li>
+            <li>There several patterns that entries might follow after the heading:<ol>
+                <li><b>Term1</b>, lang. ‚Term2‛ [e.g. <b>Agujero</b>, span. ‚Griffloch‛.] Tag the
+                  heading as term with xml:lang if possible (see <a
+                    href="sachs-language-codes.xhtml">sachs-language-codes.xhtml</a>); tag term2
+                  (the term in single quotes) with &lt;ref> pointing to the entry for that
+                    term.<blockquote>&lt;div type="heading" xml:id="d1">&lt;p xml:id="p1">&lt;term
+                    xml:id="t1" xml:lang="es">Agujero&lt;/term>&lt;/p>&lt;/div><br />&lt;div
+                    type="body" xml:id="d2">&lt;p xml:id="p2">span. ‚&lt;ref
+                    target="srl00000">Griffloch&lt;/ref>‛.&lt;/p>&lt;/div></blockquote> There may be
+                  more than one term within the quotation marks; tag each with &lt;ref> if a
+                  matching entry is found [<b>Cassa</b>, ital. ‚Trommel,
+                    Gehäuse‛.].<blockquote>&lt;div type="heading" xml:id="d1">&lt;p
+                    xml:id="p1">&lt;term xml:id="t1"
+                    xml:lang="it">Cassa&lt;/term>&lt;/p>&lt;/div><br />&lt;div type="body"
+                    xml:id="d2">&lt;p xml:id="p2">ital. ‚&lt;ref target="srl00000">Trommel&lt;/ref>,
+                    Gehäuse‛.&lt;/p>&lt;/div></blockquote></li>
+                <li><b>Term1,</b> Term1-original-script, lang. ‚Term2‛ [e.g. <b>Čekü</b>, چكو, pers.
+                  ‚Plektrum, Bogen, Schlägel‛.]<blockquote>&lt;div type="heading" xml:id="d1">&lt;p
+                    xml:id="p1">&lt;term xml:id="t1"
+                    xml:lang="fa">Čekü&lt;/term>&lt;/p>&lt;/div><br />&lt;div type="body"
+                    xml:id="d2">&lt;p xml:id="p2">&lt;term xml:id="t2" xml:lang="fa"
+                    corresp="t1">چكو&lt;/term> pers. ‚&lt;ref target="srl00000">Plektrum&lt;/ref>,
+                    &lt;ref target="srl00000">Bogen&lt;/ref>,
+                    Schlägel‛.&lt;/p>&lt;/div></blockquote></li>
+                <li><b>Term1,</b> T e r m 1 v a r i a n t, lang. ‚Term2‛ [e.g. <b>Crepitaculum</b>,
+                  C r e p u n d i a, lat. .Klapper, Schelle'.</li>
+                <li><b>Term1</b>, plur. v. Term2 [e.g. <b>Stuic</b>, plur. v. Stoc.]
+                    <blockquote>&lt;div type="heading" xml:id="d1">&lt;p xml:id="p1">&lt;term
+                    xml:id="t1">Stuic&lt;/term>&lt;/p>&lt;/div><br />&lt;div type="body"
+                    xml:id="d2">&lt;p xml:id="p2">plur. v. &lt;ref
+                    target="srl00000">Stoc&lt;/ref>.&lt;/p>&lt;/div></blockquote></li>
+              </ol>To summarize some typographical conventions: <ol>
+                <li>Text within quotation marks indicates a reference <i>only when it immediately
+                    follows a language abbreviation</i>. Later in the entry, quotation marks are
+                  used for quoting. See example file 1 for the distinction.</li>
+                <li>L e t t e r s p a c e d  text marks a variant of the preceding term.</li>
+              </ol>
+            </li>
+          </ul></li>
+        <li><b>Small type</b> at the ends of entries may contain bibliographical references (either
+          abbreviated or written-out), keywords, or references. Since there is no reliable way to
+          identify which it is, tag as &lt;note> as shown in the example files.</li>
+        
+        <li><b>Name index</b>. Please search the listed lames on the listed pages and tag
+          &lt;persName>.</li>
+      </ol>
+      <p>Please also refer to the example files.</p>
+    </div>
+  </body>
+</html>
