@@ -33,11 +33,13 @@ biblScope{
     display: inline;
 }
 body{
+    font-family: Skolar, FreeSerif, 'Bravura Text', serif;
     font-weight: 400;
     font-variant-numeric: oldstyle-nums;
     font-feature-settings: "onum", "kern", "liga", "calt";
     line-height: 1.75em;
     /*was 1.4em*/
+    margin: 1em;
     letter-spacing: .01em;
     /*was .04em*/
 }
@@ -358,8 +360,8 @@ div[type = "contents"] > head{
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     div[type="contents"] > head { 
-    	font-size: 1em;     
-    	text-transform: none; 
+        font-size: 1em;     
+        text-transform: none; 
         -moz-font-feature-settings: "c2sc", "smcp";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
@@ -412,8 +414,8 @@ div[type = "works"] > head{
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     div[type="ography"] > head, div[type = "works"] > head  { 
-    	font-size: 1.1em;  
-    	text-transform: none;   
+        font-size: 1.1em;  
+        text-transform: none;   
         -moz-font-feature-settings: "c2sc", "smcp";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
@@ -439,6 +441,7 @@ img {
 figure > img,
 notatedMusic > img,
 tableFigure > img{
+    max-width: 100%;
     display: block;
     vertical-align: initial;
     height: auto;
@@ -587,7 +590,7 @@ div[type = "contents"] > head > note{
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     div[type="contents"] > head > note { 
-    	font-size: .91em;
+        font-size: .91em;
     }
 }
 div[type = "ography"] > head > note,
@@ -596,7 +599,7 @@ div[type = "works"] > head > note{
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     div[type="ography"] > head > note, div[type = "works"] > head > note { 
-    	font-size: .91em;
+        font-size: .91em;
     }
 }
 note[type = "editorial"]{
@@ -669,8 +672,8 @@ docAuthor > persName{
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     docAuthor > persName { 
-    	font-size: 1.15em;  
-    	text-transform: none;   
+        font-size: 1.15em;  
+        text-transform: none;   
         -moz-font-feature-settings: "c2sc", "smcp";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
@@ -836,8 +839,8 @@ title[type = 'incipit']:after{
 }
 @supports(font-feature-settings: 'c2sc', 'smcp') {
     *[rend="uppercase"] {
-    	font-size: 1.1em;   
-    	text-transform: none;  
+        font-size: 1.1em;   
+        text-transform: none;  
         -moz-font-feature-settings: "c2sc", "smcp";
         -webkit-font-feature-settings: "c2sc", "smcp";
         font-feature-settings: "c2sc", "smcp";
@@ -926,8 +929,6 @@ birth:before{
     content: "*";
 }
 body{
-    font-family: Skolar, FreeSerif, 'Bravura Text', serif;
-    margin: 10px;
     display: block;
     font-size: 1em;
 }
