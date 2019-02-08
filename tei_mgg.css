@@ -144,13 +144,17 @@ rilmPerson[n] > persName > forename{
     font-weight: 600;
 }
 
-div[type = "person"] p[n] > rilmPerson:first-of-type > persName > forename{
+div[type = "person"] p[n] > rilmPerson > persName > forename {
     font-weight: 600;
     font-style: normal;
 }
-text[type = "family"] div[type = "bio"] > forename:first-of-type, text[type = "family"] div[type = "narrative"] > forename:first-of-type{
-    font-weight: 600;
+
+/* override as per https://stackoverflow.com/questions/2717480/ so only first gets bolded */
+div[type = "person"] p[n] > rilmPerson ~ rilmPerson > persName > forename {
+    font-weight: normal;
+    font-style: italic;
 }
+
 div[type = 'heading'] p persName[type = 'alt'] > surname,
 div[type = 'heading'] p persName[type = 'alt'] > forename{
     font-style: italic;
