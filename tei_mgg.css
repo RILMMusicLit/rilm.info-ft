@@ -33,6 +33,7 @@ biblScope{
     display: inline;
 }
 body{
+    display: block;
     font-family: Skolar, FreeSerif, 'Bravura Text', serif;
     font-weight: 400;
     font-variant-numeric: oldstyle-nums;
@@ -933,7 +934,6 @@ birth:before{
     content: "*";
 }
 body{
-    display: block;
     font-size: 1em;
 }
 death:before{
