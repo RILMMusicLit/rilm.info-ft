@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Sachlexikon Rockmusik</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="SRM">Sachlexikon Rockmusik</h4>
+      </div>
+    </a>
+    <div class="r201903" title="Added, 3/2019">
+      <p>A two-volume encyclopedia, in German, of terms and institutions related to rock and popular musik. To be converted from provided PDF files.</p>
+      <ol>
+        <li><b>Front matter</b><ul>
+            <li>Omit the half-title (pdf p.1)</li>
+            <li>Title page (pdf p.3)</li>
+            <li>Copyright page (pdf p.4)</li>
+            <li>"Inhalt" (contents, pdf p.7): tag as a two-column table.</li>
+            <li>"Vorwort" (foreword, pdf pp. 11-13): Tag in four &lt;div type="section"> and one
+              &lt;div type="author"></li>
+            <li>Omit the quarter title page (pdf p. 15).</li>
+            <li>Inward-pointing Guillemet- style quotation marks ( » « ) are used. Convert to &lt;q>
+              tags.</li>
+          </ul></li>
+        <li><b>Articles</b> will have &lt;div type="body">, and from 0 to three &lt;div type="ography>.<ul>
+
+
+            <li>Article <b>body texts</b> begin with a heading in <b>bold</b> followed by a
+                comma.<ol type="a">
+                <li>Use the bold text as the TEI &lt;title> and as the beginning of the div
+                  type="body".</li>
+                <li>Tag the beginning bold text as &lt;term>, and any subsequent bold text as
+                  &lt;term> with @corresp to the first.</li>
+                <li>Text in the pattern (* 0000) or (* 0000, † 0000) indicates birth- or
+                  birth-and-death dates. Include two words before the first parenthesis and the
+                  dates in a &lt;rilmPerson> element. Omit the asterisk and dagger: <br />
+                  <br />[...Komponisten und Arrangeur Ronald Binge (* 1910, † 1979)...]
+                    <blockquote>&lt;p>...Komponisten und Arrangeur
+                    &lt;rilmPerson>&lt;persName>&lt;forename>Ronald&lt;/forename>
+                    &lt;surname>Binge&lt;/surname>&lt;/persName> (&lt;birth>&lt;date when="1910"
+                    when-custom="1910">1910&lt;/date>&lt;/birth>, &lt;death>&lt;date when="1979"
+                    when-custom="1979">1979&lt;/date>&lt;/death>)&lt;/rilmPerson>...&lt;/p></blockquote></li>
+              </ol></li>
+            <li>Article body text may be followed by any combination of <b>Literatur</b>,
+                <b>Diskografie</b>, <b>Videography</b> and <b>Weblink</b>. Tag each as a separate list.<ol type="a">
+                <li><b>Diskografie</b> and <b>Videografie</b> items are separated by squares ( ■ ); The format of each is<br />
+                  <br />Performer: Title (date; note)<br/><br/>The note following the year is optional.</li>
+                <li><b>Literature</b> items are likewise separated by squares, in the form <br />
+                  <br /> Lastname, Firstname: Title; Pubplace <sup>edition</sup>date</li>
+                <li><b>Weblink</b> items, if more than one, are separated by squares. They are in
+                  the form<br />
+                  <br />http://url/ (note)</li>
+              </ol></li>
+          </ul></li>
+        <li><b>See-references</b> and <b>cross-references</b> are both indicated with a
+            <i>single</i> upward-pointing arrow (↑) preceding the target text.<ul>
+            <li><b>See</b> references are in the form [<b>Referring Term</b>, ↑ Target Term]. Treat
+              these per <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs"
+                >http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a>.</li>
+            <li><b>Cross references</b> in body text are indicated by an upward-pointing arrow
+                <i>before</i> the target term. Tag as &lt;ref> and omit the arrow character.</li>
+            <li><i>If there is no match on the word following the arrow, attempt to match a </i>two
+              words<i> phrase</i>.</li>
+          </ul></li>
+        <li><b>Back matter</b> comprises a bibliography (<b>Literatur</b>), and an index of
+          corporate names (<b>Firmen, Marken...</b>) <ol type="a">
+            <li>Tag the bibliography as three sections, as shown in the srm-example4.xml file.</li>
+            <li>Tag the index as a &lt;list></li>
+          </ol></li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>
