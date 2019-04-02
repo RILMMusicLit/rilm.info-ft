@@ -667,8 +667,8 @@ tableFigure head,
 tableFigure p{
     display: inline !important;
 }
-text[type = 'family'] div[type = 'heading'] div[type = 'contents'] p{
-    display: inline;
+text[type = 'family'] div[type = 'heading'] div[type = 'contents'] head{
+    display: block;
 }
 docAuthor > persName{
     display: inline;
