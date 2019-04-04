@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Lexikon Progressive Rock</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="LPR">Lexikon Progressive Rock</h4>
+      </div>
+    </a>
+    <div class="r201903" title="Added, 3/2019">
+      <p>An encyclopedia, in German, of persons, groups, instruments, and terms. To be converted from provided PDF files.</p>
+      <ol>
+        <li><b>Front matter</b><ul>
+            <li>Omit the half-title (pdf p.1)</li>
+            <li>Title page (pdf p.3)</li>
+            <li>Copyright page (pdf p.4)</li>
+            <li>"Inhalt" (contents, pdf p.7): tag as a two-column table.</li>
+            <li>"Vorwort" (foreword, pdf pp. 11-13): Tag in two &lt;div type="section"> and one
+              &lt;div type="author"></li>
+            <li>Omit the quarter title page (pdf p. 15).</li>
+            <li>Inward-pointing Guillemet- style quotation marks ( » « ) are used. Convert to &lt;q>
+              tags.</li>
+          </ul></li>
+        <li><b>Articles</b> will have &lt;div type="body">, and up to four &lt;div type="ography>.
+            <ul>
+            <li><b>Person</b> articles begin with the surname in bold, followed by a comma and the
+              forename(s). The way to distinguish them from other types of article is by the
+              presence of an asterisk * in the first sentence <i>not</i> preceded by a left
+              parenthesis. <ul>
+                <li>The general pattern will be [<b>Surname</b>, Forename(s), nationality occupation
+                  (occupation, occupation), * Birthplace (Birthplace) Birthdate, † Deathplace]. Most
+                  names will not have a death date.<br />
+                  <br />[<b>Harrison</b>, Gavin, britischer Rockmusiker (Schlagzeug, Perkussion), *
+                  Harrow (London) 28. 5.
+                    1963]<blockquote>&lt;rilmPerson>&lt;persName>&lt;surname>Harrison&lt;/surname>,
+                    &lt;forename>Gavin&lt;/forename>&lt;/persName>,
+                    &lt;nationality>britischer&lt;/nationality>
+                    &lt;occupation>Rockmusiker&lt;/occupation>
+                    (&lt;occupation>Schlagzeug&lt;/occupation>,
+                    &lt;occupation>Perkussion&lt;/occupation>),
+                    &lt;birth>&lt;placeName>Harrow&lt;/placeName>
+                    (&lt;placeName>London&lt;/placeName>) &lt;date>28. 5.
+                    1963&lt;/date>&lt;/birth>&lt;/rilmPerson></blockquote></li>
+                <li>Many names will have an alternate form, in forename-surname order, following the
+                  word "eigentlich": <br />
+                  <br /> [<b>Niemen</b>, Czesław, eigentlich Czesław Juliusz Wydrzycki, polnischer
+                  Rockmusiker (Gesang, Keyboards, Komposition, Text), * Wasiliszki Stare (heute
+                  Weißrussland) 16.2. 1939, † Warschau 17.1. 2004;]
+                    <blockquote>&lt;rilmPerson>&lt;persName>&lt;surname>Niemen&lt;/surname>,
+                    &lt;forename>Czesław&lt;/forename>&lt;/persName>, eigentlich &lt;persName
+                    type="alt">&lt;forename>Czesław&lt;/forename> &lt;forename>Juliusz&lt;/forename>
+                    &lt;surname>Wydrzycki&lt;/surname>&lt;/persName>,
+                    &lt;nationality>polnischer&lt;/nationality>
+                    &lt;occupation>Rockmusiker&lt;/occupation>
+                    (&lt;occupation>Gesang&lt;/occupation>,
+                    &lt;occupation>Keyboards&lt;/occupation>,
+                    &lt;occupation>Komposition&lt;/occupation>,
+                    &lt;occupation>Text&lt;/occupation>), &lt;birth>&lt;placeName>Wasiliszki
+                    Stare&lt;/placeName> (heute &lt;placeName>Weißrussland&lt;/placeName>)
+                    &lt;date>16.2. 1939&lt;/date>&lt;/birth>,
+                    &lt;death>&lt;placeName>Warschau&lt;/placeName> &lt;date>17.1.
+                    2004&lt;/date>&lt;/death>&lt;/rilmPerson></blockquote></li>
+                <li>Use the bold text, comma, and following word as the TEI &lt;title>:
+                    <blockquote>&lt;title>Harrison, Gavin&lt;/title> &lt;title>Niemen,
+                    Czesław&lt;/title></blockquote></li>
+              </ul></li>
+            <li>Articles on <b>Groups</b> contain the word "Band" or "Rockband", or "Rockgruppe" in
+              the first sentence. Tag the bold text before the comma as &lt;orgName
+              type="performing"> and use as the TEI &lt;title>:<br />
+              <br />[<b>It Bites</b>, britische Progressive-Rock-Band, 1982 in Egremont (Cumbria,
+              England) gegründet.]<blockquote>&lt;orgName type="performing">It Bites&lt;/orgName>,
+                britische Progressive-Rock-Band, 1982 in Egremont (Cumbria, England)
+                gegründet.</blockquote>[<b>Jethro Tull</b>, britische Rockgruppe, 1967 in Luton
+              (Bedfordshire, England) gegründet.]<blockquote>&lt;orgName type="performing">Jethro
+                Tull&lt;orgName type="performing">, britische Rockgruppe, 1967 in Luton
+                (Bedfordshire, England) gegründet.</blockquote></li>
+            <li><b>Topic</b> articles have neither asterisk nor "Band" or "Rockband" nor
+              "Rockgruppe" in the first sentence. Use the bold text as TEI &lt;title> and tag as
+                &lt;term>.<ol type="a"></ol></li>
+            
+          </ul><br/> <i><b>NB:</b></i>
+          <i>Text in the pattern</i> (* 0000) or (* 0000, † 0000) <i>indicates birth- or
+            birth-and-death dates</i> and may appear in <i>any type of article</i>. Include two
+          words before the first parenthesis and the dates in a &lt;rilmPerson> element. Omit the
+          asterisk and/or dagger: <br />
+          <br />[<b>Island Records</b>, jamaikanisches Schallplatten-Label, 1959 von Chris Blackwell
+          (* 1937) mit Hilfe von...] <blockquote>&lt;term>Island Records&lt;/term>, jamaikanisches
+            Schallplatten-Label, 1959 von
+            &lt;rilmPerson>&lt;persName>&lt;forename>Chris&lt;/forename>
+            &lt;surname>Blackwell&lt;/surname>&lt;/persName>
+            &lt;birth>(&lt;date>1937&lt;/date>)&lt;/birth>&lt;/rilmPerson> mit Hilfe
+            von...</blockquote>
+        </li>
+            <li>Article body text may be followed by any combination of <b>Literatur</b>,
+                <b>Diskografie</b>, <b>Videography</b> and <b>Weblink</b>. Tag each as a separate
+                list.<ol type="a">
+                <li><b>Diskografie</b> and <b>Videografie</b> items are separated by squares ( ■ );
+                  The format of each is [Performer: Title (date)] Both the performer and date are optional.<br />
+                  <br />[Christoph Stiefel: Isorhythms for Solo Piano
+                    (2005)]<blockquote>&lt;bibl>&lt;author>&lt;persName>&lt;forename>Christoph&lt;/forename>
+                    &lt;surname>Stiefel&lt;/surname>&lt;/persName>&lt;/author>: &lt;title>Isorhythms
+                    for Solo Piano&lt;/title>
+                  (&lt;date>1991&lt;/date>)&lt;/bibl></blockquote>[Vanilla Fudge: The Beat Goes
+                    On]<blockquote>&lt;bibl>&lt;orgName>Vanilla Fudge&lt;/orgName>: &lt;title>The
+                    Beat Goes On&lt;/title>&lt;/bibl></blockquote>[Quantum Guitar
+                    (1998)]<blockquote>&lt;bibl>&lt;title>Quantum Guitar&lt;/title>
+                    (&lt;date>1998&lt;/date>)&lt;/bibl></blockquote></li>
+                <li><b>Literature</b> items are likewise separated by squares, in the form <br />
+                  <br /> Lastname, Firstname: Title; Pubplace <sup>edition</sup>date</li>
+                <li><b>Weblink</b> items, if more than one, are separated by squares. They are in
+                  the form<br />
+                  <br />http://url/ (note)</li>
+              </ol></li>
+        <li><b>See-references</b> and <b>cross-references</b> are both indicated with a
+            <i>single</i> upward-pointing arrow (↑) preceding the target text.<ol type="a">
+            <li><b>See</b> references are in the form [<b>Referring Term</b>, ↑ Target Term]. Treat
+              these per <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs"
+                >http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a>.</li>
+            <li><b>Cross references</b> in body text are indicated by an upward-pointing arrow
+                <i>before</i> the target term. Tag as &lt;ref> and omit the arrow character.</li>
+            <li><i>If there is no match on the word following the arrow, attempt to match a </i>two-words<i> phrase</i>.</li>
+          </ol></li>
+        <li><b>Back matter</b> comprises a bibliography (<b>Literatur</b>), and an index of
+          corporate names (<b>Firmen, Marken...</b>) <ol type="a">
+            <li>Tag the bibliography as three sections, as shown in the lpr-example4.xml file.</li>
+            <li>Tag the index as a &lt;list></li>
+          </ol></li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>
