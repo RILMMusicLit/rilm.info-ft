@@ -649,6 +649,9 @@ item > p{
     text-indent: 0;
     display: inherit;
 }
+quote[rend = "block"] {
+    display: block;
+}
 quote > p{
     font-style: italic;
 }
