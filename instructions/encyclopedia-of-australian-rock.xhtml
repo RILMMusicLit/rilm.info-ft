@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>The Encyclopedia of Australian Rock and Pop</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="ARP">The Encyclopedia of Australian Rock and Pop</h4>
+      </div>
+    </a>
+    <div class="r201905" title="Added, 5/2019">
+      <p>An encyclopedia, in English, of persons and groups. To be converted from provided PDF files.</p>
+      <ol>
+        <li><b>Front matter</b>: Only one page is provided<ul>
+            <li>Use the text "THE ENCYCLOPEDIA OF AUSTRALIAN ROCK AND POP Second Edition - Corrected
+              By Ian McFarlane A Third Stone Production for The Daily Flash" for a title-page</li>
+            <li>Use the remaining text, from "Copyright.." through the end, as copyright page.</li>
+          </ul></li>
+        <li><b>Articles</b>: text @type is either "person" or "group". <ul>
+            <li>Articles on <b>Groups</b> have a section headed "Original line-up:" after the
+              article heading. Tag this section as a list, as shown in the example files. Tag each
+              item as a &lt;rilmPerson>.<br />
+              <br />[<b>Original line-up</b>: Sherry Valier (real name Sherry Rich, vocals, rhythm
+              guitar; ex-Cactus Fever), Anne McCue (lead guitar, vocals)]<blockquote>&lt;list>
+                &lt;item>&lt;rilmPerson xml:id="r1">&lt;persName>&lt;forename>Sherry&lt;/forename>
+                &lt;surname>Valier&lt;/surname>&lt;/persName> (real name &lt;persName
+                type="alt">&lt;forename>Sherry&lt;/forename>
+                &lt;surname>Rich&lt;/surname>&lt;/persName>, &lt;occupation>vocals&lt;/occupation>,
+                &lt;occupation>rhythm guitar&lt;/occupation>; ex-Cactus
+                Fever)&lt;/rilmPerson>&lt;/item> &lt;item>&lt;rilmPerson
+                xml:id="r2">&lt;persName>&lt;forename>Anne&lt;/forename>
+                &lt;surname>McCue&lt;/surname>&lt;/persName> (&lt;occupation>lead
+                guitar&lt;/occupation>,
+                &lt;occupation>vocals&lt;/occupation>)&lt;/rilmPerson>&lt;/item>
+                &lt;/list></blockquote></li>
+            <li><b>Person</b> articles will not have the "Original line-up" section. The first
+              sentence will repeat the name and give birth (and death) dates in parentheses. <br />
+              <br />[Singer/guitarist/songwriter Keith Glass (17 September 1946) is one of the
+              unsung legends...]<blockquote>&lt;p xml:id="p1">Singer/guitarist/songwriter
+                &lt;rilmPerson xml:id="r1">&lt;persName>&lt;forename>Keith&lt;/forename>
+                &lt;surname>Glass&lt;/surname>&lt;/persName> &lt;birth>(&lt;date when="1946-09-17"
+                when-custom="1946">17 September 1946&lt;/date>)&lt;/birth>&lt;/rilmPerson> is one of
+                the unsung legends...&lt;/p></blockquote></li>
+            <li>Both <b>group</b> and <b>person</b> articles will have a discography, headed
+                "<b>Albums:</b>", and a few have a bibliography, "<b>Further reading:</b>". Group
+              discographies often have sections, dedicated to invididual members of the group.<br />
+              <br /> [<b>Albums:</b> Going Over Old Ground (Virgin, 1989), Southerly Buster (1999);
+                <b>Keith Glass and the Tumblers</b>: Living Down My Past (Virgin, 1991).]
+                <blockquote>&lt;div type="discography"
+                xml:id="d2">&lt;head>Albums:&lt;/head>&lt;list>&lt;item>&lt;bibl>&lt;title>Going
+                Over Old Ground&lt;/title> (&lt;publisher>Virgin&lt;/publisher>,
+                &lt;date>1989&lt;/date>)&lt;/bibl>&lt;/item>&lt;item>&lt;bibl>&lt;title>Southerly
+                Buster&lt;/title> (&lt;date>1999&lt;/date>)&lt;/bibl>&lt;/item>&lt;/list>&lt;div
+                type="section">&lt;head>Keith Glass and the
+                Tumblers:&lt;/head>&lt;list>&lt;item>&lt;bibl>&lt;title>Living Down My
+                Past&lt;/title> (&lt;publisher>Virgin&lt;/publisher>,
+                &lt;date>1991&lt;/date>).&lt;/bibl>&lt;/item>&lt;/list>&lt;/div>&lt;/div></blockquote></li>
+            
+          </ul></li><li><i>This title contains <b>no</b> images, back matter, or cross-references</i>.</li>
+      </ol>
+      <p>Please refer also to sample files.</p>
+    </div>
+  </body>
+</html>
