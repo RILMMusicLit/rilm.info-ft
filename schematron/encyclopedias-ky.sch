@@ -15,7 +15,7 @@
                 normalize-space(.) = 'ter' or
                 . = 'op de' or
                 normalize-space(.) = 'd’' or
-                normalize-space(.) = 'd/'' or
+                normalize-space(.) = 'd/' or
                 normalize-space(.) = 'du' or
                 normalize-space(.) = 'di' or
                 . = 'de la' or
