@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="file:///E:/RME_Content/RME-in-process/2021/tei.css" rel="stylesheet" type="text/css" />
+    <title>Canadian Pop Music Encyclopedia</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="CPM">Canadian Pop Music Encyclopedia</h4>
+      </div>
+    </a>
+    <div class="r201905" title="Added, 5/2019">
+      <p>An encyclopedia, in English, of persons and groups. To be converted from two provided MS Word files.</p>
+      <ol>
+        <li><b>Front matter</b>: <ul>
+            <li>Title page, with image</li>
+            <li>Copyright page</li>
+            <li>OMIT the Contents list</li>
+            <li><b>Acknowledgements</b> (including the dedication at the top of p.7): begin a new
+              &lt;div> at <b>Grace Notes</b>; ends p.9</li>
+            <li><b>How to Use and Understand this Encyclopedia</b>: begin a new &lt;div> at
+                <b>Definitions</b>; tag the three-column section at the bottom of p.11 as a
+              &lt;list>; begin a new &lt;div> at <b>Submissions</b>, and continue through p.13.</li>
+            <li><b>Introduction</b> (pp.14-15)</li>
+            <li><i>NOTE: Volume 2 front matter is identical with Volume 1 front matter, so it can be
+                omitted.</i></li>
+          </ul></li>
+        <li><b>Articles</b>on <b>Groups</b>: <ul>
+            <li>Articles on Groups have either (a) a heading in all caps ("<b>ADVENTURES IN
+                PARADISE</b>") <i>OR</i> (b) a heading ending with ", The" ("<b>ANTIQUATORS,
+              The</b>" ). Use the string as //titleStmt/title in the TEI header, and in &lt;div
+              type="heading"> in the TEI body, as shown in the example files.</li>
+            <li>Most group articles have a <b>list of group members</b> after the article heading.
+              The members are delimited by " / ". Tag each item as a &lt;rilmPerson&gt;; inside, tag
+              names and occupation:<br />
+              <br />[<b>Dwayne Ford</b> (keyboards, flute, guitar, vocals) / <b>Hugh Brockie</b>
+              (lead and rhythm guitar, banjo) / <b>Terry Danko</b> (bass; later switched to guitar)
+              / <b>Jim Atkinson</b> (vocals, guitar) / <b>Brian Hilton</b> (drums) / <b>Penti
+                'Whitey' Glan</b> (percussion) / <b>Chris Vickery</b> (bass; replaced Danko) /
+                <b>Marty Coudrey</b> (drums; replaced Mal Turner)
+                ]<blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;forename>Dwayne&lt;/forename>
+                &lt;surname>Ford&lt;/surname>&lt;/persName>
+                (&lt;occupation>keyboards&lt;/occupation>, &lt;occupation>flute&lt;/occupation>,
+                &lt;occupation>guitar&lt;/occupation>,
+                &lt;occupation>vocals&lt;/occupation>)&lt;/rilmPerson> /
+                &lt;rilmPerson>&lt;persName>&lt;forename>Hugh&lt;/forename>
+                &lt;surname>Brockie&lt;/surname>&lt;/persName> (&lt;occupation>lead and rhythm
+                guitar&lt;/occupation>, &lt;occupation>banjo&lt;/occupation>)&lt;/rilmPerson> /
+                &lt;rilmPerson>&lt;persName>&lt;forename>Terry&lt;/forename>
+                &lt;surname>Danko&lt;/surname>&lt;/persName> (&lt;occupation>bass&lt;/occupation>;
+                later switched to guitar)&lt;/rilmPerson> /
+                &lt;rilmPerson>&lt;persName>&lt;forename>Jim&lt;/forename>
+                &lt;surname>Atkinson&lt;/surname>&lt;/persName>
+                (&lt;occupation>vocals&lt;/occupation>,
+                &lt;occupation>guitar&lt;/occupation>)&lt;/rilmPerson> /
+                &lt;rilmPerson>&lt;persName>&lt;forename>Penti&lt;/forename>
+                '&lt;addName>Whitey&lt;/addName>' &lt;surname>Glan&lt;/surname>&lt;/persName>
+                (&lt;occupation>percussion&lt;/occupation>)&lt;/rilmPerson> /
+                &lt;rilmPerson>&lt;persName>&lt;forename>Chris&lt;/forename>
+                &lt;surname>Vickery&lt;/surname>&lt;/persName> (&lt;occupation>bass&lt;/occupation>;
+                replaced Danko)&lt;/rilmPerson> /
+                &lt;rilmPerson>&lt;persName>&lt;forename>Marty&lt;/forename>
+                &lt;surname>Coudrey&lt;/surname>&lt;/persName>
+                (&lt;occupation>drums&lt;/occupation>; replaced Mal Turner)&lt;/rilmPerson>
+                &lt;/p></blockquote><i>(Note: don't tag explanations following the
+              semicolon.)</i></li>
+            <li>The <b>body text</b> of all articles consists of a single paragraph. Tag any phrase
+              within quotation marks (single or double, curly or straight) as &lt;title>.</li>
+            <li>Some articles have a <b>list of contributors</b>, in bold italic, at the end of the
+              body text. These lists begin with "with notes from". Begin a new &lt;p> and tag as
+              italic:<br />[The group disbanded in late 1986/early 1987. <i><b>with notes from Paul
+                  Williamson</b></i>.]<blockquote>...The group disbanded in late 1986/early
+                1987.&lt;/p><br />&lt;p>&lt;hi rend="italic">with notes from Paul
+                Williamson.&lt;/hi>&lt;/p></blockquote></li>
+            <li>Some articles have <b>see-also references</b>, which are in bold italic, set off
+              with brackets, and beginning with the text "[also see". Begin a new &lt;p>, tag as
+              bold, and tag the ref targets:<br />[...Saturday, October 16, 2004. <b><i>[also see
+                  DOUG &amp; THE SLUGS]</i></b> ]<blockquote>...Saturday, October 16, 2004.&lt;/p>
+                <br />&lt;p>&lt;hi rend="bold">[also see &lt;ref target="cpm00000">DOUG &amp; THE
+                SLUGS&lt;/ref>]&lt;/hi>&lt;/p></blockquote></li>
+            <li><b>Discographies</b> consist of maximum three sections: <b>Singles</b>,
+                <b>Albums</b>, and <b>Compilation Tracks</b>. Set each as a separate &lt;div>.
+                <i>Within each of those three sections, there may be subsections headed with</i>
+              "as..." <i>or</i> "with...". These should be tagged as nested &lt;div>s. SEE the file
+                <b>cmp_example2.xml</b> for the structure. Tag &lt;date>, &lt;title>,
+              &lt;publisher>, and &lt;idno> as shown in the example files.</li>
+          </ul></li>
+        <li><b>Person</b> articles have a heading in all caps followed by a comma, and normal-capped
+          text that is NOT "The"; this is often followed by Birth/Death data:<br /><b>BERGMANN, Art
+            [Born: February 8, 1953 in Vancouver, British Columbia]</b>.<br />The are otherwise
+          identical in structure and format to group articles. SEE the file
+          <b>cmp_example1.xml</b>.</li>
+        <li>Treat see-references (such as <b>EAST AFRICAN AFFAIR <i>[see INFERNO 5 PLUS 1]</i></b>
+          as per <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs"
+            >http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a>.</li>
+        <li><b>Back matter</b>: <i>NOTE: the back matter of vols. 1 and 2 are identical EXCEPT for
+            the photo credits.</i>*<ul>
+            <li><b>References</b> (from vol. 1 only): start a new &lt;div> at each bold heading
+                (<b>Newspapers</b>, <b>Periodicals</b>,… <b>Websites</b>, <b>Bibliography</b>)</li>
+            <li><b>Photo Credits</b>: *<i>Combine</i> from volumes 1 and 2 as a single &lt;list>.
+              The few paragraphs after the lists are the same in both volumes, so do not need to be
+              repeated. </li>
+            <li><b>About the Author</b> (from vol. 1 only)</li>
+          </ul></li>
+      </ol>
+    </div>
+  </body>
+</html>
