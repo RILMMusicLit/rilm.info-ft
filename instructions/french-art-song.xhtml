@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -47,3 +48,54 @@
     </div>
   </body>
 </html>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="file:///E:/RME_Content/RME-in-process/2021/tei.css" rel="stylesheet" type="text/css" />
+    <title>Encyclopedia of French Art Song</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="FAS">Encyclopedia of French Art Song</h4>
+      </div>
+    </a>
+    <div class="r201905" title="Added, 5/2019">
+      <p>An encyclopedia, in English, of works, persons, topics, genres, and instruments. To be converted from a provided PDF file.</p>
+      <ol>
+        <li><b>Front matter</b>: <ul>
+            <li>[Title page], with image</li>
+            <li>[Copyright page]</li>
+            <li><b>A Few Words About the Encyclopedia</b>: <i>Note the head is all lower case in the source; capitalize as given here.</i> Begin new
+            &lt;divs> at <b>How the Encyclopedia “Generated Itself”</b> and at <b>What This Book Is Not</b></li>
+            <li><b>Abbreviations</b>; tag as a two-column table. <i>Note that the abbreviations are lower case in the source; please capitalize.</i></li>
+            <li><b>Acknowledgements</b></li>
+          </ul></li>
+        <li><b>General notes on articles</b>: <ul>
+            <li>Article heads are followed by a tabular space.</li>
+            <li>Tag all <i>italic</i> text (not in the head) with &lt;hi rend="italic"></li>
+            <li>Tag all <b>bold</b> text (not in the head) with &lt;ref>. Bold text always indicates a cross-reference. <i>No need to tag with</i> &lt;hi rend="bold">.</li>
+            <li>If a text is both bold and italic (<b><i>Cinq Mélodies de Venise</i></b>), tag &lt;hi> inside &lt;ref>:<blockquote>&lt;ref target="fas00000">&lt;hi rend="italic">Cinq Mélodies de Venise&lt;/hi>&lt;/ref></blockquote></li>
+          </ul></li>
+        <li><b>Articles</b>on <b>works</b>: <ul>
+            <li>Articles on works have a heading in bold-italic (<b><i>A Clymène</i></b>). Use the heading as //titleStmt/title in the TEI header, and in &lt;div type="heading"> in the TEI body, as shown in the example files.</li>
+          <li>Tag quoted poetry in a &lt;cit rend="block"> with &lt;lg> and &lt;l>. Tag other indented quotes with &lt;cit rend="block"> and &lt;p>.</li>
+          </ul></li>
+        <li><b>Person articles</b> have a heading in bold, capitalized, followed by "(B ", indicating birth info.<ul>
+            <li>Use the heading text in the //titleStmt/title in the TEI header and in &lt;div type="heading">. <i>OMIT</i> any variants in parenthesis from the header, but do include them in the heading div.</li>
+            <li>Tag birth / death dates and places if given.</li>
+            <li>Some longer person articles have an in-line worklist at the end, indicated by "Poetry: ". Start a &lt;div type="works">, use "Poetry:" as a &lt;head>, and tag the titles and dates in &lt;list>&lt;item>&lt;bibl>&lt;title> as in <b>fas-example3.xml</b>.</li>
+          </ul></li>
+        <li><b>Topical articles</b> have a heading in bold, followed by "(FR " or rarely some other language identifier: "(SCOT", "(BQ", "(SP", etc. Choose &lt;text @type="topic"> except in other cases below. <i>Note: If the article heading begins with a lower-case French article "le", "la", or "l’", OMIT the "l" article from the //titleStmt/title in the TEI header, but include it in the heading div. <b>See example files 5, 6, and 7.</b></i><ul>
+            <li>If the first sentence of an article contains the word "instrument", the text @type should be "instrument".</li>
+            <li>If the article title begins with a capital letter, but there is neither (B nor language designation following--in other words, no opening parenthesis--then set text @type to "matter" and RILM will sort them out.</li>
+          </ul></li>
+                    <li><b>Back matter</b> consists only of (1) <i>About the Author</i> and (2) <i>Colophon</i>. </li>
+      </ol>
+    </div>
+  </body>
+</html>
+>>>>>>> aa77c09d1776dac07d95084e6c6891095a808dc2
