@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Vietnamese Musical Instruments</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="VMI">Vietnamese Musical Instruments</h4>
+      </div>
+    </a>
+    <div class="r201905" title="Added, 5/2019">
+      <p>An encyclopedia, in English, of instruments; with interspersed essays and field reports/vignettes. To be converted from a provided PDF file.</p>
+      <ol>
+        <li><b>Front matter</b>: <ul>
+            <li>[Title page], with image</li>
+            <li>[Copyright page], omit header image (which is on every page)</li>
+            <li><b><i>Dedication</i></b></li>
+            <li><b><i>Contents</i></b>; tag as a two-column table. No indenting is necessary</li>
+            <li><b><i>Introduction</i></b></li>
+            <li><b><i>Acknowledgements</i></b>: tag as a &lt;list></li>
+            <li><b><i>Explanatory Notes</i></b></li>
+          </ul></li>
+        <li><b>Essays</b>: <i>A Brief History of Vietnamese Music</i> (pp.11-29) and <i>Ethnic Minorities (Dân Tộc)</i> (pp.30-32; includes the map).<br />Treat as two articles, &lt;text @type="topic">.</li>
+        <li><b>More front matter</b>: <ul>
+            <li><b><i>Abbreviations</i></b>: Tag at a two-column table; Tag "Note" and "Any dates" paragraphs with &lt;p>.</li>
+          </ul></li>
+        <li><b>More essays</b>:<ul>
+            <li><i>Instrument Classifications</i> (pp.34-36): Treat as an article, &lt;text @type="topic">.</li>
+            <li><i>Aerophones (Họ Hơi)</i> (pp.37-39): Treat as an article, &lt;text @type="topic">. <i>NOTE: Omit the head "The Instruments" and the image.</i></li>
+            <li>Other essays begin on p. 134, 183, 287. Similarly, omit the head "The Instruments" and the image. </li>
+          </ul></li>
+        <li><b>Articles</b> have a heading, centered, followed by one or more illustrations, a table of characteristics, and rarely additional text, table(s), or illustrations (for example, "Đàn Môi" pp.47-48) All are &lt;text type="instrument">.<ul>
+            <li>Omit the right-left images in the page headers.</li>
+            <li>Use the centered heading text in the //titleStmt/title in the TEI header and in &lt;div type="heading"></li>
+            <li>Use &lt;list> elements within the &lt;cell> elements where printed tables contain lists in the right column (see example file).</li>
+            <li>Tag extra paragraphs, tables, and figures as needed (see example file).</li>
+          </ul></li>
+        <li><b>Vignettes</b> in "cursive"/"handwriting" type (pp.57ff, 80ff, 89ff, etc.):<ul>
+            <li>These have a large, centered title ("Nung Prố" on p. 57, for example). Use this in the //titleStmt/title in the TEI header and in &lt;div type="heading">.</li>
+            <li>They have a smaller byline <i>above</i> that, in smaller type, underlined ("Buôn Ma Thuột, June 2004" on p.57). Use this as &lt;head> in &lt;div type="subheading">.<blockquote>&lt;div type="heading">&lt;p>Nung Prố&lt;/p>&lt;/div><br />&lt;div type="subheading">&lt;head>Buôn Ma Thuột, June 2004&lt;/head>&lt;p>In search of more instruments...&lt;/p>&lt;/div></blockquote></li>
+            <li>Tag these as &lt;text type="topic">.</li>
+          </ul></li>
+        <li><b>Back matter</b>:<ul>
+            <li><i><b>Uncatalogued Instruments</b></i> (pp. 344-356): omit the image, tag three tables.</li>
+            <li><b><i>Bibliography</i></b> (pp. 357-363):  start a &lt;div type="ography"> at each bold, underlined head ("AUDIO CD/Record Booklets", "Books - English", etc.</li>
+            <li>Treat <b><i>Places</i></b> (pp.364-366) as a separate TEI file</li>
+            <li><b><i>Glossary</i></b> (pp.367-368): Tag as a &lt;list>; each term ("Chromaticism", "Diatonic", etc. as &lt;term>.</li>
+            <li><b><i>Index</i></b> (pp. 370ff): <b>OMIT</b>--all terms are already in the articles themselves.</li>
+          </ul>. </li>
+      </ol>
+    </div>
+  </body>
+</html>
