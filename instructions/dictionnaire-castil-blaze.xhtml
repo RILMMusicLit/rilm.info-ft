@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Dictionnaire de musique modern</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="DCB">Dictionnaire de musique modern</h4>
+      </div>
+    </a>
+    <div class="r202105" title="Added, 5/2021">
+      <ol>
+        <li><b>General comments</b>: <ul>
+            <li>This publication should be converted from PDF.</li>
+            <li>All entries are &lt;text type="topic">.</li>
+            <li>Entries will have &lt;div type="heading"> and &lt;div type="subheading"> only. </li>
+            <li>Double-angle quotation marks (« ») are used. See below for special treatment of block quotes.</li>
+          </ul></li>
+        <li><b>Three PDFS</b> are supplied: "dictionnairedemu01byucast" and "dictionnairedemu02byucast" are to be used for OCR and split PDFs. However, <i>"dictionnairedemu02byucast" is missing page 1</i>. Please extract this page from the PDF "Castil-Blaze_tome_2". </li>
+        <li><b>Front matter</b> includes an <b>imprint page</b> (PDF p.6), <b>title page</b> (PDF p.7) and <b>Préface</b> (pp.9-20) for volume 1. Do not capture the half-title page; do not digitize front matter for volume 2.</li>
+        <li>The titles of <b>entries</b> are given in small caps. Convert the small caps to normal case. Use for the <b>titleStmt/title</b> in the TEI header, and for the <b>div type="heading"</b>. </li>
+        <li><b>Cross references</b> appear in some articles. They are typeset in parentheses with "V.",  "Voy.",  or "Voyez" in italic type:<ul>
+            <li>( <i>Voyez</i> M<small>UANCES</small>.)</li>
+          </ul>If there are multiple references, they are separated by commas:<ul>
+            <li>( <i>Voyez</i> C<small>ODA</small> , T<small>RIO</small>. )</li>
+          </ul></li>
+        <li><b>See references</b> are typeset the same way, but come immediately after the heading, with no other body text. Treat these according to <a
+            href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">these instructions</a>; do not create a TEI file for the reference:<ul>
+            <li>À B<small>ATTUTA</small>. ( <i>Voyez</i> A <small>TEMPO</small>.)</li>
+          </ul>
+          <i>In the "A tempo" article:</i>
+          <blockquote>&lt;textClass><br />&lt;keywords>&lt;term>à battuta&lt;/term>&lt;/keywords><br />&lt;/textClass></blockquote></li>
+        <li><b>Block quotes</b> are indicated in the print by a left double-angle quotation at the beginning of each line of the quotation:<ul>
+            <li>« bats que je suis obligé de livrer sans cesse aux <br />« doctrines contraires à la vérité que contient <br />« cet ouvrage, où les fausses idées de Rameau,</li>
+          </ul><i>Tag these as &lt;cit rend="block">, omitting the quotation marks:</i><blockquote>&lt;cit rend="block">&lt;quote>bats que je suis obligé de livrer sans cesse aux doctrines contraires à la vérité que contient cet ouvrage, où les fausses idées de Rameau,&lt;/quote>&lt;/cit>]</blockquote></li>
+        <li><b>FIGURES</b> are <i>all</i> printed at the end of Volume 1. References appear within the article texts:<ul>
+            <li>(<i>Fig</i>. 25.)</li>
+          </ul>Create a &lt;graphic> element at the end of the paragraph in which the reference occurs and extract the appropriate numbered image file from the PDF. (see example file)</li>
+      </ol>
+    </div>
+  </body>
+</html>

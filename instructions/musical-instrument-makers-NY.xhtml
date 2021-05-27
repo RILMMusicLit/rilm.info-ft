@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Musical Instrument Makers of New York</title>
+  </head>
+  <body>
+    <a>
+      <div>
+        <h4 id="MIM">Musical Instrument Makers of New York</h4>
+      </div>
+    </a>
+    <div class="r202105" title="Added, 5/2021">
+      <p>To be converted from the PDF scanned by Aptara.</p><ol>
+        <li><b>Front matter</b>:
+          <ul><li>Omit the cover and half title page</li>
+          <li>Use frontispiece image (PDF p.3) for the "Steinway &amp; Sons" article (more below)</li>
+          <li><b>Title page</b></li>
+          <li><b>Copyright page</b></li>
+          <li>Omit the List of Illustrations – see below for treatment of illustrations</li>
+          <li><b>Preface</b></li>
+          <li><b>Introduction</b>: Start a new div type="section"> with the heads "Craftsmen and working conditions", "Nineteenth-century expansion", and "Decline of the trade". </li>
+          <li><b>Using the directory</b></li>
+          <li><b>Sources</b>: Nest divs according to the heads</li>
+          <li><b>Abbreviations</b>: tag as a table</li></ul></li>
+        <li><b>Articles</b>: text @type is either "person" or "corporate". **<ul>
+            <li>The heading of person articles have surnames in all-caps, bold, and forename in normal case. Please normalize case in both &lt;titleStmt>&lt;title> and &lt;div type="heading">:<ul>
+                <li><b>ABBOT</b>, John</li>
+              </ul><blockquote>&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Abbott&lt;/surname>, &lt;forename>John&lt;/forename>&lt;/persName>&lt;/rilmPerson>&lt;/p></blockquote></li>
+            <li>The heading of corporate articles will be in all-caps bold. Please normalize case:<ul>
+                <li><b>MANHATTAN PIANOFORTE COMPANY</b></li>
+              </ul><blockquote>&lt;orgName>Manhattan Pianoforte Company&lt;/orgName></blockquote></li>
+            <li>In the &lt;div type="subheading">, include the &lt;table> of dates, followed by any other text in &lt;p> elements, as in the sample files.</li>
+            <li><b>**<i>Note: there is one </i>"family"<i> article: </i>"GEIB". <i>Begin a </i>&lt;div type="person"><i> at each all-cap italic subheacing.</i></b></li>
+          </ul></li>
+        <li><b>Cross references</b> in the text might read "See <i>Target</i>" or "See above <i>Target</i>." Multiple targets are separated by semicolons. Omit the word "above" when it occurs in this context:<ul>
+            <li>See <i>George Manner</i>; <i>Arion Piano-Forte Company</i>. <blockquote>&lt;p>See &lt;ref target="mim????>George Manner&lt;/ref>; &lt;ref target="mim????>Arion Piano-Forte Company&lt;/ref>.&lt;/p></blockquote></li>
+            <li>See above <i>George Manner</i>.<blockquote>&lt;p>See &lt;ref target="mim????>George Manner&lt;/ref>.&lt;/p></blockquote></li>
+          </ul></li>
+        <li><b>See references</b> that have <i>no table or accompanying text</i>: Treat these according to <a
+            href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">these instructions</a>; do not create a TEI file for the reference.<ul>
+            <li><u><b>MANZ</b>, George M.</u>
+              <br />    See <i>Kindt &amp;Manz</i>.</li>
+          </ul></li>
+        <li><b>Illustrations and their captions</b> should be added to the articles they correspond to:<table>
+            <thead>
+              <tr>
+                <th>PDF page no. |</th>
+                <th>article title</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>6</td>
+                <td>Steinway &amp; Sons (PDF p.173)</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Firth, Hall &amp; Pond (PDF p.75)</td>
+              </tr>
+              <tr>
+                <td>42</td>
+                <td>Bornhoeft, John (PDF p.40)</td>
+              </tr>
+              <tr>
+                <td>67</td>
+                <td>Dodds &amp; Claus(e)  (PDF p.67)</td>
+              </tr>
+              <tr>
+                <td>92</td>
+                <td>Haines, Napoleon J. (PDF p.91)</td>
+              </tr>
+              <tr>
+                <td>108</td>
+                <td>Jollie, Allen R. (PDF p.107)</td>
+              </tr>
+              <tr>
+                <td>195</td>
+                <td>Whaites, Archibald (PDF p.194)</td>
+              </tr>
+              <tr>
+                <td>201</td>
+                <td>Tomkins, William Shute (PDF p.180)</td>
+              </tr>
+            </tbody>
+          </table></li>
+        <li>Back matter:<ul>
+            <li><i>Omit</i> the <b>Check list of musical instrument makers by types of instruments produced</b></li>
+            <li><b>Selected Bibliography</b>: begin a new &lt;div type="section"> at each all-caps heading: "BOOKS, ARTICLES, and MANUSCRIPTS", "CIlY DIRECTORIES", etc.</li>
+          </ul></li>
+      </ol>
+      
+    </div>
+  </body>
+</html>
