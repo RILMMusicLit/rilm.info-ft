@@ -14,7 +14,7 @@
         </div>
         <div class="r2021" title="Added, 11/2021">
                <p></p>
-               <p>[<b><i>*Revised 2022/02/14*</i></b> Revisions are indicated by "<b><i>*NEW</i></b>".]</p>
+               <p>[<b><i>*Last Revised 2022/02/15*</i></b> Revisions are indicated by "<b><i>*NEW</i></b>".]</p>
             <p>The first stage of RILMs conversion of <i>DEUMM</i> will be the 10-volume <b><i>Biografie</i></b>. You will produce a PDF for each of the volumes (scanned at 300 dpi, grayscale, and OCR text in Italian), plus article-level TEI files.</p>
         </div>
         <div><h5>1. General principles:</h5><ul>
@@ -391,15 +391,14 @@
                </ul><h5>7.
                     See-references</h5><p>An article <i>heading</i> followed by a right-pointing arrow (→), followed by text in small caps, indicates a see-reference:<br /> [<b>De Ana, Francesco</b> → A<small>NA</small>, F<small>RANCESCO</small> D’.]<br />Do not make an XML file or PDF for these, but treat them as described at <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a></p><h5>8.
                     Cross-references</h5><ul>
-                    <li>A right-pointing arrow (→) or by a jagged right-pointing arrow (no Unicode
-                         character available, represented in these instructions as "~>") within the
-                              <i>body text</i> indicates a cross reference, or see-also reference. </li>
+                    <li>A right-pointing arrow (→) or by a wavy right-pointing arrow (⤳) <i>within the
+                              body text</i> indicates a cross reference, or see-also reference. </li>
                     <li>A straight arrow indicates a target within the same part of the
                          encyclopedia—from <i>Biografie</i> to <i>Biografie</i>, for example. </li>
-                    <li>A jagged arrow indicates a target in a different part of the
-                         encyclopedia—from <i>Biografie</i> to <i>Lessico</i>. </li>
+                    <li>A wavy arrow indicates a target in a different part of the
+                         encyclopedia—from <i>Biografie</i> to <i>Lessico</i>, for example. </li>
                     <li>They might point to a whole article, or to a section within an
-                         article:<br /> (~> D<small>ULCE</small> M<small>ELOS</small>) or (→
+                         article:<br /> (⤳ D<small>ULCE</small> M<small>ELOS</small>) or (→
                               H<small>OMER</small>, 2)<br />The first points to the whole "Dulce
                          Melos" article in the <i>Lessico</i> part of the encyclopedia. The second
                          points to person number 2 in the family article on "Homer" in the
@@ -413,7 +412,8 @@
                     target="deu00000">Dulce Melos&lt;/ref></blockquote><blockquote>&lt;ref
                     target="deu11111#id-9b05e5d0-5cf9-11ec-bf63-0242ac130002">Homer,
                     2&lt;/ref></blockquote>
-               <p><i>NB. Because we must convert the Biografie part first, the @target references to other parts of the encyclopedia must be given a placeholder value.</i></p>
+               <p>NB. <i>Omit</i> the arrow character from the TEI; the link created by the &lt;ref> tag will mark the reference.</p>
+               <p><i>NB 2. Because we must convert the Biografie part first, the @target references to other parts of the encyclopedia must be given a placeholder value.</i></p>
                <h5>Appendice (1990)</h5><ul>
                     <li>Apart from the front matter capture noted above, <b>articles</b> in the 1990
                               <i>Appendice</i> volume should be treated exactly as the ones in the
@@ -457,9 +457,9 @@
                                    volumes and first <i>Appendice</i> volume. They should be tagged
                                    the same as those.</li>
                          </ul></li>
-                    <li>The second part, subtitled <i>Repertorio delle voci biografiche del DEUMM
+                    <li><i><b>*NEW 2/15/2022*:</b></i> The second part, subtitled <i>Repertorio delle voci biografiche del DEUMM
                               ordinate per categoria</i>, contains a series of name indexes
-                         organized by occupation. </li>
+                         organized by occupation. For now, tag each index as a &lt;div type="section"> and as a &lt;list>. Tag the name as &lt;persName> with &lt;forename> and &lt;surname> as appropriate.</li>
                </ol></div>
     </body>
 </html>
