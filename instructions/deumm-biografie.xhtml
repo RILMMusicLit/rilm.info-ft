@@ -14,452 +14,432 @@
         </div>
         <div class="r2021" title="Added, 11/2021">
                <p></p>
-               <p>[<b><i>*Last Revised 2022/02/15*</i></b> Revisions are indicated by "<b><i>*NEW</i></b>".]</p>
+               <p>[<b><i>*Last Revised 2022/03/01*</i></b> Revisions are indicated by "<b><i>*NEW</i></b>".]</p>
             <p>The first stage of RILMs conversion of <i>DEUMM</i> will be the 10-volume <b><i>Biografie</i></b>. You will produce a PDF for each of the volumes (scanned at 300 dpi, grayscale, and OCR text in Italian), plus article-level TEI files.</p>
         </div>
         <div><h5>1. General principles:</h5><ul>
-                    <li>Each volume of the <i>Biografie</i> has a different <b>year</b> and
-                              <b>ISBN</b>, given on the copyright page of each. The correct values
-                         should be included in the TEI header of each article.</li>
-                    <li><b>xml:id's</b>: <i>DEUMM online</i> will be a continually updated resource,
-                         so each &lt;div>, &lt;p>, and &lt;bibl> element must have a unique
-                         identifier: an xml:id element containing "id-" followed by a UUID. For
-                         example: &lt;p xml:id="id-f11a99bb-5a84-12df-f1b2-b9374b7da8ab">. The
-                         following <b>six</b> elements require an @xml:id : <br />– &lt;bibl>,
-                         &lt;div>, &lt;docAuthor>, &lt;figure>, &lt;p>, &lt;rilmPerson>,
-                         &lt;rilmPerformance></li>
-                    <li>The <i>Biografie</i> volumes include articles on <b>persons</b>,
-                              <b>families</b>, and <b>corporations</b>.</li>
-                    <li>There are <b>short, medium, and long</b> articles.<ul>
-                              <li><b>Short</b> articles contain <ul>
-                                        <li><i>one paragraph</i> of body text, often, but not
-                                             always, followed by</li>
-                                        <li>a <i>worklist</i> and/or ~<i>ographies</i>.</li>
-                                   </ul></li>
-                              <li><b>Medium</b> articles contain <ul>
-                                        <li><i>one paragraph</i> of body text in normal-sized type,
-                                             followed by </li>
-                                        <li><i>one or more paragraphs in slightly smaller type</i>,
-                                             then </li>
-                                        <li>a worklist or ~ographies.</li>
-                                   </ul></li>
-                              <li><b>Long</b> articles contain <ul>
-                                        <li>multiple sections of body text, with headers in small
-                                             caps, followed by </li>
-                                        <li>one or more <i>tabular worklists</i> and </li>
-                                        <li>one or more ~ographies.</li>
-                                   </ul></li>
-                         </ul></li>
-                    <li><b>Abbreviation of names</b> within articles: In medium and long articles,
-                         every mention of the person the article is about is abbreviated to the
-                         first letter of the surname after the first paragraph. Such abbreviations
-                         should be expanded to the full surname. For example, in the article
-                              "<b>Schönbach, Dieter</b>", the second paragraph begins:<br /> [La
-                         produz. di S. prende le mosse,… ]<br />The "S." should be expanded to
-                         "Schönbach".</li>
-                    <li><b>General abbreviations</b> (listed in front matter): Each volume has a
-                         list of <b>Abbreviations</b> ("<b>Abbreviazione</b>") in the front matter.
-                         Where these abbreviations are used in the articles, they should be
-                              <i>expanded to the full word or phrase</i>. For the example above, the
-                         abbreviation "produz." is listed in the Abbreviazione as "produzione". For
-                         the example given above, the full rendition should be:<blockquote>&lt;p>La
-                              produzione di Schönbach prende le mosse,...</blockquote></li>
-                    <li><b>Identification of Named individuals</b> with IDs from RILMs database of
-                         persons: RILM will provide a list of personal names along with integer IDs,
-                         in .csv or other similar format. The &lt;rilmPerson> tag applied to the
-                         name of the person the article is about should have an @xml:id attribute
-                              <i>and</i> a @key attribute that contains the ID. For example,
-                         "Schönbach, Dieter" appears in the list with ID "16488". Thus, the name
-                         would be tagged :<blockquote>&lt;rilmPerson
-                              xml:id="id-d70f1dc4-4171-11ec-81d3-0242ac130003" key="16488">&lt;hi
-                              rend="bold">&lt;persName>&lt;surname>Schönbach&lt;/surname>
-                              &lt;forename>Dieter&lt;/forename>&lt;/persName>&lt;/hi>...
-                                   </blockquote><b><i>*NEW 1/1/2022*:</i></b> If a name cannot be
-                         matched with those in the list provided by RILM, include an empty @key
-                         attribute (key='').</li>
-                    <li><b>Typography</b>: render all <i>single quotes</i> as ’ (hex2019); <i>double
-                              quotes</i> (« ») as &lt;q> tags <i>(except in bibliographies; see
-                              below).</i></li>
-                    <li><b>Typography</b>: <b>normalize case</b> where small caps are used in the
-                         print (particularly in bibliographies).</li>
-                    <li><b>Typography</b>: superscript "o" used as an ordinal (as in "50º", meaning
-                         "50th") should be encoded as hex00ba ("masculine ordinal"), <i>not</i> as
-                         hex00b0 ("degree sign"), <i>nor</i> as a &lt;hi> element.</li>
-                    <li><b>Images</b> in <i>Biografie</i> are limited to family tree diagrams. These
-                         should be captured as PNG images. These will be referenced in the TEI in a
-                         &lt;figure> element (with an @xml:id attribute), containing a &lt;graphic>
-                         element with a @url attribute pointing to the image file.</li>
-               </ul><h5>2. Front matter:</h5><ul>
-                    <li>Front matter of <b><i>Biografie</i> vol. 1</b> consists of the following:<ul>
-                              <li>[Title page]</li>
-                              <li>[Copyright page]</li>
-                              <li><b>Avverteze per la consultazione</b></li>
-                              <li><b>Abbreviazione</b></li>
-                              <li><b>Elenco dei Collaboratori del primo volume</b></li>
-                         </ul>
-                         <i>Omit the half-title page.</i>
-                    </li>
-                    <li><b>For <i>volumes 2-8</i></b>, capture <i>only</i><ul>
-                              <li>[Copyright page]</li>
-                              <li><b>Elenco dei Collaboratori del primo volume</b></li>
-                         </ul></li>
-                    <li>For the Appendice (1990), capture<ul>
-                              <li>[Copyright page]</li>
-                              <li><b>Prefazione</b></li>
-                              <li><b>Abbreviazione</b></li>
-                         </ul>
-                         <i>Omit the other front-matter pages.</i>
-                    </li>
-               </ul><h5>3. Short &amp; Medium person articles:</h5><p>1-6 paragraphs of body text, followed by worklists and/or bibliographies in paragraph form.</p><ul>
-                    <li>The following data are given in the <b>first sentence</b> of short and
-                         medium articles, in this order: <b>Surname, Forename(s).</b> Occupation(s)
-                         nationality. (birth place name, dd-MM-yyyy - death place name, dd-MM-yyyy).
-                         Use the name in bold as the &lt;title> in the TEI header. <b><i>*NEW
-                                   2/14/2022*</i></b> Begin the &lt;body> with a &lt;div
-                         type="subheading">.<br /> [<b>Balfoort, Dirk Jacobus.</b> Musicologo e
-                         violinista oland. (Utrecht, 19-VII-1886 - L’Aia,
-                              11-XI-1964).]<blockquote>&lt;div
-                              type="subheading"><br />&lt;p>&lt;rilmPerson>&lt;hi
-                              rend="bold">&lt;persName>&lt;surname>Balfoort&lt;/surname>,
-                              &lt;forename>Dirk&lt;/forename>
-                              &lt;forename>Jacobus&lt;/forename>&lt;/persName>&lt;/hi>.
-                              &lt;occupation>Musicologo&lt;/occupation> e
-                              &lt;occupation>violinista&lt;/occupation>
-                              &lt;nationality>&lt;abbr>oland.&lt;/abbr>&lt;/nationality>
-                              (&lt;birth>&lt;placeName>Utrecht&lt;/placeName>,
-                              &lt;date>19-VII-1886&lt;/date>&lt;/birth> -
-                              &lt;death>&lt;placeName>L’Aia&lt;/placeName>,
-                              &lt;date>11-XI-1964&lt;/date>&lt;/death>)&lt;/rilmPerson>....&lt;/p>&lt;/div> </blockquote><ul>
-                              <li>If an additional name or names appears in italic, in parentheses
-                                   immediately following the bold type or after the word "nata", tag
-                                   it with &lt;surname type="alt">:<br /> [<b>Baliani, Carlo</b>
-                                        (<i>Bagliani</i>, <i>Balliani</i>,
-                                        <i>Basiliani</i>).]<blockquote>&lt;persName>&lt;hi
-                                        rend="bold">&lt;surname>Baliani&lt;/surname>,
-                                        &lt;forename>Carlo&lt;/forename>&lt;/hi> (&lt;surname
-                                        type="alt">Bagliani&lt;/surname>, &lt;surname
-                                        type="alt">Balliani&lt;/surname>, &lt;surname
-                                        type="alt">Basiliani&lt;/surname>)&lt;/persName></blockquote></li>
-                              <li>If an additional name or names appears in italic in parentheses
-                                   after the word "detto", tag it with &lt;forename
-                                   type="alt">:<br /> [<b>Corea, Armando Anthony</b> (detto
-                                        <i>Chick</i>)]<blockquote>&lt;persName>&lt;hi
-                                        rend="bold">&lt;surname>Corea&lt;/surname>,
-                                        &lt;forename>Armando&lt;/forename>
-                                        &lt;forename>Anthony&lt;/forename>&lt;/hi> (detto
-                                        &lt;forename
-                                        type="alt">Chick&lt;/forename>)&lt;/persName></blockquote></li>
-                              <li>If the additional name has a qualifier "prop.", "pseud. di", or
-                                   "nome d’arte di", tag the italic name in a <i>separate</i>
-                                   &lt;persName> element with @type="alt" within the same
-                                   &lt;rilmPerson> element:<br /> [<b>Colonne, Edouard</b> (pseud.
-                                   di <i>Jules-Edouard Judas</i>).]<blockquote>&lt;rilmPerson>&lt;hi
-                                        rend="bold">&lt;persName>&lt;surname>Colonne&lt;/surname>,
-                                        &lt;forename>Edouard&lt;/forename>&lt;/persName>&lt;/hi>
-                                        (pseud. di &lt;hi rend="italic">&lt;persName
-                                        type="alt">&lt;forename>Jules-Edouard&lt;/forename>
-                                        &lt;surname>Judas&lt;/surname>&lt;/persName>&lt;/hi>).</blockquote></li>
-                              <li>If a birth or death date is given as a <i>year only</i>, with no
-                                   other qualifier such as "ca.", include @precision="medium" in the
-                                   &lt;date> tag.</li>
-                              <li>If a date is given with a preceding "ca.", such as "ca. 1733",
-                                   include @precision="low".</li>
-                              <li>If any of the birth or death information is given as "?", then
-                                   leave the affected element empty or with a "?", then include
-                                   @precision="unknown" in the affected element:<br /> [(?, 1543 -
-                                   Parma, 13-III-1627)]<blockquote>&lt;birth>&lt;placeName
-                                        precision="unknown">?&lt;/placeName>, &lt;date
-                                        presision="medium" when="1543"
-                                        when-custom="1543">1543&lt;/date>&lt;/birth> -
-                                        &lt;death>&lt;placeName>Parma&lt;/placeName></blockquote></li>
-                              <li>If a range of dates is given for birth or death information, use
-                                   @from and @to instead of @when, and also include
-                                   @precision="low":<br /> [<b>Dufay, Guillaume</b>. Compositore
-                                   franco-fiamm. (prob. Fayt, Hainaut, ca. 1390-1400 - Cambrai,
-                                        27-XI-1474).]<blockquote>&lt;div
-                                        type="subheading"><br />&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Dufay&lt;/surname>,
-                                        &lt;forename>Guillaume&lt;/forename>.
-                                        &lt;occupation>Compositore&lt;/occupation>
-                                        &lt;nationality>franco-fiamm.&lt;/nationality>
-                                        (&lt;birth>prob. &lt;placeName precision="low">Fay,
-                                        Hainaut&lt;/placeName> &lt;date from="1390" to="1400"
-                                        precision="low">1390-1400&lt;/date>&lt;/birth></blockquote></li>
-                              <li><b><i>*NEW 2/14/2022*</i></b> If the death <i>place</i> is given
-                                   as <b>"ivi"</b>, please replace this with the place given for the
-                                   birth:<br /> [(Roma, 1821 - ivi, ottobre
-                                        1894)]<blockquote>&lt;birth>&lt;placeName>Roma&lt;/placeName>,
-                                        &lt;date presision="medium" when="1821"
-                                        when-custom="1821">1821&lt;/date>&lt;/birth> -
-                                        &lt;death>&lt;placeName>Roma&lt;/placeName>, &lt;date
-                                        precision="medium" when="1894-10-01"
-                                        when-custom="1894">ottobre
-                                        1894&lt;/date>&lt;/death></blockquote></li>
-                         </ul></li>
-                    <li><b>Worklists</b> may be headed "Compos.", "Ediz.", or "Scritti". <ul>
-                              <li><b><i>*NEW 2/14/2022*:</i></b> Wrap the entire worklist in a
-                                   single &lt;div type="works">.</li>
-                              <li>Normalize the case of the heading, <i>spell out "Composizioni" or
-                                        "Edizioni"</i>, and tag as &lt;head>.</li>
-                              <li>Parse the run-on into a &lt;list> using
-                                        <i>paren-semicolon-space</i> "<b>); </b>" as the delimiter
-                                   between &lt;item>s.</li>
-                              <li>Tag italic text as &lt;title>.</li>
-                              <li><b><i>*revised 1/2022*:</i></b> Where the word "per" appears, tag
-                                   the Roman text after "per" as &lt;instrumentation>.</li>
-                              <li>If there is Roman text between italics and the word "per", tag as
-                                   &lt;genre></li>
-                              <li>Tag text in parentheses as &lt;placeName> (if given) and
-                                   &lt;date></li>
-                              <li>Omit the semicolon and final period.</li>
-                         </ul>
-                         <br /> [C<small>OMPOS</small>. (ord. cronol.): <i>Les caprices de
-                              Marianne</i>, mus. di scena (1960); <i>Pour un dix août</i> per 2 v.
-                         recit., TB, coro e orch. (1971); 4 essais pour une fête per 4 soli, coro e
-                         orch. (1973).]<blockquote>&lt;div type="works"><br />&lt;head>Composizioni
-                              (ord.
-                              cronol.):&lt;/head><br />&lt;list><br />&lt;item>&lt;bibl>&lt;title>Les
-                              caprices de Marianne&lt;/title>, &lt;genre>mus. di scena&lt;/genre>
-                              (&lt;date>1960&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>Pour
-                              un dix août&lt;/title> per &lt;instrumentation>2 v. recit., TB, coro e
-                              orch.&lt;/instrumentation>
-                              (&lt;date>1971&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>4
-                              essais pour une fête&lt;/title> per &lt;instrumentation>4 soli, coro e
-                              orch.&lt;/instrumentation>
-                              (&lt;date>1973&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;/list><br />&lt;/div></blockquote>[S<small>CRITTI</small>:
-                              <i>De hollandsche vioolmakers</i> (Amsterdam; 1931); <i>Eigenartige
-                              Musikinstrumente</i> (L'Aia, 1932).]<blockquote>&lt;div
-                              type="works"><br />&lt;head>Scritti:&lt;/head><br />&lt;list><br />&lt;item>&lt;bibl>&lt;title>De
-                              viool en hare meesters&lt;/title> (&lt;placeName>L’Aia&lt;/placeName>,
-                              s. a.)&lt;/bibl>&lt;/item> &lt;item>&lt;bibl>&lt;title>De hollandsche
-                              vioolmakers&lt;/title> (&lt;placeName>Amsterdam&lt;/placeName>,
-                              &lt;date>1931&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>Eigenartige
-                              Musikinstrumente&lt;/title> (&lt;placeName>L’Aia&lt;/placeName>,
-                              &lt;date>1932&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;/list><br />&lt;/div></blockquote><br /><b>Longer</b>
-                         worklists will be divided into sections with heads that may begin a new
-                         line, or continue on the same line. The division between sections can be
-                         found with the pattern "<b>). </b>", that is, <i>closing
-                              paren-period-space</i>. Start a new &lt;div type="section"> here. Use
-                         the text up to the following colon as &lt;head>:<br /> [...1916). Per
-                         orch.: 5
-                              sinfonie...]<blockquote>...&lt;date>1916&lt;/date>).&lt;/bibl>&lt;/item>&lt;/list>&lt;/div><br />&lt;div
-                              type="section"><br />&lt;head>Per
-                              orch.:&lt;/head><br />&lt;list>&lt;item>&lt;bibl>5
-                              sinfonie...</blockquote><br /><b><i>NB:</i></b> Many worklists will
-                         end with a miscellaneous grouping of works indicated by "Inoltre",
-                         "Inoltra", or "altra". Again, use "<b>); </b>" to distinguish &lt;items>,
-                              <i>but do not tag as </i>&lt;bibl><i>. Please see the example files
-                              for this.</i></li>
-                    <li><b>Bibliographies</b> are headed "B<small>IBL</small>.:" The individual
-                         entries are separated by semicolon-space ("<b>; </b>") just like the
-                         worklists. <ul>
-                              <li>Tag italic text as &lt;title></li>
-                              <li><i>Note that when the subject's name appears in the title of a
-                                        bibliographic reference, it will be abbreviated. They should
-                                        be expanded.</i></li>
-                              <li>Tag names before the title as &lt;author> and &lt;persName></li>
-                              <li>Tag text within angle quotation marks as &lt;title
-                                   type="periodical"></li>
-                              <li>Tag info in parentheses as &lt;placeName>, &lt;date>, and/or
-                                   &lt;edition> as needed:</li>
-                         </ul>From an article on "<b>Štejnberg, Maksimilian</b>":<br />
-                              [B<small>IBL</small>.: A. N.
-                              R<small>IMSKIJ</small>-K<small>ORSAKOV</small>, M. Š. Mosca, 1928; V.
-                              B<small>OGDANOV-</small>B<small>ERESOVSKIJ</small>, M. Š., ivi, 1947;
-                         M. G<small>NESIN</small>, M. Š in «Sovetskaja Muzyka»,
-                              1946;…]<blockquote>&lt;div
-                              type="ography"><br />&lt;head>Bibliography:&lt;/head><br />&lt;list><br />&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>A.&lt;/abbr>&lt;/forename>
-                              &lt;forename>&lt;abbr>N.&lt;/abbr>&lt;/forename>
-                              &lt;surname>Rimskij-Korsakov&lt;/surname>&lt;/persName>&lt;/author>,
-                              &lt;title>Maksimilian Štejnberg&lt;/title>
-                              &lt;pubPlace>Mosca&lt;/pubPlace>,
-                              &lt;date>1928&lt;/date>&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>V.&lt;/abbr>&lt;/forename>
-                              &lt;surname>Bogdanov-Beresovskij&lt;/surname>&lt;/persName>&lt;/author>,
-                              &lt;title>Maksimilian Štejnberg&lt;/title>,
-                              &lt;pubPlace><b>Mosca</b>&lt;/pubPlace>,
-                              &lt;date>1947&lt;/date>&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>M.&lt;/abbr>&lt;/forename>
-                              &lt;surname>Gnesin&lt;/surname>&lt;/persName>&lt;/author>, &lt;title
-                                   <b>type="article"</b>>Maksimilian Štejnberg&lt;/title>, in
-                              &lt;title <b>type="periodical"</b>>Sovetskaja Muzyka&lt;/title>,
-                              &lt;date>1946&lt;/date>&lt;/bibl>&lt;/item><br />&lt;/list></blockquote><ul>
-                              <li><b><i>N.B. 1:</i></b> The indication <b>"ivi"</b> in
-                                   bibliographies means "in the same place". It should be replaced
-                                   with the value of the &lt;pubPlace> element in the &lt;bibl>
-                                   immediately before. This is highlighted in the second &lt;item>
-                                   of the example above.</li>
-                              <li><b>N.B. 2: </b>In a bibliography (not elsewhere), <b>double quotes
-                                        (« »)</b> around a phrase <b>in Roman type</b> identify it
-                                   as a <b>periodical</b> title. set @type to "periodical", and the
-                                   @type of the &lt;title> before it to "article". These are also
-                                   highlighted in the example above. <i>If double quotes appear
-                                        within Italic type, tag as</i> &lt;q>.</li>
-                         </ul></li>
-               </ul><h5>4. Family articles</h5><p>These begin with the family surname, followed by the word "Famiglia". Then follow <i>numbered</i> articles--each follows the format of the short person articles, except that only forenames are given, and in italic. Compare:<br />- Short person article: [<b>Schuman, William Howard</b>. Compositore amer. (New York, 4-VIII-1910).]<br />- Short family article, person: [- <b>1</b>) <i>William Howard</i>. Compositore amer. (New York, 4-VIII-1910).]</p><ul>
-                    <li>Use the bold family name as &lt;title> in the TEI header.</li>
-                    <li>Tag the first line(s) as &lt;div type="subheading">&lt;p>.</li>
-                    <li>Tag the family surname as &lt;rilmPerson xml:id="id-xxx">&lt;persName>&lt;hi
-                         rend="bold">&lt;surname>...</li>
-                    <li>If one or more surname variants are given in italic, tag &lt;surname
-                         type="alt">.</li>
-                    <li>Tag the last word of the first &lt;p> as &lt;nationality>.</li>
-               </ul>[<b>Škroup</b> (<i>Skraup</i>). Famiglia di musicisti
-                    boemi.]<blockquote>&lt;rilmPerson xml:id="id-000">&lt;persName>&lt;hi
-                    rend="bold">&lt;surname>Škroup&lt;/surname>&lt;/hi> (&lt;hi
-                    rend="italic">&lt;surname type="alt">Skraup&lt;/surname>&lt;/hi>)&lt;/persName>.
-                    Famiglia di musicisti
-                    &lt;nationality>boemi&lt;/nationality>.&lt;/rilmPerson></blockquote><ul>
-                    <li>Wrap each of the individual person articles in a &lt;div type="person">, and
-                         within it, &lt;div type="bio">, &lt;div type="works">, or &lt;div
-                         type="ography"> as needed. </li>
-                    <li>Add a @corresp element to the &lt;rilmPerson> element pointing to the
-                         @xml:id of the &lt;rilmPerson> containing the family name.</li>
-                    <li>Treat worklists and bibliographies just as in stand-alone person
-                         articles.<p><i>See example file "deu00003.xml".</i></p></li>
-               </ul><h5>5. Long person articles</h5><p>These begin like short articles, but there will be a "S<small>OMMARIO</small>" section following the birth-death information. The sommario is a list of sections in the body text of the article, like a table of contents:<br />  [<b>Skrjabin, Aleksandr Nikolaevič</b> (<i>Skriabin</i>). Compositore e pianista russo (Mosca, 25-XII-1871/6-I-1872 - ivi, 14/27-IV-1915). S<small>OMMARIO: I. La vita, il pensiero. II. L’opera sinfonica. - III. Il pianoforte.</small>…]</p><ul>
-                    <li>Tag the name, occupation, nationality, and birth and death data just like
-                         short person articles.</li>
-                    <li><i>Omit the Sommario</i>.</li>
-                    <li>Tag the first &lt;div> as @type="subheading", and subsequent sections
-                         (indicated by heads) as &lt;div type="section">.<br /></li>
-                    <li><b>Worklists</b> in long person articles are often a combination of
-                              <b>tables</b> and <b>lists in paragraph form</b>.<ul>
-                              <li>Such worklists are <b>headed</b> "C<small>ATALOGO</small>
-                                        D<small>ELLE</small> O<small>PERE</small>", in small caps.
-                                   Use this as &lt;head> for the &lt;div type="works">.</li>
-                              <li><b><i>*NEW 2/14/2022*:</i></b> Wrap the entire worklist in a
-                                   single &lt;div type="works">; sections within it tag as &lt;div
-                                   type="section">.</li>
-                              <li><b><i>*NEW 2/14/2022*:</i></b> In columns headed
-                                   "Rappresentazione" ("performance"), the entire contents of each
-                                   &lt;cell> should be wrapped in a &lt;rilmPerformance> element.
-                                   Tag the word before the comma as &lt;placeName>, after it as
-                                   &lt;orgName type="performing">, and tag the &lt;date>.</li>
-                              <li><b><i>*NEW 2/14/2022*:</i></b> In columns headed "Edizione", tag
-                                   the text before the comma as &lt;publisher>, and the place name
-                                   after the comma as &lt;pubPlace>. </li>
-                              <li>Many worklists in long person articles will include an
-                                        <b>introductory paragraph</b> or paragraphs. Tag these as
-                                   &lt;p>, tag italics as &lt;hi>, and replace double-quotes with
-                                   &lt;q> tags.</li>
-                              <li>Each <b>table</b> or <b>list</b> will have its own <b>heading</b>
-                                   in small caps. Begin a new &lt;div type="section"> and use the
-                                   text in small caps as &lt;head>.</li>
-                              <li><b>Tables vary</b> in the number of columns and in column
-                                   headings. Tag the first row as @role="label". Use "—" (hex 2014)
-                                   where dashes indicate missing or repeated values. </li>
-                              <li>Tables that span <b>two or more pages</b> will have
-                                        <i>"Segue:"</i> ("continue") at the top of the page.
-                                   Continue these in the same &lt;table> element, and omit the
-                                   "Segue" text. Do not repeat the label row of the
-                                        table.<br /><i>See example file "deu00004.xml".</i></li>
-                              <li><b>Worklists in paragraph form</b> may come before, between, or
-                                   after tables. Note that in example deu00004.pdf, the lists headed
-                                        "M<small>USICA</small> V<small>OCALE</small>: b)" actually
-                                   begins on the page <i>before</i> the table headed
-                                        "M<small>USICA</small> V<small>OCALE</small>: a)"!</li>
-                         </ul></li>
-               </ul><h5>6. Corporate
-                    articles</h5><p>Articles on corporations are included in the <i>Biografie</i>. The first sentence of the article states the role of the institution, and nationality:<br />  [<b>Bärenreiter-Verlag</b>. Casa editrice mus. ted., con sede a Kassel e Basilea, fondata ad Auststa nel 1923 da Karl → V<small>ÖTTERLE</small>.]</p><blockquote>&lt;orgName>&lt;hi
-                    rend="bold">Bärenreiter-Verlag&lt;/hi>&lt;/orgName>. Casa editrice mus. ted.,
-                    con sede a Kassel e Basilea, fondata ad Auststa nel 1923 da Karl →
-                    Vötterle.</blockquote><p>Tag only the corporate name as &lt;orgName>. Treat ~ographies the same as in person and family articles.</p><h5>7.
-                    &lt;docAuthor>s and
-                    editors</h5><p>Many articles will have an author given after the end of the text, justified right in small caps. (See example files "deu00005"). Make a &lt;div type="authors"> for this, and wrap the author's name in &lt;docAuthor> and &lt;persName> with tags for &lt;forename> and &lt;surname>.</p><blockquote>&lt;div
-                    type="authors">&lt;persName>&lt;forename>Paulheinz&lt;/forename>
-                    &lt;surname>Beck&lt;/surname>&lt;/persName>&lt;/div></blockquote><p>Frequently, a <i>translator's</i> name will also be given, on the same line, justified left in normal case, in parens, preceded by "trad.":<br /> [(trad. Vera Bertolino)]<br />Place these in the same &lt;div type="authors">, but in a separate &lt;docAuthor> element. Add an @type attribute with value "translator" to the &lt;docAuthor>.</p><blockquote>&lt;docAuthor
-                    role="translator">(trad. &lt;persName>&lt;forename>Vera&lt;/forename>
-                    &lt;surname>Bertolino&lt;/surname>&lt;/persName>)&lt;/docAuthor></blockquote><ul>
-                    <li><i><b>NB:</b> Although the translator's name appears first</i> in the print,
-                         reading left to right, <i>include it in the TEI after the true
-                         author</i>.</li>
-                    <li>In rare cases, there will be more than one true author in small caps. Again,
-                         tag the two authors' names in the same &lt;div> but separate
-                         &lt;docAuthor>s.</li>
-                    <li>In rarer cases, there may be <i>two</i> true authors <i>and</i> a
-                         translator. </li>
-                    <li>As an extreme example, this appears in vol. II:<br /> (trad. Velia
-                         Donadei-Giacosa) NORBERT DUFOURCQ e RÉMY STRICKER<br /> (catalogo e bibl. a
-                         cura della Redazione)<br />In this case, you would tag the two authors,
-                         then the translator, then add the note in a &lt;p> element, still inside
-                         the same &lt;div type="authors">.<blockquote>&lt;div type="authors">
-                              &lt;docAuthor>&lt;persName>&lt;forename>Norbert&lt;/forename>
-                              &lt;surname>Dufourcq&lt;/surname>&lt;/persName>&lt;/docAuthor><br />&lt;docAuthor>&lt;persName>&lt;forename>Rémy&lt;/forename>
-                              &lt;surname>Stricker&lt;/surname>&lt;/persName>&lt;/docAuthor><br />&lt;docAuthor
-                              role="translator">(trad. &lt;persName>&lt;forename>Velia&lt;/forename>
-                              &lt;surname>Donadei-Giacosa&lt;/surname>&lt;/persName>)&lt;/docAuthor><br />&lt;p>(catalogo
-                              e bibl. a cura della
-                         Redazione)&lt;/p><br />&lt;/div></blockquote></li>
-               </ul><h5>7.
-                    See-references</h5><p>An article <i>heading</i> followed by a right-pointing arrow (→), followed by text in small caps, indicates a see-reference:<br /> [<b>De Ana, Francesco</b> → A<small>NA</small>, F<small>RANCESCO</small> D’.]<br />Do not make an XML file or PDF for these, but treat them as described at <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a></p><h5>8.
-                    Cross-references</h5><ul>
-                    <li>A right-pointing arrow (→) or by a wavy right-pointing arrow (⤳) <i>within the
-                              body text</i> indicates a cross reference, or see-also reference. </li>
-                    <li>A straight arrow indicates a target within the same part of the
-                         encyclopedia—from <i>Biografie</i> to <i>Biografie</i>, for example. </li>
-                    <li>A wavy arrow indicates a target in a different part of the
-                         encyclopedia—from <i>Biografie</i> to <i>Lessico</i>, for example. </li>
-                    <li>They might point to a whole article, or to a section within an
-                         article:<br /> (⤳ D<small>ULCE</small> M<small>ELOS</small>) or (→
-                              H<small>OMER</small>, 2)<br />The first points to the whole "Dulce
-                         Melos" article in the <i>Lessico</i> part of the encyclopedia. The second
-                         points to person number 2 in the family article on "Homer" in the
-                              <i>Biografie</i> part.</li>
-                    <li><b><i>*NEW 1/1/2022*:</i></b> The text "cfr. §" indicates a reference to
-                         another section <i>within the same article:</i> (cfr. § <i>Musica
-                              vocale</i>, a). The text following "§" gives the &lt;head> and head:@n
-                         of the &lt;div> that is targeted. <i>There are examples in the file
-                              deu00004.xml.</i></li>
-               </ul><p>Tag a reference to a whole article as a &lt;ref> element with @target containing the value of the @xml:id of the &lt;text> element of the target article. Tag a reference to a section with @target containing the concatenated @xml:id of the &lt;text> target, "#", and the @xml:id of the &lt;div>: </p><blockquote>&lt;ref
-                    target="deu00000">Dulce Melos&lt;/ref></blockquote><blockquote>&lt;ref
-                    target="deu11111#id-9b05e5d0-5cf9-11ec-bf63-0242ac130002">Homer,
-                    2&lt;/ref></blockquote>
-               <p>NB. <i>Omit</i> the arrow character from the TEI; the link created by the &lt;ref> tag will mark the reference.</p>
-               <p><i>NB 2. Because we must convert the Biografie part first, the @target references to other parts of the encyclopedia must be given a placeholder value.</i></p>
-               <h5>Appendice (1990)</h5><ul>
-                    <li>Apart from the front matter capture noted above, <b>articles</b> in the 1990
-                              <i>Appendice</i> volume should be treated exactly as the ones in the
-                         eight main volumes.</li>
-                    <li>The Appendice volume ends with "<b>Musicisti e interpreti deceduti nel corso
-                              della pubblicazione dell’opera</b>", a list of persons who died after
-                         the main volumes were published, giving name, and death data.<br />
-                              [<b>Agosti, Guido</b> (pp. 27-28): Milano, 2-VI-1980]<br />This
-                         information should be added to the <b>Agosti</b> article from
-                              <i>Biografie</i> vol. 1. The original reads:<br /> [<b>Agosti,
-                              Guido</b>. Pianista ital. (Forlì, 11-VIII-1901).]<br />Add " - "
-                         (space-hyphen-space) to this, followed the death data and tag:<br />
-                              [<b>Agosti, Guido</b>. Pianista ital. (Forlì, 11-VIII-1901 - Milano,
-                              2-VI-1980).<blockquote>&lt;rilmPerson>&lt;hi
-                              rend="bold">&lt;persName>&lt;surname>Agosti&lt;/surname>,
-                              &lt;forename>Guido&lt;/forename>&lt;/persName>&lt;/hi>.
-                              &lt;occupation>Pianista&lt;/occupation>
-                              &lt;nationality>&lt;abbr>ital.&lt;/abbr>&lt;/nationality>
-                              (&lt;birth>&lt;placeName>Forlì&lt;/placeName>, &lt;date
-                              when="1901-08-11" when-custom="1901">11-VIII-1901&lt;/date>&lt;/birth>
-                              - &lt;death>&lt;placeName>Milano&lt;/placeName>, &lt;date
-                              when="1980-06-02"
-                              when-custom="1980">2-VI-1980&lt;/date>&lt;/death>)&lt;/rilmPerson></blockquote></li>
-               </ul><h5>Appendice 2005 </h5><p>The second Appendice volume, titled <i>Appendice 2005</i>, consists of two parts:</p><ol>
-                    <li>The first part contains both <i>supplements</i> to articles published in the
-                              <i>Biografie</i> volumes (including the first <i>Appendice</i>) and
-                              <i>entirely new</i> articles.<ul>
-                              <li><b>Supplements</b> are indicated by a volume and page number
-                                   reference in brackets, immediately following the article heading,
-                                   such as<br />
-                                   <b>Austin, William Weaver</b> [I: 174]. <br />or, in family
-                                   articles, after the individual member's name:<br /> - <b>2</b>)
-                                        <i>Massimo</i> [I: 84].<br />Treat exactly like articles in
-                                   the main volumes, <i><b>except</b></i> add the phrase "
-                                   [supplement] to the &lt;title> element in the TEI
-                                        header.<blockquote>...&lt;titleStmt>&lt;title>Austin,
-                                        William Weaver [supplement]&lt;/title>...</blockquote></li>
-                              <li><b>New articles</b>
-                                   <i>do not</i> have brackets following the heading, and thus are
-                                   formatted just like other articles in the <i>Biografie</i>
-                                   volumes and first <i>Appendice</i> volume. They should be tagged
-                                   the same as those.</li>
-                         </ul></li>
-                    <li><i><b>*NEW 2/15/2022*:</b></i> The second part, subtitled <i>Repertorio delle voci biografiche del DEUMM
-                              ordinate per categoria</i>, contains a series of name indexes
-                         organized by occupation. For now, tag each index as a &lt;div type="section"> and as a &lt;list>. Tag the name as &lt;persName> with &lt;forename> and &lt;surname> as appropriate.</li>
-               </ol></div>
+                <li>Each volume of the <i>Biografie</i> has a different <b>year</b> and <b>ISBN</b>,
+                    given on the copyright page of each. The correct values should be included in
+                    the TEI header of each article.</li>
+                <li><b>xml:id's</b>: <i>DEUMM online</i> will be a continually updated resource, so
+                    each &lt;div>, &lt;p>, and &lt;bibl> element must have a unique identifier: an
+                    xml:id element containing "id-" followed by a UUID. For example: &lt;p
+                    xml:id="id-f11a99bb-5a84-12df-f1b2-b9374b7da8ab">. The following <b>six</b>
+                    elements require an @xml:id : <br />– &lt;bibl>, &lt;div>, &lt;docAuthor>,
+                    &lt;figure>, &lt;p>, &lt;rilmPerson>, &lt;rilmPerformance></li>
+                <li>The <i>Biografie</i> volumes include articles on <b>persons</b>,
+                    <b>families</b>, and <b>corporations</b>.</li>
+                <li>There are <b>short, medium, and long</b> articles.<ul>
+                        <li><b>Short</b> articles contain <ul>
+                                <li><i>one paragraph</i> of body text, often, but not always,
+                                    followed by</li>
+                                <li>a <i>worklist</i> and/or ~<i>ographies</i>.</li>
+                            </ul></li>
+                        <li><b>Medium</b> articles contain <ul>
+                                <li><i>one paragraph</i> of body text in normal-sized type, followed
+                                    by </li>
+                                <li><i>one or more paragraphs in slightly smaller type</i>, then </li>
+                                <li>a worklist or ~ographies.</li>
+                            </ul></li>
+                        <li><b>Long</b> articles contain <ul>
+                                <li>multiple sections of body text, with headers in small caps,
+                                    followed by </li>
+                                <li>one or more <i>tabular worklists</i> and </li>
+                                <li>one or more ~ographies.</li>
+                            </ul></li>
+                    </ul></li>
+                <li><b>Abbreviation of names</b> within articles: In medium and long articles, every
+                    mention of the person the article is about is abbreviated to the first letter of
+                    the surname after the first paragraph. Such abbreviations should be expanded to
+                    the full surname. For example, in the article "<b>Schönbach, Dieter</b>", the
+                    second paragraph begins:<br /> [La produz. di S. prende le mosse,… ]<br />The
+                    "S." should be expanded to "Schönbach".</li>
+                <li><b>General abbreviations</b> (listed in front matter): Each volume has a list of
+                        <b>Abbreviations</b> ("<b>Abbreviazione</b>") in the front matter. Where
+                    these abbreviations are used in the articles, they should be <i>expanded to the
+                        full word or phrase</i>. For the example above, the abbreviation "produz."
+                    is listed in the Abbreviazione as "produzione". For the example given above, the
+                    full rendition should be:<blockquote>&lt;p>La produzione di Schönbach prende le
+                        mosse,...</blockquote></li>
+                <li><b><i>*NEW 3/1/2022*</i></b>
+                    <b>Identification of Named individuals</b> with IDs from RILMs database of
+                    persons: RILM will provide a list of <b>personal names and dates</b> along with
+                    integer IDs, in .csv or other similar format. The &lt;rilmPerson> tag applied to
+                    the name of the person the article is about should have an @xml:id attribute
+                        <i>and</i> a @key attribute that contains the ID. For example, "Schönbach,
+                    Dieter" appears in the list with ID "16488". Thus, the name would be tagged
+                        :<blockquote>&lt;rilmPerson xml:id="id-d70f1dc4-4171-11ec-81d3-0242ac130003"
+                        key="16488">&lt;hi
+                        rend="bold">&lt;persName>&lt;surname>Schönbach&lt;/surname>
+                        &lt;forename>Dieter&lt;/forename>&lt;/persName>&lt;/hi>...
+                            </blockquote><b><i>*NEW 1/1/2022*:</i></b> If a name cannot be matched
+                    with those in the list provided by RILM, include an empty @key attribute
+                    (key='').</li>
+                <li><b>Typography</b>: render all <i>single quotes</i> as ’ (hex2019); <i>double
+                        quotes</i> (« ») as &lt;q> tags <i>(except in bibliographies; see
+                        below).</i></li>
+                <li><b>Typography</b>: <b>normalize case</b> where small caps are used in the print
+                    (particularly in bibliographies).</li>
+                <li><b>Typography</b>: superscript "o" used as an ordinal (as in "50º", meaning
+                    "50th") should be encoded as hex00ba ("masculine ordinal"), <i>not</i> as
+                    hex00b0 ("degree sign"), <i>nor</i> as a &lt;hi> element.</li>
+                <li><b><i>*NEW 3/1*</i></b>: <s><b>Images</b> in <i>Biografie</i> are limited to
+                        family tree diagrams. These should be captured as PNG images. These will be
+                        referenced in the TEI in a &lt;figure> element (with an @xml:id attribute),
+                        containing a &lt;graphic> element with a @url attribute pointing to the
+                        image file.</s></li>
+            </ul><h5>2. Front matter:</h5><ul>
+                <li>Front matter of <b><i>Biografie</i> vol. 1</b> consists of the following:<ul>
+                        <li>[Title page]</li>
+                        <li>[Copyright page]</li>
+                        <li><b>Avverteze per la consultazione</b></li>
+                        <li><b>Abbreviazione</b></li>
+                        <li><b>Elenco dei Collaboratori del primo volume</b></li>
+                    </ul>
+                    <i>Omit the half-title page.</i>
+                </li>
+                <li><b>For <i>volumes 2-8</i></b>, capture <i>only</i><ul>
+                        <li>[Copyright page]</li>
+                        <li><b>Elenco dei Collaboratori del primo volume</b></li>
+                    </ul></li>
+                <li>For the Appendice (1990), capture<ul>
+                        <li>[Copyright page]</li>
+                        <li><b>Prefazione</b></li>
+                        <li><b>Abbreviazione</b></li>
+                    </ul>
+                    <i>Omit the other front-matter pages.</i>
+                </li>
+            </ul><h5>3. Short &amp; Medium person articles:</h5><p>1-6 paragraphs of body text, followed by worklists and/or bibliographies in paragraph form.</p><ul>
+                <li>The following data are given in the <b>first sentence</b> of short and medium
+                    articles, in this order: <b>Surname, Forename(s).</b> Occupation(s) nationality.
+                    (birth place name, dd-MM-yyyy - death place name, dd-MM-yyyy). Use the name in
+                    bold as the &lt;title> in the TEI header. <b><i>*NEW 2/14/2022*</i></b> Begin
+                    the &lt;body> with a &lt;div type="subheading">.<br /> [<b>Balfoort, Dirk
+                        Jacobus.</b> Musicologo e violinista oland. (Utrecht, 19-VII-1886 - L’Aia,
+                        11-XI-1964).]<blockquote>&lt;div
+                        type="subheading"><br />&lt;p>&lt;rilmPerson>&lt;hi
+                        rend="bold">&lt;persName>&lt;surname>Balfoort&lt;/surname>,
+                        &lt;forename>Dirk&lt;/forename>
+                        &lt;forename>Jacobus&lt;/forename>&lt;/persName>&lt;/hi>.
+                        &lt;occupation>Musicologo&lt;/occupation> e
+                        &lt;occupation>violinista&lt;/occupation>
+                        &lt;nationality>&lt;abbr>oland.&lt;/abbr>&lt;/nationality>
+                        (&lt;birth>&lt;placeName>Utrecht&lt;/placeName>,
+                        &lt;date>19-VII-1886&lt;/date>&lt;/birth> -
+                        &lt;death>&lt;placeName>L’Aia&lt;/placeName>,
+                        &lt;date>11-XI-1964&lt;/date>&lt;/death>)&lt;/rilmPerson>....&lt;/p>&lt;/div> </blockquote><ul>
+                        <li>If an additional name or names appears in italic, in parentheses
+                            immediately following the bold type or after the word "nata", tag it
+                            with &lt;surname type="alt">:<br /> [<b>Baliani, Carlo</b>
+                                (<i>Bagliani</i>, <i>Balliani</i>,
+                                <i>Basiliani</i>).]<blockquote>&lt;persName>&lt;hi
+                                rend="bold">&lt;surname>Baliani&lt;/surname>,
+                                &lt;forename>Carlo&lt;/forename>&lt;/hi> (&lt;surname
+                                type="alt">Bagliani&lt;/surname>, &lt;surname
+                                type="alt">Balliani&lt;/surname>, &lt;surname
+                                type="alt">Basiliani&lt;/surname>)&lt;/persName></blockquote></li>
+                        <li>If an additional name or names appears in italic in parentheses after
+                            the word "detto", tag it with &lt;forename type="alt">:<br /> [<b>Corea,
+                                Armando Anthony</b> (detto
+                                <i>Chick</i>)]<blockquote>&lt;persName>&lt;hi
+                                rend="bold">&lt;surname>Corea&lt;/surname>,
+                                &lt;forename>Armando&lt;/forename>
+                                &lt;forename>Anthony&lt;/forename>&lt;/hi> (detto &lt;forename
+                                type="alt">Chick&lt;/forename>)&lt;/persName></blockquote></li>
+                        <li>If the additional name has a qualifier "prop.", "pseud. di", or "nome
+                            d’arte di", tag the italic name in a <i>separate</i> &lt;persName>
+                            element with @type="alt" within the same &lt;rilmPerson> element:<br />
+                                [<b>Colonne, Edouard</b> (pseud. di <i>Jules-Edouard
+                                Judas</i>).]<blockquote>&lt;rilmPerson>&lt;hi
+                                rend="bold">&lt;persName>&lt;surname>Colonne&lt;/surname>,
+                                &lt;forename>Edouard&lt;/forename>&lt;/persName>&lt;/hi> (pseud. di
+                                &lt;hi rend="italic">&lt;persName
+                                type="alt">&lt;forename>Jules-Edouard&lt;/forename>
+                                &lt;surname>Judas&lt;/surname>&lt;/persName>&lt;/hi>).</blockquote></li>
+                        <li>If a birth or death date is given as a <i>year only</i>, with no other
+                            qualifier such as "ca.", include @precision="medium" in the &lt;date>
+                            tag.</li>
+                        <li>If a date is given with a preceding "ca.", such as "ca. 1733", include
+                            @precision="low".</li>
+                        <li>If any of the birth or death information is given as "?", then leave the
+                            affected element empty or with a "?", then include @precision="unknown"
+                            in the affected element:<br /> [(?, 1543 - Parma,
+                                13-III-1627)]<blockquote>&lt;birth>&lt;placeName
+                                precision="unknown">?&lt;/placeName>, &lt;date presision="medium"
+                                when="1543" when-custom="1543">1543&lt;/date>&lt;/birth> -
+                                &lt;death>&lt;placeName>Parma&lt;/placeName></blockquote></li>
+                        <li>If a range of dates is given for birth or death information, use @from
+                            and @to instead of @when, and also include @precision="low":<br />
+                                [<b>Dufay, Guillaume</b>. Compositore franco-fiamm. (prob. Fayt,
+                            Hainaut, ca. 1390-1400 - Cambrai, 27-XI-1474).]<blockquote>&lt;div
+                                type="subheading"><br />&lt;p>&lt;rilmPerson>&lt;persName>&lt;surname>Dufay&lt;/surname>,
+                                &lt;forename>Guillaume&lt;/forename>.
+                                &lt;occupation>Compositore&lt;/occupation>
+                                &lt;nationality>franco-fiamm.&lt;/nationality> (&lt;birth>prob.
+                                &lt;placeName precision="low">Fay, Hainaut&lt;/placeName> &lt;date
+                                from="1390" to="1400"
+                                precision="low">1390-1400&lt;/date>&lt;/birth></blockquote></li>
+                        <li><b><i>*NEW 2/14/2022*</i></b> If the death <i>place</i> is given as
+                                <b>"ivi"</b>, please replace this with the place given for the
+                            birth:<br /> [(Roma, 1821 - ivi, ottobre
+                                1894)]<blockquote>&lt;birth>&lt;placeName>Roma&lt;/placeName>,
+                                &lt;date presision="medium" when="1821"
+                                when-custom="1821">1821&lt;/date>&lt;/birth> -
+                                &lt;death>&lt;placeName>Roma&lt;/placeName>, &lt;date
+                                precision="medium" when="1894-10-01" when-custom="1894">ottobre
+                                1894&lt;/date>&lt;/death></blockquote></li>
+                    </ul></li>
+                <li><b>Worklists</b> may be headed "Compos.", "Ediz.", or "Scritti". <ul>
+                        <li><b><i>*NEW 2/14/2022*:</i></b> Wrap the entire worklist in a single
+                            &lt;div type="works">.</li>
+                        <li>Normalize the case of the heading, <i>spell out "Composizioni" or
+                                "Edizioni"</i>, and tag as &lt;head>.</li>
+                        <li>Parse the run-on into a &lt;list> using <i>paren-semicolon-space</i>
+                                "<b>); </b>" as the delimiter between &lt;item>s.</li>
+                        <li>Tag italic text as &lt;title>.</li>
+                        <li><b><i>*revised 1/2022*:</i></b> Where the word "per" appears, tag the
+                            Roman text after "per" as &lt;instrumentation>.</li>
+                        <li>If there is Roman text between italics and the word "per", tag as
+                            &lt;genre></li>
+                        <li>Tag text in parentheses as &lt;placeName> (if given) and &lt;date></li>
+                        <li>Omit the semicolon and final period.</li>
+                    </ul>
+                    <br /> [C<small>OMPOS</small>. (ord. cronol.): <i>Les caprices de Marianne</i>,
+                    mus. di scena (1960); <i>Pour un dix août</i> per 2 v. recit., TB, coro e orch.
+                    (1971); 4 essais pour une fête per 4 soli, coro e orch.
+                        (1973).]<blockquote>&lt;div type="works"><br />&lt;head>Composizioni (ord.
+                        cronol.):&lt;/head><br />&lt;list><br />&lt;item>&lt;bibl>&lt;title>Les
+                        caprices de Marianne&lt;/title>, &lt;genre>mus. di scena&lt;/genre>
+                        (&lt;date>1960&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>Pour
+                        un dix août&lt;/title> per &lt;instrumentation>2 v. recit., TB, coro e
+                        orch.&lt;/instrumentation>
+                        (&lt;date>1971&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>4
+                        essais pour une fête&lt;/title> per &lt;instrumentation>4 soli, coro e
+                        orch.&lt;/instrumentation>
+                        (&lt;date>1973&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;/list><br />&lt;/div></blockquote>[S<small>CRITTI</small>:
+                        <i>De hollandsche vioolmakers</i> (Amsterdam; 1931); <i>Eigenartige
+                        Musikinstrumente</i> (L'Aia, 1932).]<blockquote>&lt;div
+                        type="works"><br />&lt;head>Scritti:&lt;/head><br />&lt;list><br />&lt;item>&lt;bibl>&lt;title>De
+                        viool en hare meesters&lt;/title> (&lt;placeName>L’Aia&lt;/placeName>, s.
+                        a.)&lt;/bibl>&lt;/item> &lt;item>&lt;bibl>&lt;title>De hollandsche
+                        vioolmakers&lt;/title> (&lt;placeName>Amsterdam&lt;/placeName>,
+                        &lt;date>1931&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;title>Eigenartige
+                        Musikinstrumente&lt;/title> (&lt;placeName>L’Aia&lt;/placeName>,
+                        &lt;date>1932&lt;/date>)&lt;/bibl>&lt;/item><br />&lt;/list><br />&lt;/div></blockquote><br /><b>Longer</b>
+                    worklists will be divided into sections with heads that may begin a new line, or
+                    continue on the same line. The division between sections can be found with the
+                    pattern "<b>). </b>", that is, <i>closing paren-period-space</i>. Start a new
+                    &lt;div type="section"> here. Use the text up to the following colon as
+                    &lt;head>:<br /> [...1916). Per orch.: 5
+                        sinfonie...]<blockquote>...&lt;date>1916&lt;/date>).&lt;/bibl>&lt;/item>&lt;/list>&lt;/div><br />&lt;div
+                        type="section"><br />&lt;head>Per
+                        orch.:&lt;/head><br />&lt;list>&lt;item>&lt;bibl>5
+                            sinfonie...</blockquote><br /><b><i>NB:</i></b> Many worklists will end
+                    with a miscellaneous grouping of works indicated by "Inoltre", "Inoltra", or
+                    "altra". Again, use "<b>); </b>" to distinguish &lt;items>, <i>but do not tag as
+                        </i>&lt;bibl><i>. Please see the example files for this.</i></li>
+                <li><b>Bibliographies</b> are headed "B<small>IBL</small>.:" The individual entries
+                    are separated by semicolon-space ("<b>; </b>") just like the worklists. <ul>
+                        <li>Tag italic text as &lt;title></li>
+                        <li><i>Note that when the subject's name appears in the title of a
+                                bibliographic reference, it will be abbreviated. They should be
+                                expanded.</i></li>
+                        <li>Tag names before the title as &lt;author> and &lt;persName></li>
+                        <li>Tag text within angle quotation marks as &lt;title
+                            type="periodical"></li>
+                        <li>Tag info in parentheses as &lt;placeName>, &lt;date>, and/or
+                            &lt;edition> as needed:</li>
+                    </ul>From an article on "<b>Štejnberg, Maksimilian</b>":<br />
+                        [B<small>IBL</small>.: A. N. R<small>IMSKIJ</small>-K<small>ORSAKOV</small>,
+                    M. Š. Mosca, 1928; V. B<small>OGDANOV-</small>B<small>ERESOVSKIJ</small>, M. Š.,
+                    ivi, 1947; M. G<small>NESIN</small>, M. Š in «Sovetskaja Muzyka»,
+                        1946;…]<blockquote>&lt;div
+                        type="ography"><br />&lt;head>Bibliography:&lt;/head><br />&lt;list><br />&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>A.&lt;/abbr>&lt;/forename>
+                        &lt;forename>&lt;abbr>N.&lt;/abbr>&lt;/forename>
+                        &lt;surname>Rimskij-Korsakov&lt;/surname>&lt;/persName>&lt;/author>,
+                        &lt;title>Maksimilian Štejnberg&lt;/title> &lt;pubPlace>Mosca&lt;/pubPlace>,
+                        &lt;date>1928&lt;/date>&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>V.&lt;/abbr>&lt;/forename>
+                        &lt;surname>Bogdanov-Beresovskij&lt;/surname>&lt;/persName>&lt;/author>,
+                        &lt;title>Maksimilian Štejnberg&lt;/title>,
+                        &lt;pubPlace><b>Mosca</b>&lt;/pubPlace>,
+                        &lt;date>1947&lt;/date>&lt;/bibl>&lt;/item><br />&lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>M.&lt;/abbr>&lt;/forename>
+                        &lt;surname>Gnesin&lt;/surname>&lt;/persName>&lt;/author>, &lt;title
+                            <b>type="article"</b>>Maksimilian Štejnberg&lt;/title>, in &lt;title
+                            <b>type="periodical"</b>>Sovetskaja Muzyka&lt;/title>,
+                        &lt;date>1946&lt;/date>&lt;/bibl>&lt;/item><br />&lt;/list></blockquote><ul>
+                        <li><b><i>N.B. 1:</i></b> The indication <b>"ivi"</b> in bibliographies
+                            means "in the same place". It should be replaced with the value of the
+                            &lt;pubPlace> element in the &lt;bibl> immediately before. This is
+                            highlighted in the second &lt;item> of the example above.</li>
+                        <li><b>N.B. 2: </b>In a bibliography (not elsewhere), <b>double quotes («
+                                »)</b> around a phrase <b>in Roman type</b> identify it as a
+                                <b>periodical</b> title. set @type to "periodical", and the @type of
+                            the &lt;title> before it to "article". These are also highlighted in the
+                            example above. <i>If double quotes appear within Italic type, tag as</i>
+                            &lt;q>.</li>
+                    </ul></li>
+            </ul><h5>4. Family articles</h5><p>These begin with the family surname, followed by the word "Famiglia". Then follow <i>numbered</i> articles--each follows the format of the short person articles, except that only forenames are given, and in italic. Compare:<br />- Short person article: [<b>Schuman, William Howard</b>. Compositore amer. (New York, 4-VIII-1910).]<br />- Short family article, person: [- <b>1</b>) <i>William Howard</i>. Compositore amer. (New York, 4-VIII-1910).]</p><ul>
+                <li>Use the bold family name as &lt;title> in the TEI header.</li>
+                <li>Tag the first line(s) as &lt;div type="subheading">&lt;p>.</li>
+                <li>Tag the family surname as &lt;rilmPerson xml:id="id-xxx">&lt;persName>&lt;hi
+                    rend="bold">&lt;surname>...</li>
+                <li>If one or more surname variants are given in italic, tag &lt;surname
+                    type="alt">.</li>
+                <li>Tag the last word of the first &lt;p> as &lt;nationality>.</li>
+            </ul>[<b>Škroup</b> (<i>Skraup</i>). Famiglia di musicisti
+                boemi.]<blockquote>&lt;rilmPerson xml:id="id-000">&lt;persName>&lt;hi
+                rend="bold">&lt;surname>Škroup&lt;/surname>&lt;/hi> (&lt;hi
+                rend="italic">&lt;surname type="alt">Skraup&lt;/surname>&lt;/hi>)&lt;/persName>.
+                Famiglia di musicisti
+                &lt;nationality>boemi&lt;/nationality>.&lt;/rilmPerson></blockquote><ul>
+                <li>Wrap each of the individual person articles in a &lt;div type="person">, and
+                    within it, &lt;div type="bio">, &lt;div type="works">, or &lt;div
+                    type="ography"> as needed. </li>
+                <li>Add a @corresp element to the &lt;rilmPerson> element pointing to the @xml:id of
+                    the &lt;rilmPerson> containing the family name.</li>
+                <li>Treat worklists and bibliographies just as in stand-alone person
+                    articles.<p><i>See example file "deu00003.xml".</i></p></li>
+                <li><b><i>*NEW 3/1/2022*</i></b>: Many family articles will include a genealogical
+                    diagram. These should be captured as PNG images. <b>Create a &lt;div
+                        type="genealogy"> inside the &lt;div type="subheading"></b>. Reference the
+                    image file in a &lt;figure> element (with an @xml:id attribute), containing a
+                    &lt;graphic> element with a @url attribute containing the image file name. </li>
+            </ul><h5>5. Long person articles</h5><p>These begin like short articles, but there will be a "S<small>OMMARIO</small>" section following the birth-death information. The sommario is a list of sections in the body text of the article, like a table of contents:<br />  [<b>Skrjabin, Aleksandr Nikolaevič</b> (<i>Skriabin</i>). Compositore e pianista russo (Mosca, 25-XII-1871/6-I-1872 - ivi, 14/27-IV-1915). S<small>OMMARIO: I. La vita, il pensiero. II. L’opera sinfonica. - III. Il pianoforte.</small>…]</p><ul>
+                <li>Tag the name, occupation, nationality, and birth and death data just like short
+                    person articles.</li>
+                <li><i>Omit the Sommario</i>.</li>
+                <li>Tag the first &lt;div> as @type="subheading", and subsequent sections (indicated
+                    by heads) as &lt;div type="section">.<br /></li>
+                <li><b>Worklists</b> in long person articles are often a combination of
+                        <b>tables</b> and <b>lists in paragraph form</b>.<ul>
+                        <li>Such worklists are <b>headed</b> "C<small>ATALOGO</small>
+                                D<small>ELLE</small> O<small>PERE</small>", in small caps. Use this
+                            as &lt;head> for the &lt;div type="works">.</li>
+                        <li><b><i>*NEW 2/14/2022*:</i></b> Wrap the entire worklist in a single
+                            &lt;div type="works">; sections within it tag as &lt;div
+                            type="section">.</li>
+                        <li><b><i>*NEW 2/14/2022*:</i></b> In columns headed "Rappresentazione"
+                            ("performance"), the entire contents of each &lt;cell> should be wrapped
+                            in a &lt;rilmPerformance> element. Tag the word before the comma as
+                            &lt;placeName>, after it as &lt;orgName type="performing">, and tag the
+                            &lt;date>.</li>
+                        <li><b><i>*NEW 2/14/2022*:</i></b> In columns headed "Edizione", tag the
+                            text before the comma as &lt;publisher>, and the place name after the
+                            comma as &lt;pubPlace>. </li>
+                        <li>Many worklists in long person articles will include an <b>introductory
+                                paragraph</b> or paragraphs. Tag these as &lt;p>, tag italics as
+                            &lt;hi>, and replace double-quotes with &lt;q> tags.</li>
+                        <li>Each <b>table</b> or <b>list</b> will have its own <b>heading</b> in
+                            small caps. Begin a new &lt;div type="section"> and use the text in
+                            small caps as &lt;head>.</li>
+                        <li><b>Tables vary</b> in the number of columns and in column headings. Tag
+                            the first row as @role="label". Use "—" (hex 2014) where dashes indicate
+                            missing or repeated values. </li>
+                        <li>Tables that span <b>two or more pages</b> will have <i>"Segue:"</i>
+                            ("continue") at the top of the page. Continue these in the same
+                            &lt;table> element, and omit the "Segue" text. Do not repeat the label
+                            row of the table.<br /><i>See example file "deu00004.xml".</i></li>
+                        <li><b>Worklists in paragraph form</b> may come before, between, or after
+                            tables. Note that in example deu00004.pdf, the lists headed
+                                "M<small>USICA</small> V<small>OCALE</small>: b)" actually begins on
+                            the page <i>before</i> the table headed "M<small>USICA</small>
+                                V<small>OCALE</small>: a)"!</li>
+                    </ul></li>
+            </ul><h5>6. Corporate
+                articles</h5><p>Articles on corporations are included in the <i>Biografie</i>. The first sentence of the article states the role of the institution, and nationality:<br />  [<b>Bärenreiter-Verlag</b>. Casa editrice mus. ted., con sede a Kassel e Basilea, fondata ad Auststa nel 1923 da Karl → V<small>ÖTTERLE</small>.]</p><blockquote>&lt;orgName>&lt;hi
+                rend="bold">Bärenreiter-Verlag&lt;/hi>&lt;/orgName>. Casa editrice mus. ted., con
+                sede a Kassel e Basilea, fondata ad Auststa nel 1923 da Karl &lt;ref
+                target="deu00000">Vötterle&lt;/ref>.</blockquote><p>Tag only the corporate name as &lt;orgName>. Treat ~ographies the same as in person and family articles. <i>(<a href="deumm-biografie.xhtml#8">see no. 8, below</a>, about the arrow).</i></p><h5>7.
+                &lt;docAuthor>s and
+                editors</h5><p>Many articles will have an author given after the end of the text, justified right in small caps. (See example files "deu00005"). Make a &lt;div type="authors"> for this, and wrap the author's name in &lt;docAuthor> and &lt;persName> with tags for &lt;forename> and &lt;surname>.</p><blockquote>&lt;div
+                type="authors">&lt;persName>&lt;forename>Paulheinz&lt;/forename>
+                &lt;surname>Beck&lt;/surname>&lt;/persName>&lt;/div></blockquote><p>Frequently, a <i>translator's</i> name will also be given, on the same line, justified left in normal case, in parens, preceded by "trad.":<br /> [(trad. Vera Bertolino)]<br />Place these in the same &lt;div type="authors">, but in a separate &lt;docAuthor> element. Add an @type attribute with value "translator" to the &lt;docAuthor>.</p><blockquote>&lt;docAuthor
+                role="translator">(trad. &lt;persName>&lt;forename>Vera&lt;/forename>
+                &lt;surname>Bertolino&lt;/surname>&lt;/persName>)&lt;/docAuthor></blockquote><ul>
+                <li><i><b>NB:</b> Although the translator's name appears first</i> in the print,
+                    reading left to right, <i>include it in the TEI after the true author</i>.</li>
+                <li>In rare cases, there will be more than one true author in small caps. Again, tag
+                    the two authors' names in the same &lt;div> but separate &lt;docAuthor>s.</li>
+                <li>In rarer cases, there may be <i>two</i> true authors <i>and</i> a translator. </li>
+                <li>As an extreme example, this appears in vol. II:<br /> (trad. Velia
+                    Donadei-Giacosa) NORBERT DUFOURCQ e RÉMY STRICKER<br /> (catalogo e bibl. a cura
+                    della Redazione)<br />In this case, you would tag the two authors, then the
+                    translator, then add the note in a &lt;p> element, still inside the same &lt;div
+                        type="authors">.<blockquote>&lt;div type="authors">
+                        &lt;docAuthor>&lt;persName>&lt;forename>Norbert&lt;/forename>
+                        &lt;surname>Dufourcq&lt;/surname>&lt;/persName>&lt;/docAuthor><br />&lt;docAuthor>&lt;persName>&lt;forename>Rémy&lt;/forename>
+                        &lt;surname>Stricker&lt;/surname>&lt;/persName>&lt;/docAuthor><br />&lt;docAuthor
+                        role="translator">(trad. &lt;persName>&lt;forename>Velia&lt;/forename>
+                        &lt;surname>Donadei-Giacosa&lt;/surname>&lt;/persName>)&lt;/docAuthor><br />&lt;p>(catalogo
+                        e bibl. a cura della Redazione)&lt;/p><br />&lt;/div></blockquote></li>
+            </ul><h5>7. See-references</h5><p>An article <i>heading</i> followed by a right-pointing arrow (→), followed by text in small caps, indicates a see-reference:<br /> [<b>De Ana, Francesco</b> → A<small>NA</small>, F<small>RANCESCO</small> D’.]<br />Do not make an XML file or PDF for these, but treat them as described at <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a></p>
+            <h5 id="8">8. Cross-references</h5><ul>
+                <li>A right-pointing arrow (→) or by a wavy right-pointing arrow (⤳) <i>within the
+                        body text</i> indicates a cross reference, or see-also reference. </li>
+                <li>A straight arrow indicates a target within the same part of the
+                    encyclopedia—from <i>Biografie</i> to <i>Biografie</i>, for example. </li>
+                <li>A wavy arrow indicates a target in a different part of the encyclopedia—from
+                        <i>Biografie</i> to <i>Lessico</i>, for example. </li>
+                <li>They might point to a whole article, or to a section within an article:<br /> (⤳
+                        D<small>ULCE</small> M<small>ELOS</small>) or (→ H<small>OMER</small>,
+                    2)<br />The first points to the whole "Dulce Melos" article in the
+                        <i>Lessico</i> part of the encyclopedia. The second points to person number
+                    2 in the family article on "Homer" in the <i>Biografie</i> part.</li>
+                <li><b><i>*NEW 1/1/2022*:</i></b> The text "cfr. §" indicates a reference to another
+                    section <i>within the same article:</i> (cfr. § <i>Musica vocale</i>, a). The
+                    text following "§" gives the &lt;head> and head:@n of the &lt;div> that is
+                    targeted. <i>There are examples in the file deu00004.xml.</i></li>
+            </ul><p>Tag a reference to a whole article as a &lt;ref> element with @target containing the value of the @xml:id of the &lt;text> element of the target article. Tag a reference to a section with @target containing the concatenated @xml:id of the &lt;text> target, "#", and the @xml:id of the &lt;div>: </p><blockquote>&lt;ref
+                target="deu00000">Dulce Melos&lt;/ref></blockquote><blockquote>&lt;ref
+                target="deu11111#id-9b05e5d0-5cf9-11ec-bf63-0242ac130002">Homer,
+                2&lt;/ref></blockquote>
+            <p>NB. <i>Omit</i> the arrow character from the TEI; the link created by the &lt;ref> tag will mark the reference.</p>
+            <p><i>NB 2. Because we must convert the Biografie part first, the @target references to other parts of the encyclopedia must be given a placeholder value.</i></p>
+            <h5>Appendice (1990)</h5><ul>
+                <li>Apart from the front matter capture noted above, <b>articles</b> in the 1990
+                        <i>Appendice</i> volume should be treated exactly as the ones in the eight
+                    main volumes.</li>
+                <li>The Appendice volume ends with "<b>Musicisti e interpreti deceduti nel corso
+                        della pubblicazione dell’opera</b>", a list of persons who died after the
+                    main volumes were published, giving name, and death data.<br /> [<b>Agosti,
+                        Guido</b> (pp. 27-28): Milano, 2-VI-1980]<br />This information should be
+                    added to the <b>Agosti</b> article from <i>Biografie</i> vol. 1. The original
+                    reads:<br /> [<b>Agosti, Guido</b>. Pianista ital. (Forlì,
+                    11-VIII-1901).]<br />Add " - " (space-hyphen-space) to this, followed the death
+                    data and tag:<br /> [<b>Agosti, Guido</b>. Pianista ital. (Forlì, 11-VIII-1901 -
+                    Milano, 2-VI-1980).<blockquote>&lt;rilmPerson>&lt;hi
+                        rend="bold">&lt;persName>&lt;surname>Agosti&lt;/surname>,
+                        &lt;forename>Guido&lt;/forename>&lt;/persName>&lt;/hi>.
+                        &lt;occupation>Pianista&lt;/occupation>
+                        &lt;nationality>&lt;abbr>ital.&lt;/abbr>&lt;/nationality>
+                        (&lt;birth>&lt;placeName>Forlì&lt;/placeName>, &lt;date when="1901-08-11"
+                        when-custom="1901">11-VIII-1901&lt;/date>&lt;/birth> -
+                        &lt;death>&lt;placeName>Milano&lt;/placeName>, &lt;date when="1980-06-02"
+                        when-custom="1980">2-VI-1980&lt;/date>&lt;/death>)&lt;/rilmPerson></blockquote></li>
+            </ul><h5>Appendice 2005 </h5><p>The second Appendice volume, titled <i>Appendice 2005</i>, consists of two parts:</p><ol>
+                <li>The first part contains both <i>supplements</i> to articles published in the
+                        <i>Biografie</i> volumes (including the first <i>Appendice</i>) and
+                        <i>entirely new</i> articles.<ul>
+                        <li><b>Supplements</b> are indicated by a volume and page number reference
+                            in brackets, immediately following the article heading, such as<br />
+                            <b>Austin, William Weaver</b> [I: 174]. <br />or, in family articles,
+                            after the individual member's name:<br /> - <b>2</b>) <i>Massimo</i> [I:
+                            84].<br />Treat exactly like articles in the main volumes,
+                                    <i><b>except</b></i> add the phrase " [supplement] to the
+                            &lt;title> element in the TEI
+                                header.<blockquote>...&lt;titleStmt>&lt;title>Austin, William Weaver
+                                [supplement]&lt;/title>...</blockquote></li>
+                        <li><b>New articles</b>
+                            <i>do not</i> have brackets following the heading, and thus are
+                            formatted just like other articles in the <i>Biografie</i> volumes and
+                            first <i>Appendice</i> volume. They should be tagged the same as
+                            those.</li>
+                    </ul></li>
+                <li><i><b>*NEW 2/15/2022*:</b></i> The second part, subtitled <i>Repertorio delle
+                        voci biografiche del DEUMM ordinate per categoria</i>, contains a series of
+                    name indexes organized by occupation. For now, tag each index as a &lt;div
+                    type="section"> and as a &lt;list>. Tag the name as &lt;persName> with
+                    &lt;forename> and &lt;surname> as appropriate.</li>
+            </ol></div>
     </body>
 </html>
