@@ -14,7 +14,7 @@
         </div>
         <div class="r2021" title="Added, 11/2021">
                <p></p>
-               <p>[<b><i>*Last Revised 2022/03/01*</i></b> Revisions are indicated by "<b><i>*NEW</i></b>".]</p>
+               <p>[<b><i>*Last Revised 3/4/2022*</i></b> Revisions are indicated by "<b><i>*NEW</i></b>".]</p>
             <p>The first stage of RILMs conversion of <i>DEUMM</i> will be the 10-volume <b><i>Biografie</i></b>. You will produce a PDF for each of the volumes (scanned at 300 dpi, grayscale, and OCR text in Italian), plus article-level TEI files.</p>
         </div>
         <div><h5>1. General principles:</h5><ul>
@@ -61,20 +61,21 @@
                     is listed in the Abbreviazione as "produzione". For the example given above, the
                     full rendition should be:<blockquote>&lt;p>La produzione di Schönbach prende le
                         mosse,...</blockquote></li>
-                <li><b><i>*NEW 3/1/2022*</i></b>
-                    <b>Identification of Named individuals</b> with IDs from RILMs database of
-                    persons: RILM will provide a list of <b>personal names and dates</b> along with
-                    integer IDs, in .csv or other similar format. The &lt;rilmPerson> tag applied to
-                    the name of the person the article is about should have an @xml:id attribute
-                        <i>and</i> a @key attribute that contains the ID. For example, "Schönbach,
-                    Dieter" appears in the list with ID "16488". Thus, the name would be tagged
-                        :<blockquote>&lt;rilmPerson xml:id="id-d70f1dc4-4171-11ec-81d3-0242ac130003"
-                        key="16488">&lt;hi
-                        rend="bold">&lt;persName>&lt;surname>Schönbach&lt;/surname>
-                        &lt;forename>Dieter&lt;/forename>&lt;/persName>&lt;/hi>...
-                            </blockquote><b><i>*NEW 1/1/2022*:</i></b> If a name cannot be matched
-                    with those in the list provided by RILM, include an empty @key attribute
-                    (key='').</li>
+                <li><b><i>*NEW 3/4/2022*</i></b>
+                         <b>Identification of Named individuals</b> with IDs from RILMs database of
+                         persons: RILM will provide a list of <b>personal names and dates</b> along
+                         with integer IDs, in .csv or other similar format. The &lt;rilmPerson> tag
+                         applied to the name of the person the article is about should have an
+                              <b>@xml:id</b> attribute <i>and</i> a <b>@topicID</b> attribute that
+                         contains the ID. For example, "Schönbach, Dieter" appears in the list with
+                         ID "16488". Thus, the name would be tagged :<blockquote>&lt;rilmPerson
+                              xml:id="id-d70f1dc4-4171-11ec-81d3-0242ac130003"
+                              topicID="16488">&lt;hi
+                              rend="bold">&lt;persName>&lt;surname>Schönbach&lt;/surname>
+                              &lt;forename>Dieter&lt;/forename>&lt;/persName>&lt;/hi>...
+                                   </blockquote><b><i>*NEW 1/1/2022*:</i></b> If a name cannot be
+                         matched with those in the list provided by RILM, include an empty @topicID
+                         attribute (topicID="").</li>
                 <li><b>Typography</b>: render all <i>single quotes</i> as ’ (hex2019); <i>double
                         quotes</i> (« ») as &lt;q> tags <i>(except in bibliographies; see
                         below).</i></li>
@@ -83,11 +84,11 @@
                 <li><b>Typography</b>: superscript "o" used as an ordinal (as in "50º", meaning
                     "50th") should be encoded as hex00ba ("masculine ordinal"), <i>not</i> as
                     hex00b0 ("degree sign"), <i>nor</i> as a &lt;hi> element.</li>
-                <li><b><i>*NEW 3/1*</i></b>: <s><b>Images</b> in <i>Biografie</i> are limited to
-                        family tree diagrams. These should be captured as PNG images. These will be
-                        referenced in the TEI in a &lt;figure> element (with an @xml:id attribute),
-                        containing a &lt;graphic> element with a @url attribute pointing to the
-                        image file.</s></li>
+                <li><b><i>*NEW 3/4*</i></b>: <s><b>Images</b> in <i>Biografie</i> are limited to
+                              family tree diagrams. These should be captured as PNG images. These
+                              will be referenced in the TEI in a &lt;figure> element (with an
+                              @xml:id attribute), containing a &lt;graphic> element with a @url
+                              attribute pointing to the image file.</s></li>
             </ul><h5>2. Front matter:</h5><ul>
                 <li>Front matter of <b><i>Biografie</i> vol. 1</b> consists of the following:<ul>
                         <li>[Title page]</li>
@@ -299,11 +300,12 @@
                     the &lt;rilmPerson> containing the family name.</li>
                 <li>Treat worklists and bibliographies just as in stand-alone person
                     articles.<p><i>See example file "deu00003.xml".</i></p></li>
-                <li><b><i>*NEW 3/1/2022*</i></b>: Many family articles will include a genealogical
-                    diagram. These should be captured as PNG images. <b>Create a &lt;div
-                        type="genealogy"> inside the &lt;div type="subheading"></b>. Reference the
-                    image file in a &lt;figure> element (with an @xml:id attribute), containing a
-                    &lt;graphic> element with a @url attribute containing the image file name. </li>
+                <li><b><i>*NEW 3/4/2022*</i></b>: Many family articles will include a genealogical
+                         diagram. These should be captured as PNG images. <b>Create a &lt;div
+                              type="section">  with a &lt;head> element containing the text
+                              "Genealogia".</b> Reference the image file in a &lt;figure> element
+                         (with an @xml:id attribute), containing a &lt;graphic> element with a @url
+                         attribute containing the image file name. </li>
             </ul><h5>5. Long person articles</h5><p>These begin like short articles, but there will be a "S<small>OMMARIO</small>" section following the birth-death information. The sommario is a list of sections in the body text of the article, like a table of contents:<br />  [<b>Skrjabin, Aleksandr Nikolaevič</b> (<i>Skriabin</i>). Compositore e pianista russo (Mosca, 25-XII-1871/6-I-1872 - ivi, 14/27-IV-1915). S<small>OMMARIO: I. La vita, il pensiero. II. L’opera sinfonica. - III. Il pianoforte.</small>…]</p><ul>
                 <li>Tag the name, occupation, nationality, and birth and death data just like short
                     person articles.</li>
