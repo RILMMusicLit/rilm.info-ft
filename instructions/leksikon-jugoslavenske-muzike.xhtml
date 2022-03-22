@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Leksikon jugoslavenske muzike</title>
+  </head>
+    <body>
+        <div>
+            <h4 id="ljm">Leksikon jugoslavenske muzike</h4>
+        </div>
+        <div class="r2021" title="Added, 11/2021">
+            <p>This is a two-volume dictionary of groups, institutions, persons, topics, and works, in Croatian.</p>
+        </div>
+        <div>
+            <h5>1. Front matter:</h5>
+            <ul>
+                <li>Front matter of each volume includes:<ul>
+                        <li>[title page]</li>
+                        <li>[copyright page]</li>
+                        <li>[credits]</li>
+                        <li><b>Suradnici</b> (contributors)</li>
+                        <li><b>Kratice</b> (abbreviations)</li>
+                        <li>[foreword]</li>
+                    </ul> Make a <i>single</i> TEI file and single PDF for all these pages from
+                    volume 1. Tag the contributors list as a &lt;list> and the abbreviations as a
+                    two-column &lt;table>. <i>Do not create a TEI or PDF file for the same pages in
+                        volume 2. They are identical to those in volume 1.</i>
+                </li>
+            </ul>
+            <h5>2. Person articles:</h5>
+            <p>Person articles contain body text followed by a worklist in paragraph form.</p>
+            <ul>
+                <li>The following data are given in the <b>first sentence</b> of person articles, in
+                    this order: <b>SURNAME, Forename(s),</b> occupation(s) (birth place name,
+                    dd-MM-yyyy - death place name, dd-MM-yyyy). <i>Normalize the case</i> of the
+                    last name. Use the name in bold as the &lt;title> in the TEI header. <i>Begin
+                        the &lt;body> with a &lt;div type="subheading"></i>.<br /> [<b>ANTONIĆ,
+                        Božidar</b>, muzički pedagog i zborovođa (Dubranec, Turopolje, 13. III 1907
+                    — Zagreb, 7. II 1983).]<blockquote>&lt;div
+                        type="subheading"><br />&lt;p>&lt;rilmPerson>&lt;hi
+                        rend="bold">&lt;persName>&lt;surname>Antonić&lt;/surname>,
+                        &lt;forename>Božidar&lt;/forename>&lt;/persName>&lt;/hi>,
+                        &lt;occupation>muzički pedagog i zborovođa&lt;/occupation>
+                        (&lt;birth>&lt;placeName>Dubranec, Turopolje&lt;/placeName>, &lt;date
+                        when="1907-03-13" when-custom="1907">13. III 1907&lt;/date>&lt;/birth> —
+                        &lt;death>&lt;placeName>Zagreb&lt;/placeName>, &lt;date when="1983-02-07"
+                        when-custom="1983">7. II
+                        1983&lt;/date>&lt;/death>)&lt;/rilmPerson>....&lt;/p>&lt;/div> </blockquote><ul>
+                        <li>If additional name or names appears in parentheses tag it with
+                            &lt;forename type="alt"> or &lt;surname type="alt"> as appropriate,
+                            depending on whether is precedes or follows the comma:<br />
+                                [<b>ARBATSKI (Arbatsky), Jurij
+                                (Yury)</b>.]<blockquote>&lt;persName>&lt;hi
+                                rend="bold">&lt;surname>Arbatski&lt;/surname> (&lt;surname
+                                type="alt">Arbatsky&lt;/surname>),
+                                &lt;forename>Jurij&lt;/forename>&lt;/hi> (&lt;forename
+                                type="alt">Yury&lt;/forename>)&lt;/persName></blockquote></li>
+                    </ul></li>
+                <li><b>Italic text</b> in the body should be tagged &lt;title> if it begins with an
+                    upper-case letter, and &lt;hi rend="italic"> if it does not.</li>
+                <li>The <b>Worklist</b> at the end of the article may be headed in different
+                    ways—"INSTRUKTIVNA DJELA", "GLAVNE ULOGE", "GLAVNE PJESME", etc.—but should
+                    always be treated the same. <ul>
+                        <li>Wrap the entire worklist in a single &lt;div type="works">.</li>
+                        <li>Normalize the case of the heading and tag as &lt;head>.</li>
+                        <li>Parse the run-on into a &lt;list> using <i>semicolon-space</i> "<b>;
+                            </b>" as the delimiter between &lt;item>s.</li>
+                        <li>Tag italic text as &lt;title>.</li>
+                        <li>Tag opus numbers with &lt;opus></li>
+                        <li>Tag &lt;date>s</li>
+                        <li>Omit the semicolons and final period.</li>
+                    </ul></li>
+            </ul>
+            <i>See example file ljm-example1.xml for a person article.</i>
+            <h5>3. Family articles</h5>
+            <p>These begin with the family surname, followed by a numeral and the forename(s) of the first family member's name. Other family members have only a numeral and the forename(s). </p>
+            <ul>
+                <li>Use the bold family name as &lt;title> in the TEI header.</li>
+                <li>Tag the first line(s) as &lt;div type="subheading">&lt;p>.</li>
+                <li>Tag the family surname as &lt;rilmPerson xml:id="id-xxx">&lt;persName>&lt;hi
+                    rend="bold">&lt;surname>...</li>
+                <li>Start a new &lt;div type="person"> with the first numbered forename.</li>
+                <li>Wrap each of the subsequent individual person articles in a &lt;div
+                    type="person">, and within it, &lt;div type="bio">, and &lt;div type="works"> as
+                    needed. </li>
+                <li>Add a @corresp element to the &lt;rilmPerson> element pointing to the @xml:id of
+                    the &lt;rilmPerson> containing the family name.</li>
+                <li>Treat worklists just as in stand-alone person articles.</li>
+            </ul>
+            <i>See example file ljm-example2.xml for a family article.</i>
+            <h5>4. Work articles</h5>
+            <p>Articles on works are usually very short, and identify the first performance at the end, with the abbreviation "Praizv." Tag personal names after "M", "L", and "S", and tag the information after "Praizv." with &lt;rilmPerformance>.</p>
+            <p><i>See example files ljm-example4.xml and ljm-example5.xml for work articles.</i></p>
+            <p><i><b>Note</b>: if there are multiple works with the same title, they are numbered within one article. See the article "Adam i Eva" in vol. 1, p.5.</i></p>
+            <h5>5. Instrument articles</h5>
+            <p>Articles on instruments contain the word "instrument" <i>or</i> "svirala" in the first sentence of the article. </p>
+            <p><i>See ljm-example7.xml and ljm-example8.xml.</i></p>
+            <h5>6. Topic articles</h5>
+            <p>There are articles on institutions and groups that cannot be distinguished typographically. Articles that do not clearly fall into the four types listed above may be tagged &lt;text type="topic">.</p>
+            <h5>7. Long articles in sections</h5>
+            <p>Long articles may contain sections indicated by <b>headings in bold not capped</b>, and may have nested sections indicated only by a <b>bold numeral</b>. Start a &lt;div type="section"> at each of these, nesting the <i>numbered</i> sections within those with a heading. </p>
+            <p><i>Note that the article may <b>begin</b> with a subheading. Start a new </i>&lt;div><i> even in these cases:</i><br /> [<b>ETNOMUZIKOLOGIJA. Bosna i Hercegovina.</b> Za­nimanje za osobitosti narodne muzike...]</p>
+            <blockquote>&lt;div type="subheading">&lt;p>&lt;hi read="bold">Etnomuzikologija.&lt;/p>
+                &lt;div type="section">&lt;head>Bosna i Hercegovina&lt;/head>&lt;p>Za­nimanje za
+                osobitosti narodne muzike...&lt;/p></blockquote>
+            <h5>8. See-references</h5>
+            <p>An article <i>heading</i> followed by a right-pointing arrow (→), followed by text in italic, indicates a see-reference:<br /> [<b>ĐOKIĆ, Filip</b>, → <i>Djokić, Philippe</i>]<br />Do not make an XML file or PDF for these, but treat them as described at <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a></p>
+            <h5 id="8">9. Cross-references</h5>
+            <p>A right-pointing arrow (→) within the body text indicates a cross reference, or see-also reference. Tag as a &lt;ref> element with @target containing the value of the @xml:id of the &lt;text> element of the target article. Keep the arrow, but do not tag as italic. <i>See example file ljm-example7.xml.</i></p>
+        </div>
+    </body>
+</html>
