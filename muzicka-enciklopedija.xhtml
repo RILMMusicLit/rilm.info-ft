@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Muzička enciklopedija</title>
+  </head>
+    <body><div>
+            <h4 id="ljm">Muzička enciklopedija</h4>
+        </div><div class="r2021" title="Added, 11/2021">
+            <p>This is a three-volume dictionary of persons and topics. The three volumes were published in 1971, 1974, and 1977, respectively. These different dates for the volumes should be reflected in the TEI headers.</p>
+            <h5>GENERAL NOTE on LANGUAGE and ALPHABETS:</h5>
+            <ul>
+                <li>The Encyclopedia is in Croatian (HR), but has <i>many</i> words in Greek, and
+                    extended passages in Cyrillic characters. <i>Please ensure that the UTF-8
+                        encodings for glyphs that are visually similar or identical in each of the
+                        three alphabets (for example, "M", "Μ", and "М") are correct for the context
+                        in which they appear:</i><blockquote>Mozart (<b>not</b> Мozart); Моцарт
+                            (<b>not</b> Μoцapт)</blockquote>This is especially challenging in
+                    worklists and bibliographies in this title, which switch frequently between
+                    Latin alphabet and Cyrillic alphabet.</li>
+            </ul>
+        </div><div>
+            <h5>FRONT MATTER:</h5>
+            <ul>
+                <li>Front matter includes:<ul>
+                        <li>[title page]</li>
+                        <li>[copyright page]</li>
+                        <li>[introduction to the second edition] <b><i>[vol. 1 only]</i></b></li>
+                        <li>[credits]</li>
+                        <li><b>Suradnici u i [ii, iii] svesku</b> (contributors to vol. 1, [2,
+                            3])</li>
+                        <li><b>Kratice</b> (abbreviations)</li>
+                        <li><b>Ilustracije u i [ii, iii] svesku</b> (list of plates in vol. 1 [2,
+                            3])</li>
+                    </ul> Make one TEI file and one PDF of all the front matter for each of the
+                    three volumes (total three PDF files and three TEI documents). Tag the
+                    contributors lists as &lt;list> and the abbreviations and lists of plates as
+                    two-column &lt;table> elements.</li>
+            </ul>
+        </div><div>
+            <h5>ILLUSTRATIONS:</h5>
+            <p>Each volume has plates with illustrations. The are un-numbered, but are listed in the front matter (<b>Ilustracije</b>) along with the page numbers between which they are inserted. The article that each illustration belongs with is identified in the front-matter <b>Ilustracije</b> list, and also on the plates themselves. <i>There is no reference to the plates in the articles.</i> </p>
+            <p>For example, in Vol. 3, the list <b>Prilozi u boji</b> (illustrations in color) contains the entry
+
+  [PORTATIV. Detalj poliptiha L. Dobrićevića Marinova . . . . . . . . . . 120]
+
+The illustration is printed on a book plate inserted after page 120 of vol. 3.  The plate is headed "PORTATIV". This illustration and its caption should be included in the article "Portativ", which appears on pages 112-113. </p>
+        </div><div>
+            <h5>ARTICLE AUTHORS:</h5>
+            <p>Article authors are abbreviated and right-justified at the end of the article or at the end of a section of a larger article. </p>
+            <ul>
+                <li>If there is an author attribution, match the abbreviations to the list of
+                    contributors (<b>Suradnici</b>) in the front of the volume. Replace the
+                    abbreviated author reference with the full name of the author. See sample
+                    files.</li>
+                <li>If the author is identified at the end of an article section [see <a
+                        href="#long-articles">LONG ARTICLES IN SECTIONS</a>, below], tag the full
+                    name in a &lt;div type="author"> <i>inside</i> the &lt;div type="section"> that
+                    includes the preceding paragraph.</li>
+                <li>If the author is identified at the very end of the article, after the worklist
+                    or bibliography, place the &lt;div type="author"> as the last &lt;div> inside
+                    &lt;body>.</li>
+                <li>A few articles will have two authors, separated by "i" (meaning "and"). Make a
+                    separate &lt;docAuthor> element for each, but combine them in ONE &lt;div
+                    type="authors">.</li>
+                <li>We haven't found any, but if there are more than two authors, they will
+                    separated with commas, except that the last two will be separated by "i".</li>
+                <li>Some articles will have no identified authors—either there will be no author
+                    attribution at all, or the attribution will be simply "R.", meaning editorial
+                    staff. In either case, omit the &lt;div type="author">.</li>
+            </ul>
+        </div><div>
+            <h5>PERSON ARTICLES</h5>
+            <p>Person articles contain body text followed by a worklist (DJELA) and/or bibliography (LIT.) in paragraph form.</p>
+            <ul>
+                <li>The following data are given in the <b>first sentence</b> of person articles, in
+                    this order: <b>SURNAME, Forename(s),</b> nationality, occupation(s) (birth place
+                    name, dd-MM-yyyy — death place name, dd-MM-yyyy). <ul>
+                        <li><i>Normalize the case</i> of the last name. </li>
+                        <li>Use the name in bold as the &lt;title> in the TEI header. <i>Begin the
+                                &lt;body> with a &lt;div type="subheading"></i>:<br /> [<b>ALBANESE,
+                                Carlo,</b> talijanski kompozitor i pijanist (Napulj, 22. X 1856 —
+                            London, 21. IX 1926).]<blockquote>&lt;div
+                                type="subheading"><br />&lt;p>&lt;rilmPerson>&lt;hi
+                                rend="bold">&lt;persName>&lt;surname>Albanese&lt;/surname>,
+                                &lt;forename>Carlo&lt;/forename>&lt;/persName>&lt;/hi>,
+                                &lt;nationality>talijanski&lt;/nationality>
+                                &lt;occupation>kompozitor i pijanist&lt;/occupation>
+                                (&lt;birth>&lt;placeName>Napulj&lt;/placeName>, &lt;date
+                                when="1856-10-22" when-custom="1856">22. X 1856&lt;/date>&lt;/birth>
+                                — &lt;death>&lt;placeName>London&lt;/placeName>, &lt;date
+                                when="1926-09-21" when-custom="1926">21. IX
+                                1926&lt;/date>&lt;/death>)&lt;/rilmPerson>....&lt;/p>&lt;/div>
+                            </blockquote></li>
+                        <li>If additional name or names appears in parentheses, tag with
+                            &lt;forename type="alt"> or &lt;surname type="alt"> as appropriate,
+                            depending on whether is precedes or follows the comma:<br /> [<b>ALBANI,
+                                Emma</b> (pravo ime <b>Marie-Luise-Céile
+                                Lajeunesse</b>),...]<blockquote>&lt;persName>&lt;hi
+                                rend="bold">&lt;surname>Arbatski&lt;/surname> (&lt;surname
+                                type="alt">Albani&lt;/surname>),
+                                &lt;forename>Emma&lt;/forename>&lt;/hi> (pravo ime &lt;forename
+                                type="alt">Marie-Luise-Céile
+                                Lajeunesse&lt;/forename>)&lt;/persName></blockquote></li>
+                    </ul></li>
+                <li><b>Italic text</b> in the body of the article should be tagged &lt;hi
+                    rend="italic">. (There is no way to determine a semantic tag.)</li>
+                <li><a href="#wl"><b>See BELOW for handling Worklists</b></a></li>
+            </ul>
+        </div><div>
+            <h5>FAMILY ARTICLES</h5>
+            <p>These begin with the family surname, followed by a numeral and the forename(s) of the first family member's name. Other family members have only a numeral and the forename(s). </p>
+            <ul>
+                <li>Use the bold family name as &lt;title> in the TEI header.</li>
+                <li>Tag the first line(s) as &lt;div type="subheading">&lt;p>.</li>
+                <li>Tag the family surname as &lt;rilmPerson xml:id="rx">&lt;persName>&lt;hi
+                    rend="bold">&lt;surname>...</li>
+                <li>Start a new &lt;div type="person"> with the first numbered forename.</li>
+                <li>Wrap each of the subsequent individual person articles in a &lt;div
+                    type="person">, and within it, &lt;div type="bio">, and &lt;div type="works"> as
+                    needed. </li>
+                <li>Add a @corresp element to the &lt;rilmPerson> element pointing to the @xml:id of
+                    the &lt;rilmPerson> containing the family name.</li>
+                <li>Treat worklists just as in stand-alone person articles.</li>
+            </ul>
+        </div><div>
+            <h5>TOPIC ARTICLES</h5>
+            <p>Short articles on topics often include one or more translations of the term following the article heading:
+
+ [<b>AKOLUTHIA</b> (grč. ἀκολουθέω <i>slijediti</i>, <i>ići za kim</i>),...]
+ [<b>AKORD</b> (engl. <i>chord</i>, franc. <i>accord</i>, njem <i>Akkord</i>, tal. <i>accordo</i>; od srednjovjekovno lat. accordare <i>uskladiti</i>), ...]
+
+Normalize the case of the heading, and add a &lt;term> tag around the heading and each of the translations given in italics:</p>
+            <blockquote>&lt;hi rend="bold">&lt;term>Akoluthia&lt;/term>&lt;/hi> (grč.
+                &lt;term>ἀκολουθέω&lt;/term> &lt;term>slijediti&lt;/term>, &lt;term>ići za
+                kim&lt;/term>),...</blockquote>
+            <blockquote>&lt;hi rend="bold">&lt;term>Akord&lt;/term>&lt;/hi> (engl.
+                &lt;term>chord&lt;/term>, franc. &lt;term>accord&lt;/term>, njem
+                &lt;term>Akkord&lt;/term>, tal. &lt;term>accordo&lt;/term>; od srednjovjekovno lat.
+                accordare &lt;term>uskladiti&lt;/term>),...</blockquote>
+            <h5 id="long-articles">LONG ARTICLES IN SECTIONS:</h5>
+            <ul>
+                <li>Article headings in this encyclopedia are in bold, all-caps: <b>PJEVAĆKA
+                        DRUŠTVA.</b></li>
+                <li>second-level section headings (if they are used) are in bold, small-caps:
+                            <b><small>U JUGOSLAVIJI.</small></b></li>
+                <li>third-level section headings (or second-level, if small caps headings are not
+                    used) are in bold, normal caps: <b>Bosna i Hercegovina.</b></li>
+                <li>fourth-level headings are in ialic: <i>Narodni muzički instrumenti</i>.</li>
+                <li><i>Omit the periods following the headings</i></li>
+            </ul>
+            <p><i>Note that the article may <b>begin</b> with a subheading. Start a new </i>&lt;div><i> even in these cases:</i><br /> [<b>AKUSTIKA. Uvod.</b> A. je nauka o zvuku, to jest o onome što zapažamo sluhom (grč. ἀκούω <i>čujem</i>). Pojam zvuk obuhvaća sve što čujemo...]</p>
+            <blockquote>&lt;div type="subheading">&lt;p>&lt;hi
+                read="bold">&lt;term>Akustika&lt;/term>&lt;/p> &lt;div
+                type="section">&lt;head>Uvod&lt;/head>&lt;p>A. je nauka o zvuku, to jest o onome što
+                zapažamo sluhom (grč. &lt;term>ἀκούω&lt;/term> &lt;term>čujem&lt;/term>). Pojam zvuk
+                obuhvaća sve što čujemo...&lt;/p></blockquote>
+        </div><div>
+            <h5>SEE-REFERENCES</h5>
+            <p>An article <i>heading</i> followed by a right-pointing arrow (→), followed <i>only</i> by text in italic, indicates a see-reference:<br /> [<b>BRANCO FREITAS, Luis</b>, → <i>Freitas Branco, Luis</i>]<br />Do not make an XML file or PDF for these, but treat them as described at <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs">http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a></p>
+        </div><div>
+            <h5 id="crossref">CROSS-REFERENCES</h5>
+            <p>A right-pointing arrow (→) within the body text indicates a cross reference, or see-also reference. 
+
+  [...( → <i>Nepotpuni oblik akorda</i>; → <i>Obrat akorda</i>) ...]
+
+Tag as a &lt;ref> element with @target containing the value of the @xml:id of the &lt;text> element of the target article. Keep the arrow, but do not tag as italic.</p>
+        </div><div><h5 id="wl">WORKLISTS</h5><p>Worklists in this publication are typeset in a single, unbroken paragraph. They are often divided into nested sections. The sections are headed as follows:</p><ul>
+                <li>The worklist heading, "DJELA." or "DELA.", is given in in all-caps followed by a
+                    period.</li>
+                <li>first-level section headings are in italic all-caps, preceded by an M-dash
+                    (except for the first one) and followed by a colon: <br /> — <i>ORKESTRALNA</i>: </li>
+                <li>second-level section headings are in normal type, normal caps, followed by a
+                    colon: <br /> Četiri simfonije:</li>
+                <li id="serial-i">In general, individidual works are delimited by semicolons.
+                    However, <i>in the lowest-level lists, the last two works have only "i" (meaning
+                        "and"), and no semicolon between.</i></li>
+            </ul><p> Here is the worklist from the <b>Reinhard Keiser</b> article (v.2, p.311):
+</p><p>DJELA: koncert za 2 flaute, violino principale, 2 violine, 2 oboe, violu i b. c.; trio-sonate. — <i>DRAMSKA</i>. Opere (izbor): <i>Der konigliche Schäfer oder Basilius in Arcadien</i>, 1693 (?); <i>Mahumet II</i>, 1696; <i>Circe</i>, 1702; <i>Die Römische Unruhe oder Die Edelmüthige Octavia</i>, 1705; <i>Störtebecker und Jödge Michael</i>, 1701; <i>Der angenehme Betrug oder Der Carneval von Venedig</i>, 1707; <i>Le Bon Vivant oder Die Leipziger Messe</i>, 1710; <i>Der hochmüthige... Croesus</i>, 1711 (prer. 1730); <i>Der Hamburger Jahrmarkt oder Der glückliche Betrug</i>, 1725; <i>Die Hamburger Schlachtzeit oder Der misslungene Betrug</i>, 1725; <i>Der lächerliche Printz Jodelet</i>, 1726. — VOKALNA. Svjetovne kantate: zbirka <i>Gemüths-Ergötzung</i> (6 kantata), 1698; Divertimenti serenissimi... (9 kantata). 1713; <i>Musikalische Landlust</i> (moralne kantate), 1714<b> i </b>dr. Oratorijske pasije (najznatnija <i>Der für die Sunde der Welt gemarterte und sterbende Heiland Jesus</i> u F-duru, na tekst B. H. Brockesa, 1712); mise; psalmi.</p><p>Here is the desired tagging:</p><blockquote>
+                &lt;div type="works"> &lt;head>DJELA&lt;/head><br /> &lt;list><br />
+                &lt;item>&lt;bibl>koncert za 2 flaute, violino principale, 2 violine, 2 oboe, violu
+                i b. c.&lt;/bibl>&lt;/item><br />
+                &lt;item>&lt;bibl>trio-sonate.&lt;/bibl>&lt;/item><br /> &lt;/list><br /> &lt;div
+                type="section"><br /> &lt;head>DRAMSKA&lt;/head><br /> &lt;div type="section"><br />
+                &lt;head>Opere (izbor)&lt;/head><br /> &lt;list><br />
+                &lt;item>&lt;bibl>&lt;title>Der konigliche Schäfer oder Basilius in
+                Arcadien&lt;/title>, &lt;date>1693&lt;/date> (?)&lt;/bibl>&lt;/item><br />
+                &lt;item>&lt;bibl>&lt;title>Mahumet II&lt;/title>,
+                &lt;date>1696&lt;/date>&lt;/bibl>&lt;/item><br />
+                &lt;item>&lt;bibl>&lt;title>Circe&lt;/title>,
+                &lt;date>1702&lt;/date>&lt;/bibl>&lt;/item><br /> &lt;item>&lt;bibl>&lt;title>Die
+                Römische Unruhe oder Die Edelmüthige Octavia&lt;/title>,
+                &lt;date>1705&lt;/date>&lt;/bibl>&lt;/item><br />
+                &lt;item>&lt;bibl>&lt;title>Störtebecker und Jödge Michael&lt;/title>,
+                &lt;date>1701&lt;/date>&lt;/bibl>&lt;/item><br /> &lt;item>&lt;bibl>&lt;title>Der
+                angenehme Betrug oder Der Carneval von Venedig&lt;/title>,
+                &lt;date>1707&lt;/date>&lt;/bibl>&lt;/item><br /> &lt;item>&lt;bibl>&lt;title>Le Bon
+                Vivant oder Die Leipziger Messe&lt;/title>,
+                &lt;date>1710&lt;/date>&lt;/bibl>&lt;/item><br /> &lt;item>&lt;bibl>&lt;title>Der
+                hochmüthige... Croesus&lt;/title>, &lt;date>1711&lt;/date> (prer.
+                1730)&lt;/bibl>&lt;/item><br /> &lt;item>&lt;bibl>&lt;title>Der Hamburger Jahrmarkt
+                oder Der glückliche Betrug&lt;/title>,
+                &lt;date>1725&lt;/date>&lt;/bibl>&lt;/item><br /> &lt;item>&lt;bibl>&lt;title>Die
+                Hamburger Schlachtzeit oder Der misslungene Betrug&lt;/title>,
+                &lt;date>1725&lt;/date>&lt;/bibl>&lt;/item><br /> &lt;item>&lt;bibl>&lt;title>Der
+                lächerliche Printz Jodelet&lt;/title>,
+                &lt;date>1726&lt;/date>&lt;/bibl>&lt;/item><br /> &lt;/list><br /> &lt;/div><br />
+                &lt;/div><br /> &lt;div type="section"><br /> &lt;head>VOKALNA&lt;/head><br />
+                &lt;list><br /> &lt;item>Svjetovne kantate:&lt;list>&lt;item>&lt;bibl>zbirka
+                &lt;title>Gemüths-Ergötzung&lt;/title> (6 kantata),
+                &lt;date>1698&lt;/date>&lt;/bibl>&lt;/item>&lt;item>&lt;bibl>&lt;title>Divertimenti
+                serenissimi...&lt;/title> (9 kantata).
+                &lt;date>1713&lt;/date>&lt;/bibl>&lt;/item>&lt;item>&lt;bibl>&lt;title>Musikalische
+                Landlust&lt;/title> (moralne kantate),
+                &lt;date>1714&lt;/date>&lt;/bibl>&lt;/item>&lt;item>&lt;bibl>dr. Oratorijske pasije
+                (najznatnija &lt;title>Der für die Sunde der Welt gemarterte und sterbende Heiland
+                Jesus&lt;/title> u &lt;musKey>F-duru&lt;/musKey>, na tekst B. H. Brockesa,
+                &lt;date>1712&lt;/date>)&lt;/bibl>&lt;/item>&lt;/list>&lt;/item><br />
+                &lt;item>&lt;bibl>mise&lt;/bibl>&lt;/item><br />
+                &lt;item>&lt;bibl>psalmi.&lt;/bibl>&lt;/item><br /> &lt;/list><br /> &lt;/div><br />
+                &lt;/div> </blockquote><ul>
+                <li>The periods after the heads are omitted.</li>
+                <li>The M-dashes before the heads are omitted.</li>
+                <li>All italic text in a &lt;div type="works"> is tagged as &lt;title>.</li>
+                <li>Any string such as "x-duru" or "x-molu" is tagged as &lt;musKey>.</li>
+            </ul><p><b>The typography in these worklists can be subtle but meaningful, and tricky to represent in XML.</b> Case in point: The text "Svjetovne kantate:" is a second-level head, and one could begin a new &lt;div type="section"> there. However, there are two problems with this: </p><ol>
+                <li>The entries "mise" and "psalmi" are <i>not</i> included the list of items in the
+                    "Svjetovne kantate:" section. <i>How do we know this?</i> Because the works
+                        "<i>Musikalische Landlust</i> (moralne kantate), 1714" and "dr. Oratorijske
+                    pasije..." are delimited in the print by "i", with no semicolon, indicating that
+                    they are the last two items in that list, as per the <a href="#serial-i">bullet
+                        point, above.</a>
+                </li>
+                <li>If we began a &lt;div> before "Svjetovne kantate:", we would have to <i>end</i>
+                    that &lt;div> and begin a new &lt;div type="section"> for "mise" and "psalmi".
+                    We do not want to start a new &lt;div type="section"> before "mise", though,
+                    because they are part of the "VOKALNA" list, at the same structural level as
+                    "Svjetovne kantate:".</li>
+            </ol>To shed another light on this: If we were to typeset this list in outline form, it
+            should look like
+            this:<p><img src="mej-worklist-outline-form.png" alt="mej-worklist-outline-form.png" /></p><p>There is a long worklist in the file <b>mej-example1.xml</b>. There are several nested lists of this kind in that example. Please reach out with any questions, as sub-optimal tagging will be difficult to track down.</p></div>
+        <div>
+            <h5>LISTS of EDITIONS</h5>
+            <p>Lists of Editions of musical works are headed "NOVA IZD." Tag this as a &lt;list>, with a new item at each semicolon. Tag italic text as &lt;title>:
+
+NOVA IZD.: A. Sandberger obj. 22 Kerllove kompozicije za orgulje ili klavir, 9 duhovnih koncerata i sonatu za 2 violine, violu i basso continuo (<i>DTB</i> II 1901); G. Adler obj. 2 mise (<i>DTÖ</i>, XXV, 1918) i 1 misu (<i>DTÖ</i>, XXX, 1923); R. Walter je redigirao novo izd. djela <i>Modulatio organica</i>..., 1956. Pojedine Kerllove kompozicije obj. su i F. Commer, F. Redlich, A. Farrenc, F. J. Fétis, F. A. Guilmant, W. Niemann, K. Straube i dr. </p>
+            <blockquote> &lt;div type="ography"> &lt;head>NOVA IZD.&lt;/head><br/> &lt;list><br/> &lt;item>&lt;bibl>A. Sandberger obj. 22 Kerllove kompozicije za orgulje ili klavir, 9 duhovnih koncerata i sonatu za 2 violine, violu i basso continuo (&lt;title>DTB&lt;/title> II &lt;date>1901&lt;/date>)&lt;/bibl>&lt;/item><br/> &lt;item>&lt;bibl>G. Adler obj. 2 mise (&lt;title>DTÖ&lt;/title>, XXV, &lt;date>1918&lt;/date>) i 1 misu (&lt;title>DTÖ&lt;/title>, XXX, &lt;date>1923&lt;/date>)&lt;/bibl>&lt;/item><br/> &lt;item>&lt;bibl>R. Walter je redigirao novo izd. djela &lt;title>Modulatio organica...&lt;/title>, &lt;date>1956&lt;/date>&lt;/bibl>&lt;/item><br/> &lt;item>&lt;bibl>Pojedine Kerllove kompozicije obj. su i F. Commer, F. Redlich, A. Farrenc, F. J. Fétis, F. A. Guilmant, W. Niemann, K. Straube i dr.&lt;/bibl>&lt;/item><br/> &lt;/list><br/> &lt;/div> </blockquote>
+        </div>
+    <div>
+        <h5>BIBLIOGRAPHIES</h5>
+            <p>Bibliographies are headed "LIT." and are typeset in a single, unbroken paragraph. There are very subtle distinctions among different types of bibliographic entries, such as articles, monographs, etc. Here is the bibliography for the Kitara article (vol. 2, p. 325):
+
+LIT.: <i>C. Sachs</i>, Musik des Altertums, 1924. — <i>Th. Reinach</i>, La Musique grecque, Paris 1926. — <i>H. Huchzermeyer</i>, Aulos und Kithara in der griechischen Musik (disertacija), Münster i. W., 1931. — <i>T. Norlind</i>, Lyra und Kithara in der Antike, Svensk Tidskrift för Musikforskning, 1934. — <i>M. Gulliemin</i> i <i>J. Duchesne</i>, Sur l’origine asiatique de la cithare grecque, L’Antiquité classique, 1935. — <i>B. Aign,</i> Die Geschichte der Musikinstrumente des ägäischen Raumes bis um 700 v. Chr. (disertacija), Frankfurt 1963.</p>
+            <blockquote>&lt;div type="ography"><br /> &lt;head>LIT.&lt;/head><br /> &lt;list><br />
+                &lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>C.&lt;/abbr>&lt;/forename>
+                &lt;surname>Sachs&lt;/surname>&lt;/persName>&lt;/author>, &lt;title>Musik des
+                Altertums&lt;/title>, &lt;date>1924&lt;/date>.&lt;/bibl>&lt;/item><br />
+                &lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>Th.&lt;/abbr>&lt;/forename>
+                &lt;surname>Reinach&lt;/surname>&lt;/persName>&lt;/author>, &lt;title>La Musique
+                grecque&lt;/title>, &lt;pubPlace>Paris&lt;/pubPlace>
+                &lt;date>1926&lt;/date>.&lt;/bibl>&lt;/item><br />
+                &lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>H.&lt;/abbr>&lt;/forename>
+                &lt;surname>Huchzermeyer&lt;/surname>&lt;/persName>&lt;/author>, &lt;title>Aulos und
+                Kithara in der griechischen Musik&lt;/title> (&lt;seg
+                type="diss">disertacija&lt;/seg>), &lt;pubPlace>Münster&lt;/pubPlace> i.
+                &lt;pubPlace>W.&lt;/pubPlace>, &lt;date>1931&lt;/date>.&lt;/bibl>&lt;/item><br />
+                &lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>T.&lt;/abbr>&lt;/forename>
+                &lt;surname>Norlind&lt;/surname>&lt;/persName>&lt;/author>, &lt;title>Lyra und
+                Kithara in der Antike&lt;/title>, &lt;title type="periodical">Svensk Tidskrift för
+                Musikforskning&lt;/title>, &lt;date>1934&lt;/date>.&lt;/bibl>&lt;/item><br />
+                &lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>M.&lt;/abbr>&lt;/forename>
+                &lt;surname>Gulliemin&lt;/surname>&lt;/persName>&lt;/author> i
+                &lt;author>&lt;persName>&lt;forename>&lt;abbr>J.&lt;/abbr>&lt;/forename>
+                &lt;surname>Duchesne&lt;/surname>&lt;/persName>&lt;/author>, &lt;title>Sur l’origine
+                asiatique de la cithare grecque&lt;/title>, &lt;title type="periodical">L’Antiquité
+                classique&lt;/title>, &lt;date>1935&lt;/date>.&lt;/bibl>&lt;/item><br />
+                &lt;item>&lt;bibl>&lt;author>&lt;persName>&lt;forename>&lt;abbr>B.&lt;/abbr>&lt;/forename>
+                &lt;surname>Aign&lt;/surname>&lt;/persName>&lt;/author>, &lt;title>Die Geschichte
+                der Musikinstrumente des ägäischen Raumes bis um 700 v. Chr.&lt;/title> (&lt;seg
+                type="diss">disertacija&lt;/seg>), &lt;pubPlace>Frankfurt&lt;/pubPlace>
+                &lt;date>1963&lt;/date>.&lt;/bibl>&lt;/item><br /> &lt;/list><br /> &lt;/div> </blockquote>
+            <ul>
+                <li>Individual items are delimited by " — " (space, M-dash, space). <i>(Numeric
+                        ranges use M-dashes "—" without spaces.)</i></li>
+                <li>Italic text is used for authors. Normal text is used for titles. This is the
+                    inverse of most typographic convention.</li>
+                <li>Monographs such as the Reinach above generally follow the format [<i>Author,
+                        A.</i> Title, Pubplace YYYY]. Note the comma between the title and
+                    publication place, but <i>no comma</i> between the publication place and year.
+                    There is no need for an @type qualifier on the &lt;title> element.</li>
+                <li>Dissertations differ from monographs only in adding "(disertacija)". Tag this as
+                    &lt;seg type="diss">.</li>
+                <li>A comma following the text right before the date indicates an article in a
+                    periodical. The format is [<i>Author, A.</i> Article Title, Periodical Title,
+                    YYYY]. Include @type attributes on both titles, as shown in the examples.</li>
+                <li>Some citations include page numbers following the year: [<i>Author, A.</i>
+                    Article Title, Periodical Title, YYYY, pp]. Do not tag the page numbers.</li>
+                <li>Information about later editions or translations may be added in parentheses at
+                    the end of the entry. Do not tag this parenthetical information.</li>
+            </ul>
+            <p>The example file <b>mej-example1.xml</b> has a lengthy bibliography.</p>
+    </div>
+        <div><h5>SUPPLEMENT ("DODATAK", end of vol. 3)</h5> The supplement contains both<i>entirely
+                new</i> articles, and updated <i>birth and death information</i> for previously
+            published person articles.<ul>
+                <li><b>Updates</b> consist only of article heading (personal name), birth and death
+                    information, and <i>nothing else</i>:<br /> [<b>ABENDROTH, Walter</b> (Hannover,
+                    29. V 1896 — Hausham, Gornja Bavarska, 30. IX 1973).]<br />Add whatever birth
+                    and death information is new to the corresponding full article.</li>
+                <li><b>New articles</b> are formatted just like other articles in the
+                    encyclopedia.</li>
+            </ul>
+        </div>
+    </body>
+</html>
