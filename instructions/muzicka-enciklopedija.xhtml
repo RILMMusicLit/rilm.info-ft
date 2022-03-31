@@ -105,6 +105,13 @@ The illustration is printed on a book plate inserted after page 120 of vol. 3.  
                                 type="alt">Marie-Luise-Céile
                                 Lajeunesse&lt;/forename>)&lt;/persName></blockquote></li>
                     </ul></li>
+                    <li><b>Abbreviation of names</b>: in person articles, every mention of the
+                         person the article is about is abbreviated to the first letter of the
+                         surname after the first paragraph. Such abbreviations should be expanded to
+                         the full surname. In <b>mej-example1.xml</b>, "<b>ČAJKOVSKI</b>", midway
+                         through the first paragraph:<br /><br />  [U doba studija na Konzervatoriju
+                         Č. upoznaje i muzičkog kritičara H. A. Larochea… ]<br /><br />The "Č."
+                         should be expanded to "Čajkovski".</li>
                 <li><b>Italic text</b> in the body of the article should be tagged &lt;hi
                     rend="italic">. (There is no way to determine a semantic tag.)</li>
                 <li><a href="#wl"><b>See BELOW for handling Worklists</b></a></li>
@@ -171,9 +178,10 @@ Tag as a &lt;ref> element with @target containing the value of the @xml:id of th
                 <li>The worklist heading, "DJELA." or "DELA.", is given in in all-caps followed by a
                     period.</li>
                 <li>first-level section headings are in italic all-caps, preceded by an M-dash
-                    (except for the first one) and followed by a colon: <br /> — <i>ORKESTRALNA</i>: </li>
+                         (except for the first one) and followed by a colon: <br />[ —
+                              <i>ORKESTRALNA</i>: ]</li>
                 <li>second-level section headings are in normal type, normal caps, followed by a
-                    colon: <br /> Četiri simfonije:</li>
+                         colon: <br /> [Četiri simfonije:]</li>
                 <li id="serial-i">In general, individidual works are delimited by semicolons.
                     However, <i>in the lowest-level lists, the last two works have only "i" (meaning
                         "and"), and no semicolon between.</i></li>
@@ -299,8 +307,11 @@ LIT.: <i>C. Sachs</i>, Musik des Altertums, 1924. — <i>Th. Reinach</i>, La Mus
                     Article Title, Periodical Title, YYYY, pp]. Do not tag the page numbers.</li>
                 <li>Information about later editions or translations may be added in parentheses at
                     the end of the entry. Do not tag this parenthetical information.</li>
+                    <li>The "author" name <b>"Isti"</b> in bibliographies means "the same". It
+                         should be replaced with the author name of the &lt;bibl> immediately
+                         before.</li>
             </ul>
-            <p>The example file <b>mej-example1.xml</b> has a lengthy bibliography.</p>
+            <p>The example file <b>mej-example1.xml</b> has a lengthy bibliography where you can find all these points.</p>
     </div>
         <div><h5>SUPPLEMENT ("DODATAK", end of vol. 3)</h5> The supplement contains both<i>entirely
                 new</i> articles, and updated <i>birth and death information</i> for previously
