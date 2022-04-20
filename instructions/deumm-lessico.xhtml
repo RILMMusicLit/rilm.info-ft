@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Dizionario Enciclopedico Universale della Musica e dei Musicisti - Lessico</title>
+  </head>
+    <body>
+        <div>
+            <h4 id="DEU">Dizionario Enciclopedico Universale della Musica e dei Musicisti [DEUMM]
+                part 2 - <i>Lessico</i>
+            </h4>
+        </div>
+        <div class="r2022" title="Added, 4/2022">
+            <p></p>
+            <p>[<b><i>*Last Revised 4/20/2022*</i></b>.]</p>
+            <p>The second stage of RILMs conversion of <i>DEUMM</i> will be the 4-volume <b><i>Lessico</i></b>, an encyclopedia of terms and places. You will produce one PDF for each of the volumes (scanned at 300 dpi, grayscale for text-only pages, full color for plates and other color illustrations, and OCR text in Italian), plus article-level TEI files.</p>
+        </div>
+        <div>
+            <h5>1. General principles:</h5>
+            <ul>
+                <li>Each volume of the <i>Lessico</i> has a different <b>year</b> and <b>ISBN</b>,
+                    given on the copyright page of each. The correct values should be included in
+                    the TEI header of each article.</li>
+                <li><b>xml:id's</b>: <i>DEUMM online</i> will be a continually updated resource, so
+                    each &lt;div>, &lt;p>, and &lt;bibl> element must have a unique identifier: an
+                    xml:id element containing "id-" followed by a UUID. For example: &lt;p
+                    xml:id="id-f11a99bb-5a84-12df-f1b2-b9374b7da8ab">. The following <b>six</b>
+                    elements require an @xml:id : <br />– &lt;bibl>, &lt;div>, &lt;docAuthor>,
+                    &lt;figure>, &lt;p>, &lt;rilmPerson>, &lt;rilmPerformance></li>
+                <li><b>Abbreviation of terms within articles</b>: Every mention of the term in the
+                    title of the article is abbreviated to its first letter, capitalized. Such
+                    abbreviations should be expanded to the full term, <i>uncapitalized except in
+                        the case of place names</i>. For example, in the article "<b>Logaritmo</b>",
+                    the second sentence begins:<br /> [Il <i>L. acustico</i> ne è un particolare
+                    tipo,… ]<br />The "L." should be expanded to "logaritmo":<blockquote>Il &lt;hi
+                        rend="italic">logaritmo acustico ne è un particolare
+                            tipo,…</blockquote><b><i>IMPORTANT</i></b>: <i>Italian nouns take
+                        different endings in the plural form</i>. When expanding these
+                    abbreviations, the final letter of the word may be different depending on
+                    whether the instance is singular or plural.<ul>
+                        <li>If the noun ends with "<b>o</b>", the plural form ends with
+                            "<b>i</b>".</li>
+                        <li>If the noun ends with "<b>a</b>", the plural form ends with
+                            "<b>e</b>".</li>
+                    </ul>If the term begins with a consonant, you can determine whether the instance
+                    is plural (in most cases) based on the final letter of the word <i>preceding</i> it:<ul>
+                        <li>If the noun ends with "<b>o</b>", and the word preceding the
+                            abbreviation ends with "<b>i</b>", the noun ending should be changed to
+                                "<b>i</b>"</li>
+                        <li>If the noun ends with "<b>a</b>", and the word preceding the
+                            abbreviation ends with "<b>e</b>", the noun ending should change to
+                                "<b>e</b>".</li>
+                    </ul>If the term begins with a vowel, and the abbreviation is preceded by an
+                    apostrophe (’), you can determine when the instance is plural based on the final
+                    letter of the work that <i>follows it</i>:<ul>
+                        <li>If the noun ends with "<b>o</b>", and is preceded by an apostrophe, and
+                            the word <i>following</i> ends with "<b>e</b>" or "<b>i</b>", the noun
+                            ending should change to "<b>i</b>".</li>
+                        <li>If the noun ends with "<b>a</b>", and is preceded by an apostrophe, and
+                            the word <i>following</i> ends with "<b>e</b>" or "<b>i</b>", the noun
+                            ending should change to "<b>e</b>".</li>
+                        <li>BUT: if the noun ends in -io, the plural is -i (only one i). </li>
+                    </ul><table>
+                        <tbody>
+                            <tr>
+                                <td><b>Corno</b></td>
+                                <td> </td>
+                                <td>il C.</td>
+                                <td> </td>
+                                <td>il corno</td>
+                            </tr>
+                            <tr>
+                                <td><b>Corno</b></td>
+                                <td> </td>
+                                <td>varii C.</td>
+                                <td> </td>
+                                <td>varii corni</td>
+                            </tr>
+                            <tr>
+                                <td><b>Passacaglia</b></td>
+                                <td> </td>
+                                <td>la P.</td>
+                                <td> </td>
+                                <td>la passacaglia</td>
+                            </tr>
+                            <tr>
+                                <td><b>Passacaglia</b></td>
+                                <td> </td>
+                                <td>che P.</td>
+                                <td> </td>
+                                <td>che passacaglie</td>
+                            </tr>
+                            <tr>
+                                <td><b>Oratorio</b></td>
+                                <td> </td>
+                                <td>dell’O. offrono</td>
+                                <td> </td>
+                                <td>dell’oratorio offrono</td>
+                            </tr>
+                            <tr>
+                                <td><b>Oratorio</b></td>
+                                <td> </td>
+                                <td>l’O. corrisponde</td>
+                                <td> </td>
+                                <td>l’oratori corrisponde</td>
+                            </tr>
+                            <tr>
+                                <td><b>Oratorio</b></td>
+                                <td> </td>
+                                <td>altri O. romani</td>
+                                <td> </td>
+                                <td>altri oratori romani</td>
+                            </tr>
+                            <tr>
+                                <td><b>Opera</b></td>
+                                <td> </td>
+                                <td>l’O. tedesca</td>
+                                <td> </td>
+                                <td>l’opera tedesca</td>
+                            </tr>
+                            <tr>
+                                <td><b>Opera</b></td>
+                                <td> </td>
+                                <td>all’O. nazionale</td>
+                                <td> </td>
+                                <td>all’opere nazionale</td>
+                            </tr>
+                        </tbody>
+                    </table><i>These rules do not apply to any term that does not end with "o" or
+                        "a"!</i><br />
+                </li>
+                <li><b>General abbreviations</b> (provided as text file by RILM ): Where these
+                    abbreviations are used in the articles and bibliographies, they should be
+                        <i>expanded to the full word or phrase</i>. </li>
+                <li><b>Article titles:</b> Some article titles are given in Adjective, Term order:
+                        "<b>un-invert</b>???</li>
+                <li><b>Identification of terms</b> with IDs from RILMs database of terms: RILM will
+                    provide a list of <b>terms</b> along with integer <b>topic_ID</b>s, and
+                        <b>category</b> of term. If an unambiguous match can be made between the
+                    article title (in un-inverted form) and a &lt;term> in
+                        <b>DEUMM-lessico-terms-ids.xml</b>:<ul>
+                        <li>The &lt;text> <i>@type</i> value should be gotten from the &lt;category>
+                            value in the list. </li>
+                        <li>The &lt;term> tag applied to the article title should have an
+                                <b>@xml:id</b> attribute <i>and</i> a <b>@topicID</b> attribute that
+                            contains the ID.</li>
+                        <li>If a name cannot be matched with those in the list provided by RILM,
+                            include an empty @topicID attribute (topicID=""). <i>Most terms will not
+                                have a </i>@topicID<i> match.</i></li>
+                    </ul></li>
+                <li><b>Typography</b>: render all <i>single quotes</i> and <i>apostrophes</i> as ’
+                    (hex2019); <i>double quotes</i> (« ») as &lt;q> tags <i>(except in
+                        bibliographies; see below).</i></li>
+                <li><b>Typography</b>: <b>normalize case</b> where small caps are used in the print
+                    (particularly in bibliographies).</li>
+                <li><b>Typography</b>: <b>superscript "o"</b> used as an ordinal (as in "50º" or
+                    "50, meaning "50th") should be encoded as hex00ba ("masculine ordinal"),
+                        <i>not</i> as hex00b0 ("degree sign"), <i>nor</i> as a &lt;hi> element.
+                        <b>Superscript "a" </b>used as an ordinal ("100ª") should be encoded as
+                    hex00aa ("feminine ordinal").</li>
+                <li><b><i>*NEW 3/4*</i></b>: <s><b>Images</b> in <i>Biografie</i> are limited to
+                        family tree diagrams. These should be captured as PNG images. These will be
+                        referenced in the TEI in a &lt;figure> element (with an @xml:id attribute),
+                        containing a &lt;graphic> element with a @url attribute pointing to the
+                        image file.</s></li>
+            </ul>
+            <h5>2. Front matter:</h5>
+            <ul>
+                <li>Front matter of <b><i>Lessico</i> vol. 1</b> consists of the following:<ul>
+                        <li>[Title page]</li>
+                        <li>[Copyright page]</li>
+                        <li><b>Prefazione</b></li>
+                        <li><b>Avverteze per la consultazione</b></li>
+                        <li><b>Abbreviazione</b></li>
+                        <li><b>Elenco dei Collaboratori del primo volume</b></li>
+                    </ul>
+                    <i>Omit the half-title page.</i>
+                </li>
+                <li><b>For <i>volumes 2-4</i></b>, capture <i>only</i><ul>
+                        <li>[Copyright page]</li>
+                        <li><b>Elenco dei Collaboratori del [secondo, terzo, quarto] volume</b></li>
+                    </ul></li>
+            </ul>
+            <h5>3. Short- to Medium-length articles:</h5>
+            <p>1-6 paragraphs of body text, followed by bibliographies in paragraph form.</p>
+            <ul>
+                <li>Capture the bold article heading as the &lt;title> in the &lt;teiHeader>.</li>
+                <li>Begin the &lt;body> element with a &lt;div type="subheading">. Tag the article
+                    title as &lt;term>, and add an @topicID attribute as described above. Add an
+                    @xml:lang="it" attribute.<br /> [<b>Ad libitum.</b> Locuzione indicante libertà
+                        interpretativa:...]<blockquote>&lt;div type="subheading">&lt;p>&lt;hi
+                        rend="bold">&lt;term topicID="" xml:lang="it">Ad libitum&lt;/term>.&lt;/hi>
+                        Locuzione indicante libertà
+                        interpretativa:...&lt;/p>...&lt;/div></blockquote></li>
+                <li>If the bold article heading is followed by terms in italic (or Greek), within
+                    parentheses, mark each italic (or Greek) term with &lt;term>, adding its own
+                    @topicID and @xml:lang, and a @corresp attribute:<br /> [<b>A due</b> (fr. <i>à
+                        deux</i>). Expressione...]<br /> [<b>Adufe</b> (dall’arabo <i>duff</i>).
+                        Tamburello...]<blockquote>&lt;p>&lt;hi rend="bold">&lt;term topicID=""
+                        xml:id="id-123" xml:lang="it">A due&lt;/term>&lt;/hi> (fr. &lt;hi
+                        rend="italic">&lt;term topicID="" xml:id="id-124" corresp="#id-123"
+                        xml:lang="fr">à deux&lt;/term>&lt;/hi>).
+                        Expressione...&lt;/p></blockquote><blockquote>&lt;p>&lt;hi
+                        rend="bold">&lt;term topicID="" xml:id="id-234"
+                        xml:lang="it">Adufe&lt;/term>&lt;/hi> (dall’arabo &lt;hi
+                        rend="italic">&lt;term topicID="" xml:id="id-235" corresp="#id-234"
+                        xml:lang="ar">duff&lt;/term>&lt;/hi>).
+                    Tamburello...&lt;/p></blockquote></li>
+                <li>If the bold article heading is followed by a <b>numeral</b>, and another numeral
+                    in bold appears later in the article, it indicates there is more than one
+                    definition of the term. <ul>
+                        <li>Start a new &lt;p> element at each numbered definition.</li>
+                        <li><i>Mark any parenthetical terms after subsequent numbers as
+                                </i>&lt;term>,<i> without @corresp link to the first term, as shown
+                                here:</i></li>
+                    </ul> [<b>Adonio.</b>
+                    <b>- 1</b>) (ἀδώνιος; lat. <i>adonius versus</i>) Termine di metrica greca e
+                    latina che indica un verso composto di un dattilo e di un trocheo (–́⏑⏑, –⏑^);
+                    ricorre nel ­<i>sistema saffico minore</i> (→ SAFFICO, SISTEMA). Il nome de­riva
+                    dal fatto che era impiegato nelle cantilene rituali del culto di Adone (→
+                    ADONIDIA). <b>- 2</b>) (ἀδώνιον) Ge­nere di antica marcia militare suonata
+                        sull’<i>aulos</i>, tipica della Laconia.]<blockquote>&lt;p>&lt;hi
+                        rend="bold">&lt;term topicID="" xml:id="id-345"
+                        xml:lang="it">Adonio&lt;/term>. - 1)&lt;/hi> (&lt;term corresp="#id-345"
+                        topicID="" xml:id="id-346" xml:lang="gr">ἀδώνιος&lt;/term>; lat. &lt;hi
+                        rend="italic">&lt;term corresp="#id-345" topicID="" xml:id="id-347"
+                        xml:lang="la">adonius versus&lt;/term>&lt;/hi>) Termine di metrica greca e
+                        latina che indica un verso composto di un dattilo e di un trocheo (–́⏑⏑,
+                        –⏑^); ricorre nel ­sistema saffico minore (&lt;ref target="na">Saffico,
+                        Sistema&lt;/ref>). Il nome de­riva dal fatto che era impiegato nelle
+                        cantilene rituali del culto di Adone (&lt;ref
+                        target="deu70000">Adonidia&lt;/ref>).&lt;/p></blockquote><blockquote>&lt;p>&lt;hi
+                        rend="bold">- 2)&lt;/hi> (&lt;term topicID="" xml:id="id-348"
+                        xml:lang="gr">ἀδώνιον&lt;/term>) Ge­nere di antica marcia militare suonata
+                        sull’aulos, tipica della Laconia.&lt;/p></blockquote></li>
+            </ul>
+            <h5>5. Long articles</h5>
+            <p>Long articles have a "S<small>OMMARIO</small>" section following the article heading. <i>These can be omitted, as they will be automatically generated from the </i>&lt;head><i> elements of the various </i>&lt;div type="section">s.</p>
+            <ul>
+                <li>Take care to nest sections properly. <i>Note that roman and common numerals, as
+                        well as letters, are used indiscriminately to number sections. Sometimes
+                        there is no numbering at all.</i> Include the section number (or letter), if
+                    present, as @n attribute of <i>both </i>the &lt;div> and &lt;head>
+                    elements.</li>
+            </ul>
+            <h5>6. Bibliographic articles</h5>
+            <p>Biblioteche, Monumenti, Musicologia, Periodici, Repertori bibliografici,</p>
+            <h5>7. &lt;docAuthor>s and editors</h5>
+            <p>Many articles will have an author given after the end of the text, justified right in small caps. Make a &lt;div type="authors"> for this, and wrap the author's name in &lt;docAuthor> and &lt;persName> with tags for &lt;forename> and &lt;surname>.</p>
+            <blockquote>&lt;div type="authors">&lt;persName>&lt;forename>Paulheinz&lt;/forename>
+                &lt;surname>Beck&lt;/surname>&lt;/persName>&lt;/div></blockquote>
+            <p>Frequently, a <i>translator's</i> name will also be given, on the same line, justified left in normal case, in parens, preceded by "trad.":<br /> [(trad. Vera Bertolino)]<br />Place these in the same &lt;div type="authors">, but in a separate &lt;docAuthor> element. Add an @type attribute with value "translator" to the &lt;docAuthor>.</p>
+            <blockquote>&lt;docAuthor role="translator">(trad.
+                &lt;persName>&lt;forename>Vera&lt;/forename>
+                &lt;surname>Bertolino&lt;/surname>&lt;/persName>)&lt;/docAuthor></blockquote>
+            <ul>
+                <li><i><b>NB:</b> Although the translator's name appears first</i> in the print,
+                    reading left to right, <i>include it in the TEI after the true author</i>.</li>
+                <li>In rare cases, there will be more than one true author in small caps. Again, tag
+                    the two authors' names in the same &lt;div> but separate &lt;docAuthor>s.</li>
+                <li>In rarer cases, there may be <i>two</i> true authors <i>and</i> a translator.
+                </li>
+            </ul>
+            <p>See example file <b>deu70005.xml</b></p>
+            <h5>7. See-references</h5>
+            <p>An article <i>heading</i> followed by a right-pointing arrow (→), followed by text in small caps, indicates a see-reference:<br />  [<b>De Ana, Francesco</b> → A<small>NA</small>, F<small>RANCESCO</small> D’.]</p>
+            <ul>
+                <li><i>If there is no other information given</i>, do not make an XML file or PDF
+                    for these, but add them to &lt;keywords> element of the target article as
+                    described at <a href="http://rilm.info/ft/tei_rilm_instructions.html#see-refs"
+                        >http://rilm.info/ft/tei_rilm_instructions.html#see-refs</a></li>
+                <li><i>If translations of the term are given in parentheses, before the arrow</i>,
+                    include those translations in the &lt;keywords> element of the target article:<br />
+                    <b>Adonia</b> (ἀδώνια) → ADONIDIA.<br />
+                    <b>Adoniasmo</b> (ἀδωνιασμός) → ADONIDIA. <blockquote>&lt;textClass><br />
+                        &lt;keywords><br /> &lt;term>adonia&lt;/term><br />
+                        &lt;term>ἀδώνια&lt;/term><br /> &lt;term>adoniasmo&lt;/term><br />
+                        &lt;term>ἀδωνιασμός&lt;/term><br />
+                        &lt;/keywords><br />&lt;/textClass></blockquote></li>
+                <li>If any language is given in the reference, include it in the &lt;term> @xml:lang
+                    attribute inside &lt;keywords>:<br />
+                    <b>Armonie</b> (anche <i>harmonie</i>, antico fr.) →
+                        GHIRONDA.<blockquote>&lt;textClass><br /> &lt;keywords><br />
+                        &lt;term>armonie&lt;/term><br /> &lt;term
+                        xml:lang="fr">harmonie&lt;/term><br />
+                        &lt;/keywords><br />&lt;/textClass></blockquote></li>
+                <li>If a number or letter is given following the target term, the reference is to a
+                    specific section of an article. Nevertheless, treat as above, by adding to the
+                    &lt;keywords> element of the target article.</li>
+            </ul>
+            <h5 id="8">8. Cross-references</h5>
+            <ul>
+                <li>A right-pointing arrow (→) or a wavy right-pointing arrow (⤳) <i>within the body
+                        text</i> indicates a cross reference, or see-also reference. </li>
+                <li>A straight arrow indicates a target within the same part of the
+                    encyclopedia—from <i>Lessico</i> to <i>Lessico</i>, for example. </li>
+                <li>A wavy arrow indicates a target in a different part of the encyclopedia—from
+                        <i>Lessico</i> to <i>Biografie</i>, for example. </li>
+                <li>They might point to a whole article, or to a section within an article:<br /> (→
+                        D<small>ULCE</small> M<small>ELOS</small>) or (⤳ H<small>OMER</small>,
+                    2)<br />The first points to the whole "Dulce Melos" article in the
+                        <i>Lessico</i> part of the encyclopedia. The second points to person number
+                    2 in the family article on "Homer" in the <i>Biografie</i> part.</li>
+                <li>The text "<b>cfr. §</b>" indicates a reference to another section <i>within the
+                        same article:</i> (cfr. § <i>Musica vocale</i>, a). The text following "§"
+                    gives the &lt;head> and head:@n of the &lt;div> that is targeted. <i>There are
+                        examples in the file deu00004.xml.</i></li>
+            </ul>
+            <p>Tag a reference to a whole article as a &lt;ref> element with @target containing the value of the @xml:id of the &lt;text> element of the target article. Tag a reference to a section with @target containing the concatenated @xml:id of the &lt;text> target, "#", and the @xml:id of the &lt;div>: </p>
+            <blockquote>&lt;ref target="deu00000">Dulce Melos&lt;/ref></blockquote>
+            <blockquote>&lt;ref target="deu11111#id-9b05e5d0-5cf9-11ec-bf63-0242ac130002">Homer,
+                2&lt;/ref></blockquote>
+            <p>NB. <i>Omit</i> the arrow characters from the TEI; the link created by the &lt;ref> tag will mark the reference.</p>
+            <p></p>
+            <h5>9. Tavole (color plates)</h5>
+            <p>The indication "<b>Tav.</b>" in the page margin next to the article title refers to separately printed color illustrations on plates inserted elsewhere in the volume. The numbers given indicated the relevant plate number(s): <b>Tav. 5-6</b>.</p>
+            <ul>
+                <li><i>Captions</i> for the illustrations for a given article appear <i>all
+                        together</i> before the illustrations, with the article title in bold
+                    type.</li>
+                <li>The captions are <i>numbered</i> with bold numerals. These refer to the small
+                    numbers printed at the lower right or left of each illustration.</li>
+                <li><i>Credits</i> for the illustrations are given in smaller type after the
+                    abbreviation "Fot.:" (photos). The credits are also numbered in reference to the
+                    illustrations.</li>
+                <li><b>Make a &lt;div type="section"></b> with the &lt;head> "Tavole" <i>before</i>
+                    the &lt;div type="ography">. All the color illustrations should be included in
+                    this &lt;div>.</li>
+                <li>Make a &lt;figure> element for each illustration. This element should contain:<ol>
+                        <li>a &lt;p> element containing the <i>caption</i></li>
+                        <li>a &lt;graphic> element containing the image file name as a @url
+                            attribute</li>
+                        <li>a &lt;p> element containing the <i>credit</i></li>
+                    </ol>This is fully demonstrated in example file <b>deu80001.xml</b>.</li>
+            </ul>
+        </div>
+    </body>
+</html>
