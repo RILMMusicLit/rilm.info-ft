@@ -30,112 +30,18 @@
                     elements require an @xml:id : <br />– &lt;bibl>, &lt;div>, &lt;docAuthor>,
                     &lt;figure>, &lt;p>, &lt;rilmPerson>, &lt;rilmPerformance></li>
                 <li><b>Abbreviation of terms within articles</b>: Every mention of the term in the
-                    title of the article is abbreviated to its first letter, capitalized. Such
-                    abbreviations should be expanded to the full term, <i>uncapitalized except in
-                        the case of place names</i>. For example, in the article "<b>Logaritmo</b>",
-                    the second sentence begins:<br /> [Il <i>L. acustico</i> ne è un particolare
-                    tipo,… ]<br />The "L." should be expanded to "logaritmo":<blockquote>Il &lt;hi
-                        rend="italic">logaritmo acustico ne è un particolare
-                            tipo,…</blockquote><b><i>IMPORTANT</i></b>: <i>Italian nouns take
-                        different endings in the plural form</i>. When expanding these
-                    abbreviations, the final letter of the word may be different depending on
-                    whether the instance is singular or plural.<ul>
-                        <li>If the noun ends with "<b>o</b>", the plural form ends with
-                            "<b>i</b>".</li>
-                        <li>If the noun ends with "<b>a</b>", the plural form ends with
-                            "<b>e</b>".</li>
-                    </ul>If the term begins with a consonant, you can determine whether the instance
-                    is plural (in most cases) based on the final letter of the word <i>preceding</i> it:<ul>
-                        <li>If the noun ends with "<b>o</b>", and the word preceding the
-                            abbreviation ends with "<b>i</b>", the noun ending should be changed to
-                                "<b>i</b>"</li>
-                        <li>If the noun ends with "<b>a</b>", and the word preceding the
-                            abbreviation ends with "<b>e</b>", the noun ending should change to
-                                "<b>e</b>".</li>
-                    </ul>If the term begins with a vowel, and the abbreviation is preceded by an
-                    apostrophe (’), you can determine when the instance is plural based on the final
-                    letter of the work that <i>follows it</i>:<ul>
-                        <li>If the noun ends with "<b>o</b>", and is preceded by an apostrophe, and
-                            the word <i>following</i> ends with "<b>e</b>" or "<b>i</b>", the noun
-                            ending should change to "<b>i</b>".</li>
-                        <li>If the noun ends with "<b>a</b>", and is preceded by an apostrophe, and
-                            the word <i>following</i> ends with "<b>e</b>" or "<b>i</b>", the noun
-                            ending should change to "<b>e</b>".</li>
-                        <li>BUT: if the noun ends in -io, the plural is -i (only one i). </li>
-                    </ul><table>
-                        <tbody>
-                            <tr>
-                                <td><b>Corno</b></td>
-                                <td> </td>
-                                <td>il C.</td>
-                                <td> </td>
-                                <td>il corno</td>
-                            </tr>
-                            <tr>
-                                <td><b>Corno</b></td>
-                                <td> </td>
-                                <td>varii C.</td>
-                                <td> </td>
-                                <td>varii corni</td>
-                            </tr>
-                            <tr>
-                                <td><b>Passacaglia</b></td>
-                                <td> </td>
-                                <td>la P.</td>
-                                <td> </td>
-                                <td>la passacaglia</td>
-                            </tr>
-                            <tr>
-                                <td><b>Passacaglia</b></td>
-                                <td> </td>
-                                <td>che P.</td>
-                                <td> </td>
-                                <td>che passacaglie</td>
-                            </tr>
-                            <tr>
-                                <td><b>Oratorio</b></td>
-                                <td> </td>
-                                <td>dell’O. offrono</td>
-                                <td> </td>
-                                <td>dell’oratorio offrono</td>
-                            </tr>
-                            <tr>
-                                <td><b>Oratorio</b></td>
-                                <td> </td>
-                                <td>l’O. corrisponde</td>
-                                <td> </td>
-                                <td>l’oratori corrisponde</td>
-                            </tr>
-                            <tr>
-                                <td><b>Oratorio</b></td>
-                                <td> </td>
-                                <td>altri O. romani</td>
-                                <td> </td>
-                                <td>altri oratori romani</td>
-                            </tr>
-                            <tr>
-                                <td><b>Opera</b></td>
-                                <td> </td>
-                                <td>l’O. tedesca</td>
-                                <td> </td>
-                                <td>l’opera tedesca</td>
-                            </tr>
-                            <tr>
-                                <td><b>Opera</b></td>
-                                <td> </td>
-                                <td>all’O. nazionale</td>
-                                <td> </td>
-                                <td>all’opere nazionale</td>
-                            </tr>
-                        </tbody>
-                    </table><i>These rules do not apply to any term that does not end with "o" or
-                        "a"!</i><br />
-                </li>
-                <li><b>General abbreviations</b> (provided as text file by RILM ): Where these
-                    abbreviations are used in the articles and bibliographies, they should be
-                        <i>expanded to the full word or phrase</i>. </li>
-                <li><b>Article titles:</b> Some article titles are given in Adjective, Term order:
-                        "<b>un-invert</b>???</li>
+                         title of the article is abbreviated to its first letter, capitalized. Such
+                         abbreviations should be expanded to the full term, <i>uncapitalized except
+                              in the case of place names</i>. For example, in the article
+                              "<b>Logaritmo</b>", the second sentence begins:<br /> [Il <i>L.
+                              acustico</i> ne è un particolare tipo,… ]<br />The "L." should be
+                         expanded to "logaritmo":<blockquote>Il &lt;hi rend="italic">&lt;seg
+                              type="exp">logaritmo&lt;/seg> acustico&lt;/hi> ne è un particolare
+                              tipo,…</blockquote><i>Please tag these expanded abbreviations as
+                              &lt;seg type="exp">.</i><br /></li>
+                <li><b>General abbreviations</b> (provided as <b>DEUMM-Lessico-abbreviations.txt</b>
+                         by RILM ): Where these abbreviations are used in the articles and
+                         bibliographies, they should be <i>expanded to the full word or phrase</i>. </li>
                 <li><b>Identification of terms</b> with IDs from RILMs database of terms: RILM will
                     provide a list of <b>terms</b> along with integer <b>topic_ID</b>s, and
                         <b>category</b> of term. If an unambiguous match can be made between the
@@ -147,8 +53,8 @@
                                 <b>@xml:id</b> attribute <i>and</i> a <b>@topicID</b> attribute that
                             contains the ID.</li>
                         <li>If a name cannot be matched with those in the list provided by RILM,
-                            include an empty @topicID attribute (topicID=""). <i>Most terms will not
-                                have a </i>@topicID<i> match.</i></li>
+                                   include an term @topicID attribute (topicID=""). <i>Many terms
+                                        will <b>not</b> have a </i>@topicID<i> match.</i></li>
                     </ul></li>
                 <li><b>Typography</b>: render all <i>single quotes</i> and <i>apostrophes</i> as ’
                     (hex2019); <i>double quotes</i> (« ») as &lt;q> tags <i>(except in
@@ -160,11 +66,6 @@
                         <i>not</i> as hex00b0 ("degree sign"), <i>nor</i> as a &lt;hi> element.
                         <b>Superscript "a" </b>used as an ordinal ("100ª") should be encoded as
                     hex00aa ("feminine ordinal").</li>
-                <li><b><i>*NEW 3/4*</i></b>: <s><b>Images</b> in <i>Biografie</i> are limited to
-                        family tree diagrams. These should be captured as PNG images. These will be
-                        referenced in the TEI in a &lt;figure> element (with an @xml:id attribute),
-                        containing a &lt;graphic> element with a @url attribute pointing to the
-                        image file.</s></li>
             </ul>
             <h5>2. Front matter:</h5>
             <ul>
@@ -237,16 +138,29 @@
                         sull’aulos, tipica della Laconia.&lt;/p></blockquote></li>
             </ul>
             <h5>5. Long articles</h5>
-            <p>Long articles have a "S<small>OMMARIO</small>" section following the article heading. <i>These can be omitted, as they will be automatically generated from the </i>&lt;head><i> elements of the various </i>&lt;div type="section">s.</p>
+            <p>Long articles have a "S<small>OMMARIO</small>" section following the article heading. <i>The Sommario section can be omitted, as they will be automatically generated from the </i>&lt;head><i> elements of the various </i>&lt;div type="section">s.</p>
             <ul>
-                <li>Take care to nest sections properly. <i>Note that roman and common numerals, as
-                        well as letters, are used indiscriminately to number sections. Sometimes
-                        there is no numbering at all.</i> Include the section number (or letter), if
-                    present, as @n attribute of <i>both </i>the &lt;div> and &lt;head>
-                    elements.</li>
+                <li>Take care to nest sections properly. <i>Note that in </i>DEUMM<i>, roman and
+                              common numerals, as well as letters, are used indiscriminately to
+                              number sections. Sometimes there is no numbering at all.</i> Include
+                         the section number (or letter), if present, as @n attribute of <i>both
+                         </i>the &lt;div> and &lt;head> elements.</li>
             </ul>
-            <h5>6. Bibliographic articles</h5>
-            <p>Biblioteche, Monumenti, Musicologia, Periodici, Repertori bibliografici,</p>
+            <h5>6. Special bibliographical articles</h5>
+            <p>A number of articles have lengthy lists <i>besides</i> a "normal" Bibliography. Please tag the following with &lt;text> @type="special", as they will need to be revisited later.</p>
+            <ul><li><i>Biblioteche musicali</i> (v.1, p.320 ff): Note that many items in the lists at the end have
+                    their own bibliographies.</li>
+                <li><i>Dizionari</i> (v.2, p.53 ff): Start a &lt;div type="ography"> at the heading
+                        "<i>a) Dizionari lessicali e terminologici</i>", and at each of the headings
+                        <i>b</i> through <i>o</i>. Start a final one for the "Bibl." on p.60.</li>
+                <li><i>Monumenti musicali</i> (v.3, p.182 ff): Tag the lists as &lt;list>. There are
+                    some nested lists, such as "Part Music" (pp.186-87)</li>
+                <li><i>Musicologia</i> (v.3, p.281 ff): Similar to "Biblioteche" article, where
+                    items in a list have individual bibliographies.</li>
+                <li><i>Periodici musicali</i> (v.3, p.590 ff): Nesting and sections should be clear
+                    from the print</li>
+                <li>Repertori bibliografici</li>
+                <li>Societ</li></ul>
             <h5>7. &lt;docAuthor>s and editors</h5>
             <p>Many articles will have an author given after the end of the text, justified right in small caps. Make a &lt;div type="authors"> for this, and wrap the author's name in &lt;docAuthor> and &lt;persName> with tags for &lt;forename> and &lt;surname>.</p>
             <blockquote>&lt;div type="authors">&lt;persName>&lt;forename>Paulheinz&lt;/forename>
@@ -314,8 +228,8 @@
                 2&lt;/ref></blockquote>
             <p>NB. <i>Omit</i> the arrow characters from the TEI; the link created by the &lt;ref> tag will mark the reference.</p>
             <p></p>
-            <h5>9. Tavole (color plates)</h5>
-            <p>The indication "<b>Tav.</b>" in the page margin next to the article title refers to separately printed color illustrations on plates inserted elsewhere in the volume. The numbers given indicated the relevant plate number(s): <b>Tav. 5-6</b>.</p>
+            <h5>9. Tavole (photograph plates)</h5>
+            <p>The indication "<b>Tav.</b>" in the page margin next to the article title refers to separately printed illustrations on plates inserted elsewhere in the volume. The numbers given indicated the relevant plate number(s): <b>Tav. 5-6</b>.</p>
             <ul>
                 <li><i>Captions</i> for the illustrations for a given article appear <i>all
                         together</i> before the illustrations, with the article title in bold
@@ -333,8 +247,9 @@
                         <li>a &lt;graphic> element containing the image file name as a @url
                             attribute</li>
                         <li>a &lt;p> element containing the <i>credit</i></li>
-                    </ol>This is fully demonstrated in example file <b>deu80001.xml</b>.</li>
+                    </ol>This is demonstrated in example file <b>deu80001.xml</b>.</li>
             </ul>
         </div>
+          <p>PLEASE contact Ken or Zdravko at RILM with any questions or problems.</p>
     </body>
 </html>
