@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+    <meta charset="utf-8" />
+    <link href="../tei.css" rel="stylesheet" type="text/css" />
+    <title>Dizionario Enciclopedico Universale della Musica e dei Musicisti - I Titoli e i Personaggi</title>
+  </head>
+     <body>
+          <div>
+               <h4 id="DEU">Dizionario Enciclopedico Universale della Musica e dei Musicisti [DEUMM]
+                    part 3 - <i>I Titoli e i Personaggi</i>
+               </h4>
+          </div>
+          <div class="r2022" title="Added, 4/2022">
+               <p></p>
+               <p>[<b><i>*Last Revised 7/20/2022*</i></b>.]</p>
+               <p>The third stage of RILMs conversion of <i>DEUMM</i> will be the 3-volume <b><i>I Titoli e i Personaggi</i></b>, an encyclopedia of musical works <i>by title</i> and historical or fictional personal names. You will produce article-level TEI files.</p>
+          </div>
+          <div>
+               <h4>1. General principles:</h4>
+               <ul>
+                    <li>Each volume of the <i>I Titoli e i Personaggi</i> has a different
+                              <b>year</b> and <b>ISBN</b>, given on the copyright page of each. The
+                         correct values should be included in the TEI header of each article.</li>
+                    <li><b>xml:id's</b>: <i>DEUMM online</i> will be a continually updated resource,
+                    so each &lt;div>, &lt;p>, and &lt;bibl> element must have a unique identifier:
+                    an @xml:id attribute containing "id-" followed by a UUID. For example: &lt;p
+                    xml:id="id-f11a99bb-5a84-12df-f1b2-b9374b7da8ab">. The following <b>six</b>
+                    elements require an @xml:id : <br />– &lt;bibl>, &lt;div>, &lt;docAuthor>,
+                    &lt;figure>, &lt;p>, &lt;rilmPerson>, &lt;rilmPerformance></li>
+                    <li><b>General abbreviations</b> (provided as
+                        <b>DEUMM-Lessico-abbreviations.txt</b> by RILM): Where these abbreviations
+                    are used in the articles and bibliographies, they should be <i>expanded to the
+                        full word or phrase</i>. </li>
+                    <li><b>Typography</b>: render all <i>single quotes</i> and <i>apostrophes</i> as
+                    ’ (hex2019); <i>double quotes</i> (« ») as &lt;q> tags).</li>
+                    <li><b>Typography</b>: <b>normalize case</b> where small caps are used in the
+                         print (particularly in bibliographies).</li>
+                    <li><b>Typography</b>: <b>superscript "o"</b> used as an ordinal (as in "50º" or
+                         "50, meaning "50th") should be encoded as hex00ba ("masculine ordinal"),
+                              <i>not</i> as hex00b0 ("degree sign"), <i>nor</i> as a &lt;hi>
+                         element. <b>Superscript "a" </b>used as an ordinal ("100ª") should be
+                         encoded as hex00aa ("feminine ordinal").</li>
+               </ul>
+               <h4>2. Front matter:</h4>
+               <ul>
+                    <li>Front matter of <b><i>Lessico</i> vol. 1</b> consists of the following:<ul>
+                        <li>[Title page]</li>
+                        <li>[Copyright page]</li>
+                        <li><b>Prefazione</b></li>
+                        <li><b>Abbreviazioni</b></li>
+                        <li><b>Avvertenza</b> (at the bottom of the page)</li>
+                    </ul> Capture these in <i>one</i> xml file, &lt;text type="matter"> </li>
+                    <li><b>For <i>volumes 2-3</i></b>, capture <i>only</i> the [Copyright page]</li>
+               </ul>
+               <h5>Articles types:</h5>
+               <p>There are three kinds of articles in this part of DEUMM:</p>
+               <ol>
+                    <li>Articles on a single work</li>
+                    <li>Articles containing a list of works</li>
+                    <li>Articles about a fictional or historical person with a following list of
+                         works.</li>
+               </ol>
+               <h5>Articles on a single work (example files deu30001, deu30002):</h5>
+               <ul>
+                    <li>&lt;text> @type is "work"</li>
+                    <li>Use the <b>bold text</b> as the &lt;title> in the TEI header. Begin the
+                    &lt;text> with a &lt;div type="subheading"> and begin the first &lt;p> with a
+                    &lt;bibl> element. Tag the bold text as &lt;hi rend="bold"> and &lt;title>.</li>
+                    <li>Tag the text between the article title and the word "per" or "mus." as
+                         &lt;genre>.</li>
+                    <li>If the &lt;genre> is followed by "per", tag the following as
+                         &lt;instrumentation>. Then, tag the text following "di" as &lt;author>.
+                         (See example file deu30001.xml)</li>
+                    <li>If the &lt;genre> is followed by "mus.", tag the following text as
+                         &lt;author>. Then, tag the texxt following "libr." as &lt;author
+                         role="librettist">. (See example file deu300002.xml)</li>
+                    <li>Tag information following "rappr." as &lt;rilmPerformance> and child
+                         elements &lt;placeName>, &lt;orgName>, or &lt;persName> as available.</li>
+                    <li>Tag information following "ediz." with &lt;pubPlace>, &lt;publisher>, or
+                         &lt;date> as available.</li>
+               </ul>
+               <h5>Articles containing a list of works (example file deu30005):</h5>
+               <p>These are distinguished from articles on a single work by subheadings in bold later in the article.</p>
+               <ul>
+                    <li>&lt;text> @ type is "topic".</li>
+                    <li>Use the <b>first bold text</b>, in <b>small caps</b> as the &lt;title> in
+                    the TEI header. Begin the &lt;text> with a &lt;div type="subheading"> and begin
+                    the first &lt;p> with a &lt;bibl> element. Tag the bold text as &lt;hi
+                    rend="bold"> and &lt;title>. Treat the remainder of the first paragraph the same
+                    as for an article on a single work.</li>
+                    <li>Start a <i>new</i> &lt;div type="section"> at each of the later <b>bold
+                              subheadings</b> in <b>normal case</b>. Use the bold text as &lt;head>,
+                              <i>and</i> as the beginning of the following &lt;p>&lt;bibl>. Treat
+                         the remainder of the paragraph the same as for an article on a single
+                         work.</li>
+               </ul>
+               <h5>Articles about a fictional or historical person (example files deu30000,
+                    deu30003, deu30004):</h5>
+               <p>These can be identified by the word "Personaggio" following the bold article title, OR the absence of "per" or "mus." in the first sentence.</p>
+               <ul>
+                    <li>&lt;text> @type is "topic".</li>
+                    <li>Use the <b>first bold text</b>, in <b>small caps</b> as the &lt;title> in
+                    the TEI header. Begin the &lt;text> with a &lt;div type="subheading">. Tag the
+                    bold text as &lt;hi rend="bold"> and &lt;persName>. If a variant name appears in
+                    parentheses following the bold text, tag it with &lt;forename type="alt"> or
+                    &lt;surname type="alt"> as needed.</li>
+                <li>Start a <i>new</i> &lt;div type="section"> at each of the later <b>bold
+                        subheadings</b> in <b>normal case</b>. Use the bold text as &lt;head>,
+                        <i>and</i> as the beginning of the following &lt;p>&lt;bibl>. Treat the
+                    remainder of the paragraph the same as for an article on a single work.</li>
+               </ul>
+            <p><i>NOTE: Some articles may include a list of performances, as in deu30004. Tag as a </i>&lt;list><i>. Separate items at personal names, which have last name in all CAPS. Tag each as </i>&lt;bibl><i> and </i>&lt;rilmPerformance><i> as shown in the example file.</i></p>
+            <h4>Appendices:</h4>
+            <ul>
+                <li><b>Appendice A</b> pages 325–409: <ul>
+                        <li>Begin the &lt;body> with a &lt;div type="subheading"> containing the
+                            header as &lt;head> and the introductory paragraph as &lt;p>.</li>
+                        <li>Tag the list as a series of &lt;list> elements; start a <i>new</i>
+                            &lt;div type="section"> and &lt;list> at each letter.</li>
+                        <li>In each &lt;item>, tag the text up to the parenthesis as &lt;title
+                            type="work-short"></li>
+                        <li>Tag the italic text as &lt;ref>, and link to the DEUMM article or
+                            &lt;div> with the same title.</li>
+                        <li>Tag the non-italic text as &lt;persName>&lt;surname>:</li>
+                    </ul><br /> [When I am laid in earth (Dido) – <i>Dido and Aeneas</i> (III),
+                        Purcell.]<blockquote>&lt;item>&lt;title type="work-short">When I am laid in
+                        earth&lt;/title> (Dido) – &lt;ref target =
+                        "deu30004#id-c85666e2-02d8-11ed-b939-0242ac120002">Dido and Aeneas&lt;ref>
+                        (III),
+                        &lt;persName>&lt;surname>Purcell&lt;/surname>&lt;/persName>.&lt;/item></blockquote></li>
+                <li><b>Appendice B</b> pages 411–512<ul>
+                        <li>Begin the &lt;body> with a &lt;div type="subheading"> containing the
+                            header as &lt;head> and the attribution "a cura di Carmen Cecere" as
+                            &lt;p>.</li>
+                        <li>Tag the list as a series of &lt;list> elements; start a <i>new</i>
+                            &lt;div type="section"> and &lt;list> at each letter.</li>
+                        <li>In each &lt;item>, tag each phrase in italic text as &lt;ref>, and link
+                            to the DEUMM article or &lt;div> with the same title:</li>
+                    </ul><br />[Anchise: <i>Didone</i> (Cavalli); <i>Hésione</i>
+                        (Campra)]<blockquote>&lt;item>Anchise: &lt;ref
+                        target=deu30004#id-c8565dc8-02d8-11ed-b939-0242ac120002">Didone&lt;/ref>
+                        (Cavalli); &lt;ref target="na">Hésione&lt;/ref>
+                        (Campra)&lt;/item></blockquote></li>
+                <li><b>Indice analitico</b> pages 513–799<ul>
+                        <li>Tag the list as a series of &lt;list> elements; start a <i>new</i>
+                            &lt;div type="section"> and &lt;list> at each letter.</li>
+                        <li>Separate &lt;item>s at bold texts:</li>
+                    </ul><br /><b>A. C. Torr</b> (Fred Leslie)<br /> Miss Esmerelda, or The monkey
+                    and the monk - <small>II</small>, 444d<br /><b>Aagard-Oestwig, Karl</b> -
+                        <small>I</small>, 649d<br /><b>Aaron, Pietro</b> (Aron) - <small>II</small>,
+                    627c<br /> Compendiolo di molti dubbi - <small>I</small>, <b>338</b>b<br />
+                    Toscanello in music - II, 110b - <small>III</small>,
+                        <b>186</b>d<blockquote>&lt;item>A. C. Torr (Fred Leslie) Miss Esmerelda, or
+                        The monkey and the monk - II, 444d&lt;/item><br />&lt;item>Aagard-Oestwig,
+                        Karl - I, 649d&lt;/item><br />&lt;item>Aaron, Pietro (Aron) - II, 627c
+                        Compendiolo di molti dubbi - I, 338b Toscanello in music - II, 110b - III,
+                        186d&lt;/item></blockquote></li>
+            </ul>
+          </div>
+          <p>PLEASE contact Ken or Zdravko at RILM with any questions or problems.</p>
+     </body>
+</html>
